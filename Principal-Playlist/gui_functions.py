@@ -5,6 +5,53 @@ from typing import Dict
 from custom_types import Dialogue
 from data_loader import load_json
 
+from LectureOgg import JouerAudio
+
+CheminLocalisation = "D:/_CyberPunk-Creation/Dialogues-Multi/source/raw/ep1/localization/fr-fr/"  
+CheminLocalisation = "D:/_CyberPunk-Creation/Dialogues-Multi/source/raw/ep1/localization/fr-fr/"  
+CheminLocalisation = "D:/_CyberPunk-Creation/Dialogues-Multi/source/raw/"  
+# base ou ep1
+CheminLocalization = "/localization/"
+CheminLangue = "fr-fr"
+
+
+# Fonction pour afficher les informations de la ligne sélectionnée
+def display_info(event, tree, info_frame):
+    info_frame.config(width=400)
+    info_frame.pack_propagate(False)
+    try:
+        selected_item = tree.selection()[0]
+        selected_values = tree.item(selected_item, 'values')
+
+        for widget in info_frame.winfo_children():
+            widget.destroy()
+
+        labels = ["ID2", "Sous-titres", "Origine", "Audio", "Origine", "Quête"]
+        for i, value in enumerate(selected_values):
+            text = tk.Text(info_frame, height=1, wrap="none", borderwidth=0)
+            text.insert("1.0", f"{labels[i]}: {value}")
+            text.config(state="disabled")
+            text.pack(fill="x", padx=5, pady=2)
+        
+        # Ajouter l'information supplémentaire "Son"
+        audio_value = selected_values[3]  # 4ème colonne (indice 3) pour "Audio"
+        son_path = f"{CheminLocalisation}{audio_value}"
+
+        text = tk.Text(info_frame, height=1, wrap="none", borderwidth=0)
+        text.insert("1.0", f"Son: {son_path}")
+        text.config(state="disabled")
+        text.pack(fill="x", padx=5, pady=2)
+        
+        JouerAudio(audio_value)
+
+    except IndexError:
+        pass
+
+#Fonction pour la selection d'une ligne
+def SelectionLigne(event, tree, info_frame):
+    display_info(event, tree, info_frame)
+
+    
 # Fonction pour afficher les données dans le tableau
 def open_and_display_json(tree, file_path: str):
     
@@ -110,49 +157,6 @@ def reset_filters(tree, filters):
     for entry in filters:
         entry.delete(0, tk.END)
     open_and_display_json(tree, file_path)
-
-
-# Fonction pour afficher les informations de la ligne sélectionnée
-def display_info(event, tree, info_frame):
-    info_frame.config(width=400)
-    info_frame.pack_propagate(False)
-    try:
-        selected_item = tree.selection()[0]
-        selected_values = tree.item(selected_item, 'values')
-
-        for widget in info_frame.winfo_children():
-            widget.destroy()
-
-        labels = ["ID2", "Sous-titres", "Origine", "Audio", "Origine", "Quête"]
-        for i, value in enumerate(selected_values):
-            text = tk.Text(info_frame, height=1, wrap="none", borderwidth=0)
-            text.insert("1.0", f"{labels[i]}: {value}")
-            text.config(state="disabled")
-            text.pack(fill="x", padx=5, pady=2)
-    except IndexError:
-        pass
-
-
- # Fonction pour ajouter une ligne sélectionnée au tableau playlist
-def add_to_playlist(tree, playlist_tree):
-    try:
-        selected_item = tree.selection()[0]
-        selected_values = tree.item(selected_item, 'values')
-        playlist_tree.insert("", tk.END, values=selected_values)
-    except IndexError:
-        pass
-
-# Fonction pour ajouter une ligne au tableau playlist via un clic droit dans le tableau principal
-def add_to_playlist_context_menu(event, tree, playlist_tree):
-    try:
-        selected_item = tree.selection()[0]
-        selected_values = tree.item(selected_item, 'values')
-        playlist_tree.insert("", tk.END, values=selected_values)
-    except IndexError:
-        pass
-
-
-
 
 
 # Fonction pour trier le tableau principal

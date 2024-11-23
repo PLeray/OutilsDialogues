@@ -3,12 +3,12 @@ import tkinter as tk
 import json
 
 from tkinter import ttk, Menu
-from gui_functions import add_to_playlist, open_and_display_json, display_info, sort_tree
-from playlist_functions import move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist
+from gui_functions import open_and_display_json, SelectionLigne, sort_tree
+from playlist_functions import add_to_playlist, move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist, setup_playlist
 from filtrage import filter_tree
 
-from custom_types import Dialogue
-from data_loader import load_json
+#from custom_types import Dialogue
+#from data_loader import load_json
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -46,7 +46,7 @@ reset_filter_button = tk.Button(filter_frame, text="Réinitialiser les filtres",
 reset_filter_button.grid(row=1, column=len(columns) + 1, padx=5)
 
 # Configuration du tableau principal (tree)
-tree = ttk.Treeview(main_frame, columns=columns, show="headings", height=15)
+tree = ttk.Treeview(main_frame, columns=columns, show="headings", height=15, selectmode="extended")
 
 # Configurer les en-têtes de colonnes avec la possibilité de trier les données
 for column in columns:
@@ -83,70 +83,25 @@ info_frame.pack(side=tk.RIGHT, fill=tk.Y, padx=10, pady=10)
 file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
 open_and_display_json(tree, file_path)
 
-###### A METTRE DANS PLAYLIST ? #############
-# Frame pour les boutons et la playlist
-bottom_frame = tk.Frame(root)
-bottom_frame.pack(side=tk.BOTTOM, fill=tk.X, padx=10, pady=10)
 
-# Configurer les boutons entre les tableaux (playlist)
-button_frame = tk.Frame(bottom_frame)
-button_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
-
-# Ajouter les boutons pour gérer la playlist
-add_button = tk.Button(button_frame, text="Ajouter à la playlist", command=lambda: add_to_playlist(tree, playlist_tree))
-add_button.pack(side=tk.LEFT, padx=5)
-
-move_up_button = tk.Button(button_frame, text="Monter", command=lambda: move_up_playlist(playlist_tree))
-move_up_button.pack(side=tk.LEFT, padx=5)
-
-move_down_button = tk.Button(button_frame, text="Descendre", command=lambda: move_down_playlist(playlist_tree))
-move_down_button.pack(side=tk.LEFT, padx=5)
-
-save_button = tk.Button(button_frame, text="Sauvegarder la playlist", command=lambda: save_playlist_to_file(playlist_tree))
-save_button.pack(side=tk.LEFT, padx=5)
-
-clear_button = tk.Button(button_frame, text="Effacer la playlist", command=lambda: clear_playlist(playlist_tree))
-clear_button.pack(side=tk.LEFT, padx=5)
-
-load_button = tk.Button(button_frame, text="Charger la playlist", command=lambda: load_playlist_from_file(playlist_tree))
-load_button.pack(side=tk.LEFT, padx=5)
-
-# Configurer la playlist en dessous du tableau principal et du panneau d'informations
-playlist_info_frame = tk.Frame(bottom_frame, width=300, relief=tk.RAISED, borderwidth=1)
-playlist_info_frame.pack(side=tk.RIGHT, fill=tk.Y, padx=10, pady=10)
-playlist_columns = ("ID", "Sous-titres", "Origine", "Audio", "Origine 2", "Quête")
-playlist_tree = ttk.Treeview(bottom_frame, columns=playlist_columns, show="headings", height=10)
-
-# Configurer les en-têtes et colonnes de la playlist
-for column in playlist_columns:
-    playlist_tree.heading(column, text=column)
-    if column == "ID":
-        playlist_tree.column(column, width=130, minwidth=100, stretch=False, anchor="w")
-    elif column == "Origine":
-        playlist_tree.column(column, width=70, minwidth=200, stretch=True, anchor="w")
-    elif column == "Origine 2":
-        playlist_tree.column(column, width=70, minwidth=200, stretch=True, anchor="w")
-    else:
-        playlist_tree.column(column, width=150, anchor="w")
-
-# Ajouter la barre de défilement pour la playlist
-playlist_scrollbar = ttk.Scrollbar(bottom_frame, orient=tk.VERTICAL, command=playlist_tree.yview)
-playlist_tree.configure(yscroll=playlist_scrollbar.set)
-playlist_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-
-playlist_tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-########################
-
-# Menu contextuel pour le tableau principal
-def show_context_menu(event):
-    menu = Menu(root, tearoff=0)
-    menu.add_command(label="Ajouter à la playlist", command=lambda: add_to_playlist(tree, playlist_tree))
-    menu.post(event.x_root, event.y_root) 
+# Fonction pour configurer le tableau de playlist
+playlist_tree = setup_playlist(root, tree, tk)
 
 # Lier les événements du tableau principal
-tree.bind("<Button-3>", show_context_menu)  # Clic droit pour afficher le menu contextuel
-tree.bind("<Double-1>", lambda event: copy_cell(event, tree, root))  # Double clic pour copier une cellule
-tree.bind("<<TreeviewSelect>>", lambda event: display_info(event, tree, info_frame))  # Sélectionner une ligne pour afficher les détails
+
+def select_and_add_to_playlist(event, tree, playlist_tree, tk):
+    # Identifier la ligne sous le curseur
+    item = tree.identify_row(event.y)
+    if item:  # Si une ligne est détectée
+        tree.selection_set(item)  # Sélectionner cette ligne
+        # Appeler la fonction pour ajouter à la playlist
+        add_to_playlist(tree, playlist_tree, tk)
+
+tree.bind("<Button-3>", lambda event: select_and_add_to_playlist(event, tree, playlist_tree, tk))
+
+
+#tree.bind("<Double-1>", lambda event: copy_cell(event, tree, root))  # Double clic pour copier une cellule
+tree.bind("<<TreeviewSelect>>", lambda event: SelectionLigne(event, tree, info_frame))  # Sélectionner une ligne pour afficher les détails
 
 # Lancer la boucle principale de l'application
 root.mainloop()
