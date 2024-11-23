@@ -1,8 +1,14 @@
 # fichier: main.py
 import tkinter as tk
-from tkinter import ttk, Menu, filedialog
-from gui_functions import open_and_display_json, copy_cell, display_info, setup_playlist, add_to_playlist, move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist
 import json
+
+from tkinter import ttk, Menu
+from gui_functions import add_to_playlist, open_and_display_json, display_info, sort_tree
+from playlist_functions import move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist
+from filtrage import filter_tree
+
+from custom_types import Dialogue
+from data_loader import load_json
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -17,16 +23,6 @@ main_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True, padx=10, pady=10)
 # Définition des colonnes du tableau principal
 #columns = ("ID", "Sous-titres", "Origine A", "Audio", "Origine Q", "Quête")
 columns = ("ID", "Sous-titres", "Origine", "Audio", "Origine 2", "Quête")
-
-# Frame pour les filtres
-def filter_tree(tree, column_index, filter_text):
-    # Fonction pour filtrer les lignes du tableau principal en fonction du texte de filtre
-    for item in tree.get_children():
-        values = tree.item(item, "values")
-        if filter_text.lower() in values[column_index].lower():
-            tree.item(item, open=True)
-        else:
-            tree.detach(item)
 
 # Créer la frame pour les filtres et l'ajouter au-dessus du tableau principal
 filter_frame = tk.Frame(root)
@@ -65,7 +61,7 @@ for column in columns:
     elif column == "Origine 2":
         tree.column(column, width=70, minwidth=200, stretch=True, anchor="w")
     else:
-        tree.column(column, width=150, anchor="w")
+        tree.column(column, width=200, anchor="w")
 
 # Ajouter les barres de défilement au tableau principal
 scrollbar = ttk.Scrollbar(main_frame, orient=tk.VERTICAL, command=tree.yview)
@@ -87,6 +83,7 @@ info_frame.pack(side=tk.RIGHT, fill=tk.Y, padx=10, pady=10)
 file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
 open_and_display_json(tree, file_path)
 
+###### A METTRE DANS PLAYLIST ? #############
 # Frame pour les boutons et la playlist
 bottom_frame = tk.Frame(root)
 bottom_frame.pack(side=tk.BOTTOM, fill=tk.X, padx=10, pady=10)
@@ -125,9 +122,9 @@ for column in playlist_columns:
     playlist_tree.heading(column, text=column)
     if column == "ID":
         playlist_tree.column(column, width=130, minwidth=100, stretch=False, anchor="w")
-    elif column == "Origine A":
+    elif column == "Origine":
         playlist_tree.column(column, width=70, minwidth=200, stretch=True, anchor="w")
-    elif column == "Origine Q":
+    elif column == "Origine 2":
         playlist_tree.column(column, width=70, minwidth=200, stretch=True, anchor="w")
     else:
         playlist_tree.column(column, width=150, anchor="w")
@@ -138,58 +135,13 @@ playlist_tree.configure(yscroll=playlist_scrollbar.set)
 playlist_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
 playlist_tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-
-# Fonction pour trier le tableau principal
-def sort_tree(tree, col, reverse):
-    # Récupérer toutes les lignes et les trier en fonction de la colonne spécifiée
-    l = [(tree.set(k, col), k) for k in tree.get_children('')]
-    l.sort(reverse=reverse)
-
-    # Réorganiser les lignes dans l'ordre trié
-    for index, (val, k) in enumerate(l):
-        tree.move(k, '', index)
-
-    # Mettre à jour le titre de la colonne pour indiquer le sens du tri
-    tree.heading(col, command=lambda: sort_tree(tree, col, not reverse))
-
-# Fonction pour réinitialiser les filtres et restaurer toutes les lignes
-def reset_filters(tree, filters, file_path):
-    # Effacer les entrées des filtres
-    for entry in filters:
-        entry.delete(0, tk.END)
-    # Recharger les données d'origine à partir du fichier JSON
-    open_and_display_json(tree, file_path)
-
-# Fonction pour sauvegarder la playlist dans un fichier JSON
-def save_playlist_to_file(playlist_tree):
-    file_path = filedialog.asksaveasfilename(defaultextension=".json", filetypes=[("JSON files", "*.json")])
-    if file_path:
-        playlist_data = []
-        # Récupérer les données de chaque ligne de la playlist
-        for child in playlist_tree.get_children():
-            values = playlist_tree.item(child, "values")
-            playlist_data.append(values)
-        # Sauvegarder les données dans un fichier JSON
-        with open(file_path, "w") as file:
-            json.dump(playlist_data, file, indent=4)
-
-# Fonction pour charger la playlist à partir d'un fichier JSON
-def load_playlist_from_file(playlist_tree):
-    file_path = filedialog.askopenfilename(filetypes=[("JSON files", "*.json")])
-    if file_path:
-        with open(file_path, "r") as file:
-            playlist_data = json.load(file)
-            # Effacer l'ancienne playlist avant de charger la nouvelle
-            clear_playlist(playlist_tree)
-            # Ajouter les nouvelles données dans la playlist
-            for values in playlist_data:
-                playlist_tree.insert("", tk.END, values=values)
+########################
 
 # Menu contextuel pour le tableau principal
 def show_context_menu(event):
     menu = Menu(root, tearoff=0)
     menu.add_command(label="Ajouter à la playlist", command=lambda: add_to_playlist(tree, playlist_tree))
-    menu.post(event.x_root, event.y_root)
+    menu.post(event.x_root, event.y_root) 
 
 # Lier les événements du tableau principal
 tree.bind("<Button-3>", show_context_menu)  # Clic droit pour afficher le menu contextuel

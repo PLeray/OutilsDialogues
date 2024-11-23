@@ -1,6 +1,6 @@
 import json
 
-file_path = r"D:\_CyberPunk-Creation\BDDDialogues\test.json"
+file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
 with open(file_path, "r", encoding="utf-8") as file:
     try:
         data = json.load(file)
