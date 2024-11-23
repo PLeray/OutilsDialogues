@@ -7,15 +7,12 @@ from data_loader import load_json
 
 # Fonction pour afficher les données dans le tableau
 def open_and_display_json(tree, file_path: str):
-    print(f"Tentative de chargement du fichier JSON : {file_path}")
+    
     data = load_json(file_path)
 
     if not data:
         print("Aucune donnée chargée depuis le fichier JSON.")
         return
-
-    print(f"Type de données chargées : {type(data)}")
-    print(f"Contenu des données : {data}")
 
     # Supprimer les anciennes données du tableau
     for item in tree.get_children():
@@ -24,7 +21,6 @@ def open_and_display_json(tree, file_path: str):
     # Vérifiez si les données sont une liste
     if isinstance(data, list):
         for entry in data:
-            print(f"Traitement de l'entrée : {entry}")
             sous_titres = entry.get('female', {}).get('text', 'N/A')
             vo_path = entry.get('female', {}).get('vo', {}).get('main', 'N/A')
             path = entry.get('_path', 'N/A')
@@ -46,7 +42,6 @@ def open_and_display_json(tree, file_path: str):
     # Vérifiez si les données sont un dictionnaire
     elif isinstance(data, dict):
         for key, value in data.items():
-            print(f"Traitement de la clé {key} avec valeur {value}")
             sous_titres = value.get('female', {}).get('text', 'N/A')
             vo_path = value.get('female', {}).get('vo', {}).get('main', 'N/A')
             path = value.get('_path', 'N/A')
@@ -59,9 +54,6 @@ def open_and_display_json(tree, file_path: str):
 
     else:
         print("Erreur : Le type de données JSON est inconnu.")
-
-    print("Données affichées dans le tableau.")
-
 
 
 # Fonction pour ajouter les filtres et les boutons de contrôle au-dessus du premier tableau
