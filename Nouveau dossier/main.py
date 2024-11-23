@@ -35,7 +35,7 @@ if __name__ == "__main__":
     root.geometry("1200x800")
 
     # Définir le chemin du fichier JSON (à modifier selon vos besoins)
-    file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
+    file_path = r"D:\_CyberPunk-Creation\BDDDialogues\test.json"
 
     # Créer la zone des filtres
     filter_frame = tk.Frame(root)
