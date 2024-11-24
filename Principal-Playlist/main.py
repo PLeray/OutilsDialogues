@@ -8,6 +8,9 @@ from playlist_functions import add_to_playlist, move_up_playlist, move_down_play
 from filtrage import reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
 
 
+
+
+
 #from custom_types import Dialogue
 #from data_loader import load_json
 
@@ -174,6 +177,8 @@ info_frame.pack(side=tk.RIGHT, fill=tk.Y, padx=10, pady=10)
 playlist_tree = setup_playlist(root, tree, tk)
 
 # Lier les événements du tableau principal
+
+
 
 def select_and_add_to_playlist(event, tree, playlist_tree, tk):
     # Identifier la ligne sous le curseur
