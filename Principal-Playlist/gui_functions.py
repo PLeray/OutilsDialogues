@@ -133,12 +133,6 @@ def add_filters(frame, tree):
     reset_filter_button = tk.Button(filter_frame, text="Réinitialiser les filtres", command=lambda: reset_filters(tree, filters))
     reset_filter_button.grid(row=1, column=len(columns) + 1, padx=5)
 
-# Fonction pour réinitialiser les filtres et restaurer toutes les lignes
-def reset_filters(tree, filters):
-    for entry in filters:
-        entry.delete(0, tk.END)
-    open_and_display_json(tree, file_path)
-
 
 # Fonction pour trier le tableau principal
 def sort_tree(tree, col, reverse):
