@@ -5,15 +5,15 @@ import json
 from tkinter import ttk, Menu
 from gui_functions import open_and_display_json, SelectionLigne, sort_tree
 from playlist_functions import add_to_playlist, move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist, setup_playlist
-from filtrage import filter_tree, initialize_personnage_droplist
+from filtrage import  filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist
 
 
 #from custom_types import Dialogue
 #from data_loader import load_json
 
 # Charger les données dans le tableau principal à partir du fichier JSON
-#file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
-file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
+file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
+#file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -42,30 +42,17 @@ filterable_columns = {"ID", "Sous-titres", "Personnage", "Quête"}
 # Options pour la liste déroulante "Personnage"
 personnage_options = ["Personnage A", "Personnage B", "Personnage C"]
 
-# Créer les champs de filtre uniquement pour les colonnes sélectionnées
-filters = []
-for i, column in enumerate(columns):
-    if column in filterable_columns:
-        label = tk.Label(filter_frame, text=f"Filtre {column}")
-        label.grid(row=0, column=i, padx=5)
-        
-        if column == "Personnage":
-            entry = ttk.Combobox(filter_frame, values=personnage_options, state="readonly")
-        else:
-            entry = tk.Entry(filter_frame)
-        
-        entry.grid(row=1, column=i, padx=5)
-        filters.append((i, entry))
 
-# Ajouter un bouton pour appliquer les filtres
-filter_button = tk.Button(
+
+
+# Bouton pour appliquer tous les filtres
+apply_all_filters_button = tk.Button(
     filter_frame,
-    text="Appliquer les filtres",
-    command=lambda: [
-        filter_tree(tree, i, entry.get() if isinstance(entry, tk.Entry) else entry.get()) for i, entry in filters
-    ]
+    text="Appliquer tous les filtres",
+    command=lambda: filter_tree_with_filters(tree, filters)
+    #command=lambda: apply_all_filters(tree, filters)
 )
-filter_button.grid(row=1, column=len(columns), padx=5)
+apply_all_filters_button.grid(row=1, column=len(columns), padx=5)
 
 # Ajouter un bouton pour réinitialiser les filtres
 reset_filter_button = tk.Button(
@@ -87,16 +74,40 @@ main_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True, padx=10, pady=10)
 tree = ttk.Treeview(main_frame, columns=columns, show="headings", height=15, selectmode="extended")
 
 
-# Ajouter une Combobox pour "Personnage"
-personnage_combobox = ttk.Combobox(filter_frame, state="readonly")
-personnage_combobox.grid(row=1, column=3, padx=5)  # Colonne "Personnage" (index 3)
-
 # Charger les données dans le tableau
 open_and_display_json(tree, file_path)
 
-# Initialiser les options de la liste déroulante avec les noms de personnages extraits
-personnage_options = initialize_personnage_droplist(tree, 3)  # Colonne "Personnage" (index 3)
-personnage_combobox["values"] = personnage_options  # Remplir la Combobox avec les options
+# Créer les champs de filtre uniquement pour les colonnes sélectionnées
+filters = []  # Liste des filtres
+for i, column in enumerate(columns):
+    if column in filterable_columns:
+        label = tk.Label(filter_frame, text=f"Filtre {column}")
+        label.grid(row=0, column=i, padx=5)
+
+        if column == "Personnage":
+            entry = ttk.Combobox(filter_frame, state="readonly")
+            entry.grid(row=1, column=i, padx=5)
+            filters.append((i, entry))
+
+            # Initialiser les données de la Combobox "Personnage"
+            personnage_options = initialize_personnage_droplist(tree, 3)
+            entry["values"] = personnage_options
+            entry.set("Tous")  # Valeur par défaut
+
+        elif column == "Quête":
+            entry = ttk.Combobox(filter_frame, state="readonly")
+            entry.grid(row=1, column=i, padx=5)
+            filters.append((i, entry))
+
+            # Initialiser les données de la Combobox "Quête"
+            quete_options = initialize_quete_droplist(tree, 5)
+            entry["values"] = quete_options
+            entry.set("Toutes")  # Valeur par défaut
+
+        else:
+            entry = tk.Entry(filter_frame)
+            entry.grid(row=1, column=i, padx=5)
+            filters.append((i, entry))
 
 
 # Configurer les en-têtes de colonnes avec la possibilité de trier les données
