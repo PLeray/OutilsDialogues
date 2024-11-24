@@ -5,10 +5,15 @@ import json
 from tkinter import ttk, Menu
 from gui_functions import open_and_display_json, SelectionLigne, sort_tree
 from playlist_functions import add_to_playlist, move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist, setup_playlist
-from filtrage import filter_tree
+from filtrage import filter_tree, initialize_personnage_droplist
+
 
 #from custom_types import Dialogue
 #from data_loader import load_json
+
+# Charger les données dans le tableau principal à partir du fichier JSON
+#file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
+file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -16,37 +21,83 @@ root.title("Visualisateur de JSON en tableau avec copier-coller et panneau d'inf
 root.geometry("1500x800")
 root.minsize(1100, 800)
 
+# Créer une frame pour le bouton au-dessus du tableau principal
+button_frame = tk.Frame(root)
+button_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
+
+# Ajouter un bouton au-dessus du tableau principal
+action_button = tk.Button(button_frame, text="Action Bouton", command=lambda: print("Bouton cliqué !"))
+action_button.pack(side=tk.LEFT, padx=5, pady=5)
+
+# Créer la frame pour les filtres et l'ajouter au-dessus du tableau principal
+filter_frame = tk.Frame(root)  # <-- Correction : définition correcte
+filter_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
+
+# Colonnes du tableau principal
+columns = ("ID", "Sous-titres", "Origine", "Personnage", "Origine 2", "Quête")  # Remplacement de "Audio" par "Personnage"
+
+# Colonnes pour lesquelles les filtres seront activés
+filterable_columns = {"ID", "Sous-titres", "Personnage", "Quête"}
+
+# Options pour la liste déroulante "Personnage"
+personnage_options = ["Personnage A", "Personnage B", "Personnage C"]
+
+# Créer les champs de filtre uniquement pour les colonnes sélectionnées
+filters = []
+for i, column in enumerate(columns):
+    if column in filterable_columns:
+        label = tk.Label(filter_frame, text=f"Filtre {column}")
+        label.grid(row=0, column=i, padx=5)
+        
+        if column == "Personnage":
+            entry = ttk.Combobox(filter_frame, values=personnage_options, state="readonly")
+        else:
+            entry = tk.Entry(filter_frame)
+        
+        entry.grid(row=1, column=i, padx=5)
+        filters.append((i, entry))
+
+# Ajouter un bouton pour appliquer les filtres
+filter_button = tk.Button(
+    filter_frame,
+    text="Appliquer les filtres",
+    command=lambda: [
+        filter_tree(tree, i, entry.get() if isinstance(entry, tk.Entry) else entry.get()) for i, entry in filters
+    ]
+)
+filter_button.grid(row=1, column=len(columns), padx=5)
+
+# Ajouter un bouton pour réinitialiser les filtres
+reset_filter_button = tk.Button(
+    filter_frame,
+    text="Réinitialiser les filtres",
+    command=lambda: [
+        open_and_display_json(tree, file_path)
+    ]
+    
+)
+reset_filter_button.grid(row=1, column=len(columns) + 1, padx=5)
+
+
 # Frame principale pour contenir le tableau principal et le panneau d'informations
 main_frame = tk.Frame(root)
 main_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True, padx=10, pady=10)
 
-# Définition des colonnes du tableau principal
-#columns = ("ID", "Sous-titres", "Origine A", "Audio", "Origine Q", "Quête")
-columns = ("ID", "Sous-titres", "Origine", "Audio", "Origine 2", "Quête")
-
-# Créer la frame pour les filtres et l'ajouter au-dessus du tableau principal
-filter_frame = tk.Frame(root)
-filter_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
-
-# Créer les champs de filtre pour chaque colonne
-filters = []
-for i, column in enumerate(columns):
-    label = tk.Label(filter_frame, text=f"Filtre {column}")
-    label.grid(row=0, column=i, padx=5)
-    entry = tk.Entry(filter_frame)
-    entry.grid(row=1, column=i, padx=5)
-    filters.append(entry)
-
-# Ajouter un bouton pour appliquer les filtres
-filter_button = tk.Button(filter_frame, text="Appliquer les filtres", command=lambda: [filter_tree(tree, i, entry.get()) for i, entry in enumerate(filters)])
-filter_button.grid(row=1, column=len(columns), padx=5)
-
-# Ajouter un bouton pour réinitialiser les filtres
-reset_filter_button = tk.Button(filter_frame, text="Réinitialiser les filtres", command=lambda: reset_filters(tree, filters, file_path))
-reset_filter_button.grid(row=1, column=len(columns) + 1, padx=5)
-
 # Configuration du tableau principal (tree)
 tree = ttk.Treeview(main_frame, columns=columns, show="headings", height=15, selectmode="extended")
+
+
+# Ajouter une Combobox pour "Personnage"
+personnage_combobox = ttk.Combobox(filter_frame, state="readonly")
+personnage_combobox.grid(row=1, column=3, padx=5)  # Colonne "Personnage" (index 3)
+
+# Charger les données dans le tableau
+open_and_display_json(tree, file_path)
+
+# Initialiser les options de la liste déroulante avec les noms de personnages extraits
+personnage_options = initialize_personnage_droplist(tree, 3)  # Colonne "Personnage" (index 3)
+personnage_combobox["values"] = personnage_options  # Remplir la Combobox avec les options
+
 
 # Configurer les en-têtes de colonnes avec la possibilité de trier les données
 for column in columns:
@@ -57,9 +108,9 @@ for column in columns:
     if column == "ID":
         tree.column(column, width=130, minwidth=100, stretch=False, anchor="w")
     elif column == "Origine":
-        tree.column(column, width=70, minwidth=200, stretch=True, anchor="w")
+        tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
     elif column == "Origine 2":
-        tree.column(column, width=70, minwidth=200, stretch=True, anchor="w")
+        tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
     else:
         tree.column(column, width=200, anchor="w")
 
@@ -79,9 +130,10 @@ tree.pack(padx=10, pady=10, side=tk.LEFT, fill=tk.BOTH, expand=True)
 info_frame = tk.Frame(main_frame, width=300, relief=tk.RAISED, borderwidth=1)
 info_frame.pack(side=tk.RIGHT, fill=tk.Y, padx=10, pady=10)
 
-# Charger les données dans le tableau principal à partir du fichier JSON
-file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
-open_and_display_json(tree, file_path)
+
+
+
+
 
 
 # Fonction pour configurer le tableau de playlist

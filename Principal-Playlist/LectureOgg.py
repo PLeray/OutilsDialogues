@@ -1,5 +1,10 @@
 import pygame
 
+# Variables globales
+CheminRacine = "D:\_CyberPunk-Creation\DialogueFR/source/raw/"
+CheminLocalization = "localization/"
+CheminLangue = "fr-fr"
+
 def stop_sound():
     #"""Arrête le son en cours de lecture."""
     pygame.mixer.music.stop()
@@ -16,7 +21,7 @@ def play_ogg_file(file_path):
 
         # Charger le fichier .ogg
         pygame.mixer.music.load(file_path)
-        print(f"Lecture de : {file_path}")
+        #print(f"Lecture de : {file_path}")
 
         # Jouer le fichier audio
         pygame.mixer.music.play()
@@ -26,16 +31,6 @@ def play_ogg_file(file_path):
 
 
 def generate_audio_path(audio_value):
-    """
-    Génère le chemin complet du fichier audio en fonction de audio_value.
-    :param audio_value: Chaîne contenant le chemin partiel du fichier audio ou "N/A".
-    :return: Chemin complet si audio_value est valide, sinon False.
-    """
-    # Variables globales
-    CheminRacine = "D:/_CyberPunk-Creation/Dialogues-Multi/source/raw/"
-    CheminLocalization = "localization/"
-    CheminLangue = "fr-fr"
-
     # Vérifier si audio_value est valide
     if audio_value == "N/A":
         return False

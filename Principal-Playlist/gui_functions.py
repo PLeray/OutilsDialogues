@@ -7,56 +7,10 @@ from data_loader import load_json
 
 from LectureOgg import JouerAudio
 
-CheminLocalisation = "D:/_CyberPunk-Creation/Dialogues-Multi/source/raw/ep1/localization/fr-fr/"  
-CheminLocalisation = "D:/_CyberPunk-Creation/Dialogues-Multi/source/raw/ep1/localization/fr-fr/"  
-CheminLocalisation = "D:/_CyberPunk-Creation/Dialogues-Multi/source/raw/"  
-# base ou ep1
-CheminLocalization = "/localization/"
-CheminLangue = "fr-fr"
-
-
-# Fonction pour afficher les informations de la ligne sélectionnée
-def display_info(event, tree, info_frame):
-    info_frame.config(width=400)
-    info_frame.pack_propagate(False)
-    try:
-        selected_item = tree.selection()[0]
-        selected_values = tree.item(selected_item, 'values')
-
-        for widget in info_frame.winfo_children():
-            widget.destroy()
-
-        labels = ["ID2", "Sous-titres", "Origine", "Audio", "Origine", "Quête"]
-        for i, value in enumerate(selected_values):
-            text = tk.Text(info_frame, height=1, wrap="none", borderwidth=0)
-            text.insert("1.0", f"{labels[i]}: {value}")
-            text.config(state="disabled")
-            text.pack(fill="x", padx=5, pady=2)
-        
-        # Ajouter l'information supplémentaire "Son"
-        audio_value = selected_values[3]  # 4ème colonne (indice 3) pour "Audio"
-        son_path = f"{CheminLocalisation}{audio_value}"
-
-        text = tk.Text(info_frame, height=1, wrap="none", borderwidth=0)
-        text.insert("1.0", f"Son: {son_path}")
-        text.config(state="disabled")
-        text.pack(fill="x", padx=5, pady=2)
-        
-        JouerAudio(audio_value)
-
-    except IndexError:
-        pass
-
-#Fonction pour la selection d'une ligne
-def SelectionLigne(event, tree, info_frame):
-    display_info(event, tree, info_frame)
-
     
 # Fonction pour afficher les données dans le tableau
 def open_and_display_json(tree, file_path: str):
-    
     data = load_json(file_path)
-
     if not data:
         print("Aucune donnée chargée depuis le fichier JSON.")
         return
@@ -80,12 +34,10 @@ def open_and_display_json(tree, file_path: str):
                 entry.get('ID', 'N/A'), 
                 entry.get('Sous-titres', 'N/A'),
                 entry.get('Origine', 'N/A'),
-                entry.get('Audio', 'N/A'),
+                entry.get('Personnage', 'N/A'),
                 entry.get('Origine 2', 'N/A'),
                 entry.get('Quête', 'N/A')
             ))
-
-
     # Vérifiez si les données sont un dictionnaire
     elif isinstance(data, dict):
         for key, value in data.items():
@@ -103,12 +55,41 @@ def open_and_display_json(tree, file_path: str):
         print("Erreur : Le type de données JSON est inconnu.")
 
 
+#Fonction pour la selection d'une ligne
+def SelectionLigne(event, tree, info_frame):
+    display_info(event, tree, info_frame)
+
+# Fonction pour afficher les informations de la ligne sélectionnée
+def display_info(event, tree, info_frame):
+    info_frame.config(width=400)
+    info_frame.pack_propagate(False)
+    try:
+        selected_item = tree.selection()[0]
+        selected_values = tree.item(selected_item, 'values')
+
+        for widget in info_frame.winfo_children():
+            widget.destroy()
+
+        labels = ["ID2", "Sous-titres", "Origine", "Personnage", "Origine", "Quête"]
+        for i, value in enumerate(selected_values):
+            text = tk.Text(info_frame, height=1, wrap="none", borderwidth=0)
+            text.insert("1.0", f"{labels[i]}: {value}")
+            text.config(state="disabled")
+            text.pack(fill="x", padx=5, pady=2)
+        
+        # Ajouter l'information supplémentaire "Son"
+        audio_value = selected_values[3]  # 4ème colonne (indice 3) pour "Personnage"       
+        JouerAudio(audio_value)
+
+    except IndexError:
+        pass
+
 # Fonction pour ajouter les filtres et les boutons de contrôle au-dessus du premier tableau
 def add_filters(frame, tree):
     filter_frame = tk.Frame(frame)
     filter_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
 
-    columns = ["ID", "Sous-titres", "Origine", "Audio", "Origine", "Quête"]
+    columns = ["ID", "Sous-titres", "Origine", "Personnage", "Origine", "Quête"]
     filters = []
     for i, column in enumerate(columns):
         label = tk.Label(filter_frame, text=f"Filtre {column}")
