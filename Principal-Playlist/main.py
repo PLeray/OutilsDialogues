@@ -13,7 +13,7 @@ from filtrage import reset_filters, filter_tree_with_filters, initialize_personn
 
 # Charger les données dans le tableau principal à partir du fichier JSON
 file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
-file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
+#file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -28,6 +28,7 @@ button_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
 # Ajouter un bouton au-dessus du tableau principal
 action_button = tk.Button(button_frame, text="Action Bouton", command=lambda: print("Bouton cliqué !"))
 action_button.pack(side=tk.LEFT, padx=5, pady=5)
+
 
 # Créer la frame pour les filtres et l'ajouter au-dessus du tableau principal
 filter_frame = tk.Frame(root)  # <-- Correction : définition correcte
@@ -54,7 +55,7 @@ tree = setup_TableauPrincipal(root, tk, columns)
 apply_all_filters_button = tk.Button(
     filter_frame,
     text="Appliquer tous les filtres",
-    command=lambda: filter_tree_with_filters(tree, filters, file_path)
+    command=lambda: filter_tree_with_filters(tree, filters, file_path, label_count)
     #command=lambda: apply_all_filters(tree, filters)
 )
 apply_all_filters_button.grid(row=1, column=7, padx=5)
@@ -71,7 +72,9 @@ reset_filter_button = tk.Button(
 )
 reset_filter_button.grid(row=1, column=8, padx=5)
 
-
+# Déplacer le label_count à droite du bouton "Réinitialiser les filtres"
+label_count = tk.Label(filter_frame, text="Nombre de ligne : 0")
+label_count.grid(row=1, column=9, padx=5)
 
 
 
@@ -87,6 +90,8 @@ def on_personnage_selected(event):
 def on_quete_selected(event):
     quete_value = event.widget.get()
     update_personnage_based_on_quete(tree, filters, 5, 3, quete_value)  # 5 = colonne Quête, 3 = colonne Personnage
+
+   
 
 # Créer les champs de filtre uniquement pour les colonnes sélectionnées
 filters = []  # Initialisation de la liste des filtres
@@ -129,12 +134,8 @@ for i, column in enumerate(columns):
             entry.grid(row=1, column=i, padx=5)
             filters.append((i, entry))  # Ajouter le widget à la liste des filtres
 
-"""
-# Panneau d'informations pour afficher les détails de la ligne sélectionnée
-main_frame = tk.Frame(root)
-info_frame = tk.Frame(main_frame, width=300, relief=tk.RAISED, borderwidth=1)
-info_frame.pack(side=tk.RIGHT, fill=tk.Y, padx=10, pady=10)  
-"""
+
+filter_tree_with_filters(tree, filters, file_path, label_count)
 
 
 # Fonction pour configurer le tableau de playlist

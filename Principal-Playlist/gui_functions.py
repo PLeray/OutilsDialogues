@@ -47,7 +47,7 @@ def setup_TableauPrincipal(root, tk, columns):
     return tree
 
 # Fonction pour afficher les données dans le tableau
-def open_and_display_json(tree, file_path: str):
+def open_and_display_json(tree, file_path):
     data = load_json(file_path)
     if not data:
         print("Aucune donnée chargée depuis le fichier JSON.")

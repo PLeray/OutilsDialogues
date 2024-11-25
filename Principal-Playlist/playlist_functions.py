@@ -191,7 +191,7 @@ def ecouterPlaylist(playlist_tree):
 
         for item in items[start_index:]:
             if not is_playlist_playing:  # Vérification pour stopper la lecture
-                print("Lecture de la playlist interrompue.")
+                #print("Lecture de la playlist interrompue.")
                 break
 
             item_values = playlist_tree.item(item, "values")
@@ -227,7 +227,7 @@ def stopperPlaylist():
         if pygame.mixer.get_init():
             pygame.mixer.music.stop()  # Arrête l'audio en cours
         is_playlist_playing = False  # Stoppe la progression dans la playlist
-        print("Lecture de la playlist complètement arrêtée.")
+        #print("Lecture de la playlist complètement arrêtée.")
     except Exception as e:
         print(f"Erreur lors de l'arrêt de la lecture : {e}")
 

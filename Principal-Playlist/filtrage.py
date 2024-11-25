@@ -17,14 +17,18 @@ def reset_filters(tree, filters, file_path):
     initialize_personnage_droplist(tree, 3)
 
 
-def filter_tree_with_filters(tree, filters, file_path):
+def filter_tree_with_filters(tree, filters, file_path, label_count):
     """
     Filtre les lignes du Treeview en fonction des widgets de filtre dans la liste `filters`.
+    Met également à jour un label pour afficher le nombre de lignes correspondantes.
 
     :param tree: Le Treeview contenant les données.
     :param filters: Une liste de tuples contenant les indices de colonnes et les widgets de filtre.
+    :param file_path: Le chemin du fichier source des données.
+    :param label_count: Le label Tkinter pour afficher le nombre de lignes correspondantes.
     """
     open_and_display_json(tree, file_path)
+    matching_count = 0  # Compteur de lignes correspondantes
 
     for item in tree.get_children():
         values = tree.item(item, "values")
@@ -58,8 +62,13 @@ def filter_tree_with_filters(tree, filters, file_path):
         # Gérer la ligne en fonction de la correspondance
         if match:
             tree.item(item, open=True)
+            matching_count += 1  # Incrémenter le compteur si la ligne correspond
         else:
             tree.detach(item)
+
+    # Mettre à jour le label avec le nombre de lignes correspondantes
+    label_count.config(text=f"Lignes correspondantes : {matching_count}")
+
 
 def initialize_personnage_droplist(tree, column_index):
     """
