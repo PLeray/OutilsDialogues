@@ -3,8 +3,8 @@ import tkinter as tk
 import json
 
 from tkinter import ttk, Menu
-from gui_functions import open_and_display_json, SelectionLigne, sort_tree
-from playlist_functions import add_to_playlist, move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist, setup_playlist
+from gui_functions import open_and_display_json, SelectionLigne, sort_tree, setup_TableauPrincipal
+from playlist_functions import select_and_add_to_playlist, setup_playlist, add_to_playlist, move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist
 from filtrage import reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
 
 
@@ -33,17 +33,22 @@ action_button.pack(side=tk.LEFT, padx=5, pady=5)
 filter_frame = tk.Frame(root)  # <-- Correction : définition correcte
 filter_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
 
+
+"""
+# Frame principale pour contenir le tableau principal et le panneau d'informations
+main_frame = tk.Frame(root)
+main_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True, padx=10, pady=10)
+
+# Configuration du tableau principal (tree)
+tree = ttk.Treeview(main_frame, columns=columns, show="headings", height=15, selectmode="extended")
+"""
+
 # Colonnes du tableau principal
 columns = ("ID", "Sous-titres", "Origine", "Personnage", "Origine 2", "Quête")  # Remplacement de "Audio" par "Personnage"
 
-# Colonnes pour lesquelles les filtres seront activés
-filterable_columns = {"ID", "Sous-titres", "Personnage", "Quête"}
 
-# Options pour la liste déroulante "Personnage"
-personnage_options = ["Personnage A", "Personnage B", "Personnage C"]
-
-
-
+#definition du Tableau Principal
+tree = setup_TableauPrincipal(root, tk, columns)
 
 # Bouton pour appliquer tous les filtres
 apply_all_filters_button = tk.Button(
@@ -52,7 +57,7 @@ apply_all_filters_button = tk.Button(
     command=lambda: filter_tree_with_filters(tree, filters, file_path)
     #command=lambda: apply_all_filters(tree, filters)
 )
-apply_all_filters_button.grid(row=1, column=len(columns), padx=5)
+apply_all_filters_button.grid(row=1, column=7, padx=5)
 
 # Ajouter un bouton pour réinitialiser les filtres
 reset_filter_button = tk.Button(
@@ -64,15 +69,10 @@ reset_filter_button = tk.Button(
     ]
     
 )
-reset_filter_button.grid(row=1, column=len(columns) + 1, padx=5)
+reset_filter_button.grid(row=1, column=8, padx=5)
 
 
-# Frame principale pour contenir le tableau principal et le panneau d'informations
-main_frame = tk.Frame(root)
-main_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True, padx=10, pady=10)
 
-# Configuration du tableau principal (tree)
-tree = ttk.Treeview(main_frame, columns=columns, show="headings", height=15, selectmode="extended")
 
 
 # Charger les données dans le tableau
@@ -88,18 +88,17 @@ def on_quete_selected(event):
     quete_value = event.widget.get()
     update_personnage_based_on_quete(tree, filters, 5, 3, quete_value)  # 5 = colonne Quête, 3 = colonne Personnage
 
-
-    
-
 # Créer les champs de filtre uniquement pour les colonnes sélectionnées
 filters = []  # Initialisation de la liste des filtres
+# Colonnes pour lesquelles les filtres seront activés
+filterable_columns = {"ID", "Sous-titres", "Personnage", "Quête"}
 
 for i, column in enumerate(columns):
     if column in filterable_columns:
         label = tk.Label(filter_frame, text=f"Filtre {column}")
         label.grid(row=0, column=i, padx=5)
 
-        if column == "Personnage":
+        if i == 3:  # Exemple : numéro de colonne pour "Personnage"
             entry = ttk.Combobox(filter_frame, state="readonly")
             entry.grid(row=1, column=i, padx=5)
             filters.append((i, entry))  # Ajouter le widget à la liste des filtres
@@ -112,7 +111,7 @@ for i, column in enumerate(columns):
             # Associer l'événement de changement
             entry.bind("<<ComboboxSelected>>", on_personnage_selected)
 
-        elif column == "Quête":
+        elif i == 5:  # Exemple : numéro de colonne pour "Quête"
             entry = ttk.Combobox(filter_frame, state="readonly")
             entry.grid(row=1, column=i, padx=5)
             filters.append((i, entry))  # Ajouter le widget à la liste des filtres
@@ -130,64 +129,20 @@ for i, column in enumerate(columns):
             entry.grid(row=1, column=i, padx=5)
             filters.append((i, entry))  # Ajouter le widget à la liste des filtres
 
-
-
-
-# Configurer les en-têtes de colonnes avec la possibilité de trier les données
-for column in columns:
-    tree.heading(column, text=column, command=lambda c=column: sort_tree(tree, c, False))
-
-# Configurer les colonnes (largeur, alignement, etc.)
-for column in columns:
-    if column == "ID":
-        tree.column(column, width=130, minwidth=100, stretch=False, anchor="w")
-    elif column == "Origine":
-        tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
-    elif column == "Origine 2":
-        tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
-    else:
-        tree.column(column, width=200, anchor="w")
-
-# Ajouter les barres de défilement au tableau principal
-scrollbar = ttk.Scrollbar(main_frame, orient=tk.VERTICAL, command=tree.yview)
-h_scrollbar = ttk.Scrollbar(main_frame, orient=tk.HORIZONTAL, command=tree.xview)
-
-# Configurer le tableau pour utiliser les barres de défilement
-tree.configure(yscroll=scrollbar.set, xscroll=h_scrollbar.set)
-
-# Positionner les barres de défilement et le tableau principal dans la frame principale
-scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-h_scrollbar.pack(side=tk.BOTTOM, fill=tk.X)
-tree.pack(padx=10, pady=10, side=tk.LEFT, fill=tk.BOTH, expand=True)
-
+"""
 # Panneau d'informations pour afficher les détails de la ligne sélectionnée
+main_frame = tk.Frame(root)
 info_frame = tk.Frame(main_frame, width=300, relief=tk.RAISED, borderwidth=1)
-info_frame.pack(side=tk.RIGHT, fill=tk.Y, padx=10, pady=10)
-
-
-
-
-
+info_frame.pack(side=tk.RIGHT, fill=tk.Y, padx=10, pady=10)  
+"""
 
 
 # Fonction pour configurer le tableau de playlist
-playlist_tree = setup_playlist(root, tree, tk)
+playlist_tree = setup_playlist(root, tree, tk, columns)
 
 # Lier les événements du tableau principal
-
-def select_and_add_to_playlist(event, tree, playlist_tree, tk):
-    # Identifier la ligne sous le curseur
-    item = tree.identify_row(event.y)
-    if item:  # Si une ligne est détectée
-        tree.selection_set(item)  # Sélectionner cette ligne
-        # Appeler la fonction pour ajouter à la playlist
-        add_to_playlist(tree, playlist_tree, tk)
-
 tree.bind("<Button-3>", lambda event: select_and_add_to_playlist(event, tree, playlist_tree, tk))
-
-
-#tree.bind("<Double-1>", lambda event: copy_cell(event, tree, root))  # Double clic pour copier une cellule
-tree.bind("<<TreeviewSelect>>", lambda event: SelectionLigne(event, tree, info_frame))  # Sélectionner une ligne pour afficher les détails
+tree.bind("<<TreeviewSelect>>", lambda event: SelectionLigne(event, tree))  # Sélectionner une ligne pour afficher les détails
 
 # Lancer la boucle principale de l'application
 root.mainloop()

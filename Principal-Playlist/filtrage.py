@@ -3,27 +3,18 @@ import tkinter as tk
 from tkinter import ttk
 from gui_functions import open_and_display_json
 
-"""
-# Frame pour les filtres A SUPRIMER 
-def filter_tree(tree, column_index, filter_text):
-    # Fonction pour filtrer les lignes du tableau principal en fonction du texte de filtre
-    for item in tree.get_children():
-        values = tree.item(item, "values")
-        if filter_text.lower() in values[column_index].lower():
-            tree.item(item, open=True)
-        else:
-            tree.detach(item)
 
-"""
 
 # Fonction pour réinitialiser les filtres et restaurer toutes les lignes
 def reset_filters(tree, filters, file_path):
-    for entry in filters:
-        entry.delete(0, tk.END)
+    for _, widget in filters:
+        if isinstance(widget, tk.Entry):  # Vérifie si c'est un champ de texte
+            widget.delete(0, tk.END)
+        elif isinstance(widget, ttk.Combobox):  # Vérifie si c'est une Combobox
+            widget.set("")  # Réinitialise la sélection
     open_and_display_json(tree, file_path)
     initialize_quete_droplist(tree, 5)
     initialize_personnage_droplist(tree, 3)
-
 
 
 def filter_tree_with_filters(tree, filters, file_path):
