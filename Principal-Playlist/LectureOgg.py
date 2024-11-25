@@ -10,27 +10,24 @@ def stop_sound():
     pygame.mixer.music.stop()
 
 
-def play_ogg_file(file_path, on_end_callback=None):
-    """
-    Joue un fichier audio et appelle un callback à la fin.
-    :param file_path: Chemin vers le fichier audio.
-    :param on_end_callback: Fonction à appeler à la fin du morceau.
-    """
+def play_ogg_file(file_path):
+    # """Joue un fichier .ogg, en arrêtant le son précédent."""
     try:
-        initialize_audio()  # Initialiser le module audio
-
+        # Initialiser pygame
+        pygame.mixer.init()
+        
         # Arrêter tout son en cours de lecture
         stop_sound()
 
-        pygame.mixer.music.load(file_path)  # Charger le fichier audio
-        pygame.mixer.music.play()  # Jouer le fichier audio
+        # Charger le fichier .ogg
+        pygame.mixer.music.load(file_path)
+        #print(f"Lecture de : {file_path}")
 
-        # Ajouter un événement pour détecter la fin de la musique
-        if on_end_callback:
-            pygame.mixer.music.set_endevent(pygame.USEREVENT)  # Déclenche un événement à la fin
-            pygame.event.post(pygame.event.Event(pygame.USEREVENT))
-    except pygame.error as e:
-        print(f"Erreur lors de la lecture de l'audio : {e}")        
+        # Jouer le fichier audio
+        pygame.mixer.music.play()
+
+    except Exception as e:
+        print(f"Erreur lors de la lecture du fichier : {e}")
 
 
 def generate_audio_path(audio_value):
@@ -55,22 +52,13 @@ def generate_audio_path(audio_value):
         print(f"Erreur lors de la génération du chemin : {e}")
         return False
 
-def JouerAudio(audio_value, on_end_callback=None):
+def JouerAudio(audio_value):
     #test_path = r"D:\_CyberPunk-Creation\Dialogues-Multi\source\raw\ep1\localization\fr-fr\vo\judy_q307_f_2e6b76cd023bc000.ogg"
     # Arrêter tout son en cours de lecture
     sound_Path = generate_audio_path(audio_value)
     if sound_Path:
-        print(f"Lecture de : {audio_value}")
-        play_ogg_file(sound_Path,on_end_callback)
+        play_ogg_file(sound_Path)
     else:
-        initialize_audio()
+        pygame.mixer.init()
         # Arrêter tout son en cours de lecture
         stop_sound()
-
-
-def initialize_audio():
-    """
-    Initialise le système audio de pygame si ce n'est pas déjà fait.
-    """
-    if not pygame.mixer.get_init():
-        pygame.mixer.init()        

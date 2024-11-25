@@ -1,16 +1,7 @@
 # fichier: playlist_functions.py
 import json
 from tkinter import ttk, filedialog, Menu
-from LectureOgg import JouerAudio
 
-##########
-import threading
-
-
-
-
-
-##########
 
  # Fonction pour ajouter une ligne sélectionnée au tableau playlist
 def add_to_playlist(tree, playlist_tree, tk):
@@ -43,7 +34,6 @@ def setup_playlist(root, tree, tk):
 
     playlist_tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
-    playlist_tree.bind("<Button-1>", lambda event: on_playlist_single_click(event, playlist_tree))
     # Ajouter le clic droit pour supprimer une ligne dans la playlist
     playlist_tree.bind("<Button-3>", lambda event: show_context_menu_Playlist(event, playlist_tree, root))
 
@@ -67,83 +57,6 @@ def setup_playlist(root, tree, tk):
 
     return playlist_tree
 
-def on_playlist_single_click(event, playlist_tree):
-    """
-    Gère un clic simple gauche sur une ligne de la playlist pour jouer le son
-    et prépare la lecture du morceau suivant.
-    :param event: L'événement Tkinter.
-    :param playlist_tree: Le Treeview de la playlist.
-    """
-    selected_item = playlist_tree.selection()  # Obtenir l'élément sélectionné
-    if selected_item:
-        item_values = playlist_tree.item(selected_item[0], "values")  # Récupérer les valeurs de la ligne
-        audio_info = item_values[3]  # Supposons que la 3e colonne (index 2) contient les infos nécessaires
-        if audio_info:
-            JouerAudio(audio_info, lambda: play_next_in_playlist(playlist_tree, selected_item[0]))
-        else:
-            print("Aucune information audio associée à cette ligne.")
-
-###################
-
-def play_next_in_playlist(playlist_tree, current_item):
-    """
-    Joue la ligne suivante dans la playlist en extrayant les informations de la 3e colonne.
-    :param playlist_tree: Le Treeview de la playlist.
-    :param current_item: L'élément actuellement sélectionné.
-    """
-    # Récupérer tous les éléments de la playlist
-    items = playlist_tree.get_children()
-    if not items:
-        print("La playlist est vide.")
-        return
-
-    # Trouver l'index de l'élément actuel
-    try:
-        current_index = items.index(current_item)
-    except ValueError:
-        print("L'élément actuel n'est pas dans la playlist.")
-        return
-
-    # Calculer l'index de l'élément suivant
-    next_index = current_index + 1
-    if next_index >= len(items):  # Si on est à la fin, arrêter ou boucler
-        print("Fin de la playlist.")
-        return
-
-    # Obtenir l'élément suivant
-    next_item = items[next_index]
-
-    # Sélectionner la ligne suivante
-    playlist_tree.selection_set(next_item)
-    playlist_tree.see(next_item)  # Faire défiler si nécessaire
-
-    # Extraire les informations de la 3e colonne
-    item_values = playlist_tree.item(next_item, "values")
-    audio_info = item_values[2]  # Supposons que la 3e colonne contient les infos nécessaires
-
-    # Jouer l'audio de la ligne suivante
-    if audio_info:
-        print(f"Lecture du fichier audio : {audio_info}")
-        JouerAudio(audio_info, lambda: event_listener(playlist_tree, next_item))
-    else:
-        print("Aucune information audio disponible pour la ligne suivante.")
-
-
-def event_listener(playlist_tree, current_item):
-    """
-    Écoute les événements pygame pour détecter la fin de la musique et jouer la suivante.
-    :param playlist_tree: Le Treeview contenant la playlist.
-    :param current_item: L'élément actuellement sélectionné.
-    """
-    while True:
-        for event in pygame.event.get():
-            if event.type == pygame.USEREVENT:  # La musique s'est terminée
-                play_next_in_playlist(playlist_tree, current_item)
-                return
-
-###################
-
-            
 
 def show_context_menu_Playlist(event, playlist_tree, root):
     # Sélectionner la ligne sous le curseur
@@ -221,7 +134,3 @@ def load_playlist_from_file(playlist_tree,tk):
                 playlist_tree.insert("", tk.END, values=values)
 
 
-# Thread pour écouter les événements pygame
-listener_thread = threading.Thread(target=event_listener, args=(playlist_tree, first_item))
-listener_thread.daemon = True
-listener_thread.start()
