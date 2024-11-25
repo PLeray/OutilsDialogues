@@ -178,3 +178,25 @@ def update_personnage_based_on_quete(tree, filters, quete_column_index, personna
         personnage_combobox.set(current_selection)
     else:
         personnage_combobox.set("Tous")
+
+
+def filter_NA(tree, na_var):
+    """
+    Filtre les lignes du Treeview pour exclure celles dont la 4ᵉ colonne contient 'N/A',
+    en fonction de l'état de la case à cocher.
+
+    :param tree: Le Treeview contenant les données.
+    :param na_var: La variable associée à la case à cocher 'Afficher N/A'.
+    """
+    # Obtenir l'état de la case à cocher
+    show_na = na_var.get()
+
+    for item in tree.get_children():
+        values = tree.item(item, "values")  # Récupère les valeurs de la ligne
+
+        # Vérifier si la 4ᵉ colonne contient 'N/A'
+        if not show_na and values[3] == "N/A":
+            tree.detach(item)  # Masquer la ligne
+        else:
+            tree.item(item, open=True)  # Afficher la ligne
+

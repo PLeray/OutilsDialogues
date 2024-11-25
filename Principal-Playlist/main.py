@@ -5,7 +5,7 @@ import json
 from tkinter import ttk, Menu
 from gui_functions import open_and_display_json, SelectionLigne, sort_tree, setup_TableauPrincipal
 from playlist_functions import select_and_add_to_playlist, setup_playlist, add_to_playlist, move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist
-from filtrage import reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
+from filtrage import filter_NA, reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
 
 
 #from custom_types import Dialogue
@@ -72,9 +72,39 @@ reset_filter_button = tk.Button(
 )
 reset_filter_button.grid(row=1, column=8, padx=5)
 
-# Déplacer le label_count à droite du bouton "Réinitialiser les filtres"
-label_count = tk.Label(filter_frame, text="Nombre de ligne : 0")
+# Ajouter le Label pour les lignes correspondantes
+label_count = tk.Label(filter_frame, text="Lignes correspondantes : 0")
 label_count.grid(row=1, column=9, padx=5)
+
+# Ajouter des boutons radio pour "V homme" ou "V femme"
+gender_var = tk.StringVar(value="homme")  # Initialiser avec "homme"
+
+radio_homme = tk.Radiobutton(
+    filter_frame,
+    text="V homme",
+    variable=gender_var,  # Associer les boutons radio à la même variable
+    value="homme"  # Valeur pour "homme"
+)
+radio_homme.grid(row=1, column=10, padx=5)
+
+radio_femme = tk.Radiobutton(
+    filter_frame,
+    text="V femme",
+    variable=gender_var,  # Associer les boutons radio à la même variable
+    value="femme"  # Valeur pour "femme"
+)
+radio_femme.grid(row=1, column=11, padx=5)
+
+# Ajouter une case à cocher pour "Afficher N/A"
+na_var = tk.BooleanVar(value=True)  # Initialiser à "coché" (True)
+
+checkbox_na = tk.Checkbutton(
+    filter_frame,
+    text="Afficher N/A",
+    variable=na_var,
+    command=lambda: filter_NA(tree, na_var)  # Appeler le filtre quand l'état change
+)
+checkbox_na.grid(row=1, column=12, padx=5)
 
 
 

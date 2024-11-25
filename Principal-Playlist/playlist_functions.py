@@ -36,19 +36,20 @@ def setup_playlist(root, tree, tk, columns):
     playlist_tree = ttk.Treeview(playlist_frame, columns=playlist_columns, show="headings", height=10)
 
     # Configurer les colonnes (largeur, alignement, etc.)
-    for column in playlist_columns:
-        if column == "ID":
-            tree.column(column, width=130, minwidth=100, stretch=False, anchor="w")
-        elif column == "Origine":
-            tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
-        elif column == "Origine 2":
-            tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
-        else:
-            tree.column(column, width=200, anchor="w")
 
     for column in playlist_columns:
         playlist_tree.heading(column, text=column)
-        playlist_tree.column(column, width=150, anchor="w")
+
+    for column in playlist_columns:
+        if column == "ID":
+            playlist_tree.column(column, width=130, minwidth=100, stretch=False, anchor="w")
+        elif column == "Origine":
+            playlist_tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
+        elif column == "Origine 2":
+            playlist_tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
+        else:
+            playlist_tree.column(column, width=200, anchor="w")
+
 
     playlist_scrollbar = ttk.Scrollbar(playlist_frame, orient=tk.VERTICAL, command=playlist_tree.yview)
     playlist_tree.configure(yscroll=playlist_scrollbar.set)
