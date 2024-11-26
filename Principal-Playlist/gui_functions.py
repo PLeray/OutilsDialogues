@@ -7,6 +7,7 @@ from data_loader import load_json
 
 from LectureOgg import JouerAudio
 
+
 #definition du Tableau Principal
 def setup_TableauPrincipal(root, tk, columns):
     # Frame principale pour contenir le tableau principal et le panneau d'informations
@@ -21,83 +22,80 @@ def setup_TableauPrincipal(root, tk, columns):
     for column in columns:
         tree.heading(column, text=column, command=lambda c=column: sort_tree(tree, c, False))
 
-    # Configurer les colonnes (largeur, alignement, etc.)
-    for column in columns:
-        if column == "ID":
-            tree.column(column, width=130, minwidth=100, stretch=False, anchor="w")
-        elif column == "Origine":
-            tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
-        elif column == "Origine 2":
-            tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
-        else:
-            tree.column(column, width=200, anchor="w")
-
-    # Ajouter les barres de défilement au tableau principal
+    # Ajouter une barre de défilement verticale uniquement
     scrollbar = ttk.Scrollbar(main_frame, orient=tk.VERTICAL, command=tree.yview)
-    h_scrollbar = ttk.Scrollbar(main_frame, orient=tk.HORIZONTAL, command=tree.xview)
 
-    # Configurer le tableau pour utiliser les barres de défilement
-    tree.configure(yscroll=scrollbar.set, xscroll=h_scrollbar.set)
+    # Configurer le tableau pour utiliser la barre de défilement verticale uniquement
+    tree.configure(yscroll=scrollbar.set)
 
-    # Positionner les barres de défilement et le tableau principal dans la frame principale
+    # Positionner la barre de défilement verticale et le tableau principal dans la frame principale
     scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-    h_scrollbar.pack(side=tk.BOTTOM, fill=tk.X)
     tree.pack(padx=10, pady=10, side=tk.LEFT, fill=tk.BOTH, expand=True)
- 
+
     return tree
 
 # Fonction pour afficher les données dans le tableau
 def open_and_display_json(tree, file_path):
+    """
+    Charge les données depuis un fichier JSON et les affiche dans un Treeview.
+    Si (M) Sous-titres ou (M) Voix est vide, utilise les valeurs de (F) Sous-titres ou (F) Voix respectivement.
+    
+    :param tree: Le Treeview à remplir.
+    :param file_path: Le chemin du fichier JSON.
+    """
+    # Charger les données JSON
     data = load_json(file_path)
     if not data:
         print("Aucune donnée chargée depuis le fichier JSON.")
         return
 
     # Supprimer les anciennes données du tableau
-    for item in tree.get_children():
-        tree.delete(item)
+    tree.delete(*tree.get_children())
 
-    # Vérifiez si les données sont une liste
-    if isinstance(data, list):
-        for entry in data:
-            sous_titres = entry.get('female', {}).get('text', 'N/A')
-            vo_path = entry.get('female', {}).get('vo', {}).get('main', 'N/A')
-            path = entry.get('_path', 'N/A')
+    # Traiter les données
+    for key, entry in data.items():
+        # ID
+        _id = key
 
-            path_parts = path.split('/', 1)
-            origine_2 = path_parts[0] if len(path_parts) > 0 else 'N/A'
-            quete = path_parts[1].split('{}', 1)[-1] if len(path_parts) > 1 else 'N/A'
+        # Récupérer la quête
+        path = entry.get("_path", "N/A")
+        quete = path.split('/', 1)[-1].split('{}', 1)[-1] if '/' in path else "N/A"
 
-            tree.insert("", tk.END, values=(
-                entry.get('ID', 'N/A'), 
-                entry.get('Sous-titres', 'N/A'),
-                entry.get('Origine', 'N/A'),
-                entry.get('Personnage', 'N/A'),
-                entry.get('Origine 2', 'N/A'),
-                entry.get('Quête', 'N/A')
-            ))
-    # Vérifiez si les données sont un dictionnaire
-    elif isinstance(data, dict):
-        for key, value in data.items():
-            sous_titres = value.get('female', {}).get('text', 'N/A')
-            vo_path = value.get('female', {}).get('vo', {}).get('main', 'N/A')
-            path = value.get('_path', 'N/A')
+        # Récupérer les informations pour 'female'
+        female_text = entry.get("female", {}).get("text", "N/A")
+        female_vo = entry.get("female", {}).get("vo", {}).get("main", "N/A")
 
-            path_parts = path.split('/', 1)
-            origine_2 = path_parts[0] if len(path_parts) > 0 else 'N/A'
-            quete = path_parts[1].split('{}', 1)[-1] if len(path_parts) > 1 else 'N/A'
+        # Récupérer les informations pour 'male'
+        male_text = entry.get("male", {}).get("text", "N/A")
+        male_vo = entry.get("male", {}).get("vo", {}).get("main", "N/A")
 
-            tree.insert("", tk.END, values=(key, sous_titres, origine_2, vo_path, origine_2, quete))
+        # Remplacer les valeurs manquantes pour 'male' par celles de 'female'
+        if not male_text or male_text == "N/A":
+            male_text = female_text
+        if not male_vo or male_vo == "N/A":
+            male_vo = female_vo
 
-    else:
-        print("Erreur : Le type de données JSON est inconnu.")
+        # Insérer une ligne dans le Treeview
+        tree.insert("", tk.END, values=(
+            _id,           # ID
+            female_text,   # (F) Sous-titres
+            male_text,     # (M) Sous-titres
+            female_vo,     # (F) Voix
+            male_vo,       # (M) Voix
+            quete          # Quête
+        ))
 
 #Fonction pour la selection d'une ligne du tableau principal
-def SelectionLigne(event, tree):
+def SelectionLigne(event, tree, gender_var):
     selected_item = tree.selection()[0]
     selected_values = tree.item(selected_item, 'values')
-    audio_value = selected_values[3]  # 4ème colonne (indice 3) pour "Personnage"    
-    print(f"Lecture de : {audio_value}")   
+
+    selected_gender = gender_var.get()
+    if selected_gender == "homme":
+        audio_value = selected_values[4]
+    else:
+        audio_value = selected_values[3]
+
     JouerAudio(audio_value)
 
 # Fonction pour trier le tableau principal
@@ -112,3 +110,5 @@ def sort_tree(tree, col, reverse):
 
     # Mettre à jour le titre de la colonne pour indiquer le sens du tri
     tree.heading(col, command=lambda: sort_tree(tree, col, not reverse))    
+
+

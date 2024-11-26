@@ -1,8 +1,8 @@
 # fichier: playlist_functions.py
 import json, threading, pygame
+
 from tkinter import ttk, filedialog, Menu
 from LectureOgg import JouerAudio
-
 
 def select_and_add_to_playlist(event, tree, playlist_tree, tk):
     # Identifier la ligne sous le curseur
@@ -22,7 +22,7 @@ def add_to_playlist(tree, playlist_tree, tk):
         playlist_tree.insert("", tk.END, values=selected_values)  # Ajouter à la playlist
 
 #definition de la playlist
-def setup_playlist(root, tree, tk, columns):
+def setup_playlist(root, tree, tk, columns, gender_var):
     main_frame = tk.Frame(root)
     main_frame.pack(side=tk.BOTTOM, fill=tk.BOTH, padx=10, pady=10)
 
@@ -60,7 +60,7 @@ def setup_playlist(root, tree, tk, columns):
     # Ajouter le clic droit pour supprimer une ligne dans la playlist
     playlist_tree.bind("<Button-3>", lambda event: show_context_menu_Playlist(event, playlist_tree, root))
     # lecture ligne
-    playlist_tree.bind("<<TreeviewSelect>>", lambda event: SelectionLignePlayliste(event, playlist_tree))  # Sélectionner une ligne pour afficher les détails
+    playlist_tree.bind("<<TreeviewSelect>>", lambda event: SelectionLignePlayliste(event, playlist_tree, gender_var))  # Sélectionner une ligne pour afficher les détails
 
 
     add_button = tk.Button(button_frame, text="Ajouter selection à la playlist", command=lambda: add_to_playlist(tree, playlist_tree, tk))
@@ -90,11 +90,16 @@ def setup_playlist(root, tree, tk, columns):
     return playlist_tree
 
 #Fonction pour la selection d'une ligne de la playlist
-def SelectionLignePlayliste(event, playlist_tree):
+def SelectionLignePlayliste(event, playlist_tree, gender_var):
     selected_item = playlist_tree.selection()[0]
     selected_values = playlist_tree.item(selected_item, 'values')
-    audio_value = selected_values[3]  # 4ème colonne (indice 3) pour "Personnage"    
-    print(f"Lecture playlist de : {audio_value}")   
+
+    selected_gender = gender_var.get()
+    if selected_gender == "homme":
+        audio_value = selected_values[4]
+    else:
+        audio_value = selected_values[3]
+
     JouerAudio(audio_value)
 
 def show_context_menu_Playlist(event, playlist_tree, root):

@@ -15,6 +15,7 @@ def reset_filters(tree, filters, file_path):
     open_and_display_json(tree, file_path)
     initialize_quete_droplist(tree, 5)
     initialize_personnage_droplist(tree, 3)
+    initialize_personnage_droplist(tree, 4) # pour V homme
 
 
 def filter_tree_with_filters(tree, filters, file_path, label_count):
@@ -200,3 +201,54 @@ def filter_NA(tree, na_var):
         else:
             tree.item(item, open=True)  # Afficher la ligne
 
+def toggle_columns(tree, playlist_tree, gender_var):
+    """
+    Affiche ou masque les colonnes du Treeview et ajuste leurs largeurs pour remplir l'espace disponible.
+    :param tree: Le Treeview à modifier.
+    :param gender_var: La variable liée aux boutons radio ("homme" ou "femme").
+    """
+    columnsHomme = ("ID", "(M) Sous-titres", "(M) Voix", "Quête")
+    columnsFemme = ("ID", "(F) Sous-titres", "(F) Voix", "Quête")
+    # Récupérer la sélection actuelle
+    selected_gender = gender_var.get()
+    # Configuration des colonnes selon le genre sélectionné
+    if selected_gender == "homme":
+        tree["displaycolumns"] = columnsHomme
+    else:
+        tree["displaycolumns"] = columnsFemme
+
+    # Ajuster dynamiquement la largeur des colonnes visibles
+    total_width = tree.winfo_width()  # Largeur totale du Treeview
+    visible_columns = tree["displaycolumns"]
+    largeur_ColID = 130
+
+    column_width = (total_width - largeur_ColID)  // (len(visible_columns)-1)   # Largeur égale pour chaque colonne
+
+    for col in tree["columns"]:
+        if col == "ID":
+            tree.column(col, width=largeur_ColID, minwidth=100, stretch=False, anchor="w")
+        else:
+            if col in visible_columns:
+                tree.column(col, width=column_width, stretch=True)  # Ajuster la largeur
+            else:
+                tree.column(col, width=0, stretch=False)  # Cacher les colonnes
+
+
+    # Configuration des colonnes pour playlist_tree selon le genre sélectionné
+    if selected_gender == "homme":
+        playlist_tree["displaycolumns"] = columnsHomme
+    elif selected_gender == "femme":
+        playlist_tree["displaycolumns"] = columnsFemme
+
+    column_width = (total_width - largeur_ColID)  // (len(visible_columns)-1)   # Largeur égale pour chaque colonne
+
+    for col in playlist_tree["columns"]:
+        if col == "ID":
+            playlist_tree.column(col, width=largeur_ColID, minwidth=100, stretch=False, anchor="w")
+        else:
+            if col in visible_columns:
+                playlist_tree.column(col, width=column_width, stretch=True)  # Ajuster la largeur
+            else:
+                playlist_tree.column(col, width=0, stretch=False)  # Cacher les colonnes                
+    """        
+    """
