@@ -13,7 +13,7 @@ from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_
 
 # Charger les données dans le tableau principal à partir du fichier JSON
 file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
-#file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
+file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -121,8 +121,6 @@ checkbox_na = tk.Checkbutton(
 )
 checkbox_na.grid(row=1, column=12, padx=5)
 
-
-
 # Charger les données dans le tableau
 open_and_display_json(tree, file_path)
 
@@ -141,7 +139,7 @@ def resize_columns(event):
 filters = []  # Initialisation de la liste des filtres
 # Colonnes pour lesquelles les filtres seront activés
 filterable_columns = {"ID", "Sous-titres", "Personnage", "Quête"}
-#filterable_columns = columns # ca fait planter la gestion homme femme
+filterable_columns = columns # ca fait planter la gestion homme femme
 
 for i, column in enumerate(columns):
     if column in filterable_columns:

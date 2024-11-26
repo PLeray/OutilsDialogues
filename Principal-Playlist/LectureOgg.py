@@ -5,6 +5,8 @@ CheminRacine = "D:\_CyberPunk-Creation\DialogueFR/source/raw/"
 CheminLocalization = "localization/"
 CheminLangue = "fr-fr"
 
+_pasAttribuer = "RIEN"
+
 def stop_sound():
     #"""Arrête le son en cours de lecture."""
     pygame.mixer.music.stop()
@@ -32,7 +34,7 @@ def play_ogg_file(file_path):
 
 def generate_audio_path(audio_value):
     # Vérifier si audio_value est valide
-    if audio_value == "N/A":
+    if audio_value == _pasAttribuer:
         return False
 
     # Reconstruire le chemin

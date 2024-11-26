@@ -1,12 +1,13 @@
 # fichier: gui_functions.py
 import tkinter as tk
-from tkinter import ttk, Menu
-from typing import Dict
-from custom_types import Dialogue
+from tkinter import ttk
+#from typing import Dict
+#from custom_types import Dialogue
 from data_loader import load_json
 
-from LectureOgg import JouerAudio
+from LectureOgg import JouerAudio, generate_audio_path
 
+_pasAttribuer = "RIEN"
 
 #definition du Tableau Principal
 def setup_TableauPrincipal(root, tk, columns):
@@ -55,35 +56,46 @@ def open_and_display_json(tree, file_path):
     # Traiter les données
     for key, entry in data.items():
         # ID
-        _id = key
+        id = key
 
         # Récupérer la quête
-        path = entry.get("_path", "N/A")
-        quete = path.split('/', 1)[-1].split('{}', 1)[-1] if '/' in path else "N/A"
+        quete = entry.get("_path", _pasAttribuer)
 
         # Récupérer les informations pour 'female'
-        female_text = entry.get("female", {}).get("text", "N/A")
-        female_vo = entry.get("female", {}).get("vo", {}).get("main", "N/A")
+        female_text = entry.get("female", {}).get("text", _pasAttribuer)
+        female_vo = entry.get("female", {}).get("vo", {}).get("main", _pasAttribuer)
 
         # Récupérer les informations pour 'male'
-        male_text = entry.get("male", {}).get("text", "N/A")
-        male_vo = entry.get("male", {}).get("vo", {}).get("main", "N/A")
+        male_text = entry.get("male", {}).get("text", _pasAttribuer)
+        male_vo = entry.get("male", {}).get("vo", {}).get("main", _pasAttribuer)
 
-        # Remplacer les valeurs manquantes pour 'male' par celles de 'female'
-        if not male_text or male_text == "N/A":
-            male_text = female_text
-        if not male_vo or male_vo == "N/A":
-            male_vo = female_vo
 
+
+        # Vérifier si 'male_vo' ou 'female_vo' contient "v_"
+        isV = "v_" in (male_vo or "") or "v_" in (female_vo or "")         
+        
+        if not male_text or male_text == _pasAttribuer:
+            male_text = female_text        
+        if not female_text or female_text == _pasAttribuer:
+            female_text = male_text # a Confirmer si ca existe !?
+       
+        if not male_vo or male_vo == _pasAttribuer:       
+            if isV :
+                male_vo = female_vo.replace("_f_", "_m_")  
+                # peut etre que le son n'existe pas -->  verifier si fichier existe avec generate_audio_path(male_vo)
+            else :
+                male_vo = female_vo
+      
         # Insérer une ligne dans le Treeview
         tree.insert("", tk.END, values=(
-            _id,           # ID
+            id,           # ID
             female_text,   # (F) Sous-titres
             male_text,     # (M) Sous-titres
             female_vo,     # (F) Voix
             male_vo,       # (M) Voix
             quete          # Quête
         ))
+
 
 #Fonction pour la selection d'une ligne du tableau principal
 def SelectionLigne(event, tree, gender_var):

@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import ttk
 from gui_functions import open_and_display_json
 
-
+_pasAttribuer = "RIEN"
 
 # Fonction pour réinitialiser les filtres et restaurer toutes les lignes
 def reset_filters(tree, filters, file_path):
@@ -104,7 +104,9 @@ def initialize_quete_droplist(tree, column_index):
     for item in tree.get_children():
         # Récupérer la valeur de la colonne
         value = tree.item(item, "values")[column_index]
-        if value:
+        if value == _pasAttribuer:
+            quetes.add(_pasAttribuer)  # Ajouter directement _pasAttribuer sans modification
+        elif value:
             # Extraire la partie après le dernier "/"
             quete = value.split("/")[-1]
             quetes.add(quete)
@@ -134,7 +136,7 @@ def update_quete_based_on_personnage(tree, filters, quete_column_index, personna
         values = tree.item(item, "values")
 
         # Ajouter les quêtes associées au personnage sélectionné
-        if personnage_value in ["Tous", "Toutes"] or personnage_value.lower() in values[personnage_column_index].lower():
+        if personnage_value in ["Tous", "Toutes", _pasAttribuer] or personnage_value.lower() in values[personnage_column_index].lower():
             quete = values[quete_column_index].split("/")[-1] if "/" in values[quete_column_index] else values[quete_column_index]
             quetes.add(quete)
 
@@ -166,10 +168,22 @@ def update_personnage_based_on_quete(tree, filters, quete_column_index, personna
 
     for item in tree.get_children():
         values = tree.item(item, "values")
+        quete_val = values[quete_column_index] if len(values) > quete_column_index else ""
+
+        # Normaliser quete_val pour éviter les erreurs avec lower()
+        quete_val = quete_val if quete_val else ""  # Remplacer None par chaîne vide
 
         # Ajouter les personnages associés à la quête sélectionnée
-        if quete_value in ["Tous", "Toutes"] or quete_value.lower() in values[quete_column_index].lower():
-            personnage = values[personnage_column_index].split("/")[-1].split("_")[0] if "/" in values[personnage_column_index] else values[personnage_column_index]
+        if (
+            quete_value in ["Tous", "Toutes"]  # Cas général : Toutes les quêtes
+            or quete_value == _pasAttribuer and (quete_val == _pasAttribuer or not quete_val)  # Cas spécifique pour _pasAttribuer
+            or (quete_val and quete_value.lower() in quete_val.lower())  # Cas où quete_value correspond
+        ):
+            personnage = (
+                values[personnage_column_index].split("/")[-1].split("_")[0]
+                if "/" in values[personnage_column_index]
+                else values[personnage_column_index]
+            )
             personnages.add(personnage)
 
     personnage_combobox["values"] = ["Tous"] + sorted(personnages)
@@ -179,6 +193,9 @@ def update_personnage_based_on_quete(tree, filters, quete_column_index, personna
         personnage_combobox.set(current_selection)
     else:
         personnage_combobox.set("Tous")
+
+
+
 
 
 def filter_NA(tree, na_var):
@@ -196,7 +213,7 @@ def filter_NA(tree, na_var):
         values = tree.item(item, "values")  # Récupère les valeurs de la ligne
 
         # Vérifier si la 4ᵉ colonne contient 'N/A'
-        if not show_na and values[3] == "N/A":
+        if not show_na and values[3] == _pasAttribuer:
             tree.detach(item)  # Masquer la ligne
         else:
             tree.item(item, open=True)  # Afficher la ligne
