@@ -2,7 +2,7 @@
 import tkinter as tk
 
 from tkinter import ttk
-from gui_functions import open_and_display_json, SelectionLigne, sort_tree, setup_TableauPrincipal
+from gui_functions import open_and_display_json, SelectionLigne, setup_TableauPrincipal
 from playlist_functions import select_and_add_to_playlist, setup_playlist, add_to_playlist, move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist
 from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
 
@@ -12,7 +12,7 @@ from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_
 
 # Charger les données dans le tableau principal à partir du fichier JSON
 file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
-#file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
+file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -100,7 +100,7 @@ na_var = tk.BooleanVar(value=True)  # Initialiser à "coché" (True)
 
 checkbox_na = tk.Checkbutton(
     filter_frame,
-    text="Afficher N/A",
+    text="Afficher RIEN",
     variable=na_var,
     command=lambda: filter_NA(tree, na_var)  # Appeler le filtre quand l'état change
 )

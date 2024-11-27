@@ -1,5 +1,8 @@
 # fichier: gui_functions.py
 import tkinter as tk
+
+import json
+
 from tkinter import ttk
 #from typing import Dict
 #from custom_types import Dialogue
@@ -58,18 +61,37 @@ def open_and_display_json(tree, file_path):
         # ID
         id = key
 
+        #TRADUCTION !
         # Récupérer la quête
         quete = entry.get("_path", _pasAttribuer)
+        audio_path = generate_audio_path(quete)
+
+        fichierQuete = ""        
+        if isinstance(audio_path, str):  # Vérifie si c'est une chaîne
+            fichierQuete = audio_path + ".json.json"
+
+        result = get_variants_by_id(fichierQuete, id)
+        if result:
+            #print(f"Female Variant: {result['femaleVariant']}")
+            #print(f"Male Variant: {result['maleVariant']}")
+            female_text = result['femaleVariant']
+            male_text = result['maleVariant']
+        else:
+            #print("String ID non trouvé.")
+            female_text = ""
+            male_text = ""
 
         # Récupérer les informations pour 'female'
+        """
         female_text = entry.get("female", {}).get("text", _pasAttribuer)
+        """
         female_vo = entry.get("female", {}).get("vo", {}).get("main", _pasAttribuer)
 
         # Récupérer les informations pour 'male'
-        male_text = entry.get("male", {}).get("text", _pasAttribuer)
+        """
+        male_text = entry.get("male", {}).get("text", _pasAttribuer)        
+        """
         male_vo = entry.get("male", {}).get("vo", {}).get("main", _pasAttribuer)
-
-
 
         # Vérifier si 'male_vo' ou 'female_vo' contient "v_"
         isV = "v_" in (male_vo or "") or "v_" in (female_vo or "")         
@@ -124,3 +146,31 @@ def sort_tree(tree, col, reverse):
     tree.heading(col, command=lambda: sort_tree(tree, col, not reverse))    
 
 
+def get_variants_by_id(file_path, string_id):
+    """
+    Cherche les variantes (femaleVariant et maleVariant) correspondant à un stringId donné dans un fichier JSON.
+
+    :param file_path: Chemin du fichier JSON.
+    :param string_id: stringId à rechercher.
+    :return: Un dictionnaire contenant "femaleVariant" et "maleVariant", ou None si le stringId n'est pas trouvé.
+    """
+    try:
+        # Charger le fichier JSON
+        with open(file_path, "r", encoding="utf-8") as file:
+            data = json.load(file)
+
+        # Parcourir les entrées dans le fichier JSON
+        entries = data["Data"]["RootChunk"]["root"]["Data"]["entries"]
+        for entry in entries:
+            if entry["stringId"] == str(string_id):  # Vérification du stringId
+                return {
+                    "femaleVariant": entry.get("femaleVariant", ""),
+                    "maleVariant": entry.get("maleVariant", "")
+                }
+        
+        # Si le stringId n'est pas trouvé
+        return None
+
+    except (FileNotFoundError, KeyError, json.JSONDecodeError) as e:
+        #print(f"Erreur lors du traitement du fichier : {e}")
+        return None
