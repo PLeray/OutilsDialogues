@@ -5,28 +5,52 @@ from gui_functions import open_and_display_json
 
 _pasAttribuer = "RIEN"
 
-# Fonction pour réinitialiser les filtres et restaurer toutes les lignes
-def reset_filters(tree, filters, file_path):
+def reset_filters(tree, filters, file_path, label_count):
     """
     Réinitialise tous les filtres (champs de texte et combobox) et recharge les données.
 
     :param tree: Treeview contenant les données.
     :param filters: Liste des filtres sous forme (column_name, label_widget, entry_widget).
     :param file_path: Chemin du fichier contenant les données à afficher.
+    :param label_count: Label pour afficher le nombre de lignes correspondantes.
     """
-    for _, _, widget in filters:  # Ignorer les labels et récupérer uniquement les widgets
-        if isinstance(widget, tk.Entry):  # Vérifie si c'est un champ de texte
+    # Forcer chaque combobox à "Tous" ou "Toutes" avant de procéder
+    for column_name, _, widget in filters:  # Ignorer les labels et récupérer uniquement les widgets
+        if isinstance(widget, ttk.Combobox):  # Vérifie si c'est une Combobox
+            # Déterminer la valeur par défaut à utiliser
+            default_value = "Tous" if column_name in ["(M) Voix", "(F) Voix"] else "Toutes"
+            if default_value in widget["values"]:
+                widget.set(default_value)  # Appliquer la valeur manuellement
+                widget.current(widget["values"].index(default_value))  # Positionner à l'index de "Tous" ou "Toutes"
+
+    # Réinitialiser complètement les filtres
+    for column_name, _, widget in filters:
+        if isinstance(widget, tk.Entry):  # Réinitialiser les champs de texte
             widget.delete(0, tk.END)
-        elif isinstance(widget, ttk.Combobox):  # Vérifie si c'est une Combobox
-            widget.set("")  # Réinitialise la sélection
+        elif isinstance(widget, ttk.Combobox):  # Réinitialiser les comboboxes
+            # Réinitialiser avec la même logique pour s'assurer de la cohérence
+            default_value = ""
+            if default_value in widget["values"]:
+                widget.set(default_value)
+                widget.current(widget["values"].index(default_value))
+            else:
+                widget.set("")  # Si aucun match, réinitialiser à vide
 
     # Recharge le contenu du Treeview avec le fichier JSON
     open_and_display_json(tree, file_path)
 
     # Réinitialise les listes déroulantes spécifiques
+    """
     initialize_quete_droplist(tree, 5)
     initialize_personnage_droplist(tree, 3)
-    initialize_personnage_droplist(tree, 4)  # Pour V homme
+    initialize_personnage_droplist(tree, 4)  # Pour V homme   
+    """
+    # Applique les filtres pour synchroniser les données affichées
+    filter_tree_with_filters(tree, filters, file_path, label_count)
+
+    update_quete_based_on_personnage(tree, filters, 5, 3, "")  # 5 = colonne Quête, 3 = colonne Personnage F
+    update_quete_based_on_personnage(tree, filters, 5, 4, "")  # 5 = colonne Quête, 4 = colonne Personnage M
+    update_personnage_based_on_quete(tree, filters, 5, (3, 4), "")  # (3, 4) Les indices des colonnes "(F) Voix" et "(M) Voix"
 
 
 def filter_tree_with_filters(tree, filters, file_path, label_count):
@@ -304,6 +328,7 @@ def toggle_columns(tree, playlist_tree, filters, gender_var):
     selected_gender = gender_var.get()
     visible_columns = columns_homme if selected_gender == "homme" else columns_femme
     tree["displaycolumns"] = visible_columns
+    playlist_tree["displaycolumns"] = visible_columns
 
     # Largeur totale du Treeview
     total_width = tree.winfo_width()
@@ -328,13 +353,13 @@ def toggle_columns(tree, playlist_tree, filters, gender_var):
             tree.column(col, width=0)
 
     # Ajuster les colonnes dans le playlist
-    for col in tree["columns"]:
+    for col in playlist_tree["columns"]:
         if col == "ID":
-            tree.column(col, width=id_column_width, minwidth=100, stretch=False, anchor="w")
+            playlist_tree.column(col, width=id_column_width, minwidth=100, stretch=False, anchor="w")
         elif col in visible_columns:
-            tree.column(col, width=column_width, stretch=True)
+            playlist_tree.column(col, width=column_width, stretch=True)
         else:
-            tree.column(col, width=0)            
+            playlist_tree.column(col, width=0)            
 
     # Synchroniser les filtres
     update_filters_visibility(filters, visible_columns)

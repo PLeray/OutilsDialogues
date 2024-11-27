@@ -63,6 +63,13 @@ tree = setup_TableauPrincipal(root, tk, columns)
 # Fonction pour configurer le tableau de playlist
 playlist_tree = setup_playlist(root, tree, tk, columns, gender_var)
 
+
+
+# Ajouter le Label pour les lignes correspondantes
+label_count = tk.Label(filter_frame, text="Nb de lignes : 0")
+label_count.grid(row=1, column=9, padx=5)
+
+
 # Bouton pour appliquer tous les filtres
 apply_all_filters_button = tk.Button(
     filter_frame,
@@ -78,18 +85,15 @@ reset_filter_button = tk.Button(
     text="Réinitialiser les filtres",
     command=lambda: [
         #open_and_display_json(tree, file_path)
-        reset_filters(tree, filters, file_path)
+        reset_filters(tree, filters, file_path, label_count)
     ]
     
 )
 reset_filter_button.grid(row=1, column=8, padx=5)
 
 # Ajouter le Label pour les lignes correspondantes
-label_count = tk.Label(filter_frame, text="Lignes correspondantes : 0")
+label_count = tk.Label(filter_frame, text="Nb de lignes : 0")
 label_count.grid(row=1, column=9, padx=5)
-
-
-
 
 # Ajouter une case à cocher pour "Afficher N/A"
 na_var = tk.BooleanVar(value=True)  # Initialiser à "coché" (True)
@@ -107,7 +111,8 @@ open_and_display_json(tree, file_path)
 
 def on_personnage_selected(event):
     personnage_value = event.widget.get()
-    update_quete_based_on_personnage(tree, filters, 5, 3, personnage_value)  # 5 = colonne Quête, 3 = colonne Personnage
+    update_quete_based_on_personnage(tree, filters, 5, 3, personnage_value)  # 5 = colonne Quête, 3 = colonne Personnage F
+    update_quete_based_on_personnage(tree, filters, 5, 4, personnage_value)  # 5 = colonne Quête, 4 = colonne Personnage M
 
 def on_quete_selected(event):
     quete_value = event.widget.get()
@@ -125,14 +130,6 @@ def resize_columns(event):
 
 # Créer les champs de filtre uniquement pour les colonnes sélectionnées
 filters = []  # Initialisation de la liste des filtres
-# Colonnes pour lesquelles les filtres seront activés
-#filterable_columns = columns # ca fait planter la gestion homme femme
-# Initialisation explicite des filtres
-# Initialisation des filtres avec labels et widgets
-filters = []
-
-# Colonnes configurables
-columns = ["ID", "(F) Sous-titres", "(M) Sous-titres", "(F) Voix", "(M) Voix", "Quête"]
 
 # Création des filtres avec labels explicites
 for i, column in enumerate(columns):

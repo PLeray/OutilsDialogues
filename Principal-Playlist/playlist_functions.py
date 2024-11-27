@@ -200,6 +200,11 @@ def ecouterPlaylist(playlist_tree):
                 #print("Lecture de la playlist interrompue.")
                 break
 
+            # Mettre à jour la sélection de l'élément en cours de lecture
+            playlist_tree.selection_set(item)  # Sélectionner l'élément
+            playlist_tree.see(item)  # Faire défiler pour afficher l'élément
+            playlist_tree.update_idletasks()  # Rafraîchir l'affichage du Treeview
+            
             item_values = playlist_tree.item(item, "values")
             audio_info = item_values[3]  # Supposons que la 3e colonne contient les infos audio
 
