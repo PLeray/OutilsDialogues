@@ -1,8 +1,7 @@
 # fichier: main.py
 import tkinter as tk
-import json
 
-from tkinter import ttk, Menu
+from tkinter import ttk
 from gui_functions import open_and_display_json, SelectionLigne, sort_tree, setup_TableauPrincipal
 from playlist_functions import select_and_add_to_playlist, setup_playlist, add_to_playlist, move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist
 from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
@@ -13,7 +12,7 @@ from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_
 
 # Charger les données dans le tableau principal à partir du fichier JSON
 file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
-file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
+#file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -89,25 +88,7 @@ reset_filter_button.grid(row=1, column=8, padx=5)
 label_count = tk.Label(filter_frame, text="Lignes correspondantes : 0")
 label_count.grid(row=1, column=9, padx=5)
 
-# Bouton radio pour "Homme"
-radio_homme = tk.Radiobutton(
-    filter_frame,
-    text="Homme",
-    variable=gender_var,
-    value="homme",
-    command=lambda: toggle_columns(tree, playlist_tree, gender_var)  # Appeler la fonction de mise à jour des colonnes
-)
-radio_homme.grid(row=1, column=10, padx=5)
 
-# Bouton radio pour "Femme"
-radio_femme = tk.Radiobutton(
-    filter_frame,
-    text="Femme",
-    variable=gender_var,
-    value="femme",
-    command=lambda: toggle_columns(tree, playlist_tree, gender_var)  # Appeler la fonction de mise à jour des colonnes
-)
-radio_femme.grid(row=1, column=11, padx=5)
 
 
 # Ajouter une case à cocher pour "Afficher N/A"
@@ -130,54 +111,77 @@ def on_personnage_selected(event):
 
 def on_quete_selected(event):
     quete_value = event.widget.get()
-    update_personnage_based_on_quete(tree, filters, 5, 3, quete_value)  # 5 = colonne Quête, 3 = colonne Personnage
+    update_personnage_based_on_quete(
+        tree,
+        filters,
+        quete_column_index=5,
+        personnage_column_indexes=(3, 4),  # Les indices des colonnes "(F) Voix" et "(M) Voix"
+        quete_value=quete_value
+    )
+
 
 def resize_columns(event):
-    toggle_columns(tree, playlist_tree, gender_var)   
+    toggle_columns(tree, playlist_tree,  filters, gender_var)   
 
 # Créer les champs de filtre uniquement pour les colonnes sélectionnées
 filters = []  # Initialisation de la liste des filtres
 # Colonnes pour lesquelles les filtres seront activés
-filterable_columns = {"ID", "Sous-titres", "Personnage", "Quête"}
-filterable_columns = columns # ca fait planter la gestion homme femme
+#filterable_columns = columns # ca fait planter la gestion homme femme
+# Initialisation explicite des filtres
+# Initialisation des filtres avec labels et widgets
+filters = []
 
+# Colonnes configurables
+columns = ["ID", "(F) Sous-titres", "(M) Sous-titres", "(F) Voix", "(M) Voix", "Quête"]
+
+# Création des filtres avec labels explicites
 for i, column in enumerate(columns):
-    if column in filterable_columns:
-        label = tk.Label(filter_frame, text=f"Filtre {column}")
-        label.grid(row=0, column=i, padx=5)
+    label = tk.Label(filter_frame, text=f"Filtre {column}")
+    label.grid(row=0, column=i, padx=5)
 
-        if i == 3 or i == 4: # Exemple : numéro de colonne pour "Voix" 
-            entry = ttk.Combobox(filter_frame, state="readonly")
-            entry.grid(row=1, column=i, padx=5)
-            filters.append((i, entry))  # Ajouter le widget à la liste des filtres
-
-            # Initialiser les options de la Combobox "Personnage"
-            personnage_options = initialize_personnage_droplist(tree, i)
-            #personnage_options = initialize_personnage_droplist(tree, 4) # pour V homme
-            entry["values"] = personnage_options
-            entry.set("Tous")  # Valeur par défaut
-
-            # Associer l'événement de changement
+    if column in ["(F) Voix", "(M) Voix", "Quête"]:  # ComboBox
+        entry = ttk.Combobox(filter_frame, state="readonly")
+        if column == "(F) Voix":
+            entry["values"] = initialize_personnage_droplist(tree, 3)
+            entry.set("Tous")
             entry.bind("<<ComboboxSelected>>", on_personnage_selected)
-
-        elif i == 5:  # Exemple : numéro de colonne pour "Quête"
-            entry = ttk.Combobox(filter_frame, state="readonly")
-            entry.grid(row=1, column=i, padx=5)
-            filters.append((i, entry))  # Ajouter le widget à la liste des filtres
-
-            # Initialiser les options de la Combobox "Quête"
-            quete_options = initialize_quete_droplist(tree, 5)
-            entry["values"] = quete_options
-            entry.set("Toutes")  # Valeur par défaut
-
-            # Associer l'événement de changement
+        elif column == "(M) Voix":
+            entry["values"] = initialize_personnage_droplist(tree, 4)
+            entry.set("Tous")
+            entry.bind("<<ComboboxSelected>>", on_personnage_selected)
+        elif column == "Quête":
+            entry["values"] = initialize_quete_droplist(tree, 5)
+            entry.set("Toutes")
             entry.bind("<<ComboboxSelected>>", on_quete_selected)
+    else:  # TextBox
+        entry = tk.Entry(filter_frame)
 
-        else:
-            entry = tk.Entry(filter_frame)
-            entry.grid(row=1, column=i, padx=5)
-            filters.append((i, entry))  # Ajouter le widget à la liste des filtres
+    # Placer les widgets
+    entry.grid(row=1, column=i, padx=5)
+    filters.append((column, label, entry))  # Ajouter le label et le widget à la liste des filtres
 
+
+
+
+# Bouton radio pour "Homme"
+radio_homme = tk.Radiobutton(
+    filter_frame,
+    text="Homme",
+    variable=gender_var,
+    value="homme",
+    command=lambda: toggle_columns(tree, playlist_tree, filters, gender_var)  # Appeler la fonction de mise à jour des colonnes
+)
+radio_homme.grid(row=1, column=10, padx=5)
+
+# Bouton radio pour "Femme"
+radio_femme = tk.Radiobutton(
+    filter_frame,
+    text="Femme",
+    variable=gender_var,
+    value="femme",
+    command=lambda: toggle_columns(tree, playlist_tree,  filters, gender_var)  # Appeler la fonction de mise à jour des colonnes
+)
+radio_femme.grid(row=1, column=11, padx=5)
 
 filter_tree_with_filters(tree, filters, file_path, label_count)
 
