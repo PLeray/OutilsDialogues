@@ -24,13 +24,14 @@ def add_to_playlist(tree, playlist_tree, tk):
 #definition de la playlist
 def setup_playlist(root, tree, tk, columns, gender_var):
     main_frame = tk.Frame(root)
-    main_frame.pack(side=tk.BOTTOM, fill=tk.BOTH, padx=10, pady=10)
+    main_frame.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True, padx=10, pady=10)  # Ajoutez expand=True ici
 
     button_frame = tk.Frame(main_frame)
     button_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
 
     playlist_frame = tk.Frame(main_frame, height=450, bg='lightgray')
-    playlist_frame.pack(side=tk.BOTTOM, fill=tk.X, padx=10, pady=10)
+    playlist_frame.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True, padx=10, pady=10)  # Ajoutez expand=True ici
+
 
     playlist_columns = columns
     playlist_tree = ttk.Treeview(playlist_frame, columns=playlist_columns, show="headings", height=10)
@@ -39,17 +40,6 @@ def setup_playlist(root, tree, tk, columns, gender_var):
 
     for column in playlist_columns:
         playlist_tree.heading(column, text=column)
-
-    for column in playlist_columns:
-        if column == "ID":
-            playlist_tree.column(column, width=130, minwidth=100, stretch=False, anchor="w")
-        elif column == "Origine":
-            playlist_tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
-        elif column == "Origine 2":
-            playlist_tree.column(column, width=70, minwidth=200, stretch=False, anchor="w")
-        else:
-            playlist_tree.column(column, width=200, anchor="w")
-
 
     playlist_scrollbar = ttk.Scrollbar(playlist_frame, orient=tk.VERTICAL, command=playlist_tree.yview)
     playlist_tree.configure(yscroll=playlist_scrollbar.set)
@@ -72,7 +62,7 @@ def setup_playlist(root, tree, tk, columns, gender_var):
     move_down_button = tk.Button(button_frame, text="Descendre", command=lambda: move_down_playlist(playlist_tree))
     move_down_button.pack(side=tk.LEFT, padx=5)
 
-    play_button = tk.Button(button_frame, text="Ecouter la playlist", command=lambda: ecouterPlaylist(playlist_tree))
+    play_button = tk.Button(button_frame, text="Ecouter la playlist", command=lambda: ecouterPlaylist(playlist_tree, gender_var))
     play_button.pack(side=tk.LEFT, padx=(20, 5))
     
     stop_button = tk.Button(button_frame, text="Stop", command=lambda: stopperPlaylist())
@@ -176,7 +166,7 @@ def load_playlist_from_file(playlist_tree,tk):
 
 
 # Fonction pour lire la Playlist
-def ecouterPlaylist(playlist_tree):
+def ecouterPlaylist(playlist_tree, gender_var):
     #    Lance la lecture de la playlist dans un thread séparé.
     global is_playlist_playing  # Utiliser la variable globale
     is_playlist_playing = True  # Activer l'état de lecture
@@ -205,15 +195,20 @@ def ecouterPlaylist(playlist_tree):
             playlist_tree.see(item)  # Faire défiler pour afficher l'élément
             playlist_tree.update_idletasks()  # Rafraîchir l'affichage du Treeview
             
-            item_values = playlist_tree.item(item, "values")
-            audio_info = item_values[3]  # Supposons que la 3e colonne contient les infos audio
+            selected_values = playlist_tree.item(item, "values")
 
-            if audio_info:
-                #print(f"Lecture de : {audio_info}")
+            selected_gender = gender_var.get()
+            if selected_gender == "homme":
+                audio_value = selected_values[4]
+            else:
+                audio_value = selected_values[3]
+
+            if audio_value:
+                #print(f"Lecture de : {audio_value}")
                 try:
-                    JouerAudio(audio_info)
+                    JouerAudio(audio_value)
                 except Exception as e:
-                    print(f"Erreur lors de la lecture de {audio_info} : {e}")
+                    print(f"Erreur lors de la lecture de {audio_value} : {e}")
             else:
                 print(f"Aucun fichier audio pour la ligne {item}.")
 

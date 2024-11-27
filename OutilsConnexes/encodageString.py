@@ -1,7 +1,15 @@
-# Chaîne d'origine
-encoded_text = "T\\u0027es nouvelle \\u00E0 Night City\\u00A0? De quoi \\u00E7a a l\\u0027air \\u00E0 ton avis\\u00A0?"
+# Chaîne initiale (encodée en Unicode avec des séquences d'échappement)
+original_encoded = "Do you want to finish what we started in the tank? ;)"
 
-# Décodage en texte lisible
-decoded_text = encoded_text.encode('utf-8').decode('unicode_escape')
+# Décodage (si nécessaire)
+decoded_text = original_encoded.encode('utf-8').decode('unicode_escape')
 
-print(decoded_text)
+# Traduction manuelle
+translated_text = "Carrément! Mais Mitch et les autres s'en occupent pas déjà?"
+
+# Ré-encodage en Unicode avec séquences d'échappement
+re_encoded = translated_text.encode('unicode_escape').decode('utf-8')
+
+print("Original décodé :", decoded_text)
+print("Traduction :", translated_text)
+print("Re-encodé en Unicode :", re_encoded)

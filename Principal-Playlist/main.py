@@ -12,7 +12,7 @@ from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_
 
 # Charger les données dans le tableau principal à partir du fichier JSON
 file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
-file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
+#file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
 
 # Créer la fenêtre principale
 root = tk.Tk()
