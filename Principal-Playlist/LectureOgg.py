@@ -5,7 +5,7 @@ CheminRacine = "D:\_CyberPunk-Creation\DialogueFR/source/raw/"
 CheminLocalization = "localization/"
 CheminLangue = "fr-fr"
 
-_pasAttribuer = "RIEN"
+import global_vars  # Importer les variables globales
 
 def stop_sound():
     #"""Arrête le son en cours de lecture."""
@@ -34,7 +34,7 @@ def play_ogg_file(file_path):
 
 def generate_audio_path(audio_value):
     # Vérifier si audio_value est valide
-    if audio_value == _pasAttribuer:
+    if audio_value == global_vars._pasAttribuer:
         return False
 
     # Reconstruire le chemin

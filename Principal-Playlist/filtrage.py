@@ -3,16 +3,18 @@ import tkinter as tk
 from tkinter import ttk
 from gui_functions import open_and_display_json
 
-_pasAttribuer = "RIEN"
+import global_vars  # Importer les variables globales
 
-def reset_filters(tree, filters, file_path, label_count):
+
+
+def reset_filters(tree, filters, file_path):
     """
     Réinitialise tous les filtres (champs de texte et combobox) et recharge les données.
 
     :param tree: Treeview contenant les données.
     :param filters: Liste des filtres sous forme (column_name, label_widget, entry_widget).
     :param file_path: Chemin du fichier contenant les données à afficher.
-    :param label_count: Label pour afficher le nombre de lignes correspondantes.
+
     """
     # Forcer chaque combobox à "Tous" ou "Toutes" avant de procéder
     for column_name, _, widget in filters:  # Ignorer les labels et récupérer uniquement les widgets
@@ -46,14 +48,14 @@ def reset_filters(tree, filters, file_path, label_count):
     initialize_personnage_droplist(tree, 4)  # Pour V homme   
     """
     # Applique les filtres pour synchroniser les données affichées
-    filter_tree_with_filters(tree, filters, file_path, label_count)
+    filter_tree_with_filters(tree, filters, file_path)
 
     update_quete_based_on_personnage(tree, filters, 5, 3, "")  # 5 = colonne Quête, 3 = colonne Personnage F
     update_quete_based_on_personnage(tree, filters, 5, 4, "")  # 5 = colonne Quête, 4 = colonne Personnage M
     update_personnage_based_on_quete(tree, filters, 5, (3, 4), "")  # (3, 4) Les indices des colonnes "(F) Voix" et "(M) Voix"
 
 
-def filter_tree_with_filters(tree, filters, file_path, label_count):
+def filter_tree_with_filters(tree, filters, file_path):
     """
     Filtre les lignes du Treeview en fonction des widgets de filtre dans la liste `filters`.
     Met également à jour un label pour afficher le nombre de lignes correspondantes.
@@ -61,7 +63,7 @@ def filter_tree_with_filters(tree, filters, file_path, label_count):
     :param tree: Le Treeview contenant les données.
     :param filters: Une liste de tuples contenant les noms de colonnes, labels, et widgets de filtre.
     :param file_path: Le chemin du fichier source des données.
-    :param label_count: Le label Tkinter pour afficher le nombre de lignes correspondantes.
+
     """
     open_and_display_json(tree, file_path)
     matching_count = 0  # Compteur de lignes correspondantes
@@ -109,7 +111,7 @@ def filter_tree_with_filters(tree, filters, file_path, label_count):
             tree.detach(item)
 
     # Mettre à jour le label avec le nombre de lignes correspondantes
-    label_count.config(text=f"Lignes correspondantes : {matching_count}")
+    global_vars.label_count.config(text=f"Lignes correspondantes : {matching_count}")
 
 
 
@@ -146,8 +148,8 @@ def initialize_quete_droplist(tree, column_index):
     for item in tree.get_children():
         # Récupérer la valeur de la colonne
         value = tree.item(item, "values")[column_index]
-        if value == _pasAttribuer:
-            quetes.add(_pasAttribuer)  # Ajouter directement _pasAttribuer sans modification
+        if value == global_vars._pasAttribuer:
+            quetes.add(global_vars._pasAttribuer)  # Ajouter directement _pasAttribuer sans modification
         elif value:
             # Extraire la partie après le dernier "/"
             quete = value.split("/")[-1]
@@ -193,7 +195,7 @@ def update_quete_based_on_personnage(tree, filters, quete_column_index, personna
         quete_val = values[quete_column_index].strip() if values[quete_column_index] else ""
 
         # Ajouter les quêtes associées au personnage sélectionné
-        if personnage_value in ["Tous", "Toutes", _pasAttribuer] or personnage_value.lower() in personnage_val.lower():
+        if personnage_value in ["Tous", "Toutes", global_vars._pasAttribuer] or personnage_value.lower() in personnage_val.lower():
             quete_val = values[quete_column_index].split("/")[-1] if "/" in values[quete_column_index] else values[quete_column_index]
             quetes.add(quete_val)
 
@@ -313,19 +315,19 @@ def filter_NA(tree, na_var):
         else:
             tree.item(item, open=True)  # Afficher la ligne
 
-def toggle_columns(tree, playlist_tree, filters, gender_var):
+def toggle_columns(tree, playlist_tree, filters):
     """
     Affiche ou masque les colonnes du Treeview et synchronise les filtres.
     Répartit les colonnes restantes de manière équitable après avoir fixé la largeur de la colonne ID.
 
     :param tree: Le Treeview principal.
     :param filters: Liste des filtres (nom_colonne, label_widget, entry_widget).
-    :param gender_var: Variable de genre ("homme" ou "femme").
+
     """
     columns_homme = ["ID", "(M) Sous-titres", "(M) Voix", "Quête"]
     columns_femme = ["ID", "(F) Sous-titres", "(F) Voix", "Quête"]
 
-    selected_gender = gender_var.get()
+    selected_gender = global_vars.vSexe.get()
     visible_columns = columns_homme if selected_gender == "homme" else columns_femme
     tree["displaycolumns"] = visible_columns
     playlist_tree["displaycolumns"] = visible_columns

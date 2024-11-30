@@ -10,7 +10,7 @@ from data_loader import load_json
 
 from LectureOgg import JouerAudio, generate_audio_path
 
-_pasAttribuer = "RIEN"
+import global_vars  # Importer les variables globales
 
 #definition du Tableau Principal
 def setup_TableauPrincipal(root, tk, columns):
@@ -63,7 +63,7 @@ def open_and_display_json(tree, file_path):
 
         #TRADUCTION !
         # Récupérer la quête
-        quete = entry.get("_path", _pasAttribuer)
+        quete = entry.get("_path", global_vars._pasAttribuer)
         audio_path = generate_audio_path(quete)
 
         fichierQuete = ""        
@@ -83,30 +83,37 @@ def open_and_display_json(tree, file_path):
 
         # Récupérer les informations pour 'female'
         """
-        female_text = entry.get("female", {}).get("text", _pasAttribuer)
+        female_text = entry.get("female", {}).get("text", global_vars._pasAttribuer)
         """
-        female_vo = entry.get("female", {}).get("vo", {}).get("main", _pasAttribuer)
+        female_vo = entry.get("female", {}).get("vo", {}).get("main", global_vars._pasAttribuer)
 
         # Récupérer les informations pour 'male'
         """
-        male_text = entry.get("male", {}).get("text", _pasAttribuer)        
+        male_text = entry.get("male", {}).get("text", global_vars._pasAttribuer)        
         """
-        male_vo = entry.get("male", {}).get("vo", {}).get("main", _pasAttribuer)
+        male_vo = entry.get("male", {}).get("vo", {}).get("main", global_vars._pasAttribuer)
 
         # Vérifier si 'male_vo' ou 'female_vo' contient "v_"
         isV = "v_" in (male_vo or "") or "v_" in (female_vo or "")         
         
-        if not male_text or male_text == _pasAttribuer:
+        if not male_text or male_text == global_vars._pasAttribuer:
             male_text = female_text        
-        if not female_text or female_text == _pasAttribuer:
+        if not female_text or female_text == global_vars._pasAttribuer:
             female_text = male_text # a Confirmer si ca existe !?
        
-        if not male_vo or male_vo == _pasAttribuer:       
+        if not male_vo or male_vo == global_vars._pasAttribuer:       
             if isV :
                 male_vo = female_vo.replace("_f_", "_m_")  
                 # peut etre que le son n'existe pas -->  verifier si fichier existe avec generate_audio_path(male_vo)
             else :
                 male_vo = female_vo
+
+        if not female_vo or female_vo == global_vars._pasAttribuer:       
+            if isV :
+                female_vo = male_vo.replace("_m_", "_f_")  
+                # peut etre que le son n'existe pas -->  verifier si fichier existe avec generate_audio_path(male_vo)
+            else :
+                female_vo = male_vo                
       
         # Insérer une ligne dans le Treeview
         tree.insert("", tk.END, values=(
@@ -120,11 +127,11 @@ def open_and_display_json(tree, file_path):
 
 
 #Fonction pour la selection d'une ligne du tableau principal
-def SelectionLigne(event, tree, gender_var):
+def SelectionLigne(event, tree):
     selected_item = tree.selection()[0]
     selected_values = tree.item(selected_item, 'values')
 
-    selected_gender = gender_var.get()
+    selected_gender = global_vars.vSexe.get()
     if selected_gender == "homme":
         audio_value = selected_values[4]
     else:

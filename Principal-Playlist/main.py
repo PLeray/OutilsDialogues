@@ -3,9 +3,10 @@ import tkinter as tk
 
 from tkinter import ttk
 from gui_functions import open_and_display_json, SelectionLigne, setup_TableauPrincipal
-from playlist_functions import select_and_add_to_playlist, setup_playlist, add_to_playlist, move_up_playlist, move_down_playlist, save_playlist_to_file, clear_playlist
+from playlist_functions import select_and_add_to_playlist, setup_playlist
 from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
 
+import global_vars  # Importer les variables globales
 
 #from custom_types import Dialogue
 #from data_loader import load_json
@@ -34,15 +35,6 @@ filter_frame = tk.Frame(root)  # <-- Correction : définition correcte
 filter_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
 
 
-"""
-# Frame principale pour contenir le tableau principal et le panneau d'informations
-main_frame = tk.Frame(root)
-main_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True, padx=10, pady=10)
-
-# Configuration du tableau principal (tree)
-tree = ttk.Treeview(main_frame, columns=columns, show="headings", height=15, selectmode="extended")
-"""
-
 # Colonnes du tableau principal
 #columns = ("ID", "Sous-titres", "Origine", "Personnage", "Origine 2", "Quête")  # Remplacement de "Audio" par "Personnage"
 columns = (
@@ -54,27 +46,41 @@ columns = (
     "Quête"
 )
 
+
+# Exemple d'initialisation du Treeview avec un thème compatible
+style = ttk.Style()
+style.theme_use("default")  # Changez le thème
+style.configure("Treeview", rowheight=25)  # Augmentez la hauteur des lignes si nécessaire
+style.map(
+    "Treeview", 
+    background=[("selected", "#D3D3D3")],  # Couleur pour les lignes sélectionnées
+    foreground=[("selected", "#000000")]   # Couleur du texte pour les lignes sélectionnées
+)
+
+
+
 # Créer une variable pour gérer l'état des boutons radio
-gender_var = tk.StringVar(value="homme")  # Par défaut sur "homme"
+global_vars.vSexe = tk.StringVar(value="homme")  # Par défaut sur "homme"
 
 #definition du Tableau Principal
 tree = setup_TableauPrincipal(root, tk, columns)
 
 # Fonction pour configurer le tableau de playlist
-playlist_tree = setup_playlist(root, tree, tk, columns, gender_var)
+playlist_tree = setup_playlist(root, tree, tk, columns)
 
 
 
 # Ajouter le Label pour les lignes correspondantes
-label_count = tk.Label(filter_frame, text="Nb de lignes : 0")
-label_count.grid(row=1, column=9, padx=5)
+global_vars.label_count = tk.Label(filter_frame, text="Nb de lignes : 0")
+global_vars.label_count.grid(row=1, column=9, padx=5)
+
 
 
 # Bouton pour appliquer tous les filtres
 apply_all_filters_button = tk.Button(
     filter_frame,
     text="Appliquer tous les filtres",
-    command=lambda: filter_tree_with_filters(tree, filters, file_path, label_count)
+    command=lambda: filter_tree_with_filters(tree, filters, file_path)
     #command=lambda: apply_all_filters(tree, filters)
 )
 apply_all_filters_button.grid(row=1, column=7, padx=5)
@@ -85,15 +91,11 @@ reset_filter_button = tk.Button(
     text="Réinitialiser les filtres",
     command=lambda: [
         #open_and_display_json(tree, file_path)
-        reset_filters(tree, filters, file_path, label_count)
+        reset_filters(tree, filters, file_path)
     ]
     
 )
 reset_filter_button.grid(row=1, column=8, padx=5)
-
-# Ajouter le Label pour les lignes correspondantes
-label_count = tk.Label(filter_frame, text="Nb de lignes : 0")
-label_count.grid(row=1, column=9, padx=5)
 
 # Ajouter une case à cocher pour "Afficher N/A"
 na_var = tk.BooleanVar(value=True)  # Initialiser à "coché" (True)
@@ -126,7 +128,7 @@ def on_quete_selected(event):
 
 
 def resize_columns(event):
-    toggle_columns(tree, playlist_tree,  filters, gender_var)   
+    toggle_columns(tree, playlist_tree,  filters)   
 
 # Créer les champs de filtre uniquement pour les colonnes sélectionnées
 filters = []  # Initialisation de la liste des filtres
@@ -164,9 +166,9 @@ for i, column in enumerate(columns):
 radio_homme = tk.Radiobutton(
     filter_frame,
     text="Homme",
-    variable=gender_var,
+    variable=global_vars.vSexe,
     value="homme",
-    command=lambda: toggle_columns(tree, playlist_tree, filters, gender_var)  # Appeler la fonction de mise à jour des colonnes
+    command=lambda: toggle_columns(tree, playlist_tree, filters)  # Appeler la fonction de mise à jour des colonnes
 )
 radio_homme.grid(row=1, column=10, padx=5)
 
@@ -174,20 +176,20 @@ radio_homme.grid(row=1, column=10, padx=5)
 radio_femme = tk.Radiobutton(
     filter_frame,
     text="Femme",
-    variable=gender_var,
+    variable=global_vars.vSexe,
     value="femme",
-    command=lambda: toggle_columns(tree, playlist_tree,  filters, gender_var)  # Appeler la fonction de mise à jour des colonnes
+    command=lambda: toggle_columns(tree, playlist_tree,  filters)  # Appeler la fonction de mise à jour des colonnes
 )
 radio_femme.grid(row=1, column=11, padx=5)
 
-filter_tree_with_filters(tree, filters, file_path, label_count)
+filter_tree_with_filters(tree, filters, file_path)
 
 
 
 
 # Lier les événements du tableau principal
 tree.bind("<Button-3>", lambda event: select_and_add_to_playlist(event, tree, playlist_tree, tk))
-tree.bind("<<TreeviewSelect>>", lambda event: SelectionLigne(event, tree, gender_var))  # Sélectionner une ligne pour afficher les détails
+tree.bind("<<TreeviewSelect>>", lambda event: SelectionLigne(event, tree))  # Sélectionner une ligne pour afficher les détails
 
 # Lier l'événement de redimensionnement
 root.bind("<Configure>", resize_columns)
