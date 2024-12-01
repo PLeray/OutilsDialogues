@@ -9,14 +9,7 @@ vFemme = "Femme"
 
 pas_Info = "RIEN" # Définition initiale
 
-columns = (
-    "ID",
-    "(F) Sous-titres",
-    "(M) Sous-titres",
-    "(F) Voix",
-    "(M) Voix",
-    "Quête"
-)
+columns = ( "ID", "(F) Sous-titres", "(M) Sous-titres", "(F) Voix", "(M) Voix", "Quête")
 columns_homme = ["ID", "(M) Sous-titres", "(M) Voix", "Quête"]
 columns_femme = ["ID", "(F) Sous-titres", "(F) Voix", "Quête"]
 
