@@ -1,14 +1,13 @@
 import os
 import subprocess
-import configparser
+
 import tempfile
 import shutil
 import pygame
 
-# Variables globales
-CheminRacine = "D:\_CyberPunk-Creation\DialogueFR/source/raw/"
-CheminLocalization = "localization/"
-CheminLangue = "fr-fr"
+import global_vars  # Importer les variables globales
+
+
 
 import global_vars  # Importer les variables globales
 
@@ -43,16 +42,17 @@ def generate_audio_path(audio_value):
 
     # Reconstruire le chemin
     try:
-        # Remplacer '{}' par le chemin de localisation complet
+        # Remplacer '{}' par le chemin de localisation completn'existe pas
         if "{}" in audio_value:
-            audio_value = audio_value.replace("{}", CheminLocalization + CheminLangue)
+            audio_value = audio_value.replace("{}", global_vars.CheminLocalization + global_vars.CheminLangue)
 
         # Remplacer l'extension '.wem' par '.ogg'
         if audio_value.endswith(".wem"):
             audio_value = audio_value[:-4] + ".ogg"
 
         # Ajouter le chemin racine
-        full_path = CheminRacine + audio_value
+        full_path = global_vars.project_path + audio_value
+        print(f"chemin du son : {full_path}")
         return full_path
     except Exception as e:
         print(f"Erreur lors de la génération du chemin : {e}")
@@ -77,12 +77,6 @@ def convert_wem_to_ogg_if_needed(ogg_path):
     if os.path.exists(ogg_path):
         return ogg_path
     else :
-        config_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.ini")
-        config = read_config_conversionWem(config_file_path)
-        ww2ogg_path = config['WW2OGG_PATH']
-        revorb_path = config['REVORB_PATH']
-        codebooks_path = config['CODEBOOKS_PATH']
-
         # Construire le chemin du fichier .wem correspondant
         wem_path = ogg_path.replace("\\raw\\", "\\archive\\").replace(".ogg", ".wem")
 
@@ -105,10 +99,10 @@ def convert_wem_to_ogg_if_needed(ogg_path):
             temp_ogg_path = temp_ogg_file.name
 
         conversion_command = [
-            ww2ogg_path,
+            global_vars.ww2ogg_path,
             wem_path,
             "--pcb",
-            codebooks_path,
+            global_vars.codebooks_path,
             "-o",
             temp_ogg_path
         ]
@@ -122,7 +116,7 @@ def convert_wem_to_ogg_if_needed(ogg_path):
 
         # Appliquer revorb directement au fichier temporaire .ogg généré
         revorb_command = [
-            revorb_path,
+            global_vars.revorb_path,
             temp_ogg_path
         ]
         try:
@@ -136,16 +130,3 @@ def convert_wem_to_ogg_if_needed(ogg_path):
         return ogg_path
     
 
-# Lire les chemins depuis le fichier de configuration
-def read_config_conversionWem(config_path):
-    config = configparser.ConfigParser()
-    if not os.path.exists(config_path):
-        raise FileNotFoundError(f"Le fichier de configuration est introuvable : {config_path}")
-    config.read(config_path)
-    if 'Paths' not in config:
-        raise configparser.NoSectionError('Paths')
-    return {
-        'WW2OGG_PATH': config.get('Paths', 'WW2OGG_PATH'),
-        'REVORB_PATH': config.get('Paths', 'REVORB_PATH'),
-        'CODEBOOKS_PATH': config.get('Paths', 'CODEBOOKS_PATH')
-    }

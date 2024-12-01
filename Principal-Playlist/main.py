@@ -7,7 +7,7 @@ from playlist_functions import select_and_add_to_playlist, setup_playlist
 from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
 
 import global_vars  # Importer les variables globales
-
+from global_vars import initConfigGlobale, find_localization_subfolders
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -15,13 +15,42 @@ root.title("Visualisateur de JSON en tableau avec copier-coller et panneau d'inf
 root.geometry("1500x800")
 root.minsize(1100, 800)
 
+initConfigGlobale()
+
+localization_languages = find_localization_subfolders(global_vars.project_path)
+
 # Créer une frame pour le bouton au-dessus du tableau principal
 button_frame = tk.Frame(root)
 button_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
 
-# Ajouter un bouton au-dessus du tableau principal
-action_button = tk.Button(button_frame, text="Action Bouton", command=lambda: print("Bouton cliqué !"))
-action_button.pack(side=tk.LEFT, padx=5, pady=5)
+# Ajouter une liste déroulante (ComboBox)
+language_var = tk.StringVar()
+language_dropdown = ttk.Combobox(
+    button_frame,
+    textvariable=language_var,
+    values=localization_languages,  # Langues récupérées par la fonction
+    state="readonly",  # Lecture seule pour éviter la modification manuelle
+    width=20
+)
+# Définir une valeur par défaut pour la liste déroulante
+default_language = "fr-fr"  # Remplacez par la valeur souhaitée
+if default_language in localization_languages:
+    language_dropdown.set(default_language)  # Définit la valeur par défaut
+else:
+    language_dropdown.set("Sélectionnez une langue")  # Définit une valeur par défaut générique
+
+language_dropdown.pack(side=tk.LEFT, padx=5, pady=5)
+
+# Ajouter un texte à droite de la liste déroulante
+text_label = tk.Label(button_frame, text="Donner ici queles explications sur souris bouton usage ...", font=("Arial", 10))
+text_label.pack(side=tk.LEFT, padx=5, pady=5)
+
+# Ajouter une commande lors de la sélection
+def on_language_selected(event):
+    global_vars.CheminLangue = language_var.get()
+    print(f"Langue sélectionnée : {global_vars.CheminLangue}")
+
+language_dropdown.bind("<<ComboboxSelected>>", on_language_selected)
 
 
 # Créer la frame pour les filtres et l'ajouter au-dessus du tableau principal
@@ -31,15 +60,6 @@ filter_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
 
 # Colonnes du tableau principal
 #columns = ("ID", "Sous-titres", "Origine", "Personnage", "Origine 2", "Quête")  # Remplacement de "Audio" par "Personnage"
-columns = (
-    "ID",
-    "(F) Sous-titres",
-    "(M) Sous-titres",
-    "(F) Voix",
-    "(M) Voix",
-    "Quête"
-)
-
 
 # Exemple d'initialisation du Treeview avec un thème compatible
 style = ttk.Style()
@@ -51,16 +71,14 @@ style.map(
     foreground=[("selected", "#000000")]   # Couleur du texte pour les lignes sélectionnées
 )
 
-
-
 # Créer une variable pour gérer l'état des boutons radio
 global_vars.vSexe = tk.StringVar(value="homme")  # Par défaut sur "homme"
 
 #definition du Tableau Principal
-tree = setup_TableauPrincipal(root, tk, columns)
+tree = setup_TableauPrincipal(root, tk, global_vars.columns)
 
 # Fonction pour configurer le tableau de playlist
-playlist_tree = setup_playlist(root, tree, tk, columns)
+playlist_tree = setup_playlist(root, tree, tk, global_vars.columns)
 
 
 
@@ -127,7 +145,7 @@ def resize_columns(event):
 filters = []  # Initialisation de la liste des filtres
 
 # Création des filtres avec labels explicites
-for i, column in enumerate(columns):
+for i, column in enumerate(global_vars.columns):
     label = tk.Label(filter_frame, text=f"Filtre {column}")
     label.grid(row=0, column=i, padx=5)
 
