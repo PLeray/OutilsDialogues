@@ -148,8 +148,8 @@ def initialize_quete_droplist(tree, column_index):
     for item in tree.get_children():
         # Récupérer la valeur de la colonne
         value = tree.item(item, "values")[column_index]
-        if value == global_vars._pasAttribuer:
-            quetes.add(global_vars._pasAttribuer)  # Ajouter directement _pasAttribuer sans modification
+        if value == global_vars.pas_Info:
+            quetes.add(global_vars.pas_Info)  # Ajouter directement pas_Info sans modification
         elif value:
             # Extraire la partie après le dernier "/"
             quete = value.split("/")[-1]
@@ -195,7 +195,7 @@ def update_quete_based_on_personnage(tree, filters, quete_column_index, personna
         quete_val = values[quete_column_index].strip() if values[quete_column_index] else ""
 
         # Ajouter les quêtes associées au personnage sélectionné
-        if personnage_value in ["Tous", "Toutes", global_vars._pasAttribuer] or personnage_value.lower() in personnage_val.lower():
+        if personnage_value in ["Tous", "Toutes", global_vars.pas_Info] or personnage_value.lower() in personnage_val.lower():
             quete_val = values[quete_column_index].split("/")[-1] if "/" in values[quete_column_index] else values[quete_column_index]
             quetes.add(quete_val)
 
@@ -310,7 +310,7 @@ def filter_NA(tree, na_var):
         values = tree.item(item, "values")  # Récupère les valeurs de la ligne
 
         # Vérifier si la 4ᵉ colonne contient 'N/A'
-        if not show_na and values[3] == _pasAttribuer:
+        if not show_na and values[3] == pas_Info:
             tree.detach(item)  # Masquer la ligne
         else:
             tree.item(item, open=True)  # Afficher la ligne
@@ -324,11 +324,8 @@ def toggle_columns(tree, playlist_tree, filters):
     :param filters: Liste des filtres (nom_colonne, label_widget, entry_widget).
 
     """
-    columns_homme = ["ID", "(M) Sous-titres", "(M) Voix", "Quête"]
-    columns_femme = ["ID", "(F) Sous-titres", "(F) Voix", "Quête"]
-
     selected_gender = global_vars.vSexe.get()
-    visible_columns = columns_homme if selected_gender == "homme" else columns_femme
+    visible_columns = global_vars.columns_homme if selected_gender == "homme" else global_vars.columns_femme
     tree["displaycolumns"] = visible_columns
     playlist_tree["displaycolumns"] = visible_columns
 
@@ -348,7 +345,7 @@ def toggle_columns(tree, playlist_tree, filters):
     # Ajuster les colonnes dans le Treeview
     for col in tree["columns"]:
         if col == "ID":
-            tree.column(col, width=id_column_width, minwidth=100, stretch=False, anchor="w")
+            tree.column(col, width=id_column_width, minwidth=100, stretch=False, anchor="w")         
         elif col in visible_columns:
             tree.column(col, width=column_width, stretch=True)
         else:

@@ -8,12 +8,6 @@ from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_
 
 import global_vars  # Importer les variables globales
 
-#from custom_types import Dialogue
-#from data_loader import load_json
-
-# Charger les données dans le tableau principal à partir du fichier JSON
-file_path = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
-#file_path = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -80,7 +74,7 @@ global_vars.label_count.grid(row=1, column=9, padx=5)
 apply_all_filters_button = tk.Button(
     filter_frame,
     text="Appliquer tous les filtres",
-    command=lambda: filter_tree_with_filters(tree, filters, file_path)
+    command=lambda: filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json)
     #command=lambda: apply_all_filters(tree, filters)
 )
 apply_all_filters_button.grid(row=1, column=7, padx=5)
@@ -90,8 +84,7 @@ reset_filter_button = tk.Button(
     filter_frame,
     text="Réinitialiser les filtres",
     command=lambda: [
-        #open_and_display_json(tree, file_path)
-        reset_filters(tree, filters, file_path)
+        reset_filters(tree, filters, global_vars.bdd_Localisation_Json)
     ]
     
 )
@@ -109,7 +102,7 @@ checkbox_na = tk.Checkbutton(
 checkbox_na.grid(row=1, column=12, padx=5)
 
 # Charger les données dans le tableau
-open_and_display_json(tree, file_path)
+open_and_display_json(tree, global_vars.bdd_Localisation_Json)
 
 def on_personnage_selected(event):
     personnage_value = event.widget.get()
@@ -182,7 +175,7 @@ radio_femme = tk.Radiobutton(
 )
 radio_femme.grid(row=1, column=11, padx=5)
 
-filter_tree_with_filters(tree, filters, file_path)
+filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json)
 
 
 
@@ -196,3 +189,4 @@ root.bind("<Configure>", resize_columns)
 
 # Lancer la boucle principale de l'application
 root.mainloop()
+

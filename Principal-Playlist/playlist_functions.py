@@ -16,6 +16,7 @@ def select_and_add_to_playlist(event, tree, playlist_tree, tk):
 
         # Mettre à jour le compteur
         count_playlist_rows(playlist_tree)
+        colorize_playlist_rows(playlist_tree)
 
  # Fonction pour ajouter une/des ligne sélectionnée(s) au tableau playlist
 def add_to_playlist(tree, playlist_tree, tk):
@@ -26,7 +27,8 @@ def add_to_playlist(tree, playlist_tree, tk):
         playlist_tree.insert("", tk.END, values=selected_values)  # Ajouter à la playlist
 
     # Mettre à jour le compteur
-    count_playlist_rows(playlist_tree)        
+    count_playlist_rows(playlist_tree)
+    colorize_playlist_rows(playlist_tree)        
 
 #definition de la playlist
 def setup_playlist(root, tree, tk, columns):
@@ -87,8 +89,6 @@ def setup_playlist(root, tree, tk, columns):
     # Ajouter le Label pour afficher le nombre de lignes, à droite de clear_button
     global_vars.playlist_count_label = tk.Label(button_frame, text="Lignes dans la playlist : 0")
     global_vars.playlist_count_label.pack(side=tk.LEFT, padx=(10, 0))  # Alignez sur le côté gauche avec un petit espace
-
-
 
     return playlist_tree
 

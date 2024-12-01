@@ -4,8 +4,10 @@ label_count = None  # Définition initiale
 
 vSexe  = None  # Définition initiale
 
-_pasAttribuer = "RIEN" # Définition initiale
+vHomme = "homme"
+vFemme = "Femme"
 
+pas_Info = "RIEN" # Définition initiale
 
 columns = (
     "ID",
@@ -15,3 +17,10 @@ columns = (
     "(M) Voix",
     "Quête"
 )
+columns_homme = ["ID", "(M) Sous-titres", "(M) Voix", "Quête"]
+columns_femme = ["ID", "(F) Sous-titres", "(F) Voix", "Quête"]
+
+bdd_Localisation_Json="D:\\_CyberPunk-Creation\\BDDDialogues\\BDDjson\\Base_fr-fr.json"
+
+#bdd_Zhincore = r"D:\_CyberPunk-Creation\BDDDialogues\testReduit.json"
+bdd_Zhincore = r"D:\_CyberPunk-Creation\BDDDialogues\subtitles.DIVQuO_-.json"
