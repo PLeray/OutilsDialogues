@@ -7,7 +7,7 @@ from tkinter import ttk
 #from custom_types import Dialogue
 from data_loader import load_json
 
-from LectureOgg import JouerAudio, generate_audio_path
+from LectureOgg import JouerAudio, generate_audio_path, get_SousTitres_by_id
 
 import global_vars  # Importer les variables globales
 
@@ -65,34 +65,6 @@ def sort_tree(tree, col, reverse):
     tree.heading(col, command=lambda: sort_tree(tree, col, not reverse))    
 
 
-def get_SousTitres_by_id(file_path, string_id):
-    """
-    Cherche les variantes (femaleVariant et maleVariant) correspondant à un stringId donné dans un fichier JSON.
-
-    :param file_path: Chemin du fichier JSON.
-    :param string_id: stringId à rechercher.
-    :return: Un dictionnaire contenant "femaleVariant" et "maleVariant", ou None si le stringId n'est pas trouvé.
-    """
-    try:
-        # Charger le fichier JSON
-        with open(file_path, "r", encoding="utf-8") as file:
-            data = json.load(file)
-
-        # Parcourir les entrées dans le fichier JSON
-        entries = data["Data"]["RootChunk"]["root"]["Data"]["entries"]
-        for entry in entries:
-            if entry["stringId"] == str(string_id):  # Vérification du stringId
-                return {
-                    "femaleVariant": entry.get("femaleVariant", ""),
-                    "maleVariant": entry.get("maleVariant", "")
-                }
-        
-        # Si le stringId n'est pas trouvé
-        return None
-
-    except (FileNotFoundError, KeyError, json.JSONDecodeError) as e:
-        #print(f"Erreur lors du traitement du fichier : {e}")
-        return None
     
 # Fonction pour afficher les données dans le tableau
 def generate_and_save_json(output_path):
@@ -111,11 +83,11 @@ def generate_and_save_json(output_path):
         #TRADUCTION !
         # Récupérer la quête
         quete = entry.get("_path", global_vars.pas_Info)
-        audio_path = generate_audio_path(quete)
+        quete_path = generate_audio_path(quete)
 
         fichierQuete = ""        
-        if isinstance(audio_path, str):  # Vérifie si c'est une chaîne
-            fichierQuete = audio_path + ".json.json"
+        if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
+            fichierQuete = quete_path + ".json.json"
 
         result = get_SousTitres_by_id(fichierQuete, id)
         if result:

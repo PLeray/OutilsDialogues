@@ -1,4 +1,4 @@
-import os
+import os, json
 import subprocess
 
 import tempfile
@@ -78,11 +78,12 @@ def convert_wem_to_ogg_if_needed(ogg_path):
         return ogg_path
     else :
         # Construire le chemin du fichier .wem correspondant
-        wem_path = ogg_path.replace("\\raw\\", "\\archive\\").replace(".ogg", ".wem")
-
+        print(f"chemin du ogg_path : {ogg_path}")
+        wem_path = ogg_path.replace("/raw/", "/archive/").replace(".ogg", ".wem")
+        print(f"chemin du wem_path : {wem_path}")
         # Vérifier si le fichier .wem existe
         if not os.path.exists(wem_path):
-            raise FileNotFoundError(f"Le fichier .wem correspondant n'existe pas : {wem_path}")
+            raise FileNotFoundError(f"Le xxx fichier .wem correspondant n'existe pas : {wem_path}")
 
         # Créer les dossiers nécessaires pour le fichier .ogg s'ils n'existent pas
         ogg_dir = os.path.dirname(ogg_path)
@@ -130,3 +131,31 @@ def convert_wem_to_ogg_if_needed(ogg_path):
         return ogg_path
     
 
+def get_SousTitres_by_id(file_path, string_id):
+    """
+    Cherche les variantes (femaleVariant et maleVariant) correspondant à un stringId donné dans un fichier JSON.
+
+    :param file_path: Chemin du fichier JSON.
+    :param string_id: stringId à rechercher.
+    :return: Un dictionnaire contenant "femaleVariant" et "maleVariant", ou None si le stringId n'est pas trouvé.
+    """
+    try:
+        # Charger le fichier JSON
+        with open(file_path, "r", encoding="utf-8") as file:
+            data = json.load(file)
+
+        # Parcourir les entrées dans le fichier JSON
+        entries = data["Data"]["RootChunk"]["root"]["Data"]["entries"]
+        for entry in entries:
+            if entry["stringId"] == str(string_id):  # Vérification du stringId
+                return {
+                    "femaleVariant": entry.get("femaleVariant", ""),
+                    "maleVariant": entry.get("maleVariant", "")
+                }
+        
+        # Si le stringId n'est pas trouvé
+        return None
+
+    except (FileNotFoundError, KeyError, json.JSONDecodeError) as e:
+        #print(f"Erreur lors du traitement du fichier : {e}")
+        return None

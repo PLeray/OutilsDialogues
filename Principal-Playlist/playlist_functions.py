@@ -2,7 +2,7 @@
 import json, threading, pygame
 
 from tkinter import ttk, filedialog, Menu
-from LectureOgg import JouerAudio
+from LectureOgg import JouerAudio, generate_audio_path, get_SousTitres_by_id
 
 import global_vars  # Accéder au Label global
 
@@ -160,7 +160,15 @@ def save_playlist_to_file(playlist_tree):
         # Récupérer les données de chaque ligne de la playlist
         for child in playlist_tree.get_children():
             values = playlist_tree.item(child, "values")
-            playlist_data.append(values)
+            # Sauvegarder dans une structure
+            playlist_data.append({
+                "id": values[0],
+                "female_text": values[1],
+                "male_text": values[2],
+                "female_vo": values[3],
+                "male_vo": values[4],
+                "quete": values[5]
+            })
         # Sauvegarder les données dans un fichier JSON
         with open(file_path, "w") as file:
             json.dump(playlist_data, file, indent=4)
@@ -173,13 +181,73 @@ def load_playlist_from_file(playlist_tree,tk):
             playlist_data = json.load(file)
             # Effacer l'ancienne playlist avant de charger la nouvelle
             clear_playlist(playlist_tree)
-            # Ajouter les nouvelles données dans la playlist
+            """
+            # Ajouter les nouvelles données dans la playlist            
             for values in playlist_data:
                 playlist_tree.insert("", tk.END, values=values)
+            """
+            # Ajouter les nouvelles données
+            for entry in playlist_data:
 
+
+                #TRADUCTION !
+                # Récupérer la quête
+                quete_path = generate_audio_path(entry["quete"])
+                #print(f"Fichier Quete : {quete_path}")
+                fichierQuete = ""        
+                if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
+                    fichierQuete = quete_path + ".json.json"
+
+                #print(f"Fichier Quete : {quete_path}")
+                result = get_SousTitres_by_id(fichierQuete, entry["id"])
+                if result:
+                    #print(f"Female Variant: {result['femaleVariant']}")
+                    #print(f"Male Variant: {result['maleVariant']}")
+                    female_text = result['femaleVariant']
+                    male_text = result['maleVariant']
+                else:
+                    #print("String ID non trouvé.")
+                    female_text = ""
+                    male_text = ""  
+
+                if not male_text or male_text == global_vars.pas_Info:
+                    male_text = female_text        
+                if not female_text or female_text == global_vars.pas_Info:
+                    female_text = male_text # a Confirmer si ca existe !?                     
+
+                playlist_tree.insert("", tk.END, values=(
+                    entry["id"],
+                    female_text,
+                    male_text,
+                    entry["female_vo"],
+                    entry["male_vo"],
+                    entry["quete"]
+                ))
             # Mettre à jour le compteur
             count_playlist_rows(playlist_tree)
             colorize_playlist_rows(playlist_tree)
+
+
+def traduire_SousTitres(Id):
+    #TRADUCTION !
+    # Récupérer la quête
+    quete = entry.get("_path", global_vars.pas_Info)
+    audio_path = generate_audio_path(quete)
+
+    fichierQuete = ""        
+    if isinstance(audio_path, str):  # Vérifie si c'est une chaîne
+        fichierQuete = audio_path + ".json.json"
+
+    result = get_SousTitres_by_id(fichierQuete, id)
+    if result:
+        #print(f"Female Variant: {result['femaleVariant']}")
+        #print(f"Male Variant: {result['maleVariant']}")
+        female_text = result['femaleVariant']
+        male_text = result['maleVariant']
+    else:
+        #print("String ID non trouvé.")
+        female_text = ""
+        male_text = ""            
 
 # Fonction pour lire la Playlist
 def ecouterPlaylist(playlist_tree):
@@ -305,5 +373,4 @@ def colorize_playlist_rows(playlist_tree):
         # Appliquer la couleur au fond de la ligne
         playlist_tree.tag_configure(key, background=color_mapping[key])
         playlist_tree.item(row, tags=(key,))
-
 
