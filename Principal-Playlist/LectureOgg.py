@@ -52,7 +52,7 @@ def generate_audio_path(audio_value):
 
         # Ajouter le chemin racine
         full_path = global_vars.project_path + audio_value
-        print(f"chemin du son : {full_path}")
+        #print(f"chemin du fichier localiser : {full_path}")
         return full_path
     except Exception as e:
         print(f"Erreur lors de la génération du chemin : {e}")
@@ -95,40 +95,50 @@ def convert_wem_to_ogg_if_needed(ogg_path):
         if not os.path.exists(temp_dir):
             os.makedirs(temp_dir)
 
-        # Convertir le fichier .wem en .ogg
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".ogg", dir=temp_dir) as temp_ogg_file:
-            temp_ogg_path = temp_ogg_file.name
-
-        conversion_command = [
-            global_vars.ww2ogg_path,
-            wem_path,
-            "--pcb",
-            global_vars.codebooks_path,
-            "-o",
-            temp_ogg_path
-        ]
         try:
-            subprocess.run(conversion_command, check=True)
-        except subprocess.CalledProcessError as e:
-            raise RuntimeError(f"Erreur lors de la conversion du fichier .wem en .ogg : {e}")
+            # Convertir le fichier .wem en .ogg
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".ogg", dir=temp_dir) as temp_ogg_file:
+                temp_ogg_path = temp_ogg_file.name
 
-        # Fermer le fichier temporaire avant d'utiliser revorb
-        temp_ogg_file.close()
+            conversion_command = [
+                global_vars.ww2ogg_path,
+                wem_path,
+                "--pcb",
+                global_vars.codebooks_path,
+                "-o",
+                temp_ogg_path
+            ]
+            try:
+                subprocess.run(conversion_command, check=True)
+            except subprocess.CalledProcessError as e:
+                raise RuntimeError(f"Erreur lors de la conversion du fichier .wem en .ogg : {e}")
 
-        # Appliquer revorb directement au fichier temporaire .ogg généré
-        revorb_command = [
-            global_vars.revorb_path,
-            temp_ogg_path
-        ]
-        try:
-            subprocess.run(revorb_command, check=True)
-        except subprocess.CalledProcessError as e:
-            raise RuntimeError(f"Erreur lors de l'application de revorb : {e}")
+            # Fermer le fichier temporaire avant d'utiliser revorb
+            temp_ogg_file.close()
 
-        # Déplacer le fichier revorb .ogg à l'emplacement souhaité
-        shutil.move(temp_ogg_path, ogg_path)
+            # Appliquer revorb directement au fichier temporaire .ogg généré
+            revorb_command = [
+                global_vars.revorb_path,
+                temp_ogg_path
+            ]
+            try:
+                subprocess.run(revorb_command, check=True)
+            except subprocess.CalledProcessError as e:
+                raise RuntimeError(f"Erreur lors de l'application de revorb : {e}")
 
-        return ogg_path
+            # Déplacer le fichier revorb .ogg à l'emplacement souhaité
+            shutil.move(temp_ogg_path, ogg_path)
+        
+        finally:
+            # Supprimer le dossier temporaire à la fin
+            if os.path.exists(temp_dir):
+                try:
+                    shutil.rmtree(temp_dir)
+                    print(f"Dossier temporaire supprimé : {temp_dir}")
+                except Exception as e:
+                    print(f"Erreur lors de la suppression du dossier temporaire : {e}")
+
+        return ogg_path            
     
 
 def get_SousTitres_by_id(file_path, string_id):

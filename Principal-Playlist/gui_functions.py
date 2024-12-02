@@ -37,14 +37,13 @@ def setup_TableauPrincipal(root, tk, columns):
 
     return tree
 
-
 #Fonction pour la selection d'une ligne du tableau principal
 def SelectionLigne(event, tree):
     selected_item = tree.selection()[0]
     selected_values = tree.item(selected_item, 'values')
 
     selected_gender = global_vars.vSexe.get()
-    if selected_gender == "homme":
+    if selected_gender == global_vars.vHomme:
         audio_value = selected_values[4]
     else:
         audio_value = selected_values[3]
@@ -128,6 +127,7 @@ def generate_and_save_json(output_path):
             else :
                 female_vo = male_vo                
       
+        """
         # Sauvegarder dans une structure
         processed_data.append({
             "id": id,
@@ -137,6 +137,16 @@ def generate_and_save_json(output_path):
             "male_vo": male_vo,
             "quete": quete
         })
+        """
+        # Sauvegarder dans une structure
+        processed_data.append({
+            global_vars.data_ID: id,
+            global_vars.data_F_SubTitle: female_text,
+            global_vars.data_M_SubTitle: male_text,
+            global_vars.data_F_Voice: female_vo,
+            global_vars.data_M_Voice: male_vo,
+            global_vars.data_Quest: quete
+        })        
 
     # Sauvegarder les données dans le fichier JSON
     save_data_to_json(output_path, processed_data)
@@ -167,12 +177,12 @@ def load_data_into_tree(tree):
         # Ajouter les nouvelles données
         for entry in data:
             tree.insert("", tk.END, values=(
-                entry["id"],
-                entry["female_text"],
-                entry["male_text"],
-                entry["female_vo"],
-                entry["male_vo"],
-                entry["quete"]
+                entry[global_vars.data_ID],
+                entry[global_vars.data_F_SubTitle],
+                entry[global_vars.data_M_SubTitle],
+                entry[global_vars.data_F_Voice],
+                entry[global_vars.data_M_Voice],
+                entry[global_vars.data_Quest]
             ))
         print(f"Données chargées depuis : {global_vars.bdd_Localisation_Json}")
     except Exception as e:
@@ -187,80 +197,3 @@ def open_and_display_json(tree, file_path):
     load_data_into_tree(tree)
 
 
-# Fonction pour afficher les données dans le tableau
-def open_and_display_json2(tree, file_path):
-
-    # Charger les données JSON
-    data = load_json(file_path)
-    if not data:
-        print("Aucune donnée chargée depuis le fichier JSON.")
-        return
-
-    # Supprimer les anciennes données du tableau
-    tree.delete(*tree.get_children())
-
-    # Traiter les données
-    for key, entry in data.items():
-        # ID
-        id = key
-
-        #TRADUCTION !
-        # Récupérer la quête
-        quete = entry.get("_path", global_vars.pas_Info)
-        audio_path = generate_audio_path(quete)
-
-        fichierQuete = ""        
-        if isinstance(audio_path, str):  # Vérifie si c'est une chaîne
-            fichierQuete = audio_path + ".json.json"
-
-        result = get_SousTitres_by_id(fichierQuete, id)
-        if result:
-            #print(f"Female Variant: {result['femaleVariant']}")
-            #print(f"Male Variant: {result['maleVariant']}")
-            female_text = result['femaleVariant']
-            male_text = result['maleVariant']
-        else:
-            #print("String ID non trouvé.")
-            female_text = ""
-            male_text = ""
-
-        # Récupérer les informations pour 'female'
-   
-        female_vo = entry.get("female", {}).get("vo", {}).get("main", global_vars.pas_Info)
-
-        # Récupérer les informations pour 'male'
-
-        male_vo = entry.get("male", {}).get("vo", {}).get("main", global_vars.pas_Info)
-
-        # Vérifier si 'male_vo' ou 'female_vo' contient "v_"
-        isV = "v_" in (male_vo or "") or "v_" in (female_vo or "")         
-        
-        if not male_text or male_text == global_vars.pas_Info:
-            male_text = female_text        
-        if not female_text or female_text == global_vars.pas_Info:
-            female_text = male_text # a Confirmer si ca existe !?
-       
-        if not male_vo or male_vo == global_vars.pas_Info:       
-            if isV :
-                male_vo = female_vo.replace("_f_", "_m_")  
-                # peut etre que le son n'existe pas -->  verifier si fichier existe avec generate_audio_path(male_vo)
-            else :
-                male_vo = female_vo
-
-        if not female_vo or female_vo == global_vars.pas_Info:       
-            if isV :
-                female_vo = male_vo.replace("_m_", "_f_")  
-                # peut etre que le son n'existe pas -->  verifier si fichier existe avec generate_audio_path(male_vo)
-            else :
-                female_vo = male_vo                
-      
-        # Insérer une ligne dans le Treeview
-        tree.insert("", tk.END, values=(
-            id,           # ID
-            female_text,   # (F) Sous-titres
-            male_text,     # (M) Sous-titres
-            female_vo,     # (F) Voix
-            male_vo,       # (M) Voix
-            quete          # Quête
-        ))
-    

@@ -5,22 +5,13 @@ from gui_functions import open_and_display_json
 
 import global_vars  # Importer les variables globales
 
-
-
 def reset_filters(tree, filters, file_path):
-    """
-    Réinitialise tous les filtres (champs de texte et combobox) et recharge les données.
-
-    :param tree: Treeview contenant les données.
-    :param filters: Liste des filtres sous forme (column_name, label_widget, entry_widget).
-    :param file_path: Chemin du fichier contenant les données à afficher.
-
-    """
     # Forcer chaque combobox à "Tous" ou "Toutes" avant de procéder
     for column_name, _, widget in filters:  # Ignorer les labels et récupérer uniquement les widgets
         if isinstance(widget, ttk.Combobox):  # Vérifie si c'est une Combobox
             # Déterminer la valeur par défaut à utiliser
-            default_value = "Tous" if column_name in ["(M) Voix", "(F) Voix"] else "Toutes"
+            #default_value = "All" if column_name in [global_vars.column_M_Voice, global_vars.titleCol_F_Voice] else "All"
+            default_value = global_vars.setToAll          
             if default_value in widget["values"]:
                 widget.set(default_value)  # Appliquer la valeur manuellement
                 widget.current(widget["values"].index(default_value))  # Positionner à l'index de "Tous" ou "Toutes"
@@ -41,18 +32,12 @@ def reset_filters(tree, filters, file_path):
     # Recharge le contenu du Treeview avec le fichier JSON
     open_and_display_json(tree, file_path)
 
-    # Réinitialise les listes déroulantes spécifiques
-    """
-    initialize_quete_droplist(tree, 5)
-    initialize_personnage_droplist(tree, 3)
-    initialize_personnage_droplist(tree, 4)  # Pour V homme   
-    """
     # Applique les filtres pour synchroniser les données affichées
     filter_tree_with_filters(tree, filters, file_path)
 
     update_quete_based_on_personnage(tree, filters, 5, 3, "")  # 5 = colonne Quête, 3 = colonne Personnage F
     update_quete_based_on_personnage(tree, filters, 5, 4, "")  # 5 = colonne Quête, 4 = colonne Personnage M
-    update_personnage_based_on_quete(tree, filters, 5, (3, 4), "")  # (3, 4) Les indices des colonnes "(F) Voix" et "(M) Voix"
+    update_personnage_based_on_quete(tree, filters, 5, (3, 4), "")  # (3, 4) Les indices des colonnes voix
 
 
 def filter_tree_with_filters(tree, filters, file_path):
@@ -84,7 +69,8 @@ def filter_tree_with_filters(tree, filters, file_path):
 
             # Filtrage via Combobox
             if isinstance(widget, ttk.Combobox):
-                if filter_value in ["Tous", "Toutes"]:
+                #if filter_value in [global_vars.setToAll, global_vars.setToAll]:
+                if filter_value in [global_vars.setToAll]:                    
                     continue  # Ignorer les valeurs par défaut
 
                 # Extraire la valeur pertinente
@@ -111,7 +97,7 @@ def filter_tree_with_filters(tree, filters, file_path):
             tree.detach(item)
 
     # Mettre à jour le label avec le nombre de lignes correspondantes
-    global_vars.label_count.config(text=f"Lignes correspondantes : {matching_count}")
+    global_vars.principal_count.config(text=f"{global_vars.nombre_Ligne} : {matching_count}")
 
 
 
@@ -133,7 +119,7 @@ def initialize_personnage_droplist(tree, column_index):
             personnages.add(personnage)
 
     sorted_personnages = sorted(personnages)  # Trier les personnages
-    return ["Tous"] + sorted_personnages  # Ajouter "Tous" au début
+    return [global_vars.setToAll] + sorted_personnages  # Ajouter "Tous" au début
 
 
 def initialize_quete_droplist(tree, column_index):
@@ -156,7 +142,7 @@ def initialize_quete_droplist(tree, column_index):
             quetes.add(quete)
 
     sorted_quetes = sorted(quetes)  # Trier les quêtes
-    return ["Toutes"] + sorted_quetes  # Ajouter "Toutes" au début
+    return [global_vars.setToAll] + sorted_quetes  # Ajouter "Toutes" au début
 
 
 def update_quete_based_on_personnage(tree, filters, quete_column_index, personnage_column_index, personnage_value):
@@ -195,18 +181,19 @@ def update_quete_based_on_personnage(tree, filters, quete_column_index, personna
         quete_val = values[quete_column_index].strip() if values[quete_column_index] else ""
 
         # Ajouter les quêtes associées au personnage sélectionné
-        if personnage_value in ["Tous", "Toutes", global_vars.pas_Info] or personnage_value.lower() in personnage_val.lower():
+        #if personnage_value in [global_vars.setToAll, global_vars.setToAll, global_vars.pas_Info] or personnage_value.lower() in personnage_val.lower():
+        if personnage_value in [global_vars.setToAll, global_vars.pas_Info] or personnage_value.lower() in personnage_val.lower():            
             quete_val = values[quete_column_index].split("/")[-1] if "/" in values[quete_column_index] else values[quete_column_index]
             quetes.add(quete_val)
 
     # Mettre à jour les options de la Combobox des quêtes
-    quete_combobox["values"] = ["Toutes"] + sorted(quetes)
+    quete_combobox["values"] = [global_vars.setToAll] + sorted(quetes)
 
     # Rétablir la sélection précédente si elle est toujours valide
     if current_selection in quetes:
         quete_combobox.set(current_selection)
     else:
-        quete_combobox.set("Toutes")
+        quete_combobox.set(global_vars.setToAll)
 
 
 def update_personnage_based_on_quete(tree, filters, quete_column_index, personnage_column_indexes, quete_value):
@@ -217,24 +204,24 @@ def update_personnage_based_on_quete(tree, filters, quete_column_index, personna
     :param tree: Treeview contenant les données.
     :param filters: Liste des filtres sous forme (column_name, label_widget, entry_widget).
     :param quete_column_index: Index de la colonne des quêtes dans le Treeview.
-    :param personnage_column_indexes: Tuple contenant les indices des colonnes "(F) Voix" et "(M) Voix".
+    :param personnage_column_indexes: Tuple contenant les indices des colonnes " Voix".
     :param quete_value: Valeur sélectionnée pour la quête.
     """
-    # Obtenir les indices des colonnes pour "(F) Voix" et "(M) Voix"
+    # Obtenir les indices des colonnes pour " Voix"
     voix_f_index, voix_m_index = personnage_column_indexes
 
-    # Trouver les comboboxes associées à "(F) Voix" et "(M) Voix"
+    # Trouver les comboboxes associées à "Voix"
     voix_f_combobox = None
     voix_m_combobox = None
 
     for column_name, _, widget in filters:
-        if column_name == "(F) Voix" and isinstance(widget, ttk.Combobox):
+        if column_name == global_vars.titleCol_F_Voice and isinstance(widget, ttk.Combobox):
             voix_f_combobox = widget
-        elif column_name == "(M) Voix" and isinstance(widget, ttk.Combobox):
+        elif column_name == global_vars.titleCol_M_Voice and isinstance(widget, ttk.Combobox):
             voix_m_combobox = widget
 
     if not voix_f_combobox and not voix_m_combobox:
-        print("Aucune combobox pour '(F) Voix' ou '(M) Voix' trouvée dans les filtres.")
+        print("Aucune combobox pour les voix trouvée dans les filtres.")
         return
 
     # Sauvegarder les sélections actuelles
@@ -259,7 +246,8 @@ def update_personnage_based_on_quete(tree, filters, quete_column_index, personna
 
         # Ajouter les personnages associés à la quête sélectionnée (avec extraction de la partie utile)
         if (
-            quete_value in ["Tous", "Toutes"] or  # Toutes les quêtes
+            #quete_value in [global_vars.setToAll, global_vars.setToAll] or  # Toutes les quêtes
+            quete_value in [global_vars.setToAll] or  # Toutes les quêtes
             quete_value.lower() in quete_val.lower()  # Quête correspondante
         ):
             voix_f_personnages.add(
@@ -272,27 +260,26 @@ def update_personnage_based_on_quete(tree, filters, quete_column_index, personna
     # Mettre à jour la Combobox de "(F) Voix"
     if voix_f_combobox:
         if voix_f_personnages:
-            voix_f_combobox["values"] = ["Tous"] + sorted(voix_f_personnages)
+            voix_f_combobox["values"] = [global_vars.setToAll] + sorted(voix_f_personnages)
             if current_selection_f in voix_f_personnages:
                 voix_f_combobox.set(current_selection_f)
             else:
-                voix_f_combobox.set("Tous")
+                voix_f_combobox.set(global_vars.setToAll)
         else:
-            voix_f_combobox["values"] = ["Tous"]
-            voix_f_combobox.set("Tous")
+            voix_f_combobox["values"] = [global_vars.setToAll]
+            voix_f_combobox.set(global_vars.setToAll)
 
     # Mettre à jour la Combobox de "(M) Voix"
     if voix_m_combobox:
         if voix_m_personnages:
-            voix_m_combobox["values"] = ["Tous"] + sorted(voix_m_personnages)
+            voix_m_combobox["values"] = [global_vars.setToAll] + sorted(voix_m_personnages)
             if current_selection_m in voix_m_personnages:
                 voix_m_combobox.set(current_selection_m)
             else:
-                voix_m_combobox.set("Tous")
+                voix_m_combobox.set(global_vars.setToAll)
         else:
-            voix_m_combobox["values"] = ["Tous"]
-            voix_m_combobox.set("Tous")
-
+            voix_m_combobox["values"] = [global_vars.setToAll]
+            voix_m_combobox.set(global_vars.setToAll)
 
 
 def filter_NA(tree, na_var):
@@ -310,7 +297,7 @@ def filter_NA(tree, na_var):
         values = tree.item(item, "values")  # Récupère les valeurs de la ligne
 
         # Vérifier si la 4ᵉ colonne contient 'N/A'
-        if not show_na and values[3] == pas_Info:
+        if not show_na and values[3] == global_vars.pas_Info:
             tree.detach(item)  # Masquer la ligne
         else:
             tree.item(item, open=True)  # Afficher la ligne
@@ -325,7 +312,8 @@ def toggle_columns(tree, playlist_tree, filters):
 
     """
     selected_gender = global_vars.vSexe.get()
-    visible_columns = global_vars.columns_homme if selected_gender == "homme" else global_vars.columns_femme
+    visible_columns = global_vars.columns_homme if selected_gender == global_vars.vHomme else global_vars.columns_femme
+   
     tree["displaycolumns"] = visible_columns
     playlist_tree["displaycolumns"] = visible_columns
 

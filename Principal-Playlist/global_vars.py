@@ -2,18 +2,41 @@ import configparser, os
 
 playlist_count_label = None  # Définition initiale
 
-label_count = None  # Définition initiale
+playlist_name_label = None  # Définition initiale
+
+principal_count = None  # Définition initiale
 
 vSexe  = None  # Définition initiale
 
-vHomme = "homme"
-vFemme = "Femme"
+nombre_Ligne = "number of lines"
 
-pas_Info = "RIEN" # Définition initiale
+setToAll = "ALL"
 
-columns = ( "ID", "(F) Sous-titres", "(M) Sous-titres", "(F) Voix", "(M) Voix", "Quête")
-columns_homme = ["ID", "(M) Sous-titres", "(M) Voix", "Quête"]
-columns_femme = ["ID", "(F) Sous-titres", "(F) Voix", "Quête"]
+filter_with = "Filter with "
+
+vHomme = "V as man"
+vFemme = "V as woman"
+
+pas_Info = "NOTHING" # Définition initiale
+
+titleCol_ID = "ID"
+titleCol_F_SubTitle = "(F) Subtitles"
+titleCol_M_SubTitle = "(M) Subtitles"
+titleCol_F_Voice = "(F) Voice"
+titleCol_M_Voice = "(M) Voice"
+titleCol_Quest = "Quest"
+
+columns = (titleCol_ID, titleCol_F_SubTitle, titleCol_M_SubTitle, titleCol_F_Voice, titleCol_M_Voice, titleCol_Quest)
+columns_homme = [titleCol_ID, titleCol_M_SubTitle, titleCol_M_Voice, titleCol_Quest]
+columns_femme = [titleCol_ID, titleCol_F_SubTitle, titleCol_F_Voice, titleCol_Quest]
+
+#utilisé dans la sauvegarde et BDD .json Attention !
+data_ID = "stringId"
+data_F_SubTitle = "femaleVariant"
+data_M_SubTitle = "maleVariant"
+data_F_Voice = "female_vo_path"
+data_M_Voice = "male_vo_path"
+data_Quest = "quest_path"
 
 bdd_Localisation_Json="D:\\_CyberPunk-Creation\\BDDDialogues\\BDDjson\\Base_fr-fr.json"
 
@@ -57,15 +80,10 @@ def read_config(config_path):
         'PROJECT_PATH': config.get('Paths', 'PROJECT_PATH')
     }
 
-import os
-
 def find_localization_subfolders(project_path):
     """
     Recherche un dossier nommé "localization" dans les sous-dossiers d'un chemin donné,
     et retourne une liste de tous les sous-dossiers immédiats de "localization".
-
-    :param project_path: Chemin racine où commencer la recherche.
-    :return: Liste des sous-dossiers immédiats de "localization".
     """
     localization_path = None
 
@@ -88,6 +106,8 @@ def find_localization_subfolders(project_path):
 
     return subfolders
 
+
+"""
 # Chemin de votre projet
 project_path = r"D:\_CyberPunk-Creation\DialogueFR"
 
@@ -97,3 +117,5 @@ localization_subfolders = find_localization_subfolders(project_path)
 print("Sous-dossiers trouvés sous 'localization' :")
 for folder in localization_subfolders:
     print(f"- {folder}")
+"""
+

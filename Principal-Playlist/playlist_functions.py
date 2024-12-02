@@ -1,6 +1,9 @@
 # fichier: playlist_functions.py
 import json, threading, pygame
 
+# Extraire uniquement le nom du fichier sans le chemin
+from os.path import basename
+
 from tkinter import ttk, filedialog, Menu
 from LectureOgg import JouerAudio, generate_audio_path, get_SousTitres_by_id
 
@@ -62,33 +65,38 @@ def setup_playlist(root, tree, tk, columns):
     playlist_tree.bind("<<TreeviewSelect>>", lambda event: SelectionLignePlayliste(event, playlist_tree))  # Sélectionner une ligne pour afficher les détails
 
 
-    add_button = tk.Button(button_frame, text="Ajouter selection à la playlist", command=lambda: add_to_playlist(tree, playlist_tree, tk))
+    add_button = tk.Button(button_frame, text="Add selection to playlist ⤵️", command=lambda: add_to_playlist(tree, playlist_tree, tk))
     add_button.pack(side=tk.LEFT, padx=5)
 
-    move_up_button = tk.Button(button_frame, text="Monter", command=lambda: move_up_playlist(playlist_tree))
+    move_up_button = tk.Button(button_frame, text="Up ⬆️", command=lambda: move_up_playlist(playlist_tree))
     move_up_button.pack(side=tk.LEFT, padx=5)
 
-    move_down_button = tk.Button(button_frame, text="Descendre", command=lambda: move_down_playlist(playlist_tree))
+    move_down_button = tk.Button(button_frame, text="Down ⬇️", command=lambda: move_down_playlist(playlist_tree))
     move_down_button.pack(side=tk.LEFT, padx=5)
 
-    play_button = tk.Button(button_frame, text="Ecouter la playlist", command=lambda: ecouterPlaylist(playlist_tree))
+    play_button = tk.Button(button_frame, text="Play to the playlist ▶️", command=lambda: ecouterPlaylist(playlist_tree))
     play_button.pack(side=tk.LEFT, padx=(20, 5))
     
-    stop_button = tk.Button(button_frame, text="Stop", command=lambda: stopperPlaylist())
+    stop_button = tk.Button(button_frame, text="Stop ⏹️", command=lambda: stopperPlaylist())
     stop_button.pack(side=tk.LEFT, padx=(5, 20))
 
-    load_button = tk.Button(button_frame, text="Charger la playlist", command=lambda: load_playlist_from_file(playlist_tree, tk))
+    load_button = tk.Button(button_frame, text="Load playlist ↩️", command=lambda: load_playlist_from_file(playlist_tree, tk))
     load_button.pack(side=tk.LEFT, padx=5)
 
-    save_button = tk.Button(button_frame, text="Sauvegarder la playlist", command=lambda: save_playlist_to_file(playlist_tree))
+    save_button = tk.Button(button_frame, text="Save playlist 🖫", command=lambda: save_playlist_to_file(playlist_tree))
     save_button.pack(side=tk.LEFT, padx=5)
 
-    clear_button = tk.Button(button_frame, text="Effacer la playlist", command=lambda: clear_playlist(playlist_tree))
+    clear_button = tk.Button(button_frame, text="Clean playlist ❌", command=lambda: clear_playlist(playlist_tree))
     clear_button.pack(side=tk.LEFT, padx=5)
 
     # Ajouter le Label pour afficher le nombre de lignes, à droite de clear_button
-    global_vars.playlist_count_label = tk.Label(button_frame, text="Lignes dans la playlist : 0")
+    global_vars.playlist_name_label = tk.Label(button_frame, text="Playlist : " + global_vars.pas_Info)
+    global_vars.playlist_name_label.pack(side=tk.LEFT, padx=(10, 0))  # Alignez sur le côté gauche avec un petit espace    
+
+    # Ajouter le Label pour afficher le nombre de lignes, à droite de clear_button
+    global_vars.playlist_count_label = tk.Label(button_frame, text = global_vars.nombre_Ligne + " : 0")
     global_vars.playlist_count_label.pack(side=tk.LEFT, padx=(10, 0))  # Alignez sur le côté gauche avec un petit espace
+
 
     return playlist_tree
 
@@ -98,7 +106,7 @@ def SelectionLignePlayliste(event, playlist_tree):
     selected_values = playlist_tree.item(selected_item, 'values')
 
     selected_gender = global_vars.vSexe.get()
-    if selected_gender == "homme":
+    if selected_gender == global_vars.vHomme:
         audio_value = selected_values[4]
     else:
         audio_value = selected_values[3]
@@ -113,7 +121,7 @@ def show_context_menu_Playlist(event, playlist_tree, root):
 
         # Créer et afficher le menu contextuel
         menu = Menu(root, tearoff=0)
-        menu.add_command(label="Supprimer de la playlist", command=lambda: remove_selected_from_playlist(playlist_tree))
+        menu.add_command(label="Remove from playlist", command=lambda: remove_selected_from_playlist(playlist_tree))
         menu.post(event.x_root, event.y_root)  # Affiche le menu à l'emplacement du clic
     else:
         # Si aucune ligne n'est détectée, ne rien faire ou désélectionner
@@ -162,12 +170,12 @@ def save_playlist_to_file(playlist_tree):
             values = playlist_tree.item(child, "values")
             # Sauvegarder dans une structure
             playlist_data.append({
-                "id": values[0],
-                "female_text": values[1],
-                "male_text": values[2],
-                "female_vo": values[3],
-                "male_vo": values[4],
-                "quete": values[5]
+                global_vars.data_ID: values[0],
+                global_vars.data_F_SubTitle: values[1],
+                global_vars.data_M_SubTitle: values[2],
+                global_vars.data_F_Voice: values[3],
+                global_vars.data_M_Voice: values[4],
+                global_vars.data_Quest: values[5]
             })
         # Sauvegarder les données dans un fichier JSON
         with open(file_path, "w") as file:
@@ -181,25 +189,18 @@ def load_playlist_from_file(playlist_tree,tk):
             playlist_data = json.load(file)
             # Effacer l'ancienne playlist avant de charger la nouvelle
             clear_playlist(playlist_tree)
-            """
-            # Ajouter les nouvelles données dans la playlist            
-            for values in playlist_data:
-                playlist_tree.insert("", tk.END, values=values)
-            """
+
             # Ajouter les nouvelles données
             for entry in playlist_data:
-
-
-                #TRADUCTION !
-                # Récupérer la quête
-                quete_path = generate_audio_path(entry["quete"])
+                #TRADUCTION ! Récupérer la quête
+                quete_path = generate_audio_path(entry[global_vars.data_Quest])
                 #print(f"Fichier Quete : {quete_path}")
                 fichierQuete = ""        
                 if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
                     fichierQuete = quete_path + ".json.json"
 
                 #print(f"Fichier Quete : {quete_path}")
-                result = get_SousTitres_by_id(fichierQuete, entry["id"])
+                result = get_SousTitres_by_id(fichierQuete, entry[global_vars.data_ID])
                 if result:
                     #print(f"Female Variant: {result['femaleVariant']}")
                     #print(f"Male Variant: {result['maleVariant']}")
@@ -216,38 +217,17 @@ def load_playlist_from_file(playlist_tree,tk):
                     female_text = male_text # a Confirmer si ca existe !?                     
 
                 playlist_tree.insert("", tk.END, values=(
-                    entry["id"],
+                    entry[global_vars.data_ID],
                     female_text,
                     male_text,
-                    entry["female_vo"],
-                    entry["male_vo"],
-                    entry["quete"]
+                    entry[global_vars.data_F_Voice],
+                    entry[global_vars.data_M_Voice],
+                    entry[global_vars.data_Quest]
                 ))
-            # Mettre à jour le compteur
-            count_playlist_rows(playlist_tree)
-            colorize_playlist_rows(playlist_tree)
-
-
-def traduire_SousTitres(Id):
-    #TRADUCTION !
-    # Récupérer la quête
-    quete = entry.get("_path", global_vars.pas_Info)
-    audio_path = generate_audio_path(quete)
-
-    fichierQuete = ""        
-    if isinstance(audio_path, str):  # Vérifie si c'est une chaîne
-        fichierQuete = audio_path + ".json.json"
-
-    result = get_SousTitres_by_id(fichierQuete, id)
-    if result:
-        #print(f"Female Variant: {result['femaleVariant']}")
-        #print(f"Male Variant: {result['maleVariant']}")
-        female_text = result['femaleVariant']
-        male_text = result['maleVariant']
-    else:
-        #print("String ID non trouvé.")
-        female_text = ""
-        male_text = ""            
+        # Mettre à jour le compteur
+        global_vars.playlist_name_label.config(text=f"Playlist : {basename(file_path)}")
+        count_playlist_rows(playlist_tree)
+        colorize_playlist_rows(playlist_tree)
 
 # Fonction pour lire la Playlist
 def ecouterPlaylist(playlist_tree):
@@ -282,7 +262,7 @@ def ecouterPlaylist(playlist_tree):
             selected_values = playlist_tree.item(item, "values")
 
             selected_gender = global_vars.vSexe.get()
-            if selected_gender == "homme":
+            if selected_gender == global_vars.vHomme:
                 audio_value = selected_values[4]
             else:
                 audio_value = selected_values[3]
@@ -327,9 +307,9 @@ def count_playlist_rows(playlist_tree):
     """
     row_count = len(playlist_tree.get_children())
     if global_vars.playlist_count_label:  # Mettre à jour le Label global
-        global_vars.playlist_count_label.config(text=f"Lignes dans la playlist : {row_count}")
+        global_vars.playlist_count_label.config(text=f"{global_vars.nombre_Ligne}: {row_count}")
     else:
-        print(f"Lignes dans la playlist : {row_count}")
+        print(f"{global_vars.nombre_Ligne} : {row_count}")
 
 
 def colorize_playlist_rows(playlist_tree):
@@ -354,7 +334,7 @@ def colorize_playlist_rows(playlist_tree):
             personnage = last_part.split("_", 1)[0]  # Récupérer la partie avant le premier '_'
         except IndexError:
             personnage = "unknown"
-        #print(f"Lignes dans la playlist : {personnage}")
+        #print(f"Nb lines in playlist : {personnage}")
         return personnage
 
     # Parcourir toutes les lignes de playlist_tree

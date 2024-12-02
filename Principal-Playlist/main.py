@@ -11,7 +11,7 @@ from global_vars import initConfigGlobale, find_localization_subfolders
 
 # Créer la fenêtre principale
 root = tk.Tk()
-root.title("Visualisateur de JSON en tableau avec copier-coller et panneau d'informations")
+root.title("Tool to assemble and test dialogue sequences for Cyberpung modding")
 root.geometry("1500x800")
 root.minsize(1100, 800)
 
@@ -72,7 +72,7 @@ style.map(
 )
 
 # Créer une variable pour gérer l'état des boutons radio
-global_vars.vSexe = tk.StringVar(value="homme")  # Par défaut sur "homme"
+global_vars.vSexe = tk.StringVar(value=global_vars.vHomme)  # Par défaut sur "homme"
 
 #definition du Tableau Principal
 tree = setup_TableauPrincipal(root, tk, global_vars.columns)
@@ -83,15 +83,15 @@ playlist_tree = setup_playlist(root, tree, tk, global_vars.columns)
 
 
 # Ajouter le Label pour les lignes correspondantes
-global_vars.label_count = tk.Label(filter_frame, text="Nb de lignes : 0")
-global_vars.label_count.grid(row=1, column=9, padx=5)
+global_vars.principal_count = tk.Label(filter_frame, text="Nb de lignes : 0")
+global_vars.principal_count.grid(row=1, column=9, padx=5)
 
 
 
 # Bouton pour appliquer tous les filtres
 apply_all_filters_button = tk.Button(
     filter_frame,
-    text="Appliquer tous les filtres",
+    text="Apply all filters ✔️",
     command=lambda: filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json)
     #command=lambda: apply_all_filters(tree, filters)
 )
@@ -100,7 +100,7 @@ apply_all_filters_button.grid(row=1, column=7, padx=5)
 # Ajouter un bouton pour réinitialiser les filtres
 reset_filter_button = tk.Button(
     filter_frame,
-    text="Réinitialiser les filtres",
+    text="Reset filters ✖️",
     command=lambda: [
         reset_filters(tree, filters, global_vars.bdd_Localisation_Json)
     ]
@@ -113,7 +113,7 @@ na_var = tk.BooleanVar(value=True)  # Initialiser à "coché" (True)
 
 checkbox_na = tk.Checkbutton(
     filter_frame,
-    text="Afficher RIEN",
+    text="Show lines with " + global_vars.pas_Info,
     variable=na_var,
     command=lambda: filter_NA(tree, na_var)  # Appeler le filtre quand l'état change
 )
@@ -133,7 +133,7 @@ def on_quete_selected(event):
         tree,
         filters,
         quete_column_index=5,
-        personnage_column_indexes=(3, 4),  # Les indices des colonnes "(F) Voix" et "(M) Voix"
+        personnage_column_indexes=(3, 4),  # Les indices des colonnes Voix"
         quete_value=quete_value
     )
 
@@ -146,22 +146,22 @@ filters = []  # Initialisation de la liste des filtres
 
 # Création des filtres avec labels explicites
 for i, column in enumerate(global_vars.columns):
-    label = tk.Label(filter_frame, text=f"Filtre {column}")
+    label = tk.Label(filter_frame, text=f"{global_vars.filter_with}{column}")  #Filter with
     label.grid(row=0, column=i, padx=5)
 
-    if column in ["(F) Voix", "(M) Voix", "Quête"]:  # ComboBox
+    if column in [global_vars.titleCol_F_Voice, global_vars.titleCol_M_Voice, global_vars.titleCol_Quest]:  # ComboBox
         entry = ttk.Combobox(filter_frame, state="readonly")
-        if column == "(F) Voix":
+        if column == global_vars.titleCol_F_Voice:
             entry["values"] = initialize_personnage_droplist(tree, 3)
-            entry.set("Tous")
+            entry.set(global_vars.setToAll)
             entry.bind("<<ComboboxSelected>>", on_personnage_selected)
-        elif column == "(M) Voix":
+        elif column == global_vars.titleCol_M_Voice:
             entry["values"] = initialize_personnage_droplist(tree, 4)
-            entry.set("Tous")
+            entry.set(global_vars.setToAll)
             entry.bind("<<ComboboxSelected>>", on_personnage_selected)
-        elif column == "Quête":
+        elif column == global_vars.titleCol_Quest:
             entry["values"] = initialize_quete_droplist(tree, 5)
-            entry.set("Toutes")
+            entry.set(global_vars.setToAll)
             entry.bind("<<ComboboxSelected>>", on_quete_selected)
     else:  # TextBox
         entry = tk.Entry(filter_frame)
@@ -171,14 +171,12 @@ for i, column in enumerate(global_vars.columns):
     filters.append((column, label, entry))  # Ajouter le label et le widget à la liste des filtres
 
 
-
-
 # Bouton radio pour "Homme"
 radio_homme = tk.Radiobutton(
     filter_frame,
-    text="Homme",
+    text=global_vars.vHomme,
     variable=global_vars.vSexe,
-    value="homme",
+    value=global_vars.vHomme,
     command=lambda: toggle_columns(tree, playlist_tree, filters)  # Appeler la fonction de mise à jour des colonnes
 )
 radio_homme.grid(row=1, column=10, padx=5)
@@ -186,9 +184,9 @@ radio_homme.grid(row=1, column=10, padx=5)
 # Bouton radio pour "Femme"
 radio_femme = tk.Radiobutton(
     filter_frame,
-    text="Femme",
+    text=global_vars.vFemme,
     variable=global_vars.vSexe,
-    value="femme",
+    value=global_vars.vFemme,
     command=lambda: toggle_columns(tree, playlist_tree,  filters)  # Appeler la fonction de mise à jour des colonnes
 )
 radio_femme.grid(row=1, column=11, padx=5)
