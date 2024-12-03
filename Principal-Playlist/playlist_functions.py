@@ -5,7 +5,7 @@ import json, threading, pygame
 from os.path import basename
 
 from tkinter import ttk, filedialog, Menu
-from LectureOgg import JouerAudio
+from LectureOgg import JouerAudio, fusionnerPlaylist
 from general_functions import get_SousTitres_by_id, extraire_localise_path
 
 import global_vars  # Accéder au Label global
@@ -90,6 +90,9 @@ def setup_playlist(root, tree, tk, columns):
     clear_button = tk.Button(button_frame, text="Clean playlist ❌", command=lambda: clear_playlist(playlist_tree))
     clear_button.pack(side=tk.LEFT, padx=5)
 
+    clear_button = tk.Button(button_frame, text="Record playlist ⭕", command=lambda: record_playlist(playlist_tree))
+    clear_button.pack(side=tk.LEFT, padx=5)
+
     # Ajouter le Label pour afficher le nombre de lignes, à droite de clear_button
     global_vars.playlist_name_label = tk.Label(button_frame, text="Playlist : " + global_vars.pas_Info)
     global_vars.playlist_name_label.pack(side=tk.LEFT, padx=(10, 0))  # Alignez sur le côté gauche avec un petit espace    
@@ -160,6 +163,10 @@ def move_down_playlist(playlist_tree):
 def clear_playlist(playlist_tree):
     for item in playlist_tree.get_children():
         playlist_tree.delete(item)
+
+# Fonction pour effacer le tableau de playlist
+def record_playlist(playlist_tree):
+    fusionnerPlaylist(playlist_tree)
 
 # Fonction pour sauvegarder la playlist dans un fichier JSON
 def save_playlist_to_file(playlist_tree):

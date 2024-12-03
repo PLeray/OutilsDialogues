@@ -5,6 +5,11 @@ import tempfile
 import shutil
 import pygame
 
+    
+import tkinter as tk
+from tkinter import filedialog
+from pydub import AudioSegment
+
 import global_vars  # Importer les variables globales
 
 from general_functions import extraire_localise_path
@@ -141,4 +146,62 @@ def convert_wem_to_ogg_if_needed(ogg_path):
                     print(f"Erreur lors de la suppression du dossier temporaire : {e}")
 
         return ogg_path            
-    
+
+
+# Fonction pour fusionner les fichiers audio de la playlist
+def fusionnerPlaylist(playlist_tree):
+    # Liste des fichiers audio à fusionner
+    fichiers_audio = []
+    items = playlist_tree.get_children()
+
+    if not items:
+        print("La playlist est vide. Impossible de fusionner.")
+        return
+
+    for item in items:
+        selected_values = playlist_tree.item(item, "values")
+        selected_gender = global_vars.vSexe.get()
+        
+        if selected_gender == global_vars.vHomme:
+            audio_value = selected_values[4]
+        else:
+            audio_value = selected_values[3]
+
+        audio_value = extraire_localise_path(audio_value)
+        #print(f"chemin audio {audio_value}.")
+        if audio_value:
+            fichiers_audio.append(audio_value)
+        else:
+            print(f"Aucun fichier audio trouvé pour l'élément {item}.")
+
+    if not fichiers_audio:
+        print("Aucun fichier audio valide trouvé pour fusionner.")
+        return
+
+    try:
+        # Charger le premier fichier
+        fusion_audio = AudioSegment.from_file(fichiers_audio[0], format="ogg")
+
+        # Concaténer les fichiers restants
+        for fichier in fichiers_audio[1:]:
+            audio = AudioSegment.from_file(fichier, format="ogg")
+            fusion_audio += audio
+
+        # Demander où sauvegarder le fichier fusionné
+        root = tk.Tk()
+        root.withdraw()  # Masquer la fenêtre principale
+        fichier_sauvegarde = filedialog.asksaveasfilename(
+            title="Enregistrer le fichier fusionné",
+            defaultextension=".ogg",
+            filetypes=[("Fichiers OGG", "*.ogg")],
+        )
+
+        if fichier_sauvegarde:
+            # Exporter le fichier fusionné
+            fusion_audio.export(fichier_sauvegarde, format="ogg")
+            print(f"Fichier fusionné sauvegardé avec succès dans {fichier_sauvegarde}")
+        else:
+            print("Opération annulée. Aucun fichier sauvegardé.")
+
+    except Exception as e:
+        print(f"Erreur lors de la fusion des fichiers : {e}")
