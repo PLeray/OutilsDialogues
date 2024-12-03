@@ -1,2 +1,4 @@
-data/playlist/
-userconf.ini
+Principal-Playlist/data/playlist/
+Principal-Playlist/data/BDDjson/Base_en-us.json
+Principal-Playlist/data/BDDjson/Base_fr-fr.json
+Principal-Playlist/userconf.ini
