@@ -191,7 +191,7 @@ radio_femme = tk.Radiobutton(
 )
 radio_femme.grid(row=1, column=11, padx=5)
 
-filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json)
+#filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json)
 
 
 

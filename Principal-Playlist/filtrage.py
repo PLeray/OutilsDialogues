@@ -30,7 +30,7 @@ def reset_filters(tree, filters, file_path):
                 widget.set("")  # Si aucun match, réinitialiser à vide
 
     # Recharge le contenu du Treeview avec le fichier JSON
-    open_and_display_json(tree, file_path)
+    #open_and_display_json(tree, file_path)
 
     # Applique les filtres pour synchroniser les données affichées
     filter_tree_with_filters(tree, filters, file_path)
@@ -149,7 +149,6 @@ def update_quete_based_on_personnage(tree, filters, quete_column_index, personna
     """
     Met à jour les options de la liste déroulante des quêtes en fonction du personnage sélectionné,
     tout en préservant la sélection actuelle si elle est valide.
-
     :param tree: Treeview contenant les données.
     :param filters: Liste des filtres sous forme (column_name, label_widget, entry_widget).
     :param quete_column_index: Index de la colonne des quêtes dans le Treeview.
@@ -157,10 +156,9 @@ def update_quete_based_on_personnage(tree, filters, quete_column_index, personna
     :param personnage_value: Valeur sélectionnée pour le personnage.
     """
     quete_combobox = None
-
     # Trouver la combobox associée aux quêtes
     for column_name, _, widget in filters:
-        if column_name == "Quête" and isinstance(widget, ttk.Combobox):
+        if column_name == global_vars.titleCol_Quest and isinstance(widget, ttk.Combobox):
             quete_combobox = widget
             break
 
