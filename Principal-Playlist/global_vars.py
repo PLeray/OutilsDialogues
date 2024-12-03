@@ -1,6 +1,6 @@
 # Variables globlaes du projet
 
-playlist_name_label = None  # Définition initiale
+playlist_name_label = ""  # Définition initiale
 playlist_count_label = None  # Définition initiale
 principal_count = None  # Définition initiale
 

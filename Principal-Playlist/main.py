@@ -14,9 +14,6 @@ def maj_Langue(str_langue):
     global_vars.CheminLangue = str_langue
     global_vars.bdd_Localisation_Json = "data/BDDjson/Base_" + str_langue + ".json"
 
-
-
-
 # Créer la fenêtre principale
 root = tk.Tk()
 root.title("Tool to assemble and test dialogue sequences for Cyberpung modding")
@@ -26,7 +23,7 @@ root.minsize(1100, 800)
 initConfigGlobale()
 
 userconf_data = read_or_initialize_userconf()
-print(f"userconf_data : {userconf_data}")
+#print(f"userconf_data : {userconf_data}")
 
 # Récupérer le chemin du projet
 project_path = userconf_data["SETTINGS"].get("PROJECT_WOLVENKIT_PATH")

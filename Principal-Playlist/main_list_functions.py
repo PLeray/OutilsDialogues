@@ -128,17 +128,6 @@ def generate_and_save_json(output_path):
             else :
                 female_vo = male_vo                
       
-        """
-        # Sauvegarder dans une structure
-        processed_data.append({
-            "id": id,
-            "female_text": female_text,
-            "male_text": male_text,
-            "female_vo": female_vo,
-            "male_vo": male_vo,
-            "quete": quete
-        })
-        """
         # Sauvegarder dans une structure
         processed_data.append({
             global_vars.data_ID: id,

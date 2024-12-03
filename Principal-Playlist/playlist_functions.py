@@ -361,4 +361,3 @@ def colorize_playlist_rows(playlist_tree):
         # Appliquer la couleur au fond de la ligne
         playlist_tree.tag_configure(key, background=color_mapping[key])
         playlist_tree.item(row, tags=(key,))
-

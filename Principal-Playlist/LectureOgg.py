@@ -1,11 +1,10 @@
-import os, json
+import os
 import subprocess
 
 import tempfile
 import shutil
 import pygame
 
-    
 import tkinter as tk
 from tkinter import filedialog
 from pydub import AudioSegment
@@ -147,6 +146,12 @@ def convert_wem_to_ogg_if_needed(ogg_path):
 
         return ogg_path            
 
+def nom_playlist():    # Récupérer le texte du Label et le nom de la playlist sans extension
+    texte_playlist = global_vars.playlist_name_label.cget("text")
+    nom_playlist = texte_playlist.split(" : ")[1]  # Extraire le nom de la playlist
+    nom_sans_extension = os.path.splitext(nom_playlist)[0] 
+    #print(f"nom_sans_extension : {nom_sans_extension}.")
+    return nom_sans_extension
 
 # Fonction pour fusionner les fichiers audio de la playlist
 def fusionnerPlaylist(playlist_tree):
@@ -190,18 +195,25 @@ def fusionnerPlaylist(playlist_tree):
         # Demander où sauvegarder le fichier fusionné
         root = tk.Tk()
         root.withdraw()  # Masquer la fenêtre principale
+
+        nom_sans_extension = nom_playlist()
+        
         fichier_sauvegarde = filedialog.asksaveasfilename(
             title="Enregistrer le fichier fusionné",
+            initialfile=f"{nom_sans_extension}.ogg",  # Nom par défaut basé sur la playlist
             defaultextension=".ogg",
             filetypes=[("Fichiers OGG", "*.ogg")],
         )
-
+        root.destroy()  # Assurez-vous de détruire la fenêtre après utilisation
         if fichier_sauvegarde:
             # Exporter le fichier fusionné
             fusion_audio.export(fichier_sauvegarde, format="ogg")
             print(f"Fichier fusionné sauvegardé avec succès dans {fichier_sauvegarde}")
         else:
             print("Opération annulée. Aucun fichier sauvegardé.")
+            return
+        del fusion_audio  # Libérer les ressources AudioSegment
 
     except Exception as e:
         print(f"Erreur lors de la fusion des fichiers : {e}")
+
