@@ -2,12 +2,20 @@
 import tkinter as tk
 
 from tkinter import ttk
-from gui_functions import open_and_display_json, SelectionLigne, setup_TableauPrincipal
+from main_list_functions import open_and_display_json, SelectionLigne, setup_TableauPrincipal
 from playlist_functions import select_and_add_to_playlist, setup_playlist
 from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
 
 import global_vars  # Importer les variables globales
-from global_vars import initConfigGlobale, find_localization_subfolders
+from general_functions import initConfigGlobale, find_localization_subfolders, read_or_initialize_userconf, update_language_userconf
+
+
+def maj_Langue(str_langue):
+    global_vars.CheminLangue = str_langue
+    global_vars.bdd_Localisation_Json = "data/BDDjson/Base_" + str_langue + ".json"
+
+
+
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -16,6 +24,16 @@ root.geometry("1500x800")
 root.minsize(1100, 800)
 
 initConfigGlobale()
+
+userconf_data = read_or_initialize_userconf()
+print(f"userconf_data : {userconf_data}")
+
+# Récupérer le chemin du projet
+project_path = userconf_data["SETTINGS"].get("PROJECT_WOLVENKIT_PATH")
+if not project_path:
+    raise ValueError("Le chemin 'PROJECT_WOLVENKIT_PATH' est introuvable ou invalide dans userconf.ini.")
+
+global_vars.project_path = project_path + "/source/raw/"
 
 localization_languages = find_localization_subfolders(global_vars.project_path)
 
@@ -32,10 +50,13 @@ language_dropdown = ttk.Combobox(
     state="readonly",  # Lecture seule pour éviter la modification manuelle
     width=20
 )
+
 # Définir une valeur par défaut pour la liste déroulante
-default_language = "fr-fr"  # Remplacez par la valeur souhaitée
-if default_language in localization_languages:
-    language_dropdown.set(default_language)  # Définit la valeur par défaut
+maj_Langue(userconf_data["SETTINGS"].get("LANGUAGE"))
+global_vars.CheminLangue = userconf_data["SETTINGS"].get("LANGUAGE")
+global_vars.bdd_Localisation_Json = "data/BDDjson/Base_" + global_vars.CheminLangue + ".json"
+if global_vars.CheminLangue in localization_languages:
+    language_dropdown.set(global_vars.CheminLangue)  # Définit la valeur par défaut
 else:
     language_dropdown.set("Sélectionnez une langue")  # Définit une valeur par défaut générique
 
@@ -47,19 +68,16 @@ text_label.pack(side=tk.LEFT, padx=5, pady=5)
 
 # Ajouter une commande lors de la sélection
 def on_language_selected(event):
-    global_vars.CheminLangue = language_var.get()
+    maj_Langue(language_var.get())
+    update_language_userconf(global_vars.CheminLangue)
     print(f"Langue sélectionnée : {global_vars.CheminLangue}")
 
 language_dropdown.bind("<<ComboboxSelected>>", on_language_selected)
-
 
 # Créer la frame pour les filtres et l'ajouter au-dessus du tableau principal
 filter_frame = tk.Frame(root)  # <-- Correction : définition correcte
 filter_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
 
-
-# Colonnes du tableau principal
-#columns = ("ID", "Sous-titres", "Origine", "Personnage", "Origine 2", "Quête")  # Remplacement de "Audio" par "Personnage"
 
 # Exemple d'initialisation du Treeview avec un thème compatible
 style = ttk.Style()

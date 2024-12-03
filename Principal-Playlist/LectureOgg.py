@@ -7,9 +7,7 @@ import pygame
 
 import global_vars  # Importer les variables globales
 
-
-
-import global_vars  # Importer les variables globales
+from general_functions import extraire_localise_path
 
 def stop_sound():
     #"""Arrête le son en cours de lecture."""
@@ -35,6 +33,7 @@ def play_ogg_file(file_path):
     except Exception as e:
         print(f"Erreur lors de la lecture du fichier : {e}")
 
+"""
 def generate_audio_path(audio_value):
     # Vérifier si audio_value est valide
     if audio_value == global_vars.pas_Info:
@@ -57,11 +56,14 @@ def generate_audio_path(audio_value):
     except Exception as e:
         print(f"Erreur lors de la génération du chemin : {e}")
         return False
+"""        
+
+
 
 def JouerAudio(audio_value):
     #test_path = r"D:\_CyberPunk-Creation\Dialogues-Multi\source\raw\ep1\localization\fr-fr\vo\judy_q307_f_2e6b76cd023bc000.ogg"
     # Arrêter tout son en cours de lecture
-    sound_Path = generate_audio_path(audio_value)
+    sound_Path = extraire_localise_path(audio_value)
     sound_Path = convert_wem_to_ogg_if_needed(sound_Path)
     if sound_Path:
         play_ogg_file(sound_Path)
@@ -140,32 +142,3 @@ def convert_wem_to_ogg_if_needed(ogg_path):
 
         return ogg_path            
     
-
-def get_SousTitres_by_id(file_path, string_id):
-    """
-    Cherche les variantes (femaleVariant et maleVariant) correspondant à un stringId donné dans un fichier JSON.
-
-    :param file_path: Chemin du fichier JSON.
-    :param string_id: stringId à rechercher.
-    :return: Un dictionnaire contenant "femaleVariant" et "maleVariant", ou None si le stringId n'est pas trouvé.
-    """
-    try:
-        # Charger le fichier JSON
-        with open(file_path, "r", encoding="utf-8") as file:
-            data = json.load(file)
-
-        # Parcourir les entrées dans le fichier JSON
-        entries = data["Data"]["RootChunk"]["root"]["Data"]["entries"]
-        for entry in entries:
-            if entry["stringId"] == str(string_id):  # Vérification du stringId
-                return {
-                    "femaleVariant": entry.get("femaleVariant", ""),
-                    "maleVariant": entry.get("maleVariant", "")
-                }
-        
-        # Si le stringId n'est pas trouvé
-        return None
-
-    except (FileNotFoundError, KeyError, json.JSONDecodeError) as e:
-        #print(f"Erreur lors du traitement du fichier : {e}")
-        return None

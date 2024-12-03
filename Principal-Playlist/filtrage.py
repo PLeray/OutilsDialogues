@@ -1,7 +1,7 @@
 # fichier: filtrage.py
 import tkinter as tk
 from tkinter import ttk
-from gui_functions import open_and_display_json
+from main_list_functions import open_and_display_json
 
 import global_vars  # Importer les variables globales
 
@@ -300,7 +300,60 @@ def filter_NA(tree, na_var):
         else:
             tree.item(item, open=True)  # Afficher la ligne
 
+
 def toggle_columns(tree, playlist_tree, filters):
+    """
+    Affiche ou masque les colonnes du Treeview et synchronise les filtres.
+    Répartit les colonnes restantes de manière équitable après avoir fixé la largeur de la colonne ID,
+    ainsi que des colonnes spécifiques comme "(F) Voice" et "Quest".
+
+    :param tree: Le Treeview principal.
+    :param playlist_tree: Le Treeview de la playlist.
+    :param filters: Liste des filtres (nom_colonne, label_widget, entry_widget).
+    """
+    selected_gender = global_vars.vSexe.get()
+    visible_columns = global_vars.columns_homme if selected_gender == global_vars.vHomme else global_vars.columns_femme
+
+    tree["displaycolumns"] = visible_columns
+    playlist_tree["displaycolumns"] = visible_columns
+
+    # Largeur totale du Treeview
+    total_width = tree.winfo_width()
+
+    # Largeur fixe pour les colonnes ID, (F) Voice et Quest
+    fixed_columns = {"ID": 130, "(F) Voice": 300, "(M) Voice": 300, "Quest": 300}
+    fixed_width_total = sum(fixed_columns[col] for col in fixed_columns if col in visible_columns)
+
+    # Largeur restante pour les autres colonnes visibles
+    remaining_width = total_width - fixed_width_total
+
+    # Nombre de colonnes visibles, sauf celles avec largeur fixe
+    remaining_columns = [col for col in visible_columns if col not in fixed_columns]
+    remaining_columns_count = len(remaining_columns)
+    column_width = remaining_width // remaining_columns_count if remaining_columns_count > 0 else 0
+
+    # Ajuster les colonnes dans le Treeview
+    for col in tree["columns"]:
+        if col in fixed_columns:  # Colonnes avec largeur fixe
+            tree.column(col, width=fixed_columns[col], minwidth=fixed_columns[col], stretch=False)
+        elif col in visible_columns:  # Colonnes restantes
+            tree.column(col, width=column_width, stretch=True)
+        else:  # Colonnes masquées
+            tree.column(col, width=0)
+
+    # Ajuster les colonnes dans le playlist
+    for col in playlist_tree["columns"]:
+        if col in fixed_columns:  # Colonnes avec largeur fixe
+            playlist_tree.column(col, width=fixed_columns[col], minwidth=fixed_columns[col], stretch=False)
+        elif col in visible_columns:  # Colonnes restantes
+            playlist_tree.column(col, width=column_width, stretch=True)
+        else:  # Colonnes masquées
+            playlist_tree.column(col, width=0)      
+
+    # Synchroniser les filtres
+    update_filters_visibility(filters, visible_columns)
+
+def toggle_columns2(tree, playlist_tree, filters):
     """
     Affiche ou masque les colonnes du Treeview et synchronise les filtres.
     Répartit les colonnes restantes de manière équitable après avoir fixé la largeur de la colonne ID.

@@ -5,7 +5,8 @@ import json, threading, pygame
 from os.path import basename
 
 from tkinter import ttk, filedialog, Menu
-from LectureOgg import JouerAudio, generate_audio_path, get_SousTitres_by_id
+from LectureOgg import JouerAudio
+from general_functions import get_SousTitres_by_id, extraire_localise_path
 
 import global_vars  # Accéder au Label global
 
@@ -193,7 +194,7 @@ def load_playlist_from_file(playlist_tree,tk):
             # Ajouter les nouvelles données
             for entry in playlist_data:
                 #TRADUCTION ! Récupérer la quête
-                quete_path = generate_audio_path(entry[global_vars.data_Quest])
+                quete_path = extraire_localise_path(entry[global_vars.data_Quest])
                 #print(f"Fichier Quete : {quete_path}")
                 fichierQuete = ""        
                 if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
