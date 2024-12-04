@@ -104,6 +104,18 @@ def get_SousTitres_by_id(file_path, string_id):
         #print(f"Erreur lors du traitement du fichier : {e}")
         return None
 
+def get_Perso_from_Wem(value):
+    last_part = value.split("/")[-1]  # Obtenir la partie après le dernier "/"
+    personnage = last_part.split("_")[0]  # Obtenir la partie avant le premier "_"
+    return personnage
+
+def nom_playlist():    # Récupérer le texte du Label et le nom de la playlist sans extension
+    texte_playlist = global_vars.playlist_name_label.cget("text")
+    nom_playlist = texte_playlist.split(" : ")[1]  # Extraire le nom de la playlist
+    nom_sans_extension = os.path.splitext(nom_playlist)[0] 
+    #print(f"nom_sans_extension : {nom_sans_extension}.")
+    return nom_sans_extension
+
 # _userconf ################
 def read_userconf(file_path="userconf.ini"):
     """

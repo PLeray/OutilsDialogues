@@ -116,17 +116,29 @@ def generate_and_save_json(output_path):
        
         if not male_vo or male_vo == global_vars.pas_Info:       
             if isV :
-                male_vo = female_vo.replace("_f_", "_m_")  
+                essai = female_vo.replace("_f_", "_m_")
+                if extraire_localise_path(essai) :
+                    male_vo = essai  
                 # peut etre que le son n'existe pas -->  verifier si fichier existe avec extraire_localise_path(male_vo)
             else :
-                male_vo = female_vo
+                essai = female_vo.replace("_f_", "_m_")
+                if extraire_localise_path(essai) :
+                    male_vo = essai  
+                else:
+                    male_vo = female_vo
 
         if not female_vo or female_vo == global_vars.pas_Info:       
             if isV :
-                female_vo = male_vo.replace("_m_", "_f_")  
+                essai = male_vo.replace("_m_", "_f_")
+                if extraire_localise_path(essai) :
+                    female_vo = essai  
                 # peut etre que le son n'existe pas -->  verifier si fichier existe avec extraire_localise_path(male_vo)
             else :
-                female_vo = male_vo                
+                essai = female_vo.replace("_f_", "_m_")
+                if extraire_localise_path(essai) :
+                    female_vo = essai  
+                else:                
+                    female_vo = male_vo                
       
         # Sauvegarder dans une structure
         processed_data.append({

@@ -11,7 +11,7 @@ from pydub import AudioSegment
 
 import global_vars  # Importer les variables globales
 
-from general_functions import extraire_localise_path
+from general_functions import extraire_localise_path, nom_playlist
 
 def stop_sound():
     #"""Arrête le son en cours de lecture."""
@@ -114,6 +114,7 @@ def convert_wem_to_ogg_if_needed(ogg_path):
                 "-o",
                 temp_ogg_path
             ]
+            print(f"conversion_command : {conversion_command}")
             try:
                 subprocess.run(conversion_command, check=True)
             except subprocess.CalledProcessError as e:
@@ -125,15 +126,17 @@ def convert_wem_to_ogg_if_needed(ogg_path):
             # Appliquer revorb directement au fichier temporaire .ogg généré
             revorb_command = [
                 global_vars.revorb_path,
-                temp_ogg_path
+                temp_ogg_path,
+                ogg_path
             ]
+            print(f"revorb_command : {revorb_command}")
             try:
                 subprocess.run(revorb_command, check=True)
             except subprocess.CalledProcessError as e:
                 raise RuntimeError(f"Erreur lors de l'application de revorb : {e}")
 
             # Déplacer le fichier revorb .ogg à l'emplacement souhaité
-            shutil.move(temp_ogg_path, ogg_path)
+            #shutil.move(temp_ogg_path, ogg_path)
         
         finally:
             # Supprimer le dossier temporaire à la fin
@@ -145,13 +148,6 @@ def convert_wem_to_ogg_if_needed(ogg_path):
                     print(f"Erreur lors de la suppression du dossier temporaire : {e}")
 
         return ogg_path            
-
-def nom_playlist():    # Récupérer le texte du Label et le nom de la playlist sans extension
-    texte_playlist = global_vars.playlist_name_label.cget("text")
-    nom_playlist = texte_playlist.split(" : ")[1]  # Extraire le nom de la playlist
-    nom_sans_extension = os.path.splitext(nom_playlist)[0] 
-    #print(f"nom_sans_extension : {nom_sans_extension}.")
-    return nom_sans_extension
 
 # Fonction pour fusionner les fichiers audio de la playlist
 def fusionnerPlaylist(playlist_tree):
@@ -199,7 +195,7 @@ def fusionnerPlaylist(playlist_tree):
         nom_sans_extension = nom_playlist()
         
         fichier_sauvegarde = filedialog.asksaveasfilename(
-            title="Enregistrer le fichier fusionné",
+            title="Save the record of the playlist",
             initialfile=f"{nom_sans_extension}.ogg",  # Nom par défaut basé sur la playlist
             defaultextension=".ogg",
             filetypes=[("Fichiers OGG", "*.ogg")],

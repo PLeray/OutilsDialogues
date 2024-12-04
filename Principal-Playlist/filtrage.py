@@ -4,6 +4,8 @@ from tkinter import ttk
 from main_list_functions import open_and_display_json
 
 import global_vars  # Importer les variables globales
+from general_functions import get_Perso_from_Wem
+
 
 def reset_filters(tree, filters, file_path):
     # Forcer chaque combobox à "Tous" ou "Toutes" avant de procéder
@@ -113,14 +115,13 @@ def initialize_personnage_droplist(tree, column_index):
     for item in tree.get_children():
         # Récupérer la valeur de la colonne
         value = tree.item(item, "values")[column_index]
+        
         if value and "/" in value and "_" in value:
-            last_part = value.split("/")[-1]  # Obtenir la partie après le dernier "/"
-            personnage = last_part.split("_")[0]  # Obtenir la partie avant le premier "_"
+            personnage = get_Perso_from_Wem(value)
             personnages.add(personnage)
 
     sorted_personnages = sorted(personnages)  # Trier les personnages
     return [global_vars.setToAll] + sorted_personnages  # Ajouter "Tous" au début
-
 
 def initialize_quete_droplist(tree, column_index):
     """

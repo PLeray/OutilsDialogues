@@ -6,9 +6,11 @@ from os.path import basename
 
 from tkinter import ttk, filedialog, Menu
 from LectureOgg import JouerAudio, fusionnerPlaylist
-from general_functions import get_SousTitres_by_id, extraire_localise_path
+from general_functions import get_SousTitres_by_id, extraire_localise_path, get_Perso_from_Wem, nom_playlist
 
 import global_vars  # Accéder au Label global
+
+
 
 def select_and_add_to_playlist(event, tree, playlist_tree, tk):
     # Identifier la ligne sous le curseur
@@ -93,6 +95,9 @@ def setup_playlist(root, tree, tk, columns):
     clear_button = tk.Button(button_frame, text="Record playlist ⭕", command=lambda: record_playlist(playlist_tree))
     clear_button.pack(side=tk.LEFT, padx=5)
 
+    clear_button = tk.Button(button_frame, text="Dialog playlist ☷", command=lambda: save_playlist_to_txt(playlist_tree))
+    clear_button.pack(side=tk.LEFT, padx=5)
+
     # Ajouter le Label pour afficher le nombre de lignes, à droite de clear_button
     global_vars.playlist_name_label = tk.Label(button_frame, text="Playlist : " + global_vars.pas_Info)
     global_vars.playlist_name_label.pack(side=tk.LEFT, padx=(10, 0))  # Alignez sur le côté gauche avec un petit espace    
@@ -170,7 +175,12 @@ def record_playlist(playlist_tree):
 
 # Fonction pour sauvegarder la playlist dans un fichier JSON
 def save_playlist_to_file(playlist_tree):
-    file_path = filedialog.asksaveasfilename(defaultextension=".json", filetypes=[("JSON files", "*.json")])
+    file_path = filedialog.asksaveasfilename(
+        title="Save the playlist in JSON format",
+        defaultextension=".json",
+        filetypes=[("JSON files", "*.json")]
+        )
+    
     if file_path:
         playlist_data = []
         # Récupérer les données de chaque ligne de la playlist
@@ -191,7 +201,10 @@ def save_playlist_to_file(playlist_tree):
 
 # Fonction pour charger la playlist à partir d'un fichier JSON
 def load_playlist_from_file(playlist_tree,tk):
-    file_path = filedialog.askopenfilename(filetypes=[("JSON files", "*.json")])
+    file_path = filedialog.askopenfilename(
+        title="Load a playlist in JSON format", 
+        filetypes=[("JSON files", "*.json")]
+        )
     if file_path:
         with open(file_path, "r") as file:
             playlist_data = json.load(file)
@@ -361,3 +374,33 @@ def colorize_playlist_rows(playlist_tree):
         # Appliquer la couleur au fond de la ligne
         playlist_tree.tag_configure(key, background=color_mapping[key])
         playlist_tree.item(row, tags=(key,))
+
+def save_playlist_to_txt(playlist_tree):
+    nom_sans_extension = nom_playlist()
+    fichier_sauvegarde = filedialog.asksaveasfilename(
+        title="Save the dialog of the playlist",
+        initialfile=f"{nom_sans_extension}.txt",  # Nom par défaut basé sur la playlist
+        defaultextension=".txt",
+        filetypes=[("Fichiers txt", "*.txt")],
+        )
+    if fichier_sauvegarde:
+        try:
+            # Ouvrir le fichier en mode écriture
+            with open(fichier_sauvegarde, "w", encoding="utf-8") as file:
+                # Parcourir les lignes du tableau
+                for child in playlist_tree.get_children():
+                    values = playlist_tree.item(child, "values")
+                    selected_gender = global_vars.vSexe.get()
+                    if selected_gender == global_vars.vHomme:
+                        Perso = get_Perso_from_Wem(values[4])  
+                        sousTitre = values[2]
+                    else:
+                        Perso =get_Perso_from_Wem(values[3])
+                        sousTitre = values[1]  
+                    # Construire la ligne au format spécifié
+                    line = f"Id: {values[0]}\t{Perso}:  {sousTitre}\n"
+                    # Écrire dans le fichier
+                    file.write(line)
+            print(f"Fichier sauvegardé avec succès dans : {fichier_sauvegarde}")
+        except Exception as e:
+            print(f"Erreur lors de la sauvegarde : {e}")
