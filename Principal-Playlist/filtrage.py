@@ -53,7 +53,7 @@ def filter_tree_with_filters(tree, filters, file_path):
     :param file_path: Le chemin du fichier source des données.
 
     """
-    #open_and_display_json(tree, file_path)
+    open_and_display_json(tree, file_path)
     matching_count = 0  # Compteur de lignes correspondantes
 
     for item in tree.get_children():

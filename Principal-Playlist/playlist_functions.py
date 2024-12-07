@@ -201,6 +201,8 @@ def save_playlist_to_file(playlist_tree):
         # Sauvegarder les données dans un fichier JSON
         with open(file_path, "w") as file:
             json.dump(playlist_data, file, indent=4)
+        
+        global_vars.playlist_name_label.config(text=f"Playlist : {basename(file_path)}")
 
 # Fonction pour charger la playlist à partir d'un fichier JSON
 def load_playlist_from_file(playlist_tree,tk):

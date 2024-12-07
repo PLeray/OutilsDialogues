@@ -170,14 +170,18 @@ def save_data_to_json(file_path, data):
 
 def load_data_into_tree(tree):
     try:
-        with open(global_vars.bdd_Localisation_Json, "r", encoding="utf-8") as json_file:
-            data = json.load(json_file)
+        if global_vars.dataSound == None:
+            with open(global_vars.bdd_Localisation_Json, "r", encoding="utf-8") as json_file:
+                global_vars.dataSound = json.load(json_file)
+                print(f"Données chargées depuis : {global_vars.bdd_Localisation_Json}")            
+        else :
+            print(f"Données chargées depuis : global_vars.dataSound")
         
         # Supprimer les anciennes données dans le Treeview
         tree.delete(*tree.get_children())
 
         # Ajouter les nouvelles données
-        for entry in data:
+        for entry in global_vars.dataSound:
             tree.insert("", tk.END, values=(
                 entry[global_vars.data_ID],
                 entry[global_vars.data_F_SubTitle],
@@ -186,7 +190,7 @@ def load_data_into_tree(tree):
                 entry[global_vars.data_M_Voice],
                 entry[global_vars.data_Quest]
             ))
-        print(f"Données chargées depuis : {global_vars.bdd_Localisation_Json}")
+        
     except Exception as e:
         print(f"Erreur lors de la lecture des données : {e}")
 

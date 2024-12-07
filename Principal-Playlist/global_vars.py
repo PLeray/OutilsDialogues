@@ -1,5 +1,6 @@
 # Variables globlaes du projet
 
+dataSound = None  # Stockage donnée
 rootAccess = None  # Définition initiale
 
 playlist_name_label = ""  # Définition initiale
