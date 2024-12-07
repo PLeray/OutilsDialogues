@@ -1,6 +1,6 @@
 import configparser, os, json
 from tkinter import filedialog, Tk
-
+from threading import Thread
 import global_vars  # Importer les variables globales
 
 def initConfigGlobale():
@@ -132,8 +132,6 @@ def read_userconf(file_path="userconf.ini"):
         return {section: dict(config[section]) for section in config.sections()}
     else:
         raise FileNotFoundError(f"Le fichier {file_path} est introuvable.")
-
-    
 
 def read_or_initialize_userconf(file_path="userconf.ini"):
     """

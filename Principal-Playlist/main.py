@@ -9,6 +9,19 @@ from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_
 import global_vars  # Importer les variables globales
 from general_functions import initConfigGlobale, find_localization_subfolders, read_or_initialize_userconf, update_language_userconf
 
+import time
+
+def long_function():
+    # Changer le curseur en icône d'attente
+    root.config(cursor="wait")
+    root.update_idletasks()  # Actualiser l'interface graphique
+    
+    # Simuler une opération longue
+    time.sleep(5)
+    
+    # Rétablir le curseur par défaut
+    root.config(cursor="")
+    root.update_idletasks()
 
 def maj_Langue(str_langue):
     global_vars.CheminLangue = str_langue
@@ -21,6 +34,8 @@ root.geometry("1500x800")
 root.minsize(1100, 800)
 
 initConfigGlobale()
+
+global_vars.rootAccess = root #initialisation de la variable globale root pour y acceder dans les fonctions
 
 userconf_data = read_or_initialize_userconf()
 #print(f"userconf_data : {userconf_data}")
@@ -112,6 +127,8 @@ apply_all_filters_button = tk.Button(
 )
 apply_all_filters_button.grid(row=1, column=7, padx=5)
 
+root.bind('<Return>', lambda event: filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json))
+
 # Ajouter un bouton pour réinitialiser les filtres
 reset_filter_button = tk.Button(
     filter_frame,
@@ -128,7 +145,7 @@ na_var = tk.BooleanVar(value=True)  # Initialiser à "coché" (True)
 
 checkbox_na = tk.Checkbutton(
     filter_frame,
-    text="Show lines with " + global_vars.pas_Info,
+    text="keep lines with " + global_vars.pas_Info,
     variable=na_var,
     command=lambda: filter_NA(tree, na_var)  # Appeler le filtre quand l'état change
 )

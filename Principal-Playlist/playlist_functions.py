@@ -167,16 +167,19 @@ def move_down_playlist(playlist_tree):
 # Fonction pour effacer le tableau de playlist
 def clear_playlist(playlist_tree):
     for item in playlist_tree.get_children():
-        playlist_tree.delete(item)
+        playlist_tree.delete(item)  
 
-# Fonction pour effacer le tableau de playlist
+# Fonction pour fusionner et enredgistrer la Playlist le tableau
 def record_playlist(playlist_tree):
     fusionnerPlaylist(playlist_tree)
 
 # Fonction pour sauvegarder la playlist dans un fichier JSON
+
 def save_playlist_to_file(playlist_tree):
+    nom_sans_extension = nom_playlist()  
     file_path = filedialog.asksaveasfilename(
         title="Save the playlist in JSON format",
+        initialfile=f"{nom_sans_extension}.json",  # Nom par défaut basé sur la playlist
         defaultextension=".json",
         filetypes=[("JSON files", "*.json")]
         )

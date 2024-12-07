@@ -8,6 +8,7 @@ from general_functions import get_Perso_from_Wem
 
 
 def reset_filters(tree, filters, file_path):
+
     # Forcer chaque combobox à "Tous" ou "Toutes" avant de procéder
     for column_name, _, widget in filters:  # Ignorer les labels et récupérer uniquement les widgets
         if isinstance(widget, ttk.Combobox):  # Vérifie si c'est une Combobox
@@ -52,7 +53,7 @@ def filter_tree_with_filters(tree, filters, file_path):
     :param file_path: Le chemin du fichier source des données.
 
     """
-    open_and_display_json(tree, file_path)
+    #open_and_display_json(tree, file_path)
     matching_count = 0  # Compteur de lignes correspondantes
 
     for item in tree.get_children():
@@ -350,55 +351,6 @@ def toggle_columns(tree, playlist_tree, filters):
             playlist_tree.column(col, width=column_width, stretch=True)
         else:  # Colonnes masquées
             playlist_tree.column(col, width=0)      
-
-    # Synchroniser les filtres
-    update_filters_visibility(filters, visible_columns)
-
-def toggle_columns2(tree, playlist_tree, filters):
-    """
-    Affiche ou masque les colonnes du Treeview et synchronise les filtres.
-    Répartit les colonnes restantes de manière équitable après avoir fixé la largeur de la colonne ID.
-
-    :param tree: Le Treeview principal.
-    :param filters: Liste des filtres (nom_colonne, label_widget, entry_widget).
-
-    """
-    selected_gender = global_vars.vSexe.get()
-    visible_columns = global_vars.columns_homme if selected_gender == global_vars.vHomme else global_vars.columns_femme
-   
-    tree["displaycolumns"] = visible_columns
-    playlist_tree["displaycolumns"] = visible_columns
-
-    # Largeur totale du Treeview
-    total_width = tree.winfo_width()
-
-    # Largeur fixe pour la colonne ID
-    id_column_width = 130
-
-    # Largeur restante pour les colonnes visibles (sauf ID)
-    remaining_width = total_width - id_column_width
-
-    # Nombre de colonnes visibles, sauf la colonne ID
-    remaining_columns_count = len(visible_columns) - 1
-    column_width = remaining_width // remaining_columns_count if remaining_columns_count > 0 else 0
-
-    # Ajuster les colonnes dans le Treeview
-    for col in tree["columns"]:
-        if col == "ID":
-            tree.column(col, width=id_column_width, minwidth=100, stretch=False, anchor="w")         
-        elif col in visible_columns:
-            tree.column(col, width=column_width, stretch=True)
-        else:
-            tree.column(col, width=0)
-
-    # Ajuster les colonnes dans le playlist
-    for col in playlist_tree["columns"]:
-        if col == "ID":
-            playlist_tree.column(col, width=id_column_width, minwidth=100, stretch=False, anchor="w")
-        elif col in visible_columns:
-            playlist_tree.column(col, width=column_width, stretch=True)
-        else:
-            playlist_tree.column(col, width=0)            
 
     # Synchroniser les filtres
     update_filters_visibility(filters, visible_columns)
