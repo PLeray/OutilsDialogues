@@ -1,0 +1,1 @@
+[{"x": 5, "y": 0, "precedents": [[5, 2]], "suivants": []}, {"x": 5, "y": 2, "precedents": [], "suivants": []}, {"x": 7, "y": 2, "precedents": [], "suivants": []}, {"x": 3, "y": 2, "precedents": [], "suivants": []}]

@@ -80,8 +80,10 @@ text_label.pack(side=tk.LEFT, padx=5, pady=5)
 
 # Ajouter une commande lors de la sélection
 def on_language_selected(event):
+    global_vars.dataSound = None
     maj_Langue(language_var.get())
     update_language_userconf(global_vars.CheminLangue)
+    # mettre ca si on veut les langues des tableau synchro filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json)
     print(f"Langue sélectionnée : {global_vars.CheminLangue}")
 
 language_dropdown.bind("<<ComboboxSelected>>", on_language_selected)
