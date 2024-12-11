@@ -11,7 +11,7 @@ BLOCK_COLOR = (50, 150, 250)
 PRECEDENT_COLOR = (250, 100, 100)
 SUIVANT_COLOR = (100, 250, 100)
 SELECTED_STEP_COLOR = (255, 165, 0)  # Orange
-CONNECTION_COLOR = (0, 0, 0)
+CONNECTION_COLOR = (0, 100, 0)
 MENU_COLOR = (240, 240, 240)
 FPS = 30
 
@@ -62,59 +62,6 @@ class Grid:
         self.steps = []  # List of steps, each step contains blocks
         self.selected_step = None  # Index of the selected step
         self.selected_block = None  # Block currently selected for movement
-
-    def connect_blocks(self, source, target, connection_type):
-        """Connect two blocks."""
-        if connection_type == "precedent":
-            target.precedents.append(source)
-        elif connection_type == "suivant":
-            source.suivants.append(target)
-
-    def save_state(self, filename):
-        """Save the grid state to a JSON file."""
-        data = {
-            "steps": [
-                [block.to_dict() for block in step_blocks]
-                for step_blocks in self.steps
-            ]
-        }
-        with open(filename, "w") as f:
-            json.dump(data, f)
-        print(f"State saved to {filename}")
-
-    def load_state(self, filename):
-        """Load the grid state from a JSON file."""
-        try:
-            with open(filename, "r") as f:
-                data = json.load(f)
-            self.steps = []
-            for step_blocks in data["steps"]:
-                step = []
-                for block_data in step_blocks:
-                    block = Block(
-                        block_data["x"],
-                        block_data["etape"],
-                        block_data["index"]
-                    )
-                    step.append(block)
-                self.steps.append(step)
-
-            # Reconnect blocks
-            for step_blocks, serialized_blocks in zip(self.steps, data["steps"]):
-                for block, block_data in zip(step_blocks, serialized_blocks):
-                    block.precedents = [
-                        self.steps[p_etape][p_index]
-                        for p_etape, p_index in block_data["precedents"]
-                    ]
-                    block.suivants = [
-                        self.steps[s_etape][s_index]
-                        for s_etape, s_index in block_data["suivants"]
-                    ]
-            print(f"State loaded from {filename}")
-        except FileNotFoundError:
-            print(f"File {filename} not found.")
-        except json.JSONDecodeError:
-            print("Error decoding JSON.")
     
     def add_step(self, index=None):
         """Add a new step."""
@@ -123,12 +70,64 @@ class Grid:
         else:
             self.steps.insert(index + 1, [])
 
+    def select_step(self, y):
+        """Select a step based on vertical position."""
+        step_index = y // STEP_HEIGHT
+        if 0 <= step_index < len(self.steps):
+            self.selected_step = step_index
+
+    def remove_step(self, step_index):
+        """Remove an entire step and all its blocks."""
+        if 0 <= step_index < len(self.steps):
+            del self.steps[step_index]
+            # Update the step indices for remaining steps
+            for i, step_blocks in enumerate(self.steps):
+                for block in step_blocks:
+                    block.etape = i
+
     def add_block(self, step_index):
         """Add a new block to a specific step."""
         step_blocks = self.steps[step_index]
         block = Block(0, step_index, len(step_blocks))
         step_blocks.append(block)
         self.recenter_blocks(step_index)
+
+    def remove_block(self, step_index, block):
+        """Remove a block and its connections."""
+        step_blocks = self.steps[step_index]
+        if block in step_blocks:
+            # Remove connections to/from the block
+            for b in step_blocks:
+                if block in b.precedents:
+                    b.precedents.remove(block)
+                if block in b.suivants:
+                    b.suivants.remove(block)
+            step_blocks.remove(block)
+            self.recenter_blocks(step_index)
+
+    def block_at(self, x, y):
+        """Find a block at the given screen coordinates."""
+        for step_index, step_blocks in enumerate(self.steps):
+            step_y = step_index * STEP_HEIGHT
+            if step_y <= y < step_y + STEP_HEIGHT:
+                for block in step_blocks:
+                    block_y = step_y + STEP_HEIGHT // 2 - BLOCK_SIZE // 2
+                    block_rect = pygame.Rect(block.x, block_y, BLOCK_SIZE, BLOCK_SIZE)
+                    if block_rect.collidepoint(x, y):
+                        return block, step_index
+        return None, None
+
+    def connect_blocks(self, source, target, connection_type):
+        """Connect two blocks."""
+        if connection_type == "precedent":
+            target.precedents.append(source)
+        elif connection_type == "suivant":
+            source.suivants.append(target)    
+
+    def clear_connections(self, block):
+        """Clear all connections of a block."""
+        block.precedents.clear()
+        block.suivants.clear()
 
     def recenter_blocks(self, step_index):
         """Re-center all blocks in the specified step."""
@@ -146,51 +145,6 @@ class Grid:
             new_index = max(0, min(len(step_blocks) - 1, index + direction))
             step_blocks[index], step_blocks[new_index] = step_blocks[new_index], step_blocks[index]
             self.recenter_blocks(step_index)
-
-    def remove_block(self, step_index, block):
-        """Remove a block and its connections."""
-        step_blocks = self.steps[step_index]
-        if block in step_blocks:
-            # Remove connections to/from the block
-            for b in step_blocks:
-                if block in b.precedents:
-                    b.precedents.remove(block)
-                if block in b.suivants:
-                    b.suivants.remove(block)
-            step_blocks.remove(block)
-            self.recenter_blocks(step_index)
-
-    def clear_connections(self, block):
-        """Clear all connections of a block."""
-        block.precedents.clear()
-        block.suivants.clear()
-
-    def remove_step(self, step_index):
-        """Remove an entire step and all its blocks."""
-        if 0 <= step_index < len(self.steps):
-            del self.steps[step_index]
-            # Update the step indices for remaining steps
-            for i, step_blocks in enumerate(self.steps):
-                for block in step_blocks:
-                    block.etape = i
-
-    def block_at(self, x, y):
-        """Find a block at the given screen coordinates."""
-        for step_index, step_blocks in enumerate(self.steps):
-            step_y = step_index * STEP_HEIGHT
-            if step_y <= y < step_y + STEP_HEIGHT:
-                for block in step_blocks:
-                    block_y = step_y + STEP_HEIGHT // 2 - BLOCK_SIZE // 2
-                    block_rect = pygame.Rect(block.x, block_y, BLOCK_SIZE, BLOCK_SIZE)
-                    if block_rect.collidepoint(x, y):
-                        return block, step_index
-        return None, None
-
-    def select_step(self, y):
-        """Select a step based on vertical position."""
-        step_index = y // STEP_HEIGHT
-        if 0 <= step_index < len(self.steps):
-            self.selected_step = step_index
 
     def connect_blocks(self, source, target, connection_type):
         """Connect two blocks."""
@@ -240,6 +194,52 @@ class Grid:
                     end_pos = (next_block.x + BLOCK_SIZE // 2, next_block.etape * STEP_HEIGHT + STEP_HEIGHT // 2)
                     pygame.draw.line(screen, CONNECTION_COLOR, start_pos, end_pos, 3)
 
+    def save_state(self, filename):
+        """Save the grid state to a JSON file."""
+        data = {
+            "steps": [
+                [block.to_dict() for block in step_blocks]
+                for step_blocks in self.steps
+            ]
+        }
+        with open(filename, "w") as f:
+            json.dump(data, f)
+        print(f"State saved to {filename}")
+
+    def load_state(self, filename):
+        """Load the grid state from a JSON file."""
+        try:
+            with open(filename, "r") as f:
+                data = json.load(f)
+            self.steps = []
+            for step_blocks in data["steps"]:
+                step = []
+                for block_data in step_blocks:
+                    block = Block(
+                        block_data["x"],
+                        block_data["etape"],
+                        block_data["index"]
+                    )
+                    step.append(block)
+                self.steps.append(step)
+
+            # Reconnect blocks
+            for step_blocks, serialized_blocks in zip(self.steps, data["steps"]):
+                for block, block_data in zip(step_blocks, serialized_blocks):
+                    block.precedents = [
+                        self.steps[p_etape][p_index]
+                        for p_etape, p_index in block_data["precedents"]
+                    ]
+                    block.suivants = [
+                        self.steps[s_etape][s_index]
+                        for s_etape, s_index in block_data["suivants"]
+                    ]
+            print(f"State loaded from {filename}")
+        except FileNotFoundError:
+            print(f"File {filename} not found.")
+        except json.JSONDecodeError:
+            print("Error decoding JSON.")
+
 # Context menu
 def draw_menu(x, y, options):
     """Draw a context menu at the given position."""
@@ -271,6 +271,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+            # Input Clavier ############    
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_n:  # Add a new step
                     if grid.selected_step is not None:
@@ -305,30 +306,15 @@ def main():
                 elif event.key == pygame.K_RIGHT:  # Move block right
                     if grid.selected_block:
                         grid.move_block(grid.selected_block.etape, 1)
+            # Clic Souris  ############              
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 x, y = pygame.mouse.get_pos()
+                # Menu clic Droit ##########
                 if menu_active and menu_rect and not menu_rect.collidepoint(x, y):
                     menu_active = False  # Close menu if clicking outside
-                                    
-                if event.button == 1:  # Left click
-                    block, step_index = grid.block_at(x, y)
-                    if block:  # Select block for connections
-                        if pygame.key.get_mods() & pygame.KMOD_SHIFT:
-                            selected_blocks["precedents"].append(block)
-                            print(f"Block ({block.x}, Step {block.etape}) added as precedent.")
-                        elif pygame.key.get_mods() & pygame.KMOD_CTRL:
-                            selected_blocks["suivants"].append(block)
-                            print(f"Block ({block.x}, Step {block.etape}) added as suivant.")
-
-                        else:
-                            grid.selected_block = block
-                            print(f"Selected block ({block.x}, Step {block.etape}).")
-                    else:  # Select step
-                        grid.select_step(y)
-                        print(f"Selected step {grid.selected_step}.")
-
-
-                elif event.button == 1 and menu_active and menu_rect:  # Left click on menu
+                
+                # clic Gauche sur menu du clic droit########## 
+                if event.button == 1 and menu_active and menu_rect:  # Left click on menu du clic droit
                     for i, option in enumerate(menu_options):
                         if menu_rect.collidepoint(x, y + i * 30):
                             if option == "Supprimer les liaisons" and menu_action[0] == "block":
@@ -342,24 +328,26 @@ def main():
                                 print("Removed step.")
                             menu_active = False
                             break
-                    menu_active = False
+                    menu_active = False                    
+                
+                # clic Gauche ##########                    
                 elif event.button == 1:  # Left click
                     block, step_index = grid.block_at(x, y)
                     if block:  # Select block for connections
-                        mods = pygame.key.get_mods()  # Get the current key modifiers
-                        if mods & pygame.KMOD_SHIFT and not mods & pygame.KMOD_CTRL:
+                        if pygame.key.get_mods() & pygame.KMOD_SHIFT:
                             selected_blocks["precedents"].append(block)
-                            print(f"Block ({block.x}, Step {block.etape}) added as precedent.")
-                        elif mods & pygame.KMOD_CTRL and not mods & pygame.KMOD_SHIFT:
+                            print(f"Block ({block.x}, Step {block.etape}) ajouté comme precedent.")
+                        elif pygame.key.get_mods() & pygame.KMOD_CTRL:
                             selected_blocks["suivants"].append(block)
-                            print(f"Block ({block.x}, Step {block.etape}) added as suivant.")
-                        else:
+                            print(f"Block ({block.x}, Step {block.etape}) ajouté comme suivant.")
+                        else: #Selection de base d'un Bloc
                             grid.selected_block = block
                             print(f"Selected block ({block.x}, Step {block.etape}).")
-
-                    else:  # Select step
+                    else:  #Selection de base d'uns Etape step
                         grid.select_step(y)
-                        print(f"Selected step {grid.selected_step}.")                        
+                        print(f"Selected step {grid.selected_step}.")
+                
+                # clic Droit ########## 
                 elif event.button == 3:  # Right click for context menu
                     block, step_index = grid.block_at(x, y)
                     if block:
@@ -372,7 +360,8 @@ def main():
                         menu_active = True
                     if menu_active:
                         menu_rect = draw_menu(x, y, menu_options)
-                        print(f"Menu Etape opened at ({x}, {y})")
+                        print(f"Menu Etape opened at ({x}, {y})")   
+               
 
         screen.fill((255, 255, 255))
         grid.draw(selected_blocks)

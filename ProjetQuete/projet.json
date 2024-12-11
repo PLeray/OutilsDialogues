@@ -1,0 +1,114 @@
+{
+    "steps": [
+        [
+            {
+                "x": 375,
+                "etape": 0,
+                "index": 0,
+                "precedents": [],
+                "suivants": [
+                    [
+                        1,
+                        0
+                    ]
+                ]
+            }
+        ],
+        [
+            {
+                "x": 375,
+                "etape": 1,
+                "index": 0,
+                "precedents": [
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                "suivants": [
+                    [
+                        2,
+                        0
+                    ],
+                    [
+                        2,
+                        1
+                    ]
+                ]
+            }
+        ],
+        [
+            {
+                "x": 241,
+                "etape": 2,
+                "index": 0,
+                "precedents": [
+                    [
+                        1,
+                        0
+                    ]
+                ],
+                "suivants": [
+                    [
+                        4,
+                        0
+                    ]
+                ]
+            },
+            {
+                "x": 507,
+                "etape": 2,
+                "index": 1,
+                "precedents": [
+                    [
+                        1,
+                        0
+                    ]
+                ],
+                "suivants": [
+                    [
+                        3,
+                        0
+                    ]
+                ]
+            }
+        ],
+        [
+            {
+                "x": 375,
+                "etape": 3,
+                "index": 0,
+                "precedents": [
+                    [
+                        2,
+                        1
+                    ]
+                ],
+                "suivants": [
+                    [
+                        4,
+                        0
+                    ]
+                ]
+            }
+        ],
+        [
+            {
+                "x": 375,
+                "etape": 4,
+                "index": 0,
+                "precedents": [
+                    [
+                        2,
+                        0
+                    ],
+                    [
+                        3,
+                        0
+                    ]
+                ],
+                "suivants": []
+            }
+        ]
+    ]
+}
