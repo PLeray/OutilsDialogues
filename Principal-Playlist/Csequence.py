@@ -107,27 +107,19 @@ class Sequence:
             )
 
     def find_block(self, block_data):
-        """
-        Trouver un bloc dans les étapes en utilisant les données du bloc.
-        Args:
-            block_data (dict): Dictionnaire contenant les informations du bloc, notamment 'identifiant'.
-        Returns:
-            Block: Le bloc correspondant ou None.
-        """
         identifiant = block_data.get("identifiant")
         if not identifiant:
-            print("Identifiant introuvable dans les données de connexion :", block_data)
+            #print("Identifiant introuvable dans les données de connexion :", block_data)
             return None
 
         for etape in self.etapes:
             for block in etape.blocs:
                 if block.identifiant == identifiant:
-                    print(f"Bloc trouvé : {identifiant}")
+                    #print(f"Bloc trouvé : {identifiant}")
                     return block
 
-        print(f"Bloc introuvable : {identifiant}")
+        #print(f"Bloc introuvable : {identifiant}")
         return None
-
 
     
     @staticmethod

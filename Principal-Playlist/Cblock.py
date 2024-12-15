@@ -68,19 +68,21 @@ class Block:
         )
 
         # Ajouter les textes (titre, commentaire, lien)
-        text_y_offset = -20  # Décalage initial pour le premier texte
+        text_y_offset = -10  # Décalage initial pour le premier texte
         canvas.create_text(
-            x, y + text_y_offset, text=self.title + " " + self.identifiant, font=("Arial", 10), tags=tags
+            x, y + text_y_offset, text=self.identifiant + " (" + self.title + ")", font=("Arial", 8), tags=tags
         )
-        text_y_offset += 15  # Décalage pour le commentaire
+        text_y_offset += 17  # Décalage pour le commentaire
         canvas.create_text(
             x, y + text_y_offset, text=self.comment, font=("Arial", 9), fill="gray", tags=tags
         )
+        """        
         text_y_offset += 15  # Décalage pour le lien de playlist
         canvas.create_text(
             x, y + text_y_offset, text=self.playlist_lien, font=("Arial", 8), fill="blue", tags=tags
         )
-        
+        """
+
     def clear_connections(self):
         """Supprimer toutes les connexions (précédents et suivants)."""
         self.blocs_precedents.clear()

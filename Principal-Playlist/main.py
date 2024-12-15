@@ -12,7 +12,6 @@ from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_
 
 from CstepBlockApp import StepBlockApp
 
-
 def show_hello_world():
     # Créer une nouvelle fenêtre
     window = tk.Tk()
@@ -30,15 +29,39 @@ def show_hello_world():
     # Lancer la boucle principale
     window.mainloop()
 
-def OuvrirProjet():
+
+def ouvrir_projet(root):
+    # Vérifier si la fenêtre est déjà ouverte
+    if global_variables.fenetre_projet is not None:
+        print("La fenêtre de projet est déjà ouverte.")
+        return
+
     # Créer une nouvelle fenêtre
-    arbreProjet = tk.Tk()
-    arbreProjet.geometry("600x800")  # Largeur: 1200px, Hauteur: 800px
+    global_variables.fenetre_projet = tk.Toplevel(root)
+    global_variables.fenetre_projet.geometry("600x800")
+    global_variables.fenetre_projet.title("Fenêtre Projet")
 
-    app = StepBlockApp(arbreProjet)
+    # Associer un gestionnaire à la fermeture de cette fenêtre
+    global_variables.fenetre_projet.protocol("WM_DELETE_WINDOW", fermer_fenetre_projet)
 
-    # Lancer la boucle principale
-    arbreProjet.mainloop()
+    # Lancer l'application de projet (utiliser StepBlockApp ou équivalent)
+    app = StepBlockApp(global_variables.fenetre_projet)
+
+
+def fermer_fenetre_projet():
+    if global_variables.fenetre_projet is not None:
+        global_variables.fenetre_projet.destroy()
+        global_variables.fenetre_projet = None
+        print("Fenêtre de projet fermée.")
+
+
+def fermer_application_principale(root):
+    # Fermer la fenêtre de projet si elle est ouverte
+    if global_variables.fenetre_projet is not None:
+        fermer_fenetre_projet()
+    # Fermer la fenêtre principale
+    root.destroy()
+    print("Application principale fermée.")
 
 def long_function():
     # Changer le curseur en icône d'attente
@@ -59,7 +82,7 @@ def maj_Langue(str_langue):
 # Créer la fenêtre principale
 root = tk.Tk()
 root.title("Tool to assemble and test dialogue sequences for Cyberpung modding")
-root.geometry("1500x800")
+root.geometry("1600x800")
 root.minsize(1100, 800)
 
 initConfigGlobale()
@@ -86,7 +109,7 @@ button_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
 project_button = tk.Button(
     button_frame,
     text="Projet",
-    command=lambda: OuvrirProjet()
+    command=lambda: ouvrir_projet(root)
 )
 project_button.pack(side=tk.LEFT, padx=5, pady=5)
 
@@ -284,6 +307,9 @@ tree.bind("<<TreeviewSelect>>", lambda event: SelectionLigne(event, tree))  # S�
 
 # Lier l'événement de redimensionnement
 root.bind("<Configure>", resize_columns)
+#root.protocol("WM_DELETE_WINDOW", on_main_close)
+# Associer la fermeture de la fenêtre principale
+root.protocol("WM_DELETE_WINDOW", lambda: fermer_application_principale(root))
 
 # Lancer la boucle principale de l'application
 root.mainloop()

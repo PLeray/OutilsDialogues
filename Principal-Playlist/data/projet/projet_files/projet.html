@@ -1,0 +1,131 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>projet</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f9f9f9;
+                    margin: 0;
+                    padding: 0;
+                }
+                .canvas {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    margin: 50px auto;
+                    background-color: white;
+                    border: 1px solid #ccc;
+                }
+                .block {
+                    position: absolute;
+                    width: 400px;
+                    min-height: 100px;
+                    background-color: #a0e99b;
+                    border: 2px solid #4CAF50;
+                    text-align: center;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    box-sizing: border-box;
+                }
+                svg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    pointer-events: none; /* Les SVG ne bloquent pas les clics */
+                }
+                line {
+                    stroke: blue;
+                    stroke-width: 2;
+                }
+            </style>
+            <script>
+                function drawLines() {
+                    const svg = document.getElementById('svg-canvas');
+                    svg.innerHTML = ''; // Réinitialiser le SVG
+
+                    const lines = JSON.parse('[{"start": "block-00000002", "end": "block-00000003"}, {"start": "block-00000002", "end": "block-00000004"}, {"start": "block-00000003", "end": "block-00000005"}, {"start": "block-00000004", "end": "block-00000005"}, {"start": "block-00000005", "end": "block-00000007"}, {"start": "block-00000007", "end": "block-00000008"}, {"start": "block-00000007", "end": "block-00000009"}, {"start": "block-00000008", "end": "block-00000010"}, {"start": "block-00000009", "end": "block-00000011"}, {"start": "block-00000010", "end": "block-00000012"}, {"start": "block-00000011", "end": "block-00000012"}]');
+
+                    lines.forEach(line => {
+                        const startElement = document.getElementById(line.start);
+                        const endElement = document.getElementById(line.end);
+
+                        if (startElement && endElement) {
+                            const startRect = startElement.getBoundingClientRect();
+                            const endRect = endElement.getBoundingClientRect();
+
+                            const startX = startRect.left + startRect.width / 2 - svg.getBoundingClientRect().left;
+                            const startY = startRect.bottom - svg.getBoundingClientRect().top;
+                            const endX = endRect.left + endRect.width / 2 - svg.getBoundingClientRect().left;
+                            const endY = endRect.top - svg.getBoundingClientRect().top;
+
+                            const lineElem = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                            lineElem.setAttribute('x1', startX);
+                            lineElem.setAttribute('y1', startY);
+                            lineElem.setAttribute('x2', endX);
+                            lineElem.setAttribute('y2', endY);
+                            svg.appendChild(lineElem);
+                        }
+                    });
+                }
+
+                window.addEventListener('load', drawLines);
+                window.addEventListener('resize', drawLines);
+            </script>
+        </head>
+        
+        <body>
+            <h1 style="text-align:center;">projet</h1>
+            <div class="canvas">
+                <svg id="svg-canvas"></svg>
+        
+                <div id="block-00000002" class="block" style="top: 50px; left: 400px;">
+                    00000002<br>1.0-Do_i_know you<br>panam:  V ?
+                </div>
+                
+                <div id="block-00000003" class="block" style="top: 300px; left: 125px;">
+                    00000003<br>2.A0-[Sit]-Really_glad_to_see_you<br>v:  Salut, Panam.
+                </div>
+                
+                <div id="block-00000004" class="block" style="top: 300px; left: 675px;">
+                    00000004<br>2.B0-[Sit]-glad_you_did_not_change_your_mind<br>v:  Salut, Panam.
+                </div>
+                
+                <div id="block-00000005" class="block" style="top: 550px; left: 400px;">
+                    00000005<br>3.0-[Drink]-Talk_to_me<br>v:  Je t'écoute.
+                </div>
+                
+                <div id="block-00000007" class="block" style="top: 800px; left: 400px;">
+                    00000007<br>3.1-[Drink]-Thought_you_and_Saul_agreed<br>v:  Thought you and Saul'd agreed to bury your carbines.
+                </div>
+                
+                <div id="block-00000008" class="block" style="top: 1050px; left: 125px;">
+                    00000008<br>4.A0-[Drink]-Dont_worry_about_Saul<br>v:  Hey, don't worry about Saul. He'll get over it.
+                </div>
+                
+                <div id="block-00000009" class="block" style="top: 1050px; left: 675px;">
+                    00000009<br>4.B0-[Drink]-Saul_could_be_right<br>v:  Te vexe pas, mais… Saul a peut-être raison.
+                </div>
+                
+                <div id="block-00000010" class="block" style="top: 1300px; left: 125px;">
+                    00000010<br>4.A1-Don't exaggerate<br>v:  C'mon, don't exaggerate.
+                </div>
+                
+                <div id="block-00000011" class="block" style="top: 1300px; left: 675px;">
+                    00000011<br>4.B1-I_can_help<br>v:  There any way I can help?
+                </div>
+                
+                <div id="block-00000012" class="block" style="top: 1550px; left: 400px;">
+                    00000012<br>5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel<br>v:  Panam.
+                </div>
+                
+            </div>
+        </body>
+        </html>
+        

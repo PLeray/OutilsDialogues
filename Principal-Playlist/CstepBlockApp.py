@@ -1,28 +1,34 @@
 import tkinter as tk
 from tkinter import Menu, filedialog
-import json
+import json, os
 
 import global_variables  # Importer les variables globales
+from general_functions import get_Perso_from_Wem
 from playlist_functions import charger_playlist_from_file
 
 from Csequence import Sequence
 from Cetape import Etape
 from Cblock import Block  # Import de la classe Block
 
+from CpageHTML import PageHTML
+
 class StepBlockApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Step and Block Manager")
+        self.root.title("Scénario structure")
 
         # Variables
         self.sequence = Sequence("Nouvelle Séquence")
         self.selected_etape = None
         self.selected_blocks = {"green": [], "red": []}
+        self.file_Projet = "xx"
 
         # Frame principale
         self.main_frame = tk.Frame(root)
         self.main_frame.pack(fill=tk.BOTH, expand=True)
 
+        self.mise_a_jour_info_projet(self.file_Projet)
+        
         # Barre de boutons
         self.button_frame = tk.Frame(self.main_frame)
         self.button_frame.pack(fill=tk.X, side=tk.TOP)
@@ -35,9 +41,6 @@ class StepBlockApp:
 
         self.canvas = tk.Canvas(self.canvas_frame, bg="white")
         self.canvas.pack(fill=tk.BOTH, expand=True)
-
-        # Menu contextuel
-        self.create_menu()
 
         # Événements
         self.canvas.bind("<Button-1>", self.on_left_click)
@@ -52,6 +55,11 @@ class StepBlockApp:
 
         # Redimensionnement
         self.root.bind("<Configure>", self.on_resize)
+
+    def mise_a_jour_info_projet(self, nom_fichier):
+        self.file_Projet = nom_fichier
+        leTitre = "Scénario structure : " + os.path.splitext(os.path.basename(self.file_Projet))[0]
+        self.root.title(leTitre)
 
     def on_left_click(self, event):
         """Gérer les clics gauche pour sélectionner un bloc ou une étape."""
@@ -139,7 +147,8 @@ class StepBlockApp:
 
             # Configurer le menu contextuel pour les blocs
             self.menu = Menu(self.root, tearoff=0)
-            self.menu.add_command(label="Ouvrir Bloc", command=self.Open_Bloc)
+            self.menu.add_command(label="Afficher le Bloc dans la Playlist", command=self.Open_Bloc)
+            self.menu.add_command(label="Importer Playlist dans le Bloc", command=self.import_playlist_to_block)            
             self.menu.add_command(label="Supprimer le Bloc", command=self.delete_block)
             self.menu.add_command(label="Supprimer les Connexions", command=self.delete_connections)
             self.menu.post(event.x_root, event.y_root)
@@ -154,6 +163,7 @@ class StepBlockApp:
             self.menu.add_command(label="Supprimer l'Étape", command=self.delete_etape)
             self.menu.post(event.x_root, event.y_root)
             print(f"Menu pour l'étape {self.selected_etape.numero} ouvert.")
+
 
     def on_key_press(self, event):
         """Gérer les pressions de touches pour déplacer les blocs dans une étape."""
@@ -179,39 +189,40 @@ class StepBlockApp:
         else:
             print("Aucun bloc sélectionné pour déplacement.")
 
-    def on_resize(self, event):
-        print(f"on_resize")
-        new_width = event.width
+    def update_width_and_reorganize(self):
+        """Mettre à jour la largeur des étapes et réorganiser leurs blocs."""
+        canvas_width = self.canvas.winfo_width()
         for etape in self.sequence.etapes:
-            etape.width = new_width
+            etape.width = canvas_width
             etape.reorganize_blocks()
+
+    def on_resize(self, event):
+        #print(f"on_resize")
+        self.update_width_and_reorganize()
         self.draw_sequence()
 
     def draw_sequence(self):
-        print(f"draw_sequence")
+        """Dessiner toute la séquence sur le canvas."""
+        # Mettre à jour la largeur des étapes et réorganiser
+        self.update_width_and_reorganize()
+
+        # Effacer et redessiner
         self.canvas.delete("all")
-        # Dessiner chaque étape et ses blocs
         for etape in self.sequence.etapes:
             etape.draw(
                 self.canvas,
                 selected_blocks=self.selected_blocks,
                 selected_etape=(etape == self.selected_etape)
             )
-            etape.reorganize_blocks()
-
-        # Dessiner les connexions entre les blocs
         for conn in self.sequence.connections:
             start = conn["start"]
             end = conn["end"]
             if start and end:
-                #print(f"Dessiner connexion : {start.identifiant} -> {end.identifiant}")
                 self.canvas.create_line(
-                    start.x, start.y + 20,  # Position de départ
-                    end.x, end.y - 20,      # Position de fin
+                    start.x, start.y + 20,
+                    end.x, end.y - 20,
                     fill="blue", width=4
                 )
-            else:
-                print(f"Connexion invalide : {conn}")
 
     def create_buttons(self):
         """Créer les boutons Load, Save, Ajouter Étape, Ajouter Bloc et Connect."""
@@ -220,21 +231,60 @@ class StepBlockApp:
         tk.Button(self.button_frame, text="Ajouter Étape", command=self.add_etape).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Ajouter Bloc", command=self.add_block).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Connect", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
-
-    def create_menu(self):
-        """Créer le menu contextuel."""
-        self.menu = tk.Menu(self.root, tearoff=0)
-        # Ajouter des commandes au menu
-        self.menu.add_command(label="Ouvrir Bloc", command=self.Open_Bloc)
-        self.menu.add_command(label="Supprimer les liaisons", command=self.delete_connections)
-        self.menu.add_command(label="Supprimer le Bloc", command=self.delete_block)
-        self.menu.add_command(label="Supprimer l'Étape", command=self.delete_etape)
+        tk.Button(self.button_frame, text="Générer Projet", command=self.generate_project_html).pack(side=tk.LEFT, padx=5, pady=5)
 
     def Open_Bloc(self):
         if self.selected_block:
             leBloc = self.selected_block
             print(f"Bloc: {leBloc.identifiant} lien: {leBloc.playlist_lien}.")    
             charger_playlist_from_file(global_variables.playlist_tree,tk, leBloc.playlist_lien)
+
+    def import_playlist_to_block(self):
+        if self.selected_block:
+            leBloc = self.selected_block
+            # Ouvrir une boîte de dialogue pour sélectionner le fichier
+            file_path = filedialog.askopenfilename(
+                title="Sélectionner une playlist JSON",
+                filetypes=[("JSON Files", "*.json")]
+            )
+            if not file_path:
+                print("Aucun fichier sélectionné.")
+                return
+            
+            try:
+                # Charger les données de la playlist
+                with open(file_path, "r", encoding="utf-8") as file:
+                    playlist_data = json.load(file)
+                
+                # Vérifier si la playlist contient des données
+                if not playlist_data or not isinstance(playlist_data, list):
+                    print(f"Le fichier {file_path} ne contient pas une playlist valide.")
+                    return
+                
+                # Construire le commentaire à partir de la première ligne
+                first_entry = playlist_data[0]
+                selected_gender = global_variables.vSexe.get()
+                if selected_gender == global_variables.vHomme:
+                    perso = get_Perso_from_Wem(first_entry["male_vo_path"])  # Valeur pour homme
+                    sous_titre = first_entry["maleVariant"]
+                else:
+                    perso = get_Perso_from_Wem(first_entry["female_vo_path"])  # Valeur pour femme
+                    sous_titre = first_entry["femaleVariant"]
+                
+                # Construire le commentaire avec le format requis
+                leBloc.comment = f"{perso}:  {sous_titre}"
+                
+                # Mettre à jour les autres attributs du bloc
+                leBloc.playlist_lien = file_path
+                leBloc.title = os.path.splitext(os.path.basename(file_path))[0]  # Nom du fichier sans extension
+       
+                self.draw_sequence()
+
+                print(f"Playlist importée avec succès : {file_path}")
+                print(f"Bloc mis à jour : playlist_lien={leBloc.playlist_lien}, comment={leBloc.comment}, title={leBloc.title}")
+            
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                print(f"Erreur lors de l'importation de la playlist : {e}")
 
     def add_etape(self):
         """Ajouter une nouvelle étape après l'étape sélectionnée."""
@@ -398,7 +448,7 @@ class StepBlockApp:
         # Redessiner la séquence
         self.draw_sequence()
         print(f"Chargé depuis {filename}")
-
+        self.mise_a_jour_info_projet(filename)
 
     def to_dict(self):
         """Convertir le bloc en dictionnaire pour sauvegarde."""
@@ -429,5 +479,13 @@ class StepBlockApp:
         block.blocs_suivants = []
         return block
 
+    def generate_project_html(self):
+        # Exemple d'utilisation
+        #sequence = Sequence.from_dict(data_projet)  # Charge ta séquence à partir du JSON
+        #file_projet = "data/projet/projet.json"
 
+        # Créer une instance de PageHTML et générer le fichier HTML
+        page = PageHTML(self.sequence, self.file_Projet)
+        page.generate_project_html()
 
+  

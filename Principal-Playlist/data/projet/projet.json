@@ -4,20 +4,14 @@
         {
             "numero": 0,
             "y": 50,
-            "width": 622,
-            "blocs": []
-        },
-        {
-            "numero": 1,
-            "y": 150,
-            "width": 622,
+            "width": 600,
             "blocs": [
                 {
                     "etape_number": 0,
                     "etape_position": 0,
                     "identifiant": "00000002",
-                    "title": "Bloc",
-                    "comment": "panam:  V ?",
+                    "title": "1.0-Do_i_know you",
+                    "comment": "panam:  V\u00a0?",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/1.0-Do_i_know you.json",
                     "blocs_precedents": [],
                     "blocs_suivants": [
@@ -28,17 +22,17 @@
             ]
         },
         {
-            "numero": 2,
-            "y": 250,
-            "width": 622,
+            "numero": 1,
+            "y": 150,
+            "width": 600,
             "blocs": [
                 {
                     "etape_number": 1,
                     "etape_position": 0,
                     "identifiant": "00000003",
-                    "title": "Bloc",
-                    "comment": "",
-                    "playlist_lien": "",
+                    "title": "2.A0-[Sit]-Really_glad_to_see_you",
+                    "comment": "v:  Salut, Panam.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/2.A0-[Sit]-Really_glad_to_see_you.json",
                     "blocs_precedents": [
                         "00000002"
                     ],
@@ -47,49 +41,154 @@
                     ]
                 },
                 {
-                    "etape_number": 1,
+                    "etape_number": 3,
                     "etape_position": 1,
                     "identifiant": "00000004",
-                    "title": "Bloc",
-                    "comment": "",
-                    "playlist_lien": "",
+                    "title": "2.B0-[Sit]-glad_you_did_not_change_your_mind",
+                    "comment": "v:  Salut, Panam.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/2.B0-[Sit]-glad_you_did_not_change_your_mind.json",
                     "blocs_precedents": [
                         "00000002"
                     ],
-                    "blocs_suivants": []
+                    "blocs_suivants": [
+                        "00000005"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 2,
+            "y": 250,
+            "width": 600,
+            "blocs": [
+                {
+                    "etape_number": 4,
+                    "etape_position": 0,
+                    "identifiant": "00000005",
+                    "title": "3.0-[Drink]-Talk_to_me",
+                    "comment": "v:  Je t'\u00e9coute.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/3.0-[Drink]-Talk_to_me.json",
+                    "blocs_precedents": [
+                        "00000003",
+                        "00000004"
+                    ],
+                    "blocs_suivants": [
+                        "00000007"
+                    ]
                 }
             ]
         },
         {
             "numero": 3,
             "y": 350,
-            "width": 622,
-            "blocs": []
+            "width": 600,
+            "blocs": [
+                {
+                    "etape_number": 5,
+                    "etape_position": 0,
+                    "identifiant": "00000007",
+                    "title": "3.1-[Drink]-Thought_you_and_Saul_agreed",
+                    "comment": "v:  Thought you and Saul'd agreed to bury your carbines.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/3.1-[Drink]-Thought_you_and_Saul_agreed.json",
+                    "blocs_precedents": [
+                        "00000005"
+                    ],
+                    "blocs_suivants": [
+                        "00000008",
+                        "00000009"
+                    ]
+                }
+            ]
         },
         {
             "numero": 4,
             "y": 450,
-            "width": 622,
+            "width": 600,
             "blocs": [
                 {
-                    "etape_number": 3,
+                    "etape_number": 4,
                     "etape_position": 0,
-                    "identifiant": "00000005",
-                    "title": "Bloc",
-                    "comment": "",
-                    "playlist_lien": "",
+                    "identifiant": "00000008",
+                    "title": "4.A0-[Drink]-Dont_worry_about_Saul",
+                    "comment": "v:  Hey, don't worry about Saul. He'll get over it.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/4.A0-[Drink]-Dont_worry_about_Saul.json",
                     "blocs_precedents": [
-                        "00000003"
+                        "00000007"
                     ],
-                    "blocs_suivants": []
+                    "blocs_suivants": [
+                        "00000010"
+                    ]
+                },
+                {
+                    "etape_number": 4,
+                    "etape_position": 1,
+                    "identifiant": "00000009",
+                    "title": "4.B0-[Drink]-Saul_could_be_right",
+                    "comment": "v:  Te vexe pas, mais\u2026 Saul a peut-\u00eatre raison.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/4.B0-[Drink]-Saul_could_be_right.json",
+                    "blocs_precedents": [
+                        "00000007"
+                    ],
+                    "blocs_suivants": [
+                        "00000011"
+                    ]
                 }
             ]
         },
         {
             "numero": 5,
             "y": 550,
-            "width": 622,
-            "blocs": []
+            "width": 600,
+            "blocs": [
+                {
+                    "etape_number": 5,
+                    "etape_position": 0,
+                    "identifiant": "00000010",
+                    "title": "4.A1-Don't exaggerate",
+                    "comment": "v:  C'mon, don't exaggerate.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/4.A1-Don't exaggerate.json",
+                    "blocs_precedents": [
+                        "00000008"
+                    ],
+                    "blocs_suivants": [
+                        "00000012"
+                    ]
+                },
+                {
+                    "etape_number": 5,
+                    "etape_position": 1,
+                    "identifiant": "00000011",
+                    "title": "4.B1-I_can_help",
+                    "comment": "v:  There any way I can help?",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/4.B1-I_can_help.json",
+                    "blocs_precedents": [
+                        "00000009"
+                    ],
+                    "blocs_suivants": [
+                        "00000012"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 6,
+            "y": 650,
+            "width": 600,
+            "blocs": [
+                {
+                    "etape_number": 6,
+                    "etape_position": 0,
+                    "identifiant": "00000012",
+                    "title": "5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel",
+                    "comment": "v:  Panam.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel.json",
+                    "blocs_precedents": [
+                        "00000010",
+                        "00000011"
+                    ],
+                    "blocs_suivants": []
+                }
+            ]
         }
     ]
 }

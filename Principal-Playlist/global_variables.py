@@ -8,6 +8,8 @@ playlist_count_label = None  # Définition initiale
 principal_count = None  # Définition initiale
 
 playlist_tree = None # la playlist
+# Variable globale pour la fenêtre de projet
+fenetre_projet = None
 
 vSexe  = None  # Définition initiale
 
