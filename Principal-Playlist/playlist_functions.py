@@ -1,4 +1,4 @@
-# fichier: playlist_functions.py
+# fichier: playlist.py
 import json, threading, pygame
 
 # Extraire uniquement le nom du fichier sans le chemin
@@ -8,7 +8,7 @@ from tkinter import ttk, filedialog, Menu
 from LectureOgg import JouerAudio, fusionnerPlaylist
 from general_functions import get_SousTitres_by_id, extraire_localise_path, get_Perso_from_Wem, nom_playlist
 
-import global_vars  # Accéder au Label global
+import global_variables  # Accéder au Label global
 
 
 
@@ -99,12 +99,12 @@ def setup_playlist(root, tree, tk, columns):
     clear_button.pack(side=tk.LEFT, padx=5)
 
     # Ajouter le Label pour afficher le nombre de lignes, à droite de clear_button
-    global_vars.playlist_name_label = tk.Label(button_frame, text="Playlist : " + global_vars.pas_Info)
-    global_vars.playlist_name_label.pack(side=tk.LEFT, padx=(10, 0))  # Alignez sur le côté gauche avec un petit espace    
+    global_variables.playlist_name_label = tk.Label(button_frame, text="Playlist : " + global_variables.pas_Info)
+    global_variables.playlist_name_label.pack(side=tk.LEFT, padx=(10, 0))  # Alignez sur le côté gauche avec un petit espace    
 
     # Ajouter le Label pour afficher le nombre de lignes, à droite de clear_button
-    global_vars.playlist_count_label = tk.Label(button_frame, text = global_vars.nombre_Ligne + " : 0")
-    global_vars.playlist_count_label.pack(side=tk.LEFT, padx=(10, 0))  # Alignez sur le côté gauche avec un petit espace
+    global_variables.playlist_count_label = tk.Label(button_frame, text = global_variables.nombre_Ligne + " : 0")
+    global_variables.playlist_count_label.pack(side=tk.LEFT, padx=(10, 0))  # Alignez sur le côté gauche avec un petit espace
 
 
     return playlist_tree
@@ -114,8 +114,8 @@ def SelectionLignePlayliste(event, playlist_tree):
     selected_item = playlist_tree.selection()[0]
     selected_values = playlist_tree.item(selected_item, 'values')
 
-    selected_gender = global_vars.vSexe.get()
-    if selected_gender == global_vars.vHomme:
+    selected_gender = global_variables.vSexe.get()
+    if selected_gender == global_variables.vHomme:
         audio_value = selected_values[4]
     else:
         audio_value = selected_values[3]
@@ -191,18 +191,18 @@ def save_playlist_to_file(playlist_tree):
             values = playlist_tree.item(child, "values")
             # Sauvegarder dans une structure
             playlist_data.append({
-                global_vars.data_ID: values[0],
-                global_vars.data_F_SubTitle: values[1],
-                global_vars.data_M_SubTitle: values[2],
-                global_vars.data_F_Voice: values[3],
-                global_vars.data_M_Voice: values[4],
-                global_vars.data_Quest: values[5]
+                global_variables.data_ID: values[0],
+                global_variables.data_F_SubTitle: values[1],
+                global_variables.data_M_SubTitle: values[2],
+                global_variables.data_F_Voice: values[3],
+                global_variables.data_M_Voice: values[4],
+                global_variables.data_Quest: values[5]
             })
         # Sauvegarder les données dans un fichier JSON
         with open(file_path, "w") as file:
             json.dump(playlist_data, file, indent=4)
         
-        global_vars.playlist_name_label.config(text=f"Playlist : {basename(file_path)}")
+        global_variables.playlist_name_label.config(text=f"Playlist : {basename(file_path)}")
 
 # Fonction pour charger la playlist à partir d'un fichier JSON
 def load_playlist_from_file(playlist_tree,tk):
@@ -210,6 +210,7 @@ def load_playlist_from_file(playlist_tree,tk):
         title="Load a playlist in JSON format", 
         filetypes=[("JSON files", "*.json")]
         )
+    print(f"Fichier playlist : {file_path}")
     if file_path:
         with open(file_path, "r") as file:
             playlist_data = json.load(file)
@@ -219,14 +220,14 @@ def load_playlist_from_file(playlist_tree,tk):
             # Ajouter les nouvelles données
             for entry in playlist_data:
                 #TRADUCTION ! Récupérer la quête
-                quete_path = extraire_localise_path(entry[global_vars.data_Quest])
+                quete_path = extraire_localise_path(entry[global_variables.data_Quest])
                 #print(f"Fichier Quete : {quete_path}")
                 fichierQuete = ""        
                 if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
                     fichierQuete = quete_path + ".json.json"
 
                 #print(f"Fichier Quete : {quete_path}")
-                result = get_SousTitres_by_id(fichierQuete, entry[global_vars.data_ID])
+                result = get_SousTitres_by_id(fichierQuete, entry[global_variables.data_ID])
                 if result:
                     #print(f"Female Variant: {result['femaleVariant']}")
                     #print(f"Male Variant: {result['maleVariant']}")
@@ -237,21 +238,21 @@ def load_playlist_from_file(playlist_tree,tk):
                     female_text = ""
                     male_text = ""  
 
-                if not male_text or male_text == global_vars.pas_Info:
+                if not male_text or male_text == global_variables.pas_Info:
                     male_text = female_text        
-                if not female_text or female_text == global_vars.pas_Info:
+                if not female_text or female_text == global_variables.pas_Info:
                     female_text = male_text # a Confirmer si ca existe !?                     
 
                 playlist_tree.insert("", tk.END, values=(
-                    entry[global_vars.data_ID],
+                    entry[global_variables.data_ID],
                     female_text,
                     male_text,
-                    entry[global_vars.data_F_Voice],
-                    entry[global_vars.data_M_Voice],
-                    entry[global_vars.data_Quest]
+                    entry[global_variables.data_F_Voice],
+                    entry[global_variables.data_M_Voice],
+                    entry[global_variables.data_Quest]
                 ))
         # Mettre à jour le compteur
-        global_vars.playlist_name_label.config(text=f"Playlist : {basename(file_path)}")
+        global_variables.playlist_name_label.config(text=f"Playlist : {basename(file_path)}")
         count_playlist_rows(playlist_tree)
         colorize_playlist_rows(playlist_tree)
 
@@ -287,8 +288,8 @@ def ecouterPlaylist(playlist_tree):
             
             selected_values = playlist_tree.item(item, "values")
 
-            selected_gender = global_vars.vSexe.get()
-            if selected_gender == global_vars.vHomme:
+            selected_gender = global_variables.vSexe.get()
+            if selected_gender == global_variables.vHomme:
                 audio_value = selected_values[4]
             else:
                 audio_value = selected_values[3]
@@ -332,10 +333,10 @@ def count_playlist_rows(playlist_tree):
     Compte et affiche le nombre de lignes dans le Treeview de la playlist.
     """
     row_count = len(playlist_tree.get_children())
-    if global_vars.playlist_count_label:  # Mettre à jour le Label global
-        global_vars.playlist_count_label.config(text=f"{global_vars.nombre_Ligne}: {row_count}")
+    if global_variables.playlist_count_label:  # Mettre à jour le Label global
+        global_variables.playlist_count_label.config(text=f"{global_variables.nombre_Ligne}: {row_count}")
     else:
-        print(f"{global_vars.nombre_Ligne} : {row_count}")
+        print(f"{global_variables.nombre_Ligne} : {row_count}")
 
 
 def colorize_playlist_rows(playlist_tree):
@@ -395,8 +396,8 @@ def save_playlist_to_txt(playlist_tree):
                 # Parcourir les lignes du tableau
                 for child in playlist_tree.get_children():
                     values = playlist_tree.item(child, "values")
-                    selected_gender = global_vars.vSexe.get()
-                    if selected_gender == global_vars.vHomme:
+                    selected_gender = global_variables.vSexe.get()
+                    if selected_gender == global_variables.vHomme:
                         Perso = get_Perso_from_Wem(values[4])  
                         sousTitre = values[2]
                     else:

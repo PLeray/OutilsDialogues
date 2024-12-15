@@ -9,7 +9,7 @@ import tkinter as tk
 from tkinter import filedialog
 from pydub import AudioSegment
 
-import global_vars  # Importer les variables globales
+import global_variables  # Importer les variables globales
 
 from general_functions import extraire_localise_path, nom_playlist
 
@@ -40,21 +40,21 @@ def play_ogg_file(file_path):
 """
 def generate_audio_path(audio_value):
     # Vérifier si audio_value est valide
-    if audio_value == global_vars.pas_Info:
+    if audio_value == global_variables.pas_Info:
         return False
 
     # Reconstruire le chemin
     try:
         # Remplacer '{}' par le chemin de localisation completn'existe pas
         if "{}" in audio_value:
-            audio_value = audio_value.replace("{}", global_vars.CheminLocalization + global_vars.CheminLangue)
+            audio_value = audio_value.replace("{}", global_variables.CheminLocalization + global_variables.CheminLangue)
 
         # Remplacer l'extension '.wem' par '.ogg'
         if audio_value.endswith(".wem"):
             audio_value = audio_value[:-4] + ".ogg"
 
         # Ajouter le chemin racine
-        full_path = global_vars.project_path + audio_value
+        full_path = global_variables.project_path + audio_value
         #print(f"chemin du fichier localiser : {full_path}")
         return full_path
     except Exception as e:
@@ -107,10 +107,10 @@ def convert_wem_to_ogg_if_needed(ogg_path):
                 temp_ogg_path = temp_ogg_file.name
 
             conversion_command = [
-                global_vars.ww2ogg_path,
+                global_variables.ww2ogg_path,
                 wem_path,
                 "--pcb",
-                global_vars.codebooks_path,
+                global_variables.codebooks_path,
                 "-o",
                 temp_ogg_path
             ]
@@ -125,7 +125,7 @@ def convert_wem_to_ogg_if_needed(ogg_path):
 
             # Appliquer revorb directement au fichier temporaire .ogg généré
             revorb_command = [
-                global_vars.revorb_path,
+                global_variables.revorb_path,
                 temp_ogg_path,
                 ogg_path
             ]
@@ -161,9 +161,9 @@ def fusionnerPlaylist(playlist_tree):
 
     for item in items:
         selected_values = playlist_tree.item(item, "values")
-        selected_gender = global_vars.vSexe.get()
+        selected_gender = global_variables.vSexe.get()
         
-        if selected_gender == global_vars.vHomme:
+        if selected_gender == global_variables.vHomme:
             audio_value = selected_values[4]
         else:
             audio_value = selected_values[3]

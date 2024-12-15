@@ -1,15 +1,17 @@
 import configparser, os, json
 from tkinter import filedialog, Tk
 from threading import Thread
-import global_vars  # Importer les variables globales
+import global_variables  # Importer les variables globales
+
+
 
 def initConfigGlobale():
     config_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.ini")
     config = read_config(config_file_path)
-    global_vars.ww2ogg_path = config['WW2OGG_PATH']
-    global_vars.revorb_path = config['REVORB_PATH']
-    global_vars.codebooks_path = config['CODEBOOKS_PATH']
-    #global_vars.project_path = config['PROJECT_PATH'] + "/source/raw/"
+    global_variables.ww2ogg_path = config['WW2OGG_PATH']
+    global_variables.revorb_path = config['REVORB_PATH']
+    global_variables.codebooks_path = config['CODEBOOKS_PATH']
+    #global_variables.project_path = config['PROJECT_PATH'] + "/source/raw/"
 
 # Lire les chemins depuis le fichier de configuration
 def read_config(config_path):
@@ -54,21 +56,21 @@ def find_localization_subfolders(project_path):
 
 def extraire_localise_path(chemin_generic):  #pour recontruire chemin avec {}
     # Vérifier si chemin_generic est valide
-    if chemin_generic == global_vars.pas_Info:
+    if chemin_generic == global_variables.pas_Info:
         return False
 
     # Reconstruire le chemin
     try:
         # Remplacer '{}' par le chemin de localisation completn'existe pas
         if "{}" in chemin_generic:
-            chemin_generic = chemin_generic.replace("{}", global_vars.CheminLocalization + global_vars.CheminLangue)
+            chemin_generic = chemin_generic.replace("{}", global_variables.CheminLocalization + global_variables.CheminLangue)
 
         # Dans le cas des fichiers voix, Remplacer l'extension '.wem' par '.ogg'
         if chemin_generic.endswith(".wem"):
             chemin_generic = chemin_generic[:-4] + ".ogg"
 
         # Ajouter le chemin racine
-        full_path = global_vars.project_path + chemin_generic
+        full_path = global_variables.project_path + chemin_generic
         #print(f"chemin du fichier localiser : {full_path}")
         return full_path
     except Exception as e:
@@ -110,7 +112,7 @@ def get_Perso_from_Wem(value):
     return personnage
 
 def nom_playlist():    # Récupérer le texte du Label et le nom de la playlist sans extension
-    texte_playlist = global_vars.playlist_name_label.cget("text")
+    texte_playlist = global_variables.playlist_name_label.cget("text")
     nom_playlist = texte_playlist.split(" : ")[1]  # Extraire le nom de la playlist
     nom_sans_extension = os.path.splitext(nom_playlist)[0] 
     #print(f"nom_sans_extension : {nom_sans_extension}.")

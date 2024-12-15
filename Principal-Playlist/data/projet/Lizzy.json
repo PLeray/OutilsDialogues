@@ -1,0 +1,122 @@
+[
+    {
+        "stringId": "1792582527954624512",
+        "femaleVariant": "Je comprends. C'est bien, de r\u00e9fl\u00e9chir. Au lieu de foncer t\u00eate baiss\u00e9e, et de regretter apr\u00e8s.",
+        "maleVariant": "Je comprends. C'est bien, de r\u00e9fl\u00e9chir. Au lieu de foncer t\u00eate baiss\u00e9e, et de regretter apr\u00e8s.",
+        "female_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_18e0884fc94ea000.wem",
+        "male_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_18e0884fc94ea000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/mq019/mq019_01_notell_motel"
+    },
+    {
+        "stringId": "1803811223730298884",
+        "femaleVariant": "All\u00f4\u00a0? V\u00a0? Quoi de neuf\u00a0?",
+        "maleVariant": "All\u00f4\u00a0? V\u00a0? Quoi de neuf\u00a0?",
+        "female_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_19086cc0404ea004.wem",
+        "male_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_19086cc0404ea004.wem",
+        "quest_path": "base/{}/subtitles/quest/mq019/mq019_05_holocall"
+    },
+    {
+        "stringId": "1803912807189487616",
+        "femaleVariant": "J'aime ce qui est en train de m'arriver.",
+        "maleVariant": "J'aime ce qui est en train de m'arriver.",
+        "female_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1908c923fe4ea000.wem",
+        "male_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1908c923fe4ea000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq019/mq019_06_finale"
+    },
+    {
+        "stringId": "1804208150733037580",
+        "femaleVariant": "Non, bien au contraire. Tout est enfin en train de se mettre en place.",
+        "maleVariant": "Non, bien au contraire. Tout est enfin en train de se mettre en place.",
+        "female_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1909d5c1054ea00c.wem",
+        "male_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1909d5c1054ea00c.wem",
+        "quest_path": "base/{}/subtitles/quest/mq019/mq019_06_finale"
+    },
+    {
+        "stringId": "1803870607692963840",
+        "femaleVariant": "V\u00a0? J'ai besoin de votre aide.",
+        "maleVariant": "V\u00a0? J'ai besoin de votre aide.",
+        "female_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1908a2c2a84ea000.wem",
+        "male_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1908a2c2a84ea000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq019/mq019_05_holocall"
+    },
+    {
+        "stringId": "1945753901483741184",
+        "femaleVariant": "Pourquoi\u00a0?",
+        "maleVariant": "Pourquoi\u00a0?",
+        "female_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1b00b4dd4644d000.wem",
+        "male_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1b00b4dd4644d000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/mq019/mq019_01_notell_motel"
+    },
+    {
+        "stringId": "1944611931521196032",
+        "femaleVariant": "Non\u2026 je ne vous crois pas. Vous m'entendez\u00a0? Je n'en crois pas un mot. Vous mentez.",
+        "maleVariant": "Non\u2026 je ne vous crois pas. Vous m'entendez\u00a0? Je n'en crois pas un mot. Vous mentez.",
+        "female_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1afca63fac4ea000.wem",
+        "male_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1afca63fac4ea000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq019/mq019_05_holocall"
+    },
+    {
+        "stringId": "1945789868529733632",
+        "femaleVariant": "J'ai beau avoir un corps en chrome... mon c\u0153ur est rest\u00e9 le m\u00eame. Et le c\u0153ur a ses raisons.",
+        "maleVariant": "J'ai beau avoir un corps en chrome... mon c\u0153ur est rest\u00e9 le m\u00eame. Et le c\u0153ur a ses raisons.",
+        "female_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1b00d5938144d000.wem",
+        "male_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1b00d5938144d000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/mq019/mq019_01_notell_motel"
+    },
+    {
+        "stringId": "1945792787345887232",
+        "femaleVariant": "Ugh... C'est tellement clich\u00e9 que c'en est g\u00eanant.",
+        "maleVariant": "Ugh... C'est tellement clich\u00e9 que c'en est g\u00eanant.",
+        "female_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1b00d83b1844d000.wem",
+        "male_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1b00d83b1844d000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/mq019/mq019_01_notell_motel"
+    },
+    {
+        "stringId": "1945806120400769024",
+        "femaleVariant": "Hah\u00a0! Vous \u00eates trop mignonne\u00a0!",
+        "maleVariant": "Hah\u00a0! Vous \u00eates trop mignon\u00a0!",
+        "female_vo_path": "base/{}/vo/lizzy_wizzy_mq019_f_1b00e45b7044d000.wem",
+        "male_vo_path": "base/{}/vo/lizzy_wizzy_mq019_m_1b00e45b7044d000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/mq019/mq019_01_notell_motel"
+    },
+    {
+        "stringId": "3162410257451302912",
+        "femaleVariant": "Prenez soin de vous, V. Continuez \u00e0 profiter de chaque instant que la vie offre\u00a0!",
+        "maleVariant": "Prenez soin de vous, V. Continuez \u00e0 profiter de chaque instant que la vie offre\u00a0!",
+        "female_vo_path": "ep1/{}/vo/lizzy_wizzy_q303_f_2be3235fbd6fc000.wem",
+        "male_vo_path": "ep1/{}/vo/lizzy_wizzy_q303_f_2be3235fbd6fc000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_08_reed_conversation"
+    },
+    {
+        "stringId": "3345180263110021120",
+        "femaleVariant": "Ouais... Jamais aussi bien.",
+        "maleVariant": "Ouais... Jamais aussi bien.",
+        "female_vo_path": "ep1/{}/vo/lizzy_wizzy_q303_f_2e6c77b9cc521000.wem",
+        "male_vo_path": "ep1/{}/vo/lizzy_wizzy_q303_f_2e6c77b9cc521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_08_reed_conversation"
+    },
+    {
+        "stringId": "3345178349232328704",
+        "femaleVariant": "Je... Je vais tr\u00e8s bien. J'ai retrouv\u00e9 l'inspiration. Je me suis jamais sentie aussi bien.",
+        "maleVariant": "Je... Je vais tr\u00e8s bien. J'ai retrouv\u00e9 l'inspiration. Je me suis jamais sentie aussi bien.",
+        "female_vo_path": "ep1/{}/vo/lizzy_wizzy_q303_f_2e6c75fc30521000.wem",
+        "male_vo_path": "ep1/{}/vo/lizzy_wizzy_q303_f_2e6c75fc30521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_08_reed_conversation"
+    },
+    {
+        "stringId": "3345172527102169088",
+        "femaleVariant": "Je veux que vous l'ayez.",
+        "maleVariant": "Je veux que vous l'ayez.",
+        "female_vo_path": "ep1/{}/vo/lizzy_wizzy_q303_f_2e6c70b09e521000.wem",
+        "male_vo_path": "ep1/{}/vo/lizzy_wizzy_q303_f_2e6c70b09e521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_08_reed_conversation"
+    },
+    {
+        "stringId": "3456572400501657600",
+        "femaleVariant": "Ah, l'aventure\u00a0! Yes ! J'esp\u00e8re que t'es aussi excit\u00e9 que moi\u00a0!",
+        "maleVariant": "Ah, l'aventure\u00a0! Yes ! J'esp\u00e8re que t'es aussi excit\u00e9 que moi\u00a0!",
+        "female_vo_path": "ep1/{}/vo/lizzy_wizzy_q303_f_2ff83648d8521000.wem",
+        "male_vo_path": "ep1/{}/vo/lizzy_wizzy_q303_f_2ff83648d8521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_08_reed_conversation"
+    }
+]

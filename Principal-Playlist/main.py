@@ -1,15 +1,44 @@
 # fichier: main.py
 import tkinter as tk
-
 from tkinter import ttk
-from main_list_functions import open_and_display_json, SelectionLigne, setup_TableauPrincipal
+import time
+
+import global_variables  # Importer les variables globales
+from general_functions import initConfigGlobale, find_localization_subfolders, read_or_initialize_userconf, update_language_userconf
+
+from recherche_functions import open_and_display_json, SelectionLigne, setup_TableauPrincipal
 from playlist_functions import select_and_add_to_playlist, setup_playlist
 from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
 
-import global_vars  # Importer les variables globales
-from general_functions import initConfigGlobale, find_localization_subfolders, read_or_initialize_userconf, update_language_userconf
+from CstepBlockApp import StepBlockApp
 
-import time
+
+def show_hello_world():
+    # Créer une nouvelle fenêtre
+    window = tk.Tk()
+    window.title("Message")  # Titre de la fenêtre
+    window.geometry("200x100")  # Dimensions de la fenêtre
+
+    # Ajouter une étiquette avec le message
+    label = tk.Label(window, text="Hello World!")
+    label.pack(pady=20)  # Ajouter un peu d'espace autour
+
+    # Ajouter un bouton pour fermer la fenêtre
+    close_button = tk.Button(window, text="Fermer", command=window.destroy)
+    close_button.pack(pady=10)
+
+    # Lancer la boucle principale
+    window.mainloop()
+
+def OuvrirProjet():
+    # Créer une nouvelle fenêtre
+    arbreProjet = tk.Tk()
+    arbreProjet.geometry("600x800")  # Largeur: 1200px, Hauteur: 800px
+
+    app = StepBlockApp(arbreProjet)
+
+    # Lancer la boucle principale
+    arbreProjet.mainloop()
 
 def long_function():
     # Changer le curseur en icône d'attente
@@ -24,8 +53,8 @@ def long_function():
     root.update_idletasks()
 
 def maj_Langue(str_langue):
-    global_vars.CheminLangue = str_langue
-    global_vars.bdd_Localisation_Json = "data/BDDjson/Base_" + str_langue + ".json"
+    global_variables.CheminLangue = str_langue
+    global_variables.bdd_Localisation_Json = "data/BDDjson/Base_" + str_langue + ".json"
 
 # Créer la fenêtre principale
 root = tk.Tk()
@@ -35,7 +64,7 @@ root.minsize(1100, 800)
 
 initConfigGlobale()
 
-global_vars.rootAccess = root #initialisation de la variable globale root pour y acceder dans les fonctions
+global_variables.rootAccess = root #initialisation de la variable globale root pour y acceder dans les fonctions
 
 userconf_data = read_or_initialize_userconf()
 #print(f"userconf_data : {userconf_data}")
@@ -45,13 +74,21 @@ project_path = userconf_data["SETTINGS"].get("PROJECT_WOLVENKIT_PATH")
 if not project_path:
     raise ValueError("Le chemin 'PROJECT_WOLVENKIT_PATH' est introuvable ou invalide dans userconf.ini.")
 
-global_vars.project_path = project_path + "/source/raw/"
+global_variables.project_path = project_path + "/source/raw/"
 
-localization_languages = find_localization_subfolders(global_vars.project_path)
+localization_languages = find_localization_subfolders(global_variables.project_path)
 
 # Créer une frame pour le bouton au-dessus du tableau principal
 button_frame = tk.Frame(root)
 button_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
+
+# Ajouter un bouton "Projet" à gauche de la liste déroulante
+project_button = tk.Button(
+    button_frame,
+    text="Projet",
+    command=lambda: OuvrirProjet()
+)
+project_button.pack(side=tk.LEFT, padx=5, pady=5)
 
 # Ajouter une liste déroulante (ComboBox)
 language_var = tk.StringVar()
@@ -65,10 +102,10 @@ language_dropdown = ttk.Combobox(
 
 # Définir une valeur par défaut pour la liste déroulante
 maj_Langue(userconf_data["SETTINGS"].get("LANGUAGE"))
-global_vars.CheminLangue = userconf_data["SETTINGS"].get("LANGUAGE")
-global_vars.bdd_Localisation_Json = "data/BDDjson/Base_" + global_vars.CheminLangue + ".json"
-if global_vars.CheminLangue in localization_languages:
-    language_dropdown.set(global_vars.CheminLangue)  # Définit la valeur par défaut
+global_variables.CheminLangue = userconf_data["SETTINGS"].get("LANGUAGE")
+global_variables.bdd_Localisation_Json = "data/BDDjson/Base_" + global_variables.CheminLangue + ".json"
+if global_variables.CheminLangue in localization_languages:
+    language_dropdown.set(global_variables.CheminLangue)  # Définit la valeur par défaut
 else:
     language_dropdown.set("Sélectionnez une langue")  # Définit une valeur par défaut générique
 
@@ -78,13 +115,14 @@ language_dropdown.pack(side=tk.LEFT, padx=5, pady=5)
 text_label = tk.Label(button_frame, text="Donner ici queles explications sur souris bouton usage ...", font=("Arial", 10))
 text_label.pack(side=tk.LEFT, padx=5, pady=5)
 
+
 # Ajouter une commande lors de la sélection
 def on_language_selected(event):
-    global_vars.dataSound = None
+    global_variables.dataSound = None
     maj_Langue(language_var.get())
-    update_language_userconf(global_vars.CheminLangue)
-    # mettre ca si on veut les langues des tableau synchro filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json)
-    print(f"Langue sélectionnée : {global_vars.CheminLangue}")
+    update_language_userconf(global_variables.CheminLangue)
+    # mettre ca si on veut les langues des tableau synchro filter_tree_with_filters(tree, filters, global_variables.bdd_Localisation_Json)
+    print(f"Langue sélectionnée : {global_variables.CheminLangue}")
 
 language_dropdown.bind("<<ComboboxSelected>>", on_language_selected)
 
@@ -104,19 +142,19 @@ style.map(
 )
 
 # Créer une variable pour gérer l'état des boutons radio
-global_vars.vSexe = tk.StringVar(value=global_vars.vHomme)  # Par défaut sur "homme"
+global_variables.vSexe = tk.StringVar(value=global_variables.vHomme)  # Par défaut sur "homme"
 
 #definition du Tableau Principal
-tree = setup_TableauPrincipal(root, tk, global_vars.columns)
+tree = setup_TableauPrincipal(root, tk, global_variables.columns)
 
 # Fonction pour configurer le tableau de playlist
-playlist_tree = setup_playlist(root, tree, tk, global_vars.columns)
+playlist_tree = setup_playlist(root, tree, tk, global_variables.columns)
 
 
 
 # Ajouter le Label pour les lignes correspondantes
-global_vars.principal_count = tk.Label(filter_frame, text="Nb de lignes : 0")
-global_vars.principal_count.grid(row=1, column=9, padx=5)
+global_variables.principal_count = tk.Label(filter_frame, text="Nb de lignes : 0")
+global_variables.principal_count.grid(row=1, column=9, padx=5)
 
 
 
@@ -124,19 +162,19 @@ global_vars.principal_count.grid(row=1, column=9, padx=5)
 apply_all_filters_button = tk.Button(
     filter_frame,
     text="Apply all filters ✔️",
-    command=lambda: filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json)
+    command=lambda: filter_tree_with_filters(tree, filters, global_variables.bdd_Localisation_Json)
     #command=lambda: apply_all_filters(tree, filters)
 )
 apply_all_filters_button.grid(row=1, column=7, padx=5)
 
-root.bind('<Return>', lambda event: filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json))
+root.bind('<Return>', lambda event: filter_tree_with_filters(tree, filters, global_variables.bdd_Localisation_Json))
 
 # Ajouter un bouton pour réinitialiser les filtres
 reset_filter_button = tk.Button(
     filter_frame,
     text="Reset filters ✖️",
     command=lambda: [
-        reset_filters(tree, filters, global_vars.bdd_Localisation_Json)
+        reset_filters(tree, filters, global_variables.bdd_Localisation_Json)
     ]
     
 )
@@ -147,14 +185,14 @@ na_var = tk.BooleanVar(value=True)  # Initialiser à "coché" (True)
 
 checkbox_na = tk.Checkbutton(
     filter_frame,
-    text="keep lines with " + global_vars.pas_Info,
+    text="keep lines with " + global_variables.pas_Info,
     variable=na_var,
     command=lambda: filter_NA(tree, na_var)  # Appeler le filtre quand l'état change
 )
 checkbox_na.grid(row=1, column=12, padx=5)
 
 # Charger les données dans le tableau
-open_and_display_json(tree, global_vars.bdd_Localisation_Json)
+open_and_display_json(tree, global_variables.bdd_Localisation_Json)
 
 def on_personnage_selected(event):
     personnage_value = event.widget.get()
@@ -178,24 +216,34 @@ def resize_columns(event):
 # Créer les champs de filtre uniquement pour les colonnes sélectionnées
 filters = []  # Initialisation de la liste des filtres
 
+width_mapping = {
+    global_variables.titleCol_F_Voice: 15,
+    global_variables.titleCol_M_Voice: 15,
+    global_variables.titleCol_Quest: 40,
+}
 # Création des filtres avec labels explicites
-for i, column in enumerate(global_vars.columns):
-    label = tk.Label(filter_frame, text=f"{global_vars.filter_with}{column}")  #Filter with
+for i, column in enumerate(global_variables.columns):
+    label = tk.Label(filter_frame, text=f"{global_variables.filter_with}{column}")  #Filter with
     label.grid(row=0, column=i, padx=5)
-
-    if column in [global_vars.titleCol_F_Voice, global_vars.titleCol_M_Voice, global_vars.titleCol_Quest]:  # ComboBox
+    """
+    if column in [global_variables.titleCol_F_Voice, global_variables.titleCol_M_Voice, global_variables.titleCol_Quest]:  # ComboBox
         entry = ttk.Combobox(filter_frame, state="readonly")
-        if column == global_vars.titleCol_F_Voice:
+    """
+
+
+    if column in width_mapping:  # Combobox avec largeur spécifique
+        entry = ttk.Combobox(filter_frame, state="readonly", width=width_mapping[column])        
+        if column == global_variables.titleCol_F_Voice:
             entry["values"] = initialize_personnage_droplist(tree, 3)
-            entry.set(global_vars.setToAll)
+            entry.set(global_variables.setToAll)
             entry.bind("<<ComboboxSelected>>", on_personnage_selected)
-        elif column == global_vars.titleCol_M_Voice:
+        elif column == global_variables.titleCol_M_Voice:
             entry["values"] = initialize_personnage_droplist(tree, 4)
-            entry.set(global_vars.setToAll)
+            entry.set(global_variables.setToAll)
             entry.bind("<<ComboboxSelected>>", on_personnage_selected)
-        elif column == global_vars.titleCol_Quest:
+        elif column == global_variables.titleCol_Quest:
             entry["values"] = initialize_quete_droplist(tree, 5)
-            entry.set(global_vars.setToAll)
+            entry.set(global_variables.setToAll)
             entry.bind("<<ComboboxSelected>>", on_quete_selected)
     else:  # TextBox
         entry = tk.Entry(filter_frame)
@@ -208,9 +256,9 @@ for i, column in enumerate(global_vars.columns):
 # Bouton radio pour "Homme"
 radio_homme = tk.Radiobutton(
     filter_frame,
-    text=global_vars.vHomme,
-    variable=global_vars.vSexe,
-    value=global_vars.vHomme,
+    text=global_variables.vHomme,
+    variable=global_variables.vSexe,
+    value=global_variables.vHomme,
     command=lambda: toggle_columns(tree, playlist_tree, filters)  # Appeler la fonction de mise à jour des colonnes
 )
 radio_homme.grid(row=1, column=10, padx=5)
@@ -218,14 +266,14 @@ radio_homme.grid(row=1, column=10, padx=5)
 # Bouton radio pour "Femme"
 radio_femme = tk.Radiobutton(
     filter_frame,
-    text=global_vars.vFemme,
-    variable=global_vars.vSexe,
-    value=global_vars.vFemme,
+    text=global_variables.vFemme,
+    variable=global_variables.vSexe,
+    value=global_variables.vFemme,
     command=lambda: toggle_columns(tree, playlist_tree,  filters)  # Appeler la fonction de mise à jour des colonnes
 )
 radio_femme.grid(row=1, column=11, padx=5)
 
-#filter_tree_with_filters(tree, filters, global_vars.bdd_Localisation_Json)
+#filter_tree_with_filters(tree, filters, global_variables.bdd_Localisation_Json)
 
 
 

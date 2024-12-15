@@ -1,0 +1,62 @@
+{
+    "name": "Nouvelle S\u00e9quence",
+    "etapes": [
+        {
+            "numero": 0,
+            "y": 50,
+            "width": 646,
+            "blocs": []
+        },
+        {
+            "numero": 1,
+            "y": 150,
+            "width": 646,
+            "blocs": [
+                {
+                    "etape_number": 0,
+                    "etape_position": 0,
+                    "identifiant": "00000002",
+                    "title": "Bloc",
+                    "comment": "panam:  V ?",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/1.0-Do_i_know you.json",
+                    "blocs_precedents": [],
+                    "blocs_suivants": [
+                        "00000003",
+                        "00000004"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 2,
+            "y": 250,
+            "width": 646,
+            "blocs": [
+                {
+                    "etape_number": 1,
+                    "etape_position": 0,
+                    "identifiant": "00000003",
+                    "title": "Bloc",
+                    "comment": "",
+                    "playlist_lien": "",
+                    "blocs_precedents": [
+                        "00000002"
+                    ],
+                    "blocs_suivants": []
+                },
+                {
+                    "etape_number": 1,
+                    "etape_position": 1,
+                    "identifiant": "00000004",
+                    "title": "Bloc",
+                    "comment": "",
+                    "playlist_lien": "",
+                    "blocs_precedents": [
+                        "00000002"
+                    ],
+                    "blocs_suivants": []
+                }
+            ]
+        }
+    ]
+}

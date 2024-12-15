@@ -1,9 +1,9 @@
 # fichier: filtrage.py
 import tkinter as tk
 from tkinter import ttk
-from main_list_functions import open_and_display_json
+from recherche_functions import open_and_display_json
 
-import global_vars  # Importer les variables globales
+import global_variables  # Importer les variables globales
 from general_functions import get_Perso_from_Wem
 
 
@@ -13,8 +13,8 @@ def reset_filters(tree, filters, file_path):
     for column_name, _, widget in filters:  # Ignorer les labels et récupérer uniquement les widgets
         if isinstance(widget, ttk.Combobox):  # Vérifie si c'est une Combobox
             # Déterminer la valeur par défaut à utiliser
-            #default_value = "All" if column_name in [global_vars.column_M_Voice, global_vars.titleCol_F_Voice] else "All"
-            default_value = global_vars.setToAll          
+            #default_value = "All" if column_name in [global_variables.column_M_Voice, global_variables.titleCol_F_Voice] else "All"
+            default_value = global_variables.setToAll          
             if default_value in widget["values"]:
                 widget.set(default_value)  # Appliquer la valeur manuellement
                 widget.current(widget["values"].index(default_value))  # Positionner à l'index de "Tous" ou "Toutes"
@@ -72,8 +72,8 @@ def filter_tree_with_filters(tree, filters, file_path):
 
             # Filtrage via Combobox
             if isinstance(widget, ttk.Combobox):
-                #if filter_value in [global_vars.setToAll, global_vars.setToAll]:
-                if filter_value in [global_vars.setToAll]:                    
+                #if filter_value in [global_variables.setToAll, global_variables.setToAll]:
+                if filter_value in [global_variables.setToAll]:                    
                     continue  # Ignorer les valeurs par défaut
 
                 # Extraire la valeur pertinente
@@ -100,7 +100,7 @@ def filter_tree_with_filters(tree, filters, file_path):
             tree.detach(item)
 
     # Mettre à jour le label avec le nombre de lignes correspondantes
-    global_vars.principal_count.config(text=f"{global_vars.nombre_Ligne} : {matching_count}")
+    global_variables.principal_count.config(text=f"{global_variables.nombre_Ligne} : {matching_count}")
 
 
 
@@ -122,7 +122,7 @@ def initialize_personnage_droplist(tree, column_index):
             personnages.add(personnage)
 
     sorted_personnages = sorted(personnages)  # Trier les personnages
-    return [global_vars.setToAll] + sorted_personnages  # Ajouter "Tous" au début
+    return [global_variables.setToAll] + sorted_personnages  # Ajouter "Tous" au début
 
 def initialize_quete_droplist(tree, column_index):
     """
@@ -136,15 +136,15 @@ def initialize_quete_droplist(tree, column_index):
     for item in tree.get_children():
         # Récupérer la valeur de la colonne
         value = tree.item(item, "values")[column_index]
-        if value == global_vars.pas_Info:
-            quetes.add(global_vars.pas_Info)  # Ajouter directement pas_Info sans modification
+        if value == global_variables.pas_Info:
+            quetes.add(global_variables.pas_Info)  # Ajouter directement pas_Info sans modification
         elif value:
             # Extraire la partie après le dernier "/"
             quete = value.split("/")[-1]
             quetes.add(quete)
 
     sorted_quetes = sorted(quetes)  # Trier les quêtes
-    return [global_vars.setToAll] + sorted_quetes  # Ajouter "Toutes" au début
+    return [global_variables.setToAll] + sorted_quetes  # Ajouter "Toutes" au début
 
 
 def update_quete_based_on_personnage(tree, filters, quete_column_index, personnage_column_index, personnage_value):
@@ -160,7 +160,7 @@ def update_quete_based_on_personnage(tree, filters, quete_column_index, personna
     quete_combobox = None
     # Trouver la combobox associée aux quêtes
     for column_name, _, widget in filters:
-        if column_name == global_vars.titleCol_Quest and isinstance(widget, ttk.Combobox):
+        if column_name == global_variables.titleCol_Quest and isinstance(widget, ttk.Combobox):
             quete_combobox = widget
             break
 
@@ -181,19 +181,19 @@ def update_quete_based_on_personnage(tree, filters, quete_column_index, personna
         quete_val = values[quete_column_index].strip() if values[quete_column_index] else ""
 
         # Ajouter les quêtes associées au personnage sélectionné
-        #if personnage_value in [global_vars.setToAll, global_vars.setToAll, global_vars.pas_Info] or personnage_value.lower() in personnage_val.lower():
-        if personnage_value in [global_vars.setToAll, global_vars.pas_Info] or personnage_value.lower() in personnage_val.lower():            
+        #if personnage_value in [global_variables.setToAll, global_variables.setToAll, global_variables.pas_Info] or personnage_value.lower() in personnage_val.lower():
+        if personnage_value in [global_variables.setToAll, global_variables.pas_Info] or personnage_value.lower() in personnage_val.lower():            
             quete_val = values[quete_column_index].split("/")[-1] if "/" in values[quete_column_index] else values[quete_column_index]
             quetes.add(quete_val)
 
     # Mettre à jour les options de la Combobox des quêtes
-    quete_combobox["values"] = [global_vars.setToAll] + sorted(quetes)
+    quete_combobox["values"] = [global_variables.setToAll] + sorted(quetes)
 
     # Rétablir la sélection précédente si elle est toujours valide
     if current_selection in quetes:
         quete_combobox.set(current_selection)
     else:
-        quete_combobox.set(global_vars.setToAll)
+        quete_combobox.set(global_variables.setToAll)
 
 
 def update_personnage_based_on_quete(tree, filters, quete_column_index, personnage_column_indexes, quete_value):
@@ -215,9 +215,9 @@ def update_personnage_based_on_quete(tree, filters, quete_column_index, personna
     voix_m_combobox = None
 
     for column_name, _, widget in filters:
-        if column_name == global_vars.titleCol_F_Voice and isinstance(widget, ttk.Combobox):
+        if column_name == global_variables.titleCol_F_Voice and isinstance(widget, ttk.Combobox):
             voix_f_combobox = widget
-        elif column_name == global_vars.titleCol_M_Voice and isinstance(widget, ttk.Combobox):
+        elif column_name == global_variables.titleCol_M_Voice and isinstance(widget, ttk.Combobox):
             voix_m_combobox = widget
 
     if not voix_f_combobox and not voix_m_combobox:
@@ -246,8 +246,8 @@ def update_personnage_based_on_quete(tree, filters, quete_column_index, personna
 
         # Ajouter les personnages associés à la quête sélectionnée (avec extraction de la partie utile)
         if (
-            #quete_value in [global_vars.setToAll, global_vars.setToAll] or  # Toutes les quêtes
-            quete_value in [global_vars.setToAll] or  # Toutes les quêtes
+            #quete_value in [global_variables.setToAll, global_variables.setToAll] or  # Toutes les quêtes
+            quete_value in [global_variables.setToAll] or  # Toutes les quêtes
             quete_value.lower() in quete_val.lower()  # Quête correspondante
         ):
             voix_f_personnages.add(
@@ -260,26 +260,26 @@ def update_personnage_based_on_quete(tree, filters, quete_column_index, personna
     # Mettre à jour la Combobox de "(F) Voix"
     if voix_f_combobox:
         if voix_f_personnages:
-            voix_f_combobox["values"] = [global_vars.setToAll] + sorted(voix_f_personnages)
+            voix_f_combobox["values"] = [global_variables.setToAll] + sorted(voix_f_personnages)
             if current_selection_f in voix_f_personnages:
                 voix_f_combobox.set(current_selection_f)
             else:
-                voix_f_combobox.set(global_vars.setToAll)
+                voix_f_combobox.set(global_variables.setToAll)
         else:
-            voix_f_combobox["values"] = [global_vars.setToAll]
-            voix_f_combobox.set(global_vars.setToAll)
+            voix_f_combobox["values"] = [global_variables.setToAll]
+            voix_f_combobox.set(global_variables.setToAll)
 
     # Mettre à jour la Combobox de "(M) Voix"
     if voix_m_combobox:
         if voix_m_personnages:
-            voix_m_combobox["values"] = [global_vars.setToAll] + sorted(voix_m_personnages)
+            voix_m_combobox["values"] = [global_variables.setToAll] + sorted(voix_m_personnages)
             if current_selection_m in voix_m_personnages:
                 voix_m_combobox.set(current_selection_m)
             else:
-                voix_m_combobox.set(global_vars.setToAll)
+                voix_m_combobox.set(global_variables.setToAll)
         else:
-            voix_m_combobox["values"] = [global_vars.setToAll]
-            voix_m_combobox.set(global_vars.setToAll)
+            voix_m_combobox["values"] = [global_variables.setToAll]
+            voix_m_combobox.set(global_variables.setToAll)
 
 
 def filter_NA(tree, na_var):
@@ -297,7 +297,7 @@ def filter_NA(tree, na_var):
         values = tree.item(item, "values")  # Récupère les valeurs de la ligne
 
         # Vérifier si la 4ᵉ colonne contient 'N/A'
-        if not show_na and values[3] == global_vars.pas_Info:
+        if not show_na and values[3] == global_variables.pas_Info:
             tree.detach(item)  # Masquer la ligne
         else:
             tree.item(item, open=True)  # Afficher la ligne
@@ -313,8 +313,8 @@ def toggle_columns(tree, playlist_tree, filters):
     :param playlist_tree: Le Treeview de la playlist.
     :param filters: Liste des filtres (nom_colonne, label_widget, entry_widget).
     """
-    selected_gender = global_vars.vSexe.get()
-    visible_columns = global_vars.columns_homme if selected_gender == global_vars.vHomme else global_vars.columns_femme
+    selected_gender = global_variables.vSexe.get()
+    visible_columns = global_variables.columns_homme if selected_gender == global_variables.vHomme else global_variables.columns_femme
 
     tree["displaycolumns"] = visible_columns
     playlist_tree["displaycolumns"] = visible_columns

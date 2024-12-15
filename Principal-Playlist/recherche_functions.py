@@ -1,4 +1,4 @@
-# fichier: main_list_functions.py
+# fichier: recherche_functions.py
 import tkinter as tk
 import os, json
 
@@ -10,7 +10,7 @@ from data_loader import load_json
 from LectureOgg import JouerAudio
 from general_functions import get_SousTitres_by_id, extraire_localise_path
 
-import global_vars  # Importer les variables globales
+import global_variables  # Importer les variables globales
 
 #definition du Tableau Principal
 def setup_TableauPrincipal(root, tk, columns):
@@ -43,8 +43,8 @@ def SelectionLigne(event, tree):
     selected_item = tree.selection()[0]
     selected_values = tree.item(selected_item, 'values')
 
-    selected_gender = global_vars.vSexe.get()
-    if selected_gender == global_vars.vHomme:
+    selected_gender = global_variables.vSexe.get()
+    if selected_gender == global_variables.vHomme:
         audio_value = selected_values[4]
     else:
         audio_value = selected_values[3]
@@ -69,9 +69,9 @@ def sort_tree(tree, col, reverse):
 # Fonction pour afficher les données dans le tableau
 def generate_and_save_json(output_path):
     # Charger les données JSON
-    data = load_json(global_vars.bdd_Zhincore)
+    data = load_json(global_variables.bdd_Zhincore)
     if not data:
-        print(f"Aucune donnée trouvée dans {global_vars.bdd_Zhincore}")
+        print(f"Aucune donnée trouvée dans {global_variables.bdd_Zhincore}")
         return
 
     processed_data = []
@@ -82,7 +82,7 @@ def generate_and_save_json(output_path):
 
         #TRADUCTION !
         # Récupérer la quête
-        quete = entry.get("_path", global_vars.pas_Info)
+        quete = entry.get("_path", global_variables.pas_Info)
         quete_path = extraire_localise_path(quete)
 
         fichierQuete = ""        
@@ -101,20 +101,20 @@ def generate_and_save_json(output_path):
             male_text = ""
 
         # Récupérer les informations pour 'female'
-        female_vo = entry.get("female", {}).get("vo", {}).get("main", global_vars.pas_Info)
+        female_vo = entry.get("female", {}).get("vo", {}).get("main", global_variables.pas_Info)
 
         # Récupérer les informations pour 'male'
-        male_vo = entry.get("male", {}).get("vo", {}).get("main", global_vars.pas_Info)
+        male_vo = entry.get("male", {}).get("vo", {}).get("main", global_variables.pas_Info)
 
         # Vérifier si 'male_vo' ou 'female_vo' contient "v_"
         isV = "v_" in (male_vo or "") or "v_" in (female_vo or "")         
         
-        if not male_text or male_text == global_vars.pas_Info:
+        if not male_text or male_text == global_variables.pas_Info:
             male_text = female_text        
-        if not female_text or female_text == global_vars.pas_Info:
+        if not female_text or female_text == global_variables.pas_Info:
             female_text = male_text # a Confirmer si ca existe !?
        
-        if not male_vo or male_vo == global_vars.pas_Info:       
+        if not male_vo or male_vo == global_variables.pas_Info:       
             if isV :
                 essai = female_vo.replace("_f_", "_m_")
                 if os.path.isfile(extraire_localise_path(essai)):
@@ -127,7 +127,7 @@ def generate_and_save_json(output_path):
                 else:
                     male_vo = female_vo
 
-        if not female_vo or female_vo == global_vars.pas_Info:       
+        if not female_vo or female_vo == global_variables.pas_Info:       
             if isV :
                 essai = male_vo.replace("_m_", "_f_")
                 if os.path.isfile(extraire_localise_path(essai)):
@@ -142,12 +142,12 @@ def generate_and_save_json(output_path):
       
         # Sauvegarder dans une structure
         processed_data.append({
-            global_vars.data_ID: id,
-            global_vars.data_F_SubTitle: female_text,
-            global_vars.data_M_SubTitle: male_text,
-            global_vars.data_F_Voice: female_vo,
-            global_vars.data_M_Voice: male_vo,
-            global_vars.data_Quest: quete
+            global_variables.data_ID: id,
+            global_variables.data_F_SubTitle: female_text,
+            global_variables.data_M_SubTitle: male_text,
+            global_variables.data_F_Voice: female_vo,
+            global_variables.data_M_Voice: male_vo,
+            global_variables.data_Quest: quete
         })        
 
     # Sauvegarder les données dans le fichier JSON
@@ -170,25 +170,25 @@ def save_data_to_json(file_path, data):
 
 def load_data_into_tree(tree):
     try:
-        if global_vars.dataSound == None:
-            with open(global_vars.bdd_Localisation_Json, "r", encoding="utf-8") as json_file:
-                global_vars.dataSound = json.load(json_file)
-                print(f"Données chargées depuis : {global_vars.bdd_Localisation_Json}")            
+        if global_variables.dataSound == None:
+            with open(global_variables.bdd_Localisation_Json, "r", encoding="utf-8") as json_file:
+                global_variables.dataSound = json.load(json_file)
+                print(f"Données chargées depuis : {global_variables.bdd_Localisation_Json}")            
         else :
-            print(f"Données chargées depuis : global_vars.dataSound")
+            print(f"Données chargées depuis : global_variables.dataSound")
         
         # Supprimer les anciennes données dans le Treeview
         tree.delete(*tree.get_children())
 
         # Ajouter les nouvelles données
-        for entry in global_vars.dataSound:
+        for entry in global_variables.dataSound:
             tree.insert("", tk.END, values=(
-                entry[global_vars.data_ID],
-                entry[global_vars.data_F_SubTitle],
-                entry[global_vars.data_M_SubTitle],
-                entry[global_vars.data_F_Voice],
-                entry[global_vars.data_M_Voice],
-                entry[global_vars.data_Quest]
+                entry[global_variables.data_ID],
+                entry[global_variables.data_F_SubTitle],
+                entry[global_variables.data_M_SubTitle],
+                entry[global_variables.data_F_Voice],
+                entry[global_variables.data_M_Voice],
+                entry[global_variables.data_Quest]
             ))
         
     except Exception as e:
@@ -196,9 +196,9 @@ def load_data_into_tree(tree):
 
 # Fonction pour afficher les données dans le tableau
 def open_and_display_json(tree, file_path):
-    if not os.path.exists(global_vars.bdd_Localisation_Json):
-        print(f"Fichier {global_vars.bdd_Localisation_Json} introuvable. Génération du fichier...")
-        generate_and_save_json(global_vars.bdd_Localisation_Json)
+    if not os.path.exists(global_variables.bdd_Localisation_Json):
+        print(f"Fichier {global_variables.bdd_Localisation_Json} introuvable. Génération du fichier...")
+        generate_and_save_json(global_variables.bdd_Localisation_Json)
     
     load_data_into_tree(tree)
 
