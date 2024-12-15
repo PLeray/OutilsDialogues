@@ -2,11 +2,12 @@ import tkinter as tk
 from tkinter import Menu, filedialog
 import json
 
+import global_variables  # Importer les variables globales
+from playlist_functions import charger_playlist_from_file
+
 from Csequence import Sequence
 from Cetape import Etape
 from Cblock import Block  # Import de la classe Block
-
-
 
 class StepBlockApp:
     def __init__(self, root):
@@ -52,24 +53,107 @@ class StepBlockApp:
         # Redimensionnement
         self.root.bind("<Configure>", self.on_resize)
 
+    def on_left_click(self, event):
+        """Gérer les clics gauche pour sélectionner un bloc ou une étape."""
+        clicked = self.canvas.find_closest(event.x, event.y)
+        tags = self.canvas.gettags(clicked)
 
-    def create_buttons(self):
-        """Créer les boutons Load, Save, Ajouter Étape, Ajouter Bloc et Connect."""
-        tk.Button(self.button_frame, text="Save", command=self.save_to_file).pack(side=tk.LEFT, padx=5, pady=5)
-        tk.Button(self.button_frame, text="Load", command=self.load_from_file).pack(side=tk.LEFT, padx=5, pady=5)
-        tk.Button(self.button_frame, text="Ajouter Étape", command=self.add_etape).pack(side=tk.LEFT, padx=5, pady=5)
-        tk.Button(self.button_frame, text="Ajouter Bloc", command=self.add_block).pack(side=tk.LEFT, padx=5, pady=5)
-        tk.Button(self.button_frame, text="Connect", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
+        if "block" in tags:
+            # Get the block by indices from tags
+            etape_idx, block_idx = int(tags[1]), int(tags[2])
+            block = self.sequence.etapes[etape_idx].blocs[block_idx]
 
+            # Select the block (orange outline)
+            self.selected_blocks = {"green": [], "red": []}  # Reset source/target selections
+            self.selected_block = block  # Track selected block
+            self.selected_etape = None  # Clear étape selection
+            print(f"Bloc sélectionné : {block.title} Rang {block.etape_position} (Étape {etape_idx}).")
 
-    def create_menu(self):
-        """Créer le menu contextuel."""
-        self.menu = tk.Menu(self.root, tearoff=0)
-        # Ajouter des commandes au menu
-        self.menu.add_command(label="Supprimer les liaisons", command=self.delete_connections)
-        self.menu.add_command(label="Supprimer le Bloc", command=self.delete_block)
-        self.menu.add_command(label="Supprimer l'Étape", command=self.delete_etape)
+        elif "etape" in tags:
+            # Select the étape
+            etape_idx = int(tags[1])
+            self.selected_etape = self.sequence.etapes[etape_idx]
+            self.selected_block = None  # Clear block selection
+            self.selected_blocks = {"green": [], "red": []}  # Reset source/target selections
+            print(f"Étape sélectionnée : {etape_idx}.")
 
+        else:
+            # No valid selection
+            print("Aucun élément valide sélectionné.")
+            self.selected_block = None
+            self.selected_etape = None
+
+        # Redraw to reflect the selection changes
+        self.draw_sequence()
+
+    def on_shift_click(self, event):
+        """Gérer les clics avec Maj pour sélectionner les blocs cibles."""
+        clicked = self.canvas.find_closest(event.x, event.y)
+        tags = self.canvas.gettags(clicked)
+
+        if "block" in tags:
+            etape_idx, block_idx = int(tags[1]), int(tags[2])
+            block = self.sequence.etapes[etape_idx].blocs[block_idx]
+
+            # Ajouter le bloc à la liste rouge (cibles) s'il n'y est pas déjà
+            if block not in self.selected_blocks["red"]:
+                self.selected_blocks["red"].append(block)
+                print(f"Bloc cible ajouté : {block.title} (Étape {etape_idx}).")
+            else:
+                print(f"Bloc déjà dans les cibles : {block.title}")
+        else:
+            print("Aucun bloc valide pour la sélection de cibles.")
+
+        # Redessiner après la sélection
+        self.draw_sequence()
+
+    def on_ctrl_click(self, event):
+        """Gérer les clics avec Ctrl pour sélectionner les blocs sources."""
+        clicked = self.canvas.find_closest(event.x, event.y)
+        tags = self.canvas.gettags(clicked)
+
+        if "block" in tags:
+            etape_idx, block_idx = int(tags[1]), int(tags[2])
+            block = self.sequence.etapes[etape_idx].blocs[block_idx]
+
+            # Ajouter le bloc à la liste verte (sources) s'il n'y est pas déjà
+            if block not in self.selected_blocks["green"]:
+                self.selected_blocks["green"].append(block)
+                print(f"Bloc source ajouté : {block.title} (Étape {etape_idx}).")
+            else:
+                print(f"Bloc déjà dans les sources : {block.title}")
+        else:
+            print("Aucun bloc valide pour la sélection des sources.")
+
+        # Redessiner après la sélection
+        self.draw_sequence()
+
+    def on_right_click(self, event):
+        """Gérer le clic droit pour afficher le menu contextuel."""
+        clicked = self.canvas.find_closest(event.x, event.y)
+        tags = self.canvas.gettags(clicked)
+
+        if "block" in tags:
+            etape_idx, block_idx = int(tags[1]), int(tags[2])
+            self.selected_block = self.sequence.etapes[etape_idx].blocs[block_idx]
+
+            # Configurer le menu contextuel pour les blocs
+            self.menu = Menu(self.root, tearoff=0)
+            self.menu.add_command(label="Ouvrir Bloc", command=self.Open_Bloc)
+            self.menu.add_command(label="Supprimer le Bloc", command=self.delete_block)
+            self.menu.add_command(label="Supprimer les Connexions", command=self.delete_connections)
+            self.menu.post(event.x_root, event.y_root)
+            print(f"Menu pour le bloc {self.selected_block.title} ouvert.")
+
+        elif "etape" in tags:
+            etape_idx = int(tags[1])
+            self.selected_etape = self.sequence.etapes[etape_idx]
+
+            # Configurer le menu contextuel pour les étapes
+            self.menu = Menu(self.root, tearoff=0)
+            self.menu.add_command(label="Supprimer l'Étape", command=self.delete_etape)
+            self.menu.post(event.x_root, event.y_root)
+            print(f"Menu pour l'étape {self.selected_etape.numero} ouvert.")
 
     def on_key_press(self, event):
         """Gérer les pressions de touches pour déplacer les blocs dans une étape."""
@@ -88,15 +172,69 @@ class StepBlockApp:
             if direction and etape.move_block_laterally(block_to_move, direction):
                 # Réorganiser les positions des blocs après le déplacement
                 etape.reorganize_blocks()
-
                 # Mettre à jour les connexions
                 self.sequence.update_connections()
-
                 # Redessiner la séquence
                 self.draw_sequence()
         else:
             print("Aucun bloc sélectionné pour déplacement.")
 
+    def on_resize(self, event):
+        print(f"on_resize")
+        new_width = event.width
+        for etape in self.sequence.etapes:
+            etape.width = new_width
+            etape.reorganize_blocks()
+        self.draw_sequence()
+
+    def draw_sequence(self):
+        print(f"draw_sequence")
+        self.canvas.delete("all")
+        # Dessiner chaque étape et ses blocs
+        for etape in self.sequence.etapes:
+            etape.draw(
+                self.canvas,
+                selected_blocks=self.selected_blocks,
+                selected_etape=(etape == self.selected_etape)
+            )
+            etape.reorganize_blocks()
+
+        # Dessiner les connexions entre les blocs
+        for conn in self.sequence.connections:
+            start = conn["start"]
+            end = conn["end"]
+            if start and end:
+                #print(f"Dessiner connexion : {start.identifiant} -> {end.identifiant}")
+                self.canvas.create_line(
+                    start.x, start.y + 20,  # Position de départ
+                    end.x, end.y - 20,      # Position de fin
+                    fill="blue", width=4
+                )
+            else:
+                print(f"Connexion invalide : {conn}")
+
+    def create_buttons(self):
+        """Créer les boutons Load, Save, Ajouter Étape, Ajouter Bloc et Connect."""
+        tk.Button(self.button_frame, text="Save", command=self.save_to_file).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Load", command=self.load_from_file).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Ajouter Étape", command=self.add_etape).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Ajouter Bloc", command=self.add_block).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Connect", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
+
+    def create_menu(self):
+        """Créer le menu contextuel."""
+        self.menu = tk.Menu(self.root, tearoff=0)
+        # Ajouter des commandes au menu
+        self.menu.add_command(label="Ouvrir Bloc", command=self.Open_Bloc)
+        self.menu.add_command(label="Supprimer les liaisons", command=self.delete_connections)
+        self.menu.add_command(label="Supprimer le Bloc", command=self.delete_block)
+        self.menu.add_command(label="Supprimer l'Étape", command=self.delete_etape)
+
+    def Open_Bloc(self):
+        if self.selected_block:
+            leBloc = self.selected_block
+            print(f"Bloc: {leBloc.identifiant} lien: {leBloc.playlist_lien}.")    
+            charger_playlist_from_file(global_variables.playlist_tree,tk, leBloc.playlist_lien)
 
     def add_etape(self):
         """Ajouter une nouvelle étape après l'étape sélectionnée."""
@@ -138,8 +276,6 @@ class StepBlockApp:
         self.draw_sequence()
         print(f"Bloc ajouté à l'étape {self.selected_etape.numero}.")
 
-
-
     def delete_block(self):
         """Supprimer le bloc sélectionné."""
         if self.selected_block:
@@ -148,34 +284,6 @@ class StepBlockApp:
             self.selected_block = None
             self.draw_sequence()
             print("Bloc supprimé.")
-
-
-    def draw_sequence(self):
-        """Dessiner toute la séquence sur le canvas."""
-        self.canvas.delete("all")
-
-        # Dessiner chaque étape et ses blocs
-        for etape in self.sequence.etapes:
-            etape.draw(
-                self.canvas,
-                selected_blocks=self.selected_blocks,
-                selected_etape=(etape == self.selected_etape)
-            )
-        # Dessiner les connexions entre les blocs
-        print("Dessiner les connexions :")
-        for conn in self.sequence.connections:
-            start = conn["start"]
-            end = conn["end"]
-            if start and end:
-                print(f"Dessiner connexion : {start.identifiant} -> {end.identifiant}")
-                self.canvas.create_line(
-                    start.x, start.y + 20,  # Position de départ
-                    end.x, end.y - 20,      # Position de fin
-                    fill="blue", width=4
-                )
-            else:
-                print(f"Connexion invalide : {conn}")
-
 
     def create_connections(self):
         """Créer des connexions entre les blocs sélectionnés."""
@@ -196,128 +304,6 @@ class StepBlockApp:
             self.selected_block.clear_connections()  # Appel à Bloc.clear_connections
             self.draw_sequence()
             print("Connexions supprimées.")
-
-
-    def on_left_click(self, event):
-        """Gérer les clics gauche pour sélectionner un bloc ou une étape."""
-        clicked = self.canvas.find_closest(event.x, event.y)
-        tags = self.canvas.gettags(clicked)
-
-        if "block" in tags:
-            # Get the block by indices from tags
-            etape_idx, block_idx = int(tags[1]), int(tags[2])
-            block = self.sequence.etapes[etape_idx].blocs[block_idx]
-
-            # Select the block (orange outline)
-            self.selected_blocks = {"green": [], "red": []}  # Reset source/target selections
-            self.selected_block = block  # Track selected block
-            self.selected_etape = None  # Clear étape selection
-            print(f"Bloc sélectionné : {block.title} Rang {block.etape_position} (Étape {etape_idx}).")
-
-        elif "etape" in tags:
-            # Select the étape
-            etape_idx = int(tags[1])
-            self.selected_etape = self.sequence.etapes[etape_idx]
-            self.selected_block = None  # Clear block selection
-            self.selected_blocks = {"green": [], "red": []}  # Reset source/target selections
-            print(f"Étape sélectionnée : {etape_idx}.")
-
-        else:
-            # No valid selection
-            print("Aucun élément valide sélectionné.")
-            self.selected_block = None
-            self.selected_etape = None
-
-        # Redraw to reflect the selection changes
-        self.draw_sequence()
-
-
-
-
-    def on_shift_click(self, event):
-        """Gérer les clics avec Maj pour sélectionner les blocs cibles."""
-        clicked = self.canvas.find_closest(event.x, event.y)
-        tags = self.canvas.gettags(clicked)
-
-        if "block" in tags:
-            etape_idx, block_idx = int(tags[1]), int(tags[2])
-            block = self.sequence.etapes[etape_idx].blocs[block_idx]
-
-            # Ajouter le bloc à la liste rouge (cibles) s'il n'y est pas déjà
-            if block not in self.selected_blocks["red"]:
-                self.selected_blocks["red"].append(block)
-                print(f"Bloc cible ajouté : {block.title} (Étape {etape_idx}).")
-            else:
-                print(f"Bloc déjà dans les cibles : {block.title}")
-        else:
-            print("Aucun bloc valide pour la sélection de cibles.")
-
-        # Redessiner après la sélection
-        self.draw_sequence()
-
-
-
-    def on_ctrl_click(self, event):
-        """Gérer les clics avec Ctrl pour sélectionner les blocs sources."""
-        clicked = self.canvas.find_closest(event.x, event.y)
-        tags = self.canvas.gettags(clicked)
-
-        if "block" in tags:
-            etape_idx, block_idx = int(tags[1]), int(tags[2])
-            block = self.sequence.etapes[etape_idx].blocs[block_idx]
-
-            # Ajouter le bloc à la liste verte (sources) s'il n'y est pas déjà
-            if block not in self.selected_blocks["green"]:
-                self.selected_blocks["green"].append(block)
-                print(f"Bloc source ajouté : {block.title} (Étape {etape_idx}).")
-            else:
-                print(f"Bloc déjà dans les sources : {block.title}")
-        else:
-            print("Aucun bloc valide pour la sélection des sources.")
-
-        # Redessiner après la sélection
-        self.draw_sequence()
-
-
-
-    def on_right_click(self, event):
-        """Gérer le clic droit pour afficher le menu contextuel."""
-        clicked = self.canvas.find_closest(event.x, event.y)
-        tags = self.canvas.gettags(clicked)
-
-        if "block" in tags:
-            etape_idx, block_idx = int(tags[1]), int(tags[2])
-            self.selected_block = self.sequence.etapes[etape_idx].blocs[block_idx]
-
-            # Configurer le menu contextuel pour les blocs
-            self.menu = Menu(self.root, tearoff=0)
-            self.menu.add_command(label="Supprimer le Bloc", command=self.delete_block)
-            self.menu.add_command(label="Supprimer les Connexions", command=self.delete_connections)
-            self.menu.post(event.x_root, event.y_root)
-            print(f"Menu pour le bloc {self.selected_block.title} ouvert.")
-
-        elif "etape" in tags:
-            etape_idx = int(tags[1])
-            self.selected_etape = self.sequence.etapes[etape_idx]
-
-            # Configurer le menu contextuel pour les étapes
-            self.menu = Menu(self.root, tearoff=0)
-            self.menu.add_command(label="Supprimer l'Étape", command=self.delete_etape)
-            self.menu.post(event.x_root, event.y_root)
-            print(f"Menu pour l'étape {self.selected_etape.numero} ouvert.")
-
-
-
-    def on_resize(self, event):
-        """Mettre à jour les tailles et recentrer les blocs après redimensionnement."""
-        new_width = event.width
-        for etape in self.sequence.etapes:
-            etape.width = new_width
-            etape.reorganize_blocks()
-        self.draw_sequence()
-
-
-
 
     def save_to_file(self):
         """Sauvegarder les étapes et blocs dans un fichier JSON.
@@ -378,10 +364,13 @@ class StepBlockApp:
         # Initialiser le compteur global pour les blocs
         Block.initialize_counter(existing_ids)
 
+        # Vider les connexions actuelles
+        self.sequence.connections = []
+
         # Reconstruire les connexions entre les blocs
         for etape in self.sequence.etapes:
             for block in etape.blocs:
-                print(f"Reconstruire les connexions pour le bloc {block.identifiant}:")
+                #print(f"Reconstruire les connexions pour le bloc {block.identifiant}:")
                 blocs_precedents = []
                 blocs_suivants = []
                 block.parent_etape = etape  # Associer le bloc à son étape
@@ -391,21 +380,25 @@ class StepBlockApp:
                     bloc = self.sequence.find_block({"identifiant": prev_id})
                     if bloc and bloc not in blocs_precedents:
                         blocs_precedents.append(bloc)
+                        # Ajouter la connexion à la séquence
+                        self.sequence.connections.append({"start": bloc, "end": block})
 
                 for next_id in block.blocs_suivants:
                     bloc = self.sequence.find_block({"identifiant": next_id})
                     if bloc and bloc not in blocs_suivants:
                         blocs_suivants.append(bloc)
+                        # Ajouter la connexion à la séquence
+                        self.sequence.connections.append({"start": block, "end": bloc})
 
                 block.blocs_precedents = blocs_precedents
                 block.blocs_suivants = blocs_suivants
-
-                print(f"  Précédents: {[b.identifiant for b in block.blocs_precedents]}")
-                print(f"  Suivants: {[b.identifiant for b in block.blocs_suivants]}")
+                #print(f"  Précédents: {[b.identifiant for b in block.blocs_precedents]}")
+                #print(f"  Suivants: {[b.identifiant for b in block.blocs_suivants]}")
 
         # Redessiner la séquence
         self.draw_sequence()
         print(f"Chargé depuis {filename}")
+
 
     def to_dict(self):
         """Convertir le bloc en dictionnaire pour sauvegarde."""

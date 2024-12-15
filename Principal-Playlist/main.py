@@ -148,7 +148,7 @@ global_variables.vSexe = tk.StringVar(value=global_variables.vHomme)  # Par déf
 tree = setup_TableauPrincipal(root, tk, global_variables.columns)
 
 # Fonction pour configurer le tableau de playlist
-playlist_tree = setup_playlist(root, tree, tk, global_variables.columns)
+global_variables.playlist_tree = setup_playlist(root, tree, tk, global_variables.columns)
 
 
 
@@ -211,7 +211,7 @@ def on_quete_selected(event):
 
 
 def resize_columns(event):
-    toggle_columns(tree, playlist_tree,  filters)   
+    toggle_columns(tree, global_variables.playlist_tree,  filters)   
 
 # Créer les champs de filtre uniquement pour les colonnes sélectionnées
 filters = []  # Initialisation de la liste des filtres
@@ -259,7 +259,7 @@ radio_homme = tk.Radiobutton(
     text=global_variables.vHomme,
     variable=global_variables.vSexe,
     value=global_variables.vHomme,
-    command=lambda: toggle_columns(tree, playlist_tree, filters)  # Appeler la fonction de mise à jour des colonnes
+    command=lambda: toggle_columns(tree, global_variables.playlist_tree, filters)  # Appeler la fonction de mise à jour des colonnes
 )
 radio_homme.grid(row=1, column=10, padx=5)
 
@@ -269,7 +269,7 @@ radio_femme = tk.Radiobutton(
     text=global_variables.vFemme,
     variable=global_variables.vSexe,
     value=global_variables.vFemme,
-    command=lambda: toggle_columns(tree, playlist_tree,  filters)  # Appeler la fonction de mise à jour des colonnes
+    command=lambda: toggle_columns(tree, global_variables.playlist_tree,  filters)  # Appeler la fonction de mise à jour des colonnes
 )
 radio_femme.grid(row=1, column=11, padx=5)
 
@@ -279,7 +279,7 @@ radio_femme.grid(row=1, column=11, padx=5)
 
 
 # Lier les événements du tableau principal
-tree.bind("<Button-3>", lambda event: select_and_add_to_playlist(event, tree, playlist_tree, tk))
+tree.bind("<Button-3>", lambda event: select_and_add_to_playlist(event, tree, global_variables.playlist_tree, tk))
 tree.bind("<<TreeviewSelect>>", lambda event: SelectionLigne(event, tree))  # Sélectionner une ligne pour afficher les détails
 
 # Lier l'événement de redimensionnement

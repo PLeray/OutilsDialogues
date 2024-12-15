@@ -212,6 +212,12 @@ def load_playlist_from_file(playlist_tree,tk):
         )
     print(f"Fichier playlist : {file_path}")
     if file_path:
+        charger_playlist_from_file(playlist_tree,tk, file_path)
+
+# Fonction pour charger la playlist à partir d'un fichier JSON
+def charger_playlist_from_file(playlist_tree,tk, file_path):
+    if file_path:
+        print(f"Fichier playlist : {file_path}")
         with open(file_path, "r") as file:
             playlist_data = json.load(file)
             # Effacer l'ancienne playlist avant de charger la nouvelle
@@ -255,6 +261,10 @@ def load_playlist_from_file(playlist_tree,tk):
         global_variables.playlist_name_label.config(text=f"Playlist : {basename(file_path)}")
         count_playlist_rows(playlist_tree)
         colorize_playlist_rows(playlist_tree)
+    else:
+        print(f"pas de fichier playlist")
+
+
 
 # Fonction pour lire la Playlist
 def ecouterPlaylist(playlist_tree):

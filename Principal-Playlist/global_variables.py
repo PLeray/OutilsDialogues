@@ -7,6 +7,8 @@ playlist_name_label = ""  # Définition initiale
 playlist_count_label = None  # Définition initiale
 principal_count = None  # Définition initiale
 
+playlist_tree = None # la playlist
+
 vSexe  = None  # Définition initiale
 
 nombre_Ligne = "number of lines"

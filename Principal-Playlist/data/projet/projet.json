@@ -4,13 +4,13 @@
         {
             "numero": 0,
             "y": 50,
-            "width": 646,
+            "width": 622,
             "blocs": []
         },
         {
             "numero": 1,
             "y": 150,
-            "width": 646,
+            "width": 622,
             "blocs": [
                 {
                     "etape_number": 0,
@@ -30,7 +30,7 @@
         {
             "numero": 2,
             "y": 250,
-            "width": 646,
+            "width": 622,
             "blocs": [
                 {
                     "etape_number": 1,
@@ -42,7 +42,9 @@
                     "blocs_precedents": [
                         "00000002"
                     ],
-                    "blocs_suivants": []
+                    "blocs_suivants": [
+                        "00000005"
+                    ]
                 },
                 {
                     "etape_number": 1,
@@ -57,6 +59,37 @@
                     "blocs_suivants": []
                 }
             ]
+        },
+        {
+            "numero": 3,
+            "y": 350,
+            "width": 622,
+            "blocs": []
+        },
+        {
+            "numero": 4,
+            "y": 450,
+            "width": 622,
+            "blocs": [
+                {
+                    "etape_number": 3,
+                    "etape_position": 0,
+                    "identifiant": "00000005",
+                    "title": "Bloc",
+                    "comment": "",
+                    "playlist_lien": "",
+                    "blocs_precedents": [
+                        "00000003"
+                    ],
+                    "blocs_suivants": []
+                }
+            ]
+        },
+        {
+            "numero": 5,
+            "y": 550,
+            "width": 622,
+            "blocs": []
         }
     ]
 }
