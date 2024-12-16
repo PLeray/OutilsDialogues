@@ -1,4 +1,5 @@
 import tkinter as tk
+
 from tkinter import Menu, filedialog
 import json, os
 
@@ -27,20 +28,49 @@ class StepBlockApp:
         self.main_frame = tk.Frame(root)
         self.main_frame.pack(fill=tk.BOTH, expand=True)
 
-        self.mise_a_jour_info_projet(self.file_Projet)
-        
         # Barre de boutons
         self.button_frame = tk.Frame(self.main_frame)
         self.button_frame.pack(fill=tk.X, side=tk.TOP)
 
         self.create_buttons()  # Créez les boutons dans la barre
+        """
+         # Canvas pour afficher les séquences
+        self.canvas_frame = tk.Frame(self.main_frame)
+        self.canvas_frame.pack(fill=tk.BOTH, expand=True)
+
+        self.canvas = tk.Canvas(self.canvas_frame, bg="white")
+        self.canvas.pack(fill=tk.BOTH, expand=True)       
+        """
+
 
         # Canvas pour afficher les séquences
         self.canvas_frame = tk.Frame(self.main_frame)
         self.canvas_frame.pack(fill=tk.BOTH, expand=True)
 
-        self.canvas = tk.Canvas(self.canvas_frame, bg="white")
-        self.canvas.pack(fill=tk.BOTH, expand=True)
+        # Canvas avec Scrollbar
+        self.canvas = tk.Canvas(self.canvas_frame, bg="white", scrollregion=(0, 0, 1000, 1000))
+        self.v_scrollbar = tk.Scrollbar(self.canvas_frame, orient=tk.VERTICAL, command=self.canvas.yview)
+        self.v_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.canvas.config(yscrollcommand=self.v_scrollbar.set)
+        self.canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+        # Créer une fenêtre interne dans le Canvas pour y placer le contenu
+        self.inner_frame = tk.Frame(self.canvas, bg="white")
+        self.window_id = self.canvas.create_window((0, 0), window=self.inner_frame, anchor="nw")
+        
+        # Mise à jour automatique de la région défilable
+        self.inner_frame.bind("<Configure>", lambda e: self.canvas.config(scrollregion=self.canvas.bbox("all")))
+
+
+
+
+
+        # Événements de défilement avec la molette
+        self.canvas.bind_all("<MouseWheel>", self.on_mouse_scroll)  # Windows et macOS
+        self.canvas.bind_all("<Button-4>", lambda e: self.canvas.yview_scroll(-1, "units"))  # Linux (haut)
+        self.canvas.bind_all("<Button-5>", lambda e: self.canvas.yview_scroll(1, "units"))   # Linux (bas)
+
 
         # Événements
         self.canvas.bind("<Button-1>", self.on_left_click)
@@ -50,11 +80,22 @@ class StepBlockApp:
         self.canvas.bind("<Control-Button-1>", self.on_ctrl_click)
         self.canvas.focus_set()
 
+
         # Ajouter une première étape
         self.add_etape()
-
+        self.mise_a_jour_info_projet(self.file_Projet)
         # Redimensionnement
         self.root.bind("<Configure>", self.on_resize)
+
+    def get_adjusted_coordinates(self, event):
+        """Retourne les coordonnées ajustées pour tenir compte du scroll."""
+        x = self.canvas.canvasx(event.x)
+        y = self.canvas.canvasy(event.y)
+        return x, y
+
+    def on_mouse_scroll(self, event):
+        """Déplacer la scrollbar avec la molette de la souris."""
+        self.canvas.yview_scroll(-1 * (event.delta // 120), "units")  
 
     def mise_a_jour_info_projet(self, nom_fichier):
         self.file_Projet = nom_fichier
@@ -63,7 +104,8 @@ class StepBlockApp:
 
     def on_left_click(self, event):
         """Gérer les clics gauche pour sélectionner un bloc ou une étape."""
-        clicked = self.canvas.find_closest(event.x, event.y)
+        x, y = self.get_adjusted_coordinates(event)  # Coordonnées corrigées
+        clicked = self.canvas.find_closest(x, y)
         tags = self.canvas.gettags(clicked)
 
         if "block" in tags:
@@ -95,8 +137,9 @@ class StepBlockApp:
         self.draw_sequence()
 
     def on_shift_click(self, event):
-        """Gérer les clics avec Maj pour sélectionner les blocs cibles."""
-        clicked = self.canvas.find_closest(event.x, event.y)
+        """Gérer les clics gauche pour sélectionner un bloc ou une étape."""
+        x, y = self.get_adjusted_coordinates(event)  # Coordonnées corrigées
+        clicked = self.canvas.find_closest(x, y)
         tags = self.canvas.gettags(clicked)
 
         if "block" in tags:
@@ -116,8 +159,9 @@ class StepBlockApp:
         self.draw_sequence()
 
     def on_ctrl_click(self, event):
-        """Gérer les clics avec Ctrl pour sélectionner les blocs sources."""
-        clicked = self.canvas.find_closest(event.x, event.y)
+        """Gérer les clics gauche pour sélectionner un bloc ou une étape."""
+        x, y = self.get_adjusted_coordinates(event)  # Coordonnées corrigées
+        clicked = self.canvas.find_closest(x, y)
         tags = self.canvas.gettags(clicked)
 
         if "block" in tags:
@@ -137,8 +181,9 @@ class StepBlockApp:
         self.draw_sequence()
 
     def on_right_click(self, event):
-        """Gérer le clic droit pour afficher le menu contextuel."""
-        clicked = self.canvas.find_closest(event.x, event.y)
+        """Gérer les clics gauche pour sélectionner un bloc ou une étape."""
+        x, y = self.get_adjusted_coordinates(event)  # Coordonnées corrigées
+        clicked = self.canvas.find_closest(x, y)
         tags = self.canvas.gettags(clicked)
 
         if "block" in tags:
@@ -200,7 +245,11 @@ class StepBlockApp:
         #print(f"on_resize")
         self.update_width_and_reorganize()
         self.draw_sequence()
-
+    
+  
+    """
+    
+    """
     def draw_sequence(self):
         """Dessiner toute la séquence sur le canvas."""
         # Mettre à jour la largeur des étapes et réorganiser
@@ -223,6 +272,12 @@ class StepBlockApp:
                     end.x, end.y - 20,
                     fill="blue", width=4
                 )
+        # Mettre à jour la région défilable pour la scrollbar
+        self.canvas.update_idletasks()
+        self.canvas.config(scrollregion=self.canvas.bbox("all"))
+
+
+
 
     def create_buttons(self):
         """Créer les boutons Load, Save, Ajouter Étape, Ajouter Bloc et Connect."""

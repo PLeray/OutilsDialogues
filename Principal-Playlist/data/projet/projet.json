@@ -186,9 +186,120 @@
                         "00000010",
                         "00000011"
                     ],
+                    "blocs_suivants": [
+                        "00000013"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 7,
+            "y": 750,
+            "width": 600,
+            "blocs": [
+                {
+                    "etape_number": 7,
+                    "etape_position": 0,
+                    "identifiant": "00000013",
+                    "title": "5.1-I take it we've got a deal",
+                    "comment": "v:  Alors, j'en conclus que t'es partante\u00a0?",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/5.1-I take it we've got a deal.json",
+                    "blocs_precedents": [
+                        "00000012"
+                    ],
+                    "blocs_suivants": [
+                        "00000014"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 8,
+            "y": 850,
+            "width": 600,
+            "blocs": [
+                {
+                    "etape_number": 8,
+                    "etape_position": 0,
+                    "identifiant": "00000014",
+                    "title": "6.0-Entrance to the room",
+                    "comment": "v:  Nice place, quaintly slick.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/6.0-Entrance to the room.json",
+                    "blocs_precedents": [
+                        "00000013"
+                    ],
+                    "blocs_suivants": [
+                        "00000016"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 9,
+            "y": 950,
+            "width": 600,
+            "blocs": [
+                {
+                    "etape_number": 9,
+                    "etape_position": 0,
+                    "identifiant": "00000016",
+                    "title": "6.1-[Sit]-It_is_awesome",
+                    "comment": "panam:  Fuck, V. It is awesome!",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/6.1-[Sit]-It_is_awesome.json",
+                    "blocs_precedents": [
+                        "00000014"
+                    ],
+                    "blocs_suivants": [
+                        "00000017"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 10,
+            "y": 1050,
+            "width": 600,
+            "blocs": [
+                {
+                    "etape_number": 10,
+                    "etape_position": 0,
+                    "identifiant": "00000017",
+                    "title": "7.0-Will_you_say_something",
+                    "comment": "panam:  Will you say something?",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/7.0-Will_you_say_something.json",
+                    "blocs_precedents": [
+                        "00000016"
+                    ],
+                    "blocs_suivants": [
+                        "00000018"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 11,
+            "y": 1150,
+            "width": 600,
+            "blocs": [
+                {
+                    "etape_number": 11,
+                    "etape_position": 0,
+                    "identifiant": "00000018",
+                    "title": "8.0-Reminded_me_of_jackie",
+                    "comment": "v:  Panam... I...",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/8.0-Reminded_me_of_jackie.json",
+                    "blocs_precedents": [
+                        "00000017"
+                    ],
                     "blocs_suivants": []
                 }
             ]
+        },
+        {
+            "numero": 12,
+            "y": 1250,
+            "width": 600,
+            "blocs": []
         }
     ]
 }
