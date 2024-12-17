@@ -71,6 +71,9 @@ def setup_playlist(root, tree, tk, columns):
     add_button = tk.Button(button_frame, text="Add selection to playlist ⤵️", command=lambda: add_to_playlist(tree, playlist_tree, tk))
     add_button.pack(side=tk.LEFT, padx=5)
 
+    add_manual_button = tk.Button(button_frame, text="Add line manually ✏️", command=lambda: open_manual_entry_window(playlist_tree, tk))
+    add_manual_button.pack(side=tk.LEFT, padx=5)
+
     move_up_button = tk.Button(button_frame, text="Up ⬆️", command=lambda: move_up_playlist(playlist_tree))
     move_up_button.pack(side=tk.LEFT, padx=5)
 
@@ -92,11 +95,11 @@ def setup_playlist(root, tree, tk, columns):
     clear_button = tk.Button(button_frame, text="Clean playlist ❌", command=lambda: clear_playlist(playlist_tree))
     clear_button.pack(side=tk.LEFT, padx=5)
 
-    clear_button = tk.Button(button_frame, text="Record playlist ⭕", command=lambda: record_playlist(playlist_tree))
-    clear_button.pack(side=tk.LEFT, padx=5)
+    record_button = tk.Button(button_frame, text="Record playlist ⭕", command=lambda: record_playlist(playlist_tree))
+    record_button.pack(side=tk.LEFT, padx=5)
 
-    clear_button = tk.Button(button_frame, text="Dialog playlist ☷", command=lambda: save_playlist_to_txt(playlist_tree))
-    clear_button.pack(side=tk.LEFT, padx=5)
+    txtDialog_button = tk.Button(button_frame, text="Dialog playlist ☷", command=lambda: save_playlist_to_txt(playlist_tree))
+    txtDialog_button.pack(side=tk.LEFT, padx=5)
 
     # Ajouter le Label pour afficher le nombre de lignes, à droite de clear_button
     global_variables.playlist_name_label = tk.Label(button_frame, text="Playlist : " + global_variables.pas_Info)
@@ -467,3 +470,43 @@ def save_playlist_to_txt(playlist_tree):
             print(f"Fichier sauvegardé avec succès dans : {fichier_sauvegarde}")
         except Exception as e:
             print(f"Erreur lors de la sauvegarde : {e}")
+
+
+def open_manual_entry_window(playlist_tree, tk):
+    """Ouvre une fenêtre pour saisir manuellement les champs d'une ligne."""
+    manual_window = tk.Toplevel()
+    manual_window.title("Add Playlist Row")
+
+    # Liste des colonnes
+    column_names = [
+        "ID", "Female Subtitle", "Male Subtitle", "Female Voice Path", "Male Voice Path", "Quest Path"
+    ]
+    entry_fields = {}  # Pour stocker les champs d'entrée
+
+    # Créer des champs de saisie pour chaque colonne
+    for idx, column in enumerate(column_names):
+        label = tk.Label(manual_window, text=column + " :")
+        label.grid(row=idx, column=0, padx=10, pady=5, sticky="w")
+
+        entry = tk.Entry(manual_window, width=40)
+        entry.grid(row=idx, column=1, padx=10, pady=5)
+        entry_fields[column] = entry  # Stocker l'entrée associée à la colonne
+
+    # Bouton pour valider la saisie
+    def add_row():
+        """Ajoute la ligne saisie dans la Treeview."""
+        values = [
+            entry_fields["ID"].get(),
+            entry_fields["Female Subtitle"].get(),
+            entry_fields["Male Subtitle"].get(),
+            entry_fields["Female Voice Path"].get(),
+            entry_fields["Male Voice Path"].get(),
+            entry_fields["Quest Path"].get()
+        ]
+        playlist_tree.insert("", tk.END, values=values)  # Insérer dans la Treeview
+        count_playlist_rows(playlist_tree)  # Mettre à jour le compteur
+        colorize_playlist_rows(playlist_tree)  # Mettre à jour les couleurs
+        manual_window.destroy()  # Fermer la fenêtre
+
+    submit_button = tk.Button(manual_window, text="Add Row", command=add_row)
+    submit_button.grid(row=len(column_names), column=0, columnspan=2, pady=10)

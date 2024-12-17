@@ -205,6 +205,7 @@ class StepBlockApp:
 
             # Configurer le menu contextuel pour les étapes
             self.menu = Menu(self.root, tearoff=0)
+            self.menu.add_command(label="Ajouter un Bloc", command=self.add_block)
             self.menu.add_command(label="Supprimer l'Étape", command=self.delete_etape)
             self.menu.post(event.x_root, event.y_root)
             print(f"Menu pour l'étape {self.selected_etape.numero} ouvert.")
@@ -278,8 +279,8 @@ class StepBlockApp:
         tk.Button(self.button_frame, text="Save", command=self.save_to_file).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Load", command=self.load_from_file).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Ajouter Étape", command=self.add_etape).pack(side=tk.LEFT, padx=5, pady=5)
-        tk.Button(self.button_frame, text="Ajouter Bloc", command=self.add_block).pack(side=tk.LEFT, padx=5, pady=5)
-        tk.Button(self.button_frame, text="Connect", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
+        #tk.Button(self.button_frame, text="Ajouter Bloc", command=self.add_block).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Connecter", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Générer Projet", command=self.generate_project_html).pack(side=tk.LEFT, padx=5, pady=5)
 
     def Open_Bloc(self):
