@@ -265,6 +265,53 @@ def charger_playlist_from_file(playlist_tree,tk, file_path):
         print(f"pas de fichier playlist")
 
 
+def charger_premiere_ligne_from_playlist(file_path):
+    sous_titre = ""
+    if file_path:
+        #print(f"Fichier playlist : {file_path}")
+        with open(file_path, "r") as file:
+            playlist_data = json.load(file)
+                     
+            if len(playlist_data) > 0:  # Vérifier s'il y a au moins une ligne
+                first_entry = playlist_data[0]  # Ne récupérer que la première entrée
+                
+                # TRADUCTION ! Récupérer la quête
+                quete_path = extraire_localise_path(first_entry[global_variables.data_Quest])
+                fichierQuete = ""        
+                if isinstance(quete_path, str):
+                    fichierQuete = quete_path + ".json.json"
+
+                result = get_SousTitres_by_id(fichierQuete, first_entry[global_variables.data_ID])
+                if result:                 
+                    female_text = result['femaleVariant']
+                    male_text = result['maleVariant']
+                else:
+                    female_text = ""
+                    male_text = ""  
+
+                if not male_text or male_text == global_variables.pas_Info:
+                    male_text = female_text        
+                if not female_text or female_text == global_variables.pas_Info:
+                    female_text = male_text      
+
+                selected_gender = global_variables.vSexe.get()
+                if selected_gender == global_variables.vHomme:
+                    perso = get_Perso_from_Wem(first_entry["male_vo_path"])  # Valeur pour homme
+                    sous_titre = male_text
+                else:
+                    perso = get_Perso_from_Wem(first_entry["female_vo_path"])  # Valeur pour femme
+                    sous_titre = female_text
+                
+                # Construire le commentaire avec le format requis
+                sous_titre = f" {perso}:  {sous_titre}"
+            else:
+                
+                print("Le fichier est vide ou mal formaté.")
+    else:
+        print("pas de fichier playlist")
+
+    return sous_titre
+
 
 # Fonction pour lire la Playlist
 def ecouterPlaylist(playlist_tree):

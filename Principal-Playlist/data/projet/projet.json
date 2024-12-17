@@ -4,14 +4,14 @@
         {
             "numero": 0,
             "y": 50,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 0,
                     "etape_position": 0,
                     "identifiant": "00000002",
                     "title": "1.0-Do_i_know you",
-                    "comment": "panam:  V\u00a0?",
+                    "comment": " panam:  V\u00a0?",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/1.0-Do_i_know you.json",
                     "blocs_precedents": [],
                     "blocs_suivants": [
@@ -24,14 +24,14 @@
         {
             "numero": 1,
             "y": 150,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 1,
                     "etape_position": 0,
                     "identifiant": "00000003",
                     "title": "2.A0-[Sit]-Really_glad_to_see_you",
-                    "comment": "v:  Salut, Panam.",
+                    "comment": " v:  Salut, Panam.",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/2.A0-[Sit]-Really_glad_to_see_you.json",
                     "blocs_precedents": [
                         "00000002"
@@ -45,7 +45,7 @@
                     "etape_position": 1,
                     "identifiant": "00000004",
                     "title": "2.B0-[Sit]-glad_you_did_not_change_your_mind",
-                    "comment": "v:  Salut, Panam.",
+                    "comment": " v:  Salut, Panam.",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/2.B0-[Sit]-glad_you_did_not_change_your_mind.json",
                     "blocs_precedents": [
                         "00000002"
@@ -59,14 +59,14 @@
         {
             "numero": 2,
             "y": 250,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 4,
                     "etape_position": 0,
                     "identifiant": "00000005",
                     "title": "3.0-[Drink]-Talk_to_me",
-                    "comment": "v:  Je t'\u00e9coute.",
+                    "comment": " v:  Je t'\u00e9coute.",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/3.0-[Drink]-Talk_to_me.json",
                     "blocs_precedents": [
                         "00000003",
@@ -81,14 +81,14 @@
         {
             "numero": 3,
             "y": 350,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 5,
                     "etape_position": 0,
                     "identifiant": "00000007",
                     "title": "3.1-[Drink]-Thought_you_and_Saul_agreed",
-                    "comment": "v:  Thought you and Saul'd agreed to bury your carbines.",
+                    "comment": " v:  Je croyais que vous aviez fini par vous entendre, Saul et toi.",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/3.1-[Drink]-Thought_you_and_Saul_agreed.json",
                     "blocs_precedents": [
                         "00000005"
@@ -103,14 +103,14 @@
         {
             "numero": 4,
             "y": 450,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 4,
                     "etape_position": 0,
                     "identifiant": "00000008",
                     "title": "4.A0-[Drink]-Dont_worry_about_Saul",
-                    "comment": "v:  Hey, don't worry about Saul. He'll get over it.",
+                    "comment": " v:  H\u00e9, fais pas attention \u00e0 Saul. \u00c7a lui passera.",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/4.A0-[Drink]-Dont_worry_about_Saul.json",
                     "blocs_precedents": [
                         "00000007"
@@ -124,7 +124,7 @@
                     "etape_position": 1,
                     "identifiant": "00000009",
                     "title": "4.B0-[Drink]-Saul_could_be_right",
-                    "comment": "v:  Te vexe pas, mais\u2026 Saul a peut-\u00eatre raison.",
+                    "comment": " v:  Te vexe pas, mais\u2026 Saul a peut-\u00eatre raison.",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/4.B0-[Drink]-Saul_could_be_right.json",
                     "blocs_precedents": [
                         "00000007"
@@ -138,14 +138,14 @@
         {
             "numero": 5,
             "y": 550,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 5,
                     "etape_position": 0,
                     "identifiant": "00000010",
                     "title": "4.A1-Don't exaggerate",
-                    "comment": "v:  C'mon, don't exaggerate.",
+                    "comment": " v:  \u00c7a va, exag\u00e8re pas non plus.",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/4.A1-Don't exaggerate.json",
                     "blocs_precedents": [
                         "00000008"
@@ -159,7 +159,7 @@
                     "etape_position": 1,
                     "identifiant": "00000011",
                     "title": "4.B1-I_can_help",
-                    "comment": "v:  There any way I can help?",
+                    "comment": " v:  Je peux faire un truc pour t'aider\u00a0?",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/4.B1-I_can_help.json",
                     "blocs_precedents": [
                         "00000009"
@@ -173,14 +173,14 @@
         {
             "numero": 6,
             "y": 650,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 6,
                     "etape_position": 0,
                     "identifiant": "00000012",
                     "title": "5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel",
-                    "comment": "v:  Panam.",
+                    "comment": " v:  Panam.",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel.json",
                     "blocs_precedents": [
                         "00000010",
@@ -195,14 +195,14 @@
         {
             "numero": 7,
             "y": 750,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 7,
                     "etape_position": 0,
                     "identifiant": "00000013",
                     "title": "5.1-I take it we've got a deal",
-                    "comment": "v:  Alors, j'en conclus que t'es partante\u00a0?",
+                    "comment": " v:  Alors, j'en conclus que t'es partante\u00a0?",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/5.1-I take it we've got a deal.json",
                     "blocs_precedents": [
                         "00000012"
@@ -216,14 +216,14 @@
         {
             "numero": 8,
             "y": 850,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 8,
                     "etape_position": 0,
                     "identifiant": "00000014",
                     "title": "6.0-Entrance to the room",
-                    "comment": "v:  Nice place, quaintly slick.",
+                    "comment": " v:  C'est sympa ici. Tr\u00e8s classe.",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/6.0-Entrance to the room.json",
                     "blocs_precedents": [
                         "00000013"
@@ -237,14 +237,14 @@
         {
             "numero": 9,
             "y": 950,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 9,
                     "etape_position": 0,
                     "identifiant": "00000016",
                     "title": "6.1-[Sit]-It_is_awesome",
-                    "comment": "panam:  Fuck, V. It is awesome!",
+                    "comment": " panam:  H\u00e9\u00e9, g\u00e9nial !",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/6.1-[Sit]-It_is_awesome.json",
                     "blocs_precedents": [
                         "00000014"
@@ -258,14 +258,14 @@
         {
             "numero": 10,
             "y": 1050,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 10,
                     "etape_position": 0,
                     "identifiant": "00000017",
                     "title": "7.0-Will_you_say_something",
-                    "comment": "panam:  Will you say something?",
+                    "comment": " panam:  Tu veux rien dire\u00a0?",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/7.0-Will_you_say_something.json",
                     "blocs_precedents": [
                         "00000016"
@@ -279,27 +279,189 @@
         {
             "numero": 11,
             "y": 1150,
-            "width": 600,
+            "width": 583,
             "blocs": [
                 {
                     "etape_number": 11,
                     "etape_position": 0,
                     "identifiant": "00000018",
                     "title": "8.0-Reminded_me_of_jackie",
-                    "comment": "v:  Panam... I...",
+                    "comment": " v:  Panam\u2026 je\u2026",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/8.0-Reminded_me_of_jackie.json",
                     "blocs_precedents": [
                         "00000017"
                     ],
-                    "blocs_suivants": []
+                    "blocs_suivants": [
+                        "00000019",
+                        "00000020"
+                    ]
                 }
             ]
         },
         {
             "numero": 12,
             "y": 1250,
-            "width": 600,
-            "blocs": []
+            "width": 583,
+            "blocs": [
+                {
+                    "etape_number": 12,
+                    "etape_position": 0,
+                    "identifiant": "00000019",
+                    "title": "9.A0-I cant_make_any_plans_for_the_future",
+                    "comment": " v:  Je peux rien pr\u00e9voir pour l'avenir. Parce que\u2026 y a ce truc\u2026",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/9.A0-I cant_make_any_plans_for_the_future.json",
+                    "blocs_precedents": [
+                        "00000018"
+                    ],
+                    "blocs_suivants": [
+                        "00000021"
+                    ]
+                },
+                {
+                    "etape_number": 12,
+                    "etape_position": 1,
+                    "identifiant": "00000020",
+                    "title": "9.B0-Dead in a few months",
+                    "comment": " v:  Je serai mort dans quelques mois, pas vrai\u00a0?",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/9.B0-Dead in a few months.json",
+                    "blocs_precedents": [
+                        "00000018"
+                    ],
+                    "blocs_suivants": [
+                        "00000021"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 13,
+            "y": 1350,
+            "width": 583,
+            "blocs": [
+                {
+                    "etape_number": 13,
+                    "etape_position": 0,
+                    "identifiant": "00000021",
+                    "title": "10.0-if_I_gotta_die",
+                    "comment": " v:  Mais\u2026 si je dois crever, je veux qu'on se souvienne de moi. M\u00eame une note de bas de page, \u00e7a me suffirait.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/10.0-if_I_gotta_die.json",
+                    "blocs_precedents": [
+                        "00000019",
+                        "00000020"
+                    ],
+                    "blocs_suivants": [
+                        "00000023"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 14,
+            "y": 1450,
+            "width": 583,
+            "blocs": [
+                {
+                    "etape_number": 14,
+                    "etape_position": 0,
+                    "identifiant": "00000023",
+                    "title": "11.0-Come here",
+                    "comment": " v:  Viens l\u00e0.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/11.0-Come here.json",
+                    "blocs_precedents": [
+                        "00000021"
+                    ],
+                    "blocs_suivants": [
+                        "00000024",
+                        "00000025"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 15,
+            "y": 1550,
+            "width": 583,
+            "blocs": [
+                {
+                    "etape_number": 15,
+                    "etape_position": 0,
+                    "identifiant": "00000024",
+                    "title": "12.A0-Your_wish_is_our_command",
+                    "comment": " v:  Non, pas du tout.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/12.A0-Your_wish_is_our_command.json",
+                    "blocs_precedents": [
+                        "00000023"
+                    ],
+                    "blocs_suivants": [
+                        "00000026"
+                    ]
+                },
+                {
+                    "etape_number": 15,
+                    "etape_position": 1,
+                    "identifiant": "00000025",
+                    "title": "12.B0-Often enought",
+                    "comment": " v:  Assez souvent, ouais.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/12.B0-Often enought.json",
+                    "blocs_precedents": [
+                        "00000023"
+                    ],
+                    "blocs_suivants": []
+                }
+            ]
+        },
+        {
+            "numero": 16,
+            "y": 1650,
+            "width": 583,
+            "blocs": [
+                {
+                    "etape_number": 16,
+                    "etape_position": 0,
+                    "identifiant": "00000026",
+                    "title": "13.0-I_didnt_want_to_wake_you",
+                    "comment": " panam:  Je voulais pas te r\u00e9veiller.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/13.0-I_didnt_want_to_wake_you.json",
+                    "blocs_precedents": [
+                        "00000024"
+                    ],
+                    "blocs_suivants": [
+                        "00000022",
+                        "00000027"
+                    ]
+                }
+            ]
+        },
+        {
+            "numero": 17,
+            "y": 1750,
+            "width": 583,
+            "blocs": [
+                {
+                    "etape_number": 14,
+                    "etape_position": 0,
+                    "identifiant": "00000022",
+                    "title": "13.A1-Oh_no",
+                    "comment": " v:  Oh non\u2026",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/13.A1-Oh_no.json",
+                    "blocs_precedents": [
+                        "00000026"
+                    ],
+                    "blocs_suivants": []
+                },
+                {
+                    "etape_number": 17,
+                    "etape_position": 1,
+                    "identifiant": "00000027",
+                    "title": "13.B1-Euh_wait",
+                    "comment": " v:  Euh, attends\u2026 \u00c0 propos d'hier soir\u2026",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/13.B1-Euh_wait.json",
+                    "blocs_precedents": [
+                        "00000026"
+                    ],
+                    "blocs_suivants": []
+                }
+            ]
         }
     ]
 }

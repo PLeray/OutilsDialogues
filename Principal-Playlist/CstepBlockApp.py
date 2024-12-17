@@ -5,7 +5,7 @@ import json, os
 
 import global_variables  # Importer les variables globales
 from general_functions import get_Perso_from_Wem
-from playlist_functions import charger_playlist_from_file
+from playlist_functions import charger_premiere_ligne_from_playlist, charger_playlist_from_file
 
 from Csequence import Sequence
 from Cetape import Etape
@@ -246,10 +246,6 @@ class StepBlockApp:
         self.update_width_and_reorganize()
         self.draw_sequence()
     
-  
-    """
-    
-    """
     def draw_sequence(self):
         """Dessiner toute la séquence sur le canvas."""
         # Mettre à jour la largeur des étapes et réorganiser
@@ -275,8 +271,6 @@ class StepBlockApp:
         # Mettre à jour la région défilable pour la scrollbar
         self.canvas.update_idletasks()
         self.canvas.config(scrollregion=self.canvas.bbox("all"))
-
-
 
 
     def create_buttons(self):
@@ -468,6 +462,11 @@ class StepBlockApp:
 
         # Initialiser le compteur global pour les blocs
         Block.initialize_counter(existing_ids)
+
+        # Mettre à jour le champ comment des blocs avec uneFonction
+        for etape in self.sequence.etapes:
+            for block in etape.blocs:
+                block.comment = charger_premiere_ligne_from_playlist(block.playlist_lien)
 
         # Vider les connexions actuelles
         self.sequence.connections = []

@@ -50,7 +50,7 @@
                     const svg = document.getElementById('svg-canvas');
                     svg.innerHTML = ''; // Réinitialiser le SVG
 
-                    const lines = JSON.parse('[{"start": "block-00000002", "end": "block-00000003"}, {"start": "block-00000002", "end": "block-00000004"}, {"start": "block-00000003", "end": "block-00000005"}, {"start": "block-00000004", "end": "block-00000005"}, {"start": "block-00000005", "end": "block-00000007"}, {"start": "block-00000007", "end": "block-00000008"}, {"start": "block-00000007", "end": "block-00000009"}, {"start": "block-00000008", "end": "block-00000010"}, {"start": "block-00000009", "end": "block-00000011"}, {"start": "block-00000010", "end": "block-00000012"}, {"start": "block-00000011", "end": "block-00000012"}]');
+                    const lines = JSON.parse('[{"start": "block-00000002", "end": "block-00000003"}, {"start": "block-00000002", "end": "block-00000004"}, {"start": "block-00000003", "end": "block-00000005"}, {"start": "block-00000004", "end": "block-00000005"}, {"start": "block-00000005", "end": "block-00000007"}, {"start": "block-00000007", "end": "block-00000008"}, {"start": "block-00000007", "end": "block-00000009"}, {"start": "block-00000008", "end": "block-00000010"}, {"start": "block-00000009", "end": "block-00000011"}, {"start": "block-00000010", "end": "block-00000012"}, {"start": "block-00000011", "end": "block-00000012"}, {"start": "block-00000012", "end": "block-00000013"}, {"start": "block-00000013", "end": "block-00000014"}, {"start": "block-00000014", "end": "block-00000016"}, {"start": "block-00000016", "end": "block-00000017"}, {"start": "block-00000017", "end": "block-00000018"}, {"start": "block-00000018", "end": "block-00000019"}, {"start": "block-00000018", "end": "block-00000020"}, {"start": "block-00000019", "end": "block-00000021"}, {"start": "block-00000020", "end": "block-00000021"}, {"start": "block-00000021", "end": "block-00000023"}, {"start": "block-00000023", "end": "block-00000024"}, {"start": "block-00000023", "end": "block-00000025"}, {"start": "block-00000024", "end": "block-00000026"}, {"start": "block-00000026", "end": "block-00000022"}, {"start": "block-00000026", "end": "block-00000027"}]');
 
                     lines.forEach(line => {
                         const startElement = document.getElementById(line.start);
@@ -86,43 +86,99 @@
                 <svg id="svg-canvas"></svg>
         
                 <div id="block-00000002" class="block" style="top: 50px; left: 400px;">
-                    00000002<br>1.0-Do_i_know you<br>panam:  V ?
+                    00000002<br>1.0-Do_i_know you<br> panam:  V ?
                 </div>
                 
                 <div id="block-00000003" class="block" style="top: 300px; left: 125px;">
-                    00000003<br>2.A0-[Sit]-Really_glad_to_see_you<br>v:  Salut, Panam.
+                    00000003<br>2.A0-[Sit]-Really_glad_to_see_you<br> v:  Salut, Panam.
                 </div>
                 
                 <div id="block-00000004" class="block" style="top: 300px; left: 675px;">
-                    00000004<br>2.B0-[Sit]-glad_you_did_not_change_your_mind<br>v:  Salut, Panam.
+                    00000004<br>2.B0-[Sit]-glad_you_did_not_change_your_mind<br> v:  Salut, Panam.
                 </div>
                 
                 <div id="block-00000005" class="block" style="top: 550px; left: 400px;">
-                    00000005<br>3.0-[Drink]-Talk_to_me<br>v:  Je t'écoute.
+                    00000005<br>3.0-[Drink]-Talk_to_me<br> v:  Je t'écoute.
                 </div>
                 
                 <div id="block-00000007" class="block" style="top: 800px; left: 400px;">
-                    00000007<br>3.1-[Drink]-Thought_you_and_Saul_agreed<br>v:  Thought you and Saul'd agreed to bury your carbines.
+                    00000007<br>3.1-[Drink]-Thought_you_and_Saul_agreed<br> v:  Je croyais que vous aviez fini par vous entendre, Saul et toi.
                 </div>
                 
                 <div id="block-00000008" class="block" style="top: 1050px; left: 125px;">
-                    00000008<br>4.A0-[Drink]-Dont_worry_about_Saul<br>v:  Hey, don't worry about Saul. He'll get over it.
+                    00000008<br>4.A0-[Drink]-Dont_worry_about_Saul<br> v:  Hé, fais pas attention à Saul. Ça lui passera.
                 </div>
                 
                 <div id="block-00000009" class="block" style="top: 1050px; left: 675px;">
-                    00000009<br>4.B0-[Drink]-Saul_could_be_right<br>v:  Te vexe pas, mais… Saul a peut-être raison.
+                    00000009<br>4.B0-[Drink]-Saul_could_be_right<br> v:  Te vexe pas, mais… Saul a peut-être raison.
                 </div>
                 
                 <div id="block-00000010" class="block" style="top: 1300px; left: 125px;">
-                    00000010<br>4.A1-Don't exaggerate<br>v:  C'mon, don't exaggerate.
+                    00000010<br>4.A1-Don't exaggerate<br> v:  Ça va, exagère pas non plus.
                 </div>
                 
                 <div id="block-00000011" class="block" style="top: 1300px; left: 675px;">
-                    00000011<br>4.B1-I_can_help<br>v:  There any way I can help?
+                    00000011<br>4.B1-I_can_help<br> v:  Je peux faire un truc pour t'aider ?
                 </div>
                 
                 <div id="block-00000012" class="block" style="top: 1550px; left: 400px;">
-                    00000012<br>5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel<br>v:  Panam.
+                    00000012<br>5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel<br> v:  Panam.
+                </div>
+                
+                <div id="block-00000013" class="block" style="top: 1800px; left: 400px;">
+                    00000013<br>5.1-I take it we've got a deal<br> v:  Alors, j'en conclus que t'es partante ?
+                </div>
+                
+                <div id="block-00000014" class="block" style="top: 2050px; left: 400px;">
+                    00000014<br>6.0-Entrance to the room<br> v:  C'est sympa ici. Très classe.
+                </div>
+                
+                <div id="block-00000016" class="block" style="top: 2300px; left: 400px;">
+                    00000016<br>6.1-[Sit]-It_is_awesome<br> panam:  Héé, génial !
+                </div>
+                
+                <div id="block-00000017" class="block" style="top: 2550px; left: 400px;">
+                    00000017<br>7.0-Will_you_say_something<br> panam:  Tu veux rien dire ?
+                </div>
+                
+                <div id="block-00000018" class="block" style="top: 2800px; left: 400px;">
+                    00000018<br>8.0-Reminded_me_of_jackie<br> v:  Panam… je…
+                </div>
+                
+                <div id="block-00000019" class="block" style="top: 3050px; left: 125px;">
+                    00000019<br>9.A0-I cant_make_any_plans_for_the_future<br> v:  Je peux rien prévoir pour l'avenir. Parce que… y a ce truc…
+                </div>
+                
+                <div id="block-00000020" class="block" style="top: 3050px; left: 675px;">
+                    00000020<br>9.B0-Dead in a few months<br> v:  Je serai mort dans quelques mois, pas vrai ?
+                </div>
+                
+                <div id="block-00000021" class="block" style="top: 3300px; left: 400px;">
+                    00000021<br>10.0-if_I_gotta_die<br> v:  Mais… si je dois crever, je veux qu'on se souvienne de moi. Même une note de bas de page, ça me suffirait.
+                </div>
+                
+                <div id="block-00000023" class="block" style="top: 3550px; left: 400px;">
+                    00000023<br>11.0-Come here<br> v:  Viens là.
+                </div>
+                
+                <div id="block-00000024" class="block" style="top: 3800px; left: 125px;">
+                    00000024<br>12.A0-Your_wish_is_our_command<br> v:  Non, pas du tout.
+                </div>
+                
+                <div id="block-00000025" class="block" style="top: 3800px; left: 675px;">
+                    00000025<br>12.B0-Often enought<br> v:  Assez souvent, ouais.
+                </div>
+                
+                <div id="block-00000026" class="block" style="top: 4050px; left: 400px;">
+                    00000026<br>13.0-I_didnt_want_to_wake_you<br> panam:  Je voulais pas te réveiller.
+                </div>
+                
+                <div id="block-00000022" class="block" style="top: 4300px; left: 125px;">
+                    00000022<br>13.A1-Oh_no<br> v:  Oh non…
+                </div>
+                
+                <div id="block-00000027" class="block" style="top: 4300px; left: 675px;">
+                    00000027<br>13.B1-Euh_wait<br> v:  Euh, attends… À propos d'hier soir…
                 </div>
                 
             </div>
