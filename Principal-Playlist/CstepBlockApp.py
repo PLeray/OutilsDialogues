@@ -213,8 +213,8 @@ class StepBlockApp:
 
     def on_key_press(self, event):
         """Gérer les pressions de touches pour déplacer les blocs dans une étape."""
-        if self.selected_blocks["green"]:
-            block_to_move = self.selected_blocks["green"][0]
+        if self.selected_block:
+            block_to_move = self.selected_block
             etape_idx = block_to_move.etape_number
             etape = self.sequence.etapes[etape_idx]
 
@@ -232,8 +232,6 @@ class StepBlockApp:
                 self.sequence.update_connections()
                 # Redessiner la séquence
                 self.draw_sequence()
-        else:
-            print("Aucun bloc sélectionné pour déplacement.")
 
     def update_width_and_reorganize(self):
         """Mettre à jour la largeur des étapes et réorganiser leurs blocs."""

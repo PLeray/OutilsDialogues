@@ -1,3 +1,4 @@
+import global_variables  # Importer les variables globales
 class Block:
     id_counter = 0  # Compteur global pour générer les identifiants
 
@@ -47,21 +48,22 @@ class Block:
         :param selected: Si le bloc est sélectionné par clic gauche.
         :param tags: Tags à appliquer aux éléments dessinés pour identification.
         """
-        color = "#90EE90"  # Couleur par défaut pour les blocs
+        #color = "#90EE90"  # Couleur par défaut pour les blocs
         outline_color = ""
 
         # Déterminer la couleur de l'entourage
+        if selected:
+            outline_color = global_variables.Couleur_BlocSelect
         if is_source:
-            outline_color = "green"
+            outline_color = global_variables.Couleur_BlocSource
         elif is_target:
-            outline_color = "red"
-        elif selected:
-            outline_color = "orange"
+            outline_color = global_variables.Couleur_BlocTarget
+
 
         # Dessiner le rectangle du bloc
         canvas.create_rectangle(
             x - 50, y - 20, x + 50, y + 20,
-            fill=color,
+            fill=global_variables.Couleur_Bloc,
             outline=outline_color,
             width=3 if outline_color else 1,
             tags=tags

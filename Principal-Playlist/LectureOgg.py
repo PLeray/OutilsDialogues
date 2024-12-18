@@ -37,32 +37,6 @@ def play_ogg_file(file_path):
     except Exception as e:
         print(f"Erreur lors de la lecture du fichier : {e}")
 
-"""
-def generate_audio_path(audio_value):
-    # Vérifier si audio_value est valide
-    if audio_value == global_variables.pas_Info:
-        return False
-
-    # Reconstruire le chemin
-    try:
-        # Remplacer '{}' par le chemin de localisation completn'existe pas
-        if "{}" in audio_value:
-            audio_value = audio_value.replace("{}", global_variables.CheminLocalization + global_variables.CheminLangue)
-
-        # Remplacer l'extension '.wem' par '.ogg'
-        if audio_value.endswith(".wem"):
-            audio_value = audio_value[:-4] + ".ogg"
-
-        # Ajouter le chemin racine
-        full_path = global_variables.project_path + audio_value
-        #print(f"chemin du fichier localiser : {full_path}")
-        return full_path
-    except Exception as e:
-        print(f"Erreur lors de la génération du chemin : {e}")
-        return False
-"""        
-
-
 
 def JouerAudio(audio_value):
     #test_path = r"D:\_CyberPunk-Creation\Dialogues-Multi\source\raw\ep1\localization\fr-fr\vo\judy_q307_f_2e6b76cd023bc000.ogg"

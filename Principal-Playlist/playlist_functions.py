@@ -9,7 +9,7 @@ from LectureOgg import JouerAudio, fusionnerPlaylist
 from general_functions import get_SousTitres_by_id, extraire_localise_path, get_Perso_from_Wem, nom_playlist
 
 import global_variables  # Accéder au Label global
-
+from CmanualEntryWindow import ManualEntryWindow
 
 
 def select_and_add_to_playlist(event, tree, playlist_tree, tk):
@@ -71,7 +71,8 @@ def setup_playlist(root, tree, tk, columns):
     add_button = tk.Button(button_frame, text="Add selection to playlist ⤵️", command=lambda: add_to_playlist(tree, playlist_tree, tk))
     add_button.pack(side=tk.LEFT, padx=5)
 
-    add_manual_button = tk.Button(button_frame, text="Add line manually ✏️", command=lambda: open_manual_entry_window(playlist_tree, tk))
+    add_manual_button = tk.Button(button_frame, text="Add line manually ✏️", command=lambda: open_manual_entry_window(button_frame, playlist_tree, tk))
+    #add_manual_button = tk.Button(button_frame, text="Add line manually ✏️", command=lambda: ManualEntryWindow(parent, playlist_tree))
     add_manual_button.pack(side=tk.LEFT, padx=5)
 
     move_up_button = tk.Button(button_frame, text="Up ⬆️", command=lambda: move_up_playlist(playlist_tree))
@@ -471,21 +472,27 @@ def save_playlist_to_txt(playlist_tree):
         except Exception as e:
             print(f"Erreur lors de la sauvegarde : {e}")
 
+def open_manual_entry_window(button_frame, playlist_tree, tk):
+    ManualEntryWindow(button_frame, playlist_tree) 
 
-def open_manual_entry_window(playlist_tree, tk):
+    count_playlist_rows(playlist_tree)  # Mettre à jour le compteur
+    colorize_playlist_rows(playlist_tree)  # Mettre à jour les couleurs
+
+def open_manual_entry_window2(playlist_tree, tk):
     """Ouvre une fenêtre pour saisir manuellement les champs d'une ligne."""
     manual_window = tk.Toplevel()
     manual_window.title("Add Playlist Row")
 
     # Liste des colonnes
     column_names = [
-        "ID", "Female Subtitle", "Male Subtitle", "Female Voice Path", "Male Voice Path", "Quest Path"
+        #"ID", "Female Subtitle", "Male Subtitle", "Female Voice Path", "Male Voice Path", "Quest Path"
+        "ACTION Female * :", "ACTION Male :"
     ]
     entry_fields = {}  # Pour stocker les champs d'entrée
 
     # Créer des champs de saisie pour chaque colonne
     for idx, column in enumerate(column_names):
-        label = tk.Label(manual_window, text=column + " :")
+        label = tk.Label(manual_window, text=column)
         label.grid(row=idx, column=0, padx=10, pady=5, sticky="w")
 
         entry = tk.Entry(manual_window, width=40)
@@ -496,12 +503,12 @@ def open_manual_entry_window(playlist_tree, tk):
     def add_row():
         """Ajoute la ligne saisie dans la Treeview."""
         values = [
-            entry_fields["ID"].get(),
+            "ID A GENERER",
             entry_fields["Female Subtitle"].get(),
             entry_fields["Male Subtitle"].get(),
-            entry_fields["Female Voice Path"].get(),
-            entry_fields["Male Voice Path"].get(),
-            entry_fields["Quest Path"].get()
+            "",
+            "",
+            "QUEST PATH"
         ]
         playlist_tree.insert("", tk.END, values=values)  # Insérer dans la Treeview
         count_playlist_rows(playlist_tree)  # Mettre à jour le compteur

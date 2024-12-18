@@ -11,7 +11,6 @@ def initConfigGlobale():
     global_variables.ww2ogg_path = config['WW2OGG_PATH']
     global_variables.revorb_path = config['REVORB_PATH']
     global_variables.codebooks_path = config['CODEBOOKS_PATH']
-    #global_variables.project_path = config['PROJECT_PATH'] + "/source/raw/"
 
 # Lire les chemins depuis le fichier de configuration
 def read_config(config_path):
@@ -117,110 +116,4 @@ def nom_playlist():    # Récupérer le texte du Label et le nom de la playlist 
     nom_sans_extension = os.path.splitext(nom_playlist)[0] 
     #print(f"nom_sans_extension : {nom_sans_extension}.")
     return nom_sans_extension
-
-# _userconf ################
-def read_userconf(file_path="userconf.ini"):
-    """
-    Lit les informations du fichier userconf.ini et retourne les variables sous forme de dictionnaire.
-
-    :param file_path: Chemin du fichier userconf.ini (par défaut dans le répertoire courant).
-    :return: Dictionnaire contenant les paramètres du fichier.
-    """
-    config = configparser.ConfigParser()
-    config.optionxform = str  # Respecte la casse des clés
-
-    if os.path.exists(file_path):
-        config.read(file_path)
-        return {section: dict(config[section]) for section in config.sections()}
-    else:
-        raise FileNotFoundError(f"Le fichier {file_path} est introuvable.")
-
-def read_or_initialize_userconf(file_path="userconf.ini"):
-    """
-    Lit les informations depuis un fichier userconf.ini ou initialise ce fichier
-    si celui-ci n'existe pas. Si le fichier est créé, il demande à l'utilisateur
-    le chemin de son projet Wolvenkit via une boîte de dialogue.
-
-    :param file_path: Chemin du fichier userconf.ini (par défaut dans le répertoire courant).
-    :return: Dictionnaire contenant les données du fichier ini.
-    """
-    # Vérifier si le fichier userconf.ini existe
-    if os.path.exists(file_path):
-        return read_userconf(file_path)
-    else:
-        # Le fichier n'existe pas : demander le chemin du projet Wolvenkit
-        root = Tk()
-        root.withdraw()  # Masquer la fenêtre principale de tkinter
-        project_path = filedialog.askdirectory(title="Sélectionnez le chemin du projet Wolvenkit where you extracted the localization files (the .wem audios and the subtitle files)")
-        root.destroy()
-
-        if not project_path:
-            raise ValueError("Aucun chemin sélectionné. Impossible de continuer sans définir PROJECT_WOLVENKIT_PATH.")
-
-        # Initialiser les données
-        data = {
-            "SETTINGS": {
-                "PROJECT_WOLVENKIT_PATH": project_path ,
-                "LANGUAGE": "en-us"
-            }
-        }
-
-        # Sauvegarder les données dans userconf.ini
-        save_userconf(data, file_path)
-
-        # Retourner les données initialisées
-        return data
-
-def save_userconf(data, file_path="userconf.ini"):
-    """
-    Sauvegarde les informations dans un fichier userconf.ini, en mettant à jour les sections existantes.
-    :param data: Dictionnaire contenant les données à sauvegarder.
-                 Format attendu : {"SECTION": {"key": "value", ...}, ...}.
-    :param file_path: Chemin du fichier userconf.ini (par défaut dans le répertoire courant).
-    """
-    config = configparser.ConfigParser()
-    config.optionxform = str  # Respecte la casse des clés
-
-    # Lire le fichier existant s'il existe
-    if os.path.exists(file_path):
-        config.read(file_path)
-
-    # Mettre à jour ou ajouter les nouvelles données
-    for section, values in data.items():
-        if not config.has_section(section):
-            config.add_section(section)
-        for key, value in values.items():
-            config.set(section, key, str(value))  # Convertir les valeurs en chaînes
-
-    # Écrire les données dans le fichier
-    with open(file_path, "w") as configfile:
-        config.write(configfile)
-    print(f"Les données ont été sauvegardées dans {file_path}.")
-
-
-def update_language_userconf(new_language, file_path="userconf.ini"):
-    """
-    Met à jour uniquement la clé LANGUAGE dans le fichier userconf.ini
-    tout en préservant les autres paramètres.
-    :param new_language: Nouvelle valeur pour LANGUAGE.
-    :param file_path: Chemin du fichier userconf.ini (par défaut dans le répertoire courant).
-    """
-    try:
-        # Lire les paramètres existants ou les initialiser s'ils n'existent pas
-        settings = read_userconf(file_path)
-    except FileNotFoundError:
-        # Si le fichier n'existe pas, créer une configuration par défaut
-        print(f"{file_path} introuvable. Création d'un fichier par défaut...")
-        settings = {"SETTINGS": {"PROJECT_WOLVENKIT_PATH": "/default/path", "LANGUAGE": "en-us"}}
-        save_userconf(settings, file_path)
-
-    # Mettre à jour uniquement LANGUAGE
-    if "SETTINGS" not in settings:
-        settings["SETTINGS"] = {}
-    settings["SETTINGS"]["LANGUAGE"] = new_language
-
-    # Sauvegarder les paramètres mis à jour
-    save_userconf(settings, file_path)
-    print(f"LANGUAGE mis à jour dans {file_path} : {new_language}")
-
 

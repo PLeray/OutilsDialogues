@@ -1,5 +1,7 @@
 # Variables globlaes du projet
 
+user_config = None #Objet pour gérer la conf user
+
 dataSound = None  # Stockage donnée
 rootAccess = None  # Définition initiale
 
@@ -58,3 +60,17 @@ project_path = ""
 #CheminRacine = "D:\_CyberPunk-Creation\DialogueFR/source/raw/" # A suprimer
 CheminLocalization = "localization/"
 CheminLangue = "fr-fr"
+
+# Couleurs
+Couleur_BgSelectLigne = "#D3D3D3"  # Couleur pour les lignes sélectionnées
+Couleur_TxtSelectLigne = "#000000"   # Couleur du texte pour les lignes sélectionnées
+
+Couleur_Bloc = "#90EE90"  # Couleur par défaut pour les blocs
+
+Couleur_BlocSelect = "orange"
+Couleur_BlocSource = "green"
+Couleur_BlocTarget = "red"
+
+
+
+

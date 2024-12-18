@@ -4,12 +4,13 @@ from tkinter import ttk
 import time
 
 import global_variables  # Importer les variables globales
-from general_functions import initConfigGlobale, find_localization_subfolders, read_or_initialize_userconf, update_language_userconf
+from general_functions import initConfigGlobale, find_localization_subfolders
 
 from recherche_functions import open_and_display_json, SelectionLigne, setup_TableauPrincipal
 from playlist_functions import select_and_add_to_playlist, setup_playlist
 from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_filters, initialize_personnage_droplist, initialize_quete_droplist, update_quete_based_on_personnage, update_personnage_based_on_quete
 
+from CuserConfig import UserConfig
 from CstepBlockApp import StepBlockApp
 
 def show_hello_world():
@@ -79,6 +80,7 @@ def maj_Langue(str_langue):
     global_variables.CheminLangue = str_langue
     global_variables.bdd_Localisation_Json = "data/BDDjson/Base_" + str_langue + ".json"
 
+
 # Créer la fenêtre principale
 root = tk.Tk()
 root.title("Tool to assemble and test dialogue sequences for Cyberpung modding")
@@ -89,15 +91,23 @@ initConfigGlobale()
 
 global_variables.rootAccess = root #initialisation de la variable globale root pour y acceder dans les fonctions
 
-userconf_data = read_or_initialize_userconf()
+global_variables.user_config = UserConfig("userconfig.ini")
+global_variables.user_config.read_or_initialize()
+
+#userconf_data = read_or_initialize_userconf()
 #print(f"userconf_data : {userconf_data}")
 
 # Récupérer le chemin du projet
+"""
 project_path = userconf_data["SETTINGS"].get("PROJECT_WOLVENKIT_PATH")
 if not project_path:
     raise ValueError("Le chemin 'PROJECT_WOLVENKIT_PATH' est introuvable ou invalide dans userconf.ini.")
 
 global_variables.project_path = project_path + "/source/raw/"
+"""
+
+
+global_variables.project_path = global_variables.user_config.get("SETTINGS", "PROJECT_WOLVENKIT_PATH") + "/source/raw/"
 
 localization_languages = find_localization_subfolders(global_variables.project_path)
 
@@ -124,8 +134,14 @@ language_dropdown = ttk.Combobox(
 )
 
 # Définir une valeur par défaut pour la liste déroulante
-maj_Langue(userconf_data["SETTINGS"].get("LANGUAGE"))
-global_variables.CheminLangue = userconf_data["SETTINGS"].get("LANGUAGE")
+#maj_Langue(userconf_data["SETTINGS"].get("LANGUAGE"))
+
+maj_Langue(global_variables.user_config.get("SETTINGS", "LANGUAGE"))
+
+
+#global_variables.CheminLangue = userconf_data["SETTINGS"].get("LANGUAGE")
+global_variables.CheminLangue = global_variables.user_config.get("SETTINGS", "LANGUAGE")
+
 global_variables.bdd_Localisation_Json = "data/BDDjson/Base_" + global_variables.CheminLangue + ".json"
 if global_variables.CheminLangue in localization_languages:
     language_dropdown.set(global_variables.CheminLangue)  # Définit la valeur par défaut
@@ -143,7 +159,14 @@ text_label.pack(side=tk.LEFT, padx=5, pady=5)
 def on_language_selected(event):
     global_variables.dataSound = None
     maj_Langue(language_var.get())
-    update_language_userconf(global_variables.CheminLangue)
+
+
+
+    #update_language_userconf(global_variables.CheminLangue)
+
+    global_variables.user_config.set("SETTINGS", "LANGUAGE", global_variables.CheminLangue)
+
+
     # mettre ca si on veut les langues des tableau synchro filter_tree_with_filters(tree, filters, global_variables.bdd_Localisation_Json)
     print(f"Langue sélectionnée : {global_variables.CheminLangue}")
 
@@ -160,8 +183,8 @@ style.theme_use("default")  # Changez le thème
 style.configure("Treeview", rowheight=25)  # Augmentez la hauteur des lignes si nécessaire
 style.map(
     "Treeview", 
-    background=[("selected", "#D3D3D3")],  # Couleur pour les lignes sélectionnées
-    foreground=[("selected", "#000000")]   # Couleur du texte pour les lignes sélectionnées
+    background=[("selected", global_variables.Couleur_BgSelectLigne)],  # Couleur pour les lignes sélectionnées
+    foreground=[("selected", global_variables.Couleur_TxtSelectLigne)]   # Couleur du texte pour les lignes sélectionnées
 )
 
 # Créer une variable pour gérer l'état des boutons radio
