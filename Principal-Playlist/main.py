@@ -34,7 +34,11 @@ def show_hello_world():
 def ouvrir_projet(root):
     # Vérifier si la fenêtre est déjà ouverte
     if global_variables.fenetre_projet is not None:
-        print("La fenêtre de projet est déjà ouverte.")
+        global_variables.fenetre_projet.lift()
+        global_variables.fenetre_projet.focus_force()
+        print("Une instance est déjà ouverte, elle a été ramenée au premier plan.")
+       
+        
         return
 
     # Créer une nouvelle fenêtre

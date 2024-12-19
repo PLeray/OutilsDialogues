@@ -1,5 +1,7 @@
 # Variables globlaes du projet
 
+fenetre_projet = None  #Objet pour les projets
+ligne_manuelle_instance = None  #Objet pour les nouvelle lignes
 user_config = None #Objet pour gérer la conf user
 
 dataSound = None  # Stockage donnée
@@ -11,7 +13,6 @@ principal_count = None  # Définition initiale
 
 playlist_tree = None # la playlist
 # Variable globale pour la fenêtre de projet
-fenetre_projet = None
 
 vSexe  = None  # Définition initiale
 

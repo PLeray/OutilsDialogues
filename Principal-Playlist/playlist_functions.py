@@ -6,10 +6,10 @@ from os.path import basename
 
 from tkinter import ttk, filedialog, Menu
 from LectureOgg import JouerAudio, fusionnerPlaylist
-from general_functions import get_SousTitres_by_id, extraire_localise_path, get_Perso_from_Wem, nom_playlist
+from general_functions import get_SousTitres_from_csv, get_SousTitres_by_id, extraire_localise_path, get_Perso_from_Wem, nom_playlist
 
 import global_variables  # Accéder au Label global
-from CmanualEntryWindow import ManualEntryWindow
+from CligneManuelle import LigneManuelle
 
 
 def select_and_add_to_playlist(event, tree, playlist_tree, tk):
@@ -72,7 +72,7 @@ def setup_playlist(root, tree, tk, columns):
     add_button.pack(side=tk.LEFT, padx=5)
 
     add_manual_button = tk.Button(button_frame, text="Add line manually ✏️", command=lambda: open_manual_entry_window(button_frame, playlist_tree, tk))
-    #add_manual_button = tk.Button(button_frame, text="Add line manually ✏️", command=lambda: ManualEntryWindow(parent, playlist_tree))
+    #add_manual_button = tk.Button(button_frame, text="Add line manually ✏️", command=lambda: LigneManuelle(parent, playlist_tree))
     add_manual_button.pack(side=tk.LEFT, padx=5)
 
     move_up_button = tk.Button(button_frame, text="Up ⬆️", command=lambda: move_up_playlist(playlist_tree))
@@ -229,20 +229,28 @@ def charger_playlist_from_file(playlist_tree,tk, file_path):
 
             # Ajouter les nouvelles données
             for entry in playlist_data:
-                #TRADUCTION ! Récupérer la quête
-                quete_path = extraire_localise_path(entry[global_variables.data_Quest])
-                #print(f"Fichier Quete : {quete_path}")
-                fichierQuete = ""        
-                if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
-                    fichierQuete = quete_path + ".json.json"
+                recup_Quete = entry[global_variables.data_Quest]
+                fichierQuete = "" 
+                if recup_Quete.lower().endswith(".csv"):
+                    #print(f"Le fichier {recup_Quete} est un fichier CSV.")
+                    fichierQuete = "data/projet/"  + recup_Quete 
+                    # Action spécifique pour les fichiers CSV
+                    result = get_SousTitres_from_csv(fichierQuete, entry[global_variables.data_ID])
+                else:
+                    #TRADUCTION DEPUIS LE JEU ! >>> Récupérer la quête
+                    quete_path = extraire_localise_path(recup_Quete)
+                    #print(f"Fichier Quete : {quete_path}")    
+                    if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
+                        fichierQuete = quete_path + ".json.json"
+                    #print(f"Fichier Quete : {quete_path}")
+                    result = get_SousTitres_by_id(fichierQuete, entry[global_variables.data_ID])
 
-                #print(f"Fichier Quete : {quete_path}")
-                result = get_SousTitres_by_id(fichierQuete, entry[global_variables.data_ID])
+                
                 if result:
                     #print(f"Female Variant: {result['femaleVariant']}")
                     #print(f"Male Variant: {result['maleVariant']}")
-                    female_text = result['femaleVariant']
-                    male_text = result['maleVariant']
+                    female_text = result[global_variables.data_F_SubTitle]
+                    male_text = result[global_variables.data_M_SubTitle]
                 else:
                     #print("String ID non trouvé.")
                     female_text = ""
@@ -278,17 +286,34 @@ def charger_premiere_ligne_from_playlist(file_path):
                      
             if len(playlist_data) > 0:  # Vérifier s'il y a au moins une ligne
                 first_entry = playlist_data[0]  # Ne récupérer que la première entrée
-                
+
+                recup_Quete = first_entry[global_variables.data_Quest]
+                fichierQuete = "" 
+                if recup_Quete.lower().endswith(".csv"):
+                    print(f"Le fichier {recup_Quete} est un fichier CSV.")
+                    fichierQuete = "data/projet/"  + recup_Quete 
+                    # Action spécifique pour les fichiers CSV
+                    result = get_SousTitres_from_csv(fichierQuete, first_entry[global_variables.data_ID])
+                    print(f"RECUP result : {result}")
+                else:
+                    #TRADUCTION DEPUIS LE JEU ! >>> Récupérer la quête
+                    quete_path = extraire_localise_path(recup_Quete)
+                    #print(f"Fichier Quete : {quete_path}")    
+                    if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
+                        fichierQuete = quete_path + ".json.json"
+                    #print(f"Fichier Quete : {quete_path}")
+                    result = get_SousTitres_by_id(fichierQuete, first_entry[global_variables.data_ID])
+                """
                 # TRADUCTION ! Récupérer la quête
                 quete_path = extraire_localise_path(first_entry[global_variables.data_Quest])
                 fichierQuete = ""        
                 if isinstance(quete_path, str):
-                    fichierQuete = quete_path + ".json.json"
-
+                    fichierQuete = quete_path + ".json.json"                
                 result = get_SousTitres_by_id(fichierQuete, first_entry[global_variables.data_ID])
+                """                
                 if result:                 
-                    female_text = result['femaleVariant']
-                    male_text = result['maleVariant']
+                    female_text = result[global_variables.data_F_SubTitle]
+                    male_text = result[global_variables.data_M_SubTitle]
                 else:
                     female_text = ""
                     male_text = ""  
@@ -298,16 +323,19 @@ def charger_premiere_ligne_from_playlist(file_path):
                 if not female_text or female_text == global_variables.pas_Info:
                     female_text = male_text      
 
+                #print(f"RECUP female_text : {female_text}")
+
                 selected_gender = global_variables.vSexe.get()
                 if selected_gender == global_variables.vHomme:
-                    perso = get_Perso_from_Wem(first_entry["male_vo_path"])  # Valeur pour homme
+                    perso = get_Perso_from_Wem(first_entry[global_variables.data_F_Voice])  # Valeur pour homme
                     sous_titre = male_text
                 else:
-                    perso = get_Perso_from_Wem(first_entry["female_vo_path"])  # Valeur pour femme
+                    perso = get_Perso_from_Wem(first_entry[global_variables.data_M_Voice])  # Valeur pour femme
                     sous_titre = female_text
                 
                 # Construire le commentaire avec le format requis
                 sous_titre = f" {perso}:  {sous_titre}"
+                
             else:
                 
                 print("Le fichier est vide ou mal formaté.")
@@ -472,48 +500,23 @@ def save_playlist_to_txt(playlist_tree):
         except Exception as e:
             print(f"Erreur lors de la sauvegarde : {e}")
 
-def open_manual_entry_window(button_frame, playlist_tree, tk):
-    ManualEntryWindow(button_frame, playlist_tree) 
 
+"""
+def open_manual_entry_window(button_frame, playlist_tree, tk):
+    LigneManuelle(button_frame, playlist_tree) 
     count_playlist_rows(playlist_tree)  # Mettre à jour le compteur
     colorize_playlist_rows(playlist_tree)  # Mettre à jour les couleurs
+"""
 
-def open_manual_entry_window2(playlist_tree, tk):
-    """Ouvre une fenêtre pour saisir manuellement les champs d'une ligne."""
-    manual_window = tk.Toplevel()
-    manual_window.title("Add Playlist Row")
 
-    # Liste des colonnes
-    column_names = [
-        #"ID", "Female Subtitle", "Male Subtitle", "Female Voice Path", "Male Voice Path", "Quest Path"
-        "ACTION Female * :", "ACTION Male :"
-    ]
-    entry_fields = {}  # Pour stocker les champs d'entrée
-
-    # Créer des champs de saisie pour chaque colonne
-    for idx, column in enumerate(column_names):
-        label = tk.Label(manual_window, text=column)
-        label.grid(row=idx, column=0, padx=10, pady=5, sticky="w")
-
-        entry = tk.Entry(manual_window, width=40)
-        entry.grid(row=idx, column=1, padx=10, pady=5)
-        entry_fields[column] = entry  # Stocker l'entrée associée à la colonne
-
-    # Bouton pour valider la saisie
-    def add_row():
-        """Ajoute la ligne saisie dans la Treeview."""
-        values = [
-            "ID A GENERER",
-            entry_fields["Female Subtitle"].get(),
-            entry_fields["Male Subtitle"].get(),
-            "",
-            "",
-            "QUEST PATH"
-        ]
-        playlist_tree.insert("", tk.END, values=values)  # Insérer dans la Treeview
+def open_manual_entry_window(button_frame, playlist_tree, tk):
+    # Vérifier si une instance existe déjà
+    if global_variables.ligne_manuelle_instance is None or not global_variables.ligne_manuelle_instance.window.winfo_exists():
+        global_variables.ligne_manuelle_instance = LigneManuelle(button_frame, playlist_tree)
         count_playlist_rows(playlist_tree)  # Mettre à jour le compteur
         colorize_playlist_rows(playlist_tree)  # Mettre à jour les couleurs
-        manual_window.destroy()  # Fermer la fenêtre
-
-    submit_button = tk.Button(manual_window, text="Add Row", command=add_row)
-    submit_button.grid(row=len(column_names), column=0, columnspan=2, pady=10)
+    else:
+        # Ramener la fenêtre existante au premier plan
+        global_variables.ligne_manuelle_instance.window.lift()
+        global_variables.ligne_manuelle_instance.window.focus_force()
+        print("Une instance est déjà ouverte, elle a été ramenée au premier plan.")

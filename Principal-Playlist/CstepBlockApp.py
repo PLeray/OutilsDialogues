@@ -313,11 +313,11 @@ class StepBlockApp:
                 first_entry = playlist_data[0]
                 selected_gender = global_variables.vSexe.get()
                 if selected_gender == global_variables.vHomme:
-                    perso = get_Perso_from_Wem(first_entry["male_vo_path"])  # Valeur pour homme
-                    sous_titre = first_entry["maleVariant"]
+                    perso = get_Perso_from_Wem(first_entry[global_variables.data_M_Voice])  # Valeur pour homme
+                    sous_titre = first_entry[global_variables.data_M_SubTitle]
                 else:
-                    perso = get_Perso_from_Wem(first_entry["female_vo_path"])  # Valeur pour femme
-                    sous_titre = first_entry["femaleVariant"]
+                    perso = get_Perso_from_Wem(first_entry[global_variables.data_F_Voice])  # Valeur pour femme
+                    sous_titre = first_entry[global_variables.data_F_SubTitle]
                 
                 # Construire le commentaire avec le format requis
                 leBloc.comment = f"{perso}:  {sous_titre}"

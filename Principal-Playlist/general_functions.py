@@ -1,6 +1,6 @@
-import configparser, os, json
-from tkinter import filedialog, Tk
-from threading import Thread
+import configparser, os, json, csv
+#from tkinter import filedialog, Tk
+#from threading import Thread
 import global_variables  # Importer les variables globales
 
 
@@ -75,15 +75,37 @@ def extraire_localise_path(chemin_generic):  #pour recontruire chemin avec {}
     except Exception as e:
         print(f"Erreur lors de la génération du chemin : {e}")
         return False
+    
+def get_SousTitres_from_csv(file_path, string_id):
+    """
+    Retourne femaleVariant et maleVariant pour un stringId donné dans un fichier CSV.
+
+    :param file_path: Chemin vers le fichier CSV.
+    :param string_id: Identifiant unique (stringId) à rechercher.
+    :return: Dictionnaire avec femaleVariant et maleVariant ou None si non trouvé.
+    """
+    try:
+        with open(file_path, mode="r", encoding="utf-8") as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                if row[global_variables.data_ID] == string_id:
+                    return {
+                        global_variables.data_F_SubTitle: row.get(global_variables.data_F_SubTitle, ""),
+                        global_variables.data_M_SubTitle: row.get(global_variables.data_M_SubTitle, "")
+                    }
+        print(f"Aucun résultat trouvé pour stringId : {string_id}")
+        return None
+    except FileNotFoundError:
+        print(f"Le fichier {file_path} n'existe pas.")
+        return None
+    except KeyError as e:
+        print(f"Colonne manquante dans le fichier CSV : {e}")
+        return None
+
+
+
 
 def get_SousTitres_by_id(file_path, string_id):
-    """
-    Cherche les variantes (femaleVariant et maleVariant) correspondant à un stringId donné dans un fichier JSON.
-
-    :param file_path: Chemin du fichier JSON.
-    :param string_id: stringId à rechercher.
-    :return: Un dictionnaire contenant "femaleVariant" et "maleVariant", ou None si le stringId n'est pas trouvé.
-    """
     try:
         # Charger le fichier JSON
         with open(file_path, "r", encoding="utf-8") as file:
@@ -94,8 +116,8 @@ def get_SousTitres_by_id(file_path, string_id):
         for entry in entries:
             if entry["stringId"] == str(string_id):  # Vérification du stringId
                 return {
-                    "femaleVariant": entry.get("femaleVariant", ""),
-                    "maleVariant": entry.get("maleVariant", "")
+                    global_variables.data_F_SubTitle: entry.get(global_variables.data_F_SubTitle, ""),
+                    global_variables.data_M_SubTitle: entry.get(global_variables.data_M_SubTitle, "")
                 }
         
         # Si le stringId n'est pas trouvé
