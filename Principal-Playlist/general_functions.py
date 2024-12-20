@@ -138,14 +138,14 @@ def nom_playlist():    # Récupérer le texte du Label et le nom de la playlist 
     return nom_sans_extension
 
 
-def charger_sous_titres_from_JSON_playlist(file_path):
+def charger_sous_titres_from_JSON_playlist(file_path, first_entry_only=False):
     sous_titres = []  # Liste pour stocker tous les sous-titres
     if file_path:
         with open(file_path, "r", encoding="utf-8") as file:
             playlist_data = json.load(file)
-            
+
             if len(playlist_data) > 0:  # Vérifier si le fichier contient des données
-                for entry in playlist_data:  # Itérer à travers chaque entrée
+                for index, entry in enumerate(playlist_data):
                     recup_Quete = entry[global_variables.data_Quest]
                     fichierQuete = ""
                     if recup_Quete.lower().endswith(".csv"):
@@ -176,13 +176,13 @@ def charger_sous_titres_from_JSON_playlist(file_path):
                     else:
                         perso = get_Perso_from_Wem(entry[global_variables.data_M_Voice])  # Valeur pour femme
                         sous_titre = female_text
-
-                    # Construire le commentaire avec le format requis
-                    #sous_titre_formate = f" {perso}:  {sous_titre}"
-                    #sous_titres.append(sous_titre_formate)  # Ajouter à la liste des sous-titres
                     
                     # Ajouter le sous-titre et le perso comme objet
                     sous_titres.append({"perso": perso, "sous_titre": sous_titre})
+
+                    # Si l'option est activée, ne traiter que la première entrée
+                    if first_entry_only:
+                        break
 
             else:
                 print("Le fichier est vide ou mal formaté.")
@@ -190,3 +190,4 @@ def charger_sous_titres_from_JSON_playlist(file_path):
         print("Pas de fichier playlist fourni.")
 
     return sous_titres
+

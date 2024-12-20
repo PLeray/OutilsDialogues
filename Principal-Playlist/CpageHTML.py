@@ -109,8 +109,10 @@ class PageHTML:
                 html_content += "<div class='block-subtitles'>\n"
                 for subtitle in subtitles:
                     perso = subtitle.get("perso", "Inconnu").capitalize()
+                    if perso.strip():  # Vérifie si le texte est vide ou contient uniquement des espaces
+                        perso = perso + " : " 
                     sous_titre = subtitle.get("sous_titre", "")
-                    html_content += f"<div><strong>{perso}:</strong> {sous_titre}</div>\n"
+                    html_content += f"<div><strong>{perso}</strong> {sous_titre}</div>\n"
                 html_content += "</div>\n"
 
                 html_content += "</div>\n"

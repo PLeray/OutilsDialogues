@@ -5,7 +5,7 @@ import json, os
 
 import global_variables  # Importer les variables globales
 from general_functions import get_Perso_from_Wem, charger_sous_titres_from_JSON_playlist
-from playlist_functions import charger_premiere_ligne_from_playlist, charger_playlist_from_file
+from playlist_functions import charger_playlist_from_file
 
 from Csequence import Sequence
 from Cetape import Etape
@@ -33,15 +33,6 @@ class StepBlockApp:
         self.button_frame.pack(fill=tk.X, side=tk.TOP)
 
         self.create_buttons()  # Créez les boutons dans la barre
-        """
-         # Canvas pour afficher les séquences
-        self.canvas_frame = tk.Frame(self.main_frame)
-        self.canvas_frame.pack(fill=tk.BOTH, expand=True)
-
-        self.canvas = tk.Canvas(self.canvas_frame, bg="white")
-        self.canvas.pack(fill=tk.BOTH, expand=True)       
-        """
-
 
         # Canvas pour afficher les séquences
         self.canvas_frame = tk.Frame(self.main_frame)
@@ -84,6 +75,7 @@ class StepBlockApp:
         # Ajouter une première étape
         self.add_etape()
         self.mise_a_jour_info_projet(self.file_Projet)
+        self.load_from_file(global_variables.user_config.get("SETTINGS", "PROJECT"))
         # Redimensionnement
         self.root.bind("<Configure>", self.on_resize)
 
@@ -274,11 +266,12 @@ class StepBlockApp:
 
     def create_buttons(self):
         """Créer les boutons Load, Save, Ajouter Étape, Ajouter Bloc et Connect."""
-        tk.Button(self.button_frame, text="Save", command=self.save_to_file).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Load", command=self.load_from_file).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Save", command=self.save_to_file).pack(side=tk.LEFT, padx=5, pady=5)
+
         tk.Button(self.button_frame, text="Ajouter Étape", command=self.add_etape).pack(side=tk.LEFT, padx=5, pady=5)
         #tk.Button(self.button_frame, text="Ajouter Bloc", command=self.add_block).pack(side=tk.LEFT, padx=5, pady=5)
-        tk.Button(self.button_frame, text="Connecter", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Connecter Étapes", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Générer Projet", command=self.generate_project_html).pack(side=tk.LEFT, padx=5, pady=5)
 
     def Open_Bloc(self):
@@ -404,12 +397,13 @@ class StepBlockApp:
             print("Connexions supprimées.")
 
     def save_to_file(self):
-        """Sauvegarder les étapes et blocs dans un fichier JSON.
-        filename = filedialog.asksaveasfilename(filetypes=[("JSON Files", "*.json")])
+        #Sauvegarder les étapes et blocs dans un fichier JSON.
+        filename = filedialog.asksaveasfilename(
+            filetypes=[("JSON Files", "*.json")],
+            initialfile=self.file_Projet
+            )
         if not filename:
             return
-        """
-        filename = "data/projet/projet.json"
 
         # Construire la structure de données pour la sauvegarde
         data = {
@@ -438,13 +432,15 @@ class StepBlockApp:
                 block["blocs_suivants"] = list(set(block["blocs_suivants"]))
         return data
         
-    def load_from_file(self):
-        """Charger les étapes, blocs et connexions depuis un fichier JSON.
-        filename = filedialog.askopenfilename(filetypes=[("JSON Files", "*.json")])
-        if not filename:
-            return
-        """
-        filename = "data/projet/projet.json"
+    def load_from_file(self, LefichierProjet = None):
+        #Charger les étapes, blocs et connexions depuis un fichier JSON. 
+        if not LefichierProjet:
+            filename = filedialog.askopenfilename(filetypes=[("JSON Files", "*.json")])
+            if not filename:
+                return
+            global_variables.user_config.set("SETTINGS", "PROJECT", filename)
+        else:
+            filename = LefichierProjet
 
         with open(filename, "r") as f:
             data = json.load(f)
@@ -465,7 +461,12 @@ class StepBlockApp:
         # Mettre à jour le champ comment des blocs avec uneFonction
         for etape in self.sequence.etapes:
             for block in etape.blocs:
-                block.comment = charger_premiere_ligne_from_playlist(block.playlist_lien)
+                subtitle = charger_sous_titres_from_JSON_playlist(block.playlist_lien, first_entry_only=True)
+                perso = subtitle[0].get("perso", "Inconnu").capitalize()
+                sous_titre = subtitle[0].get("sous_titre", "")
+                if perso.strip():  # Vérifie si le texte est vide ou contient uniquement des espaces
+                        perso = perso + " : " 
+                block.comment = perso + sous_titre
 
         # Vider les connexions actuelles
         self.sequence.connections = []
