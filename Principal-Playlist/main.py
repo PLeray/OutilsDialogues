@@ -13,32 +13,12 @@ from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_
 from CuserConfig import UserConfig
 from CstepBlockApp import StepBlockApp
 
-def show_hello_world():
-    # Créer une nouvelle fenêtre
-    window = tk.Tk()
-    window.title("Message")  # Titre de la fenêtre
-    window.geometry("200x100")  # Dimensions de la fenêtre
-
-    # Ajouter une étiquette avec le message
-    label = tk.Label(window, text="Hello World!")
-    label.pack(pady=20)  # Ajouter un peu d'espace autour
-
-    # Ajouter un bouton pour fermer la fenêtre
-    close_button = tk.Button(window, text="Fermer", command=window.destroy)
-    close_button.pack(pady=10)
-
-    # Lancer la boucle principale
-    window.mainloop()
-
-
 def ouvrir_projet(root):
     # Vérifier si la fenêtre est déjà ouverte
     if global_variables.fenetre_projet is not None:
         global_variables.fenetre_projet.lift()
         global_variables.fenetre_projet.focus_force()
         print("Une instance est déjà ouverte, elle a été ramenée au premier plan.")
-       
-        
         return
 
     # Créer une nouvelle fenêtre

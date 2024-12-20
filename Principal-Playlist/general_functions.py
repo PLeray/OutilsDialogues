@@ -103,8 +103,6 @@ def get_SousTitres_from_csv(file_path, string_id):
         return None
 
 
-
-
 def get_SousTitres_by_id(file_path, string_id):
     try:
         # Charger le fichier JSON
@@ -139,3 +137,56 @@ def nom_playlist():    # Récupérer le texte du Label et le nom de la playlist 
     #print(f"nom_sans_extension : {nom_sans_extension}.")
     return nom_sans_extension
 
+
+def charger_sous_titres_from_JSON_playlist(file_path):
+    sous_titres = []  # Liste pour stocker tous les sous-titres
+    if file_path:
+        with open(file_path, "r", encoding="utf-8") as file:
+            playlist_data = json.load(file)
+            
+            if len(playlist_data) > 0:  # Vérifier si le fichier contient des données
+                for entry in playlist_data:  # Itérer à travers chaque entrée
+                    recup_Quete = entry[global_variables.data_Quest]
+                    fichierQuete = ""
+                    if recup_Quete.lower().endswith(".csv"):
+                        fichierQuete = "data/projet/" + recup_Quete
+                        result = get_SousTitres_from_csv(fichierQuete, entry[global_variables.data_ID])
+                    else:
+                        quete_path = extraire_localise_path(recup_Quete)
+                        if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
+                            fichierQuete = quete_path + ".json.json"
+                        result = get_SousTitres_by_id(fichierQuete, entry[global_variables.data_ID])
+
+                    if result:
+                        female_text = result[global_variables.data_F_SubTitle]
+                        male_text = result[global_variables.data_M_SubTitle]
+                    else:
+                        female_text = ""
+                        male_text = ""
+
+                    if not male_text or male_text == global_variables.pas_Info:
+                        male_text = female_text
+                    if not female_text or female_text == global_variables.pas_Info:
+                        female_text = male_text
+
+                    selected_gender = global_variables.vSexe.get()
+                    if selected_gender == global_variables.vHomme:
+                        perso = get_Perso_from_Wem(entry[global_variables.data_F_Voice])  # Valeur pour homme
+                        sous_titre = male_text
+                    else:
+                        perso = get_Perso_from_Wem(entry[global_variables.data_M_Voice])  # Valeur pour femme
+                        sous_titre = female_text
+
+                    # Construire le commentaire avec le format requis
+                    #sous_titre_formate = f" {perso}:  {sous_titre}"
+                    #sous_titres.append(sous_titre_formate)  # Ajouter à la liste des sous-titres
+                    
+                    # Ajouter le sous-titre et le perso comme objet
+                    sous_titres.append({"perso": perso, "sous_titre": sous_titre})
+
+            else:
+                print("Le fichier est vide ou mal formaté.")
+    else:
+        print("Pas de fichier playlist fourni.")
+
+    return sous_titres

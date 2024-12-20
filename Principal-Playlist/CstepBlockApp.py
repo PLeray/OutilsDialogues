@@ -4,7 +4,7 @@ from tkinter import Menu, filedialog
 import json, os
 
 import global_variables  # Importer les variables globales
-from general_functions import get_Perso_from_Wem
+from general_functions import get_Perso_from_Wem, charger_sous_titres_from_JSON_playlist
 from playlist_functions import charger_premiere_ligne_from_playlist, charger_playlist_from_file
 
 from Csequence import Sequence

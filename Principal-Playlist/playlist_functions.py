@@ -500,15 +500,6 @@ def save_playlist_to_txt(playlist_tree):
         except Exception as e:
             print(f"Erreur lors de la sauvegarde : {e}")
 
-
-"""
-def open_manual_entry_window(button_frame, playlist_tree, tk):
-    LigneManuelle(button_frame, playlist_tree) 
-    count_playlist_rows(playlist_tree)  # Mettre à jour le compteur
-    colorize_playlist_rows(playlist_tree)  # Mettre à jour les couleurs
-"""
-
-
 def open_manual_entry_window(button_frame, playlist_tree, tk):
     # Vérifier si une instance existe déjà
     if global_variables.ligne_manuelle_instance is None or not global_variables.ligne_manuelle_instance.window.winfo_exists():
