@@ -70,7 +70,7 @@ class StepBlockApp:
         # Ajouter une première étape
         self.add_etape()
         self.mise_a_jour_info_projet(self.file_Projet)
-        self.load_from_file(global_variables.user_config.get("SETTINGS", "PROJECT"))
+        self.load_from_file(global_variables.path_dernier_projet)
         # Redimensionnement
         self.root.bind("<Configure>", self.on_resize)
 

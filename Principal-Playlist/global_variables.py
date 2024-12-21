@@ -1,6 +1,7 @@
 # Variables globlaes du projet
 
 projet_instance = None  #Objet pour les projets
+path_dernier_projet = ""
 ligne_manuelle_instance = None  #Objet pour les nouvelle lignes
 user_config = None #Objet pour gérer la conf user
 

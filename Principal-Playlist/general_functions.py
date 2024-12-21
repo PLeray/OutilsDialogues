@@ -11,6 +11,7 @@ def initConfigGlobale():
     global_variables.ww2ogg_path = config['WW2OGG_PATH']
     global_variables.revorb_path = config['REVORB_PATH']
     global_variables.codebooks_path = config['CODEBOOKS_PATH']
+    global_variables.path_dernier_projet = global_variables.user_config.get("SETTINGS", "PROJECT")
 
 # Lire les chemins depuis le fichier de configuration
 def read_config(config_path):
@@ -75,11 +76,27 @@ def extraire_localise_path(chemin_generic):  #pour recontruire chemin avec {}
     except Exception as e:
         print(f"Erreur lors de la génération du chemin : {e}")
         return False
+
+def localise_path(chemin_generic):    
+    # Remplacer '{}' par le chemin de localisation completn'existe pas
+    chemin_vrai = chemin_generic
+    if "{}" in chemin_generic:
+        chemin_vrai = chemin_generic.replace("{}", global_variables.CheminLocalization + global_variables.CheminLangue)
+    return chemin_vrai
+        
+def Delocalise_project_path(Project_path):
+    nomProject = os.path.splitext(os.path.basename(Project_path))[0]
+    directory_path = os.path.dirname(Project_path)
+
+    #chemin_generic =  nomProject + "_files/{{}}/" + nomProject + "DIC.csv" 
+    #chemin_generic = "{}_files/{{}}/{}DIC.csv".format(nomProject, nomProject)
+    chemin_generic = f"{directory_path}/{nomProject}_files/{{}}/{nomProject}DIC.csv"
+    print(f"chemin chemin_generic : {chemin_generic}")  
+    return chemin_generic
     
 def get_SousTitres_from_csv(file_path, string_id):
     """
     Retourne femaleVariant et maleVariant pour un stringId donné dans un fichier CSV.
-
     :param file_path: Chemin vers le fichier CSV.
     :param string_id: Identifiant unique (stringId) à rechercher.
     :return: Dictionnaire avec femaleVariant et maleVariant ou None si non trouvé.
@@ -88,15 +105,17 @@ def get_SousTitres_from_csv(file_path, string_id):
         with open(file_path, mode="r", encoding="utf-8") as file:
             reader = csv.DictReader(file)
             for row in reader:
-                if row[global_variables.data_ID] == string_id:
+                if row[global_variables.data_ID] == string_id: 
                     return {
                         global_variables.data_F_SubTitle: row.get(global_variables.data_F_SubTitle, ""),
-                        global_variables.data_M_SubTitle: row.get(global_variables.data_M_SubTitle, "")
+                        global_variables.data_M_SubTitle: row.get(global_variables.data_M_SubTitle, ""),
+                        global_variables.data_F_Voice: row.get(global_variables.data_F_Voice, ""),
+                        global_variables.data_M_Voice: row.get(global_variables.data_M_Voice, "")
                     }
         print(f"Aucun résultat trouvé pour stringId : {string_id}")
         return None
     except FileNotFoundError:
-        print(f"Le fichier {file_path} n'existe pas.")
+        print(f"Le fichier csv {file_path} n'existe pas.")
         return None
     except KeyError as e:
         print(f"Colonne manquante dans le fichier CSV : {e}")
@@ -146,11 +165,13 @@ def charger_sous_titres_from_JSON_playlist(file_path, first_entry_only=False):
 
             if len(playlist_data) > 0:  # Vérifier si le fichier contient des données
                 for index, entry in enumerate(playlist_data):
+                    prefix = ""
                     recup_Quete = entry[global_variables.data_Quest]
                     fichierQuete = ""
                     if recup_Quete.lower().endswith(".csv"):
-                        fichierQuete = "data/projet/" + recup_Quete
+                        fichierQuete = "data/projet/" + localise_path(recup_Quete)
                         result = get_SousTitres_from_csv(fichierQuete, entry[global_variables.data_ID])
+                        if result: prefix = result[global_variables.data_F_Voice]
                     else:
                         quete_path = extraire_localise_path(recup_Quete)
                         if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
@@ -161,8 +182,8 @@ def charger_sous_titres_from_JSON_playlist(file_path, first_entry_only=False):
                         female_text = result[global_variables.data_F_SubTitle]
                         male_text = result[global_variables.data_M_SubTitle]
                     else:
-                        female_text = ""
-                        male_text = ""
+                        female_text = "NO TRADUCTION"
+                        male_text = "NO TRADUCTION"  
 
                     if not male_text or male_text == global_variables.pas_Info:
                         male_text = female_text
@@ -178,7 +199,7 @@ def charger_sous_titres_from_JSON_playlist(file_path, first_entry_only=False):
                         sous_titre = female_text
                     
                     # Ajouter le sous-titre et le perso comme objet
-                    sous_titres.append({"perso": perso, "sous_titre": sous_titre})
+                    sous_titres.append({global_variables.data_ID: entry[global_variables.data_ID], "perso": perso, "sous_titre": sous_titre, "type": prefix})
 
                     # Si l'option est activée, ne traiter que la première entrée
                     if first_entry_only:
@@ -188,6 +209,7 @@ def charger_sous_titres_from_JSON_playlist(file_path, first_entry_only=False):
                 print("Le fichier est vide ou mal formaté.")
     else:
         print("Pas de fichier playlist fourni.")
-
+    
+    
     return sous_titres
 

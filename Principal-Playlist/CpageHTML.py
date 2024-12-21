@@ -1,5 +1,6 @@
 import os
 from general_functions import charger_sous_titres_from_JSON_playlist
+import global_variables  # Importer les variables globales
 
 class PageHTML:
     def __init__(self, sequence, file_projet):
@@ -48,6 +49,7 @@ class PageHTML:
                 }}
                 .block {{
                     padding: 10px;
+                    padding-top: 0px;
                     border-top: 2px solid #33acff;
                     border-bottom: 2px solid #33acff;
                     border-radius: 8px;
@@ -62,14 +64,28 @@ class PageHTML:
                 .block-subtitles div {{
                     font-weight: normal;
                 }}
-                .block-subtitles div strong {{
+                .block-subtitles div normal {{
+                    color:  #444444;
+                }}                
+                .block-subtitles div perso {{
                     font-weight: bold;
                     color:  #33acff;
                 }}
                 .block-subtitles div commentaire {{
-                    font-weight: bold;
-                    color:  #4caf50;
-                }}                
+                    font-weight: normal;
+                    color:  #4b00a0;
+                    font-style: oblique;
+                    display: block; /* S'assure que `commentaire` est traité comme un bloc (comme un paragraphe) */
+                    margin-top: 15px; /* Espace avant le commentaire */
+                    margin-bottom: 15px; /* Espace après le commentaire */
+                }}      
+                .block-subtitles div action {{
+                    font-weight: normal;
+                    color:  #00598c;
+                    display: block; /* S'assure que `commentaire` est traité comme un bloc (comme un paragraphe) */
+                    margin-top: 15px; /* Espace avant le commentaire */
+                    margin-bottom: 15px; /* Espace après le commentaire */
+                }}                             
                 svg {{
                     position: absolute;
                     top: 0;
@@ -90,8 +106,28 @@ class PageHTML:
         project_name = os.path.splitext(os.path.basename(self.file_projet))[0]
         output_dir = os.path.join(os.path.dirname(self.file_projet), f"{project_name}_files")
         os.makedirs(output_dir, exist_ok=True)
-
+        print(f"project_name : {project_name}")
+        
+        
         html_filename = os.path.join(output_dir, f"{project_name}.html")
+        print(f"html_filename ORIGINAL : {html_filename}")
+
+
+
+        
+        html_filename = os.path.join(output_dir, f"/{global_variables.CheminLocalization + global_variables.CheminLangue}/{project_name}.html")
+        print(f"html_filename : {html_filename}")
+
+
+        html_filename =f"{project_name}_files/{global_variables.CheminLocalization + global_variables.CheminLangue}/{project_name}.html"
+        print(f"html_filename 2 : {html_filename}")
+
+
+        html_filename = os.path.join(output_dir, f"{global_variables.CheminLocalization + global_variables.CheminLangue}/{project_name}.html")
+        print(f"html_filename FINAL  : {html_filename}")
+
+
+
         html_content = self.generate_HeaderStyle(project_name)
         html_content += f"<body>\n<h1 style='text-align:center;'>{project_name}</h1>\n"
 
@@ -112,13 +148,26 @@ class PageHTML:
                 # Ajout des sous-titres
                 subtitles = charger_sous_titres_from_JSON_playlist(block.playlist_lien)
                 html_content += "<div class='block-subtitles'>\n"
-                for subtitle in subtitles:
-                    perso = subtitle.get("perso", "Inconnu").capitalize()
+                for subtitle in subtitles: 
+                    prefixID = subtitle.get("type", "")
+                    #prefixID = subtitle.get(global_variables.data_ID, "")[:3]
+                    #print(f"prefixID : {prefixID}")
+                    divType = "normal"
+                    retourLigne = "<br>"
+                    if prefixID == "COM":
+                        divType = "commentaire"
+                    elif  prefixID == "ACT":
+                        divType = "action"
+                    else:
+                        divType = "normal"
+                        retourLigne = "\n"
+                    perso = subtitle.get("perso", "").capitalize()
                     if perso.strip():  # Vérifie si le texte est vide ou contient uniquement des espaces
                         perso = perso + " : " 
                     sous_titre = subtitle.get("sous_titre", "")
-                    #html_content += f"<div><strong>{perso}</strong> {sous_titre}</div>\n"
-                    html_content += f"<div><commentaire>{perso}</commentaire> {sous_titre}</div>\n"
+
+                    html_content += f"<div><{divType}><perso>{perso}</perso> {sous_titre}</{divType}></div>\n"
+                    #html_content += f"<div><commentaire>{perso}</commentaire> {sous_titre}</div>\n"
                 html_content += "</div>\n"
 
                 html_content += "</div>\n"

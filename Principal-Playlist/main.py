@@ -66,12 +66,12 @@ root.title("Tool to assemble and test dialogue sequences for Cyberpung modding")
 root.geometry("1600x800")
 root.minsize(1100, 800)
 
-initConfigGlobale()
-
 global_variables.rootAccess = root #initialisation de la variable globale root pour y acceder dans les fonctions
-
 global_variables.user_config = UserConfig("userconfig.ini")
 global_variables.user_config.read_or_initialize()
+
+initConfigGlobale()
+
 
 #userconf_data = read_or_initialize_userconf()
 #print(f"userconf_data : {userconf_data}")
@@ -129,7 +129,6 @@ language_dropdown.pack(side=tk.LEFT, padx=5, pady=5)
 text_label = tk.Label(button_frame, text="Donner ici queles explications sur souris bouton usage ...", font=("Arial", 10))
 text_label.pack(side=tk.LEFT, padx=5, pady=5)
 
-
 # Ajouter une commande lors de la sélection
 def on_language_selected(event):
     global_variables.dataSound = None
@@ -143,7 +142,6 @@ language_dropdown.bind("<<ComboboxSelected>>", on_language_selected)
 # Créer la frame pour les filtres et l'ajouter au-dessus du tableau principal
 filter_frame = tk.Frame(root)  # <-- Correction : définition correcte
 filter_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
-
 
 # Exemple d'initialisation du Treeview avec un thème compatible
 style = ttk.Style()
@@ -164,13 +162,9 @@ tree = setup_TableauPrincipal(root, tk, global_variables.columns)
 # Fonction pour configurer le tableau de playlist
 global_variables.playlist_tree = setup_playlist(root, tree, tk, global_variables.columns)
 
-
-
 # Ajouter le Label pour les lignes correspondantes
 global_variables.principal_count = tk.Label(filter_frame, text="Nb de lignes : 0")
 global_variables.principal_count.grid(row=1, column=9, padx=5)
-
-
 
 # Bouton pour appliquer tous les filtres
 apply_all_filters_button = tk.Button(

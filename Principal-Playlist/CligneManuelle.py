@@ -3,12 +3,16 @@ import csv
 import tkinter as tk
 import time
 import global_variables  # Importer les variables globales
+from general_functions import Delocalise_project_path, localise_path
 
 class LigneManuelle:
     def __init__(self, parent, playlist_tree, column_names=None, file_path=None):
         self.parent = parent
         self.playlist_tree = playlist_tree
-        self.file_path = file_path or "data/projet/projet_files/localization/fr-fr/projetDIC.csv"
+        self.file_path = file_path or localise_path(Delocalise_project_path(global_variables.path_dernier_projet)) 
+
+        print(f"file_path calculé : {localise_path(Delocalise_project_path(global_variables.path_dernier_projet))}") 
+
         self.column_names = column_names or ["ACTION Female * :", "ACTION Male :"]
         self.entry_fields = {}
         self.data = []
@@ -43,31 +47,20 @@ class LigneManuelle:
         # Événement de sélection d'une ligne dans la liste
         self.line_listbox.bind("<<ListboxSelect>>", self._populate_fields_from_selection)
 
-        
-        
-        # Ajouter le champ stringId en lecture seule
-        """
-        string_id_label = tk.Label(right_frame, text=global_variables.data_ID)
-        string_id_label.grid(row=0, column=0, padx=10, pady=5, sticky="w")
-        self.string_id_var = tk.StringVar(value="NOTHING")
-        string_id_entry = tk.Entry(right_frame, textvariable=self.string_id_var, state="readonly", width=40)
-        string_id_entry.grid(row=0, column=1, padx=10, pady=5)        
-        """
-        
-
-        
-
         # Label pour stringId
-        string_id_label = tk.Label(right_frame, text=global_variables.data_ID)
-        string_id_label.grid(row=0, column=0, padx=5, pady=5, sticky="w")  # Réduisez padx et utilisez sticky="w"
+        string_id_label = tk.Label(right_frame, text="String ID:")
+        string_id_label.grid(row=0, column=0, padx=5, pady=5, sticky="w")
 
-        # Champ pour stringId
+        # Drop-down list pour ajouter une particularité au stringId
+        self.prefix_var = tk.StringVar(value="COM")  # Valeur par défaut vide
+        self.prefix_menu = tk.OptionMenu(right_frame, self.prefix_var, "COM", "ACT", command=self._on_prefix_change)
+        self.prefix_menu.config(width=5)  # Fixez la largeur ici
+        self.prefix_menu.grid(row=0, column=1, padx=5, pady=5, sticky="w")  # Placez la drop-list juste après le label
+
+        # Champ pour afficher la valeur actuelle de stringId
         self.string_id_var = tk.StringVar(value="NOTHING")
-        string_id_entry = tk.Entry(right_frame, textvariable=self.string_id_var, state="readonly", width=40)
-        string_id_entry.grid(row=0, column=1, padx=10, pady=5, sticky="w")  # Alignez à gauche avec sticky="w"
-
-
-
+        string_id_entry = tk.Entry(right_frame, textvariable=self.string_id_var, state="readonly", width=30)
+        string_id_entry.grid(row=0, column=1, padx=80, pady=5, sticky="w")  # Placez le champ immédiatement après la drop-list
 
         # Ajouter des champs d'entrée pour chaque colonne
         for idx, column in enumerate(self.column_names):
@@ -129,14 +122,13 @@ class LigneManuelle:
         """Remplit les champs avec les valeurs de la ligne sélectionnée."""
         try:
             self._current_selected_index = self.line_listbox.curselection()[0]  # Mémoriser l'index
-            print(f"Ligne selectionnee (self._current_selected_index) : {self._current_selected_index}")            
-            #selected_index = self.line_listbox.curselection()[0]
-            #self._current_selected_index = selected_index  # Mémoriser l'index            
 
             selected_row = self.data[self._current_selected_index]
 
-            # Conserver le StringId existant
-            self.string_id_var.set(selected_row[global_variables.data_ID])
+            # Initialiser la drop-list et le champ StringId
+            self.prefix_var.set(selected_row[global_variables.data_F_Voice])  # Mettre à jour la drop-list avec le préfixe
+            self.string_id_var.set(selected_row[global_variables.data_ID])  # Mettre à jour le champ StringId avec le reste
+
             self.entry_fields["ACTION Female * :"].delete(0, tk.END)
             self.entry_fields["ACTION Female * :"].insert(0, selected_row[global_variables.data_F_SubTitle])
             self.entry_fields["ACTION Male :"].delete(0, tk.END)
@@ -162,7 +154,6 @@ class LigneManuelle:
         self.save_button.config(state="normal")  # Permet d'enregistrer une nouvelle ligne
         self.insert_playlist_button.config(state="disabled")  # Activer le bouton d'insertion
         self._current_selected_index = None  # Plus aucune ligne sélectionnée
-
 
     def _delete_selected_row(self):
         """Supprime la ligne sélectionnée du fichier CSV."""
@@ -194,9 +185,9 @@ class LigneManuelle:
             global_variables.data_F_SubTitle: values[0],
             global_variables.data_M_SubTitle: values[1],
             global_variables.data_ID: values[2],
-            "female_vo_path": values[3],
-            "male_vo_path": values[4],
-            "quest_path": values[5]
+            global_variables.data_F_Voice: values[3],
+            global_variables.data_M_Voice: values[4],
+            global_variables.data_Quest: values[5]
         }
         file_exists = os.path.exists(file_path)
 
@@ -217,7 +208,6 @@ class LigneManuelle:
                 for idx, row in enumerate(reader):
                     self.data.append(row)
                     self.line_listbox.insert(tk.END, f"{row[global_variables.data_ID]} - {row[global_variables.data_F_SubTitle][:50]} - {row[global_variables.data_M_SubTitle][:50]}")
-
         else:
             self.data = []
 
@@ -232,19 +222,7 @@ class LigneManuelle:
         """Sauvegarde les modifications de la ligne sélectionnée ou crée une nouvelle ligne."""
         file_path = self.file_path
 
-        
         # Déterminer si une ligne est sélectionnée ou si c'est une nouvelle ligne
-        """
-        try:
-            #selected_index = self.line_listbox.curselection()[0]
-            #self._current_selected_index = selected_index  # Assurez-vous que l'index est mis à jour
-            string_id = self.string_id_var.get()
-            isNew = False
-        except IndexError:
-            string_id = self._generate_unique_id()
-            isNew = True        
-        """
-           
         string_id = self.string_id_var.get()
         isNew = (string_id == "NOTHING")            
         print(f"Ligne string_id & isNew: {string_id} & {isNew}")
@@ -252,21 +230,25 @@ class LigneManuelle:
             string_id = self._generate_unique_id()
 
         # Construire les données de la ligne
+        Delocalise_project_path(self.file_path)
+        print(f"Delocalise_project_path(self.file_path) : {self.file_path} & {Delocalise_project_path(global_variables.path_dernier_projet)}")
         the_row = {
             global_variables.data_F_SubTitle: self.entry_fields["ACTION Female * :"].get(),
             global_variables.data_M_SubTitle: self.entry_fields["ACTION Male :"].get(),
             global_variables.data_ID: string_id,
-            "female_vo_path": "",
-            "male_vo_path": "",
-            "quest_path": "projet_files/localization/fr-fr/projetDIC.csv"
+            global_variables.data_F_Voice: self.prefix_var.get(),
+            global_variables.data_M_Voice: self.prefix_var.get(),
+            global_variables.data_Quest: Delocalise_project_path(global_variables.path_dernier_projet)
         }
 
-        
         if isNew:     # Si isNew ajouter une nouvelle ligne
             self.data.append(the_row)
             self._current_selected_index = len(self.data) - 1  # Sélectionner la nouvelle ligne
         else:         # Si une ligne est sélectionnée, mettre à jour
             self.data[self._current_selected_index] = the_row
+
+        # Créer les dossiers si nécessaires
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)    
 
         # Sauvegarder dans le fichier CSV
         with open(file_path, mode="w", newline="", encoding="utf-8") as file:
@@ -283,3 +265,7 @@ class LigneManuelle:
         print(f"Ligne sauvegardée : {the_row}")
 
 
+    def _on_prefix_change(self, value):
+        """Active le bouton Save Line si la valeur de la drop-list change."""
+        if self.save_button["state"] == "disabled":
+            self.save_button.config(state="normal")

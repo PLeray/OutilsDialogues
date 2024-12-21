@@ -6,7 +6,7 @@ from os.path import basename
 
 from tkinter import ttk, filedialog, Menu
 from LectureOgg import JouerAudio, fusionnerPlaylist
-from general_functions import get_SousTitres_from_csv, get_SousTitres_by_id, extraire_localise_path, get_Perso_from_Wem, nom_playlist
+from general_functions import get_SousTitres_from_csv, get_SousTitres_by_id, extraire_localise_path, localise_path, get_Perso_from_Wem, nom_playlist
 
 import global_variables  # Accéder au Label global
 from CligneManuelle import LigneManuelle
@@ -233,6 +233,8 @@ def charger_playlist_from_file(playlist_tree,tk, file_path):
                 fichierQuete = "" 
                 if recup_Quete.lower().endswith(".csv"):
                     #print(f"Le fichier {recup_Quete} est un fichier CSV.")
+                    recup_Quete = localise_path(recup_Quete)
+                    #print(f"new chemein  {localise_path(recup_Quete)} ")
                     fichierQuete = "data/projet/"  + recup_Quete 
                     # Action spécifique pour les fichiers CSV
                     result = get_SousTitres_from_csv(fichierQuete, entry[global_variables.data_ID])
@@ -253,8 +255,8 @@ def charger_playlist_from_file(playlist_tree,tk, file_path):
                     male_text = result[global_variables.data_M_SubTitle]
                 else:
                     #print("String ID non trouvé.")
-                    female_text = ""
-                    male_text = ""  
+                    female_text = "NO TRADUCTION"
+                    male_text = "NO TRADUCTION"  
 
                 if not male_text or male_text == global_variables.pas_Info:
                     male_text = female_text        
