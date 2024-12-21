@@ -1,6 +1,6 @@
 # Variables globlaes du projet
 
-fenetre_projet = None  #Objet pour les projets
+projet_instance = None  #Objet pour les projets
 ligne_manuelle_instance = None  #Objet pour les nouvelle lignes
 user_config = None #Objet pour gérer la conf user
 
@@ -71,6 +71,11 @@ Couleur_Bloc = "#90EE90"  # Couleur par défaut pour les blocs
 Couleur_BlocSelect = "orange"
 Couleur_BlocSource = "green"
 Couleur_BlocTarget = "red"
+
+ETAPE_HEIGHT = 70  # Hauteur d'une étape
+ETAPE_SPACING = 150  # Espacement vertical entre les étapes
+BLOC_WIDTH = 250  # Largeur d'un bloc
+BLOC_HEIGHT = 80  # Hauteur d'un bloc
 
 
 

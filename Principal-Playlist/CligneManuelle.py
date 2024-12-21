@@ -20,17 +20,18 @@ class LigneManuelle:
         """Crée la fenêtre de saisie manuelle."""
         self.window = tk.Toplevel(self.parent)
         self.window.title("Add/Edit Playlist Row")
-        self.window.geometry("800x400")
+        self.window.geometry("1500x400")
 
         # Cadre pour la liste et les champs
-        left_frame = tk.Frame(self.window, width=300)
+        left_frame = tk.Frame(self.window, width=500)
         left_frame.pack(side=tk.LEFT, fill=tk.Y, padx=10, pady=10)
 
         right_frame = tk.Frame(self.window)
         right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=10, pady=10)
 
         # Ajouter une liste pour afficher les lignes
-        self.line_listbox = tk.Listbox(left_frame, width=50, height=20)
+        self.line_listbox = tk.Listbox(left_frame, width=130, height=20)
+        
         self.line_listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar = tk.Scrollbar(left_frame, orient=tk.VERTICAL, command=self.line_listbox.yview)
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
@@ -42,20 +43,38 @@ class LigneManuelle:
         # Événement de sélection d'une ligne dans la liste
         self.line_listbox.bind("<<ListboxSelect>>", self._populate_fields_from_selection)
 
+        
+        
         # Ajouter le champ stringId en lecture seule
+        """
         string_id_label = tk.Label(right_frame, text=global_variables.data_ID)
         string_id_label.grid(row=0, column=0, padx=10, pady=5, sticky="w")
-
         self.string_id_var = tk.StringVar(value="NOTHING")
         string_id_entry = tk.Entry(right_frame, textvariable=self.string_id_var, state="readonly", width=40)
-        string_id_entry.grid(row=0, column=1, padx=10, pady=5)
+        string_id_entry.grid(row=0, column=1, padx=10, pady=5)        
+        """
+        
+
+        
+
+        # Label pour stringId
+        string_id_label = tk.Label(right_frame, text=global_variables.data_ID)
+        string_id_label.grid(row=0, column=0, padx=5, pady=5, sticky="w")  # Réduisez padx et utilisez sticky="w"
+
+        # Champ pour stringId
+        self.string_id_var = tk.StringVar(value="NOTHING")
+        string_id_entry = tk.Entry(right_frame, textvariable=self.string_id_var, state="readonly", width=40)
+        string_id_entry.grid(row=0, column=1, padx=10, pady=5, sticky="w")  # Alignez à gauche avec sticky="w"
+
+
+
 
         # Ajouter des champs d'entrée pour chaque colonne
         for idx, column in enumerate(self.column_names):
             label = tk.Label(right_frame, text=column)
             label.grid(row=idx + 1, column=0, padx=10, pady=5, sticky="w")
 
-            entry = tk.Entry(right_frame, width=40)
+            entry = tk.Entry(right_frame, width=80)
             entry.grid(row=idx + 1, column=1, padx=10, pady=5)
             self.entry_fields[column] = entry
 
@@ -66,14 +85,14 @@ class LigneManuelle:
         self.new_line_button = tk.Button(button_frame, text="New Line", command=self._reset_form, state="disabled")
         self.new_line_button.pack(side=tk.LEFT, padx=5)
 
-        self.delete_button = tk.Button(button_frame, text="Delete Line", command=self._delete_selected_row, state="disabled")
-        self.delete_button.pack(side=tk.LEFT, padx=5)
-
         self.save_button = tk.Button(button_frame, text="Save Line", command=self._save_selected_row, state="disabled")
         self.save_button.pack(side=tk.LEFT, padx=5)
 
+        self.delete_button = tk.Button(button_frame, text="Delete Line", command=self._delete_selected_row, state="disabled")
+        self.delete_button.pack(side=tk.LEFT, padx=5)
+
         # Bouton pour insérer une ligne dans le Treeview
-        self.insert_playlist_button = tk.Button(self.window, text="Insert Line in playlist", command=self._add_row, state="disabled")
+        self.insert_playlist_button = tk.Button(self.window, text="Insert Line in playlist", command=self._add_Line_In_Playlist, state="disabled")
         self.insert_playlist_button.place(relx=1.0, rely=1.0, anchor="se", x=-10, y=-10)
 
         # Événement pour activer le bouton "Save Line" si le champ global_variables.data_F_SubTitle est rempli
@@ -83,7 +102,7 @@ class LigneManuelle:
         """Génère un identifiant unique."""
         return str(int(time.time() * 1_000_000))
 
-    def _add_row(self):
+    def _add_Line_In_Playlist(self):
         """Ajoute la ligne sélectionnée dans la Listbox au Treeview."""
         try:
             # Récupérer l'index de la ligne sélectionnée dans la Listbox
@@ -109,9 +128,12 @@ class LigneManuelle:
     def _populate_fields_from_selection(self, event=None):
         """Remplit les champs avec les valeurs de la ligne sélectionnée."""
         try:
-            selected_index = self.line_listbox.curselection()[0]
-            self._current_selected_index = selected_index  # Mémoriser l'index
-            selected_row = self.data[selected_index]
+            self._current_selected_index = self.line_listbox.curselection()[0]  # Mémoriser l'index
+            print(f"Ligne selectionnee (self._current_selected_index) : {self._current_selected_index}")            
+            #selected_index = self.line_listbox.curselection()[0]
+            #self._current_selected_index = selected_index  # Mémoriser l'index            
+
+            selected_row = self.data[self._current_selected_index]
 
             # Conserver le StringId existant
             self.string_id_var.set(selected_row[global_variables.data_ID])
@@ -126,7 +148,7 @@ class LigneManuelle:
             self.save_button.config(state="disabled")  # Désactivé jusqu'à modification
             self.insert_playlist_button.config(state="normal")  # Activer le bouton d'insertion
         except IndexError:
-            print("Aucune ligne sélectionnée.")  # Ou ne faites rien
+            print(f"Aucune ligne sélectionnée (self._current_selected_index) : {self._current_selected_index}") # Ou ne faites rien
 
     def _reset_form(self):
         """Réinitialise le formulaire pour une nouvelle ligne."""
@@ -194,7 +216,7 @@ class LigneManuelle:
                 self.line_listbox.delete(0, tk.END)
                 for idx, row in enumerate(reader):
                     self.data.append(row)
-                    self.line_listbox.insert(tk.END, f"{row[global_variables.data_ID]} - {row[global_variables.data_F_SubTitle][:15]} - {row[global_variables.data_M_SubTitle][:15]}")
+                    self.line_listbox.insert(tk.END, f"{row[global_variables.data_ID]} - {row[global_variables.data_F_SubTitle][:50]} - {row[global_variables.data_M_SubTitle][:50]}")
 
         else:
             self.data = []
@@ -210,15 +232,24 @@ class LigneManuelle:
         """Sauvegarde les modifications de la ligne sélectionnée ou crée une nouvelle ligne."""
         file_path = self.file_path
 
+        
         # Déterminer si une ligne est sélectionnée ou si c'est une nouvelle ligne
+        """
         try:
-            selected_index = self.line_listbox.curselection()[0]
-            self._current_selected_index = selected_index  # Assurez-vous que l'index est mis à jour
+            #selected_index = self.line_listbox.curselection()[0]
+            #self._current_selected_index = selected_index  # Assurez-vous que l'index est mis à jour
             string_id = self.string_id_var.get()
             isNew = False
         except IndexError:
             string_id = self._generate_unique_id()
-            isNew = True
+            isNew = True        
+        """
+           
+        string_id = self.string_id_var.get()
+        isNew = (string_id == "NOTHING")            
+        print(f"Ligne string_id & isNew: {string_id} & {isNew}")
+        if isNew:  # Creation d'un ID
+            string_id = self._generate_unique_id()
 
         # Construire les données de la ligne
         the_row = {
@@ -230,12 +261,12 @@ class LigneManuelle:
             "quest_path": "projet_files/localization/fr-fr/projetDIC.csv"
         }
 
-        # Si une ligne est sélectionnée, mettre à jour
-        if not isNew:
-            self.data[self._current_selected_index] = the_row
-        else:  # Sinon, ajouter une nouvelle ligne
+        
+        if isNew:     # Si isNew ajouter une nouvelle ligne
             self.data.append(the_row)
             self._current_selected_index = len(self.data) - 1  # Sélectionner la nouvelle ligne
+        else:         # Si une ligne est sélectionnée, mettre à jour
+            self.data[self._current_selected_index] = the_row
 
         # Sauvegarder dans le fichier CSV
         with open(file_path, mode="w", newline="", encoding="utf-8") as file:

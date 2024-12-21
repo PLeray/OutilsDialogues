@@ -53,15 +53,10 @@ class StepBlockApp:
         # Mise à jour automatique de la région défilable
         self.inner_frame.bind("<Configure>", lambda e: self.canvas.config(scrollregion=self.canvas.bbox("all")))
 
-
-
-
-
         # Événements de défilement avec la molette
         self.canvas.bind_all("<MouseWheel>", self.on_mouse_scroll)  # Windows et macOS
         self.canvas.bind_all("<Button-4>", lambda e: self.canvas.yview_scroll(-1, "units"))  # Linux (haut)
         self.canvas.bind_all("<Button-5>", lambda e: self.canvas.yview_scroll(1, "units"))   # Linux (bas)
-
 
         # Événements
         self.canvas.bind("<Button-1>", self.on_left_click)
@@ -70,7 +65,6 @@ class StepBlockApp:
         self.canvas.bind("<Shift-Button-1>", self.on_shift_click)
         self.canvas.bind("<Control-Button-1>", self.on_ctrl_click)
         self.canvas.focus_set()
-
 
         # Ajouter une première étape
         self.add_etape()
@@ -108,8 +102,18 @@ class StepBlockApp:
             # Select the block (orange outline)
             self.selected_blocks = {"green": [], "red": []}  # Reset source/target selections
             self.selected_block = block  # Track selected block
+
+            for etape in self.sequence.etapes:
+                for unBlocs in etape.blocs:
+                    unBlocs.isSelected = False  
+
+            block.isSelected = True
+
+
             self.selected_etape = None  # Clear étape selection
             print(f"Bloc sélectionné : {block.title} Rang {block.etape_position} (Étape {etape_idx}).")
+
+
 
         elif "etape" in tags:
             # Select the étape
@@ -119,6 +123,9 @@ class StepBlockApp:
             self.selected_blocks = {"green": [], "red": []}  # Reset source/target selections
             print(f"Étape sélectionnée : {etape_idx}.")
 
+            for etape in self.sequence.etapes:
+                for unBlocs in etape.blocs:
+                    unBlocs.isSelected = False  
         else:
             # No valid selection
             print("Aucun élément valide sélectionné.")
@@ -126,6 +133,7 @@ class StepBlockApp:
             self.selected_etape = None
 
         # Redraw to reflect the selection changes
+        self.Open_Bloc()
         self.draw_sequence()
 
     def on_shift_click(self, event):
@@ -173,6 +181,7 @@ class StepBlockApp:
         self.draw_sequence()
 
     def on_right_click(self, event):
+        self.on_left_click(event)
         """Gérer les clics gauche pour sélectionner un bloc ou une étape."""
         x, y = self.get_adjusted_coordinates(event)  # Coordonnées corrigées
         clicked = self.canvas.find_closest(x, y)
@@ -201,7 +210,6 @@ class StepBlockApp:
             self.menu.add_command(label="Supprimer l'Étape", command=self.delete_etape)
             self.menu.post(event.x_root, event.y_root)
             print(f"Menu pour l'étape {self.selected_etape.numero} ouvert.")
-
 
     def on_key_press(self, event):
         """Gérer les pressions de touches pour déplacer les blocs dans une étape."""
@@ -236,38 +244,31 @@ class StepBlockApp:
         #print(f"on_resize")
         self.update_width_and_reorganize()
         self.draw_sequence()
-    
+
     def draw_sequence(self):
         """Dessiner toute la séquence sur le canvas."""
         # Mettre à jour la largeur des étapes et réorganiser
         self.update_width_and_reorganize()
-
+        self.sequence.reorganize_etapes()  # S'assurer que tout est bien aligné
+        
         # Effacer et redessiner
         self.canvas.delete("all")
-        for etape in self.sequence.etapes:
-            etape.draw(
-                self.canvas,
-                selected_blocks=self.selected_blocks,
-                selected_etape=(etape == self.selected_etape)
-            )
-        for conn in self.sequence.connections:
-            start = conn["start"]
-            end = conn["end"]
-            if start and end:
-                self.canvas.create_line(
-                    start.x, start.y + 20,
-                    end.x, end.y - 20,
-                    fill="blue", width=4
-                )
+        
+        # Utiliser la méthode `draw` de la séquence
+        self.sequence.draw(
+            canvas=self.canvas,
+            selected_etape=self.selected_etape
+        )
+
         # Mettre à jour la région défilable pour la scrollbar
         self.canvas.update_idletasks()
         self.canvas.config(scrollregion=self.canvas.bbox("all"))
 
-
     def create_buttons(self):
         """Créer les boutons Load, Save, Ajouter Étape, Ajouter Bloc et Connect."""
-        tk.Button(self.button_frame, text="Load", command=self.load_from_file).pack(side=tk.LEFT, padx=5, pady=5)
-        tk.Button(self.button_frame, text="Save", command=self.save_to_file).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="New project", command=self.new_project).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Load project", command=self.load_from_file).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Save project", command=self.save_to_file).pack(side=tk.LEFT, padx=5, pady=5)
 
         tk.Button(self.button_frame, text="Ajouter Étape", command=self.add_etape).pack(side=tk.LEFT, padx=5, pady=5)
         #tk.Button(self.button_frame, text="Ajouter Bloc", command=self.add_block).pack(side=tk.LEFT, padx=5, pady=5)
@@ -331,21 +332,24 @@ class StepBlockApp:
         """Ajouter une nouvelle étape après l'étape sélectionnée."""
         if self.selected_etape is not None:
             # Ajouter après l'étape sélectionnée
-            new_index = self.sequence.etapes.index(self.selected_etape) #+ 1
+            new_index = self.sequence.etapes.index(self.selected_etape) 
         else:
             # Ajouter à la fin si aucune étape n'est sélectionnée
             new_index = len(self.sequence.etapes)
         # Créer une nouvelle étape
-        y = new_index * 100 + 50
+        #y = new_index * 100 + 50
+        y = new_index * (global_variables.ETAPE_HEIGHT + global_variables.ETAPE_SPACING) + global_variables.ETAPE_HEIGHT // 2
         
         print(Etape)
         new_etape = Etape(numero=new_index, y=y, width=self.canvas.winfo_width())
 
         self.sequence.etapes.insert(new_index, new_etape)
+
         # Réajuster les positions et numéros des étapes suivantes
         for idx, etape in enumerate(self.sequence.etapes):
             etape.numero = idx
-            etape.y = idx * 100 + 50
+            #etape.y = idx * 100 + 50
+            etape.y = idx * (global_variables.ETAPE_HEIGHT + global_variables.ETAPE_SPACING) + global_variables.ETAPE_HEIGHT // 2
         # Redessiner la séquence
         self.draw_sequence()
 
@@ -542,4 +546,20 @@ class StepBlockApp:
         page = PageHTML(self.sequence, self.file_Projet)
         page.generate_project_html()
 
-  
+    def new_project(self):
+        """Réinitialiser l'application pour créer un nouveau projet."""
+        # Réinitialiser les variables
+        self.sequence = Sequence("Nouvelle Séquence")
+        self.selected_etape = None
+        self.selected_blocks = {"green": [], "red": []}
+        self.file_Projet = "xx"
+
+        # Vider le canvas
+        self.canvas.delete("all")
+
+        # Ajouter une étape initiale
+        self.add_etape()
+
+        # Mise à jour de l'interface
+        self.mise_a_jour_info_projet(self.file_Projet)
+        print("Nouveau projet créé.")

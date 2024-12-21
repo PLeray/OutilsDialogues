@@ -17,16 +17,15 @@ class PageHTML:
             <style>
                 body {{
                     font-family: Arial, sans-serif;
-                    background-color: #f4f4f4;
+                    background-color: #ffffff;
                     margin: 0;
                     padding: 20px;
                 }}
                 .step-container {{
                     margin-bottom: 20px;
                     padding: 10px;
-                    border: 1px solid #ddd;
-                    border-radius: 8px;
-                    background-color: #ffffff;
+                    border-top: 1px solid #bbbbbb;
+                    background-color: #f4f4f4;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -37,7 +36,7 @@ class PageHTML:
                     font-weight: bold;
                     margin-bottom: 10px;
                     position: absolute;
-                    color: grey;
+                    color:  #bbbbbb;
                     top: 10px;
                     left: 10px;
                 }}
@@ -49,10 +48,11 @@ class PageHTML:
                 }}
                 .block {{
                     padding: 10px;
-                    border: 1px solid #4caf50;
+                    border-top: 2px solid #33acff;
+                    border-bottom: 2px solid #33acff;
                     border-radius: 8px;
-                    background-color: #e8f4e8;
-                    width: 300px;
+                    background-color: #ffffff;
+                    width: 400px;
                     text-align: left;
                 }}
                 .block-subtitles {{
@@ -64,7 +64,12 @@ class PageHTML:
                 }}
                 .block-subtitles div strong {{
                     font-weight: bold;
+                    color:  #33acff;
                 }}
+                .block-subtitles div commentaire {{
+                    font-weight: bold;
+                    color:  #4caf50;
+                }}                
                 svg {{
                     position: absolute;
                     top: 0;
@@ -74,7 +79,7 @@ class PageHTML:
                     pointer-events: none;
                 }}
                 line {{
-                    stroke: #4caf50;
+                    stroke: #33acff;
                     stroke-width: 2;
                 }}
             </style>
@@ -112,7 +117,8 @@ class PageHTML:
                     if perso.strip():  # Vérifie si le texte est vide ou contient uniquement des espaces
                         perso = perso + " : " 
                     sous_titre = subtitle.get("sous_titre", "")
-                    html_content += f"<div><strong>{perso}</strong> {sous_titre}</div>\n"
+                    #html_content += f"<div><strong>{perso}</strong> {sous_titre}</div>\n"
+                    html_content += f"<div><commentaire>{perso}</commentaire> {sous_titre}</div>\n"
                 html_content += "</div>\n"
 
                 html_content += "</div>\n"

@@ -16,7 +16,7 @@ import global_variables  # Importer les variables globales
 def setup_TableauPrincipal(root, tk, columns):
     # Frame principale pour contenir le tableau principal et le panneau d'informations
     main_frame = tk.Frame(root)
-    main_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=10)  # Remplacez fill=tk.BOTH par fill=tk.X
+    main_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=1)  # Remplacez fill=tk.BOTH par fill=tk.X
 
     # Configuration du tableau principal (tree)
     tree = ttk.Treeview(main_frame, columns=columns, show="headings", height=12, selectmode="extended")

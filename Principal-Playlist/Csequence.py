@@ -1,7 +1,12 @@
+import global_variables  # Importer les variables globales
+
 from Cetape import Etape
 
 class Sequence:
-    """Représente une séquence, contenant des étapes."""
+    """Représente une séquence, contenant des étapes.
+    HAUTEUR = 100
+    SEPARATION = 50
+    """
     def __init__(self, name):
         self.name = name
         self.etapes = []
@@ -62,12 +67,14 @@ class Sequence:
             new_index = len(self.etapes)
 
         # Créer une nouvelle étape
-        y = 100 * new_index + 50
+        #y = self.HAUTEUR * new_index + self.SEPARATION
+        y = new_index * (global_variables.ETAPE_HEIGHT + global_variables.ETAPE_SPACING) + global_variables.ETAPE_HEIGHT // 2
         new_etape = Etape(new_index, y, self.etapes[0].width if self.etapes else 800)
 
         # Insérer la nouvelle étape et décaler les suivantes
         self.etapes.insert(new_index, new_etape)
         self.reorganize_etapes()
+        
 
     def remove_etape(self, etape):
         """Supprimer une étape de la séquence."""
@@ -82,29 +89,54 @@ class Sequence:
             # Réorganiser les numéros et positions des étapes restantes
             for idx, remaining_etape in enumerate(self.etapes):
                 remaining_etape.numero = idx
-                remaining_etape.y = 50 + idx * 100
-
+                #remaining_etape.y = self.SEPARATION + idx * self.HAUTEUR
+                remaining_etape.y = idx * (global_variables.ETAPE_HEIGHT + global_variables.ETAPE_SPACING) + global_variables.ETAPE_HEIGHT // 2
 
     def reorganize_etapes(self):
         """Réorganiser les étapes en ajustant leurs positions Y."""
+        """
         for idx, etape in enumerate(self.etapes):
             etape.numero = idx
-            etape.y = 100 * idx + 50
+            etape.y = self.HAUTEUR * idx + self.SEPARATION        
+        """
+        for idx, etape in enumerate(self.etapes):
+            etape.numero = idx
+            etape.y = idx * (global_variables.ETAPE_HEIGHT + global_variables.ETAPE_SPACING) + global_variables.ETAPE_HEIGHT // 2
+            #print(f"Étape {etape.numero}: y={etape.y}, height={global_variables.ETAPE_HEIGHT}, spacing={global_variables.ETAPE_SPACING}")
 
 
     def draw(self, canvas, selected_etape=None):
         """Dessiner toutes les étapes et connexions."""
         for etape in self.etapes:
-            etape.draw(canvas, selected=(etape == selected_etape))
+            #etape.draw(canvas, selected=(etape == selected_etape))
 
+            etape.draw(
+                canvas,
+                selected_blocks={"green": [], "red": []},  # Exemple de dictionnaire vide
+                selected_etape=(etape == selected_etape)  # Passe correctement l'étape sélectionnée
+            )
+    
         # Dessiner les connexions
         for conn in self.connections:
             start = conn["start"]
             end = conn["end"]
-            canvas.create_line(
-                start.x, start.y + 20, end.x, end.y - 20,
-                fill="blue", width=3
-            )
+
+            # Validation des coordonnées
+            if not hasattr(start, 'x') or not hasattr(start, 'y') or not hasattr(end, 'x') or not hasattr(end, 'y'):
+                print(f"Connexion invalide : {conn}")
+                continue
+
+            #print(f"Source bloc ({start.identifiant}): x={start.x}, y={start.y}")
+            #print(f"Cible bloc ({end.identifiant}): x={end.x}, y={end.y}")
+            
+            # Calcul des points de connexion
+            start_x = start.x
+            start_y = start.y + global_variables.BLOC_HEIGHT // 2  # Bas du bloc source
+            end_x = end.x
+            end_y = end.y - global_variables.BLOC_HEIGHT // 2  # Haut du bloc cible
+
+            canvas.create_line(start_x, start_y, end_x, end_y, fill="blue", width=2)
+
 
     def find_block(self, block_data):
         identifiant = block_data.get("identifiant")
@@ -121,7 +153,6 @@ class Sequence:
         #print(f"Bloc introuvable : {identifiant}")
         return None
 
-    
     @staticmethod
     def from_dict(data):
         """Créer une séquence à partir d'un dictionnaire."""

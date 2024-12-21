@@ -13,37 +13,32 @@ from filtrage import toggle_columns, filter_NA, reset_filters, filter_tree_with_
 from CuserConfig import UserConfig
 from CstepBlockApp import StepBlockApp
 
-def ouvrir_projet(root):
+def ouvrir_projet_instance(root):
     # Vérifier si la fenêtre est déjà ouverte
-    if global_variables.fenetre_projet is not None:
-        global_variables.fenetre_projet.lift()
-        global_variables.fenetre_projet.focus_force()
+    if global_variables.projet_instance is not None:
+        global_variables.projet_instance.lift()
+        global_variables.projet_instance.focus_force()
         print("Une instance est déjà ouverte, elle a été ramenée au premier plan.")
         return
-
     # Créer une nouvelle fenêtre
-    global_variables.fenetre_projet = tk.Toplevel(root)
-    global_variables.fenetre_projet.geometry("600x800")
-    global_variables.fenetre_projet.title("Fenêtre Projet")
-
+    global_variables.projet_instance = tk.Toplevel(root)
+    global_variables.projet_instance.geometry("600x800")
+    global_variables.projet_instance.title("Fenêtre Projet")
     # Associer un gestionnaire à la fermeture de cette fenêtre
-    global_variables.fenetre_projet.protocol("WM_DELETE_WINDOW", fermer_fenetre_projet)
-
+    global_variables.projet_instance.protocol("WM_DELETE_WINDOW", fermer_projet_instance)
     # Lancer l'application de projet (utiliser StepBlockApp ou équivalent)
-    app = StepBlockApp(global_variables.fenetre_projet)
+    app = StepBlockApp(global_variables.projet_instance)
 
-
-def fermer_fenetre_projet():
-    if global_variables.fenetre_projet is not None:
-        global_variables.fenetre_projet.destroy()
-        global_variables.fenetre_projet = None
+def fermer_projet_instance():
+    if global_variables.projet_instance is not None:
+        global_variables.projet_instance.destroy()
+        global_variables.projet_instance = None
         print("Fenêtre de projet fermée.")
-
 
 def fermer_application_principale(root):
     # Fermer la fenêtre de projet si elle est ouverte
-    if global_variables.fenetre_projet is not None:
-        fermer_fenetre_projet()
+    if global_variables.projet_instance is not None:
+        fermer_projet_instance()
     # Fermer la fenêtre principale
     root.destroy()
     print("Application principale fermée.")
@@ -103,7 +98,7 @@ button_frame.pack(side=tk.TOP, fill=tk.X, padx=10, pady=5)
 project_button = tk.Button(
     button_frame,
     text="Projet",
-    command=lambda: ouvrir_projet(root)
+    command=lambda: ouvrir_projet_instance(root)
 )
 project_button.pack(side=tk.LEFT, padx=5, pady=5)
 
@@ -118,12 +113,8 @@ language_dropdown = ttk.Combobox(
 )
 
 # Définir une valeur par défaut pour la liste déroulante
-#maj_Langue(userconf_data["SETTINGS"].get("LANGUAGE"))
-
 maj_Langue(global_variables.user_config.get("SETTINGS", "LANGUAGE"))
 
-
-#global_variables.CheminLangue = userconf_data["SETTINGS"].get("LANGUAGE")
 global_variables.CheminLangue = global_variables.user_config.get("SETTINGS", "LANGUAGE")
 
 global_variables.bdd_Localisation_Json = "data/BDDjson/Base_" + global_variables.CheminLangue + ".json"
@@ -143,14 +134,7 @@ text_label.pack(side=tk.LEFT, padx=5, pady=5)
 def on_language_selected(event):
     global_variables.dataSound = None
     maj_Langue(language_var.get())
-
-
-
-    #update_language_userconf(global_variables.CheminLangue)
-
     global_variables.user_config.set("SETTINGS", "LANGUAGE", global_variables.CheminLangue)
-
-
     # mettre ca si on veut les langues des tableau synchro filter_tree_with_filters(tree, filters, global_variables.bdd_Localisation_Json)
     print(f"Langue sélectionnée : {global_variables.CheminLangue}")
 

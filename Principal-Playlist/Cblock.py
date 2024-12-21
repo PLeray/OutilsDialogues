@@ -1,4 +1,5 @@
 import global_variables  # Importer les variables globales
+
 class Block:
     id_counter = 0  # Compteur global pour générer les identifiants
 
@@ -15,6 +16,7 @@ class Block:
         self.x = 0
         self.y = 0
         self.parent_etape = parent_etape  # Référence à l'étape parente
+        self.isSelected = False
 
     @classmethod
     def initialize_counter(cls, existing_ids):
@@ -36,7 +38,8 @@ class Block:
         return cls(etape_number, etape_position, identifiant, parent_etape=parent_etape)
 
 
-    def draw(self, canvas, x, y, is_source=False, is_target=False, selected=False, tags=None):
+    #def draw(self, canvas, x, y, is_source=False, is_target=False, selected=False, tags=None):
+    def draw(self, canvas, x, y, is_source=False, is_target=False, tags=None):
         """
         Dessiner le bloc sur le canvas avec les couleurs appropriées et des tags.
         
@@ -50,9 +53,10 @@ class Block:
         """
         #color = "#90EE90"  # Couleur par défaut pour les blocs
         outline_color = ""
-
+        #print(f"valeur de self.isSelected dans class Block :  {self.isSelected} ")
         # Déterminer la couleur de l'entourage
-        if selected:
+        #if selected:
+        if self.isSelected:
             outline_color = global_variables.Couleur_BlocSelect
         if is_source:
             outline_color = global_variables.Couleur_BlocSource
@@ -62,13 +66,13 @@ class Block:
 
         # Dessiner le rectangle du bloc
         canvas.create_rectangle(
-            x - 50, y - 20, x + 50, y + 20,
+            x - global_variables.BLOC_WIDTH // 2, y - global_variables.BLOC_HEIGHT // 2, 
+            x + global_variables.BLOC_WIDTH // 2, y + global_variables.BLOC_HEIGHT // 2,
             fill=global_variables.Couleur_Bloc,
             outline=outline_color,
             width=3 if outline_color else 1,
             tags=tags
         )
-
         # Ajouter les textes (titre, commentaire, lien)
         text_y_offset = -10  # Décalage initial pour le premier texte
         canvas.create_text(
@@ -78,12 +82,6 @@ class Block:
         canvas.create_text(
             x, y + text_y_offset, text=self.comment, font=("Arial", 9), fill="gray", tags=tags
         )
-        """        
-        text_y_offset += 15  # Décalage pour le lien de playlist
-        canvas.create_text(
-            x, y + text_y_offset, text=self.playlist_lien, font=("Arial", 8), fill="blue", tags=tags
-        )
-        """
 
     def clear_connections(self):
         """Supprimer toutes les connexions (précédents et suivants)."""

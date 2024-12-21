@@ -1,3 +1,5 @@
+import global_variables  # Importer les variables globales
+
 from Cblock import Block
 
 class Etape:
@@ -34,30 +36,40 @@ class Etape:
         if block_count == 0:
             return
 
+        """
         block_width = 100  # Largeur approximative d'un bloc
         spacing = (self.width - block_count * block_width) // (block_count + 1)
-
         current_x = spacing
+
         for index, block in enumerate(self.blocs):
             block.x = current_x + block_width // 2
             block.y = self.y
             block.etape_position = index
-            current_x += block_width + spacing
+            current_x += block_width + spacing        
+        
+        """
+        spacing = (self.width - block_count * global_variables.BLOC_WIDTH) // (block_count + 1)
+        current_x = spacing
+
+        for index, block in enumerate(self.blocs):
+            block.x = current_x + global_variables.BLOC_WIDTH // 2
+            block.y = self.y
+            block.etape_position = index
+            current_x += global_variables.BLOC_WIDTH + spacing
+            #print(f"Bloc {block.identifiant}: x={block.x}, y={block.y}, width={global_variables.BLOC_WIDTH}")
 
     def draw(self, canvas, selected_blocks, selected_etape=False):
         """
         Dessiner l'étape sur le canvas.
-        
-        :param canvas: Canvas Tkinter sur lequel dessiner.
-        :param selected_blocks: Dictionnaire contenant les blocs sélectionnés (sources et cibles).
-        :param selected_etape: Si cette étape est actuellement sélectionnée.
         """
         # Définir la couleur de l'entourage pour l'étape
+
+        step_top = self.y - global_variables.ETAPE_HEIGHT // 2
+        step_bottom = self.y + global_variables.ETAPE_HEIGHT // 2
         outline_color = "orange" if selected_etape else ""
 
-        # Dessiner le rectangle de l'étape
         canvas.create_rectangle(
-            10, self.y - 30, self.width - 10, self.y + 30,
+            10, step_top, self.width - 10, step_bottom,
             fill="#D3D3D3", outline=outline_color, width=4 if outline_color else 1, tags=("etape", self.numero)
         )
 
@@ -65,11 +77,13 @@ class Etape:
         for i, block in enumerate(self.blocs):
             is_source = block in selected_blocks["green"]
             is_target = block in selected_blocks["red"]
-            selected = block in selected_blocks["green"] or block in selected_blocks["red"]
+
+            # REVOIR ICI POUR CADRE AUTOU BLOC !!!!
+            #selected = block in selected_blocks["green"] or block in selected_blocks["red"]
 
             block_tags = ("block", self.numero, i)  # Tags pour chaque bloc
-            block.draw(canvas, block.x, self.y, is_source=is_source, is_target=is_target, selected=selected, tags=block_tags)
-
+            # block.draw(canvas, block.x, self.y, is_source=is_source, is_target=is_target, selected=selected, tags=block_tags)
+            block.draw(canvas, block.x, self.y, is_source=is_source, is_target=is_target, tags=block_tags)
 
 
     def get_connections_for_block(self, block, connections):
