@@ -105,25 +105,15 @@ class PageHTML:
     def generate_project_html(self):
         project_name = os.path.splitext(os.path.basename(self.file_projet))[0]
         output_dir = os.path.join(os.path.dirname(self.file_projet), f"{project_name}_files")
-        os.makedirs(output_dir, exist_ok=True)
-        print(f"project_name : {project_name}")
-        
-        
-        html_filename = os.path.join(output_dir, f"{project_name}.html")
-        print(f"html_filename ORIGINAL : {html_filename}")
+        #os.makedirs(output_dir, exist_ok=True)
 
 
-
-        
-        html_filename = os.path.join(output_dir, f"/{global_variables.CheminLocalization + global_variables.CheminLangue}/{project_name}.html")
-        print(f"html_filename : {html_filename}")
-
-
-        html_filename =f"{project_name}_files/{global_variables.CheminLocalization + global_variables.CheminLangue}/{project_name}.html"
-        print(f"html_filename 2 : {html_filename}")
 
 
         html_filename = os.path.join(output_dir, f"{global_variables.CheminLocalization + global_variables.CheminLangue}/{project_name}.html")
+        # Créer les dossiers si nécessaire
+        os.makedirs(os.path.dirname(html_filename), exist_ok=True)
+        
         print(f"html_filename FINAL  : {html_filename}")
 
 

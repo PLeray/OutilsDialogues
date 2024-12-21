@@ -1,0 +1,488 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Rendez-vous</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #ffffff;
+                    margin: 0;
+                    padding: 20px;
+                }
+                .step-container {
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    border-top: 1px solid #bbbbbb;
+                    background-color: #f4f4f4;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                }
+                .step-title {
+                    font-size: 9px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    position: absolute;
+                    color:  #bbbbbb;
+                    top: 10px;
+                    left: 10px;
+                }
+                .block-container {
+                    display: flex;
+                    justify-content: center;
+                    gap: 100px; /* Augmente l'espacement entre les blocs */
+                    flex-wrap: wrap;
+                }
+                .block {
+                    padding: 10px;
+                    padding-top: 0px;
+                    border-top: 2px solid #33acff;
+                    border-bottom: 2px solid #33acff;
+                    border-radius: 8px;
+                    background-color: #ffffff;
+                    width: 400px;
+                    text-align: left;
+                }
+                .block-subtitles {
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+                .block-subtitles div {
+                    font-weight: normal;
+                }
+                .block-subtitles div normal {
+                    color:  #444444;
+                }                
+                .block-subtitles div perso {
+                    font-weight: bold;
+                    color:  #33acff;
+                }
+                .block-subtitles div commentaire {
+                    font-weight: normal;
+                    color:  #4b00a0;
+                    font-style: oblique;
+                    display: block; /* S'assure que `commentaire` est traité comme un bloc (comme un paragraphe) */
+                    margin-top: 15px; /* Espace avant le commentaire */
+                    margin-bottom: 15px; /* Espace après le commentaire */
+                }      
+                .block-subtitles div action {
+                    font-weight: normal;
+                    color:  #00598c;
+                    display: block; /* S'assure que `commentaire` est traité comme un bloc (comme un paragraphe) */
+                    margin-top: 15px; /* Espace avant le commentaire */
+                    margin-bottom: 15px; /* Espace après le commentaire */
+                }                             
+                svg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 10000px; /* Ajusté pour inclure toutes les étapes */
+                    pointer-events: none;
+                }
+                line {
+                    stroke: #33acff;
+                    stroke-width: 2;
+                }
+            </style>
+        </head>
+        <body>
+<h1 style='text-align:center;'>Rendez-vous</h1>
+<div class='step-container'>
+<div class='step-title'>Étape 1</div>
+<div class='block-container'>
+<div class='block' id='block-00000002'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> NO TRADUCTION</normal></div>
+<div><normal><perso>Panam : </perso> V?</normal></div>
+<div><normal><perso>V : </perso> Uh, do I know you?</normal></div>
+<div><normal><perso>Panam : </perso> Haha, funny...</normal></div>
+<div><normal><perso>V : </perso> Hahahaha!</normal></div>
+<div><normal><perso>V : </perso> Hey, Panam.</normal></div>
+<div><normal><perso></perso> NO TRADUCTION</normal></div>
+<div><normal><perso></perso> NO TRADUCTION</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 2</div>
+<div class='block-container'>
+<div class='block' id='block-00000003'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> NO TRADUCTION</normal></div>
+<div><normal><perso>V : </perso> Really glad to see you.</normal></div>
+<div><normal><perso>Panam : </perso> Careful, or I'll start believing that. You won't be able to get rid of me.</normal></div>
+<div><normal><perso>V : </perso> Heheh, gonna hold you to that.</normal></div>
+<div><normal><perso>Panam : </perso> Pfff. Ooo-K.</normal></div>
+</div>
+</div>
+<div class='block' id='block-00000004'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> NO TRADUCTION</normal></div>
+<div><normal><perso>V : </perso> Damn, I'm glad you're here. So fuckin' glad you didn't change your mind.</normal></div>
+<div><normal><perso>Panam : </perso> I always keep my word.</normal></div>
+<div><normal><perso>V : </perso> Heh, good to know.</normal></div>
+<div><normal><perso>Panam : </perso> Stuff it, V. I just need time – that's all.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 3</div>
+<div class='block-container'>
+<div class='block' id='block-00000005'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> So what do you do nowadays?</normal></div>
+<div><normal><perso>Panam : </perso> Well, it would be better to…</normal></div>
+<div><normal><perso>V : </perso> Talk to me.</normal></div>
+<div><normal><perso>Panam : </perso> I won't talk about it.</normal></div>
+<div><normal><perso>V : </perso> Panam…</normal></div>
+<div><normal><perso>Panam : </perso> Hmm. OK. Thanks.</normal></div>
+<div><normal><perso>Panam : </perso> Uh, ahem, V...</normal></div>
+<div><normal><perso>Panam : </perso> I've a problem.</normal></div>
+<div><normal><perso>V : </perso> Lemme guess. Saul, right?</normal></div>
+<div><normal><perso>Panam : </perso> You know me well.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 4</div>
+<div class='block-container'>
+<div class='block' id='block-00000007'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Thought you and Saul'd agreed to bury your carbines.</normal></div>
+<div><normal><perso>Panam : </perso> He humiliated me in front of the clan! He made me look like an idiot!</normal></div>
+<div><normal><perso>V : </perso> Again?</normal></div>
+<div><normal><perso>Panam : </perso> That's what I mean! It shouldn't be me, it should be...</normal></div>
+<div><normal><perso>Panam : </perso> I knew it...</normal></div>
+<div><normal><perso>Panam : </perso> I don't know anything anymore, V.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 5</div>
+<div class='block-container'>
+<div class='block' id='block-00000008'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Hey, don't worry about Saul. He'll get over it.</normal></div>
+<div><normal><perso>V : </perso> Panam.</normal></div>
+<div><normal><perso>V : </perso> 'Member when we first met? Almost had a pound in your pants at the thought of falling foul of Saul.</normal></div>
+<div><normal><perso>V : </perso> Doesn't look it anymore…</normal></div>
+<div><normal><perso>Panam : </perso> I wanted something different, better. Saul's a damned coward. He'll be the end of the clan. I'm certain.</normal></div>
+</div>
+</div>
+<div class='block' id='block-00000009'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Don't be mad, but... I think Saul could be right.</normal></div>
+<div><normal><perso>Panam : </perso> Well, let's see.</normal></div>
+<div><normal><perso>Panam : </perso> Screw you.</normal></div>
+<div><normal><perso>V : </perso> Relax. All good.</normal></div>
+<div><normal><perso>Panam : </perso> I wanted something different, better. Saul's a damned coward. He'll be the end of the clan. I'm certain.</normal></div>
+<div><normal><perso>Panam : </perso> Even if you were right, what of it? Believe me, I know what the problem is, just not how to solve it – not yet.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 6</div>
+<div class='block-container'>
+<div class='block' id='block-00000010'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> C'mon, don't exaggerate.</normal></div>
+<div><normal><perso>Panam : </perso> I know, but... Well, all right, you're about to tell me that no family's perfect.</normal></div>
+<div><normal><perso>V : </perso> Sure is.</normal></div>
+<div><normal><perso>Panam : </perso> And hey, you'd be right. But I just want to be true to myself and figure out what I want. And what I'm scared of.</normal></div>
+<div><normal><perso>V : </perso> I know exactly what you mean.</normal></div>
+<div><normal><perso>Panam : </perso> You don't know how good it is to hear that.</normal></div>
+<div><normal><perso>Panam : </perso> You?</normal></div>
+</div>
+</div>
+<div class='block' id='block-00000011'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> There any way I can help?</normal></div>
+<div><normal><perso>Panam : </perso> No.</normal></div>
+<div><normal><perso>Panam : </perso> I will manage. I have always managed. I'm serious.</normal></div>
+<div><normal><perso>Panam : </perso> I wouldn't mind changing the subject now.</normal></div>
+<div><normal><perso>V : </perso> OK…</normal></div>
+<div><normal><perso>Panam : </perso> You?</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 7</div>
+<div class='block-container'>
+<div class='block' id='block-00000012'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Panam.</normal></div>
+<div><normal><perso>V : </perso> Plan – what's your take?</normal></div>
+<div><normal><perso>Panam : </perso> It's a good plan, V... Hmm, do you know what Saul once told me?</normal></div>
+<div><normal><perso>Panam : </perso> That anyone is truly free just once – when they know they have nothing to lose.</normal></div>
+<div><normal><perso>V : </perso> Mhm.</normal></div>
+<div><normal><perso>Panam : </perso> Did I say something wrong?</normal></div>
+<div><normal><perso>V : </perso> I won't.</normal></div>
+<div><normal><perso>V : </perso> Nnn-nope.</normal></div>
+<div><normal><perso>Panam : </perso> Because I truly care this time. Yet I fear I'll do or say something foolish – and be left alone in the desert.</normal></div>
+<div><normal><perso>Panam : </perso> Jesus, you really do look terrible.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 8</div>
+<div class='block-container'>
+<div class='block' id='block-00000013'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> I take it we've got a deal?</normal></div>
+<div><normal><perso>Panam : </perso> You need to take a few deep breaths.</normal></div>
+<div><normal><perso>V : </perso> Oh-ho. This'll be fun.</normal></div>
+<div><normal><perso>Panam : </perso> Besides – without me, you don't stand a chance.</normal></div>
+<div><normal><perso>V : </perso> 'Course I will.</normal></div>
+<div><normal><perso>V : </perso> Just realized – here I am, kleppin' from Arasaka again.</normal></div>
+<div><normal><perso>Panam : </perso> Hah.</normal></div>
+<div><normal><perso>Panam : </perso> That might've been the cherry on top.</normal></div>
+<div><normal><perso>Panam : </perso> OK. Here we go.</normal></div>
+<div><normal><perso>V : </perso> Fine, let's go.</normal></div>
+<div><normal><perso>V : </perso> Meet you there.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 9</div>
+<div class='block-container'>
+<div class='block' id='block-00000014'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Nice place, quaintly slick.</normal></div>
+<div><normal><perso>Panam : </perso> I certainly hope so.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 10</div>
+<div class='block-container'>
+<div class='block' id='block-00000016'>
+<div class='block-subtitles'>
+<div><normal><perso>Panam : </perso> Fuck, V. It is awesome!</normal></div>
+<div><normal><perso>V : </perso> How's abso-fuckin'-lutely sound?</normal></div>
+<div><normal><perso>Panam : </perso> Ooph, I'm starting to feel that stress go away.</normal></div>
+<div><normal><perso>Panam : </perso> When you're on the road day into night into day, your butt basically fusing with your seat, you forget what it's like.</normal></div>
+<div><normal><perso>V : </perso> Hehe.</normal></div>
+<div><normal><perso>V : </perso> Huh, think I know the feelin'.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 11</div>
+<div class='block-container'>
+<div class='block' id='block-00000017'>
+<div class='block-subtitles'>
+<div><normal><perso>Panam : </perso> Will you say something?</normal></div>
+<div><normal><perso>Panam : </perso> OK, what's going on?</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 12</div>
+<div class='block-container'>
+<div class='block' id='block-00000018'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Panam... I...</normal></div>
+<div><normal><perso>V : </perso> Just reminded me of Jackie. And the Arasaka job. Think you know how that ended.</normal></div>
+<div><normal><perso>V : </perso> Wasn't even that long ago...</normal></div>
+<div><normal><perso>V : </perso> Fuck. Fuck!</normal></div>
+<div><normal><perso>Panam : </perso> OK, V, relax. Take it bit by bit. What is happening, exactly?</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 13</div>
+<div class='block-container'>
+<div class='block' id='block-00000019'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> I can't make any plans for the future. There's this thing…</normal></div>
+<div><normal><perso>Panam : </perso> Bullshit. You don't know that.</normal></div>
+<div><normal><perso>V : </perso> Uh, sure. We'll see. I mean, you know how it is.</normal></div>
+<div><normal><perso>Panam : </perso> Stubborn bastard.</normal></div>
+</div>
+</div>
+<div class='block' id='block-00000020'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Dead in a few months – that's me, huh?</normal></div>
+<div><normal><perso>Panam : </perso> Bullshit. You don't know that.</normal></div>
+<div><normal><perso>V : </perso> Gotta wait and see, won't we?</normal></div>
+<div><normal><perso>Panam : </perso> You're with me now. We will figure out and take care of that piece of shit in your head.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 14</div>
+<div class='block-container'>
+<div class='block' id='block-00000021'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Still, if I gotta die, I wanna go down in history. Fuck it, even a footnote'd do.</normal></div>
+<div><normal><perso>Panam : </perso> I will remember, V. Always.</normal></div>
+<div><normal><perso>V : </perso> Oh, come on.</normal></div>
+<div><normal><perso>V : </perso> Don't worry. I'm not dead yet.</normal></div>
+<div><normal><perso>Panam : </perso> V...</normal></div>
+<div><normal><perso>Panam : </perso> Fuck. That is not how it was supposed to be, was it?</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 15</div>
+<div class='block-container'>
+<div class='block' id='block-00000023'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> C'mere.</normal></div>
+<div><normal><perso>Panam : </perso> Hey...</normal></div>
+<div><normal><perso>Panam : </perso> Mmhmm... I couldn't ask for more.</normal></div>
+<div><normal><perso>V : </perso> Uhh...</normal></div>
+<div><normal><perso>V : </perso> Have everything you need, ma'am?</normal></div>
+<div><normal><perso>Panam : </perso> What?</normal></div>
+<div><normal><perso>Panam : </perso> Fuck. I'm sorry.</normal></div>
+<div><normal><perso>Panam : </perso> Forgot myself a bit, huh?</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 16</div>
+<div class='block-container'>
+<div class='block' id='block-00000024'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Can't say I do.</normal></div>
+<div><normal><perso>V : </perso> Your wish is our command...</normal></div>
+<div><normal><perso>Panam : </perso> Oh? And what did you have in mind?</normal></div>
+<div><normal><perso>Panam : </perso> Careful, you can't know what I'd wish for…</normal></div>
+<div><normal><perso>V : </perso> Not all of 'em, clearly.</normal></div>
+<div><normal><perso>Panam : </perso> Pfff. Ooo-K.</normal></div>
+<div><normal><perso>Panam : </perso> Well, watch out, now.</normal></div>
+<div><normal><perso>V : </perso> Ooo-K, then.</normal></div>
+</div>
+</div>
+<div class='block' id='block-00000025'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Often enough.</normal></div>
+<div><normal><perso>Panam : </perso> Are you joking? Tell me you are, please.</normal></div>
+<div><normal><perso>V : </perso> I say it because I know you will, too.</normal></div>
+<div><normal><perso>Panam : </perso> You know… fine. Fuck off.</normal></div>
+<div><normal><perso>V : </perso> Oh, well, uh... I guess I'll have to make it up to ya, won't I?</normal></div>
+<div><normal><perso>Panam : </perso> Oh, it's fine, truly. Don't let it worry you.</normal></div>
+<div><normal><perso>V : </perso> And that's it?</normal></div>
+<div><normal><perso>Panam : </perso> No. I'll be going again soon. We'll talk next time.</normal></div>
+<div><normal><perso>V : </perso> Try followin' the impulse next time.</normal></div>
+<div><normal><perso>Panam : </perso> Do you know what, V? Fuck you.</normal></div>
+<div><normal><perso>V : </perso> Think that's it. Until next time?</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 17</div>
+<div class='block-container'>
+<div class='block' id='block-00000026'>
+<div class='block-subtitles'>
+<div><normal><perso>Panam : </perso> I didn't want to wake you.</normal></div>
+<div><normal><perso>V : </perso> Mmhmmm...</normal></div>
+<div><normal><perso>Panam : </perso> Did you sleep all right?</normal></div>
+<div><normal><perso>V : </perso> Yeah... Time kinda stopped for me.</normal></div>
+<div><normal><perso>Panam : </perso> So… I'm off.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 18</div>
+<div class='block-container'>
+<div class='block' id='block-00000022'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Oh no...</normal></div>
+<div><normal><perso>V : </perso> I don't want you to disappear. Not now. I need you.</normal></div>
+<div><normal><perso>Panam : </perso> You don't know how good it is to hear that.</normal></div>
+<div><normal><perso>Panam : </perso> I would not want to cock this up.</normal></div>
+<div><normal><perso>V : </perso> Mhm, and?</normal></div>
+<div><normal><perso>Panam : </perso> It's too bad I better get rolling in a minute.</normal></div>
+<div><normal><perso>V : </perso> No, no hard feelings.</normal></div>
+<div><normal><perso>Panam : </perso> Stuff it, V. I just need time – that's all.</normal></div>
+<div><normal><perso>V : </perso> Fine.</normal></div>
+<div><normal><perso>V : </perso> See you soon?</normal></div>
+<div><normal><perso>Panam : </perso> You need to take a few deep breaths.</normal></div>
+<div><normal><perso>Panam : </perso> Talk soon, V!</normal></div>
+</div>
+</div>
+<div class='block' id='block-00000027'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Uh, hold up… About last night…</normal></div>
+<div><normal><perso>Panam : </perso> We don't need to talk about that.</normal></div>
+<div><normal><perso>V : </perso> Sure, see you there.</normal></div>
+<div><normal><perso>Panam : </perso> Take care of yourself.</normal></div>
+<div><normal><perso>V : </perso> You, too, Panam.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<svg id='connections'>
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000002' data-end='block-00000003' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000002' data-end='block-00000004' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000003' data-end='block-00000005' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000004' data-end='block-00000005' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000005' data-end='block-00000007' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000007' data-end='block-00000008' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000007' data-end='block-00000009' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000008' data-end='block-00000010' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000009' data-end='block-00000011' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000010' data-end='block-00000012' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000011' data-end='block-00000012' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000012' data-end='block-00000013' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000013' data-end='block-00000014' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000014' data-end='block-00000016' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000016' data-end='block-00000017' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000017' data-end='block-00000018' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000018' data-end='block-00000019' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000018' data-end='block-00000020' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000019' data-end='block-00000021' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000020' data-end='block-00000021' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000021' data-end='block-00000023' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000023' data-end='block-00000024' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000023' data-end='block-00000025' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000024' data-end='block-00000026' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000026' data-end='block-00000022' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000026' data-end='block-00000027' />
+</svg>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const svg = document.getElementById('connections');
+    const lines = document.querySelectorAll('line');
+    function updateLinePositions() {
+        lines.forEach(line => {
+            const startBlock = document.getElementById(line.dataset.start);
+            const endBlock = document.getElementById(line.dataset.end);
+            if (startBlock && endBlock) {
+                const startRect = startBlock.getBoundingClientRect();
+                const endRect = endBlock.getBoundingClientRect();
+                const svgRect = svg.getBoundingClientRect();
+                line.setAttribute('x1', startRect.left + startRect.width / 2 - svgRect.left);
+                line.setAttribute('y1', startRect.bottom - svgRect.top);
+                line.setAttribute('x2', endRect.left + endRect.width / 2 - svgRect.left);
+                line.setAttribute('y2', endRect.top - svgRect.top);
+            }
+        });
+    }
+    setTimeout(updateLinePositions, 100);
+});
+</script>
+</body></html>

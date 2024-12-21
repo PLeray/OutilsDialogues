@@ -246,17 +246,14 @@ def charger_playlist_from_file(playlist_tree,tk, file_path):
                         fichierQuete = quete_path + ".json.json"
                     #print(f"Fichier Quete : {quete_path}")
                     result = get_SousTitres_by_id(fichierQuete, entry[global_variables.data_ID])
-
                 
                 if result:
-                    #print(f"Female Variant: {result['femaleVariant']}")
-                    #print(f"Male Variant: {result['maleVariant']}")
                     female_text = result[global_variables.data_F_SubTitle]
                     male_text = result[global_variables.data_M_SubTitle]
                 else:
                     #print("String ID non trouvé.")
-                    female_text = "NO TRADUCTION"
-                    male_text = "NO TRADUCTION"  
+                    female_text = "(NO TRADUCTION)"
+                    male_text = "(NO TRADUCTION)"  
 
                 if not male_text or male_text == global_variables.pas_Info:
                     male_text = female_text        

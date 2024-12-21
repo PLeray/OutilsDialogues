@@ -182,8 +182,8 @@ def charger_sous_titres_from_JSON_playlist(file_path, first_entry_only=False):
                         female_text = result[global_variables.data_F_SubTitle]
                         male_text = result[global_variables.data_M_SubTitle]
                     else:
-                        female_text = "NO TRADUCTION"
-                        male_text = "NO TRADUCTION"  
+                        female_text = "(NO TRADUCTION)"
+                        male_text = "(NO TRADUCTION)"  
 
                     if not male_text or male_text == global_variables.pas_Info:
                         male_text = female_text
