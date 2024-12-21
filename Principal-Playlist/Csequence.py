@@ -105,14 +105,15 @@ class Sequence:
             #print(f"Étape {etape.numero}: y={etape.y}, height={global_variables.ETAPE_HEIGHT}, spacing={global_variables.ETAPE_SPACING}")
 
 
-    def draw(self, canvas, selected_etape=None):
+    def draw(self, canvas, selected_to_connect_blocks, selected_etape=None):
         """Dessiner toutes les étapes et connexions."""
         for etape in self.etapes:
             #etape.draw(canvas, selected=(etape == selected_etape))
 
             etape.draw(
                 canvas,
-                selected_blocks={"green": [], "red": []},  # Exemple de dictionnaire vide
+                #selected_to_connect_blocks={"green": [], "red": []},  # Exemple de dictionnaire vide
+                selected_to_connect_blocks,
                 selected_etape=(etape == selected_etape)  # Passe correctement l'étape sélectionnée
             )
     
@@ -135,7 +136,7 @@ class Sequence:
             end_x = end.x
             end_y = end.y - global_variables.BLOC_HEIGHT // 2  # Haut du bloc cible
 
-            canvas.create_line(start_x, start_y, end_x, end_y, fill="blue", width=2)
+            canvas.create_line(start_x, start_y, end_x, end_y, fill=global_variables.Couleur_Liaison, width=2)
 
 
     def find_block(self, block_data):

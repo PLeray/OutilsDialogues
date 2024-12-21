@@ -22,7 +22,7 @@ def ouvrir_projet_instance(root):
         return
     # Créer une nouvelle fenêtre
     global_variables.projet_instance = tk.Toplevel(root)
-    global_variables.projet_instance.geometry("600x800")
+    global_variables.projet_instance.geometry("800x1000")
     global_variables.projet_instance.title("Fenêtre Projet")
     # Associer un gestionnaire à la fermeture de cette fenêtre
     global_variables.projet_instance.protocol("WM_DELETE_WINDOW", fermer_projet_instance)

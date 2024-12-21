@@ -66,16 +66,18 @@ CheminLangue = "fr-fr"
 Couleur_BgSelectLigne = "#D3D3D3"  # Couleur pour les lignes sélectionnées
 Couleur_TxtSelectLigne = "#000000"   # Couleur du texte pour les lignes sélectionnées
 
-Couleur_Bloc = "#90EE90"  # Couleur par défaut pour les blocs
+Couleur_Bloc = "white"  # Couleur par défaut pour les blocs
 
-Couleur_BlocSelect = "orange"
+Couleur_BlocSelect = "blue"
 Couleur_BlocSource = "green"
 Couleur_BlocTarget = "red"
+Couleur_BlocDefaut = "grey"
+Couleur_Liaison = "#ff9333" # Orange
 
-ETAPE_HEIGHT = 70  # Hauteur d'une étape
-ETAPE_SPACING = 150  # Espacement vertical entre les étapes
-BLOC_WIDTH = 250  # Largeur d'un bloc
-BLOC_HEIGHT = 80  # Hauteur d'un bloc
+ETAPE_HEIGHT = 90  # Hauteur d'une étape
+ETAPE_SPACING = 10  # Espacement vertical entre les étapes
+BLOC_WIDTH = 300  # Largeur d'un bloc
+BLOC_HEIGHT = 70  # Hauteur d'un bloc
 
 
 

@@ -58,11 +58,14 @@ class Block:
         #if selected:
         if self.isSelected:
             outline_color = global_variables.Couleur_BlocSelect
+        else:
+            outline_color = global_variables.Couleur_BlocDefaut            
         if is_source:
+            #print(f"valeur is_source :  {is_source} ")
             outline_color = global_variables.Couleur_BlocSource
         elif is_target:
+            #print(f"valeur is_target :  {is_target} ")
             outline_color = global_variables.Couleur_BlocTarget
-
 
         # Dessiner le rectangle du bloc
         canvas.create_rectangle(
@@ -74,13 +77,17 @@ class Block:
             tags=tags
         )
         # Ajouter les textes (titre, commentaire, lien)
-        text_y_offset = -10  # Décalage initial pour le premier texte
+        text_y_offset = -15  # Décalage initial pour le premier texte
         canvas.create_text(
-            x, y + text_y_offset, text=self.identifiant + " (" + self.title + ")", font=("Arial", 8), tags=tags
+            x, y + text_y_offset, text= "BLOC: " + self.identifiant, font=("Arial", 8), tags=tags
         )
-        text_y_offset += 17  # Décalage pour le commentaire
+        text_y_offset = 0  # Décalage initial pour le premier texte
         canvas.create_text(
-            x, y + text_y_offset, text=self.comment, font=("Arial", 9), fill="gray", tags=tags
+            x, y + text_y_offset, text="Fichier : " + self.title , font=("Arial", 8), fill="gray", tags=tags
+        )        
+        text_y_offset += 15  # Décalage pour le commentaire
+        canvas.create_text(
+            x, y + text_y_offset, text=self.comment, font=("Arial", 9), tags=tags
         )
 
     def clear_connections(self):

@@ -21,7 +21,8 @@ class StepBlockApp:
         # Variables
         self.sequence = Sequence("Nouvelle Séquence")
         self.selected_etape = None
-        self.selected_blocks = {"green": [], "red": []}
+        self.selected_to_connect_blocks = {"green": [], "red": []}
+        self.selected_block = None  # Initialisation ajoutée
         self.file_Projet = "xx"
 
         # Frame principale
@@ -100,27 +101,22 @@ class StepBlockApp:
             block = self.sequence.etapes[etape_idx].blocs[block_idx]
 
             # Select the block (orange outline)
-            self.selected_blocks = {"green": [], "red": []}  # Reset source/target selections
+            self.selected_to_connect_blocks = {"green": [], "red": []}  # Reset source/target selections
             self.selected_block = block  # Track selected block
 
             for etape in self.sequence.etapes:
                 for unBlocs in etape.blocs:
                     unBlocs.isSelected = False  
-
             block.isSelected = True
-
-
             self.selected_etape = None  # Clear étape selection
             print(f"Bloc sélectionné : {block.title} Rang {block.etape_position} (Étape {etape_idx}).")
-
-
 
         elif "etape" in tags:
             # Select the étape
             etape_idx = int(tags[1])
             self.selected_etape = self.sequence.etapes[etape_idx]
             self.selected_block = None  # Clear block selection
-            self.selected_blocks = {"green": [], "red": []}  # Reset source/target selections
+            self.selected_to_connect_blocks = {"green": [], "red": []}  # Reset source/target selections
             print(f"Étape sélectionnée : {etape_idx}.")
 
             for etape in self.sequence.etapes:
@@ -147,8 +143,8 @@ class StepBlockApp:
             block = self.sequence.etapes[etape_idx].blocs[block_idx]
 
             # Ajouter le bloc à la liste rouge (cibles) s'il n'y est pas déjà
-            if block not in self.selected_blocks["red"]:
-                self.selected_blocks["red"].append(block)
+            if block not in self.selected_to_connect_blocks["red"]:
+                self.selected_to_connect_blocks["red"].append(block)
                 print(f"Bloc cible ajouté : {block.title} (Étape {etape_idx}).")
             else:
                 print(f"Bloc déjà dans les cibles : {block.title}")
@@ -169,8 +165,8 @@ class StepBlockApp:
             block = self.sequence.etapes[etape_idx].blocs[block_idx]
 
             # Ajouter le bloc à la liste verte (sources) s'il n'y est pas déjà
-            if block not in self.selected_blocks["green"]:
-                self.selected_blocks["green"].append(block)
+            if block not in self.selected_to_connect_blocks["green"]:
+                self.selected_to_connect_blocks["green"].append(block)
                 print(f"Bloc source ajouté : {block.title} (Étape {etape_idx}).")
             else:
                 print(f"Bloc déjà dans les sources : {block.title}")
@@ -257,12 +253,43 @@ class StepBlockApp:
         # Utiliser la méthode `draw` de la séquence
         self.sequence.draw(
             canvas=self.canvas,
+            selected_to_connect_blocks=self.selected_to_connect_blocks,
             selected_etape=self.selected_etape
         )
 
         # Mettre à jour la région défilable pour la scrollbar
         self.canvas.update_idletasks()
         self.canvas.config(scrollregion=self.canvas.bbox("all"))
+
+
+    def draw_sequence2(self):
+        """Dessiner toute la séquence sur le canvas."""
+        # Mettre à jour la largeur des étapes et réorganiser
+        self.update_width_and_reorganize()
+        self.sequence.reorganize_etapes()  # S'assurer que tout est bien aligné
+        # Effacer et redessiner
+        self.canvas.delete("all")
+
+
+        for etape in self.sequence.etapes:
+            etape.draw(
+                self.canvas,
+                selected_blocks=self.selected_blocks,
+                selected_etape=(etape == self.selected_etape)
+            )
+
+        for conn in self.sequence.connections:
+            start = conn["start"]
+            end = conn["end"]
+            if start and end:
+                self.canvas.create_line(
+                    start.x, start.y + 20,
+                    end.x, end.y - 20,
+                    fill="blue", width=4
+                )
+        # Mettre à jour la région défilable pour la scrollbar
+        self.canvas.update_idletasks()
+        self.canvas.config(scrollregion=self.canvas.bbox("all"))        
 
     def create_buttons(self):
         """Créer les boutons Load, Save, Ajouter Étape, Ajouter Bloc et Connect."""
@@ -382,14 +409,14 @@ class StepBlockApp:
 
     def create_connections(self):
         """Créer des connexions entre les blocs sélectionnés."""
-        if not self.selected_blocks["green"] or not self.selected_blocks["red"]:
+        if not self.selected_to_connect_blocks["green"] or not self.selected_to_connect_blocks["red"]:
             print("Sélectionnez des blocs sources et cibles pour créer une connexion.")
             return
-        for source in self.selected_blocks["green"]:
-            for target in self.selected_blocks["red"]:
+        for source in self.selected_to_connect_blocks["green"]:
+            for target in self.selected_to_connect_blocks["red"]:
                 self.sequence.add_connection(source, target)
         # Réinitialiser les sélections
-        self.selected_blocks = {"green": [], "red": []}
+        self.selected_to_connect_blocks = {"green": [], "red": []}
         # Redessiner après validation
         self.draw_sequence()
 
@@ -551,7 +578,7 @@ class StepBlockApp:
         # Réinitialiser les variables
         self.sequence = Sequence("Nouvelle Séquence")
         self.selected_etape = None
-        self.selected_blocks = {"green": [], "red": []}
+        self.selected_to_connect_blocks = {"green": [], "red": []}
         self.file_Projet = "xx"
 
         # Vider le canvas

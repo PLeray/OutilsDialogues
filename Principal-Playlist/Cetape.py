@@ -58,7 +58,7 @@ class Etape:
             current_x += global_variables.BLOC_WIDTH + spacing
             #print(f"Bloc {block.identifiant}: x={block.x}, y={block.y}, width={global_variables.BLOC_WIDTH}")
 
-    def draw(self, canvas, selected_blocks, selected_etape=False):
+    def draw(self, canvas, selected_to_connect_blocks, selected_etape=False):
         """
         Dessiner l'étape sur le canvas.
         """
@@ -75,11 +75,11 @@ class Etape:
 
         # Dessiner les blocs dans l'étape
         for i, block in enumerate(self.blocs):
-            is_source = block in selected_blocks["green"]
-            is_target = block in selected_blocks["red"]
+            is_source = block in selected_to_connect_blocks["green"]
+            is_target = block in selected_to_connect_blocks["red"]
 
             # REVOIR ICI POUR CADRE AUTOU BLOC !!!!
-            #selected = block in selected_blocks["green"] or block in selected_blocks["red"]
+            #selected = block in selected_to_connect_blocks["green"] or block in selected_to_connect_blocks["red"]
 
             block_tags = ("block", self.numero, i)  # Tags pour chaque bloc
             # block.draw(canvas, block.x, self.y, is_source=is_source, is_target=is_target, selected=selected, tags=block_tags)
