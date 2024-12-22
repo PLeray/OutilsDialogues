@@ -126,9 +126,6 @@ class Sequence:
             if not hasattr(start, 'x') or not hasattr(start, 'y') or not hasattr(end, 'x') or not hasattr(end, 'y'):
                 print(f"Connexion invalide : {conn}")
                 continue
-
-            #print(f"Source bloc ({start.identifiant}): x={start.x}, y={start.y}")
-            #print(f"Cible bloc ({end.identifiant}): x={end.x}, y={end.y}")
             
             # Calcul des points de connexion
             start_x = start.x

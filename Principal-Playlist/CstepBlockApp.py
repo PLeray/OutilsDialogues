@@ -299,14 +299,14 @@ class StepBlockApp:
 
         tk.Button(self.button_frame, text="Ajouter Étape", command=self.add_etape).pack(side=tk.LEFT, padx=5, pady=5)
         #tk.Button(self.button_frame, text="Ajouter Bloc", command=self.add_block).pack(side=tk.LEFT, padx=5, pady=5)
-        tk.Button(self.button_frame, text="Connecter Étapes", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Connecter Blocs", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Générer Projet HTML", command=self.generate_project_html).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Générer Projet OGG", command=self.generate_Ogg).pack(side=tk.LEFT, padx=5, pady=5)
 
     def Open_Bloc(self):
         if self.selected_block:
             leBloc = self.selected_block
-            print(f"Bloc: {leBloc.identifiant} lien: {leBloc.playlist_lien}.")    
+            #print(f"Bloc: {leBloc.identifiant} lien: {leBloc.playlist_lien}.")    
             charger_playlist_from_file(global_variables.playlist_tree,tk, leBloc.playlist_lien)
 
     def import_playlist_to_block(self):
@@ -364,11 +364,9 @@ class StepBlockApp:
         else:
             # Ajouter à la fin si aucune étape n'est sélectionnée
             new_index = len(self.sequence.etapes)
-        # Créer une nouvelle étape
-        #y = new_index * 100 + 50
+
         y = new_index * (global_variables.ETAPE_HEIGHT + global_variables.ETAPE_SPACING) + global_variables.ETAPE_HEIGHT // 2
         
-        print(Etape)
         new_etape = Etape(numero=new_index, y=y, width=self.canvas.winfo_width())
 
         self.sequence.etapes.insert(new_index, new_etape)

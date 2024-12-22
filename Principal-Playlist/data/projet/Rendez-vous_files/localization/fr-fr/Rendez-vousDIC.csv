@@ -1,8 +1,10 @@
 femaleVariant,maleVariant,stringId,female_vo_path,male_vo_path,quest_path
 V se rend au point de rendez-vous.,,1734639643012578,COM,COM,Rendez-vous_files/{}/Rendez-vousDIC.csv
-[Boire] Je suis trop contente de te voir.,[Boire] Je suis trop content de te voir.,1734733486045460,ACT,ACT,projet_files/{}/projetDIC.csv
+[Boire] Je suis trop content de te voir.,,1734733486045460,ACT,ACT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Boire] Je suis contente que t'aies pas changé d'avis.,[Boire] Je suis content que t'aies pas changé d'avis.,1734733573905763,ACT,ACT,D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/projet/Rendez-vous_files/{}/Rendez-vousDIC.csv
 Ils vont s'installer au bar et prenent un verre,,1734736588881117,COM,COM,projet_files/{}/projetDIC.csv
-"Lorem ipsum dolor sit amet, consmod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.",,1734783724299392,COM,COM,data/projet/projet_files/{}/projetDIC.csv
-[Attendre Panam ],,1734824689179729,ACT,ACT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+[Attendre Panam],,1734824689179729,ACT,ACT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Panam arrive au point de rendez-vous près du bar...,,1734885474362720,COM,COM,Rendez-vous_files/{}/Rendez-vousDIC.csv
+[Boire],,1734887593907139,ACT,ACT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"[Boire] Alors, tu fais quoi ces temps-ci ?",,1734887624815712,ACT,ACT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"Alors, tu fais quoi ces temps-ci ?",,1734887658486519,ACT,ACT,Rendez-vous_files/{}/Rendez-vousDIC.csv
