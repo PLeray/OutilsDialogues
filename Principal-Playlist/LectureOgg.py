@@ -197,10 +197,6 @@ def fusionnerPlaylist(playlist_tree):
 
 # Fonction pour fusionner les fichiers audio à partir d'un fichier JSON
 def fusionner_audio_json(chemin_json="", chemin_ogg=""):
-    chemin_json = "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/8.1-Trusted someone.json"
-    chemin_ogg = "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/8.1-Trusted someone.ogg"
-    chemin_json = "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/1.0-Do_i_know you.json"
-    chemin_ogg = "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/1.0-Do_i_know you.ogg"
     try:
         # Charger les données du fichier JSON
         with open(chemin_json, "r", encoding="utf-8") as f:

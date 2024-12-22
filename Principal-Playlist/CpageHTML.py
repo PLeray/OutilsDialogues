@@ -1,5 +1,6 @@
 import os
 from general_functions import charger_sous_titres_from_JSON_playlist
+from LectureOgg import fusionner_audio_json
 import global_variables  # Importer les variables globales
 
 class PageHTML:
@@ -50,12 +51,14 @@ class PageHTML:
                 .block {{
                     padding: 10px;
                     padding-top: 0px;
+                    padding-right: 20px;
                     border-top: 2px solid #33acff;
                     border-bottom: 2px solid #33acff;
                     border-radius: 8px;
                     background-color: #ffffff;
                     width: 400px;
                     text-align: left;
+                    position: relative; /* Permet au bouton d’être positionné par rapport au bloc */
                 }}
                 .block-subtitles {{
                     font-size: 14px;
@@ -98,6 +101,65 @@ class PageHTML:
                     stroke: #33acff;
                     stroke-width: 2;
                 }}
+                .audio-button {{
+                    width: 60px;
+                    height: 60px;
+                    background-color: #33acff;
+                    border: 3px solid white;
+                    border-radius: 50%;
+                    position: absolute; /* Permet de placer le bouton indépendamment */
+                    top: 50%; /* Centre verticalement le bouton */
+                    right: -30px; /* Aligne le bouton à droite du bloc */
+                    transform: translateY(-50%); /* Ajuste pour un centrage parfait */
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }}
+                .audio-button:hover {{
+                    background-color: #007bb5;
+                }}
+                .audio-button::before {{
+                    content: '';
+                    position: absolute;
+                    transition: all 0.3s ease;
+                }}
+                .audio-button.play::before {{
+                    width: 0;
+                    height: 0;
+                    border-left: 15px solid white;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                }}
+                .audio-button.pause::before {{
+                    width: 10px;
+                    height: 20px;
+                    background-color: white;
+                    box-shadow: 15px 0 0 white;
+                }}                
+                .audio-button::after {{
+                    /* Tooltip */
+                    content: "Cliquez sur le bouton ci-dessous pour lire ou arrêter le fichier audio";
+                    position: absolute;
+                    top: -35px; /* Décalage au-dessus du bouton */
+                    right: 50%; /* Centré horizontalement par rapport au bouton */
+                    transform: translateX(50%);
+                    background-color: #000;
+                    color: #fff;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+                    z-index: 10;
+                }}
+                .audio-button:hover::after {{
+                    opacity: 1;
+                    visibility: visible;
+                }}
             </style>
         </head>
         """
@@ -135,21 +197,22 @@ class PageHTML:
                     #prefixID = subtitle.get(global_variables.data_ID, "")[:3]
                     #print(f"prefixID : {prefixID}")
                     divType = "normal"
-                    retourLigne = "<br>"
                     if prefixID == "COM":
                         divType = "commentaire"
                     elif  prefixID == "ACT":
                         divType = "action"
                     else:
                         divType = "normal"
-                        retourLigne = "\n"
                     perso = subtitle.get("perso", "").capitalize()
                     if perso.strip():  # Vérifie si le texte est vide ou contient uniquement des espaces
                         perso = perso + " : " 
                     sous_titre = subtitle.get("sous_titre", "")
 
                     html_content += f"<div><{divType}><perso>{perso}</perso> {sous_titre}</{divType}></div>\n"
-                    #html_content += f"<div><commentaire>{perso}</commentaire> {sous_titre}</div>\n"
+
+                html_content += f"<audio id=\"audio-{block.identifiant}\" src=\"ogg/Sound-{block.identifiant}.ogg\"></audio>\n"
+                html_content += f"<button class=\"audio-button play\" onclick=\"togglePlay('{block.identifiant}')\"></button>\n"
+
                 html_content += "</div>\n"
 
                 html_content += "</div>\n"
@@ -170,29 +233,8 @@ class PageHTML:
 
         html_content += "</svg>\n"
 
-        # Ajouter le script JS pour calculer les positions des lignes
-        html_content += "<script>\n"
-        html_content += "document.addEventListener('DOMContentLoaded', function () {\n"
-        html_content += "    const svg = document.getElementById('connections');\n"
-        html_content += "    const lines = document.querySelectorAll('line');\n"
-        html_content += "    function updateLinePositions() {\n"
-        html_content += "        lines.forEach(line => {\n"
-        html_content += "            const startBlock = document.getElementById(line.dataset.start);\n"
-        html_content += "            const endBlock = document.getElementById(line.dataset.end);\n"
-        html_content += "            if (startBlock && endBlock) {\n"
-        html_content += "                const startRect = startBlock.getBoundingClientRect();\n"
-        html_content += "                const endRect = endBlock.getBoundingClientRect();\n"
-        html_content += "                const svgRect = svg.getBoundingClientRect();\n"
-        html_content += "                line.setAttribute('x1', startRect.left + startRect.width / 2 - svgRect.left);\n"
-        html_content += "                line.setAttribute('y1', startRect.bottom - svgRect.top);\n"
-        html_content += "                line.setAttribute('x2', endRect.left + endRect.width / 2 - svgRect.left);\n"
-        html_content += "                line.setAttribute('y2', endRect.top - svgRect.top);\n"
-        html_content += "            }\n"
-        html_content += "        });\n"
-        html_content += "    }\n"
-        html_content += "    setTimeout(updateLinePositions, 100);\n"
-        html_content += "});\n"
-        html_content += "</script>\n"
+        html_content += self.ScriptLiaison()
+        html_content += self.ScriptBoutonOgg()
 
         html_content += "</body></html>"
 
@@ -200,3 +242,84 @@ class PageHTML:
             file.write(html_content)
 
         print(f"Page HTML générée avec succès : {html_filename}")
+
+
+    def ScriptBoutonOgg(self):
+        leScript = "<script>\n"
+        leScript += "function togglePlay(blockId) {\n"
+        leScript += "    const audio = document.getElementById(`audio-${blockId}`);\n"
+        leScript += "    const button = document.querySelector(`#block-${blockId} .audio-button`);\n"
+
+        leScript += "    if (audio.paused || audio.ended) {\n"
+        leScript += "        audio.play();\n"
+        leScript += "        button.classList.remove('play');\n"
+        leScript += "        button.classList.add('pause');\n"
+        leScript += "    } else {\n"
+        leScript += "        audio.pause();\n"
+        leScript += "        button.classList.remove('pause');\n"
+        leScript += "        button.classList.add('play');\n"
+        leScript += "    }\n"
+
+        leScript += "    // Réinitialiser l'état du bouton lorsqu'un audio se termine\n"
+        leScript += "    audio.addEventListener('ended', () => {\n"
+        leScript += "        button.classList.remove('pause');\n"
+        leScript += "        button.classList.add('play');\n"
+        leScript += "    });\n"
+        leScript += "}\n"
+        leScript += "</script>\n"
+        return leScript
+    
+    def ScriptLiaison(self):
+        # Ajouter le script JS pour calculer les positions des lignes
+        leScript = "<script>\n"
+        leScript += "document.addEventListener('DOMContentLoaded', function () {\n"
+        leScript += "    const svg = document.getElementById('connections');\n"
+        leScript += "    const lines = document.querySelectorAll('line');\n"
+        leScript += "    function updateLinePositions() {\n"
+        leScript += "        lines.forEach(line => {\n"
+        leScript += "            const startBlock = document.getElementById(line.dataset.start);\n"
+        leScript += "            const endBlock = document.getElementById(line.dataset.end);\n"
+        leScript += "            if (startBlock && endBlock) {\n"
+        leScript += "                const startRect = startBlock.getBoundingClientRect();\n"
+        leScript += "                const endRect = endBlock.getBoundingClientRect();\n"
+        leScript += "                const svgRect = svg.getBoundingClientRect();\n"
+        leScript += "                line.setAttribute('x1', startRect.left + startRect.width / 2 - svgRect.left);\n"
+        leScript += "                line.setAttribute('y1', startRect.bottom - svgRect.top);\n"
+        leScript += "                line.setAttribute('x2', endRect.left + endRect.width / 2 - svgRect.left);\n"
+        leScript += "                line.setAttribute('y2', endRect.top - svgRect.top);\n"
+        leScript += "            }\n"
+        leScript += "        });\n"
+        leScript += "    }\n"
+        leScript += "    setTimeout(updateLinePositions, 100);\n"
+        leScript += "});\n"
+        leScript += "</script>\n"
+        return leScript
+    
+    def generate_Ogg(self):
+        """
+        Génère des fichiers .ogg pour chaque playlist JSON des blocs du projet.
+        Les fichiers sont sauvegardés dans un sous-dossier nommé '/ogg' où la page HTML est générée.
+        """
+        project_name = os.path.splitext(os.path.basename(self.file_projet))[0]
+        output_dir = os.path.join(os.path.dirname(self.file_projet), f"{project_name}_files")
+        #ogg_dir = os.path.join(output_dir, "ogg")
+        ogg_dir = os.path.join(output_dir, f"{global_variables.CheminLocalization + global_variables.CheminLangue}/ogg")
+        # Créer le dossier /ogg s'il n'existe pas
+        os.makedirs(ogg_dir, exist_ok=True)
+
+        for etape in self.sequence.etapes:
+            for block in etape.blocs:
+                playlist_lien = block.playlist_lien
+                if playlist_lien and os.path.exists(playlist_lien):
+                    try:
+                        # Chemin du fichier .ogg
+                        block_id = block.identifiant
+                        output_ogg_path = os.path.join(ogg_dir, f"Sound-{block_id}.ogg")
+                        print(f"output_ogg_path : {output_ogg_path}")
+                        # Appeler la fonction fusionner_audio_json
+                        fusionner_audio_json(chemin_json=playlist_lien, chemin_ogg=output_ogg_path)
+                        print(f"Fichier .ogg généré avec succès : {output_ogg_path}")
+                    except Exception as e:
+                        print(f"Erreur lors de la génération du fichier .ogg pour le bloc {block.identifiant} : {e}")
+                else:
+                    print(f"Aucune playlist JSON valide pour le bloc {block.identifiant}")

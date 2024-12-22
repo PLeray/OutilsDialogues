@@ -300,7 +300,8 @@ class StepBlockApp:
         tk.Button(self.button_frame, text="Ajouter Étape", command=self.add_etape).pack(side=tk.LEFT, padx=5, pady=5)
         #tk.Button(self.button_frame, text="Ajouter Bloc", command=self.add_block).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Connecter Étapes", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
-        tk.Button(self.button_frame, text="Générer Projet", command=self.generate_project_html).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Générer Projet HTML", command=self.generate_project_html).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Générer Projet OGG", command=self.generate_Ogg).pack(side=tk.LEFT, padx=5, pady=5)
 
     def Open_Bloc(self):
         if self.selected_block:
@@ -565,13 +566,14 @@ class StepBlockApp:
         return block
 
     def generate_project_html(self):
-        # Exemple d'utilisation
-        #sequence = Sequence.from_dict(data_projet)  # Charge ta séquence à partir du JSON
-        #file_projet = "data/projet/projet.json"
-
         # Créer une instance de PageHTML et générer le fichier HTML
         page = PageHTML(self.sequence, self.file_Projet)
         page.generate_project_html()
+        
+    def generate_Ogg(self):
+        # Créer une instance de PageHTML et générer le fichier HTML
+        page = PageHTML(self.sequence, self.file_Projet)
+        page.generate_Ogg()        
 
     def new_project(self):
         """Réinitialiser l'application pour créer un nouveau projet."""

@@ -5,7 +5,7 @@ import json, threading, pygame
 from os.path import basename
 
 from tkinter import ttk, filedialog, Menu
-from LectureOgg import JouerAudio, fusionnerPlaylist, fusionner_audio_json
+from LectureOgg import JouerAudio, fusionnerPlaylist
 from general_functions import get_SousTitres_from_csv, get_SousTitres_by_id, extraire_WOLVENKIT_localise_path, extraire_PROJET_localise_path, get_Perso_from_Wem, nom_playlist
 
 import global_variables  # Accéder au Label global
@@ -92,12 +92,11 @@ def setup_playlist(root, tree, tk, columns):
     save_button = tk.Button(button_frame, text="Save playlist 🖫", command=lambda: save_playlist_to_file(playlist_tree))
     save_button.pack(side=tk.LEFT, padx=5)
 
-    #clear_button = tk.Button(button_frame, text="Clean playlist ❌", command=lambda: clear_playlist(playlist_tree))
-    clear_button = tk.Button(button_frame, text="Fusio FICHIER", command=lambda: fusionner_audio_json(chemin_json="", chemin_ogg="chemin_ogg"))
+    clear_button = tk.Button(button_frame, text="Clean playlist ❌", command=lambda: clear_playlist(playlist_tree))
+    #clear_button = tk.Button(button_frame, text="Fusio FICHIER", command=lambda: fusionner_audio_json(chemin_json="", chemin_ogg="chemin_ogg"))
     clear_button.pack(side=tk.LEFT, padx=5)
 
     record_button = tk.Button(button_frame, text="Record playlist ⭕", command=lambda: record_playlist(playlist_tree))
-    #record_button = tk.Button(button_frame, text="Record playlist ⭕", command=lambda: fusionner_audio_json(chemin_json="", nom_Sortie="nom_Sortie"))
     record_button.pack(side=tk.LEFT, padx=5)
 
     txtDialog_button = tk.Button(button_frame, text="Dialog playlist ☷", command=lambda: save_playlist_to_txt(playlist_tree))

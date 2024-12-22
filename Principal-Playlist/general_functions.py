@@ -79,16 +79,19 @@ def extraire_WOLVENKIT_localise_path(chemin_generic):  #pour recontruire chemin 
 
 def extraire_PROJET_localise_path(chemin_generic):    
     # Remplacer '{}' par le chemin de localisation completn'existe pas
-    chemin_vrai = chemin_generic
     if "{}" in chemin_generic:
-        chemin_vrai = chemin_generic.replace("{}", global_variables.CheminLocalization + global_variables.CheminLangue)
-    return chemin_vrai
+        chemin_generic = chemin_generic.replace("{}", global_variables.CheminLocalization + global_variables.CheminLangue)
+    # Ajouter le chemin racine
+    directory_path = os.path.dirname(global_variables.path_dernier_projet)
+    full_path = directory_path + "/" + chemin_generic
+    #print(f"chemin du fichier localisé : {full_path}")
+    return full_path
         
 def Delocalise_project_path(Project_path):
     nomProject = os.path.splitext(os.path.basename(Project_path))[0]
-    directory_path = os.path.dirname(Project_path)
+    #directory_path = os.path.dirname(Project_path)
 
-    chemin_generic = f"{directory_path}/{nomProject}_files/{{}}/{nomProject}DIC.csv"
+    chemin_generic = f"{nomProject}_files/{{}}/{nomProject}DIC.csv"
     print(f"chemin chemin_generic : {chemin_generic}")  
     return chemin_generic
     
@@ -167,7 +170,8 @@ def charger_sous_titres_from_JSON_playlist(file_path, first_entry_only=False):
                     recup_Quete = entry[global_variables.data_Quest]
                     fichierQuete = ""
                     if recup_Quete.lower().endswith(".csv"):
-                        fichierQuete = "data/projet/" + extraire_PROJET_localise_path(recup_Quete)
+                        #fichierQuete = "data/projet/" + extraire_PROJET_localise_path(recup_Quete)
+                        fichierQuete = extraire_PROJET_localise_path(recup_Quete)
                         result = get_SousTitres_from_csv(fichierQuete, entry[global_variables.data_ID])
                         if result: prefix = result[global_variables.data_F_Voice]
                     else:

@@ -40,12 +40,14 @@
                 .block {
                     padding: 10px;
                     padding-top: 0px;
+                    padding-right: 20px;
                     border-top: 2px solid #33acff;
                     border-bottom: 2px solid #33acff;
                     border-radius: 8px;
                     background-color: #ffffff;
                     width: 400px;
                     text-align: left;
+                    position: relative; /* Permet au bouton d’être positionné par rapport au bloc */
                 }
                 .block-subtitles {
                     font-size: 14px;
@@ -88,6 +90,65 @@
                     stroke: #33acff;
                     stroke-width: 2;
                 }
+                .audio-button {
+                    width: 60px;
+                    height: 60px;
+                    background-color: #33acff;
+                    border: 3px solid white;
+                    border-radius: 50%;
+                    position: absolute; /* Permet de placer le bouton indépendamment */
+                    top: 50%; /* Centre verticalement le bouton */
+                    right: -30px; /* Aligne le bouton à droite du bloc */
+                    transform: translateY(-50%); /* Ajuste pour un centrage parfait */
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+                .audio-button:hover {
+                    background-color: #007bb5;
+                }
+                .audio-button::before {
+                    content: '';
+                    position: absolute;
+                    transition: all 0.3s ease;
+                }
+                .audio-button.play::before {
+                    width: 0;
+                    height: 0;
+                    border-left: 15px solid white;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                }
+                .audio-button.pause::before {
+                    width: 10px;
+                    height: 20px;
+                    background-color: white;
+                    box-shadow: 15px 0 0 white;
+                }                
+                .audio-button::after {
+                    /* Tooltip */
+                    content: "Cliquez sur le bouton ci-dessous pour lire ou arrêter le fichier audio";
+                    position: absolute;
+                    top: -35px; /* Décalage au-dessus du bouton */
+                    right: 50%; /* Centré horizontalement par rapport au bouton */
+                    transform: translateX(50%);
+                    background-color: #000;
+                    color: #fff;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+                    z-index: 10;
+                }
+                .audio-button:hover::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
             </style>
         </head>
         <body>
@@ -97,7 +158,7 @@
 <div class='block-container'>
 <div class='block' id='block-00000002'>
 <div class='block-subtitles'>
-<div><commentaire><perso></perso> V attend lorsque Panam arrive au bar</commentaire></div>
+<div><commentaire><perso></perso> V attend se rend au point de rendez-vous.</commentaire></div>
 <div><normal><perso>Panam : </perso> V ?</normal></div>
 <div><normal><perso>V : </perso> Euh, est-ce qu'on se connaît ?</normal></div>
 <div><normal><perso>Panam : </perso> Ha ha, c'est drôle…</normal></div>
@@ -105,6 +166,8 @@
 <div><normal><perso>V : </perso> Salut, Panam.</normal></div>
 <div><commentaire><perso></perso> Ils vont s'installer au bar et prenent un verre</commentaire></div>
 <div><commentaire><perso></perso> Lorem ipsum dolor sit amet, consmod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</commentaire></div>
+<audio id="audio-00000002" src="ogg/Sound-00000002.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000002')"></button>
 </div>
 </div>
 </div>
@@ -114,11 +177,14 @@
 <div class='block-container'>
 <div class='block' id='block-00000003'>
 <div class='block-subtitles'>
-<div><action><perso></perso> [Boire] Je suis trop content de te voir.</action></div>
+<div><action><perso>Act : </perso> [Boire] Je suis trop content de te voir.</action></div>
 <div><normal><perso>V : </perso> Je suis trop content de te voir.</normal></div>
 <div><normal><perso>Panam : </perso> Fais gaffe, je vais finir par te croire. Tu pourras plus te débarrasser de moi, après.</normal></div>
 <div><normal><perso>V : </perso> OK. Ça, je risque pas de l'oublier.</normal></div>
 <div><normal><perso>Panam : </perso> Pfff. OOOK.</normal></div>
+<div><commentaire><perso>Com : </perso> [Attendre] Panam arrive au point de rendez-vous près du bar...</commentaire></div>
+<audio id="audio-00000003" src="ogg/Sound-00000003.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000003')"></button>
 </div>
 </div>
 <div class='block' id='block-00000004'>
@@ -128,6 +194,8 @@
 <div><normal><perso>Panam : </perso> Je tiens toujours parole.</normal></div>
 <div><normal><perso>V : </perso> Ha, c'est bon à savoir.</normal></div>
 <div><normal><perso>Panam : </perso> Arrête, V. J'ai juste besoin de temps, c'est tout.</normal></div>
+<audio id="audio-00000004" src="ogg/Sound-00000004.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000004')"></button>
 </div>
 </div>
 </div>
@@ -147,6 +215,8 @@
 <div><normal><perso>Panam : </perso> J'ai un problème.</normal></div>
 <div><normal><perso>V : </perso> Laisse-moi deviner. C'est Saul, c'est ça ?</normal></div>
 <div><normal><perso>Panam : </perso> Tu me connais trop bien.</normal></div>
+<audio id="audio-00000005" src="ogg/Sound-00000005.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000005')"></button>
 </div>
 </div>
 </div>
@@ -162,6 +232,8 @@
 <div><normal><perso>Panam : </perso> C'est ce que je veux dire ! Ça devrait pas être moi, ça devrait être…</normal></div>
 <div><normal><perso>Panam : </perso> Putain… Je le savais…</normal></div>
 <div><normal><perso>Panam : </perso> Je sais plus ce que je dois faire, V.</normal></div>
+<audio id="audio-00000007" src="ogg/Sound-00000007.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000007')"></button>
 </div>
 </div>
 </div>
@@ -176,6 +248,8 @@
 <div><normal><perso>V : </perso> Tu te souviens notre première rencontre ? Rien que de parler de désobéir à Saul, tu chiais déjà dans ton froc.</normal></div>
 <div><normal><perso>V : </perso> Eh ben, ça a bien changé…</normal></div>
 <div><normal><perso>Panam : </perso> Je voulais une vie différente, une vie meilleure. Mais Saul est qu'un putain de lâche. Je suis convaincue qu'il va mener le clan à sa perte.</normal></div>
+<audio id="audio-00000008" src="ogg/Sound-00000008.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000008')"></button>
 </div>
 </div>
 <div class='block' id='block-00000009'>
@@ -186,6 +260,8 @@
 <div><normal><perso>V : </perso> Du calme, ça va aller.</normal></div>
 <div><normal><perso>Panam : </perso> Je voulais une vie différente, une vie meilleure. Mais Saul est qu'un putain de lâche. Je suis convaincue qu'il va mener le clan à sa perte.</normal></div>
 <div><normal><perso>Panam : </perso> Même si t'avais raison, ça changerait quoi ? Je le vois, le problème. Je sais juste pas comment le résoudre. Pour l'instant...</normal></div>
+<audio id="audio-00000009" src="ogg/Sound-00000009.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000009')"></button>
 </div>
 </div>
 </div>
@@ -202,6 +278,8 @@
 <div><normal><perso>V : </perso> Je vois parfaitement ce que tu veux dire.</normal></div>
 <div><normal><perso>Panam : </perso> Ça me fait trop plaisir d'entendre ça.</normal></div>
 <div><normal><perso>Panam : </perso> Et toi ?</normal></div>
+<audio id="audio-00000010" src="ogg/Sound-00000010.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000010')"></button>
 </div>
 </div>
 <div class='block' id='block-00000011'>
@@ -212,6 +290,8 @@
 <div><normal><perso>Panam : </perso> Je préférerais changer de sujet, si ça te dérange pas.</normal></div>
 <div><normal><perso>V : </perso> D'accord…</normal></div>
 <div><normal><perso>Panam : </perso> Et toi ?</normal></div>
+<audio id="audio-00000011" src="ogg/Sound-00000011.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000011')"></button>
 </div>
 </div>
 </div>
@@ -231,6 +311,8 @@
 <div><normal><perso>V : </perso> Non.</normal></div>
 <div><normal><perso>Panam : </perso> Parce que je tiens vraiment à toi. Mais j'ai peur de dire ou de faire un truc stupide, et… et de me retrouver seule dans le désert.</normal></div>
 <div><normal><perso>Panam : </perso> Ben merde, t'as vraiment une sale gueule.</normal></div>
+<audio id="audio-00000012" src="ogg/Sound-00000012.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000012')"></button>
 </div>
 </div>
 </div>
@@ -251,6 +333,8 @@
 <div><normal><perso>Panam : </perso> Bon. C'est parti.</normal></div>
 <div><normal><perso>V : </perso> Ouais, on y va.</normal></div>
 <div><normal><perso>V : </perso> Je te retrouve là-bas.</normal></div>
+<audio id="audio-00000013" src="ogg/Sound-00000013.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000013')"></button>
 </div>
 </div>
 </div>
@@ -262,6 +346,8 @@
 <div class='block-subtitles'>
 <div><normal><perso>V : </perso> C'est sympa ici. Très classe.</normal></div>
 <div><normal><perso>Panam : </perso> Y a plutôt intérêt, ouais.</normal></div>
+<audio id="audio-00000014" src="ogg/Sound-00000014.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000014')"></button>
 </div>
 </div>
 </div>
@@ -277,6 +363,8 @@
 <div><normal><perso>Panam : </perso> Quand tu passes tes journées et tes nuits sur la route, ton cul finit par fusionner avec le siège. Et t'en oublies ce que c'est, le confort.</normal></div>
 <div><normal><perso>V : </perso> Hé hé.</normal></div>
 <div><normal><perso>V : </perso> Je crois savoir ce que tu ressens.</normal></div>
+<audio id="audio-00000016" src="ogg/Sound-00000016.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000016')"></button>
 </div>
 </div>
 </div>
@@ -288,6 +376,8 @@
 <div class='block-subtitles'>
 <div><normal><perso>Panam : </perso> Tu veux rien dire ?</normal></div>
 <div><normal><perso>Panam : </perso> Bon, qu'est-ce qui se passe ?</normal></div>
+<audio id="audio-00000017" src="ogg/Sound-00000017.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000017')"></button>
 </div>
 </div>
 </div>
@@ -302,6 +392,8 @@
 <div><normal><perso>V : </perso> C'était y a pas si longtemps…</normal></div>
 <div><normal><perso>V : </perso> Putain… Putain de merde !</normal></div>
 <div><normal><perso>Panam : </perso> Ça va, V, calme-toi. Vas-y par étapes. Qu'est-ce qui se passe exactement ?</normal></div>
+<audio id="audio-00000018" src="ogg/Sound-00000018.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000018')"></button>
 </div>
 </div>
 </div>
@@ -315,6 +407,8 @@
 <div><normal><perso>Panam : </perso> C'est des conneries, ça. T'en sais rien.</normal></div>
 <div><normal><perso>V : </perso> Euh… ouais… On verra. Tu sais comment je vais.</normal></div>
 <div><normal><perso>Panam : </perso> Putain de tête de mule.</normal></div>
+<audio id="audio-00000019" src="ogg/Sound-00000019.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000019')"></button>
 </div>
 </div>
 <div class='block' id='block-00000020'>
@@ -323,6 +417,8 @@
 <div><normal><perso>Panam : </perso> C'est des conneries, ça. T'en sais rien.</normal></div>
 <div><normal><perso>V : </perso> L'avenir nous le dira, pas vrai ?</normal></div>
 <div><normal><perso>Panam : </perso> T'es avec moi, maintenant. On va trouver un moyen de s'occuper de cette saloperie que t'as dans la tête.</normal></div>
+<audio id="audio-00000020" src="ogg/Sound-00000020.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000020')"></button>
 </div>
 </div>
 </div>
@@ -338,6 +434,8 @@
 <div><normal><perso>V : </perso> T'inquiète. Je suis pas encore mort.</normal></div>
 <div><normal><perso>Panam : </perso> V…</normal></div>
 <div><normal><perso>Panam : </perso> Merde. C'était pas censé se passer comme ça, j'imagine ?</normal></div>
+<audio id="audio-00000021" src="ogg/Sound-00000021.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000021')"></button>
 </div>
 </div>
 </div>
@@ -355,6 +453,8 @@
 <div><normal><perso>Panam : </perso> Quoi ?</normal></div>
 <div><normal><perso>Panam : </perso> Merde. Je suis désolée.</normal></div>
 <div><normal><perso>Panam : </perso> Je me mets un peu trop à l'aise ?</normal></div>
+<audio id="audio-00000023" src="ogg/Sound-00000023.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000023')"></button>
 </div>
 </div>
 </div>
@@ -372,6 +472,8 @@
 <div><normal><perso>Panam : </perso> Pfff. OOOK.</normal></div>
 <div><normal><perso>Panam : </perso> Eh ben, prépare-toi.</normal></div>
 <div><normal><perso>V : </perso> Ouh, OK.</normal></div>
+<audio id="audio-00000024" src="ogg/Sound-00000024.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000024')"></button>
 </div>
 </div>
 <div class='block' id='block-00000025'>
@@ -387,6 +489,8 @@
 <div><normal><perso>V : </perso> La prochaine fois, essaie de suivre tes pulsions.</normal></div>
 <div><normal><perso>Panam : </perso> Tu sais quoi, V ? Va te faire foutre.</normal></div>
 <div><normal><perso>V : </perso> Bon ben voilà. On se dit à plus ?</normal></div>
+<audio id="audio-00000025" src="ogg/Sound-00000025.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000025')"></button>
 </div>
 </div>
 </div>
@@ -401,6 +505,8 @@
 <div><normal><perso>Panam : </perso> T'as bien dormi ?</normal></div>
 <div><normal><perso>V : </perso> Ouais... Le temps s'est un peu arrêté pour moi.</normal></div>
 <div><normal><perso>Panam : </perso> Bon… J'y vais.</normal></div>
+<audio id="audio-00000026" src="ogg/Sound-00000026.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000026')"></button>
 </div>
 </div>
 </div>
@@ -422,6 +528,8 @@
 <div><normal><perso>V : </perso> On se dit à bientôt ?</normal></div>
 <div><normal><perso>Panam : </perso> Ouais. Ça me plairait, je crois.</normal></div>
 <div><normal><perso>Panam : </perso> À plus, V !</normal></div>
+<audio id="audio-00000022" src="ogg/Sound-00000022.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000022')"></button>
 </div>
 </div>
 <div class='block' id='block-00000027'>
@@ -431,6 +539,8 @@
 <div><normal><perso>V : </perso> Ça marche, à toute.</normal></div>
 <div><normal><perso>Panam : </perso> Prends bien soin de toi.</normal></div>
 <div><normal><perso>V : </perso> Toi aussi, Panam.</normal></div>
+<audio id="audio-00000027" src="ogg/Sound-00000027.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000027')"></button>
 </div>
 </div>
 </div>
@@ -484,5 +594,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     setTimeout(updateLinePositions, 100);
 });
+</script>
+<script>
+function togglePlay(blockId) {
+    const audio = document.getElementById(`audio-${blockId}`);
+    const button = document.querySelector(`#block-${blockId} .audio-button`);
+    if (audio.paused || audio.ended) {
+        audio.play();
+        button.classList.remove('play');
+        button.classList.add('pause');
+    } else {
+        audio.pause();
+        button.classList.remove('pause');
+        button.classList.add('play');
+    }
+    // Réinitialiser l'état du bouton lorsqu'un audio se termine
+    audio.addEventListener('ended', () => {
+        button.classList.remove('pause');
+        button.classList.add('play');
+    });
+}
 </script>
 </body></html>
