@@ -51,7 +51,7 @@ class PageHTML:
                 .block {{
                     padding: 10px;
                     padding-top: 0px;
-                    padding-right: 20px;
+                    padding-right: 25px;
                     border-top: 2px solid #33acff;
                     border-bottom: 2px solid #33acff;
                     border-radius: 8px;

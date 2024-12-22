@@ -146,8 +146,11 @@ def get_SousTitres_by_id(file_path, string_id):
         return None
 
 def get_Perso_from_Wem(value):
-    last_part = value.split("/")[-1]  # Obtenir la partie après le dernier "/"
-    personnage = last_part.split("_")[0]  # Obtenir la partie avant le premier "_"
+    personnage = ""   
+    #print(f"perso value: {value}.") 
+    if value.endswith(".wem"): # Seulement s'il s'agit d'un wem
+        last_part = value.split("/")[-1]  # Obtenir la partie après le dernier "/"
+        personnage = last_part.split("_")[0]  # Obtenir la partie avant le premier "_"
     return personnage
 
 def nom_playlist():    # Récupérer le texte du Label et le nom de la playlist sans extension
@@ -199,7 +202,7 @@ def charger_sous_titres_from_JSON_playlist(file_path, first_entry_only=False):
                     else:
                         perso = get_Perso_from_Wem(entry[global_variables.data_M_Voice])  # Valeur pour femme
                         sous_titre = female_text
-                    
+
                     # Ajouter le sous-titre et le perso comme objet
                     sous_titres.append({global_variables.data_ID: entry[global_variables.data_ID], "perso": perso, "sous_titre": sous_titre, "type": prefix})
 
