@@ -54,7 +54,7 @@ def find_localization_subfolders(project_path):
 
     return subfolders
 
-def extraire_localise_path(chemin_generic):  #pour recontruire chemin avec {}
+def extraire_WOLVENKIT_localise_path(chemin_generic):  #pour recontruire chemin avec {}
     # Vérifier si chemin_generic est valide
     if chemin_generic == global_variables.pas_Info:
         return False
@@ -70,14 +70,14 @@ def extraire_localise_path(chemin_generic):  #pour recontruire chemin avec {}
             chemin_generic = chemin_generic[:-4] + ".ogg"
 
         # Ajouter le chemin racine
-        full_path = global_variables.project_path + chemin_generic
+        full_path = global_variables.project_WOLVENKIT_path + chemin_generic
         #print(f"chemin du fichier localiser : {full_path}")
         return full_path
     except Exception as e:
         print(f"Erreur lors de la génération du chemin : {e}")
         return False
 
-def localise_path(chemin_generic):    
+def extraire_PROJET_localise_path(chemin_generic):    
     # Remplacer '{}' par le chemin de localisation completn'existe pas
     chemin_vrai = chemin_generic
     if "{}" in chemin_generic:
@@ -88,8 +88,6 @@ def Delocalise_project_path(Project_path):
     nomProject = os.path.splitext(os.path.basename(Project_path))[0]
     directory_path = os.path.dirname(Project_path)
 
-    #chemin_generic =  nomProject + "_files/{{}}/" + nomProject + "DIC.csv" 
-    #chemin_generic = "{}_files/{{}}/{}DIC.csv".format(nomProject, nomProject)
     chemin_generic = f"{directory_path}/{nomProject}_files/{{}}/{nomProject}DIC.csv"
     print(f"chemin chemin_generic : {chemin_generic}")  
     return chemin_generic
@@ -169,11 +167,11 @@ def charger_sous_titres_from_JSON_playlist(file_path, first_entry_only=False):
                     recup_Quete = entry[global_variables.data_Quest]
                     fichierQuete = ""
                     if recup_Quete.lower().endswith(".csv"):
-                        fichierQuete = "data/projet/" + localise_path(recup_Quete)
+                        fichierQuete = "data/projet/" + extraire_PROJET_localise_path(recup_Quete)
                         result = get_SousTitres_from_csv(fichierQuete, entry[global_variables.data_ID])
                         if result: prefix = result[global_variables.data_F_Voice]
                     else:
-                        quete_path = extraire_localise_path(recup_Quete)
+                        quete_path = extraire_WOLVENKIT_localise_path(recup_Quete)
                         if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
                             fichierQuete = quete_path + ".json.json"
                         result = get_SousTitres_by_id(fichierQuete, entry[global_variables.data_ID])

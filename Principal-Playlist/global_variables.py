@@ -56,7 +56,7 @@ ww2ogg_path = ""
 revorb_path = ""
 codebooks_path = ""
 
-project_path = ""
+project_WOLVENKIT_path = ""
 
 # Variables globales
 #CheminRacine = "D:\_CyberPunk-Creation\DialogueFR/source/raw/" # A suprimer
@@ -69,7 +69,7 @@ Couleur_TxtSelectLigne = "#000000"   # Couleur du texte pour les lignes sélecti
 
 Couleur_Bloc = "white"  # Couleur par défaut pour les blocs
 
-Couleur_BlocSelect = "blue"
+Couleur_BlocSelect = "#33acff" # Bleu
 Couleur_BlocSource = "green"
 Couleur_BlocTarget = "red"
 Couleur_BlocDefaut = "grey"

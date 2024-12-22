@@ -5,8 +5,8 @@ import json, threading, pygame
 from os.path import basename
 
 from tkinter import ttk, filedialog, Menu
-from LectureOgg import JouerAudio, fusionnerPlaylist
-from general_functions import get_SousTitres_from_csv, get_SousTitres_by_id, extraire_localise_path, localise_path, get_Perso_from_Wem, nom_playlist
+from LectureOgg import JouerAudio, fusionnerPlaylist, fusionner_audio_json
+from general_functions import get_SousTitres_from_csv, get_SousTitres_by_id, extraire_WOLVENKIT_localise_path, extraire_PROJET_localise_path, get_Perso_from_Wem, nom_playlist
 
 import global_variables  # Accéder au Label global
 from CligneManuelle import LigneManuelle
@@ -72,7 +72,6 @@ def setup_playlist(root, tree, tk, columns):
     add_button.pack(side=tk.LEFT, padx=5)
 
     add_manual_button = tk.Button(button_frame, text="Add line manually ✏️", command=lambda: open_manual_entry_window(button_frame, playlist_tree, tk))
-    #add_manual_button = tk.Button(button_frame, text="Add line manually ✏️", command=lambda: LigneManuelle(parent, playlist_tree))
     add_manual_button.pack(side=tk.LEFT, padx=5)
 
     move_up_button = tk.Button(button_frame, text="Up ⬆️", command=lambda: move_up_playlist(playlist_tree))
@@ -93,10 +92,12 @@ def setup_playlist(root, tree, tk, columns):
     save_button = tk.Button(button_frame, text="Save playlist 🖫", command=lambda: save_playlist_to_file(playlist_tree))
     save_button.pack(side=tk.LEFT, padx=5)
 
-    clear_button = tk.Button(button_frame, text="Clean playlist ❌", command=lambda: clear_playlist(playlist_tree))
+    #clear_button = tk.Button(button_frame, text="Clean playlist ❌", command=lambda: clear_playlist(playlist_tree))
+    clear_button = tk.Button(button_frame, text="Fusio FICHIER", command=lambda: fusionner_audio_json(chemin_json="", chemin_ogg="chemin_ogg"))
     clear_button.pack(side=tk.LEFT, padx=5)
 
     record_button = tk.Button(button_frame, text="Record playlist ⭕", command=lambda: record_playlist(playlist_tree))
+    #record_button = tk.Button(button_frame, text="Record playlist ⭕", command=lambda: fusionner_audio_json(chemin_json="", nom_Sortie="nom_Sortie"))
     record_button.pack(side=tk.LEFT, padx=5)
 
     txtDialog_button = tk.Button(button_frame, text="Dialog playlist ☷", command=lambda: save_playlist_to_txt(playlist_tree))
@@ -233,14 +234,15 @@ def charger_playlist_from_file(playlist_tree,tk, file_path):
                 fichierQuete = "" 
                 if recup_Quete.lower().endswith(".csv"):
                     #print(f"Le fichier {recup_Quete} est un fichier CSV.")
-                    recup_Quete = localise_path(recup_Quete)
-                    #print(f"new chemein  {localise_path(recup_Quete)} ")
+                    recup_Quete = extraire_PROJET_localise_path(recup_Quete)
+                    #print(f"new chemein  {extraire_PROJET_localise_path(recup_Quete)} ")
                     fichierQuete = "data/projet/"  + recup_Quete 
+                    fichierQuete = recup_Quete 
                     # Action spécifique pour les fichiers CSV
                     result = get_SousTitres_from_csv(fichierQuete, entry[global_variables.data_ID])
                 else:
                     #TRADUCTION DEPUIS LE JEU ! >>> Récupérer la quête
-                    quete_path = extraire_localise_path(recup_Quete)
+                    quete_path = extraire_WOLVENKIT_localise_path(recup_Quete)
                     #print(f"Fichier Quete : {quete_path}")    
                     if isinstance(quete_path, str):  # Vérifie si c'est une chaîne
                         fichierQuete = quete_path + ".json.json"

@@ -105,18 +105,10 @@ class PageHTML:
     def generate_project_html(self):
         project_name = os.path.splitext(os.path.basename(self.file_projet))[0]
         output_dir = os.path.join(os.path.dirname(self.file_projet), f"{project_name}_files")
-        #os.makedirs(output_dir, exist_ok=True)
-
-
-
-
         html_filename = os.path.join(output_dir, f"{global_variables.CheminLocalization + global_variables.CheminLangue}/{project_name}.html")
+        
         # Créer les dossiers si nécessaire
         os.makedirs(os.path.dirname(html_filename), exist_ok=True)
-        
-        print(f"html_filename FINAL  : {html_filename}")
-
-
 
         html_content = self.generate_HeaderStyle(project_name)
         html_content += f"<body>\n<h1 style='text-align:center;'>{project_name}</h1>\n"

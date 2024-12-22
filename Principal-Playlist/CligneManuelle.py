@@ -3,15 +3,15 @@ import csv
 import tkinter as tk
 import time
 import global_variables  # Importer les variables globales
-from general_functions import Delocalise_project_path, localise_path
+from general_functions import Delocalise_project_path, extraire_PROJET_localise_path
 
 class LigneManuelle:
     def __init__(self, parent, playlist_tree, column_names=None, file_path=None):
         self.parent = parent
         self.playlist_tree = playlist_tree
-        self.file_path = file_path or localise_path(Delocalise_project_path(global_variables.path_dernier_projet)) 
+        self.file_path = file_path or extraire_PROJET_localise_path(Delocalise_project_path(global_variables.path_dernier_projet)) 
 
-        print(f"file_path calculé : {localise_path(Delocalise_project_path(global_variables.path_dernier_projet))}") 
+        print(f"file_path calculé : {extraire_PROJET_localise_path(Delocalise_project_path(global_variables.path_dernier_projet))}") 
 
         self.column_names = column_names or ["ACTION Female * :", "ACTION Male :"]
         self.entry_fields = {}

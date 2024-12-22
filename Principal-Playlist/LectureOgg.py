@@ -1,4 +1,4 @@
-import os
+import os, json
 import subprocess
 
 import tempfile
@@ -11,7 +11,7 @@ from pydub import AudioSegment
 
 import global_variables  # Importer les variables globales
 
-from general_functions import extraire_localise_path, nom_playlist
+from general_functions import extraire_WOLVENKIT_localise_path, nom_playlist
 
 def stop_sound():
     #"""Arrête le son en cours de lecture."""
@@ -41,7 +41,7 @@ def play_ogg_file(file_path):
 def JouerAudio(audio_value):
     #test_path = r"D:\_CyberPunk-Creation\Dialogues-Multi\source\raw\ep1\localization\fr-fr\vo\judy_q307_f_2e6b76cd023bc000.ogg"
     # Arrêter tout son en cours de lecture
-    sound_Path = extraire_localise_path(audio_value)
+    sound_Path = extraire_WOLVENKIT_localise_path(audio_value)
     sound_Path = convert_wem_to_ogg_if_needed(sound_Path)
     if sound_Path:
         play_ogg_file(sound_Path)
@@ -54,74 +54,79 @@ def JouerAudio(audio_value):
 # Définir la fonction de conversion
 def convert_wem_to_ogg_if_needed(ogg_path):
     # Vérifier si le fichier .ogg existe déjà
-    if os.path.exists(ogg_path):
-        return ogg_path
-    else :
-        # Construire le chemin du fichier .wem correspondant
-        print(f"chemin du ogg_path : {ogg_path}")
-        wem_path = ogg_path.replace("/raw/", "/archive/").replace(".ogg", ".wem")
-        print(f"chemin du wem_path : {wem_path}")
-        # Vérifier si le fichier .wem existe
-        if not os.path.exists(wem_path):
-            raise FileNotFoundError(f"Le xxx fichier .wem correspondant n'existe pas : {wem_path}")
+    try:
+        if os.path.exists(ogg_path):
+            return ogg_path
+        else :
+            # Construire le chemin du fichier .wem correspondant
+            print(f"chemin du ogg_path : {ogg_path}")
+            wem_path = ogg_path.replace("/raw/", "/archive/").replace(".ogg", ".wem")
+            print(f"chemin du wem_path : {wem_path}")
+            # Vérifier si le fichier .wem existe
+            if not os.path.exists(wem_path):
+                raise FileNotFoundError(f"Le xxx fichier .wem correspondant n'existe pas : {wem_path}")
 
-        # Créer les dossiers nécessaires pour le fichier .ogg s'ils n'existent pas
-        ogg_dir = os.path.dirname(ogg_path)
-        if not os.path.exists(ogg_dir):
-            os.makedirs(ogg_dir)
+            # Créer les dossiers nécessaires pour le fichier .ogg s'ils n'existent pas
+            ogg_dir = os.path.dirname(ogg_path)
+            if not os.path.exists(ogg_dir):
+                os.makedirs(ogg_dir)
 
-        # Créer un répertoire temporaire spécifique à côté du script
-        temp_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp")
-        if not os.path.exists(temp_dir):
-            os.makedirs(temp_dir)
+            # Créer un répertoire temporaire spécifique à côté du script
+            temp_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp")
+            if not os.path.exists(temp_dir):
+                os.makedirs(temp_dir)
 
-        try:
-            # Convertir le fichier .wem en .ogg
-            with tempfile.NamedTemporaryFile(delete=False, suffix=".ogg", dir=temp_dir) as temp_ogg_file:
-                temp_ogg_path = temp_ogg_file.name
-
-            conversion_command = [
-                global_variables.ww2ogg_path,
-                wem_path,
-                "--pcb",
-                global_variables.codebooks_path,
-                "-o",
-                temp_ogg_path
-            ]
-            print(f"conversion_command : {conversion_command}")
             try:
-                subprocess.run(conversion_command, check=True)
-            except subprocess.CalledProcessError as e:
-                raise RuntimeError(f"Erreur lors de la conversion du fichier .wem en .ogg : {e}")
+                # Convertir le fichier .wem en .ogg
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".ogg", dir=temp_dir) as temp_ogg_file:
+                    temp_ogg_path = temp_ogg_file.name
 
-            # Fermer le fichier temporaire avant d'utiliser revorb
-            temp_ogg_file.close()
-
-            # Appliquer revorb directement au fichier temporaire .ogg généré
-            revorb_command = [
-                global_variables.revorb_path,
-                temp_ogg_path,
-                ogg_path
-            ]
-            print(f"revorb_command : {revorb_command}")
-            try:
-                subprocess.run(revorb_command, check=True)
-            except subprocess.CalledProcessError as e:
-                raise RuntimeError(f"Erreur lors de l'application de revorb : {e}")
-
-            # Déplacer le fichier revorb .ogg à l'emplacement souhaité
-            #shutil.move(temp_ogg_path, ogg_path)
-        
-        finally:
-            # Supprimer le dossier temporaire à la fin
-            if os.path.exists(temp_dir):
+                conversion_command = [
+                    global_variables.ww2ogg_path,
+                    wem_path,
+                    "--pcb",
+                    global_variables.codebooks_path,
+                    "-o",
+                    temp_ogg_path
+                ]
+                print(f"conversion_command : {conversion_command}")
                 try:
-                    shutil.rmtree(temp_dir)
-                    print(f"Dossier temporaire supprimé : {temp_dir}")
-                except Exception as e:
-                    print(f"Erreur lors de la suppression du dossier temporaire : {e}")
+                    subprocess.run(conversion_command, check=True)
+                except subprocess.CalledProcessError as e:
+                    raise RuntimeError(f"Erreur lors de la conversion du fichier .wem en .ogg : {e}")
 
-        return ogg_path            
+                # Fermer le fichier temporaire avant d'utiliser revorb
+                temp_ogg_file.close()
+
+                # Appliquer revorb directement au fichier temporaire .ogg généré
+                revorb_command = [
+                    global_variables.revorb_path,
+                    temp_ogg_path,
+                    ogg_path
+                ]
+                print(f"revorb_command : {revorb_command}")
+                try:
+                    subprocess.run(revorb_command, check=True)
+                except subprocess.CalledProcessError as e:
+                    raise RuntimeError(f"Erreur lors de l'application de revorb : {e}")
+
+                # Déplacer le fichier revorb .ogg à l'emplacement souhaité
+                #shutil.move(temp_ogg_path, ogg_path)
+            
+            finally:
+                # Supprimer le dossier temporaire à la fin
+                if os.path.exists(temp_dir):
+                    try:
+                        shutil.rmtree(temp_dir)
+                        print(f"Dossier temporaire supprimé : {temp_dir}")
+                    except Exception as e:
+                        print(f"Erreur lors de la suppression du dossier temporaire : {e}")
+                        
+            return ogg_path    
+        
+    except FileNotFoundError as e:
+        print(f"Erreur : {e}")
+        return None  # Retournez une valeur par défaut ou gérez autrement        
 
 # Fonction pour fusionner les fichiers audio de la playlist
 def fusionnerPlaylist(playlist_tree):
@@ -142,12 +147,13 @@ def fusionnerPlaylist(playlist_tree):
         else:
             audio_value = selected_values[3]
 
-        audio_value = extraire_localise_path(audio_value)
-        #print(f"chemin audio {audio_value}.")
-        if audio_value:
-            fichiers_audio.append(audio_value)
-        else:
-            print(f"Aucun fichier audio trouvé pour l'élément {item}.")
+        if audio_value.endswith(".wem"): 
+            audio_value = extraire_WOLVENKIT_localise_path(audio_value)
+            #print(f"chemin audio {audio_value}.")
+            if audio_value:
+                fichiers_audio.append(audio_value)
+            else:
+                print(f"Aucun fichier audio trouvé pour l'élément {item}.")
 
     if not fichiers_audio:
         print("Aucun fichier audio valide trouvé pour fusionner.")
@@ -186,4 +192,64 @@ def fusionnerPlaylist(playlist_tree):
 
     except Exception as e:
         print(f"Erreur lors de la fusion des fichiers : {e}")
+
+
+
+# Fonction pour fusionner les fichiers audio à partir d'un fichier JSON
+def fusionner_audio_json(chemin_json="", chemin_ogg=""):
+    chemin_json = "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/8.1-Trusted someone.json"
+    chemin_ogg = "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/8.1-Trusted someone.ogg"
+    chemin_json = "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/1.0-Do_i_know you.json"
+    chemin_ogg = "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/1.0-Do_i_know you.ogg"
+    try:
+        # Charger les données du fichier JSON
+        with open(chemin_json, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        # Vérifier que le JSON contient des données
+        if not data:
+            print("Le fichier JSON est vide.")
+            return
+
+        # Liste des fichiers audio à fusionner
+        fichiers_audio = []
+
+        selected_gender = global_variables.vSexe.get()
+        
+        if selected_gender == global_variables.vHomme:
+            chemin_attribut = global_variables.data_M_Voice
+        else:
+            chemin_attribut = global_variables.data_F_Voice
+       
+        for entry in data:
+            chemin_audio = entry.get(chemin_attribut, "")
+            if chemin_audio.endswith(".wem"):  
+                chemin_audio = extraire_WOLVENKIT_localise_path(chemin_audio)
+                chemin_audio = convert_wem_to_ogg_if_needed(chemin_audio)
+
+                if os.path.isfile(chemin_audio):                
+                    fichiers_audio.append(chemin_audio)
+                else:
+                    print(f"audio EXTRAIT n'existe pas : {chemin_audio}.")       
+
+        #print(f"tous les fichiers_audio valide : {fichiers_audio}.")   
+        # Vérifier si des fichiers audio valides ont été trouvés
+        fichiers_audio = [os.path.abspath(fichier) for fichier in fichiers_audio if os.path.exists(fichier)]
+        if not fichiers_audio:
+            print("Aucun fichier audio valide trouvé pour la fusion.")
+            return
+
+        # Charger et fusionner les fichiers audio
+        fusion_audio = AudioSegment.from_file(fichiers_audio[0], format="ogg")
+        for fichier in fichiers_audio[1:]:
+            audio = AudioSegment.from_file(fichier, format="ogg")
+            fusion_audio += audio
+
+        # Sauvegarder le fichier fusionné
+        fusion_audio.export(chemin_ogg, format="ogg")
+        print(f"Fichier audio fusionné sauvegardé avec succès : {chemin_ogg}")
+
+    except Exception as e:
+        print(f"Erreur lors de la fusion des fichiers audio : {e}")
+
 

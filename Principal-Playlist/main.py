@@ -77,18 +77,10 @@ initConfigGlobale()
 #print(f"userconf_data : {userconf_data}")
 
 # Récupérer le chemin du projet
-"""
-project_path = userconf_data["SETTINGS"].get("PROJECT_WOLVENKIT_PATH")
-if not project_path:
-    raise ValueError("Le chemin 'PROJECT_WOLVENKIT_PATH' est introuvable ou invalide dans userconf.ini.")
 
-global_variables.project_path = project_path + "/source/raw/"
-"""
+global_variables.project_WOLVENKIT_path = global_variables.user_config.get("SETTINGS", "PROJECT_WOLVENKIT_PATH") + "/source/raw/"
 
-
-global_variables.project_path = global_variables.user_config.get("SETTINGS", "PROJECT_WOLVENKIT_PATH") + "/source/raw/"
-
-localization_languages = find_localization_subfolders(global_variables.project_path)
+localization_languages = find_localization_subfolders(global_variables.project_WOLVENKIT_path)
 
 # Créer une frame pour le bouton au-dessus du tableau principal
 button_frame = tk.Frame(root)

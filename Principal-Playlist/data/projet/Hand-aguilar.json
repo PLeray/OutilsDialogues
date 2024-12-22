@@ -1,0 +1,570 @@
+[
+    {
+        "stringId": "3223022977776263168",
+        "femaleVariant": "\u00c7a t'int\u00e9resse\u00a0? Tu trouveras les infos en pi\u00e8ce jointe.",
+        "maleVariant": "\u00c7a t'int\u00e9resse\u00a0? Tu trouveras les infos en pi\u00e8ce jointe.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_07_f_2cba7a526d46a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_07_f_2cba7a526d46a000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_07_holocall_prebrief"
+    },
+    {
+        "stringId": "3438123700972785664",
+        "femaleVariant": "Franchement, V, j'aurais pr\u00e9f\u00e9r\u00e9 que tu ne l'apprennes pas. Tu dois te douter de la raison.",
+        "maleVariant": "Franchement, V, j'aurais pr\u00e9f\u00e9r\u00e9 que tu ne l'apprennes pas. Tu dois te douter de la raison.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2fb6ab4a42559000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2fb6ab4a42559000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3334832742017114112",
+        "femaleVariant": "Ce ne sont peut-\u00eatre que des rumeurs. Mais les rumeurs sont souvent bien utiles \u00e0 la table des n\u00e9gociations.",
+        "maleVariant": "Ce ne sont peut-\u00eatre que des rumeurs. Mais les rumeurs sont souvent bien utiles \u00e0 la table des n\u00e9gociations.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2e47b4b5cd45a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2e47b4b5cd45a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "3334829282102190080",
+        "femaleVariant": "On dit qu'\u00e0 chaque fois qu'un cigare est allum\u00e9 \u00e0 La Havane, Aguilar met fin \u00e0 une vie quelque part sur Terre.",
+        "maleVariant": "On dit qu'\u00e0 chaque fois qu'un cigare est allum\u00e9 \u00e0 La Havane, Aguilar met fin \u00e0 une vie quelque part sur Terre.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2e47b1903a45a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2e47b1903a45a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "3363765159742251008",
+        "femaleVariant": "Son vrai nom\u00a0: inconnu. Nombre de victimes\u00a0: inconnu. Des estimations parlent de plusieurs dizaines... par continent.",
+        "maleVariant": "Son vrai nom\u00a0: inconnu. Nombre de victimes\u00a0: inconnu. Des estimations parlent de plusieurs dizaines... par continent.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2eae7e973e45a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2eae7e973e45a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "4055060412732063744",
+        "femaleVariant": "Non, pas toi. Mais Aguilar, oui.",
+        "maleVariant": "Non, pas toi. Mais Aguilar, oui.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_384677f5f3a4c000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_384677f5f3a4c000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "4055061819149303808",
+        "femaleVariant": "Euh, je suis perdue l\u00e0.",
+        "maleVariant": "Euh, je suis perdu l\u00e0.",
+        "female_vo_path": "ep1/{}/vo/v_mq304_f_3846793d68a4c000.wem",
+        "male_vo_path": "ep1/{}/vo/v_mq304_m_3846793d68a4c000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "4055063941953667072",
+        "femaleVariant": "Aguilar est un merc assassin originaire de La Havane. Une l\u00e9gende vivante.",
+        "maleVariant": "Aguilar est un merc assassin originaire de La Havane. Une l\u00e9gende vivante.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_38467b2ba9a4c000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_38467b2ba9a4c000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "4055064897063796736",
+        "femaleVariant": "J'ai justement la chance d'avoir son empreinte comportementale. Et tu as la chance d'avoir de l'exp\u00e9rience avec cette tech.",
+        "maleVariant": "J'ai justement la chance d'avoir son empreinte comportementale. Et tu as la chance d'avoir de l'exp\u00e9rience avec cette tech.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_38467c0a0aa4c000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_38467c0a0aa4c000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "3233118901649051648",
+        "femaleVariant": "V, es-tu dans notre beau quartier\u00a0?",
+        "maleVariant": "V, es-tu dans notre beau quartier\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2cde5882e1649000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2cde5882e1649000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_01_hook"
+    },
+    {
+        "stringId": "3233269136685830144",
+        "femaleVariant": "Mieux que \u00e7a. Je vois une page blanche dans la gazette de Night City. Et ton nom qui fait les gros titres. Je t'attendrai au Heavy\u00a0Hearts.",
+        "maleVariant": "Mieux que \u00e7a. Je vois une page blanche dans la gazette de Night City. Et ton nom qui fait les gros titres. Je t'attendrai au Heavy\u00a0Hearts.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2cdee12633649000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2cdee12633649000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_01_hook"
+    },
+    {
+        "stringId": "3237366576858828800",
+        "femaleVariant": "Splendide. Quelque chose \u00e0 ajouter\u00a0?",
+        "maleVariant": "Splendide. Quelque chose \u00e0 ajouter\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2ced6fbfd5649000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2ced6fbfd5649000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_04_report_holocall"
+    },
+    {
+        "stringId": "3242024961101303808",
+        "femaleVariant": "Ce sera tout pour le moment. Je te contacterai.",
+        "maleVariant": "Ce sera tout pour le moment. Je te contacterai.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2cfdfc866f649000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2cfdfc866f649000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_07_end_holocall"
+    },
+    {
+        "stringId": "3287032470801063936",
+        "femaleVariant": "Tout. Et c'est pr\u00e9cis\u00e9ment de \u00e7a qu'on va discuter.",
+        "maleVariant": "Tout. Et c'est pr\u00e9cis\u00e9ment de \u00e7a qu'on va discuter.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2d9de29de345a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2d9de29de345a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "3295459017104855040",
+        "femaleVariant": "Est-ce que tu sens la diff\u00e9rence\u00a0?",
+        "maleVariant": "Est-ce que tu sens la diff\u00e9rence\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2dbbd28416649000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2dbbd28416649000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "3295508210888511488",
+        "femaleVariant": "Hm. Encore mieux que pr\u00e9vu, V... ou plut\u00f4t, Aguilar.",
+        "maleVariant": "Hm. Encore mieux que pr\u00e9vu, V... ou plut\u00f4t, Aguilar.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2dbbff41e8649000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2dbbff41e8649000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "3298258643551887360",
+        "femaleVariant": "On devrait parler. En personne.",
+        "maleVariant": "On devrait parler. En personne.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2dc5c4c2ea45a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2dc5c4c2ea45a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_01_hook"
+    },
+    {
+        "stringId": "3298266359477411840",
+        "femaleVariant": "V, tu es toujours l\u00e0\u00a0?",
+        "maleVariant": "V, tu es toujours l\u00e0\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2dc5cbc76b45a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2dc5cbc76b45a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_01_hook"
+    },
+    {
+        "stringId": "3327410702029004800",
+        "femaleVariant": "Je n'aime pas ce genre de silence.",
+        "maleVariant": "Je n'aime pas ce genre de silence.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2e2d56677445a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2e2d56677445a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_04_report_holocall"
+    },
+    {
+        "stringId": "3327414089852231680",
+        "femaleVariant": "C'est fou tout ce qu'on peut dire quand on est pris par les couilles.",
+        "maleVariant": "C'est fou tout ce qu'on peut dire quand on est pris par les couilles.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2e2d597c3e45a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2e2d597c3e45a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_04_report_holocall"
+    },
+    {
+        "stringId": "3334824531784474624",
+        "femaleVariant": "Fait sur mesure. Un mod\u00e8le unique et tr\u00e8s persuasif.",
+        "maleVariant": "Fait sur mesure. Un mod\u00e8le unique et tr\u00e8s persuasif.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2e47ad3e3545a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2e47ad3e3545a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_02_hands_briefing"
+    },
+    {
+        "stringId": "3447600776982208512",
+        "femaleVariant": "V, le temps presse, alors permets-moi d'aller droit au but. J'ai un contrat, hautement lucratif. Et le client n'est autre que moi.",
+        "maleVariant": "V, le temps presse, alors permets-moi d'aller droit au but. J'ai un contrat, hautement lucratif. Et le client n'est autre que moi.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2fd856a3f762a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2fd856a3f762a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_01_hook"
+    },
+    {
+        "stringId": "3242019047635980288",
+        "femaleVariant": "Ah, oui\u00a0? Quand je fais appel \u00e0 une pro, j'attends du professionnalisme. Sinon, je paye moins. J'esp\u00e8re que c'est clair.",
+        "maleVariant": "Ah, oui\u00a0? Quand je fais appel \u00e0 un pro, j'attends du professionnalisme. Sinon, je paye moins. J'esp\u00e8re que c'est clair.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2cfdf72599649000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_m_2cfdf72599649000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_07_end_holocall"
+    },
+    {
+        "stringId": "3298390309448556544",
+        "femaleVariant": "Et ne tra\u00eene pas trop. Tu ne seras pas d\u00e9\u00e7ue.",
+        "maleVariant": "Et ne tra\u00eene pas trop. Tu ne seras pas d\u00e9\u00e7u.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq304_f_2dc63c82c545a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq304_m_2dc63c82c545a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_01_hook"
+    },
+    {
+        "stringId": "3288333032851881984",
+        "femaleVariant": "Mm, l'un n'emp\u00eache pas l'autre. Et puis la discr\u00e9tion, ce n'est pas de la parano\u00efa. C'est une mesure de pr\u00e9caution.",
+        "maleVariant": "Mm, l'un n'emp\u00eache pas l'autre. Et puis la discr\u00e9tion, ce n'est pas de la parano\u00efa. C'est une mesure de pr\u00e9caution.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2da281789651c000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2da281789651c000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq305/mq305_01_holocall_hook"
+    },
+    {
+        "stringId": "3288348667505917952",
+        "femaleVariant": "Je vois. Je vais quand m\u00eame t'envoyer les d\u00e9tails. Essaie de t'en occuper d\u00e8s que tu peux.",
+        "maleVariant": "Je vois. Je vais quand m\u00eame t'envoyer les d\u00e9tails. Essaie de t'en occuper d\u00e8s que tu peux.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2da28fb0d051c000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2da28fb0d051c000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq305/mq305_01_holocall_hook"
+    },
+    {
+        "stringId": "3302687951687892992",
+        "femaleVariant": "Je vais \u00eatre bref, V. NetWatch a envoy\u00e9 un... chasseur. Et tu es la cible, alors fais attention.",
+        "maleVariant": "Je vais \u00eatre bref, V. NetWatch a envoy\u00e9 un... chasseur. Et tu es la cible, alors fais attention.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2dd581319451c000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2dd581319451c000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq305/mq305_05_outcome_mr_hands"
+    },
+    {
+        "stringId": "3302704324556210176",
+        "femaleVariant": "Mais s'il te pla\u00eet, \u00e0 l'avenir, souviens-toi\u00a0: 1) de qui est ton client, et 2) que les cadavres ne paient pas.",
+        "maleVariant": "Mais s'il te pla\u00eet, \u00e0 l'avenir, souviens-toi\u00a0: 1) de qui est ton client, et 2) que les cadavres ne paient pas.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2dd59015af51c000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2dd59015af51c000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq305/mq305_05_outcome_mr_hands"
+    },
+    {
+        "stringId": "3302721340444884992",
+        "femaleVariant": "Ah. Eh bien, dans ce cas... Je pense qu'on pourra facilement trouver preneur.",
+        "maleVariant": "Ah. Eh bien, dans ce cas... Je pense qu'on pourra facilement trouver preneur.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2dd59f8f8151c000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2dd59f8f8151c000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq305/mq305_05_outcome_mr_hands"
+    },
+    {
+        "stringId": "3336009607617298432",
+        "femaleVariant": "Je vois. Eh bien, je suis d\u00e9sol\u00e9 que tu aies eu une journ\u00e9e aussi difficile.",
+        "maleVariant": "Je vois. Eh bien, je suis d\u00e9sol\u00e9 que tu aies eu une journ\u00e9e aussi difficile.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2e4be3102d51c000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_mq305_f_2e4be3102d51c000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq305/mq305_05_outcome_mr_hands"
+    },
+    {
+        "stringId": "3215749357112266752",
+        "femaleVariant": "Je ne peux pas te r\u00e9pondre par oui ou par non. Par contre, j'ai un nouveau travail pour toi. J'esp\u00e8re que tu vas l'accepter.",
+        "maleVariant": "Je ne peux pas te r\u00e9pondre par oui ou par non. Par contre, j'ai un nouveau travail pour toi. J'esp\u00e8re que tu vas l'accepter.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2ca0a300a55e1000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2ca0a300a55e1000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_introduction"
+    },
+    {
+        "stringId": "3227427906741202984",
+        "femaleVariant": "Vraiment\u00a0? \u00c7a, c'est original...",
+        "maleVariant": "Vraiment\u00a0? \u00c7a, c'est original...",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cca2094df7df028.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cca2094df7df028.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3227427913267539988",
+        "femaleVariant": "Est-ce que j'ai dit \u00e7a\u00a0?",
+        "maleVariant": "Est-ce que j'ai dit \u00e7a\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cca2096647df014.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cca2096647df014.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3227427913267540000",
+        "femaleVariant": "J'ai un contact. Il pourra r\u00e9cup\u00e9rer les informations qu'il te faut. Si tu y mets le prix.",
+        "maleVariant": "J'ai un contact. Il pourra r\u00e9cup\u00e9rer les informations qu'il te faut. Si tu y mets le prix.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cca2096647df020.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cca2096647df020.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3227427919257006088",
+        "femaleVariant": "Quinze mille. Enfin... vu ce que tu m'as rapport\u00e9 jusque-l\u00e0, je vais me montrer g\u00e9n\u00e9reux. Je peux exceptionnellement descendre \u00e0 dix mille. Est-ce que \u00e7a te convient\u00a0?",
+        "maleVariant": "Quinze mille. Enfin... vu ce que tu m'as rapport\u00e9 jusque-l\u00e0, je vais me montrer g\u00e9n\u00e9reux. Je peux exceptionnellement descendre \u00e0 dix mille. Est-ce que \u00e7a te convient\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cca2097c97df008.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cca2097c97df008.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3227441874327171072",
+        "femaleVariant": "V\u00a0?",
+        "maleVariant": "V\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cca2d48f47df000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cca2d48f47df000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3242052587221807132",
+        "femaleVariant": "Oui\u00a0?",
+        "maleVariant": "Oui\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a6a47df01c.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a6a47df01c.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3242052587221807164",
+        "femaleVariant": "Belle entr\u00e9e en mati\u00e8re. La flatterie, \u00e7a marche presque \u00e0 tous les coups.",
+        "maleVariant": "Belle entr\u00e9e en mati\u00e8re. La flatterie, \u00e7a marche presque \u00e0 tous les coups.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a6a47df03c.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a6a47df03c.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3242052587221807184",
+        "femaleVariant": "Bon, comment peut-on s'entraider\u00a0?",
+        "maleVariant": "Bon, comment peut-on s'entraider\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a6a47df050.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a6a47df050.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3242052592724733952",
+        "femaleVariant": "\u00c7a doit aller pour toi, V, si tu appelles.",
+        "maleVariant": "\u00c7a doit aller pour toi, V, si tu appelles.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a7ec7df000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a7ec7df000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3242052595862073380",
+        "femaleVariant": "De la psychologie invers\u00e9e, V\u00a0? Sur moi\u00a0? Il va falloir trouver mieux que \u00e7a...",
+        "maleVariant": "De la psychologie invers\u00e9e, V\u00a0? Sur moi\u00a0? Il va falloir trouver mieux que \u00e7a...",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a8a77df024.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a8a77df024.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3242052597841784884",
+        "femaleVariant": "Je peux quand m\u00eame t\u00e2ter le terrain. Il n'y a pas de mal \u00e0 se renseigner. Mais il va me falloir plus d'informations. Donne-moi de quoi partir \u00e0 la p\u00eache.",
+        "maleVariant": "Je peux quand m\u00eame t\u00e2ter le terrain. Il n'y a pas de mal \u00e0 se renseigner. Mais il va me falloir plus d'informations. Donne-moi de quoi partir \u00e0 la p\u00eache.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a91d7df034.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15a91d7df034.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3242052607975223316",
+        "femaleVariant": "Tu le sauras en temps voulu.",
+        "maleVariant": "Tu le sauras en temps voulu.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15ab797df014.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15ab797df014.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3242052616649043972",
+        "femaleVariant": "Je vais me renseigner. Je te recontacte si jamais je remonte un truc.",
+        "maleVariant": "Je vais me renseigner. Je te recontacte si jamais je remonte un truc.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15ad7e7df004.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2cfe15ad7e7df004.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3357646949975986176",
+        "femaleVariant": "Dans dix heures. L'\u00e9clat de donn\u00e9es t'attendra dans la boutique.",
+        "maleVariant": "Dans dix heures. L'\u00e9clat de donn\u00e9es t'attendra dans la boutique.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2e98c21c867e1000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2e98c21c867e1000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3357648530691723264",
+        "femaleVariant": "Il sera crypt\u00e9, naturellement. Tu y auras acc\u00e8s par identification biom\u00e9trique.",
+        "maleVariant": "Il sera crypt\u00e9, naturellement. Tu y auras acc\u00e8s par identification biom\u00e9trique.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2e98c38c907e1000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2e98c38c907e1000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3357655788616028160",
+        "femaleVariant": "Je ne lis pas dans les pens\u00e9es, je te signale...",
+        "maleVariant": "Je ne lis pas dans les pens\u00e9es, je te signale...",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2e98ca266e7e1000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2e98ca266e7e1000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3395499458777968672",
+        "femaleVariant": "C'est \u00e7a, la courtoisie. Je te recontacterai.",
+        "maleVariant": "C'est \u00e7a, la courtoisie. Je te recontacterai.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2f1f3cc4837df020.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2f1f3cc4837df020.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3437886938803441664",
+        "femaleVariant": "Ah, j'essaie de transmettre un peu de culture \u00e0 ce monde grossier, et voil\u00e0 comment on me remercie...",
+        "maleVariant": "Ah, j'essaie de transmettre un peu de culture \u00e0 ce monde grossier, et voil\u00e0 comment on me remercie...",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2fb5d3f4c5559000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2fb5d3f4c5559000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3438976763031818240",
+        "femaleVariant": "Hm, tu as l'esprit ouvert, c'est appr\u00e9ciable.",
+        "maleVariant": "Hm, tu as l'esprit ouvert, c'est appr\u00e9ciable.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2fb9b3253f559000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_ow_fixers_f_2fb9b3253f559000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/fixers/mr_hands_combat_zone_default"
+    },
+    {
+        "stringId": "3197069123010936832",
+        "femaleVariant": "Droit au but. J'aime \u00e7a.",
+        "maleVariant": "Droit au but. J'aime \u00e7a.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2c5e456db76fc000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2c5e456db76fc000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_04b_call_hands"
+    },
+    {
+        "stringId": "3197112534342549504",
+        "femaleVariant": "Hmmm... Je vais devoir forcer des mains. Mais gr\u00e2ce \u00e0 toi, je n'ai vraiment plus que l'embarras du choix.",
+        "maleVariant": "Hmmm... Je vais devoir forcer des mains. Mais gr\u00e2ce \u00e0 toi, je n'ai vraiment plus que l'embarras du choix.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2c5e6ce9346fc000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2c5e6ce9346fc000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_04b_call_hands"
+    },
+    {
+        "stringId": "3210521391335084032",
+        "femaleVariant": "J'esp\u00e8re juste que \u00e7a ne signera pas la fin de notre collaboration. \u00c0 vrai dire, je devrais bient\u00f4t avoir de nouvelles missions pour toi...",
+        "maleVariant": "J'esp\u00e8re juste que \u00e7a ne signera pas la fin de notre collaboration. \u00c0 vrai dire, je devrais bient\u00f4t avoir de nouvelles missions pour toi...",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2c8e103202521000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2c8e103202521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_04_mr_hands"
+    },
+    {
+        "stringId": "3300441187958263808",
+        "femaleVariant": "Ce qui me profite te profitera aussi. C'est aussi simple que \u00e7a.",
+        "maleVariant": "Ce qui me profite te profitera aussi. C'est aussi simple que \u00e7a.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2dcd85c622521000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2dcd85c622521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_04_mr_hands"
+    },
+    {
+        "stringId": "3300450501410295808",
+        "femaleVariant": "Je tiens \u00e0 dire que \u00e7a n'a pas \u00e9t\u00e9 facile de r\u00e9cup\u00e9rer les plans du b\u00e2timent.",
+        "maleVariant": "Je tiens \u00e0 dire que \u00e7a n'a pas \u00e9t\u00e9 facile de r\u00e9cup\u00e9rer les plans du b\u00e2timent.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2dcd8e3e97521000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2dcd8e3e97521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_04_mr_hands"
+    },
+    {
+        "stringId": "3300465858753728512",
+        "femaleVariant": "Les fuites de donn\u00e9es, ou leur absence, sont la diff\u00e9rence entre moi et le regrett\u00e9 M. DeShawn, par exemple.",
+        "maleVariant": "Les fuites de donn\u00e9es, ou leur absence, sont la diff\u00e9rence entre moi et le regrett\u00e9 M. DeShawn, par exemple.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2dcd9c3640521000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2dcd9c3640521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_04_mr_hands"
+    },
+    {
+        "stringId": "3346481268061769728",
+        "femaleVariant": "J'imagine que \u00e7a sera suffisant pour te permettre d'entrer et d'effectuer tes pas de danse. Mais je te pr\u00e9viens... M\u00eame avec de la pr\u00e9paration, tu t'appr\u00eates \u00e0 entrer dans un nid de vip\u00e8res. Fais bien attention.",
+        "maleVariant": "J'imagine que \u00e7a sera suffisant pour te permettre d'entrer et d'effectuer tes pas de danse. Mais je te pr\u00e9viens... M\u00eame avec de la pr\u00e9paration, tu t'appr\u00eates \u00e0 entrer dans un nid de vip\u00e8res. Fais bien attention.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2e7116fb9e521000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_2e7116fb9e521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_04_mr_hands"
+    },
+    {
+        "stringId": "3478372866336100352",
+        "femaleVariant": "Hmm. Je t'\u00e9coute, V.",
+        "maleVariant": "Hmm. Je t'\u00e9coute, V.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_3045a9b156521000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_3045a9b156521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_04b_call_hands"
+    },
+    {
+        "stringId": "3530402189112643584",
+        "femaleVariant": "J'admets que ce n'est pas forc\u00e9ment \u00e9vident de ton point de vue, mais\u2026",
+        "maleVariant": "J'admets que ce n'est pas forc\u00e9ment \u00e9vident de ton point de vue, mais\u2026",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_30fe82160c521000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_q303_f_30fe82160c521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_04_mr_hands"
+    },
+    {
+        "stringId": "3314487239052271616",
+        "femaleVariant": "Je suppose qu'il est encore sous le choc.",
+        "maleVariant": "Je suppose qu'il est encore sous le choc.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_01_f_2dff6c954046a000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_01_f_2dff6c954046a000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_01_holocall_debrief"
+    },
+    {
+        "stringId": "3182570999513051136",
+        "femaleVariant": "V, la cible a-t-elle \u00e9t\u00e9... \u00e9limin\u00e9e\u00a0?",
+        "maleVariant": "V, la cible a-t-elle \u00e9t\u00e9... \u00e9limin\u00e9e\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_03_f_2c2ac3764a6f7000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_03_f_2c2ac3764a6f7000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_03_holocal_debrief"
+    },
+    {
+        "stringId": "3349069434514149376",
+        "femaleVariant": "Tu en es certaine\u00a0?",
+        "maleVariant": "Tu en es certain\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_03_f_2e7a48e814559000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_03_m_2e7a48e814559000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_03_holocal_debrief"
+    },
+    {
+        "stringId": "3357888462745231360",
+        "femaleVariant": "Mais je dois dire que je suis surpris, V. Cet homme vaut-il tous ces efforts\u00a0?",
+        "maleVariant": "Mais je dois dire que je suis surpris, V. Cet homme vaut-il tous ces efforts\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_04_f_2e999dc4194fe000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_04_f_2e999dc4194fe000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_04_hasan_final"
+    },
+    {
+        "stringId": "2750547514529812480",
+        "femaleVariant": "V. Si jamais l'envie te prend de faire des enfants, je te sugg\u00e8re d'y r\u00e9fl\u00e9chir \u00e0 deux fois.",
+        "maleVariant": "V. Si jamais l'envie te prend de faire des enfants, je te sugg\u00e8re d'y r\u00e9fl\u00e9chir \u00e0 deux fois.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_06_f_262be86435621000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_06_f_262be86435621000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_06_holocall_prebrief"
+    },
+    {
+        "stringId": "3305716213137887232",
+        "femaleVariant": "Tu dois rester ma\u00eetresse de tes \u00e9motions, V. N'oublie jamais \u00e7a.",
+        "maleVariant": "Tu dois rester ma\u00eetre de tes \u00e9motions, V. N'oublie jamais \u00e7a.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_06_f_2de04361a4555000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_06_m_2de04361a4555000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_06_holocall_debrief"
+    },
+    {
+        "stringId": "3121582665000267776",
+        "femaleVariant": "Ma petite V, que dirais-tu de faire une bonne action et d'\u00eatre r\u00e9compens\u00e9e par un peu d'argent au lieu de l'habituelle balle dans le bide\u00a0?",
+        "maleVariant": "Mon petit V, que dirais-tu de faire une bonne action et d'\u00eatre r\u00e9compens\u00e9 par un peu d'argent au lieu de l'habituelle balle dans le bide\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_07_f_2b5216e51c5bb000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_07_m_2b5216e51c5bb000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_07_holocall_prebrief"
+    },
+    {
+        "stringId": "3123153853829672960",
+        "femaleVariant": "V, V, V. Est-ce que tu sais pourquoi j'adore bosser avec toi\u00a0?",
+        "maleVariant": "V, V, V. Est-ce que tu sais pourquoi j'adore bosser avec toi\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_12_f_2b57abe20468f000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_12_f_2b57abe20468f000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_12_holocall_debrief"
+    },
+    {
+        "stringId": "3123155493030785024",
+        "femaleVariant": "V, tu ne devineras jamais qui vient d'appeler. Ou... peut-\u00eatre que tu le sais d\u00e9j\u00e0\u00a0?",
+        "maleVariant": "V, tu ne devineras jamais qui vient d'appeler. Ou... peut-\u00eatre que tu le sais d\u00e9j\u00e0\u00a0?",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_12_f_2b57ad5fac68f000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_12_f_2b57ad5fac68f000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_12_holocall_debrief"
+    },
+    {
+        "stringId": "3085219543064694784",
+        "femaleVariant": "Mon netrunner va t'aider \u00e0 entrer dans les lieux et \u00e0 r\u00e9cup\u00e9rer les donn\u00e9es importantes pour mon client. Bonne chance.",
+        "maleVariant": "Mon netrunner va t'aider \u00e0 entrer dans les lieux et \u00e0 r\u00e9cup\u00e9rer les donn\u00e9es importantes pour mon client. Bonne chance.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_13_f_2ad0e6d40676d000.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_sts_ep1_13_f_2ad0e6d40676d000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_13_holocall_prebrief"
+    },
+    {
+        "stringId": "3974021868244045828",
+        "femaleVariant": "V, on n'a pas tout notre temps.",
+        "maleVariant": "V, on n'a pas tout notre temps.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_vset_mr_hands_ep1_f_37268fd57a521004.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_vset_mr_hands_ep1_f_37268fd57a521004.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/voicesets/vset_mr_hands_ep1"
+    },
+    {
+        "stringId": "3974021868277600272",
+        "femaleVariant": "Tic-tac, tic-tac. L'heure tourne.",
+        "maleVariant": "Tic-tac, tic-tac. L'heure tourne.",
+        "female_vo_path": "ep1/{}/vo/wade_bleecker_vset_mr_hands_ep1_f_37268fd57c521010.wem",
+        "male_vo_path": "ep1/{}/vo/wade_bleecker_vset_mr_hands_ep1_f_37268fd57c521010.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/voicesets/vset_mr_hands_ep1"
+    }
+]
