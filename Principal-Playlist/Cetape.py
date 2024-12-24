@@ -36,18 +36,6 @@ class Etape:
         if block_count == 0:
             return
 
-        """
-        block_width = 100  # Largeur approximative d'un bloc
-        spacing = (self.width - block_count * block_width) // (block_count + 1)
-        current_x = spacing
-
-        for index, block in enumerate(self.blocs):
-            block.x = current_x + block_width // 2
-            block.y = self.y
-            block.etape_position = index
-            current_x += block_width + spacing        
-        
-        """
         spacing = (self.width - block_count * global_variables.BLOC_WIDTH) // (block_count + 1)
         current_x = spacing
 

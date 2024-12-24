@@ -63,7 +63,7 @@ def maj_Langue(str_langue):
 # Créer la fenêtre principale
 root = tk.Tk()
 root.title("Tool to assemble and test dialogue sequences for Cyberpung modding")
-root.geometry("1600x800")
+root.geometry("1600x1000")
 root.minsize(1100, 800)
 
 global_variables.rootAccess = root #initialisation de la variable globale root pour y acceder dans les fonctions

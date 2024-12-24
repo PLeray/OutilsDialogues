@@ -179,14 +179,15 @@ def record_playlist(playlist_tree):
 
 # Fonction pour sauvegarder la playlist dans un fichier JSON
 
-def save_playlist_to_file(playlist_tree):
-    nom_sans_extension = nom_playlist()  
-    file_path = filedialog.asksaveasfilename(
-        title="Save the playlist in JSON format",
-        initialfile=f"{nom_sans_extension}.json",  # Nom par défaut basé sur la playlist
-        defaultextension=".json",
-        filetypes=[("JSON files", "*.json")]
-        )
+def save_playlist_to_file(playlist_tree, file_path = None):
+    if not file_path :
+        nom_sans_extension = nom_playlist()  
+        file_path = filedialog.asksaveasfilename(
+            title="Save the playlist in JSON format",
+            initialfile=f"{nom_sans_extension}.json",  # Nom par défaut basé sur la playlist
+            defaultextension=".json",
+            filetypes=[("JSON files", "*.json")]
+            )
     
     if file_path:
         playlist_data = []
@@ -203,6 +204,7 @@ def save_playlist_to_file(playlist_tree):
                 global_variables.data_Quest: values[5]
             })
         # Sauvegarder les données dans un fichier JSON
+        #print(f"Sauvegarde de la playlist dans {file_path}.")  # Debugging
         with open(file_path, "w") as file:
             json.dump(playlist_data, file, indent=4)
         
@@ -220,6 +222,7 @@ def load_playlist_from_file(playlist_tree,tk):
 
 # Fonction pour charger la playlist à partir d'un fichier JSON
 def charger_playlist_from_file(playlist_tree,tk, file_path):
+    global_variables.playlist_file_open = file_path
     if file_path:
         #print(f"Fichier playlist : {file_path}")
         with open(file_path, "r") as file:
@@ -432,12 +435,37 @@ def save_playlist_to_txt(playlist_tree):
         except Exception as e:
             print(f"Erreur lors de la sauvegarde : {e}")
 
-def open_manual_entry_window(button_frame, playlist_tree, tk):
+def open_manual_entry_window2(button_frame, playlist_tree, tk):
     # Vérifier si une instance existe déjà
     if global_variables.ligne_manuelle_instance is None or not global_variables.ligne_manuelle_instance.window.winfo_exists():
         global_variables.ligne_manuelle_instance = LigneManuelle(button_frame, playlist_tree)
+        """
+         save_playlist_to_file(playlist_tree, global_variables.playlist_file_open)
+        charger_playlist_from_file(playlist_tree,tk, global_variables.playlist_file_open)
         count_playlist_rows(playlist_tree)  # Mettre à jour le compteur
-        colorize_playlist_rows(playlist_tree)  # Mettre à jour les couleurs
+        colorize_playlist_rows(playlist_tree)  # Mettre à jour les couleurs       
+        """
+
+    else:
+        # Ramener la fenêtre existante au premier plan
+        global_variables.ligne_manuelle_instance.window.lift()
+        global_variables.ligne_manuelle_instance.window.focus_force()
+        print("Une instance est déjà ouverte, elle a été ramenée au premier plan.")
+    
+    print("cé faut FIN INSERTION NEW LINE")
+        #save_playlist_to_file(playlist_tree, global_variables.playlist_file_open)
+
+def open_manual_entry_window(button_frame, playlist_tree, tk):
+    def save_playlist():
+        """Callback pour sauvegarder la playlist."""
+        save_playlist_to_file(playlist_tree, global_variables.playlist_file_open)
+        charger_playlist_from_file(playlist_tree,tk, global_variables.playlist_file_open)
+        print("Playlist sauvegardée après la fermeture de LigneManuelle.")
+
+    # Vérifier si une instance existe déjà
+    if global_variables.ligne_manuelle_instance is None or not global_variables.ligne_manuelle_instance.window.winfo_exists():
+        global_variables.ligne_manuelle_instance = LigneManuelle(button_frame, playlist_tree, save_callback=save_playlist)
+
     else:
         # Ramener la fenêtre existante au premier plan
         global_variables.ligne_manuelle_instance.window.lift()

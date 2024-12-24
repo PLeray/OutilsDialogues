@@ -88,7 +88,31 @@ class PageHTML:
                     display: block; /* S'assure que `commentaire` est traité comme un bloc (comme un paragraphe) */
                     margin-top: 15px; /* Espace avant le commentaire */
                     margin-bottom: 15px; /* Espace après le commentaire */
-                }}                             
+                }}   
+                .block-subtitles div message-sent {{
+                    display: block;
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: 8px;
+                    max-width: 300px;
+                    text-align: left;
+                    word-wrap: break-word;
+                    width: fit-content;                
+                    background-color: #dcf8c6;
+                    margin-left: auto;
+                }}  
+                .block-subtitles div message-received {{
+                    display: block;
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: 8px;
+                    max-width: 300px;
+                    text-align: left;
+                    word-wrap: break-word;
+                    width: fit-content;                
+                    background-color: #f1f1f1;
+                    margin-right: auto;
+                }}                                                                             
                 svg {{
                     position: absolute;
                     top: 0;
@@ -196,11 +220,16 @@ class PageHTML:
                     prefixID = subtitle.get("type", "")
                     #prefixID = subtitle.get(global_variables.data_ID, "")[:3]
                     #print(f"prefixID : {prefixID}")
+                    ["COMMENT", "ACTION", "MSG-IN", "MSG-OUT"]
                     divType = "normal"
-                    if prefixID == "COM":
+                    if prefixID == "COMMENT":
                         divType = "commentaire"
-                    elif  prefixID == "ACT":
+                    elif  prefixID == "ACTION":
                         divType = "action"
+                    elif  prefixID == "MSG-IN":
+                        divType = "message-received"
+                    elif  prefixID == "MSG-OUT":
+                        divType = "message-sent"
                     else:
                         divType = "normal"
                     perso = subtitle.get("perso", "").capitalize()

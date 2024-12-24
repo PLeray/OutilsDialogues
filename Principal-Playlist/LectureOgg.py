@@ -59,9 +59,9 @@ def convert_wem_to_ogg_if_needed(ogg_path):
             return ogg_path
         else :
             # Construire le chemin du fichier .wem correspondant
-            print(f"chemin du ogg_path : {ogg_path}")
+            #print(f"chemin du ogg_path : {ogg_path}")
             wem_path = ogg_path.replace("/raw/", "/archive/").replace(".ogg", ".wem")
-            print(f"chemin du wem_path : {wem_path}")
+            #print(f"chemin du wem_path : {wem_path}")
             # Vérifier si le fichier .wem existe
             if not os.path.exists(wem_path):
                 raise FileNotFoundError(f"Le xxx fichier .wem correspondant n'existe pas : {wem_path}")

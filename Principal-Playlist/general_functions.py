@@ -51,7 +51,7 @@ def find_localization_subfolders(project_path):
         name for name in os.listdir(localization_path)
         if os.path.isdir(os.path.join(localization_path, name))
     ]
-
+    print(f"Lister uniquement les sous-dossiers immédiats de localization : {subfolders}.")   
     return subfolders
 
 def extraire_WOLVENKIT_localise_path(chemin_generic):  #pour recontruire chemin avec {}

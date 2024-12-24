@@ -40,12 +40,14 @@
                 .block {
                     padding: 10px;
                     padding-top: 0px;
+                    padding-right: 25px;
                     border-top: 2px solid #33acff;
                     border-bottom: 2px solid #33acff;
                     border-radius: 8px;
                     background-color: #ffffff;
                     width: 400px;
                     text-align: left;
+                    position: relative; /* Permet au bouton d’être positionné par rapport au bloc */
                 }
                 .block-subtitles {
                     font-size: 14px;
@@ -88,6 +90,65 @@
                     stroke: #33acff;
                     stroke-width: 2;
                 }
+                .audio-button {
+                    width: 60px;
+                    height: 60px;
+                    background-color: #33acff;
+                    border: 3px solid white;
+                    border-radius: 50%;
+                    position: absolute; /* Permet de placer le bouton indépendamment */
+                    top: 50%; /* Centre verticalement le bouton */
+                    right: -30px; /* Aligne le bouton à droite du bloc */
+                    transform: translateY(-50%); /* Ajuste pour un centrage parfait */
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+                .audio-button:hover {
+                    background-color: #007bb5;
+                }
+                .audio-button::before {
+                    content: '';
+                    position: absolute;
+                    transition: all 0.3s ease;
+                }
+                .audio-button.play::before {
+                    width: 0;
+                    height: 0;
+                    border-left: 15px solid white;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                }
+                .audio-button.pause::before {
+                    width: 10px;
+                    height: 20px;
+                    background-color: white;
+                    box-shadow: 15px 0 0 white;
+                }                
+                .audio-button::after {
+                    /* Tooltip */
+                    content: "Cliquez sur le bouton ci-dessous pour lire ou arrêter le fichier audio";
+                    position: absolute;
+                    top: -35px; /* Décalage au-dessus du bouton */
+                    right: 50%; /* Centré horizontalement par rapport au bouton */
+                    transform: translateX(50%);
+                    background-color: #000;
+                    color: #fff;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+                    z-index: 10;
+                }
+                .audio-button:hover::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
             </style>
         </head>
         <body>
@@ -97,14 +158,17 @@
 <div class='block-container'>
 <div class='block' id='block-00000002'>
 <div class='block-subtitles'>
-<div><normal><perso></perso> NO TRADUCTION</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
 <div><normal><perso>Panam : </perso> V?</normal></div>
 <div><normal><perso>V : </perso> Uh, do I know you?</normal></div>
 <div><normal><perso>Panam : </perso> Haha, funny...</normal></div>
 <div><normal><perso>V : </perso> Hahahaha!</normal></div>
 <div><normal><perso>V : </perso> Hey, Panam.</normal></div>
-<div><normal><perso></perso> NO TRADUCTION</normal></div>
-<div><normal><perso></perso> NO TRADUCTION</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000002" src="ogg/Sound-00000002.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000002')"></button>
 </div>
 </div>
 </div>
@@ -114,26 +178,49 @@
 <div class='block-container'>
 <div class='block' id='block-00000003'>
 <div class='block-subtitles'>
-<div><normal><perso></perso> NO TRADUCTION</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
 <div><normal><perso>V : </perso> Really glad to see you.</normal></div>
 <div><normal><perso>Panam : </perso> Careful, or I'll start believing that. You won't be able to get rid of me.</normal></div>
 <div><normal><perso>V : </perso> Heheh, gonna hold you to that.</normal></div>
 <div><normal><perso>Panam : </perso> Pfff. Ooo-K.</normal></div>
+<audio id="audio-00000003" src="ogg/Sound-00000003.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000003')"></button>
 </div>
 </div>
 <div class='block' id='block-00000004'>
 <div class='block-subtitles'>
-<div><normal><perso></perso> NO TRADUCTION</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
 <div><normal><perso>V : </perso> Damn, I'm glad you're here. So fuckin' glad you didn't change your mind.</normal></div>
 <div><normal><perso>Panam : </perso> I always keep my word.</normal></div>
 <div><normal><perso>V : </perso> Heh, good to know.</normal></div>
 <div><normal><perso>Panam : </perso> Stuff it, V. I just need time – that's all.</normal></div>
+<audio id="audio-00000004" src="ogg/Sound-00000004.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000004')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
 <div class='step-title'>Étape 3</div>
+<div class='block-container'>
+<div class='block' id='block-00000028'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000028" src="ogg/Sound-00000028.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000028')"></button>
+</div>
+</div>
+<div class='block' id='block-00000030'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000030" src="ogg/Sound-00000030.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000030')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 4</div>
 <div class='block-container'>
 <div class='block' id='block-00000005'>
 <div class='block-subtitles'>
@@ -147,12 +234,14 @@
 <div><normal><perso>Panam : </perso> I've a problem.</normal></div>
 <div><normal><perso>V : </perso> Lemme guess. Saul, right?</normal></div>
 <div><normal><perso>Panam : </perso> You know me well.</normal></div>
+<audio id="audio-00000005" src="ogg/Sound-00000005.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000005')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 4</div>
+<div class='step-title'>Étape 5</div>
 <div class='block-container'>
 <div class='block' id='block-00000007'>
 <div class='block-subtitles'>
@@ -162,12 +251,14 @@
 <div><normal><perso>Panam : </perso> That's what I mean! It shouldn't be me, it should be...</normal></div>
 <div><normal><perso>Panam : </perso> I knew it...</normal></div>
 <div><normal><perso>Panam : </perso> I don't know anything anymore, V.</normal></div>
+<audio id="audio-00000007" src="ogg/Sound-00000007.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000007')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 5</div>
+<div class='step-title'>Étape 6</div>
 <div class='block-container'>
 <div class='block' id='block-00000008'>
 <div class='block-subtitles'>
@@ -176,6 +267,8 @@
 <div><normal><perso>V : </perso> 'Member when we first met? Almost had a pound in your pants at the thought of falling foul of Saul.</normal></div>
 <div><normal><perso>V : </perso> Doesn't look it anymore…</normal></div>
 <div><normal><perso>Panam : </perso> I wanted something different, better. Saul's a damned coward. He'll be the end of the clan. I'm certain.</normal></div>
+<audio id="audio-00000008" src="ogg/Sound-00000008.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000008')"></button>
 </div>
 </div>
 <div class='block' id='block-00000009'>
@@ -186,12 +279,14 @@
 <div><normal><perso>V : </perso> Relax. All good.</normal></div>
 <div><normal><perso>Panam : </perso> I wanted something different, better. Saul's a damned coward. He'll be the end of the clan. I'm certain.</normal></div>
 <div><normal><perso>Panam : </perso> Even if you were right, what of it? Believe me, I know what the problem is, just not how to solve it – not yet.</normal></div>
+<audio id="audio-00000009" src="ogg/Sound-00000009.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000009')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 6</div>
+<div class='step-title'>Étape 7</div>
 <div class='block-container'>
 <div class='block' id='block-00000010'>
 <div class='block-subtitles'>
@@ -202,6 +297,8 @@
 <div><normal><perso>V : </perso> I know exactly what you mean.</normal></div>
 <div><normal><perso>Panam : </perso> You don't know how good it is to hear that.</normal></div>
 <div><normal><perso>Panam : </perso> You?</normal></div>
+<audio id="audio-00000010" src="ogg/Sound-00000010.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000010')"></button>
 </div>
 </div>
 <div class='block' id='block-00000011'>
@@ -212,16 +309,22 @@
 <div><normal><perso>Panam : </perso> I wouldn't mind changing the subject now.</normal></div>
 <div><normal><perso>V : </perso> OK…</normal></div>
 <div><normal><perso>Panam : </perso> You?</normal></div>
+<audio id="audio-00000011" src="ogg/Sound-00000011.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000011')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 7</div>
+<div class='step-title'>Étape 8</div>
 <div class='block-container'>
 <div class='block' id='block-00000012'>
 <div class='block-subtitles'>
-<div><normal><perso>V : </perso> Panam.</normal></div>
+<div><normal><perso>V : </perso> All right, then. Konpeki Plaza – I was there the night it happened.</normal></div>
+<div><normal><perso>V : </perso> Don't worry 'bout it.</normal></div>
+<div><normal><perso>Panam : </perso> Yes, but…</normal></div>
+<div><normal><perso>V : </perso> Make up your mind yet?</normal></div>
+<div><normal><perso>Panam : </perso> Yeah. I mean, I think so.</normal></div>
 <div><normal><perso>V : </perso> Plan – what's your take?</normal></div>
 <div><normal><perso>Panam : </perso> It's a good plan, V... Hmm, do you know what Saul once told me?</normal></div>
 <div><normal><perso>Panam : </perso> That anyone is truly free just once – when they know they have nothing to lose.</normal></div>
@@ -230,13 +333,19 @@
 <div><normal><perso>V : </perso> I won't.</normal></div>
 <div><normal><perso>V : </perso> Nnn-nope.</normal></div>
 <div><normal><perso>Panam : </perso> Because I truly care this time. Yet I fear I'll do or say something foolish – and be left alone in the desert.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
 <div><normal><perso>Panam : </perso> Jesus, you really do look terrible.</normal></div>
+<div><normal><perso>V : </perso> This just might work.</normal></div>
+<div><normal><perso>V : </perso> Hm, yeah, plan just might work.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000012" src="ogg/Sound-00000012.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000012')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 8</div>
+<div class='step-title'>Étape 9</div>
 <div class='block-container'>
 <div class='block' id='block-00000013'>
 <div class='block-subtitles'>
@@ -251,23 +360,27 @@
 <div><normal><perso>Panam : </perso> OK. Here we go.</normal></div>
 <div><normal><perso>V : </perso> Fine, let's go.</normal></div>
 <div><normal><perso>V : </perso> Meet you there.</normal></div>
-</div>
-</div>
-</div>
-</div>
-<div class='step-container'>
-<div class='step-title'>Étape 9</div>
-<div class='block-container'>
-<div class='block' id='block-00000014'>
-<div class='block-subtitles'>
-<div><normal><perso>V : </perso> Nice place, quaintly slick.</normal></div>
-<div><normal><perso>Panam : </perso> I certainly hope so.</normal></div>
+<audio id="audio-00000013" src="ogg/Sound-00000013.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000013')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
 <div class='step-title'>Étape 10</div>
+<div class='block-container'>
+<div class='block' id='block-00000014'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Nice place, quaintly slick.</normal></div>
+<div><normal><perso>Panam : </perso> I certainly hope so.</normal></div>
+<audio id="audio-00000014" src="ogg/Sound-00000014.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000014')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 11</div>
 <div class='block-container'>
 <div class='block' id='block-00000016'>
 <div class='block-subtitles'>
@@ -277,23 +390,27 @@
 <div><normal><perso>Panam : </perso> When you're on the road day into night into day, your butt basically fusing with your seat, you forget what it's like.</normal></div>
 <div><normal><perso>V : </perso> Hehe.</normal></div>
 <div><normal><perso>V : </perso> Huh, think I know the feelin'.</normal></div>
-</div>
-</div>
-</div>
-</div>
-<div class='step-container'>
-<div class='step-title'>Étape 11</div>
-<div class='block-container'>
-<div class='block' id='block-00000017'>
-<div class='block-subtitles'>
-<div><normal><perso>Panam : </perso> Will you say something?</normal></div>
-<div><normal><perso>Panam : </perso> OK, what's going on?</normal></div>
+<audio id="audio-00000016" src="ogg/Sound-00000016.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000016')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
 <div class='step-title'>Étape 12</div>
+<div class='block-container'>
+<div class='block' id='block-00000017'>
+<div class='block-subtitles'>
+<div><normal><perso>Panam : </perso> Will you say something?</normal></div>
+<div><normal><perso>Panam : </perso> OK, what's going on?</normal></div>
+<audio id="audio-00000017" src="ogg/Sound-00000017.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000017')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 13</div>
 <div class='block-container'>
 <div class='block' id='block-00000018'>
 <div class='block-subtitles'>
@@ -302,12 +419,14 @@
 <div><normal><perso>V : </perso> Wasn't even that long ago...</normal></div>
 <div><normal><perso>V : </perso> Fuck. Fuck!</normal></div>
 <div><normal><perso>Panam : </perso> OK, V, relax. Take it bit by bit. What is happening, exactly?</normal></div>
+<audio id="audio-00000018" src="ogg/Sound-00000018.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000018')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 13</div>
+<div class='step-title'>Étape 14</div>
 <div class='block-container'>
 <div class='block' id='block-00000019'>
 <div class='block-subtitles'>
@@ -315,6 +434,8 @@
 <div><normal><perso>Panam : </perso> Bullshit. You don't know that.</normal></div>
 <div><normal><perso>V : </perso> Uh, sure. We'll see. I mean, you know how it is.</normal></div>
 <div><normal><perso>Panam : </perso> Stubborn bastard.</normal></div>
+<audio id="audio-00000019" src="ogg/Sound-00000019.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000019')"></button>
 </div>
 </div>
 <div class='block' id='block-00000020'>
@@ -323,12 +444,14 @@
 <div><normal><perso>Panam : </perso> Bullshit. You don't know that.</normal></div>
 <div><normal><perso>V : </perso> Gotta wait and see, won't we?</normal></div>
 <div><normal><perso>Panam : </perso> You're with me now. We will figure out and take care of that piece of shit in your head.</normal></div>
+<audio id="audio-00000020" src="ogg/Sound-00000020.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000020')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 14</div>
+<div class='step-title'>Étape 15</div>
 <div class='block-container'>
 <div class='block' id='block-00000021'>
 <div class='block-subtitles'>
@@ -338,12 +461,14 @@
 <div><normal><perso>V : </perso> Don't worry. I'm not dead yet.</normal></div>
 <div><normal><perso>Panam : </perso> V...</normal></div>
 <div><normal><perso>Panam : </perso> Fuck. That is not how it was supposed to be, was it?</normal></div>
+<audio id="audio-00000021" src="ogg/Sound-00000021.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000021')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 15</div>
+<div class='step-title'>Étape 16</div>
 <div class='block-container'>
 <div class='block' id='block-00000023'>
 <div class='block-subtitles'>
@@ -355,12 +480,14 @@
 <div><normal><perso>Panam : </perso> What?</normal></div>
 <div><normal><perso>Panam : </perso> Fuck. I'm sorry.</normal></div>
 <div><normal><perso>Panam : </perso> Forgot myself a bit, huh?</normal></div>
+<audio id="audio-00000023" src="ogg/Sound-00000023.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000023')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 16</div>
+<div class='step-title'>Étape 17</div>
 <div class='block-container'>
 <div class='block' id='block-00000024'>
 <div class='block-subtitles'>
@@ -372,6 +499,8 @@
 <div><normal><perso>Panam : </perso> Pfff. Ooo-K.</normal></div>
 <div><normal><perso>Panam : </perso> Well, watch out, now.</normal></div>
 <div><normal><perso>V : </perso> Ooo-K, then.</normal></div>
+<audio id="audio-00000024" src="ogg/Sound-00000024.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000024')"></button>
 </div>
 </div>
 <div class='block' id='block-00000025'>
@@ -387,12 +516,14 @@
 <div><normal><perso>V : </perso> Try followin' the impulse next time.</normal></div>
 <div><normal><perso>Panam : </perso> Do you know what, V? Fuck you.</normal></div>
 <div><normal><perso>V : </perso> Think that's it. Until next time?</normal></div>
+<audio id="audio-00000025" src="ogg/Sound-00000025.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000025')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 17</div>
+<div class='step-title'>Étape 18</div>
 <div class='block-container'>
 <div class='block' id='block-00000026'>
 <div class='block-subtitles'>
@@ -401,12 +532,14 @@
 <div><normal><perso>Panam : </perso> Did you sleep all right?</normal></div>
 <div><normal><perso>V : </perso> Yeah... Time kinda stopped for me.</normal></div>
 <div><normal><perso>Panam : </perso> So… I'm off.</normal></div>
+<audio id="audio-00000026" src="ogg/Sound-00000026.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000026')"></button>
 </div>
 </div>
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 18</div>
+<div class='step-title'>Étape 19</div>
 <div class='block-container'>
 <div class='block' id='block-00000022'>
 <div class='block-subtitles'>
@@ -422,6 +555,8 @@
 <div><normal><perso>V : </perso> See you soon?</normal></div>
 <div><normal><perso>Panam : </perso> You need to take a few deep breaths.</normal></div>
 <div><normal><perso>Panam : </perso> Talk soon, V!</normal></div>
+<audio id="audio-00000022" src="ogg/Sound-00000022.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000022')"></button>
 </div>
 </div>
 <div class='block' id='block-00000027'>
@@ -431,6 +566,8 @@
 <div><normal><perso>V : </perso> Sure, see you there.</normal></div>
 <div><normal><perso>Panam : </perso> Take care of yourself.</normal></div>
 <div><normal><perso>V : </perso> You, too, Panam.</normal></div>
+<audio id="audio-00000027" src="ogg/Sound-00000027.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000027')"></button>
 </div>
 </div>
 </div>
@@ -438,9 +575,11 @@
 <svg id='connections'>
 <line x1='0' y1='0' x2='0' y2='0' data-start='block-00000002' data-end='block-00000003' />
 <line x1='0' y1='0' x2='0' y2='0' data-start='block-00000002' data-end='block-00000004' />
-<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000003' data-end='block-00000005' />
-<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000004' data-end='block-00000005' />
-<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000005' data-end='block-00000007' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000003' data-end='block-00000028' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000003' data-end='block-00000030' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000004' data-end='block-00000028' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000004' data-end='block-00000030' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000028' data-end='block-00000005' />
 <line x1='0' y1='0' x2='0' y2='0' data-start='block-00000007' data-end='block-00000008' />
 <line x1='0' y1='0' x2='0' y2='0' data-start='block-00000007' data-end='block-00000009' />
 <line x1='0' y1='0' x2='0' y2='0' data-start='block-00000008' data-end='block-00000010' />
@@ -484,5 +623,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     setTimeout(updateLinePositions, 100);
 });
+</script>
+<script>
+function togglePlay(blockId) {
+    const audio = document.getElementById(`audio-${blockId}`);
+    const button = document.querySelector(`#block-${blockId} .audio-button`);
+    if (audio.paused || audio.ended) {
+        audio.play();
+        button.classList.remove('play');
+        button.classList.add('pause');
+    } else {
+        audio.pause();
+        button.classList.remove('pause');
+        button.classList.add('play');
+    }
+    // Réinitialiser l'état du bouton lorsqu'un audio se termine
+    audio.addEventListener('ended', () => {
+        button.classList.remove('pause');
+        button.classList.add('play');
+    });
+}
 </script>
 </body></html>

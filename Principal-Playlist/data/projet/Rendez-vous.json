@@ -9,14 +9,13 @@
                 {
                     "etape_number": 0,
                     "etape_position": 0,
-                    "identifiant": "00000002",
-                    "title": "1.0-Do_i_know you",
-                    "comment": "V se rend au point de rendez-vous.",
-                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/1.0-Do_i_know you.json",
+                    "identifiant": "00000028",
+                    "title": "MessagesSMS",
+                    "comment": ":  ",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/MessagesSMS.json",
                     "blocs_precedents": [],
                     "blocs_suivants": [
-                        "00000003",
-                        "00000004"
+                        "00000002"
                     ]
                 }
             ]
@@ -29,27 +28,16 @@
                 {
                     "etape_number": 1,
                     "etape_position": 0,
-                    "identifiant": "00000003",
-                    "title": "2.A0-[Sit]-Really_glad_to_see_you",
-                    "comment": "[Boire] Je suis trop content de te voir.",
-                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/2.A0-[Sit]-Really_glad_to_see_you.json",
-                    "blocs_precedents": [],
+                    "identifiant": "00000002",
+                    "title": "1.0-Do_i_know you",
+                    "comment": "V se rend au point de rendez-vous.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/1.0-Do_i_know you.json",
+                    "blocs_precedents": [
+                        "00000028"
+                    ],
                     "blocs_suivants": [
-                        "00000028",
-                        "00000030"
-                    ]
-                },
-                {
-                    "etape_number": 3,
-                    "etape_position": 1,
-                    "identifiant": "00000004",
-                    "title": "2.B0-[Sit]-glad_you_did_not_change_your_mind",
-                    "comment": "[Boire] Je suis content que t'aies pas chang\u00e9 d'avis.",
-                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/2.B0-[Sit]-glad_you_did_not_change_your_mind.json",
-                    "blocs_precedents": [],
-                    "blocs_suivants": [
-                        "00000028",
-                        "00000030"
+                        "00000003",
+                        "00000004"
                     ]
                 }
             ]
@@ -62,13 +50,12 @@
                 {
                     "etape_number": 2,
                     "etape_position": 0,
-                    "identifiant": "00000028",
-                    "title": "3.x-Pendant le bar",
-                    "comment": "Alors, tu fais quoi ces temps-ci ?",
-                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/3.x-Pendant le bar.json",
+                    "identifiant": "00000003",
+                    "title": "2.A0-[Sit]-Really_glad_to_see_you",
+                    "comment": "[Boire] Je suis trop content de te voir.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/2.A0-[Sit]-Really_glad_to_see_you.json",
                     "blocs_precedents": [
-                        "00000003",
-                        "00000004"
+                        "00000002"
                     ],
                     "blocs_suivants": [
                         "00000005"
@@ -77,15 +64,16 @@
                 {
                     "etape_number": 2,
                     "etape_position": 1,
-                    "identifiant": "00000030",
-                    "title": "3.x-Pendant le bar3",
-                    "comment": "[Boire]",
-                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/3.x-Pendant le bar3.json",
+                    "identifiant": "00000004",
+                    "title": "2.B0-[Sit]-glad_you_did_not_change_your_mind",
+                    "comment": "[Boire] Je suis content que t'aies pas chang\u00e9 d'avis.",
+                    "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/2.B0-[Sit]-glad_you_did_not_change_your_mind.json",
                     "blocs_precedents": [
-                        "00000003",
-                        "00000004"
+                        "00000002"
                     ],
-                    "blocs_suivants": []
+                    "blocs_suivants": [
+                        "00000005"
+                    ]
                 }
             ]
         },
@@ -95,16 +83,19 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 4,
+                    "etape_number": 3,
                     "etape_position": 0,
                     "identifiant": "00000005",
                     "title": "3.0-[Drink]-Talk_to_me",
-                    "comment": "V : Alors, tu fais quoi ces temps-ci\u00a0?",
+                    "comment": "Panam boit. Pendant qu'elle parle et s'\u00e9nerve de plus en plus ...",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/3.0-[Drink]-Talk_to_me.json",
                     "blocs_precedents": [
-                        "00000028"
+                        "00000003",
+                        "00000004"
                     ],
-                    "blocs_suivants": []
+                    "blocs_suivants": [
+                        "00000007"
+                    ]
                 }
             ]
         },
@@ -114,7 +105,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 5,
+                    "etape_number": 4,
                     "etape_position": 0,
                     "identifiant": "00000007",
                     "title": "3.1-[Drink]-Thought_you_and_Saul_agreed",
@@ -136,7 +127,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 4,
+                    "etape_number": 5,
                     "etape_position": 0,
                     "identifiant": "00000008",
                     "title": "4.A0-[Drink]-Dont_worry_about_Saul",
@@ -150,7 +141,7 @@
                     ]
                 },
                 {
-                    "etape_number": 4,
+                    "etape_number": 5,
                     "etape_position": 1,
                     "identifiant": "00000009",
                     "title": "4.B0-[Drink]-Saul_could_be_right",
@@ -171,7 +162,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 5,
+                    "etape_number": 6,
                     "etape_position": 0,
                     "identifiant": "00000010",
                     "title": "4.A1-Don't exaggerate",
@@ -185,7 +176,7 @@
                     ]
                 },
                 {
-                    "etape_number": 5,
+                    "etape_number": 6,
                     "etape_position": 1,
                     "identifiant": "00000011",
                     "title": "4.B1-I_can_help",
@@ -206,11 +197,11 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 6,
+                    "etape_number": 7,
                     "etape_position": 0,
                     "identifiant": "00000012",
                     "title": "5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel",
-                    "comment": "V : Panam.",
+                    "comment": "V : Bon, d'accord. J'\u00e9tais au Konpeki Plaza le soir o\u00f9 c'est arriv\u00e9.",
                     "playlist_lien": "D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/playlist/5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel.json",
                     "blocs_precedents": [
                         "00000010",
@@ -228,7 +219,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 7,
+                    "etape_number": 8,
                     "etape_position": 0,
                     "identifiant": "00000013",
                     "title": "5.1-I take it we've got a deal",
@@ -249,7 +240,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 8,
+                    "etape_number": 9,
                     "etape_position": 0,
                     "identifiant": "00000014",
                     "title": "6.0-Entrance to the room",
@@ -270,7 +261,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 9,
+                    "etape_number": 10,
                     "etape_position": 0,
                     "identifiant": "00000016",
                     "title": "6.1-[Sit]-It_is_awesome",
@@ -291,7 +282,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 10,
+                    "etape_number": 11,
                     "etape_position": 0,
                     "identifiant": "00000017",
                     "title": "7.0-Will_you_say_something",
@@ -312,7 +303,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 11,
+                    "etape_number": 12,
                     "etape_position": 0,
                     "identifiant": "00000018",
                     "title": "8.0-Reminded_me_of_jackie",
@@ -334,7 +325,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 12,
+                    "etape_number": 13,
                     "etape_position": 0,
                     "identifiant": "00000019",
                     "title": "9.A0-I cant_make_any_plans_for_the_future",
@@ -348,7 +339,7 @@
                     ]
                 },
                 {
-                    "etape_number": 12,
+                    "etape_number": 13,
                     "etape_position": 1,
                     "identifiant": "00000020",
                     "title": "9.B0-Dead in a few months",
@@ -369,7 +360,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 13,
+                    "etape_number": 14,
                     "etape_position": 0,
                     "identifiant": "00000021",
                     "title": "10.0-if_I_gotta_die",
@@ -391,7 +382,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 14,
+                    "etape_number": 15,
                     "etape_position": 0,
                     "identifiant": "00000023",
                     "title": "11.0-Come here",
@@ -413,7 +404,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 15,
+                    "etape_number": 16,
                     "etape_position": 0,
                     "identifiant": "00000024",
                     "title": "12.A0-Your_wish_is_our_command",
@@ -427,7 +418,7 @@
                     ]
                 },
                 {
-                    "etape_number": 15,
+                    "etape_number": 16,
                     "etape_position": 1,
                     "identifiant": "00000025",
                     "title": "12.B0-Often enought",
@@ -446,7 +437,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 16,
+                    "etape_number": 17,
                     "etape_position": 0,
                     "identifiant": "00000026",
                     "title": "13.0-I_didnt_want_to_wake_you",
@@ -468,7 +459,7 @@
             "width": 783,
             "blocs": [
                 {
-                    "etape_number": 14,
+                    "etape_number": 18,
                     "etape_position": 0,
                     "identifiant": "00000022",
                     "title": "13.A1-Oh_no",
@@ -480,7 +471,7 @@
                     "blocs_suivants": []
                 },
                 {
-                    "etape_number": 17,
+                    "etape_number": 18,
                     "etape_position": 1,
                     "identifiant": "00000027",
                     "title": "13.B1-Euh_wait",

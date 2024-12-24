@@ -12,6 +12,8 @@ playlist_name_label = ""  # Définition initiale
 playlist_count_label = None  # Définition initiale
 principal_count = None  # Définition initiale
 
+playlist_file_open = None  # Définition initiale
+
 playlist_tree = None # la playlist
 # Variable globale pour la fenêtre de projet
 

@@ -77,7 +77,31 @@
                     display: block; /* S'assure que `commentaire` est traité comme un bloc (comme un paragraphe) */
                     margin-top: 15px; /* Espace avant le commentaire */
                     margin-bottom: 15px; /* Espace après le commentaire */
-                }                             
+                }   
+                .block-subtitles div message-sent {
+                    display: block;
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: 8px;
+                    max-width: 300px;
+                    text-align: left;
+                    word-wrap: break-word;
+                    width: fit-content;                
+                    background-color: #dcf8c6;
+                    margin-left: auto;
+                }  
+                .block-subtitles div message-received {
+                    display: block;
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: 8px;
+                    max-width: 300px;
+                    text-align: left;
+                    word-wrap: break-word;
+                    width: fit-content;                
+                    background-color: #f1f1f1;
+                    margin-right: auto;
+                }                                                                             
                 svg {
                     position: absolute;
                     top: 0;
@@ -156,6 +180,20 @@
 <div class='step-container'>
 <div class='step-title'>Étape 1</div>
 <div class='block-container'>
+<div class='block' id='block-00000028'>
+<div class='block-subtitles'>
+<div><commentaire><perso></perso> V recoit un message de Panam</commentaire></div>
+<div><message-received><perso></perso> Salut V comment ca va? Hier on a attrappé un gars dans les Badlands et ca m'a fait penser à toi.</message-received></div>
+<div><message-sent><perso></perso> Pourquoi ca t'as fait pensé à moi</message-sent></div>
+<audio id="audio-00000028" src="ogg/Sound-00000028.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000028')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 2</div>
+<div class='block-container'>
 <div class='block' id='block-00000002'>
 <div class='block-subtitles'>
 <div><commentaire><perso></perso> V se rend au point de rendez-vous.</commentaire></div>
@@ -165,6 +203,7 @@
 <div><normal><perso>V : </perso> Euh, est-ce qu'on se connaît ?</normal></div>
 <div><normal><perso>Panam : </perso> Ha ha, c'est drôle…</normal></div>
 <div><normal><perso>V : </perso> Ha ha ha ha !</normal></div>
+<div><commentaire><perso></perso> V et Panam s'embrassent</commentaire></div>
 <div><normal><perso>V : </perso> Salut, Panam.</normal></div>
 <div><commentaire><perso></perso> Ils vont s'installer au bar et prenent un verre</commentaire></div>
 <audio id="audio-00000002" src="ogg/Sound-00000002.ogg"></audio>
@@ -174,7 +213,7 @@
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 2</div>
+<div class='step-title'>Étape 3</div>
 <div class='block-container'>
 <div class='block' id='block-00000003'>
 <div class='block-subtitles'>
@@ -201,29 +240,11 @@
 </div>
 </div>
 <div class='step-container'>
-<div class='step-title'>Étape 3</div>
-<div class='block-container'>
-<div class='block' id='block-00000028'>
-<div class='block-subtitles'>
-<div><action><perso></perso> Alors, tu fais quoi ces temps-ci ?</action></div>
-<audio id="audio-00000028" src="ogg/Sound-00000028.ogg"></audio>
-<button class="audio-button play" onclick="togglePlay('00000028')"></button>
-</div>
-</div>
-<div class='block' id='block-00000030'>
-<div class='block-subtitles'>
-<div><action><perso></perso> [Boire]</action></div>
-<audio id="audio-00000030" src="ogg/Sound-00000030.ogg"></audio>
-<button class="audio-button play" onclick="togglePlay('00000030')"></button>
-</div>
-</div>
-</div>
-</div>
-<div class='step-container'>
 <div class='step-title'>Étape 4</div>
 <div class='block-container'>
 <div class='block' id='block-00000005'>
 <div class='block-subtitles'>
+<div><commentaire><perso></perso> Panam boit. Pendant qu'elle parle et s'énerve de plus en plus ...</commentaire></div>
 <div><normal><perso>V : </perso> Alors, tu fais quoi ces temps-ci ?</normal></div>
 <div><normal><perso>Panam : </perso> Ben, il vaudrait mieux que…</normal></div>
 <div><normal><perso>V : </perso> Je t'écoute.</normal></div>
@@ -320,7 +341,11 @@
 <div class='block-container'>
 <div class='block' id='block-00000012'>
 <div class='block-subtitles'>
-<div><normal><perso>V : </perso> Panam.</normal></div>
+<div><normal><perso>V : </perso> Bon, d'accord. J'étais au Konpeki Plaza le soir où c'est arrivé.</normal></div>
+<div><normal><perso>V : </perso> T'inquiète pas pour ça.</normal></div>
+<div><normal><perso>Panam : </perso> Ouais, mais…</normal></div>
+<div><normal><perso>V : </perso> Alors, tu t'es décidée ?</normal></div>
+<div><normal><perso>Panam : </perso> Ouais. Enfin, je crois.</normal></div>
 <div><normal><perso>V : </perso> Ce plan, t'en penses quoi ?</normal></div>
 <div><normal><perso>Panam : </perso> C'est un bon plan, V… Hum, tu sais ce que Saul m'a dit, un jour ?</normal></div>
 <div><normal><perso>Panam : </perso> Il m'a dit que le seul moment où une personne est vraiment libre, c'est… quand elle sait… qu'elle a plus rien à perdre.</normal></div>
@@ -329,7 +354,10 @@
 <div><normal><perso>V : </perso> T'inquiète.</normal></div>
 <div><normal><perso>V : </perso> Non.</normal></div>
 <div><normal><perso>Panam : </perso> Parce que je tiens vraiment à toi. Mais j'ai peur de dire ou de faire un truc stupide, et… et de me retrouver seule dans le désert.</normal></div>
+<div><commentaire><perso></perso> Cas ou V s'affich e devant panam avec le masque d'Aguilar</commentaire></div>
 <div><normal><perso>Panam : </perso> Ben merde, t'as vraiment une sale gueule.</normal></div>
+<div><normal><perso>V : </perso> Ça pourrait marcher.</normal></div>
+<div><normal><perso>V : </perso> Ouais, ça peut marcher.</normal></div>
 <audio id="audio-00000012" src="ogg/Sound-00000012.ogg"></audio>
 <button class="audio-button play" onclick="togglePlay('00000012')"></button>
 </div>
@@ -565,13 +593,12 @@
 </div>
 </div>
 <svg id='connections'>
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000028' data-end='block-00000002' />
 <line x1='0' y1='0' x2='0' y2='0' data-start='block-00000002' data-end='block-00000003' />
 <line x1='0' y1='0' x2='0' y2='0' data-start='block-00000002' data-end='block-00000004' />
-<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000003' data-end='block-00000028' />
-<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000003' data-end='block-00000030' />
-<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000004' data-end='block-00000028' />
-<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000004' data-end='block-00000030' />
-<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000028' data-end='block-00000005' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000003' data-end='block-00000005' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000004' data-end='block-00000005' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000005' data-end='block-00000007' />
 <line x1='0' y1='0' x2='0' y2='0' data-start='block-00000007' data-end='block-00000008' />
 <line x1='0' y1='0' x2='0' y2='0' data-start='block-00000007' data-end='block-00000009' />
 <line x1='0' y1='0' x2='0' y2='0' data-start='block-00000008' data-end='block-00000010' />

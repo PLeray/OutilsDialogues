@@ -1,4 +1,5 @@
 import tkinter as tk
+import webbrowser
 
 from tkinter import Menu, filedialog
 import json, os
@@ -302,6 +303,16 @@ class StepBlockApp:
         tk.Button(self.button_frame, text="Connecter Blocs", command=self.create_connections).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Générer Projet HTML", command=self.generate_project_html).pack(side=tk.LEFT, padx=5, pady=5)
         tk.Button(self.button_frame, text="Générer Projet OGG", command=self.generate_Ogg).pack(side=tk.LEFT, padx=5, pady=5)
+        tk.Button(self.button_frame, text="Voir", command=self.open_project_web_page).pack(side=tk.LEFT, padx=5, pady=5)
+
+
+    def open_project_web_page(self):
+        project_name = os.path.splitext(os.path.basename(self.file_Projet))[0]
+        output_dir = os.path.join(os.path.dirname(self.file_Projet), f"{project_name}_files")
+        html_filename = os.path.join(output_dir, f"{global_variables.CheminLocalization + global_variables.CheminLangue}/{project_name}.html")
+        #print(f"html_filename lien: {html_filename}.") 
+        url = html_filename
+        webbrowser.open(url)        
 
     def Open_Bloc(self):
         if self.selected_block:
@@ -359,7 +370,7 @@ class StepBlockApp:
     def add_etape(self):
         """Ajouter une nouvelle étape après l'étape sélectionnée."""
         if self.selected_etape is not None:
-            # Ajouter après l'étape sélectionnée
+            # Ajouter avant l'étape sélectionnée
             new_index = self.sequence.etapes.index(self.selected_etape) 
         else:
             # Ajouter à la fin si aucune étape n'est sélectionnée
@@ -374,6 +385,11 @@ class StepBlockApp:
         # Réajuster les positions et numéros des étapes suivantes
         for idx, etape in enumerate(self.sequence.etapes):
             etape.numero = idx
+
+            # Réajuster les numéros des étapes pour les blocs
+            for block in etape.blocs:
+                block.etape_number = idx
+
             #etape.y = idx * 100 + 50
             etape.y = idx * (global_variables.ETAPE_HEIGHT + global_variables.ETAPE_SPACING) + global_variables.ETAPE_HEIGHT // 2
         # Redessiner la séquence
@@ -491,12 +507,14 @@ class StepBlockApp:
         # Mettre à jour le champ comment des blocs avec uneFonction
         for etape in self.sequence.etapes:
             for block in etape.blocs:
-                subtitle = charger_sous_titres_from_JSON_playlist(block.playlist_lien, first_entry_only=True)
-                perso = subtitle[0].get("perso", "Inconnu").capitalize()
-                sous_titre = subtitle[0].get("sous_titre", "")
-                if perso.strip():  # Vérifie si le texte est vide ou contient uniquement des espaces
-                        perso = perso + " : " 
-                block.comment = perso + sous_titre
+                #print(f"  block.playlist_lien: {block.playlist_lien}")
+                if block.playlist_lien :
+                    subtitle = charger_sous_titres_from_JSON_playlist(block.playlist_lien, first_entry_only=True)
+                    perso = subtitle[0].get("perso", "Inconnu").capitalize()
+                    sous_titre = subtitle[0].get("sous_titre", "")
+                    if perso.strip():  # Vérifie si le texte est vide ou contient uniquement des espaces
+                            perso = perso + " : " 
+                    block.comment = perso + sous_titre
 
         # Vider les connexions actuelles
         self.sequence.connections = []

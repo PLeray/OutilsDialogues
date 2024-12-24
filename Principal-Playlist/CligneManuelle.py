@@ -6,9 +6,10 @@ import global_variables  # Importer les variables globales
 from general_functions import Delocalise_project_path, extraire_PROJET_localise_path
 
 class LigneManuelle:
-    def __init__(self, parent, playlist_tree, column_names=None, file_path=None):
+    def __init__(self, parent, playlist_tree, column_names=None, file_path=None, save_callback=None):
         self.parent = parent
         self.playlist_tree = playlist_tree
+        self.save_callback = save_callback  # Callback pour la sauvegarde
         self.file_path = file_path or extraire_PROJET_localise_path(Delocalise_project_path(global_variables.path_dernier_projet)) 
 
         print(f"file_path calculé : {extraire_PROJET_localise_path(Delocalise_project_path(global_variables.path_dernier_projet))}") 
@@ -25,6 +26,11 @@ class LigneManuelle:
         self.window = tk.Toplevel(self.parent)
         self.window.title("Add/Edit Playlist Row")
         self.window.geometry("1500x400")
+
+        # Rendre la fenêtre modale
+        self.window.grab_set()  # Empêche l'interaction avec les autres fenêtres tant que celle-ci est ouverte
+        self.window.transient(self.parent)  # S'assure que la fenêtre reste au premier plan
+        self.window.protocol("WM_DELETE_WINDOW", self._on_close)  # Gère la fermeture propre        
 
         # Cadre pour la liste et les champs
         left_frame = tk.Frame(self.window, width=500)
@@ -91,6 +97,18 @@ class LigneManuelle:
         # Événement pour activer le bouton "Save Line" si le champ global_variables.data_F_SubTitle est rempli
         self.entry_fields["ACTION Female * :"].bind("<KeyRelease>", self._check_save_button_state)
 
+    def _on_close(self):
+        """Gère la fermeture de la fenêtre."""
+        #print("Fermeture de la fenêtre LigneManuelle.")  # Debugging
+        if self.save_callback:
+            #print("Appel du callback save_callback.")  # Debugging
+            self.save_callback()  # Appeler le callback de sauvegarde
+        self.window.grab_release()  # Libérer la fenêtre principale
+        self.window.destroy()  # Détruire la fenêtre
+
+
+
+
     def _generate_unique_id(self):
         """Génère un identifiant unique."""
         return str(int(time.time() * 1_000_000))
@@ -113,10 +131,11 @@ class LigneManuelle:
             ]
             # Insérer les valeurs dans le Treeview
             self.playlist_tree.insert("", tk.END, values=values)
-            print(f"Ligne ajoutée au Treeview : {values}")
+            #print(f"Ligne ajoutée au Treeview : {values}")
         except IndexError:
             print("Aucune ligne sélectionnée dans la Listbox.")
-        self.window.destroy()
+        # Appeler la méthode _on_close pour gérer proprement la fermeture
+        self._on_close()
 
     def _populate_fields_from_selection(self, event=None):
         """Remplit les champs avec les valeurs de la ligne sélectionnée."""
@@ -207,7 +226,7 @@ class LigneManuelle:
                 self.line_listbox.delete(0, tk.END)
                 for idx, row in enumerate(reader):
                     self.data.append(row)
-                    self.line_listbox.insert(tk.END, f"{row[global_variables.data_ID]} - {row[global_variables.data_F_SubTitle][:50]} - {row[global_variables.data_M_SubTitle][:50]}")
+                    self.line_listbox.insert(tk.END, f"{row[global_variables.data_ID]} - {row[global_variables.data_F_Voice]} - {row[global_variables.data_F_SubTitle][:50]} - {row[global_variables.data_M_SubTitle][:50]}")
         else:
             self.data = []
 
@@ -269,3 +288,81 @@ class LigneManuelle:
         """Active le bouton Save Line si la valeur de la drop-list change."""
         if self.save_button["state"] == "disabled":
             self.save_button.config(state="normal")
+
+
+    def _create_window(self):
+        """Crée la fenêtre de saisie manuelle."""
+        self.window = tk.Toplevel(self.parent)
+        self.window.title("Add/Edit Playlist Row")
+        self.window.geometry("1500x400")
+
+        # Rendre la fenêtre modale
+        self.window.grab_set()  # Empêche l'interaction avec les autres fenêtres tant que celle-ci est ouverte
+        self.window.transient(self.parent)  # S'assure que la fenêtre reste au premier plan
+        self.window.protocol("WM_DELETE_WINDOW", self._on_close)  # Gère la fermeture propre
+
+        # Cadre pour la liste et les champs
+        left_frame = tk.Frame(self.window, width=500)
+        left_frame.pack(side=tk.LEFT, fill=tk.Y, padx=10, pady=10)
+
+        right_frame = tk.Frame(self.window)
+        right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=10, pady=10)
+
+        # Ajouter une liste pour afficher les lignes
+        self.line_listbox = tk.Listbox(left_frame, width=130, height=20)
+        self.line_listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar = tk.Scrollbar(left_frame, orient=tk.VERTICAL, command=self.line_listbox.yview)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        self.line_listbox.config(yscrollcommand=scrollbar.set)
+
+        # Charger les lignes du fichier CSV dans la liste
+        self._load_lines_from_csv()
+
+        # Événement de sélection d'une ligne dans la liste
+        self.line_listbox.bind("<<ListboxSelect>>", self._populate_fields_from_selection)
+
+        # Label pour stringId
+        string_id_label = tk.Label(right_frame, text="String ID:")
+        string_id_label.grid(row=0, column=0, padx=5, pady=5, sticky="w")
+
+        optionsValeur = ["COMMENT", "ACTION", "MSG-IN", "MSG-OUT"]
+
+        # Drop-down list pour ajouter une particularité au stringId
+        self.prefix_var = tk.StringVar(value="COMMENT")  # Valeur par défaut vide
+        self.prefix_menu = tk.OptionMenu(right_frame, self.prefix_var, *optionsValeur, command=self._on_prefix_change)
+        self.prefix_menu.config(width=15)  # Fixez la largeur ici
+        self.prefix_menu.grid(row=0, column=1, padx=10, pady=5, sticky="w")  # Placez la drop-list juste après le label
+
+        # Champ pour afficher la valeur actuelle de stringId
+        self.string_id_var = tk.StringVar(value="NOTHING")
+        string_id_entry = tk.Entry(right_frame, textvariable=self.string_id_var, state="readonly", width=30)
+        string_id_entry.grid(row=0, column=1, padx=150, pady=5, sticky="w")  # Placez le champ immédiatement après la drop-list
+
+        # Ajouter des champs d'entrée pour chaque colonne
+        for idx, column in enumerate(self.column_names):
+            label = tk.Label(right_frame, text=column)
+            label.grid(row=idx + 1, column=0, padx=10, pady=5, sticky="w")
+
+            entry = tk.Entry(right_frame, width=80)
+            entry.grid(row=idx + 1, column=1, padx=10, pady=5)
+            self.entry_fields[column] = entry
+
+        # Ajouter un cadre pour les boutons
+        button_frame = tk.Frame(right_frame)
+        button_frame.grid(row=len(self.column_names) + 2, column=0, columnspan=2, pady=10)
+
+        self.new_line_button = tk.Button(button_frame, text="New Line", command=self._reset_form, state="disabled")
+        self.new_line_button.pack(side=tk.LEFT, padx=5)
+
+        self.save_button = tk.Button(button_frame, text="Save Line", command=self._save_selected_row, state="disabled")
+        self.save_button.pack(side=tk.LEFT, padx=5)
+
+        self.delete_button = tk.Button(button_frame, text="Delete Line", command=self._delete_selected_row, state="disabled")
+        self.delete_button.pack(side=tk.LEFT, padx=5)
+
+        # Bouton pour insérer une ligne dans le Treeview
+        self.insert_playlist_button = tk.Button(self.window, text="Insert Line in playlist", command=self._add_Line_In_Playlist, state="disabled")
+        self.insert_playlist_button.place(relx=1.0, rely=1.0, anchor="se", x=-10, y=-10)
+
+        # Événement pour activer le bouton "Save Line" si le champ global_variables.data_F_SubTitle est rempli
+        self.entry_fields["ACTION Female * :"].bind("<KeyRelease>", self._check_save_button_state)

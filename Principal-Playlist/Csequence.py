@@ -91,6 +91,10 @@ class Sequence:
                 remaining_etape.numero = idx
                 #remaining_etape.y = self.SEPARATION + idx * self.HAUTEUR
                 remaining_etape.y = idx * (global_variables.ETAPE_HEIGHT + global_variables.ETAPE_SPACING) + global_variables.ETAPE_HEIGHT // 2
+                
+                # Réajuster les numéros des étapes pour les blocs
+                for block in remaining_etape.blocs:
+                    block.etape_number = idx
 
     def reorganize_etapes(self):
         """Réorganiser les étapes en ajustant leurs positions Y."""
