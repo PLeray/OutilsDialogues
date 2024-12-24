@@ -435,26 +435,6 @@ def save_playlist_to_txt(playlist_tree):
         except Exception as e:
             print(f"Erreur lors de la sauvegarde : {e}")
 
-def open_manual_entry_window2(button_frame, playlist_tree, tk):
-    # Vérifier si une instance existe déjà
-    if global_variables.ligne_manuelle_instance is None or not global_variables.ligne_manuelle_instance.window.winfo_exists():
-        global_variables.ligne_manuelle_instance = LigneManuelle(button_frame, playlist_tree)
-        """
-         save_playlist_to_file(playlist_tree, global_variables.playlist_file_open)
-        charger_playlist_from_file(playlist_tree,tk, global_variables.playlist_file_open)
-        count_playlist_rows(playlist_tree)  # Mettre à jour le compteur
-        colorize_playlist_rows(playlist_tree)  # Mettre à jour les couleurs       
-        """
-
-    else:
-        # Ramener la fenêtre existante au premier plan
-        global_variables.ligne_manuelle_instance.window.lift()
-        global_variables.ligne_manuelle_instance.window.focus_force()
-        print("Une instance est déjà ouverte, elle a été ramenée au premier plan.")
-    
-    print("cé faut FIN INSERTION NEW LINE")
-        #save_playlist_to_file(playlist_tree, global_variables.playlist_file_open)
-
 def open_manual_entry_window(button_frame, playlist_tree, tk):
     def save_playlist():
         """Callback pour sauvegarder la playlist."""

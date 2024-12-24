@@ -190,9 +190,13 @@ class PageHTML:
 
     def generate_project_html(self):
         project_name = os.path.splitext(os.path.basename(self.file_projet))[0]
-        output_dir = os.path.join(os.path.dirname(self.file_projet), f"{project_name}_files")
-        html_filename = os.path.join(output_dir, f"{global_variables.CheminLocalization + global_variables.CheminLangue}/{project_name}.html")
-        
+        base_dir = os.path.dirname(self.file_projet)  # Répertoire contenant le fichier projet
+        localization_dir = f"{project_name}_files/{global_variables.CheminLocalization}{global_variables.CheminLangue}"
+
+        # Construire le chemin de sortie
+        output_dir = os.path.join(base_dir, localization_dir)
+        html_filename = os.path.join(output_dir, f"{project_name}.html")  # Nom du fichier HTML
+
         # Créer les dossiers si nécessaire
         os.makedirs(os.path.dirname(html_filename), exist_ok=True)
 
@@ -212,7 +216,7 @@ class PageHTML:
                 block_id = f"block-{block.identifiant}"
                 block_positions[block.identifiant] = block_id
                 html_content += f"<div class='block' id='{block_id}'>\n"
-
+                
                 # Ajout des sous-titres
                 subtitles = charger_sous_titres_from_JSON_playlist(block.playlist_lien)
                 html_content += "<div class='block-subtitles'>\n"
@@ -239,8 +243,12 @@ class PageHTML:
 
                     html_content += f"<div><{divType}><perso>{perso}</perso> {sous_titre}</{divType}></div>\n"
 
-                html_content += f"<audio id=\"audio-{block.identifiant}\" src=\"ogg/Sound-{block.identifiant}.ogg\"></audio>\n"
-                html_content += f"<button class=\"audio-button play\" onclick=\"togglePlay('{block.identifiant}')\"></button>\n"
+                # Vérifier si le fichier ogg existe
+                ogg_file_path = os.path.join(output_dir, f"ogg/Sound-{block.identifiant}.ogg")
+                #print(f"Path Fichier OGG  : {ogg_file_path}")
+                if os.path.exists(ogg_file_path):
+                    html_content += f"<audio id=\"audio-{block.identifiant}\" src=\"ogg/Sound-{block.identifiant}.ogg\"></audio>\n"
+                    html_content += f"<button class=\"audio-button play\" onclick=\"togglePlay('{block.identifiant}')\"></button>\n"
 
                 html_content += "</div>\n"
 

@@ -135,7 +135,7 @@ class LigneManuelle:
         except IndexError:
             print("Aucune ligne sélectionnée dans la Listbox.")
         # Appeler la méthode _on_close pour gérer proprement la fermeture
-        self._on_close()
+        #self._on_close()
 
     def _populate_fields_from_selection(self, event=None):
         """Remplit les champs avec les valeurs de la ligne sélectionnée."""
