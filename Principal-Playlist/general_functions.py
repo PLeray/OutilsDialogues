@@ -169,7 +169,7 @@ def charger_sous_titres_from_JSON_playlist(file_path, first_entry_only=False):
 
             if len(playlist_data) > 0:  # Vérifier si le fichier contient des données
                 for index, entry in enumerate(playlist_data):
-                    prefix = ""
+                    prefix = "vo"
                     recup_Quete = entry[global_variables.data_Quest]
                     fichierQuete = ""
                     if recup_Quete.lower().endswith(".csv"):

@@ -221,11 +221,14 @@ class PageHTML:
                 subtitles = charger_sous_titres_from_JSON_playlist(block.playlist_lien)
                 html_content += "<div class='block-subtitles'>\n"
                 for subtitle in subtitles: 
+                    stringID = subtitle.get(global_variables.data_ID, "")
+                    print(f"subtitle  : {subtitle}")
+                    print(f"stringID  : {stringID}")
                     prefixID = subtitle.get("type", "")
-                    #prefixID = subtitle.get(global_variables.data_ID, "")[:3]
+                    
                     #print(f"prefixID : {prefixID}")
                     ["COMMENT", "ACTION", "MSG-IN", "MSG-OUT"]
-                    divType = "normal"
+                    divType = "vo"
                     if prefixID == "COMMENT":
                         divType = "commentaire"
                     elif  prefixID == "ACTION":
@@ -235,13 +238,16 @@ class PageHTML:
                     elif  prefixID == "MSG-OUT":
                         divType = "message-sent"
                     else:
-                        divType = "normal"
+                        divType = "vo"
                     perso = subtitle.get("perso", "").capitalize()
                     if perso.strip():  # Vérifie si le texte est vide ou contient uniquement des espaces
                         perso = perso + " : " 
                     sous_titre = subtitle.get("sous_titre", "")
 
-                    html_content += f"<div><{divType}><perso>{perso}</perso> {sous_titre}</{divType}></div>\n"
+                    if prefixID == "vo":
+                        html_content += f"<div><span title=\"the vo stringId from the game : {stringID} \"><{divType}><perso>{perso}</perso> {sous_titre}</{divType}></span></div>\n"
+                    else:
+                        html_content += f"<div><{divType}><perso>{perso}</perso> {sous_titre}</{divType}></div>\n"
 
                 # Vérifier si le fichier ogg existe
                 ogg_file_path = os.path.join(output_dir, f"ogg/Sound-{block.identifiant}.ogg")

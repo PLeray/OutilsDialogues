@@ -40,16 +40,17 @@ class LigneManuelle:
         right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=10, pady=10)
 
         # Ajouter une liste pour afficher les lignes
-        self.line_listbox = tk.Listbox(left_frame, width=130, height=20)
-        
+        self.line_listbox = tk.Listbox(left_frame, width=20, height=20)
         self.line_listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+        # Ajouter une barre de défilement
         scrollbar = tk.Scrollbar(left_frame, orient=tk.VERTICAL, command=self.line_listbox.yview)
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
         self.line_listbox.config(yscrollcommand=scrollbar.set)
 
         # Charger les lignes du fichier CSV dans la liste
         self._load_lines_from_csv()
-
+        
         # Événement de sélection d'une ligne dans la liste
         self.line_listbox.bind("<<ListboxSelect>>", self._populate_fields_from_selection)
 
@@ -105,8 +106,6 @@ class LigneManuelle:
             self.save_callback()  # Appeler le callback de sauvegarde
         self.window.grab_release()  # Libérer la fenêtre principale
         self.window.destroy()  # Détruire la fenêtre
-
-
 
 
     def _generate_unique_id(self):
@@ -216,6 +215,7 @@ class LigneManuelle:
                 writer.writeheader()
             writer.writerow(row_data)
 
+
     def _load_lines_from_csv(self):
         """Charge les lignes depuis le fichier CSV."""
         file_path = self.file_path
@@ -229,6 +229,8 @@ class LigneManuelle:
                     self.line_listbox.insert(tk.END, f"{row[global_variables.data_ID]} - {row[global_variables.data_F_Voice]} - {row[global_variables.data_F_SubTitle][:50]} - {row[global_variables.data_M_SubTitle][:50]}")
         else:
             self.data = []
+        self.line_listbox.config(font=("arial", 9))
+           
 
     def _check_save_button_state(self, event):
         """Active ou désactive le bouton 'Save Line' selon les modifications."""
