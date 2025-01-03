@@ -12,4 +12,4 @@ venv/*
 # Ne pas ignorer important.log
 #!logs/important.log
 !CyberPunk-Dialog/data/projet/Rendez-vous.json
-!CyberPunk-Dialog/data/projet/Rendez-vous_files/*
+!CyberPunk-Dialog/data/projet/Rendez-vous_files/
