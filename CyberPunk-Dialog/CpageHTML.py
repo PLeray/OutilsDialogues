@@ -3,6 +3,20 @@ from general_functions import charger_sous_titres_from_JSON_playlist
 from LectureOgg import fusionner_audio_json
 import global_variables  # Importer les variables globales
 
+LANGUAGE_NAMES = {
+    "de-de": "Deutsch",
+    "en-us": "English",
+    "es-es": "Spanish",
+    "fr-fr": "Français",
+    "it-it": "Italiano",
+    "ja-jp": "日本語 (Japanese)",
+    "ko-kr": "한국어 (Korean)",
+    "pl-pl": "Polish",
+    "pt-br": "Português",
+    "ru-ru": "Russian",
+    "zh-cn": "中文 (Simplified Chinese)"
+}
+
 class PageHTML:
     def __init__(self, sequence, file_projet):
         self.sequence = sequence
@@ -203,6 +217,20 @@ class PageHTML:
         html_content = self.generate_HeaderStyle(project_name)
         html_content += f"<body>\n<h1 style='text-align:center;'>{project_name}</h1>\n"
 
+
+        # Ajouter les liens vers les langues disponibles
+        available_languages = self.get_available_languages()
+        if available_languages:
+            html_content += "<div style='text-align:center; margin-bottom: 20px;'>\n"
+            html_content += " | ".join(
+                f"<a href='../{lang}/{project_name}.html'>{LANGUAGE_NAMES.get(lang, lang)}</a>"
+                for lang in available_languages
+                if lang != global_variables.CheminLangue  # Exclure la langue actuelle
+            )
+            html_content += "</div>\n"            
+
+
+
         block_positions = {}
 
         for idx, etape in enumerate(self.sequence.etapes, start=1):
@@ -366,3 +394,19 @@ class PageHTML:
                         print(f"Erreur lors de la génération du fichier .ogg pour le bloc {block.identifiant} : {e}")
                 else:
                     print(f"Aucune playlist JSON valide pour le bloc {block.identifiant}")
+
+    def get_available_languages(self):
+        """
+        Récupère la liste des langues disponibles dans le répertoire de localisation.
+        """
+        project_name = os.path.splitext(os.path.basename(self.file_projet))[0]
+        base_dir = os.path.dirname(self.file_projet)
+        localization_path = os.path.join(base_dir, f"{project_name}_files/localization")
+        
+        if not os.path.exists(localization_path):
+            return []  # Aucun répertoire de langues trouvé
+
+        return [
+            lang for lang in os.listdir(localization_path)
+            if os.path.isdir(os.path.join(localization_path, lang))  # Filtrer les dossiers
+        ]
