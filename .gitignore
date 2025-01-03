@@ -1,11 +1,16 @@
 # Ignorer tout dans /data
 CyberPunk-Dialog/data/*
 
-# Réautoriser le dossier projet et les fichiers spécifiques
-!CyberPunk-Dialog/data/projet/
+# Ne pas ignorer le fichier spécifique
 !CyberPunk-Dialog/data/projet/Rendez-vous.json
+# Ne pas ignorer uniquement ce sous-dossier et son contenu
 !CyberPunk-Dialog/data/projet/Rendez-vous_files/
 !CyberPunk-Dialog/data/projet/Rendez-vous_files/**
+
+# Ré-ignorer tout le reste dans /projet/ pour plus de précision
+CyberPunk-Dialog/data/projet/*
+!CyberPunk-Dialog/data/projet/Rendez-vous.json
+!CyberPunk-Dialog/data/projet/Rendez-vous_files/
 
 # Ignorer les autres fichiers et dossiers globaux
 CyberPunk-Dialog/userconf.ini
