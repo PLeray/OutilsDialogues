@@ -1,15 +1,15 @@
-# Ignorer tout le dossier logs
-#logs/*
-# Ignorer tout le dossier /data
+# Ignorer tout dans /data
 CyberPunk-Dialog/data/*
-#CyberPunk-Dialog/data/BDDjson
+
+# Réautoriser le dossier projet et les fichiers spécifiques
+!CyberPunk-Dialog/data/projet/
+!CyberPunk-Dialog/data/projet/Rendez-vous.json
+!CyberPunk-Dialog/data/projet/Rendez-vous_files/
+!CyberPunk-Dialog/data/projet/Rendez-vous_files/**
+
+# Ignorer les autres fichiers et dossiers globaux
 CyberPunk-Dialog/userconf.ini
 CyberPunk-Dialog/__pycache__/*
 __pycache__/*
 venv/*
 .vscode/*
-
-# Ne pas ignorer important.log
-#!logs/important.log
-!CyberPunk-Dialog/data/projet/Rendez-vous.json
-!CyberPunk-Dialog/data/projet/Rendez-vous_files/
