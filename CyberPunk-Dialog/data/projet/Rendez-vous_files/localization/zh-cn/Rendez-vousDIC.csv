@@ -1,8 +1,8 @@
 femaleVariant,maleVariant,stringId,female_vo_path,male_vo_path,quest_path
 V 前往集合点。,,1734639643012578,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-[喝酒]很高兴见到你。,,1734733486045460,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
+[喝]很高兴见到你。,,1734733486045460,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [喝]我很高兴你没有改变主意。,[喝酒]我很高兴你没有改变主意。,1734733573905763,ACTION,ACTION,D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/projet/Rendez-vous_files/{}/Rendez-vousDIC.csv
-他们去酒吧喝了一杯（就像模组 Lizzie's Braindances: Places of Night City > Bar in Downtown）,,1734736588881117,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+他们去酒吧坐下来喝一杯（就像模组《Lizzie's Braindances: Places of Night City > Bar in Downtown》中的那样）,,1734736588881117,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 【等待巴拿马】,,1734824689179729,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 帕南到达酒吧附近的集合点......,,1734885474362720,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [喝],,1734887593907139,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -17,8 +17,8 @@ V收到来自巴拿马的消息,,1735040401780488,COMMENT,COMMENT,Rendez-vous_fi
 我一天只想你一次，却持续了24小时！,,1735040846812203,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 哦，你真可爱！ <3 <3 <3,,1735056244885189,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 索尔希望我们毁掉所有能把我们和这个家伙联系起来的东西……但是，嘿，我一直想着你，以防万一……,,1735056295732630,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
-我不知道我能用它做什么，然后... Konpeki 对我来说不是最好的回忆...,,1735056326435636,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-好吧，那太愚蠢了！我要按照扫罗所说的去做，消灭他！,,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+我不知道我能用它做什么，然后... Konpeki 对我来说并不是最好的回忆...,,1735056326435636,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+好吧，那太愚蠢了！我会按照扫罗所说的去做，消灭他！,,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 不用等了！这东西是如何工作的？,,1735056393052657,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 好吧，你去他们的网站并输入一个名字，然后预订就完成了……,,1735056411224054,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 好吧……也许我有一个主意！您想利用它吗？,,1735056425988329,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -47,17 +47,17 @@ V坐在床上。 Panam 可以坐在 V 对面。（就像 Lizzie 的 Braindances�
 帕纳姆来到床上，坐在 V 旁边。（如《莉齐的脑舞：娃娃屋》模组中那样）,,1735146139634145,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 说完最后一句话，Panam 弯下腰靠在床上（就像 Lizzie 的 Braindances: DollHouse mod 中那样） ,,1735146177514793,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 帕纳姆躺在他旁边……（如《莉齐的脑舞：娃娃屋》模组中那样）,,1735146190854713,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-帕纳姆很生气，第一句话就赶紧坐下了！,,1735146208634254,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+帕纳姆很生气，第一句话就赶紧坐下！,,1735146208634254,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 愤怒的帕纳姆说着最后一句话就离开了！,,1735146218671463,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 任务结束,,1735146262371852,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-当我们听到帕纳姆说出她的最后一句话时，衣服消失了,,1735148577111890,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-他们在V的最后一句话中赤身裸体,,1735148591380400,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+当帕纳姆说出她的最后一句话时，衣服消失了,,1735148577111890,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+V的最后一句话他们全裸了,,1735148591380400,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [显性活动]哦，好的。,,1735148603319961,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 后来……他们还躺在床上，赤裸着。,,1735148655590069,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 巴拿马叶,,1735148670146144,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 V再次出现在关闭的金碧面前,,1735148683898389,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 如果预订是以 Aguilar Nubiola 的名义进行的，V 就会收到来自陌生人的消息。是阿吉拉尔！ （但当然不可能回答……）,,1735149083786826,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-我最终会认为你盗取我身份的倾向是对我的一种奉承……在我下次访问北卡罗来纳州期间，我将非常高兴听到你求我。但同样可以肯定的是，黑夜将伴随着每一天，它不会拯救你。,,1735149096392131,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+我最终会认为你盗用我身份的倾向是对我的一种奉承……在我下次访问北卡罗来纳州期间，我将非常高兴听到你求我。但同样可以肯定的是，每天都会有黑夜，它不会拯救你。,,1735149096392131,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 过了一会儿，V 灵机一动，联系了Panam：,,1735472601463996,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [喝]巴拿马...,,1735566026604495,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 不管怎样，昨天我们在荒地抓到了一个人，并在他身上发现了一张在 Konpeki Plaza 套房过夜的通行证。你告诉我关于金佩基的事……,,1735567342585502,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -76,7 +76,7 @@ Panam 和 V 进入 Konpeki Plaza 套房,,1735584121915575,COMMENT,COMMENT,Rendez
 [说]我们来谈谈金碧的计划吧……,,1735827222153488,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [说]那么，你准备好了吗？,,1735831536035375,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 帕纳姆和 V 离开市中心的商店。,,1735832194237069,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-如果可以的话可以安排到达酒店并前往房间。 （就像在 Konpeki Plaza 的抢劫任务中，我们跟随 Jackie 到房间。是否有可能用 Panam 代替 Jackie？这种修改可能吗？） ....否则它会直接在房间中开始。,,1735832600444044,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+如果可以的话，可以安排到达酒店并前往房间。 （就像在 Konpeki Plaza 的抢劫任务中，我们跟随 Jackie 到房间。是否可以用 Panam 代替 Jackie？这种修改可能吗？） ....否则它会直接在房间中开始。,,1735832600444044,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 任务开始,,1735854459066934,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [说]巴拿马……,,1735854611598502,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [说]我信任一个人，他却操了我。,,1735854718843424,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv

@@ -2,7 +2,7 @@ femaleVariant,maleVariant,stringId,female_vo_path,male_vo_path,quest_path
 V geht zum Treffpunkt.,,1734639643012578,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "[Trinken] Ich freue mich so, dich zu sehen.",,1734733486045460,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "[Trinken] Ich bin froh, dass du deine Meinung nicht geändert hast.","[Trinken] Ich bin froh, dass du deine Meinung nicht geändert hast.",1734733573905763,ACTION,ACTION,D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/projet/Rendez-vous_files/{}/Rendez-vousDIC.csv
-Sie gehen in die Bar und trinken etwas (wie in der Mod „Lizzie's Braindances: Places of Night City > Bar in Downtown“),,1734736588881117,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+Sie setzen sich an die Bar und trinken etwas (wie in der Mod „Lizzie's Braindances: Places of Night City > Bar in Downtown“).,,1734736588881117,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Warten Sie auf Panam],,1734824689179729,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Panam kommt am Treffpunkt in der Nähe der Bar an ...,,1734885474362720,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Trinken],,1734887593907139,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -18,7 +18,7 @@ V erhält eine Nachricht von Panam,,1735040401780488,COMMENT,COMMENT,Rendez-vous
 "Oh, du bist süß! <3 <3 <3",,1735056244885189,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Saul wollte, dass wir alles zerstören, was uns mit diesem Kerl in Verbindung bringen könnte ... Aber hey, ich habe den Pass behalten und an dich gedacht, nur für den Fall ...",,1735056295732630,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Ich weiß nicht, was ich damit machen könnte und dann... Konpeki ist nicht die beste Erinnerung für mich...",,1735056326435636,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"Ok, das ist dumm! Ich werde tun, was Saul gesagt hat, und ihn zerstören!",,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"Ok, das ist dumm! Ich werde tun, was Saul gesagt hat, und ihn vernichten!",,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Keine Wartezeit! Wie funktioniert das Ding?,,1735056393052657,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Nun, Sie gehen auf ihre Website, geben einen Namen ein und schon ist die Reservierung abgeschlossen …",,1735056411224054,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Ok... vielleicht habe ich eine Idee! Möchten Sie davon profitieren?,,1735056425988329,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -50,7 +50,7 @@ Panam legt sich neben ihn ... (Wie in der Lizzie's Braindances: DollHouse-Mod),,
 "Panam ist beleidigt, sie setzt sich schnell zu ihrem ersten Satz!",,1735146208634254,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Wütend geht Panam, während sie ihren letzten Satz sagt!",,1735146218671463,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 ENDE DER QUEST,,1735146262371852,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"Die Kleidung verschwindet, als wir Panam ihren letzten Satz sagen hören",,1735148577111890,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"Die Kleidung verschwindet, während Panam ihren letzten Satz sagt",,1735148577111890,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Im letzten Satz von V sind sie nackt,,1735148591380400,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "[Explizite Aktivitäten] Ooh, OK.",,1735148603319961,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Später... liegen sie immer noch nackt auf dem Bett.,,1735148655590069,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -70,7 +70,7 @@ Panam und V betreten die Konpeki Plaza Suite,,1735584121915575,COMMENT,COMMENT,R
 [Aguilars Fußabdruck deaktivieren],,1735756509206727,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Eine Nachricht an Panam senden],,1735769077098714,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Sagen Sie] Achten Sie nicht auf Saul. Es wird auf ihn übergehen.,,1735769360126834,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
-[Sprichwort] Vielleicht hat Saul recht ...,,1735769421066106,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
+[Sprichwort] Vielleicht hat Saul Recht ...,,1735769421066106,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Sag] Übertreibe auch nicht,,1735826347203087,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "[Sagen Sie] Kann ich etwas tun, um Ihnen zu helfen?",,1735826373383827,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Sag] Lass uns über unseren Plan für Konpeki reden ...,,1735827222153488,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
