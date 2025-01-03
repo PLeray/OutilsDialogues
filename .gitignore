@@ -1,5 +1,5 @@
 # Ignorer tout dans /data
-CyberPunk-Dialog/data/*
+CyberPunk-Dialog/data/
 
 # Ne pas ignorer le fichier spécifique
 !CyberPunk-Dialog/data/projet/Rendez-vous.json
@@ -8,14 +8,14 @@ CyberPunk-Dialog/data/*
 !CyberPunk-Dialog/data/projet/Rendez-vous_files/**
 
 # Ré-ignorer tout le reste dans /projet/ pour plus de précision
-CyberPunk-Dialog/data/projet/*
+CyberPunk-Dialog/data/projet/
 !CyberPunk-Dialog/data/projet/Rendez-vous.json
 !CyberPunk-Dialog/data/projet/Rendez-vous_files/
 
 
 # Ignorer les autres fichiers et dossiers globaux
 CyberPunk-Dialog/userconf.ini
-CyberPunk-Dialog/__pycache__/*
-__pycache__/*
-venv/*
-.vscode/*
+CyberPunk-Dialog/__pycache__/
+__pycache__/
+venv/
+.vscode/
