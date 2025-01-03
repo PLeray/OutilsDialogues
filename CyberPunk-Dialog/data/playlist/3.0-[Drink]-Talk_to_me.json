@@ -1,0 +1,90 @@
+[
+    {
+        "stringId": "1735142209504692",
+        "femaleVariant": "Alors, tu fais quoi ces temps-ci ?",
+        "maleVariant": "Alors, tu fais quoi ces temps-ci ?",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1764950158609465344",
+        "femaleVariant": "Alors, tu fais quoi ces temps-ci\u00a0?",
+        "maleVariant": "Alors, tu fais quoi ces temps-ci\u00a0?",
+        "female_vo_path": "base/{}/vo/v_scene_judy_default_f_187e5cd1722fc000.wem",
+        "male_vo_path": "base/{}/vo/v_scene_judy_default_m_187e5cd1722fc000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/judy/judy_default"
+    },
+    {
+        "stringId": "1773703287379660800",
+        "femaleVariant": "Ben, il vaudrait mieux que\u2026",
+        "maleVariant": "Ben, il vaudrait mieux que\u2026",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_189d75be0d351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_189d75be0d351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_01_phone_call"
+    },
+    {
+        "stringId": "1834755541237886976",
+        "femaleVariant": "Je t'\u00e9coute.",
+        "maleVariant": "Je t'\u00e9coute.",
+        "female_vo_path": "base/{}/vo/v_sq017_f_19765c719d29f000.wem",
+        "male_vo_path": "base/{}/vo/v_sq017_m_19765c719d29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq017/sq017_18_premiere"
+    },
+    {
+        "stringId": "1672027962631385088",
+        "femaleVariant": "J'ai pas envie d'en parler.",
+        "maleVariant": "J'ai pas envie d'en parler.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_17343c92bf29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_17343c92bf29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "2231532716946550784",
+        "femaleVariant": "Panam...",
+        "maleVariant": "Panam...",
+        "female_vo_path": "base/{}/vo/v_scene_panam_default_f_1ef7ff2ed242f000.wem",
+        "male_vo_path": "base/{}/vo/v_scene_panam_default_m_1ef7ff2ed242f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    },
+    {
+        "stringId": "1791180838146478080",
+        "femaleVariant": "Hmm. OK. Merci.",
+        "maleVariant": "Hmm. OK. Merci.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_18db8d7b72351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_18db8d7b72351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_02_panam_and_santiago"
+    },
+    {
+        "stringId": "1896726949978583044",
+        "femaleVariant": "Euh\u2026 hm-hmm, V\u2026",
+        "maleVariant": "Euh\u2026 hm-hmm, V\u2026",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871c99623004.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871c99623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1773676286296002560",
+        "femaleVariant": "J'ai un probl\u00e8me.",
+        "maleVariant": "J'ai un probl\u00e8me.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_189d5d2f5f351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_189d5d2f5f351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_01_phone_call"
+    },
+    {
+        "stringId": "1773703824653225984",
+        "femaleVariant": "Laisse-moi deviner. C'est Saul, c'est \u00e7a\u00a0?",
+        "maleVariant": "Laisse-moi deviner. C'est Saul, c'est \u00e7a\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq027_f_189d763b25351000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_189d763b25351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_01_phone_call"
+    },
+    {
+        "stringId": "1773704191755489280",
+        "femaleVariant": "Tu me connais trop bien.",
+        "maleVariant": "Tu me connais trop bien.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_189d76909e351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_189d76909e351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_01_phone_call"
+    }
+]

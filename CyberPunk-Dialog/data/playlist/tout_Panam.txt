@@ -1,0 +1,2174 @@
+Id: 1202570965339357184	panam:  À rien. Enfin, écoute, j… je sais pas.
+Id: 1298321136981430272	panam:  Mitch ! Scorpion ! C'est Panam ! Approchez pas de la Navi ! Je répète : approchez pas de la Navi !
+Id: 1345643445699497984	panam:  V ! Contente que tu répondes. Je vais peut-être avoir besoin de ton aide.
+Id: 1345649953514475520	panam:  Tu te souviens de Saul ? Le chef du clan que j'ai quitté ?
+Id: 1345658545965649920	panam:  Ça me fait trop plaisir d'entendre ça.
+Id: 1357560447766646784	panam:  C'est pas le modèle dernier cri, mais Mitch et Bob ont fait ce qu'ils pouvaient.
+Id: 1359321531762626560	panam:  On y est presque.
+Id: 1359339065765285888	panam:  Ouais !
+Id: 1359339517928034304	panam:  Enculés !
+Id: 1359339563226517504	panam:  Allez, crevez tous !
+Id: 1374815219719753728	panam:  Branche-toi là.
+Id: 1374828714926428160	panam:  Tu vois un autre moyen ? Fais gaffe au jack. Faut le secouer un peu, des fois.
+Id: 1374858925541838848	panam:  Bon. Pas trop mal, qu'est-ce que t'en dis ?
+Id: 1374917918158843904	panam:  Viens au camp des Aldecaldos. Je vais tout t'expliquer.
+Id: 1375164841633607680	panam:  Ouah, c'est génial… On a même une radio.
+Id: 1376237517701738496	panam:  Allez, descends.
+Id: 1376253101084602368	panam:  OK, on récapitule le plan encore une fois.
+Id: 1376328672795783168	panam:  Putain de… T'as vu ça ?!
+Id: 1377827955214741504	panam:  C'est bon, je suis en position. Je te vois nickel.
+Id: 1379079039073742848	panam:  Le sniper nous fera plus chier. Continue à avancer.
+Id: 1379079405941125120	panam:  Fais gaffe. Y a un sniper planqué dans la tour.
+Id: 1379081011487141888	panam:  Putain ! Reste à couvert !
+Id: 1379082628760432640	panam:  Garde les yeux bien ouverts. Je vois plusieurs gros calibres.
+Id: 1379089110302289920	panam:  OK, t'es plus très loin du bâtiment principal. C'est là qu'ils doivent garder Saul.
+Id: 1379093199731912704	panam:  OK, bâtiment principal. Fais gaffe à la vermine.
+Id: 1380863732353953792	panam:  Alors ? Comment il va ?
+Id: 1384919825162006528	panam:  Va au portail principal !
+Id: 1385122152112287744	panam:  Vite ! Montez à l'arrière !
+Id: 1386357557981704192	panam:  Vous voyez ces bâtiments ? On va attendre là-bas !
+Id: 1402699551926325248	panam:  Est-ce que tout va…
+Id: 1407064192132857856	panam:  
+Id: 1431572475530072064	panam:  Impossible de passer par là.
+Id: 1438902726160863232	panam:  Merde. J'ai une erreur à chaque fois. Bizarre. Je vais arranger ça.
+Id: 1440038352272805888	panam:  Parle pour toi. Ce véhicule dispose juste d'un logiciel de sécurité de base. Si c'est un truc évolué…
+Id: 1441836958027366400	panam:  Vas-y, fonce dans la porte, V !
+Id: 1458892995400617984	panam:  
+Id: 1466116853736820736	panam:  Ces traces mènent à une ancienne station-service après la colline.
+Id: 1477635368066838528	panam:  V… C'est une question de vie ou de mort. Je suis sérieuse.
+Id: 1477979634525892608	panam:  Mitch est en train de mettre en place la reco. Tu vas te glisser dans leur camp, moi je te couvrirai.
+Id: 1479346674213941248	panam:  Ils ont trouvé une ancienne usine de ciment à squatter. Remplie d'équipement lourd.
+Id: 1479347624827777024	panam:  On devrait plutôt les appeler les « sauterelles ». Ils envahissent un lieu, le dépouillent complètement, et s'en vont. Mais cette fois…
+Id: 1479372057571323904	panam:  Tu vois le mur ? Ils ont ajouté des mesures de sécurité à l'ancienne.
+Id: 1479376254375129088	panam:  Des traces de pneu. Leurs véhicules transportaient des trucs lourds.
+Id: 1479391608077905920	panam:  S'ils ont pas récupéré tout le matos qu'y avait dedans, tu devrais pouvoir accéder au réseau de caméras. Faut juste que tu trouves la salle de contrôle.
+Id: 1479407034358919168	panam:  Ça, c'est le bâtiment principal. Ça doit être là qu'est Saul.
+Id: 1479513216838889472	panam:  C'est probablement là qu'ils gardaient Saul.
+Id: 1479527876250136576	panam:  Tout est clair ?
+Id: 1487751741920825344	panam:  On va faire le tour, et se les faire par l'autre côté.
+Id: 1492440379460403200	panam:  Putain ! C'est encore enrayé !
+Id: 1492440452860723200	panam:  C'est rien, ça va… Bon, ça devrait marcher là.
+Id: 1495334213349171200	panam:  Bon, ça fait toujours un souci de moins… Ouh… merde…
+Id: 1496570052137766912	panam:  Je vais régler ça. Accroche-toi, je mets le pilotage auto !
+Id: 1496769982798286848	panam:  OK. J'espère que tu vas rien bousiller.
+Id: 1511565415964221440	panam:  Accroche-toi. Ça risque de secouer un peu.
+Id: 1511565416064884736	panam:  Bien. Ça ira.
+Id: 1512453644088926208	panam:  Je vérifie juste la suspension. Faut que le système hydraulique soit au top, ça risque de secouer un max.
+Id: 1512460219264425984	panam:  Allez. Y a plus qu'à.
+Id: 1512506476800401408	panam:  Hé, si t'as envie de rêvasser, attends au moins que le calibrage soit fait.
+Id: 1517161319693819904	panam:  Putain… de ricochet…
+Id: 1517164544123740160	panam:  Ah, c'est bon. T'inquiète. Je vais survivre.
+Id: 1518486055967268864	panam:  Mhm, génial ! Continue de parler sur un canal ouvert ! Ils t'ont peut-être pas encore entendu la première fois ! Nan, mais sérieux, quoi !
+Id: 1518504856750399488	panam:  Ils veulent nous ralentir !
+Id: 1518505029975154688	panam:  Ils peuvent toujours courir ! Il faut qu'on rejoigne Mitch et Scorpion !
+Id: 1519767170001670144	panam:  Pousse-toi. Je prends le volant.
+Id: 1520006144583540736	panam:  J'ai trois points sur le radar !
+Id: 1521421058123501568	panam:  Allô.
+Id: 1521434224883671040	panam:  Je vois l'épave. Mais pas de trace de Scorpion ou de Mitch.
+Id: 1521438042605228032	panam:  Hein ? V ? V qui ? Et puis comment t'as eu ce numéro ?
+Id: 1521440043020853248	panam:  V, connecte-toi au drone. On va scanner la zone. Il faut qu'on se repère.
+Id: 1521458282220232704	panam:  Sales rats de corpos…
+Id: 1521458591407546368	panam:  Mitch ! Il est vivant ! Ils les ont capturés !
+Id: 1522962024273809408	panam:  Alors ? Une vraie beauté, tu trouves pas ?
+Id: 1522972970182512640	panam:  J'ai pas eu Nash, il était pas à Rocky Ridge. Cet enculé, il est resté planqué.
+Id: 1522993782990049280	panam:  Je sais où se trouve leur planque.
+Id: 1522996701655207936	panam:  Ils nous attendront pas. J'en suis sûre.
+Id: 1523163298707271680	panam:  Nan, c'est bon. J'ai presque fini. Ces cons de Raffens me l'ont bien amochée.
+Id: 1526874516293160960	panam:  Broseph. Deux.
+Id: 1527214015103635456	panam:  Salut, Boz.
+Id: 1527253368999776256	panam:  C'est bon ? T'es satisfait ?
+Id: 1527260244269338624	panam:  Ça s'est bien passé…
+Id: 1527288663531065344	panam:  Bonne idée.
+Id: 1527289488684879872	panam:  Noah a installé deux lits dans chaque piaule. Ce sera toujours ça d'économisé.
+Id: 1527347892891684864	panam:  Ce que Nash a fait…
+Id: 1528422523320930304	panam:  Hum. Presque.
+Id: 1528477524086747136	panam:  Monte, V.
+Id: 1528477996986134528	panam:  V. Monte dans la caisse. Tu dois te les cailler grave, là.
+Id: 1528607397304332288	panam:  Super. Monte, ça pèle.
+Id: 1529940106092220416	panam:  Les voilà ! Dans ma Thorn ! Tu la vois ?
+Id: 1529967303351865344	panam:  On va les prendre par surprise.
+Id: 1529968695021932544	panam:  Merde.
+Id: 1530043192202760192	panam:  C'est la cerise sur le gâteau, je crois.
+Id: 1530044908042194944	panam:  Allez, on y va.
+Id: 1530133159572402176	panam:  La cavalerie est là. Mitch a rassemblé quelques Aldecaldos.
+Id: 1533048255227359232	panam:  J'aurais dû l'arrêter.
+Id: 1537567684593459200	panam:  ALLEZ VOUS FAIRE FOUUUTRE !
+Id: 1539042075245015040	panam:  T'as bien dormi ?
+Id: 1540012352615477248	panam:  Sans ces putains d'interférences, j'aurais pu les prévenir… Tout ça, c'est ma faute…
+Id: 1540037324209647616	panam:  Les Aldecaldos, ouais. Ils sont tous morts…
+Id: 1540068484365152256	panam:  Il répond pas. Saloperies de parasites !
+Id: 1540098174868262912	panam:  Salut, Rogue.
+Id: 1540099208260882432	panam:  Qu'est-ce que tu disais, déjà ? « C'est à toi de résoudre tes problèmes, et de nettoyer ta merde » ?
+Id: 1540103271719374848	panam:  Compte pas sur Nash pour la livrer. Mais si tu me demandes gentiment, je pourrai « peut-être » t'aider.
+Id: 1540121296824700928	panam:  Haa. Enfin.
+Id: 1540123053634097152	panam:  Écoute, V. C'est pas encore fini.
+Id: 1541544623217430528	panam:  Ça y est. On est arrivés.
+Id: 1547353327476412416	panam:  OK, j'ai arrangé un rendez-vous.
+Id: 1547366614192623616	panam:  On finit ça et on se met au boulot sur Hellman. Ça te va ?
+Id: 1547526871483731968	panam:  T'es prêt à y aller ?
+Id: 1547610310450925568	panam:  Je crois que t'as fait des cauchemars. T'as crié plusieurs fois.
+Id: 1547616667270959104	panam:  On va te calibrer avec la tourelle.
+Id: 1547616887237038080	panam:  Je veux que tu puisses utiliser la mitrailleuse, toi aussi. Ça devrait augmenter nos chances.
+Id: 1548898431559274496	panam:  Si tu veux. Tout ce que tu vas rater, c'est un café trop fort et bien dégueulasse.
+Id: 1548965472524357632	panam:  Bon, allez, on se tire avant d'en faire les frais aussi.
+Id: 1549023181097455616	panam:  C'est Kang Tao ! Attendez-moi ! Non, mieux : foutez le camp !
+Id: 1549087033151508480	panam:  Ouais. Prépare-toi !
+Id: 1549122189170102272	panam:  Réponds, Mitch ! Allez, réponds !
+Id: 1549142580350959616	panam:  Bon, j'active le pilotage auto et je me déconnecte.
+Id: 1550289155289305088	panam:  Je vois. Ils ont sûrement dû enfermer Hellman quelque part.
+Id: 1550326555981959168	panam:  Tout ce que je vois, c'est de la rouille et du béton fissuré. S'ils s'imaginaient pouvoir appeler leurs potes, ils ont dû vite déchanter.
+Id: 1550331757355126784	panam:  J'aurais fait pareil. Ils veulent contacter leur base. Ils ont sûrement aucune envie de traverser le désert sans renforts.
+Id: 1551820623993389056	panam:  Ils ont des drones là-bas ? Des systèmes d'alerte précoce ? Autre chose ?
+Id: 1551820624412819456	panam:  Et pendant qu'on creuse ? Personne va se ramener pour gâcher la fête ?
+Id: 1553201287738945536	panam:  V ? Tu te connectes ou pas ?
+Id: 1612639738958602240	panam:  Je passe juste en coup de vent. Pas la peine d'en parler à Saul.
+Id: 1612647701593088000	panam:  Mon baby-sitter.
+Id: 1628613641203769344	panam:  Non. Si je suis dans ce merdier, c'est parce que c'est toi qui m'y as mise.
+Id: 1631461391050104840	panam:  Il est pas très loin d'ici.
+Id: 1631462611877781512	panam:  Tu déconnes ? Allez, dis-moi que tu déconnes.
+Id: 1641712814177144832	panam:  Ils ont essayé de la réparer, mais la pompe à huile est morte. Les pistons ont pas résisté.
+Id: 1641721302240481280	panam:  C'est une de nos… de leurs caisses. Faut qu'on l'inspecte.
+Id: 1641736594991632384	panam:  Mhm. Mais y a que deux caisses, cette fois.
+Id: 1641745439738580992	panam:  OK. Je te couvre.
+Id: 1641749635485421568	panam:  Mhm. Je les reconnais. Elles sont au clan.
+Id: 1641752003035811840	panam:  Hellman, il est forcément là.
+Id: 1641773404522303488	panam:  OK. J'ouvre l'œil.
+Id: 1641954791141429248	panam:  Saul.
+Id: 1641960289068666880	panam:  J'espère que ses réponses en vaudront la peine.
+Id: 1641961300181143552	panam:  Une autre fois, alors.
+Id: 1641970686832168960	panam:  Saul, j'ai essayé de prévenir Scorpion, mais il…
+Id: 1643053981553811456	panam:  Qu'est-ce que t'attends ?
+Id: 1643073838981599232	panam:  Attention au lanceur. Ils vont nous exploser si on approche.
+Id: 1643080052188663808	panam:  Il est temps de faire le ménage, bande de bâtards !
+Id: 1643094840314712064	panam:  
+Id: 1643117223704547328	panam:  Je vais pas pleurer.
+Id: 1643276297347813376	panam:  Te fatigue pas, V.
+Id: 1643282720337186816	panam:  Attends.
+Id: 1643283495411011584	panam:  Je viens avec toi. Je t'ai promis de t'aider.
+Id: 1643283814731763712	panam:  Et puis, ces fils de chien ont tué Scorpion. Je peux pas laisser passer ça.
+Id: 1643295077662740480	panam:  C'est important ? Je veux choper les bâtards qui ont tué mon ami. Et je t'ai aussi donné ma parole.
+Id: 1643296280924672000	panam:  Les motos sont OK.
+Id: 1644376831260487680	panam:  Tu dois être V.
+Id: 1652981967906009088	panam:  Elle est où, ma caisse ?
+Id: 1653357601249423360	panam:  Nash, sale petite ordure… Je vais t'étrangler.
+Id: 1653409611256557568	panam:  U-Une minute. Faut que je réfléchisse.
+Id: 1653437834677841920	panam:  Hé ! Salut, Boz.
+Id: 1653438183610380288	panam:  Nash doit te refiler la marchandise à Rocky Ridge. Le truc, c'est que ce fils de chien m'a baisée.
+Id: 1653445157932625920	panam:  C'est bon. Je nous ai fait gagner du temps.
+Id: 1653452018069139456	panam:  Au camp des Aldecaldos. Je dois voir des gars du clan.
+Id: 1653453153802776576	panam:  Ouais, ça te surprend ? Ça s'appelle avoir une réputation.
+Id: 1653453955099389952	panam:  Tu devrais t'en payer une, un de ces jours.
+Id: 1653513209122516992	panam:  Boz, c'est un type réglo. C'est un 6th Street.
+Id: 1653518469870252032	panam:  Ben voyons ! Si Rogue le dit, alors ça doit être vrai !
+Id: 1653519006019743744	panam:  Tu commences à me gonfler.
+Id: 1653519575589449728	panam:  C'était qu'une mini embrouille. C'est toujours ma famille.
+Id: 1653523168883240960	panam:  Ouais. C'est le plan.
+Id: 1653524685291909120	panam:  Monte.
+Id: 1653531966486212608	panam:  On peut dire ça, ouais.
+Id: 1655929578107564032	panam:  Super. Alors… comment elle va me baiser la gueule, cette fois ?
+Id: 1655931579394551808	panam:  Oh, super ! Manquait plus que ça !
+Id: 1655931913009491968	panam:  Mhm-mhm… Et tu me veux quoi ?
+Id: 1655933042049019904	panam:  Comment elle va me baiser la gueule, cette fois, celle-là ?
+Id: 1655936522465701888	panam:  Ah ouais ?
+Id: 1655949177368735744	panam:  Génial, mais je suis un peu débordée, en ce moment.
+Id: 1655958989305409536	panam:  C'est trop gentil. Mais c'est trop tard, beaucoup trop tard. Alors, va dire à Rogue qu'elle peut toujours me sucer, d'accord ?
+Id: 1655959998756941824	panam:  Y a une gare de triage à Bonita Street. À la limite de la ville. On se retrouve là-bas.
+Id: 1656017575326904320	panam:  J'aimais bien la couleur. Et je te parle pas du petit sapin et du siège bébé !
+Id: 1656029487552917504	panam:  Qu'est-ce que tu veux que je te dise ? Que j'ai pas l'intention de laisser mon partenaire me voler et s'en tirer comme ça ? Que ma fixer m'a fait passer pour la dernière des connes ?
+Id: 1656030621105516544	panam:  Pourquoi elle m'a pas dit qu'elle était au courant pour Nash ?
+Id: 1656093158379483136	panam:  OK, on y est presque. On rassemble mes chooms et on file à Rocky Ridge.
+Id: 1657368697396391936	panam:  Tu sais quoi, Rogue ? Va te faire foutre.
+Id: 1658990903524192256	panam:  Je t'emmerde, moi aussi.
+Id: 1659007284143583232	panam:  OK. Bon, je vais avoir besoin de ton fusil. Et d'autres trucs à moi.
+Id: 1659020879963222016	panam:  Ouais… Merci, les gars. Je vais chercher le matos et je vous laisse tranquilles.
+Id: 1660199261822672896	panam:  Merde. Je viens de me rappeler d'un truc.
+Id: 1660199567755206656	panam:  Alors, qu'est-ce qui s'est passé avec le flic ?
+Id: 1660655088175804416	panam:  Mais mon cul, ouais !
+Id: 1660655908665552896	panam:  Tu crois que je vais te laisser te servir de moi ?! Dis-moi OÙ est ma caisse !
+Id: 1660656604265705472	panam:  J'aurais dû m'en douter.
+Id: 1660662289913212928	panam:  Nan. Les enlèvements, je fais pas. En plus, pour s'attaquer à un convoi, il faudrait plus d'hommes et plus de matos.
+Id: 1660668619101171712	panam:  T'as complètement pété les plombs ou quoi ?
+Id: 1660676130462101504	panam:  Nan, mais je rêve…
+Id: 1660677616218796032	panam:  Putain, je rêve…
+Id: 1660679106572447744	panam:  Je sais pas, je…
+Id: 1660689607834595328	panam:  Boz, je vais m'en occuper. Je te demande juste de me laisser une chance.
+Id: 1660705573503102976	panam:  Putain, je la supporte pas, cette conne !
+Id: 1660721242885976064	panam:  Parce que j'ai besoin de fric !
+Id: 1660727037501501440	panam:  Tu sais que dalle sur elle. Que. Dalle.
+Id: 1660727284025913344	panam:  Elle t'a dit que c'était elle qui m'avait mise en contact avec Nash ? Et qu'elle avait juste oublié de me dire que c'était un Raffen Shiv ?
+Id: 1660734682258075648	panam:  Ouais, j'y manquerai pas. Je lui demanderai surtout pourquoi elle m'a fait bosser avec Nash sans me dire que c'était un Raffen.
+Id: 1660748904354410496	panam:  Rogue est une sale conne frigide. C'est ça, la vérité.
+Id: 1661701335733104652	panam:  Je m'en fous de la marchandise.
+Id: 1661782492193615872	panam:  Ouais, la plupart. Les nomades bannissent pas les leurs sans raison. Alors imagine : des meurtriers, des violeurs… une belle brochette de tarés.
+Id: 1661798334247596032	panam:  Et cette salope m'a fait travailler avec ces raclures.
+Id: 1661808994993958912	panam:  Je vois que t'es calé.
+Id: 1661822121219321856	panam:  Nan. Cet enfoiré a oublié de me montrer sa carte de membre.
+Id: 1661826167850266624	panam:  Ha, me fais pas rire. Les fixers comme elle savent ce genre de choses. Je te parie qu'elle sait qu'on parle d'elle, en ce moment !
+Id: 1661827161095008256	panam:  Nash et moi, on avait un rôle à jouer dans son jeu, son plan. C'est tout.
+Id: 1661835248367431680	panam:  Nan, sans blague ?
+Id: 1662052409916649472	panam:  La ferme, V.
+Id: 1662055736972800000	panam:  On s'en fout. Je vais la récupérer. C'est pour ça que je suis là.
+Id: 1662312918088962048	panam:  Ils ont sécurisé la zone. Ils attendent des renforts. Merde…
+Id: 1662509222589124608	panam:  Assez perdu de temps. Y a personne.
+Id: 1662632390456791040	panam:  Peut être… Mais faut déjà l'atteindre.
+Id: 1663012940700082176	panam:  OK, j'ai du jus. Allume le terminal à l'intérieur, et quand y aura du courant dans le bâtiment, monte sur le toit.
+Id: 1664702341239517184	panam:  Tu vas rester planté là toute la journée ?
+Id: 1664702421367500800	panam:  Ben alors ? Monte !
+Id: 1664795085317468160	panam:  Me donne pas d'ordres, OK ?
+Id: 1664803032600801280	panam:  Pff. Qu'est-ce que tu veux ?
+Id: 1664808584902995968	panam:  Seulement quand on essaie de se foutre de ma gueule. OÙ est ma caisse, putain ?
+Id: 1664821444337070080	panam:  Ça, c'est pas tes putains d'affaires !
+Id: 1664838061397766144	panam:  Ouais, je crois pas, non.
+Id: 1664847311733911552	panam:  Avec ce pick-up, je peux prendre tous les boulots de livraison. Sans lui, la seule chose que je peux transporter, c'est des pizzas. Et encore.
+Id: 1664854307849760768	panam:  Boz, steuplaît. Combien de fois j'ai transporté des trucs ? Et combien de fois j'ai merdé, hein ?
+Id: 1664869670075363328	panam:  Et toi ? Tu peux me dire pourquoi t'as besoin de ce clown dans la Navi ?
+Id: 1664914981124698112	panam:  Tu viens de me traiter de pion, là, nan ?
+Id: 1664915983563354112	panam:  Pour moi, c'est une connasse. Menteuse et manipulatrice. C'est elle qui m'a mise en contact avec ce Raffen. Tu le savais, ça ?
+Id: 1664928875461341184	panam:  Jusqu'à maintenant, ils s'en prenaient surtout aux transporteurs corpo sur l'autoroute 64.
+Id: 1664932570240512000	panam:  Ouais… Il bosse avec les Wraiths, le plus gros groupe de Raffens du coin. T'as entendu parler d'eux, pas vrai ?
+Id: 1664951218317422592	panam:  Putain, j'y crois pas.
+Id: 1664954182314618880	panam:  Les Raffens m'ont baisé la gueule. Alors je vais m'occuper de leur cul. Mais j'ai besoin de votre aide.
+Id: 1664955975111143424	panam:  Des générateurs ? Vous pouvez pas m'aider à cause de putains de générateurs ? C'est encore une blague ?
+Id: 1664965768106340352	panam:  Sérieusement, vous allez pas m'aider, là ?
+Id: 1664984362546491392	panam:  Vous restez bien sagement ici parce que Saul vous l'a dit ? Vous en avez rien à foutre de moi ?
+Id: 1665019849495670784	panam:  Bon… J'y vais.
+Id: 1665024486751727624	panam:  Leur chef.
+Id: 1665024486768504832	panam:  Disons que Saul aurait pas été très content de me voir.
+Id: 1665024486768504856	panam:  Pff. Si on est venus en Californie, c'est parce qu'il nous a promis que les choses changeraient pour les Aldecaldos. Qu'on prendrait un nouveau départ.
+Id: 1665024486785282048	panam:  Mais tu l'as vu toi-même. Tout ce qu'on a eu, c'est une poignée de tentes sur une dune de sable. Paye ta terre promise.
+Id: 1665024486785282060	panam:  Je voulais une vie différente, une vie meilleure. Mais Saul est qu'un putain de lâche. Je suis convaincue qu'il va mener le clan à sa perte.
+Id: 1665040357226311680	panam:  Les meilleurs amis qu'une fille puisse avoir. Moi aussi je resterais au camp, si j'étais eux. Saul peut se foutre ses générateurs au cul… Mais le clan passe avant tout.
+Id: 1665041112016482304	panam:  Hmm-hmm…
+Id: 1665041859609227264	panam:  T'as quelqu'un que tu considères comme un proche, toi ?
+Id: 1665056872818405376	panam:  Je vois.
+Id: 1665059821078573056	panam:  « Ouais. Si on veut. Peut-être bien. »
+Id: 1665067044190154752	panam:  Pfff. OOOK.
+Id: 1665067958615535616	panam:  Scorpion et Mitch ? Ouais. C'était des Panzerboys. Ils étaient mercenaires pendant la dernière guerre.
+Id: 1665072036032671744	panam:  Scorpion, ouais. Mitch les protégeait.
+Id: 1665095307742539776	panam:  Ils ont eu droit à des implants militaires de bâtard, et un tas de cauchemars bien tordus pour aller avec.
+Id: 1666124121088061440	panam:  Vaut mieux faire ça discrètement. Si jamais ça dérape, je les décapsule. C'est bon ?
+Id: 1666133777013403648	panam:  Chope l'éclat de la voiture. C'est le chauffeur qui l'a.
+Id: 1666173497693040640	panam:  Elle et moi, on se complète.
+Id: 1666176878822158336	panam:  Peuh, t'y connais rien. J'aurais même pas dû te demander.
+Id: 1667530863067918336	panam:  Écoute, j'ai un plan.
+Id: 1667543081796890624	panam:  C'est parce que je pensais qu'il serait à Rocky Ridge !
+Id: 1667544124702191616	panam:  T'arrives vraiment pas à comprendre ça ?
+Id: 1667546097870565376	panam:  Je SAIS qu'il y est. V ! Ce Raffen de merde s'est foutu de ma gueule. Je peux pas laisser pisser comme ça.
+Id: 1667547852264042496	panam:  Plus tard ? C'est-à-dire ? Quand il saura ce qui s'est passé à Rocky Ridge ? Si on y va maintenant, on peut se le faire par surprise !
+Id: 1667549422259138560	panam:  T'en fais pas pour la marchandise.
+Id: 1667550131163623424	panam:  V, je dois le faire. Tu comprends, ça ?
+Id: 1667554595966676992	panam:  T'as une meilleure idée ? Vas-y, je t'écoute !
+Id: 1667555549432639488	panam:  Je t'ai donné ma parole, non ? Steuplaît, arrête de me saouler avec ton Hellman !
+Id: 1667559281910214656	panam:  Et commence pas à jouer les difficiles, genre tu lèveras pas le petit doigt si c'est pas marqué sur le contrat. Allez, aide-moi juste à choper Nash.
+Id: 1667563406655877120	panam:  Merci, V.
+Id: 1667566307453300736	panam:  Tu comprends pas. C'est… c'est pas qu'une histoire de…
+Id: 1667569301028728832	panam:  C'était le deal.
+Id: 1667591344780603392	panam:  Putain !
+Id: 1667597858350166016	panam:  Peut-être un peu.
+Id: 1667598396848467968	panam:  Viens, on se tire d'ici.
+Id: 1667599995163504640	panam:  Pourquoi je ferais ça ?
+Id: 1667603126362435584	panam:  Viens, on se tire.
+Id: 1667617475244191744	panam:  Qu'est-ce que tu veux ?
+Id: 1667618555478798336	panam:  C'était marqué dans le contrat qu'il fallait se parler en voiture ? Parce que je me souviens plus !
+Id: 1667619274382503936	panam:  T'inquiète. Je tiens mes promesses. Toujours.
+Id: 1667619665711067136	panam:  Donne-moi une minute, d'accord ?
+Id: 1667622907706732544	panam:  Salut, Boz. J'ai ta marchandise.
+Id: 1667622907706732556	panam:  Nan-nan-nan, je te promets. Allez, faut qu'on se voie. Au Sunset Motel.
+Id: 1667622907706732568	panam:  Je sais que tu déconnes pas. J'y serai, t'as ma parole.
+Id: 1667636654252879872	panam:  C'est pas la première fois que je bosse pour eux. Ils ont toujours été réglo.
+Id: 1667637501183520768	panam:  J'espère qu'ils ont toujours le sens des affaires.
+Id: 1667643008673771520	panam:  Un endroit sûr. C'est pas loin d'ici.
+Id: 1669095095845801984	panam:  Est-ce que t'es blessé ?
+Id: 1669095095845802000	panam:  Bande d'abrutis de merde !!!
+Id: 1669101016641564672	panam:  Le panneau a l'air en bon état.
+Id: 1669106670143926272	panam:  Primo, on sait pas combien ils vont être à se pointer. Un bon petit paquet, je dirais.
+Id: 1669107133011742720	panam:  Putain !
+Id: 1669121672951230464	panam:  Nova. On va leur faire une petite surprise au croisement.
+Id: 1669130289024724992	panam:  Le nord-est, je pense. Par la vieille autoroute qu'a jamais été terminée.
+Id: 1669131230813745152	panam:  Ça marche.
+Id: 1669215925994151936	panam:  Je crois qu'il doit y avoir un raccourci pour sortir du sous-sol.
+Id: 1669317177715060736	panam:  Te fatigue plus à l'appeler. Tu perdrais ton temps.
+Id: 1669329911204962304	panam:  Tant mieux. Elle va couvrir nos traces.
+Id: 1669342206066552832	panam:  Ça a été un plaisir. Mais… c'est Rogue qui va me payer, je me trompe ?
+Id: 1669344860742217728	panam:  Viens. On va s'en jeter un.
+Id: 1669362985958395904	panam:  Allez, monte !
+Id: 1670560180058611712	panam:  Nan, mais tu délires ou quoi ? Reviens ici !
+Id: 1670562071234342912	panam:  Très bien. Marché conclu. Mais si tu veux que ton plan marche, on doit d'abord récupérer ma Thorton.
+Id: 1670564317049253888	panam:  Alors, elle est où ?
+Id: 1670572915053686784	panam:  Une seconde. J'appelle le client. Je dois le convaincre de faire attendre cet enfoiré.
+Id: 1670588494712008704	panam:  OK. Accouche. Qu'est-ce que tu veux ?
+Id: 1671873129848893440	panam:  Salut, Noah.
+Id: 1671879795956903936	panam:  Je te laisse deviner.
+Id: 1671881762800267264	panam:  Ça roule pour toi ? Ces clowns te font encore chier ou pas ?
+Id: 1671892989878333440	panam:  Merci pour ton aide, partenaire.
+Id: 1671893366073847808	panam:  T'as rempli ta part du marché. À mon tour.
+Id: 1671903307933282304	panam:  Faut réfléchir à comment on va attaquer cette Navi.
+Id: 1671942021795409920	panam:  Juste en dehors de la ville. On prend la 9 et après, on va vers l'est.
+Id: 1671983102385844224	panam:  Ouais. Les Shiv, c'est comme les cafards. On s'en débarrasse jamais vraiment.
+Id: 1671983386860318720	panam:  Mais on devrait être tranquilles un moment. Ils vont mettre un peu de temps à s'en remettre.
+Id: 1672009703869771776	panam:  Noah, on va te prendre deux piaules. Juste pour cette nuit.
+Id: 1672011883515342848	panam:  Noah, je vais te prendre une piaule. Juste pour cette nuit.
+Id: 1672027962631385088	panam:  J'ai pas envie d'en parler.
+Id: 1672029416981131264	panam:  Alors, tout d'un coup, tu t'inquiètes pour moi ? Ou alors t'as peur qu'ils viennent nous emmerder pendant qu'on attaque cette Navi ?
+Id: 1672044338452492288	panam:  Ça, c'est plus ton problème, V.
+Id: 1672044600160284672	panam:  Je vais gérer ça. J'ai l'habitude. Je suis sérieuse.
+Id: 1672048044724056064	panam:  Pas besoin.
+Id: 1672049273218920448	panam:  Oh, t'inquiète pas. Je t'ai donné ma parole. Tu vas pouvoir parler avec ton Hellman.
+Id: 1672050425142571008	panam:  Je m'occuperai de mes Raffens plus tard. Seule.
+Id: 1672051310325264392	panam:  D'abord, faut que je trouve un moyen de clouer la Navi au sol d'une main tout en m'occupant des gardes de l'autre.
+Id: 1672053616975564800	panam:  C'est lui ?
+Id: 1672065560642080768	panam:  Qu'est-ce que tu vas faire de lui ?
+Id: 1672193725988204544	panam:  J'ai tout perdu. Tu le sais. Et c'est TA faute.
+Id: 1672240661243334660	panam:  Salut. Oh, ça faisait longtemps que j'avais pas entendu ta voix.
+Id: 1672374186035245056	panam:  Nan, je vais pas traîner. On se parlera la prochaine fois.
+Id: 1672376884096790528	panam:  U-Une autre fois, Ellie. Promis.
+Id: 1672378117020839936	panam:  Ça, c'est pas tes affaires.
+Id: 1672389272242089984	panam:  Hum-hum.
+Id: 1673293728470503432	panam:  T'as un sacré culot, toi !
+Id: 1673411952544473088	panam:  Attends-moi dans la caisse.
+Id: 1674842441463230464	panam:  Rogue est pas du genre à ouvrir la bouche sans avoir pesé le pour et le contre. Ce qu'elle doit dire, ce qu'elle doit garder pour elle.
+Id: 1674857798924103680	panam:  Ouais, c'est à peu près tout ce qu'y a à savoir.
+Id: 1674858227716190208	panam:  La région attendait le prolongement de l'autoroute. C'était censé « redynamiser » la ville. Hmpf. Ça s'est jamais fait, bien sûr.
+Id: 1674964606774800384	panam:  Ta gueule.
+Id: 1674973470781992960	panam:  J'aurais pu l'avoir. Il était juste là ! On aurait pu se le faire.
+Id: 1674974658290118656	panam:  J'ai promis de t'aider. Et je vais le faire.
+Id: 1674978802145030144	panam:  Juste… Laisse-moi une minute, OK ?
+Id: 1675018237094289408	panam:  Ouais, vraiment besoin.
+Id: 1675117613575434240	panam:  On se retrouve ici vers minuit, d'accord ?
+Id: 1675126255519395852	panam:  Je sais. Mais il a intérêt à accrocher sa ceinture. J'ai une idée… si ça marche, l'atterrissage va être brutal.
+Id: 1675182044728651776	panam:  Ils sont là.
+Id: 1675182951788834816	panam:  Laisse-moi parler.
+Id: 1675264653528031232	panam:  Discrètement. Un assaut direct, ce serait du suicide.
+Id: 1677662245886750720	panam:  Je l'ai empruntée, elle est pas à moi. Je t'ai demandé où était la mienne.
+Id: 1677664953108656128	panam:  Bon. Dis-moi tout ce que tu sais. Autrement, retourne voir Rogue et dis-lui d'aller se faire foutre.
+Id: 1677695972285214720	panam:  C'est pas ton problème.
+Id: 1677696224379662336	panam:  J'ai encore des potes là-bas.
+Id: 1677711010240786432	panam:  Alors, on a au moins un point en commun, finalement.
+Id: 1677713366751768576	panam:  Ils forment des groupes, même des vrais gangs parfois. La plupart sont en cavale avec un avis de recherche au cul.
+Id: 1677716224616296448	panam:  V, je te présente Scorpion et Mitch. Deux vieux amis.
+Id: 1677718320208015360	panam:  Allez, venez avec moi. À nous quatre, on peut se les faire.
+Id: 1677742938876669952	panam:  On va prendre la vieille autoroute, celle qui est pas finie.
+Id: 1677754443550552064	panam:  Je vais faire une dérivation vers l'alim, ça devrait fonctionner. Il faut juste qu'on la remette en marche.
+Id: 1679279696781111296	panam:  Nash est mort. Une merde de nettoyée. T'es contente ?
+Id: 1679365186226089996	panam:  Salut, Rogue.
+Id: 1679365186242867220	panam:  Qu'est-ce que tu disais, déjà ? « C'est à toi de résoudre tes problèmes, et de nettoyer ta merde » ?
+Id: 1679365186259644416	panam:  J'ai récupéré la marchandise et ma voiture. Les 6th Street sont contents. Ça fait deux merdes de nettoyées, pouffiasse.
+Id: 1679365186259644428	panam:  On dirait que tu vas l'avoir, ta part, finalement.
+Id: 1679365186293198848	panam:  Putain !
+Id: 1679426769047236608	panam:  Viens t'asseoir. Sois pas timide.
+Id: 1679426840149078016	panam:  Tu veux pas t'asseoir ?
+Id: 1679494461036933120	panam:  Merci, Noah.
+Id: 1683521114844295168	panam:  Je te donne ma parole. Cette nuit ? OK. Nan, annule pas le rendez-vous. Mais t'y pointe pas. Je m'en occupe.
+Id: 1683550880178003968	panam:  V, t'aurais un moment ?
+Id: 1683556873402212352	panam:  Ça sera un peu plus long que ça. Tu peux passer au camp ?
+Id: 1683559151362269184	panam:  Ah, enfin. Tu peux venir ? J'ai toujours un problème, et il va pas se résoudre tout seul.
+Id: 1683584086463606784	panam:  Je sais pas. Peut-être un peu, ouais.
+Id: 1683641976431964160	panam:  Je lui faisais confiance. C'est la première personne avec qui j'ai bossé après avoir quitté les Aldecaldos. Après avoir bougé à Night City.
+Id: 1683646034622410752	panam:  Et tu lui as fait payer ?
+Id: 1683648495355846656	panam:  Eh ben… C'est vrai, mais je me disais que…
+Id: 1683648537246167040	panam:  La raison plutôt que les sentiments. C'est un avis intéressant. Mais je préfère me forger ma propre opinion.
+Id: 1683651210661982208	panam:  Je lui accordais toute ma confiance.
+Id: 1683657872206589952	panam:  Mais autrement ? Tu l'aurais fait ?
+Id: 1683666712088145920	panam:  Il est temps que je règle mes comptes.
+Id: 1683668211753152512	panam:  Je suis pas du genre à suivre les règles de Night City.
+Id: 1683751725177630720	panam:  T'as pas regardé ? Du Balopéridol. Des médocs, pour nos cyberpsychos.
+Id: 1683753960607444992	panam:  Ouais. Ils ont des accords avec des cliniques clandestines. Et des charcudocs.
+Id: 1683770565789872140	panam:  Leur chef.
+Id: 1683770565806649356	panam:  Disons que Saul aurait pas été très content de me voir.
+Id: 1683770565806649380	panam:  Si on est venus en Californie, c'est parce qu'il nous a promis que les choses changeraient pour les Aldecaldos. Qu'on prendrait un nouveau départ.
+Id: 1683770565823426564	panam:  Mais tu l'as vu toi-même. Tout ce qu'on a eu, c'est une poignée de tentes sur une dune de sable. Paye ta terre promise.
+Id: 1683770565823426584	panam:  Je voulais une vie différente, une vie meilleure. Mais Saul est qu'un putain de lâche. Je suis convaincue qu'il va mener le clan à sa perte.
+Id: 1683775529480220672	panam:  Je sais vraiment pas… D'un côté, le clan, c'est ma seule famille. Rah, merde, c'est la seule vie que je connaisse.
+Id: 1683777491156201472	panam:  Sans mon clan, je suis qui ? Qu'est-ce que je deviendrais si je restais à Night City ?
+Id: 1683790112269922304	panam:  Ah oui, je me souviens. La famille Bakker, c'est ça ?
+Id: 1683792021651320832	panam:  Et ?
+Id: 1683793428521545728	panam:  Ben merde… C'est rassurant, ça.
+Id: 1683793909692100608	panam:  Bon… parlons d'autre chose. De tout, sauf ça.
+Id: 1683795729969704960	panam:  T'es sérieux ? Tu ressembles pas du tout à un nomade, je trouve.
+Id: 1683796570894102528	panam:  Connard !
+Id: 1683798918815150080	panam:  Et ?
+Id: 1683799160709050368	panam:  Eh ben… C'est rassurant, ça.
+Id: 1683799724993933312	panam:  Je préférerais changer de sujet, si ça te dérange pas.
+Id: 1683801626070609920	panam:  Hum. Pour l'instant, je suis juste bonne à griller toutes mes connexions.
+Id: 1683802107090169856	panam:  Non. Mais merci de me le rappeler.
+Id: 1683802365190860800	panam:  V… Tu crois que je pourrais prendre un nouveau départ avec elle aussi ?
+Id: 1683808566586765312	panam:  Tu parles de Mitch ? Et Scorpion ? Arrête.
+Id: 1683811405040054272	panam:  Je ferais peut-être bien d'y réfléchir…
+Id: 1684838179618287616	panam:  Tiens-toi prêt.
+Id: 1684852624365056000	panam:  C'est parti pour le show !
+Id: 1689356933517668356	panam:  Parce qu'une fois qu'elle sera au sol, il faudra la localiser et choper ta cible. Sans perdre une seconde.
+Id: 1689382094224617472	panam:  Et à cet endroit, c'est un vrai désert californien : c'est plat, c'est sec, c'est paumé. On pourra pas les rater.
+Id: 1689385219182424064	panam:  Après, on frappe ! On balance une IEM à la Navi.
+Id: 1689387793629442048	panam:  Dès que la Navi sera à portée, on créera une impulsion électromagnétique. L'électronique embarquée devrait griller direct.
+Id: 1689389879876251648	panam:  Ça coupera tout, y compris les moteurs. La transmission, la navigation, les systèmes de com…
+Id: 1689465749282353152	panam:  Salut.
+Id: 1689477779603189760	panam:  T'inquiète, j'ai l'habitude. Quand Mitch et Scorpion sont revenus de la guerre, ils passaient leurs nuits à bouger dans tous les sens. Ça a duré des mois.
+Id: 1689561976481116160	panam:  Ouais. Va falloir s'y introduire.
+Id: 1689576180458057728	panam:  Bien vu.
+Id: 1689577557095739392	panam:  Ah ouais ? Tu veux parier ?
+Id: 1689578809330364416	panam:  On roule jusqu'à l'unité de récupération d'énergie, on entre, on prend le contrôle et on désactive les limiteurs.
+Id: 1689580163251695616	panam:  Dès que la Navi est à portée, on envoie la turboimpulsion électromagnétique. Ça devrait griller ses systèmes.
+Id: 1689581211609591808	panam:  … et les communications. Tout sera soudainement H.S. Aucune chance qu'ils s'en tirent !
+Id: 1690697548620754944	panam:  Quoi, c'est interdit ? Les punks des rues ont des trucs à transporter. Et moi, j'ai besoin de fric, comme tout le monde.
+Id: 1690798291390427136	panam:  Et… à quoi tu pensais, au juste ?
+Id: 1690802419239874560	panam:  Je le suis aussi.
+Id: 1690802615466192896	panam:  Ça aurait pu être un carnage aujourd'hui. Mais grâce à toi, tout s'est bien passé.
+Id: 1690805024238202880	panam:  Ouais, on va fêter ça.
+Id: 1690807412592340992	panam:  Noah, on va te prendre une piaule. Avec deux lits. Juste pour cette nuit.
+Id: 1690917133286502400	panam:  Deuxio, on doit s'ouvrir une voie pour atteindre mon pick-up. S'ils restent groupés, on a aucune chance.
+Id: 1691068124656955404	panam:  Comme tu veux. Mais… tâche d'être là à minuit.
+Id: 1691068124656955424	panam:  Noah, je vais te prendre une piaule. Juste pour la nuit.
+Id: 1691069158167015444	panam:  Noah, on va te prendre deux piaules. Juste pour cette nuit.
+Id: 1691074126756311080	panam:  Hmm-hmm. Noah a installé deux lits dans chaque piaule. Ce sera toujours ça d'économisé.
+Id: 1691074714814509068	panam:  Je sais.
+Id: 1691074714814509080	panam:  Te prends pas la tête. Moi aussi je suis contente.
+Id: 1691074714831286276	panam:  Ça a été une sacrée journée. Mais on a bien géré.
+Id: 1691074714831286300	panam:  Ah, là tu me fais plaisir. On est coolos ?
+Id: 1691093759957790720	panam:  Mais pas aujourd'hui. Je suis claquée.
+Id: 1692113704650035200	panam:  Un raid reste un raid, mais c'est toujours ta nuit, alors profite un peu de ta nouvelle gloire.
+Id: 1692119838952648704	panam:  Comme un bébé sur une route défoncée.
+Id: 1692130243527700480	panam:  Elle nous sera utile, mais pas pour ça. Une arme de ce calibre entamerait à peine le blindage de la Navi.
+Id: 1692130495437598720	panam:  Y a d'autres solutions. Les pinces, là, ce sera la nôtre. C'est une centrale EOS.
+Id: 1692173873382551552	panam:  Ça va secouer un peu, mais tu le regretteras pas, je t'assure. J'ai absolument tout prévu.
+Id: 1692194347072221184	panam:  Une seconde. On va d'abord faire un diagnostic.
+Id: 1692195971207393280	panam:  Euh, je crois que t'as un virus dans ton implant. Celui dans ta nuque.
+Id: 1692215973608288256	panam:  Mhm. OK…
+Id: 1692259765631709184	panam:  La mitrailleuse est calibrée. T'auras une assistance système. Fais juste gaffe au recul, il a tendance à déséquilibrer un peu.
+Id: 1692261696034959360	panam:  Attends un peu, tu vas voir.
+Id: 1692316836672987136	panam:  Pète la vitre et entre, allez.
+Id: 1692397343567638528	panam:  Dans tout le pays ? Des milliers.
+Id: 1692401451468976128	panam:  J'ai pris la I-80 l'autre jour. Y a qu'à s'arrêter une fois que le soleil est couché, quand c'est calme. C'est là que tu l'entends.
+Id: 1692402879595933696	panam:  Le vent qui siffle à travers les fenêtres condamnées. Les virevoltants et le sable qui balayent la terre desséchée.
+Id: 1692412102232895488	panam:  OK. Je te couvre.
+Id: 1693560940687650816	panam:  C'est pas comme si on allait t'envoyer la facture.
+Id: 1693561467626450944	panam:  Je vais m'installer sur la tour. On aura une vue parfaite sur le croisement.
+Id: 1693717720247955456	panam:  Pour l'instant, en tout cas.
+Id: 1693723713958703104	panam:  Mitch ! Scorpion ! Mais qu'est-ce qu'ils foutent ?!
+Id: 1693744699219243008	panam:  Ils veulent sûrement aller aider les survivants, sans savoir que c'est un convoi corpo. Ils m'entendent pas. L'impulsion fait des interférences. Merde !
+Id: 1693787584736129024	panam:  Ils ont installé un lanceur. Il nous explosera la tronche si on approche trop.
+Id: 1693793341334482944	panam:  Oh, non, non, non…
+Id: 1693793955935440896	panam:  Il a peut-être du nouveau pour nous.
+Id: 1693887395064078336	panam:  T'es où ?
+Id: 1693947687445880832	panam:  Chope l'éclat de la voiture. C'est le chauffeur qui l'a.
+Id: 1693947687445880844	panam:  Cherche la fille avec une iroquoise.
+Id: 1693949615634538496	panam:  Cherche la fille avec une iroquoise.
+Id: 1694212777909702656	panam:  Merde, on est repérés.
+Id: 1694217829076455424	panam:  
+Id: 1695001590897438720	panam:  Mais pourquoi ils suivaient la Navi, putain ?! Quels abrutis !
+Id: 1695083001012678656	panam:  Dis pas de conneries. C'est qu'une égratignure. On va détruire ce lanceur, j'essaierai de…
+Id: 1695085291555647488	panam:  Oui, chef.
+Id: 1695087434610110464	panam:  S'ils sont encore en vie…
+Id: 1695148174926802944	panam:  Mon cul, ouais ! Il ment !
+Id: 1695211830603542528	panam:  Putain de tête de mule.
+Id: 1695217897177739264	panam:  Je pouvais pas risquer la vie d'un pote. Le seul qu'il me reste.
+Id: 1695220492193624064	panam:  J'aimerais bien savoir ce que t'aurais fait à ma place.
+Id: 1695232425558929408	panam:  S'ils ont pris vos caisses, on devrait pouvoir suivre leurs traces.
+Id: 1695241105570394112	panam:  Je tiens toujours parole.
+Id: 1695275204238503936	panam:  Ouais ?
+Id: 1695284148876996608	panam:  Je vais retrouver ces fils de pute. Je te le promets.
+Id: 1695293905331417088	panam:  C'est promis.
+Id: 1695387889936494592	panam:  Tu sais quoi, V ? T'es réglo. Tu m'as aidée avec Nash, et avec Mitch. Pour moi, c'est clair, j'ai une dette envers toi.
+Id: 1695393015124324352	panam:  Nan. Les nomades aident toujours les leurs.
+Id: 1695401684230598656	panam:  Écoute, V. J'ai pas oublié. Je te le pardonnerai pas. Et je te le dis franchement : t'as eu une attitude… de merde.
+Id: 1695402425632550912	panam:  MAIS Mitch est en vie grâce à toi. Et ça, je l'oublierai pas non plus. Jamais.
+Id: 1695403023975182336	panam:  Et puis, je t'ai promis qu'on choperait ton Hellman. Alors c'est ce qu'on va faire.
+Id: 1695537991092293632	panam:  On a qu'à chercher, on le saura.
+Id: 1695566521905729536	panam:  
+Id: 1696629637980639232	panam:  Bon, écoutez-moi tous. Aujourd'hui, on fait la fête, mais la journée de demain promet d'être assez tendue.
+Id: 1696743427233566720	panam:  Mitch et Carol seront là.
+Id: 1699343616086503424	panam:  Emmène-le dehors, fous-le sur la moto.
+Id: 1699443458189316096	panam:  À toi de jouer, Bobby. Le brouilleur, tu te souviens ?
+Id: 1699456676704940032	panam:  Je peux faire quelque chose ? Me rendre utile ?
+Id: 1699463914748243968	panam:  J'ai essayé de l'arrêter !
+Id: 1699469142461640704	panam:  C'est ça, casse-toi ! Montre que t'en as rien à foutre ! C'est tout ce que tu sais faire, hein ?!
+Id: 1699480277248241664	panam:  Ouais, c'est ça !
+Id: 1699504372115435520	panam:  Ouais. Enfin, je crois.
+Id: 1699515196674535424	panam:  C'est pas si simple.
+Id: 1699578414096838656	panam:  Faut que je me pose… Que je réfléchisse à tout ça.
+Id: 1699719625675763712	panam:  Je me tire aussi. Prends soin de la moto de Scorpion. C'est la tienne, maintenant.
+Id: 1699732726282506240	panam:  Allez, on se bouge. Avant que cette tempête nous rattrape.
+Id: 1699814172317765632	panam:  Hum hum. C'est un des plus vieux. Il a été creusé juste après la première guerre.
+Id: 1700875168543301632	panam:  Bonne chance.
+Id: 1701068833867747328	panam:  Tout est bon, pour nous ?
+Id: 1701068833884524568	panam:  Alors branche-toi, et on se tire d'ici.
+Id: 1701092295613140992	panam:  Mais j'avais le sentiment que tout était différent au nord. Qu'un avenir radieux m'attendait là-bas.
+Id: 1703162972194230272	panam:  Y a un genre de conduit de maintenance.
+Id: 1703164897983746048	panam:  C'est quoi, ces trucs ?
+Id: 1703166932858720256	panam:  Alors… ça veut dire que la zone est complètement irradiée, non ?
+Id: 1705239261392384000	panam:  On a ce qu'il nous faut. Allez, on se casse.
+Id: 1705241800372367360	panam:  V, prends la boîte et on se casse.
+Id: 1705241864411000832	panam:  Bon, tu la prends, la boîte ?
+Id: 1705280188488069120	panam:  Mets-la dans le coffre.
+Id: 1705281740950974464	panam:  V, on perd du temps. Allez, on se bouge là.
+Id: 1705282074280701952	panam:  Mets la boîte dans le coffre. On se casse.
+Id: 1705580134522474496	panam:  Y a juste un truc qui va me manquer à Night City.
+Id: 1705580412252508160	panam:  La bouffe. Le thaï sur la septième à Heywood. Les pierogi sur les quais. Huuumm…
+Id: 1705580522579480576	panam:  Quand t'auras passé un peu de temps sur la route avec nous, tu comprendras.
+Id: 1708131366235590668	panam:  Oh, arrête tes conneries. On est tous dans le même bateau.
+Id: 1708152511651434496	panam:  On connaît les routes comme notre poche. Et en Arizona, y a des gens qui nous doivent des services.
+Id: 1708153420322230272	panam:  Les douaniers finiront forcément par remarquer qu'il se passe quelque chose.
+Id: 1708163142500798464	panam:  Crois-moi, sur la liste des gens recherchés morts ou vifs, on est juste après toi.
+Id: 1708227779594342412	panam:  C'est ton nouveau départ. Alors tu dois l'entamer en prenant le volant ! Comme un vrai nomade !
+Id: 1708227779594342424	panam:  Je vais m'occuper de la nitro. Le jus va partir direct dans les cylindres.
+Id: 1708227779594342436	panam:  Si je la synchronise pas manuellement comme il faut, ça risque de tout faire péter.
+Id: 1708241921529139200	panam:  Merde. C'était pas censé se passer comme ça, j'imagine ?
+Id: 1708295370954297344	panam:  Ouais… Mais tu connais aussi la fin de l'histoire.
+Id: 1708295620414722048	panam:  C'est vrai, t'as pas tort. Et puis, je t'ai, toi. Et tous les autres connards.
+Id: 1708878631188320256	panam:  C'était pas ton idée.
+Id: 1709537784683614208	panam:  Un nouveau départ.
+Id: 1709654958639017984	panam:  Tu peux me donner un coup de main ?
+Id: 1709657594275540992	panam:  Tiens. De la marchandise premios.
+Id: 1711086929575538688	panam:  Non. Enfin, je crois pas.
+Id: 1711107142480162816	panam:  Un partenaire.
+Id: 1711107334562508800	panam:  C'est personne.
+Id: 1711479453297463300	panam:  J'arrive à sentir l'ozone, même à travers la clim.
+Id: 1715425725035470848	panam:  Faut éliminer les brutes à côté de la caisse. T'en prends un, je prends l'autre.
+Id: 1715427048640372736	panam:  La caisse ! Vas-y ! Je m'occupe de celui-là.
+Id: 1715493908041748480	panam:  Il va falloir bien plus qu'une tempête pour semer les corpos.
+Id: 1715494590807330816	panam:  Il est dégagé sur toute sa longueur. Tout ce qu'on lui demande, c'est de tenir le coup une dernière fois. Après ça, il peut s'effondrer. On en aura plus besoin.
+Id: 1719592578722689024	panam:  Nan, je sais. Mais c'est franchement pas un souci. Tu verras.
+Id: 1719611072432435200	panam:  Oui, on doit.
+Id: 1719613613308243968	panam:  Sauf si t'as déjà utilisé une arme de ce genre sans aide, en mouvement, sous les tirs de l'ennemi, et que t'arrivais quand même à toucher tes cibles.
+Id: 1719615766009606144	panam:  Mais je sais pas pourquoi, j'ai un doute. Alors connecte-toi au lieu de discuter.
+Id: 1719765266254655488	panam:  J'active le masquage. Leurs scanners sont H.S. Ils sont aveugles.
+Id: 1719780332630831104	panam:  Y a un truc qui cloche, là. T'as entendu ces tirs ? V, il leur est arrivé quelque chose !
+Id: 1719955722554953728	panam:  Rogue m'a dit que c'était à toi que je devais parler.
+Id: 1721313921822486528	panam:  Eh, pas si vite. Je viens avec toi. Il s'agit de ma famille…
+Id: 1721386120994484224	panam:  Mais putain, V ! Oh ! C'est ma famille qui se trouve là-bas !
+Id: 1721404130144677888	panam:  Je… Bien. Mais j'ai le fusil de Mitch. Je vais essayer de te couvrir d'ici.
+Id: 1721525493374103552	panam:  T'attends quoi, là ?
+Id: 1721525533639421952	panam:  V ?
+Id: 1721528361690836992	panam:  Tu comptes prendre racine, là ?
+Id: 1721565558993301516	panam:  J'ai besoin d'un verre. Allez, viens.
+Id: 1722669476736819200	panam:  Bien joué. Et maintenant ? Quelques Shiv respirent encore.
+Id: 1722729420922081280	panam:  Les 6th Street. Pourquoi ?
+Id: 1722729603189755904	panam:  J'ai déjà fait affaire avec les 6th Street. Si on effectue la livraison, ils transfèreront les créds direct.
+Id: 1722818547969290240	panam:  Hmm. On dirait que tu lis dans mes pensées.
+Id: 1722824148757639168	panam:  Hum… OK. On se retrouve à la limite nord de la ville.
+Id: 1722826267753574400	panam:  T'attache pas trop à lui, hein ! Il est à moi. À toute.
+Id: 1722965937323888640	panam:  Non, ça va pas. Y a rien qui va… Putain.
+Id: 1722977728116412416	panam:  Une chose est sûre, c'est que cette putain de ville, elle va pas me manquer.
+Id: 1722978402879262720	panam:  Je comprends vraiment pas. Après tout ce qui s'est passé à Mikoshi, t'as pas envie de quitter ce trou à rats ?
+Id: 1722978827275718656	panam:  De partir loin ? Te barrer, et jamais revenir ? T'enfuir avec moi ?
+Id: 1724251744701931520	panam:  Tu vois ce tas de merdes ? Tire une courte rafale dessus. Je vais m'occuper du calibrage.
+Id: 1724299565756997632	panam:  Bien. Cible suivante. Une seule balle.
+Id: 1724300284039946240	panam:  OK. Recommence. Une rafale plus longue.
+Id: 1724300614265888768	panam:  Parfait. Je crois que c'est bon.
+Id: 1724334396230492160	panam:  Chacune reçoit des micro-ondes des satellites en orbite, qui sont ensuite converties en courant électrique.
+Id: 1725541910548733952	panam:  Des drones !
+Id: 1725706861821190144	panam:  Trouve les commandes !
+Id: 1725707842231361536	panam:  Je connecte le détonateur. Grouille, V !
+Id: 1725791139917619200	panam:  On va s'installer sur cette falaise. On devrait avoir une bonne vue sur les antennes. Après, y a plus qu'à attendre.
+Id: 1725805911954317312	panam:  Ils comprendront pas ce qui leur arrive.
+Id: 1727314148373454848	panam:  Et boum !
+Id: 1727321442016452608	panam:  Dans le mille !
+Id: 1727441356161179648	panam:  Et voilà le travail !
+Id: 1728441455081025536	panam:  Ils iront nulle part.
+Id: 1728444024863977472	panam:  Une petite seconde…
+Id: 1728447050131566592	panam:  C'est bon. On l'a eue, cette enfoirée.
+Id: 1729744573727109128	panam:  On verra bien.
+Id: 1729744888853557304	panam:  Tu ferais bien d'aller voir un charcudoc quand tout ça sera fini.
+Id: 1729891718383923200	panam:  Nous servir ? À quoi ? À appeler des renforts ? À descendre Mitch ?
+Id: 1729893253666959360	panam:  Ils ont tué Scorpion, tu piges ça ? Ils ont tué mon pote.
+Id: 1729894073384955904	panam:  Vas-y, fais-moi la leçon. Mais ça change rien.
+Id: 1729895877539655680	panam:  Scorpion, Mitch… J'aurais fait pareil pour tous les gens que j'aime.
+Id: 1729899810773397504	panam:  Si c'est pas ton cas tu devrais te poser des questions.
+Id: 1729907828588146688	panam:  C'est ça…
+Id: 1729913577720639488	panam:  Putain, mais j'hallucine ! Pourquoi tu me parles encore de ce connard, hein ?!
+Id: 1729915216502321152	panam:  Ils ont tué Scorpion, V ! Mon meilleur pote ! Qu'est-ce qui t'échappe là-dedans ?! Hein ?!
+Id: 1729918162866663424	panam:  Nous servir ?! À quoi ?! Tu crois franchement qu'il t'aurait conduit à Hellman? Et que vous auriez échangé vos otages ?
+Id: 1729919794702577664	panam:  Sois pas si naïf, V. Ces types sont tous des soldats. Ils suivent la procédure, y a pas d'exceptions.
+Id: 1729920592375312384	panam:  Il gagnait juste du temps, il attendait le bon moment pour nous descendre : Mitch, toi et moi !
+Id: 1729921337015267328	panam:  Ouvre les yeux, V.
+Id: 1729932650160451584	panam:  Oh, je t'en prie, arrête. Tu crois vraiment qu'il t'aurait conduit à Hellman ? Et que vous auriez échangé vos otages ?
+Id: 1729937314008395776	panam:  Sérieux, tu crois qu'il avait craqué ? Tout ce qu'il attendait, c'était une bonne occase pour nous buter.
+Id: 1729941164782120960	panam:  Très bien.
+Id: 1729978197836845056	panam:  Tu sens ça ?
+Id: 1729979784525271040	panam:  Autant que possible. C'est pas un raid habituel, c'est une première pour beaucoup. Mitch a dû les motiver.
+Id: 1730026357320708096	panam:  Merde. Qu'est-ce qui se passe ?
+Id: 1730149146610495488	panam:  À plus. Prends soin de la moto de Scorpion ! Elle est à toi, maintenant.
+Id: 1730167725399891988	panam:  S'ils arrivent à se regrouper et à appeler des renforts, on est baisés.
+Id: 1731568847077298176	panam:  Tu sais quoi ? Voir Kerry Eurodyne perdu au milieu de nulle part… c'était quelque chose.
+Id: 1731570327012298752	panam:  Merde. Je suis désolée.
+Id: 1731581911360991240	panam:  C'est rien. Faut y aller.
+Id: 1731581911360991264	panam:  Tous ?… Scorpion ? Il est là ?
+Id: 1731581911377768464	panam:  Mitch ? Mitch !? Il… il va bien, pas vrai ?
+Id: 1731581911394545680	panam:  Non. Non ! T'en es sûr ? Non, il…
+Id: 1732989726495657984	panam:  On s'en fout. Contente-toi d'apprécier. Je ressens la même chose.
+Id: 1734142020990816256	panam:  On doit d'abord s'occuper des gardes.
+Id: 1734594634526248960	panam:  Oh, c'était facile.
+Id: 1734595948467474432	panam:  C'est le moment.
+Id: 1734597141277200384	panam:  Je m'occupe des lumières.
+Id: 1738846875639767040	panam:  V, débarrasse-nous des drones !
+Id: 1738847068443533312	panam:  V ! Concentre-toi, ou on est foutus !
+Id: 1739172720815132672	panam:  Aah… ça, c'est un spectacle dont je me lasserai jamais.
+Id: 1740038205998755872	panam:  Ouais, ben, on verra. L'essentiel, c'est que ça marche maintenant.
+Id: 1740046083774083072	panam:  Je connais un endroit. On aura une bonne vue de là-bas.
+Id: 1740135132522213376	panam:  C'est la seule façon de vérifier si Mitch et Scorpion vont bien.
+Id: 1740291273390682144	panam:  La voilà ! Elle arrive de Pacifica !
+Id: 1740292038196850688	panam:  Ah, et au fait…
+Id: 1744273072545312768	panam:  Je vais t'en reprendre une.
+Id: 1744351498041159680	panam:  On se mettra au boulot vers minuit, comme ça on attirera pas l'attention. Ça te va ?
+Id: 1744361903572512768	panam:  Avec ce qu'on a prévu de faire, va falloir tâcher de rester invisibles, ou presque.
+Id: 1744598297449357312	panam:  Je suis en pleine discussion avec Mitch. Il veut que je raccroche. Il me fait des grands signes.
+Id: 1744599504351944704	panam:  Il te dit bonjour.
+Id: 1744600497294696448	panam:  À toi et à ta vénérable mère.
+Id: 1744602417430290432	panam:  Ben, alors quitte-le. Reviens à la maison.
+Id: 1744602821962522624	panam:  Y a un mot super pratique qui s'appelle « non ». Tu devrais l'utiliser plus souvent.
+Id: 1744603909948203008	panam:  Désolée. Mitch va péter les plombs. Je vais devoir te rappeler.
+Id: 1744632579508457472	panam:  Salut. Comment ça se passe ? Tout est prêt ?
+Id: 1744634417200812032	panam:  Alors, vous l'avez trouvé ? Il était bien là où on pensait ?
+Id: 1744635066948833280	panam:  Ouais, c'est bon.
+Id: 1744701104991002624	panam:  J'ai parlé à Viktor. Alors, steuplaît, arrête de faire le mec surpris !
+Id: 1744701683200974848	panam:  Où est-ce que t'es, bordel ?
+Id: 1744704653456072704	panam:  Sale petit con. T'as de la chance qu'on soit pas face à face !
+Id: 1744705045908709376	panam:  Bon, sérieusement… Où est-ce que t'es ?
+Id: 1744711797865734144	panam:  On s'en fout de savoir laquelle ! T'es dans la merde. Encore ! Et t'es tout seul ! T'aurais pu demander de l'aide !
+Id: 1744712666237657088	panam:  Rhoo, putain, c'est bon ! J'en ai marre ! Arrête de faire ton chieur ! Reviens sur Terre TOUT DE SUITE, avant qu'ils te fassent du mal !
+Id: 1744714039570227200	panam:  Rah, pareil pour moi, crétin. Maintenant, reviens !
+Id: 1745932075469266944	panam:  Attention ! Ils arrivent par l'autre côté !
+Id: 1751709453778546688	panam:  Et c'est pile ce que je voulais entendre.
+Id: 1751711775980122112	panam:  T'inquiète. Je finis toujours ce que je commence.
+Id: 1751740062114639872	panam:  Alors ? Qu'est-ce que ça te fait ?
+Id: 1751742439882354688	panam:  On s'apprête à crasher un appareil de Kang Tao qui vaut plusieurs millions d'eddies.
+Id: 1751798014829785088	panam:  Ha, ouais !
+Id: 1751809391932104704	panam:  Scorpion disait que je détesterais Night City.
+Id: 1751825074902134784	panam:  Tu vas survivre !
+Id: 1751826175624110080	panam:  Défonce-les, V !
+Id: 1751826844397494272	panam:  Ça, c'est pour mes potes, bande d'enculés !
+Id: 1751826865972994048	panam:  Attention ! Y a un sniper derrière la camionnette !
+Id: 1751829390689955840	panam:  Ouais. Si on se grouille.
+Id: 1751841494209785868	panam:  Qu'est-ce que ça change ? D'après toi, qui tire les ficelles du gouvernement ?
+Id: 1751841494209785892	panam:  V, regarde autour de toi. C'est simple, tout ce que tu vois appartient à une corporation.
+Id: 1751841494293671952	panam:  Sérieux ? Un iguane vivant ?
+Id: 1751841494310449172	panam:  Le directeur financier adjoint de Kaukaz.
+Id: 1751841494327226376	panam:  Mort. Dans le coffre.
+Id: 1751841494360780800	panam:  Putain, t'es de la police ou quoi ?
+Id: 1751841494360780824	panam:  Le directeur financier adjoint de Kaukaz.
+Id: 1751841494377558036	panam:  Il a voyagé dans le coffre. Mort.
+Id: 1751841494394335240	panam:  C'est une longue histoire. Je te la raconterai peut-être un jour.
+Id: 1751853522869678080	panam:  Où t'es allé pêcher cette idée ?
+Id: 1751855279729405952	panam:  C'est une chance que je sois de ton côté alors, tu crois pas ?
+Id: 1751860871978151936	panam:  V, fais gaffe à ce que tu dis.
+Id: 1751897281942646784	panam:  Franchement, j'en ai aucune idée.
+Id: 1751898850478125080	panam:  Ouaip. Et c'est là que c'est malin : elles sont reliées. Suffit qu'on plombe l'unité de récupération. Ça créera une réaction en chaîne et les antennes balanceront toutes une IEM.
+Id: 1751898850478125092	panam:  La Navi va foncer comme une mouche dans une toile d'araignée. On n'aura qu'à déclencher l'impulsion au bon moment.
+Id: 1751899173573750820	panam:  … chaque antenne balancera une grosse impulsion électromagnétique.
+Id: 1751902142805438464	panam:  On n'aura qu'à envoyer l'impulsion au bon moment.
+Id: 1751912125383176192	panam:  Abattre une Navi ? À moi seule ? Euh, nan.
+Id: 1751913453450817536	panam:  Pourquoi tu demandes ça ?
+Id: 1751926128922718208	panam:  Merci.
+Id: 1751926832609488896	panam:  Tout est dans la façon d'aborder les choses. Pour moi, c'est les triple E.
+Id: 1751930778426142720	panam:  Évaluer, échafauder, exécuter.
+Id: 1751933730159194112	panam:  Quelle que soit la mission, il faut faire les trois. D'abord, évaluer ce qu'on a et ce qu'on affronte : le problème.
+Id: 1751940721527091200	panam:  Ensuite, on échafaude un plan en tenant compte de ces variables. On prend ce qu'on a, on trouve ce qu'il faut, on organise les choses, les gens. Et pour finir, on exécute le plan. C'est simple.
+Id: 1751948839485042688	panam:  V…
+Id: 1751949901432483840	panam:  Ben ouais. Ça se pourrait bien.
+Id: 1751957082953347072	panam:  Mais on n'a pas encore eu la Navi. Alors évite de t'emballer, avec ta copine Rogue.
+Id: 1751958967068258304	panam:  Je t'emmerde. Je ferai les deux.
+Id: 1751960045155381248	panam:  Ah ouais, tu crois ?
+Id: 1751982577443008512	panam:  Non… On a récupéré un des nôtres dans un convoi, une fois, mais… ce qu'on va faire là… non.
+Id: 1751984866677354496	panam:  Hmm, c'est bien plus risqué.
+Id: 1751988935269675008	panam:  De quoi ? Ce genre de boulots ?
+Id: 1751992491318046720	panam:  Je pourrais te retourner la question. Ça te fait quoi d'être tout seul ?
+Id: 1752168369827368960	panam:  Y a un coin chouette là-haut. C'est calme.
+Id: 1752923419288662016	panam:  C'est parce que je sais pas encore quoi répondre.
+Id: 1752925496492552192	panam:  Et ?
+Id: 1752926780570333184	panam:  Bon. On y sera bientôt.
+Id: 1752927916707827712	panam:  Nan ! Touche pas à cette porte.
+Id: 1752932973661515776	panam:  Hmm. Je vois ce que tu veux dire.
+Id: 1752949629276254208	panam:  Je voudrais pouvoir tirer un trait aussi facilement… comme toi.
+Id: 1752969155153883136	panam:  Dépêche, avant qu'ils nous touchent !
+Id: 1752971751629385728	panam:  Ben accélère !
+Id: 1752977084250714112	panam:  Bon, y aurait à redire, mais ça s'est quand même pas trop mal passé.
+Id: 1752990392877969408	panam:  C'est bon, il marche. Même pas de baisse de signal.
+Id: 1752992444127506432	panam:  Il faut juste qu'on s'éloigne assez pour éviter que l'impulsion nous grille, nous aussi.
+Id: 1753006968851263488	panam:  Putain de ta mère, il s'est enrayé.
+Id: 1753007825445580800	panam:  Je sais !
+Id: 1753008070661369856	panam:  Putains de loquets ! Ils veulent pas s'ouvrir !
+Id: 1753008692794093568	panam:  Juste une seconde…
+Id: 1753112216320208896	panam:  V, s'ils sont…
+Id: 1753115040965849088	panam:  V, ça se présente assez mal…
+Id: 1753121906420740096	panam:  V, s'ils ont eu les Aldecaldos… S'ils ont eu Mitch et Scorpion, je… je pourrai pas…
+Id: 1753125070989553664	panam:  Ouais…
+Id: 1753146635131154432	panam:  J'ai toujours le fusil de Mitch. Je vais essayer de te couvrir d'ici.
+Id: 1753147568229576704	panam:  Vas-y.
+Id: 1753150383043768320	panam:  Je vais vous sauver.
+Id: 1753251585760817172	panam:  Qu'est-ce qu'on fait, maintenant, V ?
+Id: 1753297702703722496	panam:  T'as vu ça ! Toutes ces lumières qui clignotent, un vrai sapin de Noël !
+Id: 1753299619903303680	panam:  Tiens-toi prêt !
+Id: 1753317914316500992	panam:  Mitch…
+Id: 1753331540083470336	panam:  
+Id: 1753334906515746844	panam:  Quoi ?
+Id: 1753345423347150848	panam:  Mhmm… Pour les odeurs, je sais pas. Les coyotes, ça pue quand même.
+Id: 1753350771822948352	panam:  Ha ha. Je t'emmerde.
+Id: 1754417549105819648	panam:  Sûrement mieux que je me connais moi-même.
+Id: 1754419297442721792	panam:  Il disait que quand j'en aurais assez de la ville, on se trouverait un camping-car.
+Id: 1754438593556377600	panam:  Sois prudent, V.
+Id: 1754491532688732160	panam:  Tiens.
+Id: 1754523900535353344	panam:  Bon, tiens-toi prêt… Attends… Encore une seconde…
+Id: 1754524686310043648	panam:  J'espère que Mitch a contacté les Aldecaldos. Putains d'interférences…
+Id: 1754525990473150464	panam:  Bordel ! V !
+Id: 1754527871061848064	panam:  Je parie que c'est là qu'ils retiennent Hellman.
+Id: 1754577721723842560	panam:  T'inquiète, j'ai un œil dessus.
+Id: 1754579246101688320	panam:  Alors à mon signal, t'auras qu'à envoyer l'impulsion.
+Id: 1754624143156441088	panam:  Maintenant on attend. On va essayer de se caler sur le plan de vol de la Navi.
+Id: 1754657149427408896	panam:  Suffisamment grave pour m'obliger à écouter sagement vos conneries.
+Id: 1754667420069945344	panam:  La ferme.
+Id: 1754667599351275520	panam:  Allez, Mitch, fais pas ta pute. Aide-moi.
+Id: 1754735836315537408	panam:  On est prêts ?
+Id: 1754739964282425344	panam:  Bon. Le convoi de Militech doit faire le trajet depuis Night City jusqu'à une base où l'acheteur les attend.
+Id: 1754743445269532672	panam:  T'as des questions, V ?
+Id: 1754754158057615360	panam:  Réveille-toi !
+Id: 1754796757893271552	panam:  Salut, V !
+Id: 1755991070406586388	panam:  La clé à molette, c'est nous. Le cutter, c'est la Navi. Et le tournevis, c'est l'endroit où la Navi devrait planter son nez dans le sol.
+Id: 1755991070406586404	panam:  Et là, tu dois te demander comment on va s'y prendre pour la crasher.
+Id: 1755993001967464448	panam:  Regarde ça.
+Id: 1755993718203592704	panam:  Tu veux que je t'explique ou pas ?
+Id: 1755993769038557184	panam:  V ? Je croyais qu'on n'avait pas beaucoup de temps.
+Id: 1756117848059551768	panam:  Hum... t'as choisi une drôle d'heure pour ça.
+Id: 1756117848059551784	panam:  V ?
+Id: 1756117848076328972	panam:  Bon, qu'est-ce qui se passe ?
+Id: 1756117848109883440	panam:  C'est pour ça que t'appelles ? Pour t'excuser de ruiner une bonne nuit de sommeil ?
+Id: 1756117848176992272	panam:  Quoi... ?
+Id: 1756117848176992288	panam:  OK. Tu sais quoi ? Je t'emmerde.
+Id: 1756117848193769492	panam:  Explique-toi, alors !
+Id: 1756117848378318848	panam:  Mmm, salut...
+Id: 1756117848378318884	panam:  T'as une idée de l'heure qu'il est ?
+Id: 1756117848428650520	panam:  Et... qu'est-ce que c'est ?
+Id: 1756117848428650544	panam:  Alors tais-toi et dis-moi juste où t'es. En ville ?
+Id: 1756117848445427712	panam:  OK. Alors pose ton cul quelque part et attends-moi. J'arrive.
+Id: 1756117848445427736	panam:  Ça a un rapport avec le truc dont tu m'as parlé l'autre fois ?
+Id: 1756117848445427760	panam:  Tu vas respirer à fond deux ou trois fois, et tu vas bien réfléchir à tout ça. Et quand ce sera fait, tu pourras me rappeler. Tu sais pourquoi ? Parce que je suis là pour toi.
+Id: 1756160274550509568	panam:  Va falloir prendre les escaliers.
+Id: 1756270710456184832	panam:  Périmé, on dirait.
+Id: 1756272613999112192	panam:  Tant pis… Ah !
+Id: 1756453581054824448	panam:  Ouais. Carol se branche sur leurs communications de temps en temps.
+Id: 1759386143335141376	panam:  Règle sa vitesse.
+Id: 1759400790817787904	panam:  Mitch, Bob ! Allez !
+Id: 1759410856795066368	panam:  On y va, V.
+Id: 1760222280052133888	panam:  Salut, V. Non, pas encore.
+Id: 1760400043614687232	panam:  Allez, V. On se met au boulot.
+Id: 1760578910345097228	panam:  Bah… je préfèrerais, mais une explosion déclencherait un protocole automatique d'arrêt dans chaque récupérateur.
+Id: 1760578910361874432	panam:  On se ferait repérer par tout Night City avant de contourner le protocole. L'idée est bonne, mais pas cette fois.
+Id: 1760578910395428888	panam:  Normalement, non. Suffit de pousser tous les réglages à fond.
+Id: 1760578910445760524	panam:  C'est pas une mauvaise idée, mais…
+Id: 1760578910445760548	panam:  Je crois qu'on est raccord !
+Id: 1760580843634028544	panam:  Une fois à la centrale, je ferai une dérivation pour le détonateur. T'auras qu'à surcharger le système.
+Id: 1760581774014541824	panam:  Une fois à la centrale, tu surchargeras le système. J'installerai une dérivation pour le détonateur.
+Id: 1760596147323924480	panam:  Nan, pas du tout… J'ai appris ça chez les Aldecaldos. Mitch et Scorpion.
+Id: 1760596985782071296	panam:  C'est comme ça qu'ils ont été formés à l'armée. Après, ils ont récupéré le truc. Ça nous a aidés, faut reconnaître. Un peu comme ça va nous aider aujourd'hui.
+Id: 1760597999025254400	panam:  Eh ben dans cas, tu ferais mieux d'assurer. Tu crois quand même pas que je vais faire tout le boulot à ta place, non ?
+Id: 1760598822820114432	panam:  V, t'es pas croyable, des fois.
+Id: 1761644543623163904	panam:  On verra bien.
+Id: 1761661042605813760	panam:  OK, on peut y aller.
+Id: 1761662287441686528	panam:  Bon, je résume : on entre, on bousille le système et on dégage vite fait.
+Id: 1761779916546371584	panam:  Et puis… sans moi, t'as aucune chance de réussir.
+Id: 1761783578005991424	panam:  Ton Hellman, je vais te le trouver.
+Id: 1761796929532588032	panam:  Hé, tu vois ça, V ? Les pompes ont l'air en bon état. Ce serait pas le cas dans une station fermée.
+Id: 1761808718412509184	panam:  Ces enculés ont peut-être appelé des renforts.
+Id: 1761831662178136112	panam:  Saul ?
+Id: 1761831662194913292	panam:  Ouais, mais est-ce que j'en fais encore partie de cette famille ?
+Id: 1761834655837450252	panam:  J'en ai rien à foutre de lui.
+Id: 1761834655854227500	panam:  Saul ? C'était son… ?
+Id: 1761834655871004676	panam:  Ouais, mais est-ce que j'en fais encore partie de cette famille ?
+Id: 1761834655871004712	panam:  ...
+Id: 1761870667410173952	panam:  Eh ben, figure-toi que oui.
+Id: 1762070150203858944	panam:  Quoi ?
+Id: 1762078447795462144	panam:  C'est comme ça que les villes meurent. Pas dans le bruit et la fureur, mais dans un gémissement.
+Id: 1762287741098811392	panam:  N'empêche que t'es là juste parce qu'elle t'a envoyé.
+Id: 1763133539411845120	panam:  Rah. Mais écoute-moi, putain !
+Id: 1763143050499481600	panam:  Qu'est-ce que tu connais de moi, hein ?
+Id: 1763819401769005056	panam:  Est-ce qu'il…
+Id: 1764683611163996160	panam:  On doit planquer la caisse. Gare-toi à côté de cet affleurement.
+Id: 1764686089490657280	panam:  Quoi que ce soit, ça passera.
+Id: 1764718651248340992	panam:  On est presque au barrage. On va faire un petit arrêt ici.
+Id: 1764770380677001216	panam:  V, faut se magner. Y a une tempête qui se ramène.
+Id: 1764777238427463680	panam:  Putain !
+Id: 1764934064863498240	panam:  T'as vu ? C'est exactement ce que tu voulais.
+Id: 1766231412686348288	panam:  Scorpion disait que je détesterais Night City.
+Id: 1767629873482719232	panam:  On l'a eue !
+Id: 1767629873482719256	panam:  Soit ils se posent soit c'est le crash !
+Id: 1767636926003568640	panam:  Vous allez crever ici, bande de fils de pute.
+Id: 1770684746933522432	panam:  Night Corp construit une nouvelle ligne MagLev dans cette zone. Bon, OK, le chantier est gardé par Militech, mais ça devrait être gérable.
+Id: 1770708858326274048	panam:  Viens nous retrouver plus tard. Je te laisse avec Saul, pour l'instant.
+Id: 1771870725815791616	panam:  Le truc énorme, c'est l'unité de récupération. Et tu vois ces antennes ?
+Id: 1771889399847055360	panam:  Les trois E, c'est la formule magique pour avoir la belle vie. Avec une bière fraîche à l'occase.
+Id: 1771965643989053440	panam:  Mhm. Prépare-toi.
+Id: 1772011339404406784	panam:  Je vais les massacrer. Tous, jusqu'au dernier. Est-ce que ça te pose un problème ?
+Id: 1772014362692284416	panam:  Je vais les massacrer, V. Tous, jusqu'au dernier.
+Id: 1772018882826596352	panam:  On va les massacrer. Jusqu'au dernier.
+Id: 1772020123317170176	panam:  Bien sûr. À condition que tu me le reproches pas après.
+Id: 1772021073662570496	panam:  On va les massacrer. Jusqu'au dernier.
+Id: 1772134060847132672	panam:  Hein ? Qui ?
+Id: 1772139469133705216	panam:  Il s'est mis une balle ?
+Id: 1772140715664076800	panam:  Putain, quelle histoire.
+Id: 1772146926270672896	panam:  Ha Ha…
+Id: 1772147966326235136	panam:  Va te faire mettre.
+Id: 1772152048019173376	panam:  Sûrement mieux que je me connais moi-même.
+Id: 1772152438592761856	panam:  Il disait que quand j'en aurais assez de la ville, on ferait le plein de croquettes…
+Id: 1772154949319913472	panam:  Ouais… Sauf qu'il est mort. Putain, V. Pourquoi faut toujours que tout parte en couille comme ça ?!
+Id: 1772157049141878784	panam:  T'arrête, Mitch. Tu faisais moins le malin après Mikoshi ! On s'inquiétait tous.
+Id: 1772162703581376512	panam:  Mhm. Tu me comprends.
+Id: 1772180750195093504	panam:  Tu sais quoi ?
+Id: 1772183509006938112	panam:  C'est le résumé de ma vie, ça. Je me sors d'une merde juste pour me fourrer dans une merde encore plus grosse.
+Id: 1772184303458447360	panam:  Et évidemment, j'entraîne tout le monde avec moi.
+Id: 1772185986833969152	panam:  Tu sais quoi ? J'en ai ras le bol, V. Si je merde encore, t'as intérêt à me dérouiller le cul à coups de pompe.
+Id: 1772191415957843968	panam:  Promets-le-moi.
+Id: 1773296090975170560	panam:  La meilleure technique.
+Id: 1773299625179607040	panam:  Ouais. On va faire revenir cette ville d'entre les morts.
+Id: 1773417475257004032	panam:  OK. Je te couvre.
+Id: 1773539395843010560	panam:  Comment il va ?
+Id: 1773565971120926720	panam:  Saul est quelque part là-dedans. Je le sens.
+Id: 1773599886531506176	panam:  Je démarre le moteur ! J'arrive tout de suite !
+Id: 1773660672431206400	panam:  Et fais gaffe avec qui tu traites.
+Id: 1773674362838519808	panam:  Pfiou, merci. Ça fait plaisir à entendre.
+Id: 1773676286296002560	panam:  J'ai un problème.
+Id: 1773683894562131968	panam:  Évidemment.
+Id: 1773684518691344384	panam:  Oublie pas de me prévenir quand t'auras un créneau.
+Id: 1773686595442249728	panam:  Mais attends… Ça veut dire que tu comptes pas venir, je me trompe ?
+Id: 1773693698549362688	panam:  Ha ha, excellent !
+Id: 1773695289599864832	panam:  On a morflé ! La caisse tiendra plus très longtemps !
+Id: 1773701999915839488	panam:  Putain ! En voilà d'autres !
+Id: 1773703287379660800	panam:  Ben, il vaudrait mieux que…
+Id: 1773704191755489280	panam:  Tu me connais trop bien.
+Id: 1774747516754587648	panam:  C'est PAS mon choom.
+Id: 1774747855167811584	panam:  Plus maintenant. Ce Shiv m'a fait un coup de pute. Il a chourré mon pick-up et la marchandise. Et là, il compte sûrement la fourguer à Rocky Ridge.
+Id: 1774749039035281408	panam:  Il peut se toucher s'il pense que je vais le laisser faire.
+Id: 1774750785056927744	panam:  Va falloir faire un arrêt en chemin.
+Id: 1774753416529702912	panam:  Tu veux vraiment que je te réponde ? Mais oui, évidemment. Merci, Boz. Tu le regretteras pas.
+Id: 1774763906383343636	panam:  Oh, ça va. Ferme-la.
+Id: 1774763906450452500	panam:  Bien vu, c'est ça.
+Id: 1774779500671397888	panam:  Fait chier. Bon. On aura besoin de renforts.
+Id: 1774795354435874816	panam:  Ça te pose un problème ?
+Id: 1774799202323918848	panam:  Va te faire foutre.
+Id: 1774909041046523904	panam:  Tu déconnes. Je vais mettre ma famille en danger, me faire passer un savon par Saul, peut-être même me faire virer du clan, et tu trouves que j'ai l'air heureuse ?
+Id: 1774930719793287168	panam:  Tu vas trouver ça bête, parce que c'est moi qui t'ai demandé de m'aider, mais… enfin…
+Id: 1774931022974357504	panam:  Pourquoi t'as accepté ?
+Id: 1774934690339557376	panam:  Oui, mais ça a rien à voir avec le convoi.
+Id: 1774950624349458432	panam:  Merde, je pensais pas que ça se verrait.
+Id: 1774968548458901504	panam:  Parfait. Niveau cerveau, on a le dessus sur ces brutes.
+Id: 1774978592639619072	panam:  T'as intérêt à la fermer !
+Id: 1774980810033926144	panam:  Bon, d'accord. Et toi… Pourquoi tu fais ça ?
+Id: 1774981208123707392	panam:  Je sais que c'est moi qui t'ai demandé de m'aider, mais… Pourquoi t'as accepté ?
+Id: 1774985794595131392	panam:  Quoi… C-C'est tout ? Ah… Désolée, je… je disais pas ça de manière négative.
+Id: 1774999854673891328	panam:  Tu crois que je vais me foutre dans la merde ? Ça te ferait marrer, hein ?
+Id: 1775016863938523136	panam:  Putain, V ! Bonjour la discrétion !
+Id: 1775100520520028160	panam:  Alors tu comptes passer me voir souvent, c'est ça ?
+Id: 1775122043473563648	panam:  Ah, il te faut une autre arme ?
+Id: 1775130878825271296	panam:  On trouvera sûrement quelque chose à ton goût.
+Id: 1775132848218771456	panam:  Non, c'est juste que… Je viens de rentrer, mais j'ai déjà oublié comment ça se passe à Night City.
+Id: 1775134863732838400	panam:  Les marchés tordus, les enjeux, les contreparties.
+Id: 1775146406776213504	panam:  Si on pense à la même chose, désolée, mais… je dois refuser.
+Id: 1775177777418670080	panam:  V, je sais que je peux compter sur toi.
+Id: 1775183480548036608	panam:  Ouais. La même longueur d'onde, mais… pas le même canal.
+Id: 1775196218733170688	panam:  Mais… Personne a jamais fait autant pour moi avant. Pas sans que ça cache un truc.
+Id: 1775205899606233088	panam:  OK. Mais… merci, V. Je le pense vraiment.
+Id: 1775209172924960768	panam:  Ouais. Et on devrait peut-être tous les deux se demander pourquoi.
+Id: 1775227473951338496	panam:  Les connaissant, il y a quelque chose d'important à l'intérieur. Tu peux peut-être même accéder au système de sécurité.
+Id: 1775231005370757120	panam:  Garde bien la tête baissée et fonce tout droit !
+Id: 1775241719015682048	panam:  De là, t'auras une passerelle qui te mènera au bâtiment principal.
+Id: 1776121914174787584	panam:  Enfin, Saul a raison. Regarde les choses en face, V. Ma vie était un vrai bordel et tu l'as encore plus réduite en miettes.
+Id: 1776122616620044288	panam:  Mais faut parfois en passer par là avant de recoller les morceaux.
+Id: 1776133912803463168	panam:  Bienvenue dans la famille.
+Id: 1776181635460157444	panam:  Si tu veux parler, je suis là-haut.
+Id: 1776193869778661376	panam:  Nickel. Mitch, la camionnette est prête ?
+Id: 1776201328408801280	panam:  OK, prends le volant.
+Id: 1776216527777968128	panam:  OK, mais surtout te perds pas. On a pas beaucoup de temps.
+Id: 1776252189428297728	panam:  Je connais une planque parfaite. J'aurai les yeux rivés sur toi en permanence.
+Id: 1776260259839619072	panam:  Je suis là, V !
+Id: 1776648188379598848	panam:  Ah, V, t'es là.
+Id: 1776661433958076416	panam:  Hum, ouais. C'est pour ça que j'ai dit à V de se pointer juste devant toi. Tu me prends vraiment pour une conne ?
+Id: 1780571606679969796	panam:  Fais gaffe, V ! Des bâtards de Shiv arrivent dans ton dos !
+Id: 1780743552456003584	panam:  J'ai déjà essayé, Mitch. Laisse tomber.
+Id: 1780752107661758464	panam:  Ça sert à rien de discuter avec Saul. On gagnera pas.
+Id: 1780753108120702976	panam:  Puis quoi, encore ? On va prendre le Basilisk et attendre que Saul admette qu'on avait raison.
+Id: 1780796771714535424	panam:  C'est un panzer-cargo blindé de Militech, un vieux zinc des années 2060.
+Id: 1780804510457073664	panam:  Ils veulent l'envoyer dans un pays pauvre, un endroit où ils pourront encore le faire passer pour une tech ultra-moderne.
+Id: 1780837009736404992	panam:  Comment t'as deviné ?
+Id: 1780860496261746688	panam:  Mais nan. C'est pas le genre de Saul.
+Id: 1780887625020018688	panam:  C'est juste un lâche. Il préfère rester prudent et attendre une bonne occaz. Pour la famille.
+Id: 1780942008365682688	panam:  Ouais. Mais c'était avant notre attaque contre le camp des Raffens.
+Id: 1780959176158228480	panam:  J'ai pas faim. Je viens de bouffer un kilo de sable.
+Id: 1781043154647134208	panam:  On va passer la nuit ici.
+Id: 1781044100563349504	panam:  Ce serait cool d'avoir du jus.
+Id: 1781095669984014336	panam:  Ramène-toi ! J'ai une surprise pour toi !
+Id: 1782008008528384004	panam:  On y est.
+Id: 1782008794943606784	panam:  Saul a aucune envie de nous voir là-bas de toute façon.
+Id: 1782009868702208000	panam:  C'est ce que pense Saul. Il a posté des sentinelles tout autour du camp.
+Id: 1782018678317666312	panam:  Parce que je t'ai déjà saoulé y a une minute.
+Id: 1782060507674775552	panam:  Et la protection des cultures, bien sûr, personne en a rien a branler !
+Id: 1782065922219249664	panam:  Tout ce que Saul va réussir à prouver, c'est qu'une corpo peut nous marcher sur la gueule, et nous, on leur dira merci.
+Id: 1782115196332216320	panam:  Cassidy, Ted, Carol, Bob… Ils sont partants, eux aussi.
+Id: 1782121599423811584	panam:  Il a peur que Militech nous massacre si on attaque ce convoi.
+Id: 1782169260206133248	panam:  C'est là que t'aurais dû saisir l'occasion.
+Id: 1782172056263397376	panam:  Si t'es venu pour me faire la morale, tu peux te casser tout de suite.
+Id: 1782183723676274688	panam:  Comme tu voudras.
+Id: 1782189187512209408	panam:  Putain, Mitch. Tu l'as entendu. Il dit que c'est pas son affaire.
+Id: 1782235166898720768	panam:  Merci, V.
+Id: 1782236431900807168	panam:  Moi aussi. Mais faut croire que c'est le cas que quand quelqu'un essaie de nous tuer.
+Id: 1782239351438381056	panam:  OK, on va parler aux autres.
+Id: 1782249340861222912	panam:  Je lui ai sauvé la peau, mais il continue d'ignorer tout ce que je dis.
+Id: 1782251740674199552	panam:  Alors je crois que la boucle est bouclée.
+Id: 1782434844964433924	panam:  La passerelle. Elle relie le garage au bâtiment principal.
+Id: 1783514150143127552	panam:  On laisse ma caisse ici, au cas où. Fais juste gaffe avec la mitrailleuse, elle a tendance à s'enrayer.
+Id: 1783515941748469760	panam:  On va y aller à moto.
+Id: 1783517348417368064	panam:  On laisse ma caisse ici, au cas où. Fais juste gaffe avec la mitrailleuse, elle a tendance à s'enrayer.
+Id: 1783517632841510912	panam:  On va y aller à moto.
+Id: 1783530516417998848	panam:  Quoi, connard ? Tu croyais vraiment que j'allais laisser couler ?
+Id: 1783552613571751936	panam:  Ferme ta putain de gueule !
+Id: 1783732414881869824	panam:  T'aurais tout aussi bien pu venir avec moi !
+Id: 1785114772635631616	panam:  
+Id: 1785115660368461824	panam:  
+Id: 1785152807674597380	panam:  J'ai toujours aimé les trains.
+Id: 1785152813227855872	panam:  Et les gares où toutes les voies se retrouvent.
+Id: 1785156974799507460	panam:  Bon. Nous y voilà.
+Id: 1785164310250123264	panam:  À ce qui nous attend.
+Id: 1785185537640648704	panam:  Ça a marché ! Viens voir.
+Id: 1785191216828928000	panam:  V... T'as un moment ? Je veux te parler.
+Id: 1785416144282996740	panam:  Bravo ! Merci, les gars.
+Id: 1785538191969505284	panam:  Carol ! On a une carte ! Et maintenant ?!
+Id: 1785579829227966476	panam:  Oh, garde ta salive, j'ai pas besoin qu'on me réconforte.
+Id: 1785579829227966484	panam:  Grr, c'était quelqu'un que je connais ?
+Id: 1786415429794263040	panam:  Super, c'est parfait.
+Id: 1786416388528271360	panam:  Super. Ils vont sûrement se pointer en nombre. Difficile de dire combien.
+Id: 1786417448177233920	panam:  Faut qu'on soit plus malins qu'eux, et qu'on trouve un moyen d'arriver au pick-up.
+Id: 1786598528712830980	panam:  Ouais, et ?
+Id: 1786598528880603136	panam:  Putain. Super !
+Id: 1786598528880603152	panam:  Quelles emmerdes vous voulez m'attirer, tous les deux, hein ?
+Id: 1786598528947712016	panam:  Mh. Tu veux quoi ?
+Id: 1786598528964489236	panam:  Sans déconner ?
+Id: 1786598529065152512	panam:  Ouais, fantastique. Mais je suis occupée là, et c'est pas près de changer.
+Id: 1786598529182593028	panam:  Je t'écoute. Où est ma caisse ?
+Id: 1786611108873367552	panam:  Putain… J'imagine que c'est Rogue qui t'a filé l'info.
+Id: 1786627765226303488	panam:  Pff. Quoi, c'est interdit ?
+Id: 1786629325775826944	panam:  Peut-être bien. Mais je m'en tape. Ils paient bien. C'est pas plus compliqué.
+Id: 1786670939227418624	panam:  Oh, j'y compte pas.
+Id: 1786743840980094988	panam:  Pff, évidemment que oui. Je l'avais bien dit.
+Id: 1786882190063980556	panam:  Merci, mais non. Je m'en charge personnellement.
+Id: 1786891484524204032	panam:  Et c'est parti.
+Id: 1786896185785339904	panam:  Ça m'a l'air évident. C'est le Basilisk.
+Id: 1786911707226722304	panam:  Tu veux lécher le cul des corporations toute ta vie ? Très bien, vas-y.
+Id: 1786912555314991104	panam:  Dans ce cas, on laissera le Basilisk en souvenir de ce qu'était cette famille.
+Id: 1786966897271263232	panam:  Bob et Mitch, vous deux, faites le tour avec les camions.
+Id: 1786969839390969856	panam:  Et le Basilisk ? Est-ce qu'on peut l'assembler ?
+Id: 1786977012875546624	panam:  Et… V ? T'aurais pas dû t'en mêler.
+Id: 1786983318827061248	panam:  Ouais, évidemment. Mais braquer le convoi, c'était quand même bien plus sympa.
+Id: 1787031423702290432	panam:  V, le Basilisk… Il est prêt.
+Id: 1787034871353069568	panam:  Putain, V. Il est incroyable.
+Id: 1787036031011016704	panam:  Pas de souci. On t'attend.
+Id: 1787057474339885056	panam:  Il faut les décharger.
+Id: 1788413365752451072	panam:  Vas-y, monte. Tout est prêt.
+Id: 1788420763128975360	panam:  Nulle part pour l'instant. On évite juste de se croiser, c'est tout.
+Id: 1788436591928954880	panam:  OK. Ça va le faire.
+Id: 1788453154631471104	panam:  Échauffe-toi. T'en fais pas, je regarde pas.
+Id: 1788473337404215296	panam:  Essaie de faire quelques virages.
+Id: 1788473650332848132	panam:  On va essayer le tir, maintenant. Arrête-toi et j'active le système.
+Id: 1788476704792793088	panam:  T'emballe pas. Le Basilisk a été conçu pour le transport.
+Id: 1788477132897013760	panam:  Mais bon, tu devrais quand même t'éclater.
+Id: 1788479138126647296	panam:  Bon. J'ai l'impression que tu t'ennuies.
+Id: 1788479741468889088	panam:  Maintenant, suis la rangée d'éoliennes.
+Id: 1788497844638601216	panam:  Va vers cette épave.
+Id: 1788525218780434432	panam:  À gauche !
+Id: 1788525745786343424	panam:  Très bien !
+Id: 1788525976506617860	panam:  Tant pis.
+Id: 1788529183672782848	panam:  À mon signal, tu vireras à gauche ou à droite.
+Id: 1788530454798553088	panam:  T'arrête pas !
+Id: 1788530577255452672	panam:  Encore une fois.
+Id: 1788530836647989252	panam:  À droite !
+Id: 1788533249178095620	panam:  À droite !
+Id: 1788549720981655552	panam:  Dans le mille.
+Id: 1788552724153651204	panam:  Bien !
+Id: 1788552818089283588	panam:  Ouah, tu les as tuées.
+Id: 1788553145815420928	panam:  Bon, fin de l'entraînement.
+Id: 1789834786336690176	panam:  Viens. On va rejoindre les autres.
+Id: 1790650011999969284	panam:  Salut, V. Je voulais te dire… j'espère vraiment qu'y a une vie après la mort. Tu sais pourquoi ?
+Id: 1790650012033523716	panam:  V, c'est moi. Écoute, je pense pas pouvoir rentrer au camp ce soir. Une tempête de sable se dirige droit sur nous. On va devoir rester là en attendant qu'elle passe, pas le choix.
+Id: 1790650012083855364	panam:  Hééé, V ! Comment ça va ?
+Id: 1790650012117409796	panam:  Salut, V ! Comment ça va ?
+Id: 1790650012150964224	panam:  Salut, V. C'est Panam. Tu te souviens de moi ? La nana avec le pickup ?
+Id: 1790652273199587328	panam:  T'es sérieux ? Tu vas continuer à m'éviter ? En même temps, ça m'étonne pas de la part d'un lâche !
+Id: 1790774067178631168	panam:  Mhm. Le cutter, c'est la Navi. Le tournevis, l'endroit où la Navi doit se planter.
+Id: 1790783562948669440	panam:  Et les pinces, c'est la centrale EOS. En gros, le filet qui va nous servir à choper la Navi.
+Id: 1790801285091028992	panam:  Tu ferais mieux de te concentrer sur la Navi. Ouvre l'œil.
+Id: 1790805391767629824	panam:  Vas-y !
+Id: 1790824550007885824	panam:  Parce que ça veut dire qu'un jour, on se reverra. Et ce jour-là, je te ferai REGRETTER de m'avoir rencontrée !
+Id: 1790825019249840128	panam:  Mais putain, à quoi tu pensais ? T'as même pas réfléchi, en fait, c'est ça ?
+Id: 1790825272619356160	panam:  Quand je pense à tout ce que j'ai fait pour toi… tous les sacrifices… Et toi, la première chose que tu trouves à faire, c'est de te zigouiller.
+Id: 1790825582679085056	panam:  Si l'enfer existe, j'espère que t'es en train d'y pourrir, ou même d'y brûler, tiens ! Salut.
+Id: 1790827757408931840	panam:  Je voulais te dire que, hum… je sais bien que c'est pas la première fois qu'on avait un truc de prévu, mais…
+Id: 1790828040071467008	panam:  Je pensais pas que ce serait aussi dur d'être chef. Ça m'avait toujours paru facile, vu de l'extérieur.
+Id: 1790828210897080320	panam:  Tu sais, je… j'ai vraiment de la chance de t'avoir, V. Tu peux pas imaginer ce que ça représente pour moi, tout ce que…
+Id: 1790828782429720576	panam:  Faut que j'y aille, on dirait. Je me rattraperai, promis.
+Id: 1790830220304240640	panam:  Il fait un temps splendide dans les Badlands, comme d'hab. Toute ma glace a fondu, il fait 35 degrés à l'ombre, et une tempête de sable se dirige droit sur nous… Vraiment, tu sais pas ce que tu rates !
+Id: 1790830433173557248	panam:  Non, sérieusement… Tout… tout va bien. La famille continue de s'agrandir et on a toujours autant de boulot…
+Id: 1790830719443193856	panam:  Des fois, je rêve juste d'une bonne nuit de sommeil… mais bon, on peut pas tout avoir, pas vrai ? Tu vois ce que je veux dire.
+Id: 1790831326761635840	panam:  Fais-moi signe quand t'en auras marre de la ville. J'ai un truc imparable pour te changer les idées.
+Id: 1790831735773384704	panam:  Allez, prends soin de toi, V.
+Id: 1790832778309586944	panam:  Il fait un temps splendide dans les Badlands, comme d'hab. Toute ma glace a fondu, il fait 35 degrés à l'ombre et une tempête de sable se dirige droit sur nous… Vraiment, tu sais pas ce que tu rates !
+Id: 1790833008107114496	panam:  Non, sérieusement… Tout va bien, ici. Les choses se sont à peu près arrangées entre Saul et moi… La famille continue de s'agrandir et on a toujours autant de boulot… mais bon, faut bien s'occuper, pas vrai ?
+Id: 1790833304711516160	panam:  Quand je pense que si t'avais pas été là, je serais encore en train de galérer à Night City…
+Id: 1790833509292888064	panam:  Je voulais juste te remercier pour tout ce que t'as fait pour moi. Sans toi, j'aurais jamais retrouvé mon chemin.
+Id: 1790833835559407616	panam:  Bon allez, on se parle bientôt, V ! Appelle-moi.
+Id: 1790835125240778752	panam:  Dis-moi, t'aurais pas un job en trop à me refiler, à tout hasard ?
+Id: 1790838277746774016	panam:  Je suis pas difficile. Je prendrai n'importe quoi, tant que ça paye un peu.
+Id: 1790838577807282176	panam:  Si jamais t'as des plans ou si tu connais quelqu'un qu'en a, appelle-moi, OK ? Ça serait vraiment cool.
+Id: 1790838861006688256	panam:  Bon, euh… ben voilà. Allez, on se verra peut-être à l'Afterlife !
+Id: 1790839770197577728	panam:  Un petit conseil, Johnny : profite bien de ta nouvelle vie, parce qu'elle va pas durer longtemps. Je plaisante pas.
+Id: 1790840190013853696	panam:  Crois-moi, tu peux toujours te cacher, je te trouverai, sale connard de psychopathe.
+Id: 1790840468918292480	panam:  Et quand ce sera fait, j'arracherai V de ta putain de tête. Je sais pas encore comment, mais t'inquiète, je suis motivée.
+Id: 1790840687978401792	panam:  Tu sais ce que t'es, Johnny ? Un parasite. Une saloperie de ver solitaire ! Tu m'entends ?
+Id: 1790841003104849920	panam:  Profite bien du peu de temps qu'il te reste ! Ptt !
+Id: 1791111866189418496	panam:  Non. Bon, écoutez-moi tous. Militech va transporter le Basilisk en pièces détachées, réparties dans deux camions.
+Id: 1791119366477385728	panam:  Ta gueule.
+Id: 1791163498558197760	panam:  Le convoi va s'arrêter au passage à niveau sur la 101.
+Id: 1791166483560468480	panam:  On les attaque par derrière, et on fout le camp très vite et très loin.
+Id: 1791168305817784320	panam:  Des questions ? Des commentaires ?
+Id: 1791180838146478080	panam:  Hmm. OK. Merci.
+Id: 1791213768130498560	panam:  Ouais. Saul aussi trouve que ça sent mauvais.
+Id: 1791214380163338240	panam:  Carol a piraté les communications de Militech. C'est bon, ça te suffit ?
+Id: 1791369425043869700	panam:  Excellent.
+Id: 1791369425094201348	panam:  C'est pas encore tout à fait ça.
+Id: 1791371031848177664	panam:  Hmm. Il peut survoler tous les obstacles, tous les types de terrains.
+Id: 1792240020486103040	panam:  Ça doit plus être loin, non ?
+Id: 1792421297447788544	panam:  Ça va me manquer, son humeur de chien, les disputes sans fin.
+Id: 1793675137870487552	panam:  V, tais-toi. Fais simplement ce que t'as à faire.
+Id: 1793675563609120768	panam:  Reste toi-même.
+Id: 1793775166802415616	panam:  Rien à foutre de la vue.
+Id: 1793775441831317504	panam:  Y a rien qui me tracasse. Arrête, t'es chiant.
+Id: 1793776939013296128	panam:  Je suis tellement tendue que j'ai à peine fermé l'œil, la nuit dernière. Ce sera sûrement pareil cette nuit.
+Id: 1793782969214488576	panam:  Je regarde juste la situation calmement.
+Id: 1793783636209487872	panam:  Saul a fait tout un tas de mauvais choix pour me ressembler un peu plus.
+Id: 1793783797505642496	panam:  Mais je suis la seule à connaître mes atouts et mes faiblesses.
+Id: 1793783910684741632	panam:  Je fais pas de miracles, V ! J'ai vraiment la trouille que ça tourne mal. Que tout le monde…
+Id: 1793789450789900288	panam:  T'en sais rien du tout.
+Id: 1793790931479875584	panam:  V, arrête.
+Id: 1793792414636101632	panam:  V ?
+Id: 1794952033055928320	panam:  J'ai besoin de prendre l'air.
+Id: 1794969146319564800	panam:  Et alors ? Tout le monde est à tes pieds à l'Afterlife. Ils te vénèrent tous. T'as pas besoin de ce dernier boulot, t'as déjà tout ! Ouvre les yeux, putain !
+Id: 1794973937338806272	panam:  Je peux pas ! C'est mon clan, ma famille, MA responsabilité. Et toi, tu me demandes de choisir. Pourquoi, V ? Pourquoi tu fais ça ?
+Id: 1794980909027028992	panam:  Night City, c'est un cancer. Regarde ce qu'elle t'a fait, putain !
+Id: 1794988501556129792	panam:  Non. Écoute un peu ce que tu dis, V ! Je sais ce qui t'arrive. Ce qui est arrivé à Mikoshi ! Mais…
+Id: 1794989126054440960	panam:  Tu crois que ta répute te sauvera quand tu seras en train de crever, seul ici ?! Avec peut-être quelques lèche-cul de l'Afterlife à tes côtés ?
+Id: 1794990851859542016	panam:  Nan t'as raison, je comprends pas. Tout ce que tu construis ici va disparaître, balayé par le prochain qui viendra après toi.
+Id: 1794992667523411968	panam:  V… je serai plus là, demain. Y aura plus de « nous ». Tu comprends, ça ?
+Id: 1795017457537773568	panam:  Ces quelques mois, tu les passerais avec des gens que tu aimes. Des gens qui tiennent à toi.
+Id: 1795018060578025472	panam:  Mais… peut-être que… peut-être que… c'est ce que tu cherches à éviter. Tu penses que la fin serait plus facile… si t'étais seul ?
+Id: 1795034491713613824	panam:  Le seul truc que je sais, V, c'est que demain, je serai partie. On démonte le camp, on décolle à l'aube.
+Id: 1795049493631725568	panam:  Tu sais que j'écoute toujours Stanley à la radio. J'entendrai parler de toi, hein ?
+Id: 1795054769227296768	panam:  Putain. Je déteste tellement les adieux.
+Id: 1795085855193952256	panam:  Putain, tu crois que je le sais pas ? On en a parlé des…
+Id: 1795095794922680320	panam:  Tu te seras enfin prouvé à toi-même que t'es le meilleur. Un truc que tout le monde sait déjà. Et tu comprendras qu'au final, t'es juste accro à l'idée même d'être numéro 1.
+Id: 1795097392935727104	panam:  Je comprends. Enfin, je crois.
+Id: 1795101920485568512	panam:  Fait chier.
+Id: 1795120936184836096	panam:  Fais ce putain de boulot. Montre à cette ville qui est le patron. Et admets, enfin, que cette histoire de dernière mission, c'était des conneries. C'est ta façon d'être, c'est tout.
+Id: 1795125220398125056	panam:  Ça veut dire qu'ils ont compris dans quoi on s'engage.
+Id: 1795125425516367872	panam:  On ferait mieux de pas les faire attendre.
+Id: 1795127609372831744	panam:  Ouais, à une prochaine. Un jour, quelque part.
+Id: 1795129848778846208	panam:  Oh, c'est une histoire de dingue. Mais elle est longue. Et… y a plein de rebondissements.
+Id: 1795139860448276480	panam:  T'as plutôt intérêt.
+Id: 1795140996081250304	panam:  Je vais y aller aussi. Prends soin de toi, V. Et bonne chance.
+Id: 1795146695083421696	panam:  Et promets-moi un truc : que t'oublieras pas qui tu es. Pas si près du but.
+Id: 1795150223197728768	panam:  Je t'oublierai jamais, V. Jamais.
+Id: 1795153319751708672	panam:  Les nomades disent des tas de conneries.
+Id: 1795155885994668032	panam:  Je te la raconterai. Un jour, quelque part. Si nos chemins se recroisent.
+Id: 1795375854691078144	panam:  Si on perd du temps, les gardes risquent d'appeler des renforts. Faut éviter ça.
+Id: 1795376233352843264	panam:  Faut pas se faire d'illusion. Ça fera que les ralentir.
+Id: 1795381225698676736	panam:  Et comment qu'il pourra !
+Id: 1796536125912760324	panam:  Ils vont le regretter.
+Id: 1796536125946314752	panam:  On va les défoncer !
+Id: 1796536125996646404	panam:  Grenade ! À terre !
+Id: 1796536126063755268	panam:  Ramenez-vous, bande d'enfoirés !
+Id: 1796536126114086916	panam:  Ha ha, ouais !
+Id: 1796536126164418564	panam:  Fait chier, putain !
+Id: 1796536126197972996	panam:  Merde !
+Id: 1796536126248304640	panam:  On se retrouve en enfer !
+Id: 1796536126265081860	panam:  Ils vont plus tenir longtemps !
+Id: 1796536126332190724	panam:  Argghh… Toi, je vais te crever… Gahh…
+Id: 1796536126583848960	panam:  OK, on a fini on dirait.
+Id: 1796536126600626180	panam:  Bon, on reprendra plus tard.
+Id: 1796536126684512260	panam:  Ah, te revoilà.
+Id: 1796536126718066692	panam:  Oui, pour tout à l'heure…
+Id: 1796536126734843908	panam:  V ?
+Id: 1796536126785175556	panam:  Hé ! Qu'est-ce qui te prend ?
+Id: 1796536127053611012	panam:  Salut, V.
+Id: 1796536127070388228	panam:  Hello !
+Id: 1796536127238160388	panam:  Ooh, fais gaffe !
+Id: 1796536127254937604	panam:  Oh, excuse-toi !
+Id: 1796596176704659460	panam:  Les traces de pneus commencent là.
+Id: 1796596176704659476	panam:  On va les suivre.
+Id: 1796747936570068992	panam:  Je vérifie.
+Id: 1796748000591925248	panam:  Injecteur de nitro, OK. Lanceur, c'est bon aussi. On peut y aller.
+Id: 1800812060849524736	panam:  Beau boulot.
+Id: 1801175986296639488	panam:  Saul a raison. Carol ! Cassidy et toi, vous nous protégerez d'ici.
+Id: 1801176216329048064	panam:  Mitch, tu viens avec nous.
+Id: 1801176456025133056	panam:  Pas de temps à perdre. On y va.
+Id: 1801252930165985280	panam:  Tout va bien ? Je te trouve silencieux.
+Id: 1801256182009876480	panam:  La mienne. C'était mon idée. C'est moi la responsable.
+Id: 1801256761142595584	panam:  Bob et Teddy… Ils connaissaient les risques, V. Comme tout le monde.
+Id: 1801256908513660928	panam:  Comme moi.
+Id: 1801257424446607360	panam:  Ça nous avancera à rien de flipper.
+Id: 1801257464326049792	panam:  Parce que tu crois que ce qu'il y a entre nous affecte mes décisions, c'est ça ?
+Id: 1801257811949965312	panam:  Tu te rends compte à quel point ça peut être insultant ?
+Id: 1801257929910571008	panam:  Ce raid, ces gens… Ça a rien à voir avec nous. J'en assume pleinement la responsabilité. C'est MA faute, pas la tienne.
+Id: 1801257953398673408	panam:  Ce qu'y a entre nous, ça reste entre nous.
+Id: 1801258337412370432	panam:  Je referais exactement pareil. Pour chaque membre du clan.
+Id: 1802278775135457280	panam:  À toi de jouer, V.
+Id: 1802303684687482880	panam:  Pour l'instant.
+Id: 1802443723539550208	panam:  On a pas pris la peine de demander aux autres.
+Id: 1802453846743912448	panam:  En plus, y a que les vétérans qui comprennent ce qu'un Basilisk nous apporterait.
+Id: 1802654602709241856	panam:  La tech est pas récente. Carol va devoir la pirater.
+Id: 1803985719089975296	panam:  Ou sinon, tu sais quoi ? La prochaine fois qu'on se fera attaquer, on pourra riposter !
+Id: 1804009669573611520	panam:  Alors, je vais te dire un truc. On peut toujours s'en sortir. Voilà ce que tu vas faire.
+Id: 1804020160031232000	panam:  Euh, quoi ?!
+Id: 1804023497472479232	panam:  Où est-ce que t'es, là ?
+Id: 1804023965623914496	panam:  Le charcudoc ? OK, je vois où c'est.
+Id: 1804024147639930880	panam:  Tu peux attendre un peu avant de claquer ?
+Id: 1804027276255170560	panam:  OK ! Tu bouges pas. Je viens te chercher.
+Id: 1804105013097992192	panam:  Carol ! On doit chercher quoi ?!
+Id: 1804149658846826496	panam:  Tu peux m'aider à chercher ?
+Id: 1804188433710911488	panam:  Ouais, c'est ça. Quand on les voit de dessus, on se sent…
+Id: 1804203013262610432	panam:  Je dirais plutôt : optimiste.
+Id: 1804213521755738112	panam:  Je paye pas en nature quand on me rend service.
+Id: 1804218925931892736	panam:  Tout se passe comme prévu. Pour l'instant.
+Id: 1804367676521074688	panam:  Merci. Je crois que j'ai besoin de me calmer un peu.
+Id: 1804367999516037120	panam:  Tu peux venir avec moi ?
+Id: 1804530071885336576	panam:  Faut d'abord trouver les cartes.
+Id: 1805185607592103936	panam:  Teddy, tu crois qu'y a une chance que… qu'il s'en soit sorti ?
+Id: 1805187655788187648	panam:  Faut qu'on continue. On y est presque.
+Id: 1805306931644272640	panam:  On pourrait vérifier si…
+Id: 1805488371883380736	panam:  Je crois bien qu'il m'en a jamais parlé. Et Saul, qu'est-ce qu'il a fait ?
+Id: 1805489713255354368	panam:  Super, merci pour le réconfort.
+Id: 1805508909125144588	panam:  Tout le monde est prêt ?
+Id: 1805514716877230080	panam:  OK. Le convoi va mettre un moment pour arriver jusqu'ici.
+Id: 1806764632723230720	panam:  Monsieur veut faire bonne impression sur les costards de Biotechnica.
+Id: 1806767241932640256	panam:  Ouais. Ça, c'est clair.
+Id: 1806777579499491328	panam:  Il s'y prend mal. Il continue à combattre les symptômes au lieu de la maladie.
+Id: 1806787756122509312	panam:  Si, parfois peut-être.
+Id: 1806788200097976320	panam:  Ce qui me manque, c'est l'impression de liberté, de prendre un nouveau départ…
+Id: 1806789794755579904	panam:  Mais j'ai pas non plus oublié cette sensation de vide.
+Id: 1806791170487291904	panam:  Le sentiment que rien n'a de sens si on est toute seule.
+Id: 1806793574846894080	panam:  Ouais. Merci.
+Id: 1806958335580508160	panam:  T'avais quelqu'un ?
+Id: 1806975238776623104	panam:  Jackie. Je m'en souviendrai.
+Id: 1806982561679085568	panam:  Et à Jackie.
+Id: 1806985522639605760	panam:  Ça te dirait de le piloter ?
+Id: 1807032211182260224	panam:  ÇA SUFFIT ! PUTAIN ! Tu fermes ta gueule, maintenant !
+Id: 1807070782891036672	panam:  Merci. La dernière fois que j'ai crié comme ça, ça doit remonter à mes dix ans.
+Id: 1807108747147153408	panam:  Je te comprends.
+Id: 1807174123713269760	panam:  C'est bon, Saul. Si tu veux que je quitte le clan, t'as qu'à le dire.
+Id: 1807179626874998784	panam:  Ça m'évitera au moins d'écouter un autre de tes discours.
+Id: 1807202839143190528	panam:  Hein ? Quoi ?
+Id: 1807210412210720768	panam:  OK. OK. Je, euh… Il va falloir changer beaucoup de choses.
+Id: 1807211950496878592	panam:  C'est vrai. Je vais préparer un itinéraire.
+Id: 1810883058274209792	panam:  C'est ça… Qu'est-ce qui te donne cette impression ? Personne a dit un mot.
+Id: 1810885524407521280	panam:  On verra.
+Id: 1810929892392767488	panam:  Si, évidemment. Il préfère juste continuer à me faire mariner.
+Id: 1810950487230713856	panam:  Qu'est-ce que t'en dis ?
+Id: 1810959067551420416	panam:  Rien de bien méchant, c'est juste un chantier. Mais on pourra pas entrer comme dans un moulin.
+Id: 1810995488169988096	panam:  Tu diriges directement depuis ton siège. T'as juste à te connecter.
+Id: 1811000242564567040	panam:  Non, rien. Les impulsions rejoignent directement ton cortex cérébral. En un sens, le Basilisk devient le prolongement de ton corps.
+Id: 1811029197321474048	panam:  C'est une sorte d'harmonie mystique.
+Id: 1811040988415987712	panam:  Non, pourquoi ? T'as pas confiance ?
+Id: 1811043757042503680	panam:  Non.
+Id: 1811044683480371200	panam:  Bon. Si tu veux tout contrôler pendant un combat, il faut une deuxième personne pour gérer la surcharge sensorielle.
+Id: 1811048338648535040	panam:  Un pilote dirige, l'autre utilise le canon.
+Id: 1811051739641335808	panam:  Finissons-en.
+Id: 1811051739775553552	panam:  Ouais ! Ça a marché !
+Id: 1811064927993270272	panam:  Tu vas le tester à blanc, je me déco' pour l'instant.
+Id: 1811065899293413376	panam:  T'es prêt ?
+Id: 1811080713659027456	panam:  T'auras pas besoin de diriger et de tirer.
+Id: 1811099400440434692	panam:  Hé, tire pas sur les civils !
+Id: 1811099400524320776	panam:  Putain, fais gaffe ! C'est que des ouvriers, merde !
+Id: 1811099400692092932	panam:  Tu dégageras pas le passage comme ça !
+Id: 1811099400708870144	panam:  Faut d'abord aider les autres. Cette porte va pas s'envoler.
+Id: 1811099400775979012	panam:  V, tu veilles sur eux, OK ?
+Id: 1811099401044414464	panam:  Vous en êtes où, Mitch ?
+Id: 1811099401044414488	panam:  Merde. Vous pouvez pas accélérer ?
+Id: 1811099401145077768	panam:  Que le plus proche d'eux s'en occupe !
+Id: 1812387472474443776	panam:  Allez. Détruis-moi ces épaves.
+Id: 1812400623295205376	panam:  OK. Je vais me connecter maintenant. Ça risque de te faire bizarre.
+Id: 1812403625947107328	panam:  Les pilotes de Basilisk doivent être bien synchro. Et pour ça, nos systèmes nerveux doivent être reliés.
+Id: 1812590716165361664	panam:  C'est comme réserver une chambre avec deux lits, pour se retrouver avec un lit double et une couverture trop petite.
+Id: 1812594495686250496	panam:  Hein ?
+Id: 1812616681037828096	panam:  Bon, je dois te prévenir, ça peut être compliqué au début.
+Id: 1812617215895474176	panam:  Tu vas ressentir une sorte d'écho sensoriel, vu que nos systèmes vont se superposer.
+Id: 1812622424734502912	panam:  Mhm. Allez, c'est parti…
+Id: 1812631457889587200	panam:  Bon. C'est parti.
+Id: 1812631855526383616	panam:  OK. Je vais me connecter maintenant. Ça risque de te faire bizarre.
+Id: 1812638169195417600	panam:  C'est bon ? T'es prêt ?
+Id: 1812645365698334720	panam:  Je me suis connectée. Nos systèmes nerveux sont reliés.
+Id: 1812654482940825600	panam:  C'est l'écho sensoriel. Nos systèmes sont imbriqués. Ça te dirait… d'essayer ?
+Id: 1812696415125966848	panam:  Pas de problème. Je comprends. Je voulais pas que tu te sentes…
+Id: 1812775199137140736	panam:  Les pilotes de Basilisk doivent être bien synchro. Et pour ça, nos systèmes nerveux doivent être reliés.
+Id: 1812793105526886400	panam:  C'est sûrement plus simple en combat, il faut moins réfléchir, et… plus agir par instinct, en harmonie.
+Id: 1812831171872362496	panam:  Sûrement. Tu devrais demander à Carol ou Cassidy.
+Id: 1812833686609268736	panam:  D'accord. Je veux juste vérifier…
+Id: 1812852561413476352	panam:  On devrait rentrer au camp. Je voudrais encore…
+Id: 1812860043766599680	panam:  Tu vas ressentir une sorte d'écho sensoriel, vu que nos systèmes vont se superposer.
+Id: 1814052030166913024	panam:  Faut encore qu'on règle quelques détails, mais on sait déjà qui, où et comment.
+Id: 1814055431764234240	panam:  Ils font du business dans le coin depuis un moment.
+Id: 1814065303529476100	panam:  Grouillez-vous !
+Id: 1814066240586305536	panam:  On peut se préparer tant qu'on veut, Saul, ce sera toujours aussi foireux. Je peux te le garantir.
+Id: 1814477562995036160	panam:  Oh, merde.
+Id: 1814482989535219712	panam:  Ils nous ont trouvés. Il faut rentrer au camp.
+Id: 1814487946145583104	panam:  On va aller direct au camp ! Il faut défendre la famille.
+Id: 1817173075543511040	panam:  Han ! Comment te dire ?
+Id: 1817173256301236224	panam:  Demain, je vais conduire mon clan à une mort presque certaine.
+Id: 1817174133145653248	panam:  Et comme si ça suffisait pas, Saul approuve soudain tout ce que je dis. Et je sais même pas si c'est bien ou mal. Bordel !
+Id: 1817174754590511104	panam:  C'est pas la responsabilité qui m'inquiète.
+Id: 1817184032894275584	panam:  C'est gentil de m'écouter comme ça, mais ça pourrait aussi te faire du bien de participer.
+Id: 1817194727429951488	panam:  Je sais pas ce que je ferais sans toi.
+Id: 1817197125951082496	panam:  Tu m'en diras tant.
+Id: 1817204489253081088	panam:  Tu le caches bien, alors.
+Id: 1817204932859449344	panam:  Je t'envie.
+Id: 1817205128850886656	panam:  Moi aussi. Mais plus j'essaie, moins ça marche.
+Id: 1817206557783150592	panam:  Allez, bougeons-nous le cul avant de geler sur place.
+Id: 1819665249426264064	panam:  C'est clair pour tout le monde ?
+Id: 1819665253587013632	panam:  Allez, démarrez vos moteurs.
+Id: 1819739865842765824	panam:  Mhm.
+Id: 1819750276658753536	panam:  Regarde la ville. Quelque part là-bas, ces enfoirés d'Arasaka se demandent comment ils ont fait pour tout perdre.
+Id: 1822633049249165312	panam:  T'as complètement perdu la boule ou quoi ?
+Id: 1822836259452760064	panam:  Je te couvre ! Toi, trouve Saul et sors-le de là.
+Id: 1822836525354856448	panam:  On se retrouve après.
+Id: 1823964772424085504	panam:  Je savais pas quoi penser de toi, à l'époque.
+Id: 1823967277447172124	panam:  Putain. Ça va prendre encore longtemps ?!
+Id: 1823974981427130368	panam:  T'arriveras pas à m'arracher une confession larmoyante.
+Id: 1823976411517022208	panam:  Je me demandais si t'étais comme moi. Si t'avais quelque chose d'essentiel à te prouver à toi-même…
+Id: 1823996367965122560	panam:  Alors, tu te souviens.
+Id: 1823996722132152320	panam:  À l'époque, je pensais que ce serait juste une fois. Je te file un coup de main, tu me files…
+Id: 1824026672482611200	panam:  « La Cité des rêves. » L'abruti qui a trouvé ce surnom mériterait un bon coup de pied dans les couilles.
+Id: 1824051103984644096	panam:  Aaaah, Night City. Tu pensais que t'allais y rester toute ta vie ?
+Id: 1824058002188660736	panam:  Fais tes adieux à cette ville. On la reverra jamais.
+Id: 1824067975555706880	panam:  C'est ma famille, V. Je peux pas les abandonner. J'en ai pas envie. Et je suis contente de pas avoir à choisir.
+Id: 1824069334359207936	panam:  Tu viens avec nous. Et après… on verra.
+Id: 1824075236718014464	panam:  Pareil pour moi. Mais qu'est-ce qui m'est passé par la tête ?
+Id: 1824077594000748544	panam:  Ouais ! Mais c'est comme un putain de croupier dans un casino de Kabuki. J'ai tout misé… et j'ai tout perdu.
+Id: 1824078780082810880	panam:  Mouais, t'as raison. Ce trou à rats nous aura au moins apporté une chose.
+Id: 1824091433543004160	panam:  Tu crois qu'on le trouvera un jour ?
+Id: 1824093411291557888	panam:  Merde, V. Tu saignes encore.
+Id: 1824118291013693440	panam:  V, promets-moi que dès qu'on arrivera dans le Sud, on ira voir mes contacts. On règlera ton… enfin, ton problème, quel qu'il soit.
+Id: 1824139981739388928	panam:  Ils ont sauvé la mise à pas mal de membres du clan. Ils pourront t'aider, tu verras.
+Id: 1824148972095795200	panam:  Tout est prêt. On rejoint le clan, on rassemble l'équipement et on décolle.
+Id: 1824158417820127232	panam:  On va arrêter ce convoi au passage à niveau.
+Id: 1824162883682414592	panam:  V ? Allô ?
+Id: 1824162933980508160	panam:  Bah alors, qu'est-ce que t'en penses ?
+Id: 1824191804764450816	panam:  Cette ville est pleine de fausses promesses… et de rêves de gloire. Hein ?
+Id: 1824195502060204032	panam:  La chance est peut-être avec nous, maintenant. Peut-être qu'on part juste à temps.
+Id: 1824216501933699072	panam:  Tout est paré de chez paré. On rejoint le clan, on rassemble l'équipement et on décolle.
+Id: 1824301261267791872	panam:  Presque tout le clan a déjà traversé. Ils nous attendent de l'autre côté.
+Id: 1824321968865406976	panam:  Si on faisait ne serait-ce qu'approcher des grilles avec cette tech, ils nous abattraient sans sommation. On a vérifié. Arasaka a des hommes dans tous les postes-frontières.
+Id: 1824340599074582528	panam:  T'inquiète pas. On va passer juste sous le nez de ces connards.
+Id: 1824343073630056448	panam:  C'est clair.
+Id: 1824363324853841920	panam:  J'ai dit un truc qu'il fallait pas ?
+Id: 1824364282799321088	panam:  Je suis désolée, V.
+Id: 1825409456715460608	panam:  Bon, je te préviens : notre nouvelle vie va être un bordel total.
+Id: 1825411363160846336	panam:  Ça fait aucun doute.
+Id: 1825413107320221696	panam:  C'est la Night City idéalisée qui va te manquer.
+Id: 1825414171264151552	panam:  La ville où tout est permis, tout est possible... Mais cette ville n'existe pas.
+Id: 1825423199553843200	panam:  Ben merde, V, t'es un sacré baratineur.
+Id: 1825427662008086528	panam:  Oui, ça marche. Beaucoup trop facilement.
+Id: 1825427900278108160	panam:  T'es avec moi, maintenant. On va trouver un moyen de s'occuper de cette saloperie que t'as dans la tête.
+Id: 1825459157825351680	panam:  Dommage que Saul soit pas là. Et Teddy. Et Bobby. Et Scorpion…
+Id: 1825544315752542208	panam:  T'inquiète pas. On sait ce qu'ils ont, et on sait comment gérer. Et Carol et Cassidy s'arrangeront pour éloigner les corpos.
+Id: 1825549250820960256	panam:  À partir d'aujourd'hui, t'as plus à tout prendre sur tes épaules, t'es plus tout seul, V. Ça va te changer.
+Id: 1825808890670477312	panam:  C'était pas censé se passer comme ça, je me trompe ?
+Id: 1825828541555142656	panam:  Le mur frontalier. Il était pas là quand j'étais petite. J'aurais jamais imaginé qu'ils le construiraient.
+Id: 1826917465149009920	panam:  Non. Tout est emballé et prêt à partir. En fait, on attendait plus que toi.
+Id: 1826958727940009984	panam:  Carol ! Cassidy ! Allez-y !
+Id: 1833024026031828992	panam:  Ce poste de garde est sûrement connecté au reste du camp.
+Id: 1834313248609718272	panam:  Tiens ! Regarde.
+Id: 1834313765347971072	panam:  On va creuser un tunnel.
+Id: 1834318768515108864	panam:  Un perceur-excavateur souterrain. C'est un… un creuseur de tunnel automatique.
+Id: 1834320964451356672	panam:  Si on peut en piquer un, on creusera jusqu'à la tour Arasaka, et on pourra atteindre Mikoshi.
+Id: 1835625970433576980	panam:  Ouais ? Tout de suite ? OK.
+Id: 1835625970433576992	panam:  Saul a besoin de moi.
+Id: 1837354992280588288	panam:  Et la veste ? Elle est pas trop serrée ?
+Id: 1837361497276993536	panam:  Et gâcher la surprise ? Tu plaisantes ?
+Id: 1837361620774080512	panam:  C'est un peu le cas, non ?
+Id: 1837361744506048512	panam:  Je sais. Je l'ai lu dans ton cœur, à notre première rencontre. Sûrement parce que ça me manquait aussi.
+Id: 1837410053190897664	panam:  Les gens doutent de nous… Je le sens.
+Id: 1837417985727057920	panam:  Mais ils continuent de croire que si ça tourne mal, Panam va tout régler. Parce que sinon, qui le fera ?
+Id: 1841427597962825728	panam:  Saul est revenu. Faut y aller.
+Id: 1842054801198436352	panam:  Ouah, t'as pas traîné.
+Id: 1842055331157135360	panam:  Tu le vois bien. Mais à ta place, je chercherais d'abord un autre moyen d'entrer.
+Id: 1842057865741488128	panam:  Comment t'as fait pour entrer là-dedans ? Moi, j'ai dû me taper cette putain de porte. J'arrive.
+Id: 1842060211548606468	panam:  J'ai ouvert celle-là, on va dire qu'on est à égalité. J'arrive.
+Id: 1842061931515236352	panam:  Impressionnant, mais je préfère passer par la porte. Attends-moi une seconde, j'arrive.
+Id: 1843037658913984512	panam:  On a de la lumière. Mitch et Bob ont dû faire le branchement.
+Id: 1844377565849579520	panam:  Ce que je pense de toi maintenant a pas d'importance.
+Id: 1844383986741800960	panam:  Demain, on sera ailleurs. On recommencera tout à zéro, toi et moi. Repose-moi la question à ce moment-là.
+Id: 1844401336547405824	panam:  Ouais… Moi aussi, j'aurais jamais cru.
+Id: 1844410619129360384	panam:  Oh, arrête… Et tu ferais bien de dire adieu à cette vue. Tu reverras plus JAMAIS cette ville.
+Id: 1844424243201830912	panam:  Ouais, la route sera sûrement difficile. Mais si on merde pas, on aura passé la frontière en quelques heures.
+Id: 1845829567071055872	panam:  Bon, OK… J'ai vraiment besoin de ton aide.
+Id: 1845830727618195456	panam:  Écoute, c'est une longue histoire. Ramène-toi. Je t'attends.
+Id: 1845831476452454400	panam:  Ça a plus d'importance. Il…
+Id: 1845832366802530304	panam:  Bon, si jamais tu changes d'avis, je suis au camp des Aldecaldos.
+Id: 1845906461430509568	panam:  T'as jamais demandé.
+Id: 1845906622508560384	panam:  Ç'a été galère de le retrouver après toutes ces années. Mais il est toujours là. Plus rien ne peut nous arrêter.
+Id: 1845916351431569408	panam:  Pas « dans », mais « sous » le mur.
+Id: 1845917856129740800	panam:  Ç'a été galère de le retrouver après toutes ces années. Mais là, plus rien peut nous arrêter.
+Id: 1845989278852182016	panam:  Pff. Non, je raconte des conneries.
+Id: 1845992888503758848	panam:  Ouais, la route sera sûrement difficile. Mais si on merde pas, on aura passé la frontière en quelques heures.
+Id: 1847678184782229504	panam:  Je vais trouver une planque d'où je pourrai te voir.
+Id: 1853008035000950784	panam:  Salut.
+Id: 1853018463147991040	panam:  Tu sais que j'étais morte d'inquiétude ?!
+Id: 1853019730599550976	panam:  Ben merde, t'as vraiment une sale gueule.
+Id: 1854784503603339264	panam:  Alors il vaut mieux pas perdre de temps. On a pas mal de route à faire.
+Id: 1854803273415729152	panam:  Hé…
+Id: 1854812445452607488	panam:  On est là pour t'aider, d'accord ?
+Id: 1854813602862407680	panam:  Allez, viens. Tout le monde t'attend au camp.
+Id: 1856112250162323456	panam:  V ?
+Id: 1856113549054386176	panam:  Tu sais quelle heure il est ?
+Id: 1856119058188804096	panam:  T'es prêt à me parler ?
+Id: 1856120289737121792	panam:  Je suis contente de l'entendre.
+Id: 1856158338634293248	panam:  Y a quoi de si urgent pour que tu me déranges en pleine nuit ?
+Id: 1856189740683698176	panam:  Allez, dis-moi tout.
+Id: 1857286611361751040	panam:  Prends les câbles dans le coffre. On va le démarrer avec la batterie de la caisse.
+Id: 1857357231881609216	panam:  Repose en paix. Ce vieux tacot nous aura bien servi.
+Id: 1863110459220684800	panam:  Tu parles de Mikoshi ?
+Id: 1863167767975948288	panam:  J'ai assez écouté ces conneries.
+Id: 1863174641165135872	panam:  Tu sais ce que Saul m'a dit, un jour ?
+Id: 1863176122928852992	panam:  Il m'a dit que le seul moment où une personne est vraiment libre, c'est… quand elle sait… qu'elle a plus rien à perdre.
+Id: 1863282797719449604	panam:  Merde ! Je viens de me rappeler d'un truc.
+Id: 1863282797719449628	panam:  Le mur frontalier. Quand j'étais petite, il était pas là, évidemment.
+Id: 1863282797736226824	panam:  Mais je sentais que tout était différent, au nord. Que quelque chose d'incroyable m'attendait là-bas. Un putain d'avenir radieux.
+Id: 1863282797753004032	panam:  Ouais… Et tu connais aussi la fin de l'histoire. Et je reviens exactement à mon point de départ.
+Id: 1863282797753004056	panam:  Ouais, t'as peut-être raison.
+Id: 1863294233992622080	panam:  Je reviens exactement à mon point de départ. Putain.
+Id: 1863302290713735168	panam:  Hmpf. Te dire au revoir ? Pour un temps ? Pour toujours ?
+Id: 1864591451356028928	panam:  Vas-y, monte, V !
+Id: 1864593174929760260	panam:  On attend quoi, là ?!
+Id: 1872020014306709504	panam:  Mouais, je connais la chanson. T'es trop occupé, trop important.
+Id: 1872210425440653312	panam:  Oh, te fatigue pas.
+Id: 1873425199360765952	panam:  Salut. Viens, entre.
+Id: 1873527394469916672	panam:  Monte !
+Id: 1873527455371210752	panam:  Allez, vite ! Il faut qu'on se tire d'ici !
+Id: 1873586272076582912	panam:  Je vais juste m'allonger un peu, près de toi, regarder les étoiles.
+Id: 1873602703480606720	panam:  Pas vraiment. C'est assez agréable.
+Id: 1873657120682692608	panam:  Évidemment. Tu vois la Grande Casserole ? Avec la petite étoile qui scintille à droite ?
+Id: 1873657765196222464	panam:  Bonne nuit, V.
+Id: 1873662270331703296	panam:  Hein ? Non, pas du tout.
+Id: 1873668483823980544	panam:  Tu la vois ? Ben merde, ça veut dire qu'elle a vraiment une fuite.
+Id: 1873768009742176256	panam:  Bien sûr que j'aurai besoin de toi. Alors, attends-toi à ce que j'appelle.
+Id: 1873771997317320704	panam:  V…
+Id: 1874816065111609344	panam:  Est-ce que tu sens ça ?
+Id: 1874821239758671872	panam:  Ça doit pas toujours être aussi intense. Et… si je fais ça ?
+Id: 1874843383234318336	panam:  Y en a ici aussi, Saul ! Ils débarquent en force !
+Id: 1874937830269800448	panam:  Oh, euh… Ça veut dire…
+Id: 1875055491418968064	panam:  OK. On se met au boulot.
+Id: 1877810556877533184	panam:  Le plan tient la route, Saul. C'est pas le moment de tout remettre en question.
+Id: 1877812602389262336	panam:  Putain ! Mais tu crois que je le sais pas ?
+Id: 1877814474693013504	panam:  Tu crois que c'est en me cassant les ovaires comme tu le fais à chaque fois que ça va changer quelque chose ?
+Id: 1877815825158238208	panam:  V ! Enfin.
+Id: 1877866591671676928	panam:  Mais qu'est-ce qu'on a comme alternative ? Tout annuler ? Le laisser mourir ?
+Id: 1877971718931869696	panam:  Bon ! C'est réglé. Maintenant, au boulot.
+Id: 1877982651905339392	panam:  Et moi, je vais voir Mitch. Je crois savoir comment augmenter nos chances contre Militech.
+Id: 1882019477171335168	panam:  Mais prenez pas de décision sans moi.
+Id: 1882095463867109376	panam:  Attends, attends. On se parle pas comme ça d'habitude.
+Id: 1882133696793563136	panam:  OK. Continue.
+Id: 1882134151271567360	panam:  … Ou pas. Écoute, V, j-je crois que je sais où ça va nous mener.
+Id: 1882144976065548288	panam:  Eh ben… si, peut-être. Mais pas de manière aussi directe.
+Id: 1882167480469442560	panam:  J'allais faire des détours, tâter le terrain, et puis retourner me planquer dans ma coquille.
+Id: 1882178263353937920	panam:  Non, c'est pas ça. Je voulais aussi qu'on en parle, mais… pas de manière aussi directe.
+Id: 1882184099744731136	panam:  Non, je crois que… j'ai toutes les réponses qu'il me fallait.
+Id: 1882192409684365312	panam:  Je devrais peut-être envoyer des fleurs à Rogue, pour la remercier de nous avoir présentés.
+Id: 1882194675783979008	panam:  Putain, V ! Comment t'as pu ?!
+Id: 1882194975710269440	panam:  Tu sais quoi, j'en reviens pas que tu sois quelqu'un d'aussi hypocrite.
+Id: 1882198092848844800	panam:  On dirait que t'as vu clair dans mon jeu.
+Id: 1882203350962556928	panam:  Désolée. Je... je suis pas très douée... pour parler de mes sentiments et... du reste.
+Id: 1882204591084032000	panam:  Avec une carte : « Merci de m'avoir donné un véritable ami, sale pute manipulatrice. »
+Id: 1882216617480048640	panam:  Il m'a humiliée devant tout le clan ! Il m'a fait passer pour une conne !
+Id: 1882220142087917568	panam:  Je croyais que tu… Putain, je suis trop conne !
+Id: 1882228113079939072	panam:  Y a sûrement une sortie directe au sous-sol. Trouve-la.
+Id: 1882229161300086784	panam:  Et... j'ai vraiment pas envie de tout gâcher.
+Id: 1882238917184081920	panam:  Écoute, V… Je…
+Id: 1882241194020065280	panam:  J'ai vraiment pas envie de tout gâcher.
+Id: 1882260791452364800	panam:  Arrête, Bobby.
+Id: 1882302253808349184	panam:  Viens nous retrouver, après.
+Id: 1882302494326673408	panam:  Parce que j'évitais de l'ouvrir jusque-là.
+Id: 1882302966756298752	panam:  Le truc, c'est que j'ai tendance à agir sans réfléchir.
+Id: 1882308344491560960	panam:  Je sais. Mais j'ai besoin d'une pulsion qui me pousse à faire les choses.
+Id: 1882314008731340800	panam:  Quand j'agis spontanément, j-j'ai l'impression d'être honnête.
+Id: 1882318221691604992	panam:  Mais… avec toi, je… je préfère pas prendre de risque.
+Id: 1882333620088885248	panam:  Parce que je tiens vraiment à toi. Mais j'ai peur de dire ou de faire un truc stupide, et… et de me retrouver seule dans le désert.
+Id: 1882337904822079488	panam:  Si. Mais j'ai peur de dire ou de faire un truc stupide. Et de me retrouver seule dans le désert.
+Id: 1882347893003407360	panam:  Je préfère qu'on reste proches. Au moins… comme des amis.
+Id: 1882357959869878272	panam:  OK. Bon, en tout cas, je t'aurai prévenu.
+Id: 1882368422527496192	panam:  Oh, va chier.
+Id: 1882373306073239552	panam:  Bon, OK. Si tu le dis.
+Id: 1882433105892601856	panam:  Tu l'as méritée, cette veste. Et la loyauté des Aldecaldos.
+Id: 1883403868242046976	panam:  Ça prouve qu'on a fait le bon choix. Ce sentiment de responsabilité, c'est ça qu'on ressent quand on fait partie d'une famille.
+Id: 1883408330260082688	panam:  Alors c'est ici que tu dois être.
+Id: 1883865335886270464	panam:  V, tu te souviens de ce que je disais sur les pulsions ?
+Id: 1883866768744402944	panam:  Eh ben, prépare-toi.
+Id: 1884984922677780480	panam:  Liquidez-moi ces enculés !
+Id: 1884987307441594368	panam:  Je quitte la route ! Ça va secouer !
+Id: 1885006847697297408	panam:  T'as vu ce qui se passe dehors ?!
+Id: 1885007074810470400	panam:  La tempête va couvrir nos traces !
+Id: 1885008085956501504	panam:  Quoi ?!
+Id: 1885008667857461248	panam:  Merde !
+Id: 1885029815823441920	panam:  Hé, ça a marché ! On a de la lumière !
+Id: 1885064133618561024	panam:  OK. Mais V ?
+Id: 1885064306876870656	panam:  Hésite pas à contempler une dernière fois la ville. Enfin, si t'en as besoin. Je t'attends dans la voiture.
+Id: 1885165741388091392	panam:  Tu vas faire celui qui comprend pas ?!
+Id: 1885168959912431616	panam:  Ou bien t'as fait d'autres saloperies après être allé me balancer à Saul ?
+Id: 1885185573483466752	panam:  Ouais, ouais, merci pour ce merveilleux conseil.
+Id: 1885185833865859072	panam:  Mais t'aurais pu en rester là et te barrer, au lieu de me planter un couteau dans le dos !
+Id: 1885211786004418560	panam:  Cassidy, Mitch, Carol… On est comme des parias. Personne veut nous parler.
+Id: 1885214698797551616	panam:  Alors, t'es content ?
+Id: 1885220225346719744	panam:  Tu sais quoi, V ? Va te faire foutre.
+Id: 1885222115417542656	panam:  Arrête tes conneries, V.
+Id: 1885223218687266816	panam:  Idiot ? Maladroit ? Putain, V, tu crois que t'as juste fait une tache de ketchup sur mes fringues ?
+Id: 1885227970800144384	panam:  Non, tu feras rien, t'en as assez fait ! Je veux plus jamais te revoir !
+Id: 1885231929753411584	panam:  Ils l'ont kidnappé.
+Id: 1885259671165280256	panam:  On peut se voir ?
+Id: 1885320108200185856	panam:  Mais qu'est-ce que tu fous, putain ?
+Id: 1885322806026850304	panam:  Fais demi-tour maintenant, ou je prends les commandes.
+Id: 1885379423611146240	panam:  T'es venu, finalement.
+Id: 1885429548349272064	panam:  Putain !
+Id: 1886342008745566208	panam:  Ça, c'est une sacrée tempête !
+Id: 1886414753999167488	panam:  Ça veut dire qu'ils comptent rester un moment. Mais pourquoi ? Dur à dire… Je parie que ça a un rapport avec Saul.
+Id: 1886416992515989504	panam:  S'il est toujours là, il faut qu'on trouve un moyen d'entrer.
+Id: 1886419436151054336	panam:  Pourquoi pas, mais y a aussi des brèches dans le mur, des endroits moins bien gardés…
+Id: 1886495717622358016	panam:  … qui détourne un camion-citerne de Petrochem, ouvre les valves, et fait des cercles pour enflammer le désert et faire rêver tous les gamins…
+Id: 1886496439394967552	panam:  … c'est ça, le Saul que je connais.
+Id: 1886497324510552064	panam:  Un gars qui passe la frontière avec des civils pendant un bombardement…
+Id: 1886501929822736384	panam:  Je te le dirai quand on se sera éloignés du camp. On va s'entraîner.
+Id: 1886515716231602176	panam:  Si on veut agir, c'est maintenant ou jamais.
+Id: 1886519378613968896	panam:  Ouais, ça s'annonce plus que mal, même. On a intérêt à se grouiller.
+Id: 1886524568712847360	panam:  Du matériel, peut-être… Soit ça, soit ça veut dire que Saul est pas leur seul prisonnier.
+Id: 1886535893484642304	panam:  Ouais, faut que je règle ma lunette.
+Id: 1886651455216676864	panam:  Je m'évade jamais, tu sais.
+Id: 1886652509513707520	panam:  Mhm.
+Id: 1886657790981304320	panam:  Est-ce que…
+Id: 1886683673075195904	panam:  Allez, sortez de là maintenant !
+Id: 1886685402369748992	panam:  Forts ou faibles, les balles font pas la différence.
+Id: 1886688033993519104	panam:  Tu sais ce qui est injuste ? De me demander d'apaiser ta mauvaise conscience.
+Id: 1886691127762481152	panam:  Alors, compte pas sur moi. On est dans le même bateau.
+Id: 1886694181836759040	panam:  Je sais ! Sortez du bâtiment ! J'arrive tout de suite !
+Id: 1886694492651253760	panam:  T'as pas peur de mourir ?
+Id: 1886696946335870976	panam:  'Fin, je crois.
+Id: 1886701044825190400	panam:  Oh, arrête.
+Id: 1886701375269236736	panam:  J'ai juste besoin de prendre un peu de distance quelques instants.
+Id: 1886703427072421888	panam:  Pour rassembler mes idées avant demain.
+Id: 1887950339293442048	panam:  T'as pété les plombs, ou quoi ?! C'est hors de question !
+Id: 1887952132173852672	panam:  Tu peux pas manœuvrer le panzer tout seul. Tu vas te griller ta putain de cervelle, OK ?!
+Id: 1887954557655969792	panam:  Putain, Saul ! C'est du suicide, son idée !
+Id: 1887955815846506496	panam:  Mitch ! Ils vont te tuer !
+Id: 1887963481037729792	panam:  Putain, Mitch ! Ils vont te tuer, merde… ils vont te…
+Id: 1887981433296592896	panam:  Hum, je vais y réfléchir. Mais on risque de plus vraiment être très potes si Saul meurt de froid.
+Id: 1887983066578092032	panam:  V ?
+Id: 1888148922475237376	panam:  Ouais ! Un engin comme ça, ça nous permettrait de nous remettre en selle.
+Id: 1888174315546628096	panam:  On va d'abord aller jusqu'à la gare.
+Id: 1888184988389363712	panam:  C'est là qu'on trouvera la loco qu'il nous faudra pour bloquer le convoi.
+Id: 1892182770691362820	panam:  C'est bon, tout est clair ?
+Id: 1892208841327398912	panam:  Des cartes quoi ?
+Id: 1892222636108042240	panam:  OK. Merci.
+Id: 1892225187536773120	panam:  Nan, mais tu te fous de ma gueule ?!
+Id: 1892249198584995840	panam:  Oh, ta gueule, Saul !
+Id: 1892253192401264640	panam:  Je peux pas en demander plus au moteur !
+Id: 1892254974208712704	panam:  Débarrassez-nous d'eux !
+Id: 1892255926466715648	panam:  La tempête ! Elle va nous engloutir !
+Id: 1892258120356143104	panam:  Je sais, putain !
+Id: 1892258603707736064	panam:  Y a une ferme abandonnée pas loin ! Je vous conduis là-bas !
+Id: 1892264079254167552	panam:  Wouh ! On les a eus !
+Id: 1892285867338047488	panam:  Ahh… merci…
+Id: 1893697359283298304	panam:  J'en reviens toujours pas qu'il se soit laissé capturer.
+Id: 1893697941083594752	panam:  Les autres encore… mais Saul ?
+Id: 1893700992943071232	panam:  Ouais, mais…
+Id: 1893707732317184000	panam:  Vas-y, teste-la si tu veux.
+Id: 1893714389029953536	panam:  Tu fais gaffe à toi là-bas, hein ?
+Id: 1893755141609037824	panam:  Et si jamais ça chauffe, je suis là pour te protéger à distance.
+Id: 1893756179799941120	panam:  On restera tout le temps en contact. Alors dès que t'as trouvé Saul, je démarre le moteur et on met les voiles.
+Id: 1893758231032700928	panam:  Tu te glisses dans le camp des Wraiths, ni vu ni connu.
+Id: 1893844470016581632	panam:  Tu peux m'aider à chercher, V ? Je vais regarder ici.
+Id: 1893851556192526336	panam:  Merci. Si Saul meurt de froid, on aura vraiment perdu notre journée.
+Id: 1894187775896080384	panam:  C'était une journée… intéressante.
+Id: 1894189366007058432	panam:  J'ai l'impression d'avoir esquivé de peu un train lancé à pleine vitesse.
+Id: 1894199721978515456	panam:  Franchement, j'en ai pas la moindre idée.
+Id: 1895053099902193664	panam:  Je regrette qu'une chose. Qu'on n'ait pas eu plus de temps.
+Id: 1895065293683499008	panam:  Ouais, ça, c'est bien son genre.
+Id: 1895073048582496256	panam:  Attention, la cavalerie arrive !
+Id: 1895076614663643136	panam:  Bien. Alors chope-le et sortez de là.
+Id: 1895088165474869248	panam:  Je confirme. Aucun signe de mouvement dans le camp. Je viens vous chercher dans pas longtemps.
+Id: 1895088755210788864	panam:  Soyez prudents. Il pourrait encore y avoir de la vermine cachée dans un trou.
+Id: 1895093596544847872	panam:  J'improviserai.
+Id: 1895100129039110144	panam:  Non, je suis sérieuse. On a tous une dette envers toi. Alors tu pourras toujours compter sur les Aldecaldos.
+Id: 1895149296348372992	panam:  C'est bon, t'es prêt ?
+Id: 1895152816325730304	panam:  « Petite » ? Ce truc, c'est un putain de cyclone ! Faut qu'on ait fini avant qu'il nous tombe dessus.
+Id: 1895166198789513216	panam:  Descends, on va se mettre au boulot.
+Id: 1895166775120437248	panam:  Je te couvre depuis ce promontoire. Toi, trouve Saul et sors-le de là.
+Id: 1895170199299891200	panam:  Merde, trop tard pour reculer.
+Id: 1895171037623820288	panam:  On se retrouve après.
+Id: 1895181027650641920	panam:  Je sais. C'est juste que…
+Id: 1895242048046178304	panam:  
+Id: 1895244125602390016	panam:  Enculés de Raffens ! Putains de raclures de chiotte ! Ils ont aucune limite, aucune !
+Id: 1895245558426968064	panam:  Continue à chercher, V. C'est peut-être… c'est peut-être pas encore trop tard.
+Id: 1895249184285335552	panam:  Trouve Saul et foutez le camp d'ici, tous les deux !
+Id: 1895260328319660036	panam:  C'est cool que tu sois là, V.
+Id: 1895260328369991696	panam:  Je sens que tu vas rajouter un « mais ».
+Id: 1895260328369991720	panam:  J'aurais dû m'en douter. Y a jamais rien de gratos avec vous, les sédentaires.
+Id: 1895260328369991732	panam:  Très bien, je te filerai un des meilleurs fusils de sniper de la côte ouest.
+Id: 1895260328403546136	panam:  Ouais, t'as pas tort.
+Id: 1895260328437100560	panam:  Fais gaffe, je vais finir par te croire. Tu pourras plus te débarrasser de moi, après.
+Id: 1895260328571318288	panam:  Les Wraiths ont enlevé Saul.
+Id: 1895260328571318300	panam:  Cet abruti est allé patrouiller avec un petit groupe et il est jamais revenu.
+Id: 1895260328588095500	panam:  On a observé leur camp. On sait qu'ils détiennent des prisonniers, dont quelqu'un d'important.
+Id: 1895260328588095512	panam:  Je sais pas pourquoi mais… j'ai senti que je pouvais compter sur toi.
+Id: 1895260328671981592	panam:  Ils continuent à sérieusement me casser les couilles.
+Id: 1895260328671981604	panam:  Mais… tu sais…
+Id: 1895260328671981628	panam:  Exactement.
+Id: 1895260328705536004	panam:  Avec toute ta bonne volonté, je suis sûre que tu diras pas non à un des meilleurs fusils de sniper de la côte ouest.
+Id: 1895260328722313220	panam:  Et t'auras la gratitude des Aldecaldos.
+Id: 1895260328755867664	panam:  Quand tu l'auras en main, tu le trouveras pas cool, tu le trouveras mortel.
+Id: 1895260328772644864	panam:  Viens. Mitch va te donner tous les détails.
+Id: 1895264709233156096	panam:  C'est un bon moyen d'accéder au garage.
+Id: 1895267507018473472	panam:  Ça doit être leur garage. Il est sous haute protection.
+Id: 1895274609636089856	panam:  Oublie pas ce que je t'ai dit : trouve la salle de contrôle et t'auras accès aux caméras de surveillance.
+Id: 1895300302953533440	panam:  Merde !
+Id: 1895300899516784640	panam:  OK, descends et va le chercher. On arrive peut-être pas trop tard.
+Id: 1895302915031846912	panam:  J'en sais rien ! Donne-moi une minute !
+Id: 1895313271707947008	panam:  Voilà ! C'est bon !
+Id: 1895313273989648384	panam:  Les systèmes redémarrent. On peut y aller !
+Id: 1896559852849868824	panam:  Tu vois ça ? La mâchoire serrée, les sourcils froncés… c'est sa manière à lui de dire merci.
+Id: 1896559852849868852	panam:  Quelques-uns. Comme toutes les familles.
+Id: 1896559852866646016	panam:  Je suis bien d'accord.
+Id: 1896559852866646056	panam:  Ça y est, c'est reparti…
+Id: 1896559852883423260	panam:  Tu veux pactiser avec Biotechnica alors ?
+Id: 1896559852883423272	panam:  V, dis-lui que c'est une idée de merde !
+Id: 1896559852967309336	panam:  Tu veux de l'aide ?
+Id: 1896559853017640996	panam:  J'ai essayé de mettre du chauffage, mais… j'ai pas réussi.
+Id: 1896559853135081476	panam:  Allez, pose-toi. Ça pourrait durer des heures.
+Id: 1896559853269299204	panam:  Tu vois ce que je vois ?
+Id: 1896559853269299216	panam:  Déjà périmées avant la dernière guerre, mais avec du bol, elles sont encore bonnes.
+Id: 1896559853269299228	panam:  On a eu du bol, aujourd'hui.
+Id: 1896559853269299252	panam:  T'as pas l'intention de me sermonner ?
+Id: 1896559853470625796	panam:  Euh… c'était quoi, ce délire ?
+Id: 1896559853504180228	panam:  Ouaaais !
+Id: 1896559853504180240	panam:  Aux haboobs !
+Id: 1896559853537734672	panam:  J'espère. Je crois surtout qu'il a pris quelques bons coups sur la tronche.
+Id: 1896559853621620752	panam:  Merci.
+Id: 1896559853671952400	panam:  Hein ?! Pourquoi ?
+Id: 1896559854041051152	panam:  Ah ouais… Et de quoi je parle depuis tout à l'heure, à ton avis ?
+Id: 1896559854074605596	panam:  Tu me parles de gangs, là !
+Id: 1896559854175268876	panam:  Merci, V. Je l'aurais pas mieux formulé que toi.
+Id: 1896559854225600528	panam:  Tout ce que j'entends, c'est ce putain de vent.
+Id: 1896559854292709376	panam:  Mouais, t'as raison.
+Id: 1896559854326263824	panam:  Oh ! j'espère bien.
+Id: 1896666918010245120	panam:  Teddy.
+Id: 1896666918077353984	panam:  Est-ce que t'as lancé le drone ?
+Id: 1896666918178017280	panam:  Tu peux le contrôler à distance ?
+Id: 1896726949643038724	panam:  Ha ha, c'est drôle…
+Id: 1896726949659815948	panam:  Je dors presque jamais sous un toit, mais c'est déjà la deuxième fois avec toi.
+Id: 1896726949659815960	panam:  Quand tu passes tes journées et tes nuits sur la route, ton cul finit par fusionner avec le siège. Et t'en oublies ce que c'est, le confort.
+Id: 1896726949945028624	panam:  Ha ! je les ai portées toute la journée. C'est une infraction au règlement sanitaire assurée.
+Id: 1896726949961805840	panam:  Oh ? Et à quoi tu penses exactement ?
+Id: 1896726949978583044	panam:  Euh… hm-hmm, V…
+Id: 1896726949995360260	panam:  Nan…
+Id: 1896726949995360272	panam:  C'est parfait comme ça. Va pas tout gâcher, OK ?
+Id: 1896726950012137488	panam:  Hum… Tiède… avec un subtil arrière-goût métallique.
+Id: 1896726950012137500	panam:  Puissant, mais doux. Je lui mets quatre sur cinq.
+Id: 1896726950045691908	panam:  La seule chose qui manque, c'est le vieux grincheux à l'accueil.
+Id: 1896726950230241280	panam:  V… Je suis heureuse que tu sois venu. Merci.
+Id: 1896726950263795712	panam:  Oui, je pense que ça vaut mieux.
+Id: 1896726950263795724	panam:  Et V… J'suis heureuse que tu sois venu.
+Id: 1896726950263795736	panam:  C'était important pour moi.
+Id: 1896726950280572932	panam:  Heuah… T'entends ça ?
+Id: 1896726950297350156	panam:  Hum. Le vent est retombé.
+Id: 1896726950297350168	panam:  Je sais pas pour les haboobs, mais, agh… quand un chinook se met à balayer toute la plaine, je suis incapable de fermer l'œil…
+Id: 1896726950297350180	panam:  Impossible…
+Id: 1896726950347681808	panam:  Non, c'est bon, t'inquiète. T'en fais pas pour ça.
+Id: 1896726950448345104	panam:  Mouais, hmm ! La journée a été longue.
+Id: 1896726950498676752	panam:  Non. Juste différent.
+Id: 1896726950532231184	panam:  T'as vu ?
+Id: 1896767284684070912	panam:  Où est Mitch ? Il était censé venir ici.
+Id: 1897947471152295988	panam:  Salut ! T'as bien dormi ?
+Id: 1897947471370399760	panam:  On est pas vraiment obligés d'en parler.
+Id: 1897947471370399772	panam:  C'est juste que… c'est pas mon style.
+Id: 1897947471387176968	panam:  C'est plutôt… ça.
+Id: 1897947471672389636	panam:  Prends bien soin de toi.
+Id: 1897947471672389660	panam:  Et oublie pas : j'ai une dette envers toi.
+Id: 1897947471907270664	panam:  Il a une fracture du crâne, six côtes cassées, des contusions aux reins, mais il est déjà en train de donner des ordres à tout le monde.
+Id: 1897947471907270676	panam:  Et toi ?
+Id: 1897947472091820048	panam:  Ha, si y a une prochaine fois.
+Id: 1897947472158928900	panam:  Moi, j'ai dormi comme un loir. Ton épaule est super confortable.
+Id: 1897947472175706132	panam:  Roh… C'est trop con que je doive reprendre la route.
+Id: 1897947472192483344	panam:  C'est pas du tout mon style, non.
+Id: 1897947472192483356	panam:  J'ai peut-être réintégré le clan, mais… j'ai des choses à faire.
+Id: 1897947472242815004	panam:  Ben oui, c'est le cas.
+Id: 1897947472276369412	panam:  Les Wraiths, le raid… ça a déclenché quelque chose et on doit se préparer. Saul va tout organiser au camp. Moi, pendant ce temps…
+Id: 1897947472276369436	panam:  Les Raffens voulaient connaître nos itinéraires, hein ? Eh ben, on va faire pareil. C'est l'heure de partir en reco.
+Id: 1897947472309923868	panam:  Ça, c'est clair.
+Id: 1897947472460918788	panam:  Une dernière chose… Ta récompense.
+Id: 1897947472460918812	panam:  Prends soin de lui, il m'a rendu un tas de services.
+Id: 1897947472477696016	panam:  Je sais.
+Id: 1897947472595136512	panam:  
+Id: 1897947472611913732	panam:  Bon, eh ben… merci encore !
+Id: 1897971043489619968	panam:  Laisse tomber. Il a le droit de pas comprendre.
+Id: 1898056079095123968	panam:  On est dedans !
+Id: 1898074142653829120	panam:  La porte est tombée. On entre !
+Id: 1898293981761839104	panam:  Beau boulot !
+Id: 1898380863749300224	panam:  On doit libérer Saul.
+Id: 1901190505040977924	panam:  Saul !
+Id: 1902423011939393536	panam:  Ouais, ça ferait un chouette petit hôtel. Une petite cheminée, de l'alcool…
+Id: 1902427304205557760	panam:  Euuh…
+Id: 1902427987491233792	panam:  Je me mets un peu trop à l'aise ?
+Id: 1902428838280634368	panam:  Tu sais quoi ? On ferait bien de dormir un peu. Ça a été une très longue journée.
+Id: 1902448430646370304	panam:  On a besoin de toute l'aide possible.
+Id: 1902454561863180288	panam:  On va miser sur l'approche discrète. Un assaut frontal serait du suicide.
+Id: 1902455021173022720	panam:  Mitch met la reco en place. V va se glisser dans le camp des Wraiths, et moi, je le couvrirai avec mon fusil.
+Id: 1902747227027603456	panam:  Mouais, c'est ça… « Vendez-nous votre terre, ou bien… »
+Id: 1902937162712023040	panam:  Y a plein de trucs utiles, ici. Les Ingall sont partis fissa.
+Id: 1903982524749078528	panam:  Putain de bordel de merde !
+Id: 1903982789963309056	panam:  Chier ! Finissons-en ! Fais ce que t'as à faire !
+Id: 1904008262139273216	panam:  Jouer la sécurité, ça nous fait juste perdre du temps.
+Id: 1904022529500536832	panam:  Elle va nous balayer de la route. On doit s'abriter quelque part.
+Id: 1904025138525396992	panam:  La ferme des Ingall ?
+Id: 1904028435214786560	panam:  Elle est abandonnée depuis longtemps. À cause de Biotechnica.
+Id: 1905202056250650624	panam:  Plutôt pas mal, hein ?
+Id: 1905254988635566080	panam:  C'est parti !
+Id: 1905265843730145280	panam:  Nous, on est la cavalerie. On fonce le sauver en espérant qu'il soit pas trop tard.
+Id: 1905266234622500864	panam:  Toi, t'essayes de t'infiltrer dans le camp, et moi, je te couvre. Mais on tire uniquement si on a pas le choix.
+Id: 1905267059809869824	panam:  Ils sont beaucoup, on est que deux. Alors dès qu'on peut prendre le dessus, on fonce.
+Id: 1905271102144901120	panam:  T'es prêt ?
+Id: 1905271714714611712	panam:  Alors, vas-y ! Fonce tout droit et t'arrête pas !
+Id: 1905283704065486848	panam:  En gros, tu fonces tout droit, t'évites les gros trous et… tu perds pas les autres. OK ?
+Id: 1905299256074956800	panam:  La nitro est prête.
+Id: 1905301292795424768	panam:  Dis adieu à Night City, c'est ta dernière chance.
+Id: 1905304388409880576	panam:  Alors ?
+Id: 1905305190059761664	panam:  T'es malade ou quoi ? C'est du sérieux, ces tempêtes !
+Id: 1905306713313533952	panam:  Tu vas foncer dans cette tempête ?! Arrête tes conneries !
+Id: 1905482267953328128	panam:  Et puis, tout deviendra plus clair quand on sera de l'autre côté. Tu verras.
+Id: 1905583769257443328	panam:  Attends, je sais… Ça doit être le fusible dehors qui s'est détaché. Tu peux aller voir ?
+Id: 1912474283299958784	panam:  Y a un truc qu'a lâché ! Tous les circuits sont morts !
+Id: 1912481578083807232	panam:  Merde, l'alim principale est coupée, les systèmes sont H.S. !
+Id: 1912645028349288448	panam:  Je peux pas parler de ça par holo, V.
+Id: 1912649617219854336	panam:  Tu peux venir ? Steuplaît…
+Id: 1912659284486594560	panam:  Un Techtronika Grad. Tu l'as déjà vu en action.
+Id: 1912661028092321792	panam:  Un Techtronika Grad. Tu l'as déjà vu en action. Il sera à toi, avec les compliments des Aldecaldos.
+Id: 1912754442778161152	panam:  V ? Je te dérange ?
+Id: 1912754496834351104	panam:  Ce sera pas long.
+Id: 1912866846465138688	panam:  Pfff… D'accord. Les Raffens ont capturé Saul. Ils le retiennent quelque part dans leur base.
+Id: 1912928886462423040	panam:  Tu fais sortir Saul de là, et on se tire comme si on avait l'enfer au cul. T'as pigé, ça y est ?
+Id: 1913008348658999296	panam:  Tu veux pas regarder ? T'auras peut-être plus de chance que moi.
+Id: 1913028805722447872	panam:  Hé, ça a marché ! C'est déjà plus douillet !
+Id: 1913068804333445120	panam:  Si c'est ça, remets-le en place, et je pourrai rallumer le chauffage.
+Id: 1913073515275034624	panam:  Oooh oui…
+Id: 1913074409953632256	panam:  Huuum, ça pourrait pas être mieux.
+Id: 1913767425693523968	panam:  Faut bien que quelqu'un le fasse…
+Id: 1913772288150151168	panam:  Faut bien que quelqu'un le fasse !
+Id: 1913775339489533952	panam:  Fais pas gaffe.
+Id: 1913804259802816512	panam:  Je vois ni bulldozer, ni pelleteuse. C'était une façon bien dégueulasse de se débarrasser d'eux.
+Id: 1913827634121928704	panam:  C'est bien la première fois.
+Id: 1913838345384697856	panam:  V, tu montes avec moi ?
+Id: 1913839148359032832	panam:  De toute façon, on a pas trop le choix.
+Id: 1913854608177700864	panam:  Bon, je pense qu'on est prêts ?
+Id: 1913929854226133004	panam:  Nos gars essaieront de tenir la route pendant qu'on sera dedans.
+Id: 1913950193077526528	panam:  Tu fais affaire avec les corpos, tu finis sans rien !
+Id: 1913968240093896704	panam:  Méfie-toi, tu connais pas mes désirs…
+Id: 1913968661252349952	panam:  Je me contenterai d'un oreiller moelleux.
+Id: 1914049701278982144	panam:  On verra.
+Id: 1914078817868914688	panam:  
+Id: 1914112696755494912	panam:  Hier soir, quand on discutait avec Saul… merci de m'avoir soutenue.
+Id: 1914112764166348800	panam:  Hier soir, quand on discutait avec Saul… Vous avez dit pas mal de conneries tous les deux, mais il a raison sur un point.
+Id: 1914114355082633216	panam:  Viens voir.
+Id: 1914121693587906560	panam:  Y a… juste un truc…
+Id: 1914123695747309568	panam:  Saul dit souvent des conneries et il aime entretenir la peur, mais… il a raison sur un point.
+Id: 1915491918382260224	panam:  Pff. Pourquoi t'es si surpris ? Le soleil t'a cramé la cervelle ? Contrairement à toi, je me défile pas. Surtout quand j'ai donné ma parole.
+Id: 1915494027446083584	panam:  J'ai pu aider Mitch sur les lieux du crash, mais Scorpion… on n'a rien pu faire.
+Id: 1917050107637936132	panam:  Tu vois les traces ?
+Id: 1917052874838388736	panam:  Les traces mènent au camion. Tu peux le scanner ?
+Id: 1922800318366371840	panam:  Merde. Merde ! Navi en approche !
+Id: 1922816382703435776	panam:  V, des commentaires ?
+Id: 1922829641265729536	panam:  Teddy !
+Id: 1934237810185490432	panam:  Pas du tout.
+Id: 1934241419333750788	panam:  On y va ?
+Id: 1934249743315914752	panam:  Tu viens avec nous ou on se rejoint là-bas ?
+Id: 1934253358050988032	panam:  V ?
+Id: 1934254185167736836	panam:  Bon ? V ?
+Id: 1934267567144980480	panam:  Super. En route.
+Id: 1934267782480547840	panam:  Ça marche.
+Id: 1934289029532766212	panam:  En route.
+Id: 1935957184612003840	panam:  Tout va bien ?
+Id: 1935971665480118272	panam:  C'est ce que je veux dire ! Ça devrait pas être moi, ça devrait être…
+Id: 1935974510677848064	panam:  Si seulement il avait pas fait tous ces mauvais choix pour me ressembler un peu plus.
+Id: 1935975156214788096	panam:  J'ai vraiment la trouille que ça tourne mal. Que tout le monde…
+Id: 1935977991044198400	panam:  Je repense à la première nuit que j'ai passée ici.
+Id: 1935979839591411712	panam:  J'avais fait de la route. Je rentrais et j'ai eu envie de me vider la tête avant de me poser au camp.
+Id: 1935981141805363200	panam:  Il faisait nuit noire. Y avait pas une étoile dans le ciel. On entendait que le vent et quelques bruits de moteur au loin.
+Id: 1935992855288475648	panam:  Je me suis assise là et j'ai attendu que le monde s'efface. Que mon esprit arrête de s'emballer.
+Id: 1935993674536710144	panam:  Nan… Restons là encore un peu.
+Id: 1935994097876201472	panam:  Ça me fait du bien. Plus que je le pensais.
+Id: 1935996392781246464	panam:  Ça me plairait, je crois.
+Id: 1935997050112569344	panam:  T'imagines pas à quel point j'en avais besoin.
+Id: 1935999398973140992	panam:  Non. Cette nuit-là, j'ai compris que ce serait plus jamais le cas. Que mon esprit serait toujours sur la route, même si je me gelais le cul sur une falaise.
+Id: 1936077536524627968	panam:  Une fois à l'intérieur, faudra improviser. Gardes, mesures de sécurité, l'accès le plus rapide à Mikoshi… On fera avec ce qu'on a, en espérant que ça passe.
+Id: 1937264761687003136	panam:  Super. Maintenant, tout le monde sait qu'on se balade dans le coin.
+Id: 1937270601483571200	panam:  Ils ont toute une unité là-bas !
+Id: 1937275770057281536	panam:  Magne-toi, Saul, ils vont pas tarder à rappliquer !
+Id: 1937283808726110208	panam:  Merde !
+Id: 1937305895863865344	panam:  Évite de te faire repérer. Personne a besoin de savoir qu'on visite les lieux.
+Id: 1937336646604967936	panam:  Ils ont toute une escouade. Peut-être la sécurité d'un convoi.
+Id: 1937454283544612864	panam:  Sauf si tu veux qu'une horde de soldats d'élite d'Arasaka nous tombe dessus.
+Id: 1937483160641581056	panam:  Mitch ?
+Id: 1937491747069734912	panam:  Connecte-toi et démarre-la.
+Id: 1938454523981459456	panam:  Il fait une autre crise ! V, ça va ? Hé !
+Id: 1938459279852433408	panam:  V ? Tu vas bien ?
+Id: 1938469333280354304	panam:  V !
+Id: 1938632891560341504	panam:  Lance la foreuse, V.
+Id: 1938639574328127488	panam:  On a pas le temps, V ! Magne-toi !
+Id: 1940443565146263552	panam:  V, tire sur le couplage !
+Id: 1940445409817939968	panam:  Il prend de la vitesse !
+Id: 1940446561406046208	panam:  Faut détacher un wagon, le train prendra de la vitesse !
+Id: 1940449218413744128	panam:  Encerclez-les dès qu'ils seront arrêtés !
+Id: 1945864568796999684	panam:  Je crois qu'on y est.
+Id: 1945864568796999716	panam:  Plus trop, ça devrait aller tout seul à partir d'ici.
+Id: 1945898907415851008	panam:  Les gars, qu'est-ce qui se passe ?
+Id: 1945927838262226944	panam:  Merde. Tu les vois ? Je crois qu'il y a un problème.
+Id: 1945947156370812928	panam:  Et merde…
+Id: 1945953792229502976	panam:  Saul ? Tu vas le laisser faire ?! V ! Il faut lui faire entendre raison !
+Id: 1945961752531955712	panam:  Saul… Il va… Ils vont…
+Id: 1945975000979337216	panam:  V, on y va.
+Id: 1945981362094338048	panam:  Sois prudent. Je t'en prie !
+Id: 1945992531458781184	panam:  Bon, on arrête les conneries, maintenant. OK?
+Id: 1945997368967688192	panam:  On dirait que le moteur a surchauffé quand la foreuse a atteint le béton armé.
+Id: 1945999722039341056	panam:  Elle est en mode manuel. Parfait.
+Id: 1946000851615739904	panam:  Merde !
+Id: 1946001949533532160	panam:  Je crois que ça c…
+Id: 1946006541390442496	panam:  Vas-y. Donne plus de puissance.
+Id: 1946016108111327232	panam:  C'est bon, V. Tout va bien.
+Id: 1946017931140395008	panam:  Je vais avoir quelques bleus, c'est tout. J'ai connu pire.
+Id: 1946021619242233856	panam:  Et puis, mourir dans une putain de taupe mécanique, ça ferait minable sur ma tombe.
+Id: 1946028245789569024	panam:  Saul ?
+Id: 1946029159527084032	panam:  Des nouvelles de Mitch ?
+Id: 1946030493684854784	panam:  Putain… Je le savais…
+Id: 1946033564116709376	panam:  Mhm.
+Id: 1947304251095642112	panam:  Personne derrière le bar. Parfait.
+Id: 1947304713207279616	panam:  Bière ? Limonade ?
+Id: 1947313141124296704	panam:  Comme tu veux.
+Id: 1947313530640920576	panam:  Aux fins heureuses.
+Id: 1947331508585492480	panam:  Je sais pas si j'y serais arrivée sans toi.
+Id: 1947356557039366144	panam:  Rien à foutre de cette station. V… Je…
+Id: 1947360021078208512	panam:  À moi aussi.
+Id: 1947360586101288960	panam:  En même temps, qui a dit que c'était la dernière ?
+Id: 1947362075918069760	panam:  V, regarde autour de toi. Regarde-les.
+Id: 1947363283357528064	panam:  Hummm.
+Id: 1947364381258543104	panam:  Tu sais… Tout ça… Ça pourrait être notre vie, tous les jours ?
+Id: 1947365387841171456	panam:  Reste au camp. Rejoins-nous.
+Id: 1947366248243916800	panam:  Ça pourrait être ta famille.
+Id: 1947374172475355136	panam:  Hum. Je sens qu'y va y avoir un « mais ».
+Id: 1947377484448788480	panam:  C'est des conneries, ça. Tu peux pas savoir comment ça sera, cette fois.
+Id: 1947378274454335488	panam:  C'est des conneries, ça. T'en sais rien.
+Id: 1947381196944699392	panam:  Soit tu veux, soit tu veux pas. Qu'est-ce qu'il y a de si compliqué ?
+Id: 1947382824871522304	panam:  OK, V. C'était peut-être pas le moment de te demander un truc aussi lourd que ça
+Id: 1947383619004264448	panam:  Mais je pensais que… bah, laisse tomber.
+Id: 1947404463386521600	panam:  V… Tu dois me dire ce qui se passe.
+Id: 1947406641522143232	panam:  T'as saigné… et t'es resté inconscient pendant des heures. Qu'est-ce qui t'arrive ?
+Id: 1947412847313678336	panam:  Ouais, je vois ça.
+Id: 1947413144505282560	panam:  Tu vas me dire ce qui se passe ? Ou on va continuer à jouer à ce petit jeu à la con ?
+Id: 1947414952367747072	panam:  Ça va, V, calme-toi. Vas-y par étapes. Qu'est-ce qui se passe exactement ?
+Id: 1947486841144471552	panam:  V, écoute-moi.
+Id: 1947486935616974848	panam:  V, arrête tes conneries et dis-moi ce qui se passe ! Je m'inquiète pour toi !
+Id: 1947490954582290432	panam:  Tu peux me dire n'importe quoi, ça changera rien à ce que j…
+Id: 1947493282739777536	panam:  Enfin merde, arrête tes conneries et dis-moi ce qui se passe !
+Id: 1947496595300413440	panam:  La tech d'Arasaka ? Ça a un truc à voir avec les personnalités, c'est ça ? J'ai vu des pubs. Franchement, on dirait une arnaque pour les vieux.
+Id: 1947499797416636416	panam:  Alors retire-le !
+Id: 1947503021360017408	panam:  Ouais, ses classiques passent à la radio de temps en temps. Pourquoi ?
+Id: 1947505641373954048	panam:  Il est quoi ? Je comprends pas… C'est un genre de métaphore bizarre, c'est ça ?!
+Id: 1947511706555641856	panam:  V… à propos de ce qu'on disait…
+Id: 1947520915368177664	panam:  Mais y a forcément un truc à faire. Quelqu'un qui peut t'aider…
+Id: 1947524044000194560	panam:  C'est pour ça que tu voulais lui mettre la main dessus.
+Id: 1947526241429614592	panam:  Je suis sûre que tu te trompes.
+Id: 1947553441960816640	panam:  Tu vas trouver une solution. Et quand ce sera fait, préviens-moi. Je t'aiderai.
+Id: 1947564698231238656	panam:  Prends soin de toi. Et dis-moi si… enfin, donne-moi des nouvelles, quoi.
+Id: 1947566217273929728	panam:  Tu veux que je te raccompagne ?
+Id: 1947567810186702848	panam:  Merci…
+Id: 1947622932015083520	panam:  Tu te fous de ma gueule.
+Id: 1947625918846070784	panam:  C'est pas une blague.
+Id: 1947627029111894016	panam:  En tout cas, c'est clairement pas bon pour ta santé.
+Id: 1947631101562974208	panam:  Je te crois pas. Ce… c'est pas possible. Johnny Silverhand ?
+Id: 1947631731614543872	panam:  Est-ce que t'as essayé de… je sais pas, d'en parler à quelqu'un ?
+Id: 1947637830702985216	panam:  Donc c'est une cyberpsychose ? Parce que si c'est ça, je connais des gens qui peuvent…
+Id: 1947643814229962752	panam:  Merde.
+Id: 1947647502919004160	panam:  Tu peux pas annuler ses effets ? L'arrêter ? Je sais pas moi, le sortir de ta tête ?
+Id: 1947651317470720000	panam:  Merde.
+Id: 1949022554233397248	panam:  Faut tous les dégommer, maintenant.
+Id: 1952026229798481920	panam:  Super ! T'as survécu une fois, t'as plus qu'à remettre ça !
+Id: 1953136704799354880	panam:  Ouvre la porte. Je te couvre.
+Id: 1953157165701787648	panam:  Ça se passe. Je touche du bois.
+Id: 1953158116248514560	panam:  On s'évite pour le moment. Et ça me va très bien comme ça.
+Id: 1953160081716146176	panam:  À propos de quoi ?
+Id: 1953160634978398208	panam:  Une partie de moi voudrait tracer la route et jamais se retourner, l'autre partie voudrait rester, mais... pff, me retrouver dans la même pièce que Saul ?
+Id: 1953166016303984640	panam:  Je sais plus ce que je dois faire, V.
+Id: 1953175673303068672	panam:  Je sais, mais... Bon, tu vas me dire que la famille parfaite existe pas.
+Id: 1953187199586004992	panam:  Et t'as raison. Mais je veux être honnête avec moi-même et être sûre de ce que je veux. Et... de ce qui me fait peur.
+Id: 1953189162453168128	panam:  Depuis quand t'es psy ? Tu veux pas non plus qu'on trouve un divan et... que je m'allonge dessus ?
+Id: 1953190108704927744	panam:  Même si t'avais raison, ça changerait quoi ? Je le vois, le problème. Je sais juste pas comment le résoudre. Pour l'instant...
+Id: 1953192000755462144	panam:  Arrête, V. J'ai juste besoin de temps, c'est tout.
+Id: 1953200936334258176	panam:  Hum hum...
+Id: 1953204922936324096	panam:  Non, rien pour l'instant. Ils ont envoyé une autre patrouille inspecter la centrale, mais ils sont convaincus que c'est les Raffen qu'ont abattu leur Navi et attaqué les gardes d'Hellman.
+Id: 1953207163852288000	panam:  Le proprio de la centrale s'en tient à cette version, alors on craint rien pour l'instant.
+Id: 1953210932702867456	panam:  Ça dépend de ce que tu veux dire par « tout ». Et de ce que tu veux entendre.
+Id: 1954521720734478336	panam:  On doit pouvoir contourner le système d'arrêt d'urgence et le couper. J'utiliserai ma liaison perso, s'il faut.
+Id: 1964737826819387392	panam:  Surtout, t'oublies pas : dès qu'on les voit, t'envoies le jus.
+Id: 1966125830024077312	panam:  V ?
+Id: 1966125830040854532	panam:  Allô ? T'es là ?
+Id: 1969166195461058560	panam:  Un endroit sûr, surtout. Et pas loin d'ici.
+Id: 1975084144917372928	panam:  Eh ben, les Raffens vont se pointer à la tombée de la nuit. On va leur préparer une petite surprise. Il nous faut juste un petit peu de jus.
+Id: 1975089265223032832	panam:  On se prépare à accueillir les Raffens. Et on a pas beaucoup de temps, alors… faut qu'on improvise.
+Id: 1975132872562860044	panam:  T'inquiète. Redescends. J'ai une idée pour surprendre ces connards !
+Id: 1975137553859108868	panam:  OK. Alors, le croisement est alimenté par ce poste de transfo, d'accord ?
+Id: 1975140285760299008	panam:  Le tableau électrique, sur le toit… On va appuyer sur l'interrupteur, et poaah, tout va s'allumer. Ça va être Noël.
+Id: 1976297277084004352	panam:  J'ai un plan, mais… c'est qu'une ébauche. Faut que je le peaufine un peu. Et puis, on pourra voir ensuite les détails.
+Id: 1976299177909022720	panam:  Le plus simple, c'est de louer des chambres ici, et de rester dans le coin.
+Id: 1976320502138822656	panam:  Enfin bref, peu importe. On est arrivés.
+Id: 1976320955241095168	panam:  OK, on y est.
+Id: 1976356339226112000	panam:  Je sais.
+Id: 1976375642889515008	panam:  Ah ouais ? Hmm, j'aurais jamais deviné.
+Id: 1976377288918953984	panam:  Hmm, on dirait qu'on a un truc en commun, finalement.
+Id: 1976381383012642816	panam:  Nan. Cet enfoiré a oublié de me montrer sa carte de membre.
+Id: 1976381383012642852	panam:  Jusqu'à maintenant, ils s'en prenaient surtout aux transporteurs corpo sur l'autoroute 64.
+Id: 1976381383029420060	panam:  C'est bien, je vois que t'es calé.
+Id: 1976454846901514240	panam:  Quelques bricoles qui devraient nous être utiles. Prends-la.
+Id: 1976494133439520768	panam:  Bordel, V. Allume-moi ce putain de courant !
+Id: 1977681931942883328	panam:  Ouais. On commence par allumer le terminal de contrôle, juste en dessous. Sinon l'appareillage sur le toit servira à rien.
+Id: 1977682769729941504	panam:  Viens, on va lui donner un coup de boost avec la batterie de la caisse. Ça devrait suffire.
+Id: 1977709243874799616	panam:  Faut qu'on se mette en position.
+Id: 1977710785600286720	panam:  Du coup, à mon signal, t'actives les disjoncteurs, OK ?
+Id: 1977821989350010880	panam:  Alors on le rallume. On va vérifier le poste de transfo.
+Id: 1977834853766918144	panam:  Mais moi, j'en fais plus partie.
+Id: 1979424050842066944	panam:  OK, y a plus qu'à suivre les traces.
+Id: 1979539369352777728	panam:  Mais je… j'ai merdé tellement de fois… C'est toi qui l'as dit…
+Id: 1985069677154004992	panam:  Saul ?
+Id: 1985070380471676928	panam:  Ouais, mais est-ce que j'en fais encore partie de cette famille ?
+Id: 1985088882653917184	panam:  Ouais, merci.
+Id: 1985088970717523968	panam:  C'est le gars que tu voulais, non ? Emmène-le dehors et mets-le sur une bécane.
+Id: 1985110395004252160	panam:  À la prochaine.
+Id: 1985111311778443264	panam:  C'est pas si simple que ça…
+Id: 1985111321257570304	panam:  Ouais, je vais y aller aussi.
+Id: 1986286032310104064	panam:  Tout est réglé, alors, hein ? Tu reviendras à la nuit tombée.
+Id: 1986354069071589376	panam:  On préparerait des thermos de café et de whisky, et on prendrait la route. On partirait loin de tout ça.
+Id: 1986354651576528896	panam:  On ferait le plein, et on prendrait la route. Direction Crater Lake. C'était son rêve.
+Id: 1989305535668441088	panam:  Je connais cette région, on y passait avant.
+Id: 1989432291394080768	panam:  Tu t'es évanoui. Complètement. On t'a emmené avec nous.
+Id: 1989434433525796864	panam:  On a déplacé le camp. T'es en sécurité, t'inquiète pas. On gère.
+Id: 1989437188864757760	panam:  Tu t'es évanoui. Complètement. On t'a emmené avec nous.
+Id: 1989437286843699200	panam:  Dans un nouvel endroit. On a déplacé le camp. T'en fais pas, on craint rien ici. Pour le moment.
+Id: 1989438692220751872	panam:  Je sais pas…
+Id: 1989438880846991360	panam:  Attends, je vais venir avec toi.
+Id: 1993677816921190400	panam:  Allez, en route.
+Id: 1993814875887497216	panam:  Faut y aller... avant qu'ils envoient une équipe de secours.
+Id: 1993815237033848832	panam:  V ? Faut qu'on se bouge…
+Id: 1993821569174597632	panam:  Je t'emmerde.
+Id: 1993926274672357376	panam:  On devrait repérer les lieux, d'abord. On trouvera peut-être quelque chose d'utile.
+Id: 1994026254803120128	panam:  La journée est pas finie.
+Id: 1995018464337195008	panam:  T'as encore le temps de me foutre en rogne.
+Id: 1995031513555136512	panam:  Ça a l'air bon. La zone est déserte. Je vois aucune patrouille.
+Id: 1995032965455409152	panam:  Je veux juste m'assurer que la zone est dégagée.
+Id: 1995306323030814720	panam:  Wouaah... je sens déjà le stress qui retombe.
+Id: 1995398049167962112	panam:  Bon, ben c'est réglé, alors.
+Id: 1995404269069135872	panam:  Je vais aller pioncer un peu. À plus tard.
+Id: 1995405053185880064	panam:  Je vais aller pioncer un peu. À plus tard.
+Id: 1995411006513868800	panam:  Je vais aller pioncer un peu.
+Id: 1995416494139895808	panam:  Je crois que je vais m'endormir à peine allongée.
+Id: 1995416951855902720	panam:  Tu ferais mieux de te reposer aussi. Ça fait que commencer, là.
+Id: 1995422532343820288	panam:  Hmmm…
+Id: 1995519825484206088	panam:  Je suis là.
+Id: 1995654461098844160	panam:  Noooon !
+Id: 1996501558658314240	panam:  Attends, donne-moi deux secondes, je dois tout raccorder ici.
+Id: 1996502660636192768	panam:  C'est fait. Maintenant, le noir.
+Id: 1996914077078409216	panam:  Je vais essayer de les réparer, mais tu vas devoir nous débarrasser de ces drones, V !
+Id: 1998087566883835904	panam:  Non, non, non… ! Y a le feu dans le cockpit ! Putain de surtension !
+Id: 1998153374808952832	panam:  Une minute ! Le feu est maîtrisé. J'enclenche l'alim de secours. Plusieurs systèmes vont passer en analogique, mais il devrait repartir.
+Id: 1998171257677041664	panam:  Bobby !
+Id: 1998219550171877376	panam:  V, monte !
+Id: 1998343528344317952	panam:  Génial.
+Id: 1999485574543175680	panam:  V ?
+Id: 1999491880998006784	panam:  V, calme-toi. Tout va bien. Comment tu te sens ?
+Id: 1999554930211942400	panam:  Là-dessus au moins, on est d'accord.
+Id: 1999558769963036672	panam:  Je vais pas essayer de comprendre. Je crois que j'ai même pas encore percuté. Mais je suis sérieuse : comment je peux t'aider ?
+Id: 1999573728327495680	panam:  Toute la famille t'aidera. Saul plaisantait pas, tout à l'heure. T'as compris ?
+Id: 1999577078670422016	panam:  Pour l'instant, oui. Militech s'aventure pas aussi loin. Et les points d'observation sont bien mieux.
+Id: 1999578352665096192	panam:  Mais tout ce qu'on a ici… c'est temporaire. Il va bientôt falloir qu'on décide ce qu'on va faire après.
+Id: 2005306322025312256	panam:  Ils t'auraient botté le cul après ce coup avec le panzer. Et après, ils t'auraient serré si fort dans leurs bras que t'en aurais gerbé.
+Id: 2005309974173577216	panam:  Il est resté alité pendant des semaines. Un vrai légume. Il y serait passé sans ses super synapses impossibles à griller depuis ses séjours en panzer, pendant la guerre.
+Id: 2005313470813827072	panam:  Mais on connaît une route moins fréquentée.
+Id: 2005350660935643144	panam:  Ouais, c'est bon.
+Id: 2005353615738925056	panam:  Mais… apparemment y a quelqu'un qui t'attend, alors euh… Passe nous voir plus tard. On t'expliquera les détails.
+Id: 2005357034818105344	panam:  Rejoins-nous quand tu seras prêt. On t'expliquera les détails.
+Id: 2005606799819386880	panam:  Alors ? T'as trouvé quelque chose ?
+Id: 2005624070852964352	panam:  Eh ben, on va changer ça.
+Id: 2005624070852964376	panam:  Jetons un œil au poste de transfo.
+Id: 2005626016624144384	panam:  Les Raffens vont se pointer à la tombée de la nuit. On va leur préparer une petite surprise. Il nous faut juste un peu de jus.
+Id: 2006628425265704960	panam:  Quoi ?
+Id: 2006632393597382656	panam:  Quoi ?
+Id: 2008211146618302464	panam:  Je voulais pas te réveiller.
+Id: 2008329638509301760	panam:  Je les vois, ces enculés. Mitch ?
+Id: 2008343762240819208	panam:  Je l'ai eu ! En pleine face !
+Id: 2008344753556181000	panam:  C'est bon, il est H.S. ! Putain V, on dirait bien qu'on va y arriver !
+Id: 2008344824691576840	panam:  Prenez ça, les Militanches !
+Id: 2008345546615181320	panam:  Putain, on a réussi ! On leur a totalement démonté la tronche ! On l'a fait ! 
+Id: 2008364834306674696	panam:  On décolle. On va les retenir le plus longtemps possible.
+Id: 2008388027583057928	panam:  On est touchés !
+Id: 2008388027750830088	panam:  Merde ! On tiendra plus très longtemps !
+Id: 2008388027801161736	panam:  Ils vont nous réduire en miettes !
+Id: 2008390067977736196	panam:  V, on a essuyé trop de tirs ! Tout tient qu'à un fil, je sais pas par quel miracle !
+Id: 2008399245232328704	panam:  On s'ennuie pas non plus, ici  ! On va les retenir le plus longtemps possible pour vous ! Tenez bon !
+Id: 2008406000930672640	panam:  OK, on arrive.
+Id: 2008412392362102784	panam:  Je me demande si j'y croyais vraiment… si je pensais qu'on réussirait.
+Id: 2008453766855806976	panam:  V, remonte dans le panzer ! On a pas le temps !
+Id: 2008776456774897664	panam:  
+Id: 2012805395306532864	panam:  V, Saul…
+Id: 2017165105056993284	panam:  Le garde a essayé de les faire sortir.
+Id: 2017171314774396928	panam:  Ils ont essayé de s'enfuir. Elle a transformé la voiture en piège mortel.
+Id: 2017174785930055680	panam:  Elle les a tous tués. Ils ont même pas dû réaliser qu'elle était passée à travers leur GLACE.
+Id: 2017177676308828160	panam:  Ouais, t'es plus qu'à quelques pas de distance de Mikoshi.
+Id: 2017178847694049280	panam:  Comment ça se fait, putain ?!
+Id: 2018439929582604288	panam:  V, il est en train de nous lâcher, j'en étais sûre. La propulsion, les armes, les lanceurs… tout tombe en ruines !
+Id: 2018448053748125696	panam:  J'y crois pas, ça a marché ! Oh, ce tas de ferraille en a encore dans le ventre ! Les systèmes démarrent. C'est reparti !
+Id: 2018450826401173504	panam:  Toi, sors de là et va aider les autres !
+Id: 2018454668786290688	panam:  Je fais ce que je peux ! Mitch, t'es là ? Le module de navigation interfère avec les autres systèmes. Je peux le couper ?
+Id: 2018459542332657664	panam:  Monte, V ! Vite !
+Id: 2018469580057104384	panam:  Je fais ce que je peux, Saul ! Mitch est pas là, Bobby est mort… Je suis toute seule, putain, toute seule !
+Id: 2018512956644286464	panam:  V, ils t'auront si tu t'écartes trop !
+Id: 2018513770708361220	panam:  T'éloigne pas des autres ! Ce serait débile de se foirer maintenant !
+Id: 2024068220317200384	panam:  Donne-moi une minute ! Je vais y arriver ! On a besoin de ce panzer, ou on va tous crever !
+Id: 2024118604813430784	panam:  Vous aussi, vous avez la chair de poule ? Il s'est passé un truc ici…
+Id: 2024164160675901440	panam:  Je vais essayer. C'est ça ou cette boîte de conserve va nous claquer dans les pattes !
+Id: 2024218292531097600	panam:  Merci.
+Id: 2024238167056052224	panam:  Est-ce que ça va, vous deux ?
+Id: 2024258535250587648	panam:  Ça ressemble pas à des tanks classiques… C'est quoi ces trucs ?
+Id: 2024269817961902080	panam:  Mitch me le pardonnera jamais s'ils bousillent son panzer. On va se les faire.
+Id: 2024282040130203656	panam:  Ça pourrait être pire. Et pour la porte ?
+Id: 2024295855446159360	panam:  Et j… je sais pas, c… c'est comme si mon cerveau avait été en pilote automatique tout le temps.
+Id: 2024296684676837376	panam:  Le pire est derrière nous, c'est déjà ça.
+Id: 2024299983530487808	panam:  Un jour, faudra quand même que tu m'expliques comment tu fais pour toujours être aussi sûr de toi.
+Id: 2024300237705310208	panam:  C'est pas juste.
+Id: 2024302493703991296	panam:  Si quelqu'un doit croire aux miracles c'est toi, V.
+Id: 2024304363373719552	panam:  Oh arrête. On avait zéro chance de s'en sortir. Mais on a réussi. Alors on a bien le droit de se réjouir un peu.
+Id: 2025631804134387712	panam:  J'espère juste pour nous qu'on se retrouvera jamais sur le sien…
+Id: 2025654030623698944	panam:  Restons pas là. Je fais pas confiance à cette exocuirasse.
+Id: 2025706785119793152	panam:  Saul m'a dit que t'avais du renfort pour Mikoshi. Quelqu'un de l'extérieur.
+Id: 2025708294817574912	panam:  C'est qui, au juste ?
+Id: 2025713597827117056	panam:  T'as demandé de l'aide à une IA ? Je croyais que plus rien pouvait me surpendre.
+Id: 2025718603376619520	panam:  Et on pourrait pas entrer dans Mikoshi sans elle ?
+Id: 2025719075789467648	panam:  Et tu lui fais confiance à cette IA ?
+Id: 2025724618746753024	panam:  Pourquoi, elle a changé de voie ?
+Id: 2025725708091387904	panam:  Hum… et tu lui fais confiance ?
+Id: 2025726896455151616	panam:  Tu déconnes ?
+Id: 2025728384409661440	panam:  Johnny, Alt… ça reste dans la famille, à ce que je vois.
+Id: 2025728845028126720	panam:  Tu lui fais confiance ?
+Id: 2025733367125372928	panam:  Nan. Je te fais confiance à toi.
+Id: 2025734068597551104	panam:  Et par extension, je fais confiance à Alt pour pas nous jouer un sale tour.
+Id: 2027240355873288192	panam:  V ! C'est pas le moment d'hésiter ! Dégomme le couplage !
+Id: 2028838837524701184	panam:  Fin de la discussion.
+Id: 2028846800964493312	panam:  Attends, attends… D'abord, pourquoi la tour Arasaka ?
+Id: 2028862286116757504	panam:  OK, ah, alors juste pour résumer, hein… Tu m'appelles au beau milieu de la nuit pour que je t'aide à infiltrer la tour Arasaka… parce que sinon, tu vas mourir ?
+Id: 2037334078170931200	panam:  U… une prison des âmes ?
+Id: 2037337089379213312	panam:  D'accord.
+Id: 2150701112294309888	panam:  Bordel de merde.
+Id: 2227102198436282368	panam:  Bon, V ? La carte… dans le lecteur ?
+Id: 2227123282397184000	panam:  Elle doit être quelque part dans le coin.
+Id: 2227127878347735040	panam:  V, regarde bien partout.
+Id: 2227211046882983936	panam:  V. Tu veux boire quoi ?
+Id: 2227325631560499200	panam:  V ? Qu'est-ce qu'il y a ?
+Id: 2227354570026315776	panam:  Attends-moi près du poste de transfo. Je vais ramener la caisse.
+Id: 2227452102828441600	panam:  V, on doit les défoncer !
+Id: 2227474362553417728	panam:  Bon, V ? Tu te connectes ?
+Id: 2227483708301590528	panam:  Il déboîte, hein ? Viens, je vais te montrer quelques trucs.
+Id: 2227483873540390912	panam:  Alors ? Monte !
+Id: 2227484015307866112	panam:  Alors ? Qu'est-ce que t'en dis ? Impressionnant, hein ?
+Id: 2227538001167728640	panam:  C'est assez agréable, tu vas voir.
+Id: 2228573879113281536	panam:  On peut y aller. Monte.
+Id: 2228606383006347264	panam:  Alors, t'es prêt ?
+Id: 2228646398897876992	panam:  Ugh, Rogue et sa discrétion légendaire. J'aurais dû m'en douter.
+Id: 2228711302282702848	panam:  Putain ! Il était plus têtu qu'une mule, mais il aurait suivi sa famille jusqu'en enfer.
+Id: 2228715324519575552	panam:  Et c'est ça qui l'a tué.
+Id: 2228808292052955136	panam:  Euh, V ?
+Id: 2228821801554231296	panam:  On commence à voir les étoiles. Il reste que quelques heures avant la tombée de la nuit.
+Id: 2228830442961321984	panam:  La nuit va pas tomber tout de suite.
+Id: 2228834546517360640	panam:  Hum, on pourrait rejeter un coup d'œil à la voiture.
+Id: 2228942036328333312	panam:  V ? Tu dors ou quoi ?
+Id: 2228963685077434368	panam:  V, monte, dépêche-toi !
+Id: 2228965625245024256	panam:  Bon ? Je pars sans toi ? Grouille-toi !
+Id: 2228970144355926016	panam:  OK, on va le démarrer ! Accroche-toi !
+Id: 2229265183929876480	panam:  Merde.
+Id: 2229276664612339712	panam:  Tout se passe impec. Donne-moi une minute.
+Id: 2229278451016744960	panam:  Eh ben voilàààà !
+Id: 2229295102403624960	panam:  La synchronisation neurale se fait pas en claquant des doigts. Ce sera pas très long. Voilà. Tu vois ?
+Id: 2230074662757527552	panam:  Mhm.
+Id: 2230075191122391040	panam:  J'aurais dû me douter que Scorpion allait vouloir… Argh…
+Id: 2230116999491678208	panam:  Désolée que… t'aies dû assister à ça. Les choses peuvent être un peu compliquées. Très compliquées, en fait.
+Id: 2230121768163667968	panam:  Mais je vais gérer. Et toi, tu prends bien soin de toi, OK ?
+Id: 2231492993834217472	panam:  V, qu'est-ce que t'attends ?!
+Id: 2231493437977456640	panam:  Ouvre la porte !
+Id: 2231531402032246784	panam:  Ah ouais ? Je vois que tu t'es déjà fait toute la scène dans ta tête. T'as l'habitude, c'est ça ?
+Id: 2231532190813057024	panam:  Ha ha. Mais bon, c'est vrai, tu m'as manqué.
+Id: 2232818922648956928	panam:  Alors, quoi de neuf, V ?
+Id: 2232855859686469632	panam:  À plus, V !
+Id: 2233140914803200000	panam:  Bien joué.
+Id: 2236556191108714496	panam:  V ? Tu veux nous dire ce que t'en penses ?
+Id: 2236671685061005312	panam:  Vas-y, V ! Occupe-toi des drones ! Sors vite !
+Id: 2236690244336111616	panam:  V ! Militech nous balance encore des blindés ! Y en a une tonne !
+Id: 2236691728817737736	panam:  V, faut nous aider, là ! Ces enculés de Militech nous lâchent pas !
+Id: 2236716471419686912	panam:  Putains de corpos ! On a encore de la compagnie !
+Id: 2236716930058440708	panam:  Oh, la vache, ça, c'est de l'explosion. Mitch, tout va bien ?
+Id: 2237246627956473856	panam:  Ouais ! Continue comme ça !
+Id: 2237248048164585472	panam:  Hum, pas génial. Mais c'est pour ça qu'on s'entraîne…
+Id: 2237255301525073920	panam:  Allez, vas-y. T'es attendu. Ils comptent sur toi.
+Id: 2237256195633246208	panam:  Je croise les doigts.
+Id: 2237516351700488192	panam:  Allez viens, tu vas pas rester là toute ta vie.
+Id: 2237928257921765376	panam:  Laisse pas des questions comme ça en suspens, s'te plaît.
+Id: 2237983506283909120	panam:  V, occupe-toi des sentinelles. En silence, si possible.
+Id: 2238020335813021696	panam:  Ils sont tous morts. Tous.
+Id: 2238025886689153024	panam:  V… vas-y, bouge-toi. Le temps presse.
+Id: 2238836441406959616	panam:  Ramène ton cul par ici, fissa !
+Id: 2238842833106825216	panam:  Essaie de toucher quelque chose ! Eux, je te jure qu'ils essaient !
+Id: 2238843450407710724	panam:  Continue, V ! Empêche-les de nous viser !
+Id: 2238847838035570692	panam:  Ils nous arrivent dessus, V !
+Id: 2238851998063718400	panam:  On peut plus se permettre de faire la moindre erreur. On s'en est déjà pris plein la gueule.
+Id: 2238856660418490368	panam:  Le panzer, V… il va plus tenir bien longtemps. Les systèmes pourraient lâcher d'un moment à l'autre.
+Id: 2238859979555794944	panam:  Je sais ! Tiens-toi prêt !
+Id: 2238860394875777024	panam:  Tout ce que je voudrais, c'est qu'on arrive en un seul morceau. Après, je pourrai improviser.
+Id: 2238875491870371840	panam:  Tire ! Explose-moi ces merdes !
+Id: 2238876102108049408	panam:  Faut qu'on descende les drones !
+Id: 2238885961608130560	panam:  Le blindé Militech… faut qu'on l'intercepte avant qu'il atteigne les autres.
+Id: 2238911563337756672	panam:  V, tu comptes vraiment rien dire ?
+Id: 2238914292890136576	panam:  On y va, y a pas de temps à perdre.
+Id: 2243448137760657408	panam:  Tu veux rien dire ?
+Id: 2243448492414226436	panam:  Hm, pas du tout ?
+Id: 2243452240796602368	panam:  Reste pas là, viens t'asseoir.
+Id: 2243458937288151040	panam:  V, vas-y, connecte-toi.
+Id: 2243460331911008256	panam:  OK, on y va.
+Id: 2243469263446495232	panam:  V, monte, on y va.
+Id: 2247558759960473600	panam:  Par ici, V.
+Id: 2248159129817489416	panam:  Que la fête commence !
+Id: 2248159129901375496	panam:  On va se les faire !
+Id: 2248159130169810952	panam:  Je les tiens ! Viens m'aider, V !
+Id: 2248159130236919816	panam:  Ils vont pas se débarrasser de nous comme ça !
+Id: 2248159130421469192	panam:  On les a tous eus.
+Id: 2248159130455023624	panam:  Pfou, ça, c'est fait.
+Id: 2248159130488578056	panam:  Joli coup, V ! Bien joué.
+Id: 2248159130522132488	panam:  Me lâche pas, V !
+Id: 2248159130555686920	panam:  Ils t'ont pas loupé.
+Id: 2248159130589241352	panam:  V ! Fais attention à toi !
+Id: 2248159133206487048	panam:  V, par ici ! J'ai besoin d'aide !
+Id: 2248159133273595912	panam:  Merde… Viens m'aider, V !
+Id: 2248159133323927560	panam:  Ça commence à être chaud, là !
+Id: 2248159133357481992	panam:  Je dois recharger !
+Id: 2248159133407813640	panam:  Attention, je recharge.
+Id: 2248159133458145288	panam:  Je recharge. Couvre-moi.
+Id: 2248159133575585800	panam:  Attention ! Grenade !
+Id: 2248159133609140232	panam:  Grenade en approche !
+Id: 2248159133793689608	panam:  C'est comme ça qu'on les calme !
+Id: 2248159133827244040	panam:  Et te relève pas !
+Id: 2248159133877575688	panam:  Alors, ça t'a plu ?
+Id: 2248159133995016200	panam:  Beau boulot, V !
+Id: 2248159134045347848	panam:  Ha ha ! Tu gères !
+Id: 2248159134078902280	panam:  Super impressionnant ! Je suis bluffée.
+Id: 2248159134129233928	panam:  Ouh yeah ! Beau feu d'artifice !
+Id: 2248159134213120008	panam:  V, sors-toi les doigts ou on est foutus !
+Id: 2248159134246674440	panam:  Merde ! Tu tires dans le vent ou quoi ?
+Id: 2248159134280228872	panam:  V ! On est mal barrés !
+Id: 2248159134330560520	panam:  Ils vont nous défoncer !
+Id: 2248159134397669384	panam:  On a un sniper !
+Id: 2248159134431223816	panam:  Je vois un sniper ! Attention !
+Id: 2248159134498332680	panam:  Fais gaffe à la tourelle !
+Id: 2248159134548664328	panam:  Tourelle !
+Id: 2248159134598995976	panam:  On a un netrunner sur nous !
+Id: 2248159134649327624	panam:  Netrunner ! Le laisse pas t'avoir !
+Id: 2248159134749990920	panam:  Des drones !
+Id: 2248159134800322568	panam:  Saloperies de drones ! Descends-les !
+Id: 2248159134917763080	panam:  Fais gaffe au drone géant !
+Id: 2248159134951317512	panam:  Putain de merde… un Octant !
+Id: 2248159135018426376	panam:  Ils ont un méca, V ! Le sous-estime pas !
+Id: 2248159135051980808	panam:  Attention au méca !
+Id: 2248159135152644096	panam:  Les renforts sont là.
+Id: 2248159135186198536	panam:  Il manquait plus que ça.
+Id: 2248159135253307400	panam:  Putain, t'as pas trouvé plus gros ?
+Id: 2248159135303639044	panam:  V ! Fais gaffe au méta flingue !
+Id: 2248159135387525128	panam:  V, maintenant ! Ils rechargent !
+Id: 2248159135421079560	panam:  Ils font une pause pour recharger !
+Id: 2248159135504965640	panam:  Accélère, allez.
+Id: 2248159135555297284	panam:  V ?
+Id: 2248159135588851720	panam:  Allez, V. On n'a pas que ça à faire.
+Id: 2248159135622406152	panam:  Nos affaires vont pas se régler toutes seules.
+Id: 2248159135672737800	panam:  Allez, au boulot.
+Id: 2248159135706292232	panam:  C'est bon. Je crois qu'ils nous ont perdus.
+Id: 2248159135756623880	panam:  Bon, cette fois, pas un bruit.
+Id: 2248159135857287176	panam:  Devant. Tu les vois ?
+Id: 2248159135890841608	panam:  Te fais pas repérer.
+Id: 2248159135941173248	panam:  Doucement. Faut pas qu'ils nous voient.
+Id: 2248159135974727688	panam:  Fais gaffe, V.
+Id: 2248159136008282120	panam:  Hé ! Fais gaffe, putain !
+Id: 2248159136041836552	panam:  Tu le fais exprès, ou quoi ?
+Id: 2248159136092168200	panam:  Ouvre l'œil. Y a des caméras partout.
+Id: 2248159136125722632	panam:  On nous surveille. Fais attention.
+Id: 2248159136192831496	panam:  Tu vas le laisser là, comme ça ?
+Id: 2248159136243163144	panam:  Je pense qu'on ferait mieux de le planquer.
+Id: 2248159136343826432	panam:  Fais tes prières !
+Id: 2248159136377380872	panam:  T'es à fond, là ?!
+Id: 2248159136427712520	panam:  Fais pas de bruit.
+Id: 2248159136478044168	panam:  Attention…
+Id: 2250499995727486996	panam:  T'as pas l'air en forme.
+Id: 2250500238611243012	panam:  Viens, appuie-toi sur moi.
+Id: 2259521759030386688	panam:  Pfiou… Je préfère ça.
+Id: 2259535803757993992	panam:  On est dans l'œil du cyclone, j'ai l'impression.
+Id: 2259535982519230472	panam:  On a eu du bol de trouver cette ferme. Espérons que le courant tienne jusqu'à demain matin.
+Id: 2259536137020612616	panam:  Quelle journée…
+Id: 2259536241056129032	panam:  Pouah ! Putain, je vais faire des flammes avec ça !
+Id: 2279925036167544832	panam:  Mitch et Bob sont déjà connectés.
+Id: 2302280138928353280	panam:  Ha, t'as tellement raison… Night City nous a bien roulé dessus, hein ?
+Id: 2302289993730813952	panam:  Oh, arrête.
+Id: 2302295674965913600	panam:  Ils finiront par comprendre, un jour. Mais on sera partis depuis longtemps.
+Id: 2302297895078129664	panam:  Je sais. C'est peut-être pour ça que je veux bien la regarder une dernière fois. Un jour, cette vision sera plus qu'un souvenir.
+Id: 2302297895413673984	panam:  Et toi ? Tu le sens, l'appel de la route ? C'est peut-être la dernière fois que tu vois ces immeubles.
+Id: 2302325911451791360	panam:  C'est un bon plan, V… Hum, tu sais ce que Saul m'a dit, un jour ?
+Id: 3501366813237161984	panam:  La FIA ? Genre l'agence de renseignements des NUSA ? Tu te fous de ma gueule.
+Id: 3501368493508898816	panam:  Ben merde alors... Cette fois-ci, on peut dire que tu t'es surpassé, V. Ha, « agent secret ». Il manquait vraiment plus que ça sur ton CV.
+Id: 3501369138525745152	panam:  Tant que tu te fais pas d'idées sur les gouvernements, les chefs d'État, tout ça. Parce que quand tu crois qu'ils te doivent quelque chose, au final tu te rends compte que c'est à toi d'écarter les fesses. Alors fais gaffe à toi, OK ?
+Id: 3501370701642182656	panam:  Dogtown... Pour moi, c'est une erreur, un regret. Du coup, les gens foutent un mur autour et l'oublient. Et ils attendent qu'elle dépérisse et meure.
+Id: 3501372457092624384	panam:  Mais en même temps... et si c'était encore un de leurs jeux ? Ils doivent savoir que t'es prêt à tout risquer...
+Id: 3508341263088939008	panam:  Y a eu des discussions, des rumeurs, des théories du complot. Et alors ?
+Id: 3508366723118198784	panam:  C'est comme un Vegas du pauvre pour les corpos et les gangsters. Tout ce qui se passe à Dogtown reste à Dogtown. Pff, pratique.
+Id: 3508379423537819648	panam:  Quoi ?! Putain, V, mais c'est génial !
+Id: 3508383082195644416	panam:  Y a plutôt intérêt, ouais.
+Id: 3649112292303028224	panam:  
+Id: 3843340670208700436	panam:  Je crois que t'as fait des cauchemars. T'as crié plusieurs fois.
+Id: 3843340670259032084	panam:  Je sais pas ce que je ferais sans toi.
+Id: 3843340670342918164	panam:  Et... j'ai vraiment pas envie de tout gâcher.
+Id: 3843340670393249812	panam:  V... T'as un moment ? Je veux te parler.
+Id: 3843340670426804244	panam:  Ouvre les yeux, V.
+Id: 3843340674302341136	panam:  Tu sais que j'étais morte d'inquiétude ?!
+Id: 4089864457732546560	panam:  Te prends pas la tête, OK ?
+Id: 4120463431552000000	panam:  Plutôt pas mal.
+Id: 4120464210484584448	panam:  Salut, V !
+Id: 4120466942704541696	panam:  À toute.
+Id: 4136117456175685632	panam:  Tu ressembles pas du tout à un nomade, je trouve.
+Id: 4136118306226888704	panam:  Hmmm... On dirait que tu lis dans mes pensées.
+Id: 4136122880702603264	panam:  Ha ha ! Tu gères !
+Id: 4136123626634403840	panam:  Oh, arrête...
+Id: 4136123645089341440	panam:  
+Id: 4136124817464418304	panam:  Huuum, ça pourrait pas être mieux.
+Id: 4136126501729132544	panam:  Ouais. Ça me plairait, je crois.
+Id: 4136127469036298240	panam:  Mouais, hmm ! La journée a été longue.
+Id: 4136128167169810432	panam:  Je crois qu'on est raccord !
+Id: 4136128903320494080	panam:  Toi, je t'envie.
+Id: 4136131667467493376	panam:  Alors ?
+Id: 4136131688304795648	panam:  Euh, V ?
+Id: 4136131706206085120	panam:  Bah alors ? Tu veux rien dire ?
+Id: 4136381535578021888	panam:  T'es où ?
+Id: 4136383063395196928	panam:  Alors, quoi de neuf ?
+Id: 4136383102234451968	panam:  Alors c'est ton nouveau départ, ici ?
+Id: 4136385546775486464	panam:  Ha ha, c'est drôle…
+Id: 4136386773743624192	panam:  Ça me fait du bien. Plus que je le pensais.
+Id: 4136691981871419416	panam:  Bonne idée. La journée est pas finie.
+Id: 4136691981871419432	panam:  Wouaah... je sens déjà le stress qui retombe.
+Id: 4136691981871419448	panam:  Allez. On va s'en jeter un.
+Id: 4136691981871419464	panam:  Héé, génial !
+Id: 4136691981871419480	panam:  Tu vois ce que je vois ?
+Id: 4137540119313571840	panam:  Viens t'asseoir.
+Id: 4158112734661816320	panam:  Ça me plairait, je crois.
+Id: 4158114185706450944	panam:  T'imagines pas à quel point j'en avais besoin.

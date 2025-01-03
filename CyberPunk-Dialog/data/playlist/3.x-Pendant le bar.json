@@ -1,0 +1,26 @@
+[
+    {
+        "stringId": "1734887593907139",
+        "femaleVariant": "[Boire]",
+        "maleVariant": "[Boire]",
+        "female_vo_path": "ACT",
+        "male_vo_path": "ACT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1734912403652319",
+        "femaleVariant": "ET / OU",
+        "maleVariant": "ET / OU",
+        "female_vo_path": "COM",
+        "male_vo_path": "COM",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1734887658486519",
+        "femaleVariant": "Alors, tu fais quoi ces temps-ci ?",
+        "maleVariant": "Alors, tu fais quoi ces temps-ci ?",
+        "female_vo_path": "ACT",
+        "male_vo_path": "ACT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

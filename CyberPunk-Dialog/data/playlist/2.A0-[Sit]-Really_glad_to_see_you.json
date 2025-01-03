@@ -1,0 +1,42 @@
+[
+    {
+        "stringId": "1734733486045460",
+        "femaleVariant": "[Boire] Je suis trop contente de te voir.",
+        "maleVariant": "[Boire] Je suis trop content de te voir.",
+        "female_vo_path": "ACT",
+        "male_vo_path": "ACT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1732696322113064960",
+        "femaleVariant": "Je suis trop content de te voir.",
+        "maleVariant": "Je suis trop content de te voir.",
+        "female_vo_path": "base/{}/vo/v_q202_f_180bc61fef2cd000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_180bc61fef2cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_05_convoy"
+    },
+    {
+        "stringId": "1895260328437100560",
+        "femaleVariant": "Fais gaffe, je vais finir par te croire. Tu pourras plus te d\u00e9barrasser de moi, apr\u00e8s.",
+        "maleVariant": "Fais gaffe, je vais finir par te croire. Tu pourras plus te d\u00e9barrasser de moi, apr\u00e8s.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a4d513a29623010.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a4d513a29623010.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_02_intro"
+    },
+    {
+        "stringId": "1780702616903966720",
+        "femaleVariant": "OK. \u00c7a, je risque pas de l'oublier.",
+        "maleVariant": "OK. \u00c7a, je risque pas de l'oublier.",
+        "female_vo_path": "base/{}/vo/v_sq030_f_18b65398732b6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq030_m_18b65398732b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq030/sq030_03_dam_equipment"
+    },
+    {
+        "stringId": "1665067044190154752",
+        "femaleVariant": "Pfff. OOOK.",
+        "maleVariant": "Pfff. OOOK.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_171b81a7a029f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_171b81a7a029f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_07_ghost_town_drive"
+    }
+]

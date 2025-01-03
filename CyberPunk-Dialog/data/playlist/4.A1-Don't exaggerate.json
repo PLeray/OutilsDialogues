@@ -1,0 +1,66 @@
+[
+    {
+        "stringId": "1735826347203087",
+        "femaleVariant": "[Dire] Exag\u00e8re pas non plus",
+        "maleVariant": "[Dire] Exag\u00e8re pas non plus",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1953696690837413888",
+        "femaleVariant": "\u00c7a va, exag\u00e8re pas non plus.",
+        "maleVariant": "\u00c7a va, exag\u00e8re pas non plus.",
+        "female_vo_path": "base/{}/vo/v_sq032_f_1b1cecca08386000.wem",
+        "male_vo_path": "base/{}/vo/v_sq032_m_1b1cecca08386000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq032/sq032_04_fourth_episode"
+    },
+    {
+        "stringId": "1953175673303068672",
+        "femaleVariant": "Je sais, mais... Bon, tu vas me dire que la famille parfaite existe pas.",
+        "maleVariant": "Je sais, mais... Bon, tu vas me dire que la famille parfaite existe pas.",
+        "female_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b12ed2f29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b12ed2f29f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    },
+    {
+        "stringId": "2008402713098448896",
+        "femaleVariant": "C'est s\u00fbr.",
+        "maleVariant": "C'est s\u00fbr.",
+        "female_vo_path": "base/{}/vo/v_q203_f_1bdf47a06829f000.wem",
+        "male_vo_path": "base/{}/vo/v_q203_m_1bdf47a06829f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_04_delamain"
+    },
+    {
+        "stringId": "1953187199586004992",
+        "femaleVariant": "Et t'as raison. Mais je veux \u00eatre honn\u00eate avec moi-m\u00eame et \u00eatre s\u00fbre de ce que je veux. Et... de ce qui me fait peur.",
+        "maleVariant": "Et t'as raison. Mais je veux \u00eatre honn\u00eate avec moi-m\u00eame et \u00eatre s\u00fbre de ce que je veux. Et... de ce qui me fait peur.",
+        "female_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b1d68db29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b1d68db29f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    },
+    {
+        "stringId": "1812593566245261312",
+        "femaleVariant": "Je vois parfaitement ce que tu veux dire.",
+        "maleVariant": "Je vois parfaitement ce que tu veux dire.",
+        "female_vo_path": "base/{}/vo/v_sq027_f_1927a03eb6351000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_1927a03eb6351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_06_panzer"
+    },
+    {
+        "stringId": "1345658545965649920",
+        "femaleVariant": "\u00c7a me fait trop plaisir d'entendre \u00e7a.",
+        "maleVariant": "\u00c7a me fait trop plaisir d'entendre \u00e7a.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_12acbd5165405000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_12acbd5165405000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_01_call"
+    },
+    {
+        "stringId": "1897947471907270676",
+        "femaleVariant": "Et toi\u00a0?",
+        "maleVariant": "Et toi\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b81623014.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b81623014.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    }
+]

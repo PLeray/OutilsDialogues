@@ -1,0 +1,58 @@
+[
+    {
+        "stringId": "1735826373383827",
+        "femaleVariant": "[Dire] Je peux faire un truc pour t'aider ?",
+        "maleVariant": "[Dire] Je peux faire un truc pour t'aider ?",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "3270787955500969984",
+        "femaleVariant": "Je peux faire un truc pour t'aider\u00a0?",
+        "maleVariant": "Je peux faire un truc pour t'aider\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_q305_f_2d642c50ef42f000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q305_m_2d642c50ef42f000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q305/q305_11_border_crossing"
+    },
+    {
+        "stringId": "1896726949995360260",
+        "femaleVariant": "Nan\u2026",
+        "maleVariant": "Nan\u2026",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871c9a623004.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871c9a623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1672044600160284672",
+        "femaleVariant": "Je vais g\u00e9rer \u00e7a. J'ai l'habitude. Je suis s\u00e9rieuse.",
+        "maleVariant": "Je vais g\u00e9rer \u00e7a. J'ai l'habitude. Je suis s\u00e9rieuse.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_17344bb47929f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_17344bb47929f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "1683799724993933312",
+        "femaleVariant": "Je pr\u00e9f\u00e9rerais changer de sujet, si \u00e7a te d\u00e9range pas.",
+        "maleVariant": "Je pr\u00e9f\u00e9rerais changer de sujet, si \u00e7a te d\u00e9range pas.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_175e0eedc129f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_175e0eedc129f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "1667620261151240192",
+        "femaleVariant": "D'accord\u2026",
+        "maleVariant": "D'accord\u2026",
+        "female_vo_path": "base/{}/vo/v_q103_f_172493cac629f000.wem",
+        "male_vo_path": "base/{}/vo/v_q103_m_172493cac629f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_13_roadhouse_drive"
+    },
+    {
+        "stringId": "1897947471907270676",
+        "femaleVariant": "Et toi\u00a0?",
+        "maleVariant": "Et toi\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b81623014.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b81623014.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    }
+]

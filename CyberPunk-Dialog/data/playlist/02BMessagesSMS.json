@@ -1,0 +1,10 @@
+[
+    {
+        "stringId": "1735058645656583",
+        "femaleVariant": "Essaye avec Anders Hellman",
+        "maleVariant": "Essaye avec Anders Hellman",
+        "female_vo_path": "MSG-OUT",
+        "male_vo_path": "MSG-OUT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

@@ -1,0 +1,66 @@
+[
+    {
+        "stringId": "1734904017055777",
+        "femaleVariant": "Cas ou V se montre devant panam avec le masque d'Aguilar",
+        "maleVariant": "Cas ou V se montre devant panam avec le masque d'Aguilar",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1902560011682299904",
+        "femaleVariant": "J'ai une id\u00e9e, un plan. Mais\u2026 je sais pas si \u00e7a va marcher.",
+        "maleVariant": "J'ai une id\u00e9e, un plan. Mais\u2026 je sais pas si \u00e7a va marcher.",
+        "female_vo_path": "base/{}/vo/v_sq030_f_1a6740401c2fc000.wem",
+        "male_vo_path": "base/{}/vo/v_sq030_m_1a6740401c2fc000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq030/sq030_09_pier"
+    },
+    {
+        "stringId": "1735756411635207",
+        "femaleVariant": "[Activer empreinte d'Aguilar]",
+        "maleVariant": "[Activer empreinte d'Aguilar]",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1853019730599550976",
+        "femaleVariant": "Ben merde, t'as vraiment une sale gueule.",
+        "maleVariant": "Ben merde, t'as vraiment une sale gueule.",
+        "female_vo_path": "base/{}/vo/panam_q115_f_19b73fa0942d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_q115_f_19b73fa0942d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/q115/q115_02d_misty"
+    },
+    {
+        "stringId": "3689606690401263616",
+        "femaleVariant": "Ce n'est que mon humble avis, bien s\u00fbr. Mais si tu n'es pas d'accord, je peux toujours... te persuader.",
+        "maleVariant": "Ce n'est que mon humble avis, bien s\u00fbr. Mais si tu n'es pas d'accord, je peux toujours... te persuader.",
+        "female_vo_path": "ep1/{}/vo/mq304_assassin_male_mq304_f_33341dbc8e45a000.wem",
+        "male_vo_path": "ep1/{}/vo/mq304_assassin_male_mq304_f_33341dbc8e45a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq304/mq304_06_kurts_wake"
+    },
+    {
+        "stringId": "2248159134078902280",
+        "femaleVariant": "Super impressionnant\u00a0! Je suis bluff\u00e9e.",
+        "maleVariant": "Super impressionnant\u00a0! Je suis bluff\u00e9e.",
+        "female_vo_path": "base/{}/vo/panam_vs_vset_panam_f_1f3310d23952a008.wem",
+        "male_vo_path": "base/{}/vo/panam_vs_vset_panam_f_1f3310d23952a008.wem",
+        "quest_path": "base/{}/subtitles/quest/vset/vset_panam"
+    },
+    {
+        "stringId": "1735756509206727",
+        "femaleVariant": "[D\u00e9sctiver empreinte d'Aguilar]",
+        "maleVariant": "[D\u00e9sctiver empreinte d'Aguilar]",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1782321871533883392",
+        "femaleVariant": "Ouais, \u00e7a peut marcher.",
+        "maleVariant": "Ouais, \u00e7a peut marcher.",
+        "female_vo_path": "base/{}/vo/v_sq026_f_18bc144c8c2fc000.wem",
+        "male_vo_path": "base/{}/vo/v_sq026_m_18bc144c8c2fc000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq026/sq026_08_plan"
+    }
+]

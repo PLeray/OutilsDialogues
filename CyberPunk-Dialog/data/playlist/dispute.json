@@ -1,0 +1,10 @@
+[
+    {
+        "stringId": "1701358323572391936",
+        "femaleVariant": "Elle veut s\u00fbrement y r\u00e9fl\u00e9chir. Un ou deux jours, max.",
+        "maleVariant": "Elle veut s\u00fbrement y r\u00e9fl\u00e9chir. Un ou deux jours, max.",
+        "female_vo_path": "base/{}/vo/v_sq026_f_179c7061902fc000.wem",
+        "male_vo_path": "base/{}/vo/v_sq026_m_179c7061902fc000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq026/sq026_05a_leave"
+    }
+]

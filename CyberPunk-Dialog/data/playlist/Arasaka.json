@@ -1,0 +1,90 @@
+[
+    {
+        "stringId": "1724334039477571584",
+        "femaleVariant": "Je crois qu'il est grand temps de me venger d'Arasaka\u2026",
+        "maleVariant": "Je crois qu'il est grand temps de me venger d'Arasaka\u2026",
+        "female_vo_path": "base/{}/vo/v_q005_f_17ee10ac492cd000.wem",
+        "male_vo_path": "base/{}/vo/v_q005_m_17ee10ac492cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q005/q005_01_plan"
+    },
+    {
+        "stringId": "1752129291496742912",
+        "femaleVariant": "Arasaka se d\u00e9brouille bien avec cette cha\u00eene d'h\u00f4tels, mais je dois dire que... le Konpeki de Tokyo reste quand m\u00eame un cran au-dessus.",
+        "maleVariant": "Arasaka se d\u00e9brouille bien avec cette cha\u00eene d'h\u00f4tels, mais je dois dire... que le Konpeki de Tokyo reste quand m\u00eame un cran au-dessus.",
+        "female_vo_path": "base/{}/vo/v_q004_f_1850d04eb4386000.wem",
+        "male_vo_path": "base/{}/vo/v_q004_m_1850d04eb4386000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/q004/q004_02_meeting_evelyn"
+    },
+    {
+        "stringId": "1824331668780609536",
+        "femaleVariant": "Je viens de r\u00e9aliser\u00a0: je suis encore en train de voler Arasaka.",
+        "maleVariant": "Je viens de r\u00e9aliser\u00a0: je suis encore en train de voler Arasaka.",
+        "female_vo_path": "base/{}/vo/v_q202_f_195153fcae29f000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_195153fcae29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    },
+    {
+        "stringId": "1824331776708440064",
+        "femaleVariant": "Arasaka\u2026 encore.",
+        "maleVariant": "Arasaka\u2026 encore.",
+        "female_vo_path": "base/{}/vo/v_q202_f_19515415cf29f000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_19515415cf29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    },
+    {
+        "stringId": "1824363443233878016",
+        "femaleVariant": "Non, \u00e7a m'a fait penser \u00e0 Jackie, c'est tout. Et au casse d'Arasaka. J'ai pas besoin de te rappeler comment \u00e7a a fini.",
+        "maleVariant": "Non, \u00e7a m'a fait penser \u00e0 Jackie, c'est tout. Et au casse d'Arasaka. J'ai pas besoin de te rappeler comment \u00e7a a fini.",
+        "female_vo_path": "base/{}/vo/v_q202_f_195170e2bf29f000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_195170e2bf29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    },
+    {
+        "stringId": "1834310363585056768",
+        "femaleVariant": "Ouais, c'est connu que c'est une qualit\u00e9 courante chez Arasaka.",
+        "maleVariant": "Ouais, c'est connu que c'est une qualit\u00e9 courante chez Arasaka.",
+        "female_vo_path": "base/{}/vo/v_q112_f_1974c78e9d4e1000.wem",
+        "male_vo_path": "base/{}/vo/v_q112_m_1974c78e9d4e1000.wem",
+        "quest_path": "base/{}/subtitles/quest/q112/q112_00b_secret_meeting"
+    },
+    {
+        "stringId": "1915896316497858560",
+        "femaleVariant": "Arasaka.",
+        "maleVariant": "Arasaka.",
+        "female_vo_path": "base/{}/vo/v_sts_hey_spr_01_f_1a96a18c8b559000.wem",
+        "male_vo_path": "base/{}/vo/v_sts_hey_spr_01_m_1a96a18c8b559000.wem",
+        "quest_path": "base/{}/subtitles/open_world/street_stories/sts_hey_spr_01_toilet_luis"
+    },
+    {
+        "stringId": "1951915942400040960",
+        "femaleVariant": "T'as une id\u00e9e de ce qui se passe \u00e0 Arasaka\u00a0?",
+        "maleVariant": "T'as une id\u00e9e de ce qui se passe \u00e0 Arasaka\u00a0?",
+        "female_vo_path": "base/{}/vo/v_scene_takemura_default_f_1b1699353a2d2000.wem",
+        "male_vo_path": "base/{}/vo/v_scene_takemura_default_m_1b1699353a2d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/takemura/takemura_default"
+    },
+    {
+        "stringId": "1995625827608846336",
+        "femaleVariant": "D'accord. Alors, merci Arasaka.",
+        "maleVariant": "D'accord. Alors, merci Arasaka.",
+        "female_vo_path": "base/{}/vo/v_scene_victor_vector_default_f_1bb1e31def386000.wem",
+        "male_vo_path": "base/{}/vo/v_scene_victor_vector_default_m_1bb1e31def386000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/victor/victor_vector_default"
+    },
+    {
+        "stringId": "3246410512245026816",
+        "femaleVariant": "C'est \u00e0 cause de tout ce bazar avec Arasaka. Les gens... Ils se sentent pas en s\u00e9curit\u00e9 en ville.",
+        "maleVariant": "C'est \u00e0 cause de tout ce bazar avec Arasaka. Les gens... se sentent pas en s\u00e9curit\u00e9 en ville.",
+        "female_vo_path": "ep1/{}/vo/v_q306_f_2d0d912921757000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q306_m_2d0d912921757000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q306/q306_02_terminal_recon"
+    },
+    {
+        "stringId": "3296817672846942208",
+        "femaleVariant": "Ouais, ouais. Nique le syst\u00e8me, nique Arasaka, nique les NUSA...",
+        "maleVariant": "Ouais, ouais. Nique le syst\u00e8me, nique Arasaka, nique les NUSA...",
+        "female_vo_path": "ep1/{}/vo/v_q302_f_2dc0a634c745a000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q302_m_2dc0a634c745a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q302/q302_04_squot"
+    }
+]

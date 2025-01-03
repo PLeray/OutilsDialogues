@@ -1,0 +1,10 @@
+[
+    {
+        "stringId": "1735832600444044",
+        "femaleVariant": "S'il est possible de g\u00e9rer l'arriv\u00e9e H\u00f4tel et d'aller dans la chambre (comme dans la qu\u00eate la casse ou l'on suit Jackie) .... Sinon ca commence direct dans la chambre.",
+        "maleVariant": "S'il est possible de g\u00e9rer l'arriv\u00e9e H\u00f4tel et d'aller dans la chambre (comme dans la qu\u00eate la casse ou l'on suit Jackie) .... Sinon ca commence direct dans la chambre.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

@@ -1,0 +1,66 @@
+[
+    {
+        "stringId": "1735855287877249",
+        "femaleVariant": "[Dire] J'aimerais qu'on se souvienne de moi\u2026",
+        "maleVariant": "[Dire] J'aimerais qu'on se souvienne de moi\u2026",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1663798481894727680",
+        "femaleVariant": "Mais\u2026 si je dois crever, je veux qu'on se souvienne de moi. M\u00eame une note de bas de page, \u00e7a me suffirait.",
+        "maleVariant": "Mais\u2026 si je dois crever, je veux qu'on se souvienne de moi. M\u00eame une note de bas de page, \u00e7a me suffirait.",
+        "female_vo_path": "base/{}/vo/v_q105_f_1716ffe7732b6000.wem",
+        "male_vo_path": "base/{}/vo/v_q105_m_1716ffe7732b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/q105/q105_03a_dollhouse_doll_01"
+    },
+    {
+        "stringId": "1795150223197728768",
+        "femaleVariant": "Je t'oublierai jamais, V. Jamais.",
+        "maleVariant": "Je t'oublierai jamais, V. Jamais.",
+        "female_vo_path": "base/{}/vo/panam_q203_f_18e9a79dec29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q203_m_18e9a79dec29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_02d_panam"
+    },
+    {
+        "stringId": "1775205447997132800",
+        "femaleVariant": "Oh, arr\u00eate.",
+        "maleVariant": "Oh, arr\u00eate.",
+        "female_vo_path": "base/{}/vo/v_sq027_f_18a2cbf313351000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_18a2cbf313351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "1877858746209595392",
+        "femaleVariant": "T'inqui\u00e8te. Je suis pas encore morte.",
+        "maleVariant": "T'inqui\u00e8te. Je suis pas encore mort.",
+        "female_vo_path": "base/{}/vo/v_q000_f_1a0f7e94922ef000.wem",
+        "male_vo_path": "base/{}/vo/v_q000_m_1a0f7e94922ef000.wem",
+        "quest_path": "base/{}/subtitles/quest/q000/q000_corpo_01_security_gate"
+    },
+    {
+        "stringId": "1873771997317320704",
+        "femaleVariant": "V\u2026",
+        "maleVariant": "V\u2026",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a00f9b4322c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1a00f9b4322c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_05a_transport_delivered"
+    },
+    {
+        "stringId": "1735146177514793",
+        "femaleVariant": "En disant sa derni\u00e8re phrase, Panam s'accoude sur le lit (Comme dans le mod Lizzie's Braindances : DollHouse) ",
+        "maleVariant": "En disant sa derni\u00e8re phrase, Panam s'accoude sur le lit (Comme dans le mod Lizzie's Braindances : DollHouse) ",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1708241921529139200",
+        "femaleVariant": "Merde. C'\u00e9tait pas cens\u00e9 se passer comme \u00e7a, j'imagine\u00a0?",
+        "maleVariant": "Merde. C'\u00e9tait pas cens\u00e9 se passer comme \u00e7a, j'imagine\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q202_f_17b4e4fa1b2cd000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_f_17b4e4fa1b2cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_06_border_running"
+    }
+]

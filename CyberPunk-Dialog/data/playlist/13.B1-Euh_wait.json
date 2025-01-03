@@ -1,0 +1,66 @@
+[
+    {
+        "stringId": "1735859033963587",
+        "femaleVariant": "[Dire] \u00c0 propos d'hier soir\u2026",
+        "maleVariant": "[Dire] \u00c0 propos d'hier soir\u2026",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735859520752215",
+        "femaleVariant": "Panam s'est rhabill\u00e9e ou presque.",
+        "maleVariant": "Panam s'est rhabill\u00e9e ou presque.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1897947471370399748",
+        "femaleVariant": "Euh, attends\u2026 \u00c0 propos d'hier soir\u2026",
+        "maleVariant": "Euh, attends\u2026 \u00c0 propos d'hier soir\u2026",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a56dd2b61623004.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a56dd2b61623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1897947471370399760",
+        "femaleVariant": "On est pas vraiment oblig\u00e9es d'en parler.",
+        "maleVariant": "On est pas vraiment oblig\u00e9s d'en parler.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b61623010.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_m_1a56dd2b61623010.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "2881080804631400448",
+        "femaleVariant": "\u00c7a marche, \u00e0 toute.",
+        "maleVariant": "\u00c7a marche, \u00e0 toute.",
+        "female_vo_path": "ep1/{}/vo/v_q304_f_27fba7ba29405000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q304_m_27fba7ba29405000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q304/q304_00_callin"
+    },
+    {
+        "stringId": "1897947471672389636",
+        "femaleVariant": "Prends bien soin de toi.",
+        "maleVariant": "Prends bien soin de toi.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b73623004.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b73623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1897947471672389648",
+        "femaleVariant": "Toi aussi, Panam.",
+        "maleVariant": "Toi aussi, Panam.",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a56dd2b73623010.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a56dd2b73623010.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1735148670146144",
+        "femaleVariant": "Panam s'en va",
+        "maleVariant": "Panam s'en va",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

@@ -1,0 +1,122 @@
+[
+    {
+        "stringId": "1735858958994359",
+        "femaleVariant": "[Dire] D\u00e9j\u00e0 ?!",
+        "maleVariant": "[Dire] D\u00e9j\u00e0 ?!",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "2262118195205464072",
+        "femaleVariant": "Oh non\u2026",
+        "maleVariant": "Oh non\u2026",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1f64a883692b6008.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1f64a883692b6008.wem",
+        "quest_path": "base/{}/subtitles/quest/vset/vset_v"
+    },
+    {
+        "stringId": "1489317527395364864",
+        "femaleVariant": "Je veux pas que tu partes. Pas maintenant. J'ai besoin de toi.",
+        "maleVariant": "Je veux pas que tu partes. Pas maintenant. J'ai besoin de toi.",
+        "female_vo_path": "base/{}/vo/v_q203_f_14ab1e668229f000.wem",
+        "male_vo_path": "base/{}/vo/v_q203_m_14ab1e668229f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_02c_judy"
+    },
+    {
+        "stringId": "1735859520752215",
+        "femaleVariant": "Panam s'est rhabill\u00e9e ou presque.",
+        "maleVariant": "Panam s'est rhabill\u00e9e ou presque.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1345658545965649920",
+        "femaleVariant": "\u00c7a me fait trop plaisir d'entendre \u00e7a.",
+        "maleVariant": "\u00c7a me fait trop plaisir d'entendre \u00e7a.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_12acbd5165405000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_12acbd5165405000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_01_call"
+    },
+    {
+        "stringId": "1882241194020065280",
+        "femaleVariant": "J'ai vraiment pas envie de tout g\u00e2cher.",
+        "maleVariant": "J'ai vraiment pas envie de tout g\u00e2cher.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a1f1064b72c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_m_1a1f1064b72c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "3221530865087410180",
+        "femaleVariant": "Hum, et\u00a0?",
+        "maleVariant": "Hum, et\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_kabuki_f_2cb52d40de7df004.wem",
+        "male_vo_path": "ep1/{}/vo/v_kabuki_m_2cb52d40de7df004.wem",
+        "quest_path": "ep1/{}/subtitles/overlay_open_world/vendors/wat_kab_netrunner_01"
+    },
+    {
+        "stringId": "1897947472175706132",
+        "femaleVariant": "Roh\u2026 C'est trop con que je doive reprendre la route.",
+        "maleVariant": "Roh\u2026 C'est trop con que je doive reprendre la route.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b91623014.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b91623014.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "3378002583959740416",
+        "femaleVariant": "Nan, nan, je t'en veux pas.",
+        "maleVariant": "Nan, nan, je t'en veux pas.",
+        "female_vo_path": "ep1/{}/vo/v_q302_f_2ee11373e345a000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q302_m_2ee11373e345a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q302/q302_06a_ride"
+    },
+    {
+        "stringId": "1953192000755462144",
+        "femaleVariant": "Arr\u00eate, V. J'ai juste besoin de temps, c'est tout.",
+        "maleVariant": "Arr\u00eate, V. J'ai juste besoin de temps, c'est tout.",
+        "female_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b21c6b729f000.wem",
+        "male_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b21c6b729f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    },
+    {
+        "stringId": "1762237637687840780",
+        "femaleVariant": "D'accord.",
+        "maleVariant": "D'accord.",
+        "female_vo_path": "base/{}/vo/v_q110_f_1874b9cb7435100c.wem",
+        "male_vo_path": "base/{}/vo/v_q110_m_1874b9cb7435100c.wem",
+        "quest_path": "base/{}/subtitles/quest/q110/q110_08a_agent"
+    },
+    {
+        "stringId": "4086810525833682944",
+        "femaleVariant": "On se dit \u00e0 bient\u00f4t\u00a0?",
+        "maleVariant": "On se dit \u00e0 bient\u00f4t\u00a0?",
+        "female_vo_path": "base/{}/vo/v_mq055_01_megabuilding_f_38b7448538a4e000.wem",
+        "male_vo_path": "base/{}/vo/v_mq055_01_megabuilding_m_38b7448538a4e000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_04_heywood"
+    },
+    {
+        "stringId": "4136126501729132544",
+        "femaleVariant": "Ouais. \u00c7a me plairait, je crois.",
+        "maleVariant": "Ouais. \u00c7a me plairait, je crois.",
+        "female_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_39667923a1a4e000.wem",
+        "male_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_39667923a1a4e000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_01_megabuilding"
+    },
+    {
+        "stringId": "2232855859686469632",
+        "femaleVariant": "\u00c0 plus, V\u00a0!",
+        "maleVariant": "\u00c0 plus, V\u00a0!",
+        "female_vo_path": "base/{}/vo/panam_scene_panam_default_f_1efcb292ff42f000.wem",
+        "male_vo_path": "base/{}/vo/panam_scene_panam_default_f_1efcb292ff42f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    },
+    {
+        "stringId": "1735148670146144",
+        "femaleVariant": "Panam s'en va",
+        "maleVariant": "Panam s'en va",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

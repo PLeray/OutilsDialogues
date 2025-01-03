@@ -1,0 +1,198 @@
+Id: 2004115945133412368	v:  Je serai mort dans quelques mois, pas vrai ?
+Id: 1947378274454335488	panam:  C'est des conneries, ça. T'en sais rien.
+Id: 3292616320855941120	v:  L'avenir nous le dira, pas vrai ?
+Id: 1825427900278108160	panam:  T'es avec moi, maintenant. On va trouver un moyen de s'occuper de cette saloperie que t'as dans la tête.
+Id: 1244953896827949056	t:  
+Id: 1960480434246791192	v:  Je peux rien prévoir pour l'avenir. Parce que… y a ce truc…
+Id: 1947378274454335488	panam:  C'est des conneries, ça. T'en sais rien.
+Id: 1793776528441077760	v:  Euh… ouais… On verra. Tu sais comment je vais.
+Id: 1695211830603542528	panam:  Putain de tête de mule.
+Id: 1244953896827949056	t:  
+Id: 1795150223197728768	panam:  Je t'oublierai jamais, V. Jamais.
+Id: 1873771997317320704	panam:  V…
+Id: 1775205447997132800	v:  Oh, arrête.
+Id: 1877858746209595392	v:  T'inquiète. Je suis pas encore mort.
+Id: 1244953896827949056	t:  
+Id: 1795056855675432960	v:  Je suis mourant, Panam.
+Id: 3102911348675547136	v:  Je vois bien que c'est pas rien. Allez, raconte.
+Id: 1490915948564705280	v:  Je vois ce que tu veux dire.
+Id: 1873601893730750464	v:  Je vois.
+Id: 1244953896827949056	t:  
+Id: 1756117848428650556	v:  Ouais.
+Id: 1783750500785086464	v:  Et je serai bientôt mort aussi. Sauf que j'aurai personne à mes côtés.
+Id: 1886649512146628608	v:  Ouah, c'est sympa ici.
+Id: 1244953896827949056	t:  
+Id: 3125943911140757504	v:  Le Konpeki, c'était par pure ambition. Parfois, la vie peut manquer de sel, alors on veut viser la gloire.
+Id: 1844699677660528640	v:  Tu sais quoi ? Vas-y. Va falloir que j'apprenne à rire face à la mort, moi aussi.
+Id: 1244953896827949056	t:  
+Id: 1867883393530224660	v:  T'as peur de la mort ?
+Id: 1792441489530941440	v:  Ouais, ces derniers mois, ça va super.
+Id: 1947486935616974848	panam:  V, arrête tes conneries et dis-moi ce qui se passe ! Je m'inquiète pour toi !
+Id: 3272573168035545088	v:  T'as vraiment pas peur de la mort ?
+Id: 1845989278852182016	panam:  Pff. Non, je raconte des conneries.
+Id: 1953187199586004992	panam:  Et t'as raison. Mais je veux être honnête avec moi-même et être sûre de ce que je veux. Et... de ce qui me fait peur.
+Id: 1244953896827949056	t:  
+Id: 3367951188582600704	v:  D'être un mort en sursis ?
+Id: 1724334039477571584	v:  Je crois qu'il est grand temps de me venger d'Arasaka…
+Id: 1752129291496742912	v:  Arasaka se débrouille bien avec cette chaîne d'hôtels, mais je dois dire... que le Konpeki de Tokyo reste quand même un cran au-dessus.
+Id: 1824331668780609536	v:  Je viens de réaliser : je suis encore en train de voler Arasaka.
+Id: 3608383775672823808	v:  C'est quoi ton « Konpeki » à toi ? Le truc qui a complètement changé ta vie. T'as eu ça aussi ?
+Id: 1824331776708440064	v:  Arasaka… encore.
+Id: 1824363443233878016	v:  Non, ça m'a fait penser à Jackie, c'est tout. Et au casse d'Arasaka. J'ai pas besoin de te rappeler comment ça a fini.
+Id: 1834310363585056768	v:  Ouais, c'est connu que c'est une qualité courante chez Arasaka.
+Id: 1915896316497858560	v:  Arasaka.
+Id: 1951915942400040960	v:  T'as une idée de ce qui se passe à Arasaka ?
+Id: 1995625827608846336	v:  D'accord. Alors, merci Arasaka.
+Id: 3246410512245026816	v:  C'est à cause de tout ce bazar avec Arasaka. Les gens... se sentent pas en sécurité en ville.
+Id: 3296817672846942208	v:  Ouais, ouais. Nique le système, nique Arasaka, nique les NUSA...
+Id: 3065258144760430616	v:  Oh putain, ça me rappelle des mauvais souvenirs. Le braquage au Konpeki Plaza.
+Id: 3501305419648114688	v:  C'est moi qu'ai vraiment manqué de bol au Konpeki Plaza.
+Id: 1725507041219186688	v:  Bon, d'accord. J'étais au Konpeki Plaza le soir où c'est arrivé.
+Id: 3195655396473417728	v:  Quoi, toute cette tech et rien sur le Konpeki Plaza ?
+Id: 3501370701642182656	panam:  Dogtown... Pour moi, c'est une erreur, un regret. Du coup, les gens foutent un mur autour et l'oublient. Et ils attendent qu'elle dépérisse et meure.
+Id: 1811296625090535424	v:  Tu sais, j'ai visité le cyberespace et j'y ai bien rencontré un ou deux morts.
+Id: 1812611690168606720	v:  Le cheese-cake de chez PieZ est mortel…
+Id: 1871943294582575104	v:  Mort de rire.
+Id: 1864871267181318144	v:  La nuit où Jackie est mort… Eh ben… Disons que… c'est pas vraiment la joie… depuis ça.
+Id: 1985412926880423936	v:  Il s'est vidé de son sang sur la banquette. Il est mort.
+Id: 3224447278827565128	v:  Donc, euh... c'est mort ?
+Id: 1780837009736404992	panam:  Comment t'as deviné ?
+Id: 1817173075543511040	panam:  Han ! Comment te dire ?
+Id: 1999491880998006784	panam:  V, calme-toi. Tout va bien. Comment tu te sens ?
+Id: 2024299983530487808	panam:  Un jour, faudra quand même que tu m'expliques comment tu fais pour toujours être aussi sûr de toi.
+Id: 1947493282739777536	panam:  Enfin merde, arrête tes conneries et dis-moi ce qui se passe !
+Id: 1882337904822079488	panam:  Si. Mais j'ai peur de dire ou de faire un truc stupide. Et de me retrouver seule dans le désert.
+Id: 1882333620088885248	panam:  Parce que je tiens vraiment à toi. Mais j'ai peur de dire ou de faire un truc stupide, et… et de me retrouver seule dans le désert.
+Id: 1841505032970833920	v:  Est-ce qu'on se reverra ?
+Id: 1960615632301076516	v:  Pas sûr, on verra.
+Id: 1825698199213043716	v:  Tu verras. Bientôt, on sera chez nous. Notre chez-nous.
+Id: 3233792643721953292	v:  Je vais me débrouiller. Toi, profites-en pour te reposer.
+Id: 1511207032903409664	v:  J'en ai marre de faire profil bas.
+Id: 1866273327818108928	v:  Donc tu peux être sympa, quand tu veux.
+Id: 1969161237058486272	v:  C'est sympa ici.
+Id: 1631286612957523968	v:  Ouais, la totale.
+Id: 1624156123234619392	v:  Ouais, pas croyable…
+Id: 1750457338877825024	v:  Ouais, j'ai une petite idée.
+Id: 1764686362791505920	v:  Ouais… Espérons.
+Id: 1795337918150733824	v:  Hmpf. Ouais.
+Id: 1812554219042500608	v:  Ouais, ouais…
+Id: 1825608676491784192	v:  Ouais. C'est promis.
+Id: 1825952146318290944	v:  Ouais. Je crois que je l'ai toujours su.
+Id: 1856216679794741248	v:  Ouais. Ouais, bien sûr.
+Id: 1856232019421433856	v:  Ouais, à plus.
+Id: 1871959597691228160	v:  Mouais. À mourir de rire.
+Id: 1882089257639211008	v:  Ouais. 'fin, je crois.
+Id: 1886534305605033984	v:  Ouais, bien sûr. Je viens avec toi.
+Id: 1927363080596615200	v:  Ouais, plus ou moins.
+Id: 1947511903436365824	v:  Ouais, on peut dire ça.
+Id: 1957690810926731264	v:  Ouais, à la prochaine.
+Id: 1963479662117543936	v:  Ouais, je pète pas le feu.
+Id: 1975314775600029696	v:  C'est ce que je pense, ouais.
+Id: 1977974270521905152	v:  Ouais, ouais, je sais.
+Id: 2028864758977732608	v:  C'est à peu près ça, ouais.
+Id: 3121491535523586048	v:  Assez souvent, ouais.
+Id: 3336191944011649024	v:  Ouais, je connais ça.
+Id: 3356317222544187392	v:  Ouais, on peut dire ça. Une vieille blessure.
+Id: 3367940956326334464	v:  Bah ouais, c'est cette putain de Relic.
+Id: 3458148012005986304	v:  Ouais, c'est ma faute. Je… Je suis désolé.
+Id: 3360398609588875264	v:  Il a peut-être simplement peur que tout soit de sa faute.
+Id: 3388353164074532864	v:  Mais ce dont j'aurais dû avoir peur, c'est la dispariton de tous mes points de repère.
+Id: 3233604371230101504	v:  Ouais, j'en ai bien peur.
+Id: 2028862286116757504	panam:  OK, ah, alors juste pour résumer, hein… Tu m'appelles au beau milieu de la nuit pour que je t'aide à infiltrer la tour Arasaka… parce que sinon, tu vas mourir ?
+Id: 1667619274382503936	panam:  T'inquiète. Je tiens mes promesses. Toujours.
+Id: 1744599504351944704	panam:  Il te dit bonjour.
+Id: 1825549250820960256	panam:  À partir d'aujourd'hui, t'as plus à tout prendre sur tes épaules, t'es plus tout seul, V. Ça va te changer.
+Id: 1863302290713735168	panam:  Hmpf. Te dire au revoir ? Pour un temps ? Pour toujours ?
+Id: 1894187775896080384	panam:  C'était une journée… intéressante.
+Id: 1895260328369991696	panam:  Je sens que tu vas rajouter un « mais ».
+Id: 1902428838280634368	panam:  Tu sais quoi ? On ferait bien de dormir un peu. Ça a été une très longue journée.
+Id: 1935999398973140992	panam:  Non. Cette nuit-là, j'ai compris que ce serait plus jamais le cas. Que mon esprit serait toujours sur la route, même si je me gelais le cul sur une falaise.
+Id: 1947364381258543104	panam:  Tu sais… Tout ça… Ça pourrait être notre vie, tous les jours ?
+Id: 1947413144505282560	panam:  Tu vas me dire ce qui se passe ? Ou on va continuer à jouer à ce petit jeu à la con ?
+Id: 2259536137020612616	panam:  Quelle journée…
+Id: 1785579829227966476	panam:  Oh, garde ta salive, j'ai pas besoin qu'on me réconforte.
+Id: 1952026229798481920	panam:  Super ! T'as survécu une fois, t'as plus qu'à remettre ça !
+Id: 1689576180458057728	panam:  Bien vu.
+Id: 1801252930165985280	panam:  Tout va bien ? Je te trouve silencieux.
+Id: 1817204489253081088	panam:  Tu le caches bien, alors.
+Id: 1946016108111327232	panam:  C'est bon, V. Tout va bien.
+Id: 1999491880998006784	panam:  V, calme-toi. Tout va bien. Comment tu te sens ?
+Id: 4136386773743624192	panam:  Ça me fait du bien. Plus que je le pensais.
+Id: 1793937948679991296	v:  Alors ? C'est quoi le programme ? Quand je serai parti ?
+Id: 3364834747243384832	v:  Alors je me sens obligé de plaisanter...
+Id: 1690803716454215680	v:  Alors, euh… peut-être qu'on… pourrait fêter ça, nan ?
+Id: 1764851008268013568	v:  Alors, quoi de neuf ?
+Id: 1807022470869422080	v:  Alors, t'en penses quoi ?
+Id: 1856013513964462080	v:  Alors, tu t'attends au pire ? C'est ça ?
+Id: 3508983633565323264	v:  Alors, tu penses quoi de tout ça, toi ?
+Id: 1828595813952167936	v:  Alors... c'est toujours d'actu ?
+Id: 3378147106102165504	v:  Alors... T'as enfin décidé de partir.
+Id: 1808614958641668100	v:  Alors ? Je m'en suis bien sorti ?
+Id: 1998096077125447680	v:  Bien. Super bien, même. Et toi, alors ?
+Id: 1978091710528114688	v:  C'est à mon tour de me confier, alors ? OK.
+Id: 1960615632837947428	v:  Eh ben, tu sais clairement pas à qui tu parles, alors. Moi… je suis le roi des relations foireuses.
+Id: 1935990807847522304	v:  Et alors ?
+Id: 3031870453271674880	v:  Et alors ? Il s'est passé quoi ?
+Id: 1947419833950400512	v:  Si je te dis la vérité… j'ai peur que ce soit… plus jamais pareil entre nous.
+Id: 1947486841144471552	panam:  V, écoute-moi.
+Id: 1947490954582290432	panam:  Tu peux me dire n'importe quoi, ça changera rien à ce que j…
+Id: 1947520915368177664	panam:  Mais y a forcément un truc à faire. Quelqu'un qui peut t'aider…
+Id: 1947526241429614592	panam:  Je suis sûre que tu te trompes.
+Id: 1947553441960816640	panam:  Tu vas trouver une solution. Et quand ce sera fait, préviens-moi. Je t'aiderai.
+Id: 1947563333673152512	v:  Merci, Panam.
+Id: 1947564698231238656	panam:  Prends soin de toi. Et dis-moi si… enfin, donne-moi des nouvelles, quoi.
+Id: 1947622932015083520	panam:  Tu te fous de ma gueule.
+Id: 1947625918846070784	panam:  C'est pas une blague.
+Id: 1947631731614543872	panam:  Est-ce que t'as essayé de… je sais pas, d'en parler à quelqu'un ?
+Id: 1947632163678187520	v:  J'aurais un tas de trucs à raconter à un psy, mais pas ça. Le construct est comme un cancer qui gagne du terrain petit à petit.
+Id: 1947643814229962752	panam:  Merde.
+Id: 1947651317470720000	panam:  Merde.
+Id: 1989438692220751872	panam:  Je sais pas…
+Id: 1999491326695567360	v:  Panam… je…
+Id: 1692261696034959360	panam:  Attends un peu, tu vas voir.
+Id: 1672044600160284672	panam:  Je vais gérer ça. J'ai l'habitude. Je suis sérieuse.
+Id: 1773676286296002560	panam:  J'ai un problème.
+Id: 1935979839591411712	panam:  J'avais fait de la route. Je rentrais et j'ai eu envie de me vider la tête avant de me poser au camp.
+Id: 1660642372556025856	v:  Je peux savoir où ?
+Id: 1653519333661995008	v:  Ouh, OK.
+Id: 1669130289024724992	panam:  Le nord-est, je pense. Par la vieille autoroute qu'a jamais été terminée.
+Id: 1824077594000748544	panam:  Ouais ! Mais c'est comme un putain de croupier dans un casino de Kabuki. J'ai tout misé… et j'ai tout perdu.
+Id: 1780942008365682688	panam:  Ouais. Mais c'était avant notre attaque contre le camp des Raffens.
+Id: 1825427900278108160	panam:  T'es avec moi, maintenant. On va trouver un moyen de s'occuper de cette saloperie que t'as dans la tête.
+Id: 1695211830603542528	panam:  Putain de tête de mule.
+Id: 1691074714814509080	panam:  Te prends pas la tête. Moi aussi je suis contente.
+Id: 1489249677448179712	v:  J'ai pas envie d'en parler. Pas maintenant.
+Id: 1801623933888978948	v:  C'est… toi la boss, maintenant ?
+Id: 1883485622726422528	v:  Donc maintenant, t'as plus peur de rien ?
+Id: 1806792718940442624	v:  Mais nan.
+Id: 3552147178749599744	v:  Mais nan, arrête.
+Id: 1863176122928852992	panam:  Il m'a dit que le seul moment où une personne est vraiment libre, c'est… quand elle sait… qu'elle a plus rien à perdre.
+Id: 1744599504351944704	panam:  Il te dit bonjour.
+Id: 1788411418890752000	v:  Avec Saul, ça en est où ?
+Id: 1782192144563638272	v:  Je croyais que vous aviez fini par vous entendre, Saul et toi.
+Id: 1786415429794263040	panam:  Super, c'est parfait.
+Id: 1979539369352777728	panam:  Mais je… j'ai merdé tellement de fois… C'est toi qui l'as dit…
+Id: 1863174641165135872	panam:  Tu sais ce que Saul m'a dit, un jour ?
+Id: 1863176122928852992	panam:  Il m'a dit que le seul moment où une personne est vraiment libre, c'est… quand elle sait… qu'elle a plus rien à perdre.
+Id: 1683775529480220672	panam:  Je sais vraiment pas… D'un côté, le clan, c'est ma seule famille. Rah, merde, c'est la seule vie que je connaisse.
+Id: 1708241921529139200	panam:  Merde. C'était pas censé se passer comme ça, j'imagine ?
+Id: 3475144985694019584	v:  On peut pas rester là trop longtemps. Cet endroit a l'air sûr, mais ça pourrait vite changer.
+Id: 1782001689272537088	v:  Personne va remarquer que t'as disparu, au camp ?
+Id: 3336371632054050816	v:  Ha. J'en ai connu aussi des projets faits pour attirer les paumards.
+Id: 1976297277084004352	panam:  J'ai un plan, mais… c'est qu'une ébauche. Faut que je le peaufine un peu. Et puis, on pourra voir ensuite les détails.
+Id: 1547610310450925568	panam:  Je crois que t'as fait des cauchemars. T'as crié plusieurs fois.
+Id: 1667550131163623424	panam:  V, je dois le faire. Tu comprends, ça ?
+Id: 1691074714831286300	panam:  Ah, là tu me fais plaisir. On est coolos ?
+Id: 1772147966326235136	panam:  Va te faire mettre.
+Id: 1774980810033926144	panam:  Bon, d'accord. Et toi… Pourquoi tu fais ça ?
+Id: 1793783797505642496	panam:  Mais je suis la seule à connaître mes atouts et mes faiblesses.
+Id: 1793783910684741632	panam:  Je fais pas de miracles, V ! J'ai vraiment la trouille que ça tourne mal. Que tout le monde…
+Id: 1794980909027028992	panam:  Night City, c'est un cancer. Regarde ce qu'elle t'a fait, putain !
+Id: 1882308344491560960	panam:  Je sais. Mais j'ai besoin d'une pulsion qui me pousse à faire les choses.
+Id: 1882333620088885248	panam:  Parce que je tiens vraiment à toi. Mais j'ai peur de dire ou de faire un truc stupide, et… et de me retrouver seule dans le désert.
+Id: 1895260328437100560	panam:  Fais gaffe, je vais finir par te croire. Tu pourras plus te débarrasser de moi, après.
+Id: 2017178847694049280	panam:  Comment ça se fait, putain ?!
+Id: 1788411418890752000	v:  Avec Saul, ça en est où ?
+Id: 1897947471890493444	v:  Est-ce que Saul va bien ?
+Id: 1882194830822232064	v:  Il a réagi comment, Saul ?
+Id: 1244953896827949056	t:  

@@ -1,0 +1,26 @@
+[
+    {
+        "stringId": "1735584121915575",
+        "femaleVariant": "Panam et V entrent dans la suite du Konpeki Plaza",
+        "maleVariant": "Panam et V entrent dans la suite du Konpeki Plaza",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1764924610551656448",
+        "femaleVariant": "C'est sympa ici. Tr\u00e8s classe.",
+        "maleVariant": "C'est sympa ici. Tr\u00e8s classe.",
+        "female_vo_path": "base/{}/vo/v_charter_hill_f_187e45951346b000.wem",
+        "male_vo_path": "base/{}/vo/v_charter_hill_m_187e45951346b000.wem",
+        "quest_path": "base/{}/subtitles/open_world/vendors/wbr_hil_foodshop_01"
+    },
+    {
+        "stringId": "3508383082195644416",
+        "femaleVariant": "Y a plut\u00f4t int\u00e9r\u00eat, ouais.",
+        "maleVariant": "Y a plut\u00f4t int\u00e9r\u00eat, ouais.",
+        "female_vo_path": "ep1/{}/vo/panam_scene_sobchak_default_f_30b047d33642f000.wem",
+        "male_vo_path": "ep1/{}/vo/panam_scene_sobchak_default_f_30b047d33642f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    }
+]

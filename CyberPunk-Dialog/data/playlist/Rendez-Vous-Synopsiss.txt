@@ -1,0 +1,233 @@
+
+Arrivée de Panam :
+1.0-Do_i_know_you
+Id: 1756117848059551784	panam:  V ?
+Id: 3389921432679321600	v:  Euh, est-ce qu'on se connaît ?
+Id: 4136385546775486464	panam:  Ha ha, c'est drôle…
+Id: 2262179491535872008	v:  Ha ha ha ha !
+
+S'installer au bar : 
+2.A0-[Sit]-Really_glad_to_see_you
+Id: 1856113477382119424	v:  Salut, Panam.
+Id: 1732696322113064960	v:  Je suis trop content de te voir.
+Id: 1895260328437100560	panam:  Fais gaffe, je vais finir par te croire. Tu pourras plus te débarrasser de moi, après.
+Id: 1780702616903966720	v:  OK. Ça, je risque pas de l'oublier.
+Id: 1665067044190154752	panam:  Pfff. OOOK.
+Id: 1764950158609465344	v:  Alors, tu fais quoi ces temps-ci ?
+
+ou
+2.B0-[Sit]-glad_you_did_not_change_your_mind
+Id: 1856113477382119424	v:  Salut, Panam.
+Id: 1845833987246387200	v:  Ça me fait plaisir de te voir, putain. Je suis contente que t'aies pas changé d'avis.
+Id: 1695241105570394112	panam:  Je tiens toujours parole.
+Id: 1947299147600752640	v:  Ha, c'est bon à savoir.
+Id: 1953192000755462144	panam:  Arrête, V. J'ai juste besoin de temps, c'est tout.
+Id: 1764950158609465344	v:  Alors, tu fais quoi ces temps-ci ?
+
+Panam boit pendant qu'elle parle et s'énerve... :
+3.0-[Drink]-Talk_to_me
+Id: 1834755541237886976	v:  Je t'écoute.
+Id: 1672027962631385088	panam:  J'ai pas envie d'en parler.
+Id: 2231532716946550784	v:  Panam...
+Id: 1791180838146478080	panam:  Hmm. OK. Merci.
+Id: 1896726949978583044	panam:  Euh… hm-hmm, V…
+Id: 1773676286296002560	panam:  J'ai un problème.
+Id: 1773703824653225984	v:  Laisse-moi deviner. C'est Saul, c'est ça ?
+Id: 1773704191755489280	panam:  Tu me connais trop bien.
+
+3.1-[Drink]-Thought_you_and_Saul_agreed
+Id: 1782192144563638272	v:  Je croyais que vous aviez fini par vous entendre, Saul et toi.
+Id: 1882216617480048640	panam:  Il m'a humiliée devant tout le clan ! Il m'a fait passer pour une conne !
+Id: 1835599499677528064	v:  Encore ?
+Id: 1935971665480118272	panam:  C'est ce que je veux dire ! Ça devrait pas être moi, ça devrait être…
+Id: 1946030493684854784	panam:  Putain… Je le savais…
+Id: 1953166016303984640	panam:  Je sais plus ce que je dois faire, V.
+
+4.A0-[Drink]-Dont_worry_about_Saul
+Id: 1761834655837450240	v:  Hé, fais pas attention à Saul. Ça lui passera.
+Id: 1886657562660171776	v:  Panam.
+Id: 1804041973262520320	v:  Tu te souviens notre première rencontre ? Rien que de parler de désobéir à Saul, tu chiais déjà dans ton froc.
+Id: 1751574754396082176	v:  Eh ben, ça a bien changé…
+Id: 1665024486785282060	panam:  Je voulais une vie différente, une vie meilleure. Mais Saul est qu'un putain de lâche. Je suis convaincue qu'il va mener le clan à sa perte.
+
+4.A1-Don't exaggerate
+Id: 1953696690837413888	v:  Ça va, exagère pas non plus.
+Id: 1953175673303068672	panam:  Je sais, mais... Bon, tu vas me dire que la famille parfaite existe pas.
+Id: 2008402713098448896	v:  C'est sûr.
+Id: 1953187199586004992	panam:  Et t'as raison. Mais je veux être honnête avec moi-même et être sûre de ce que je veux. Et... de ce qui me fait peur.
+Id: 1812593566245261312	v:  Je vois parfaitement ce que tu veux dire.
+Id: 1345658545965649920	panam:  Ça me fait trop plaisir d'entendre ça.
+Id: 1897947471907270676	panam:  Et toi ?
+
+ou
+4.B0-[Drink]-Saul_could_be_right
+Id: 1896559853671952388	v:  Te vexe pas, mais… Saul a peut-être raison.
+Id: 1817173075543511040	panam:  Han ! Comment te dire ?
+Id: 1774799202323918848	panam:  Va te faire foutre.
+Id: 3233251041668595712	v:  Du calme, ça va aller.
+Id: 1665024486785282060	panam:  Je voulais une vie différente, une vie meilleure. Mais Saul est qu'un putain de lâche. Je suis convaincue qu'il va mener le clan à sa perte.
+Id: 1953190108704927744	panam:  Même si t'avais raison, ça changerait quoi ? Je le vois, le problème. Je sais juste pas comment le résoudre. Pour l'instant...
+
+
+4.B1-I_can_help
+Id: 3270787955500969984	v:  Je peux faire un truc pour t'aider ?
+Id: 1896726949995360260	panam:  Nan…5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel
+Id: 1672044600160284672	panam:  Je vais gérer ça. J'ai l'habitude. Je suis sérieuse.5.1-I take it we've got a deal
+Id: 1683799724993933312	panam:  Je préférerais changer de sujet, si ça te dérange pas.
+Id: 1667620261151240192	v:  D'accord…Arrivée dans la chambre d'hôtel
+Id: 1897947471907270676	panam:  Et toi ?
+
+5.0-So_are_you_ok_to_have_good_time_in_Arasaka_hotel
+Id: 1886657562660171776	v:  Panam.
+Id: 1724409002612019200	v:  Ce plan, t'en penses quoi ?
+Id: 2302325911451791360	panam:  C'est un bon plan, V… Hum, tu sais ce que Saul m'a dit, un jour ?
+Id: 1863176122928852992	panam:  Il m'a dit que le seul moment où une personne est vraiment libre, c'est… quand elle sait… qu'elle a plus rien à perdre.
+Id: 1795337918150733824	v:  Hmpf. Ouais.
+Id: 1824363324853841920	panam:  J'ai dit un truc qu'il fallait pas ?
+Id: 3509981927846547456	v:  T'inquiète.
+Id: 1896726950297350144	v:  Non.
+Id: 1882333620088885248	panam:  Parce que je tiens vraiment à toi. Mais j'ai peur de dire ou de faire un truc stupide, et… et de me retrouver seule dans le désert.
+
+5.1-I take it we've got a deal
+Id: 3236363351082635264	v:  Alors, j'en conclus que t'es partante ?
+Id: 4136126501729132544	panam:  Ouais. Ça me plairait, je crois.
+Id: 1973377369874874372	v:  Oh. On va s'amuser.
+Id: 1824331668780609536	v:  Je viens de réaliser : je suis encore en train de voler Arasaka.
+Id: 1772146926270672896	panam:  Ha Ha…
+Id: 1530043192202760192	panam:  C'est la cerise sur le gâteau, je crois.
+Id: 1812631457889587200	panam:  Bon. C'est parti.
+Id: 1904223843040378880	v:  Ouais, on y va.
+Id: 1940242179245694980	v:  Je te retrouve là-bas.
+
+
+6.0-Entrance to the room
+Id: 1764924610551656448	v:  C'est sympa ici. Très classe.
+Id: 3508383082195644416	panam:  Y a plutôt intérêt, ouais.
+
+V s'assoit sur le lit et Panam s'assoit en face de V. (comme dans DollHouse)
+6.1-[Sit]-It_is_awesome
+Id: 4136691981871419464	panam:  Héé, génial !
+Id: 1729876797939675136	v:  Putain ouais, carrément.
+Id: 1995306323030814720	panam:  Wouaah... je sens déjà le stress qui retombe.
+Id: 1896726949659815960	panam:  Quand tu passes tes journées et tes nuits sur la route, ton cul finit par fusionner avec le siège. Et t'en oublies ce que c'est, le confort.
+Id: 2262118194987360264	v:  Hé hé.
+Id: 1380579642278801408	v:  Je crois savoir ce que tu ressens.
+
+Apres un temps sans rien dire...
+7.0-Will_you_say_something
+Id: 2243448137760657408	panam:  Tu veux rien dire ?
+Id: 1756117848076328972	panam:  Bon, qu'est-ce qui se passe ?
+
+8.0-Reminded_me_of_jackie
+Id: 1999491326695567360	v:  Panam… je…
+Id: 1824363443233878016	v:  Non, ça m'a fait penser à Jackie, c'est tout. Et au casse d'Arasaka. J'ai pas besoin de te rappeler comment ça a fini.
+Id: 1663771767365918720	v:  C'était y a pas si longtemps…
+Id: 1680562800159121408	v:  Putain… Putain de merde !
+Id: 1947414952367747072	panam:  Ça va, V, calme-toi. Vas-y par étapes. Qu'est-ce qui se passe exactement ?
+
+Panam vient s'assoir sur le lit
+8.1-Trusted someone
+Id: 1664681160034967552	v:  J'ai fait confiance à quelqu'un et il m'a baisé la gueule. Ça s'arrête là.
+Id: 1947486841144471552	panam:  V, écoute-moi.
+Id: 1947490954582290432	panam:  Tu peux me dire n'importe quoi, ça changera rien à ce que j…
+Id: 1663801887585689600	v:  Je crois qu'en fait… j'ai… tout bêtement peur. Alors, j'imagine toutes ces choses pour pas… pour pas… penser au néant.
+Id: 1882238917184081920	panam:  Écoute, V… Je…
+Id: 1882203350962556928	panam:  Désolée. Je... je suis pas très douée... pour parler de mes sentiments et... du reste.
+
+9.A0-I cant_make_any_plans_for_the_future
+Id: 1960480434246791192	v:  Je peux rien prévoir pour l'avenir. Parce que… y a ce truc…
+Id: 1947378274454335488	panam:  C'est des conneries, ça. T'en sais rien.
+Id: 1793776528441077760	v:  Euh… ouais… On verra. Tu sais comment je vais.
+Id: 1695211830603542528	panam:  Putain de tête de mule.
+
+ou
+9.B0-Dead in a few months
+Id: 2004115945133412368	v:  Je serai mort dans quelques mois, pas vrai ?
+Id: 1947378274454335488	panam:  C'est des conneries, ça. T'en sais rien.
+Id: 3292616320855941120	v:  L'avenir nous le dira, pas vrai ?
+Id: 1825427900278108160	panam:  T'es avec moi, maintenant. On va trouver un moyen de s'occuper de cette saloperie que t'as dans la tête.
+
+10.0-if_I_gotta_die
+Id: 1663798481894727680	v:  Mais… si je dois crever, je veux qu'on se souvienne de moi. Même une note de bas de page, ça me suffirait.
+Id: 1795150223197728768	panam:  Je t'oublierai jamais, V. Jamais.
+Id: 1775205447997132800	v:  Oh, arrête.
+Id: 1877858746209595392	v:  T'inquiète. Je suis pas encore mort.
+Id: 1873771997317320704	panam:  V…
+Id: 1708241921529139200	panam:  Merde. C'était pas censé se passer comme ça, j'imagine ?
+Panam se penche vers le lit (comme dans DollHouse) en disant sa derniere phrase
+
+Ils s'allongent sur le lit sur les 2 premières phrases
+11.0-Come here
+Id: 1793778635877699588	v:  Viens là.
+Id: 1854803273415729152	panam:  Hé…
+Id: 1913074409953632256	panam:  Huuum, ça pourrait pas être mieux.
+Id: 1990837708660744192	v:  Euh…
+Id: 1913073066920714240	v:  Vous avez tout ce qu'il vous faut, madame ?
+Id: 1753334906515746844	panam:  Quoi ?
+Id: 1731570327012298752	panam:  Merde. Je suis désolée.
+Id: 1902427987491233792	panam:  Je me mets un peu trop à l'aise ?
+
+12.A0-Your_wish_is_our_command.txt
+Id: 1811499757478633472	v:  Non, pas du tout.
+Id: 1896726950381236224	v:  Vos désirs… sont des ordres.
+Id: 1896726949961805840	panam:  Oh ? Et à quoi tu penses exactement ?
+Id: 1913968240093896704	panam:  Méfie-toi, tu connais pas mes désirs…
+Id: 3343379596644360192	v:  Pas tous, on dirait.
+Id: 1665067044190154752	panam:  Pfff. OOOK.
+Id: 1883866768744402944	panam:  Eh ben, prépare-toi.
+Id: 1653519333661995008	v:  Ouh, OK.
+Les vetement disparaissent pendant qu'on entend Panam dire sa derniere phrase
+Ils sont nu sur la derniere phrase de V
+Départ des activités explicites
+
+Panam se rassoit sur sa premiere phrase
+12.B0-Maybe_a_little.txt
+Id: 1902428222087045120	v:  Peut-être un peu.
+Id: 1756117848176992288	panam:  OK. Tu sais quoi ? Je t'emmerde.
+Id: 1918384511778512896	v:  Oh mince, je vais devoir me faire pardonner alors ?
+Id: 1896726950347681808	panam:  Non, c'est bon, t'inquiète. T'en fais pas pour ça.
+Id: 1325616690627239936	v:  Et c'est tout ?
+Id: 1672374186035245056	panam:  Nan, je vais pas traîner. On se parlera la prochaine fois.
+Id: 1882357240966172672	v:  La prochaine fois, essaie de suivre tes pulsions.
+Id: 1885220225346719744	panam:  Tu sais quoi, V ? Va te faire foutre.
+Panam s'en va (furieuse) en disant sa derniere phrase
+FIN MISSION
+
+
+Plus tard... ils sont allongé nus
+13.0-I_didnt_want_to_wake_you
+Id: 2008211146618302464	panam:  Je voulais pas te réveiller.
+Id: 1978073995146973184	v:  Hmm…
+Id: 1539042075245015040	panam:  T'as bien dormi ?
+Id: 3302620291439247360	v:  Ouais... Le temps s'est un peu arrêté pour moi.
+Id: 1665019849495670784	panam:  Bon… J'y vais.
+
+13.A1-Oh_no
+Id: 2262118195205464072	v:  Oh non…
+Id: 1489317527395364864	v:  Je veux pas que tu partes. Pas maintenant. J'ai besoin de toi.
+Id: 1345658545965649920	panam:  Ça me fait trop plaisir d'entendre ça.
+Id: 1882241194020065280	panam:  J'ai vraiment pas envie de tout gâcher.
+Id: 3221530865087410180	v:  Hum, et ?
+Id: 1897947472175706132	panam:  Roh… C'est trop con que je doive reprendre la route.
+Ils se rassoient. Les vetements réapparaissent
+Id: 3378002583959740416	v:  Nan, nan, je t'en veux pas.
+Id: 1953192000755462144	panam:  Arrête, V. J'ai juste besoin de temps, c'est tout.
+Id: 1762237637687840780	v:  D'accord.
+Id: 4086810525833682944	v:  On se dit à bientôt ?
+Id: 4136126501729132544	panam:  Ouais. Ça me plairait, je crois.
+Id: 2232855859686469632	panam:  À plus, V !
+Panam s'en va
+FIN MISSION
+
+ou
+13.B1-Euh_wait
+Ils se rassoient. Les vetements réapparaissent
+Id: 1897947471370399748	v:  Euh, attends… À propos d'hier soir…
+Id: 1897947471370399760	panam:  On est pas vraiment obligés d'en parler.
+Id: 2881080804631400448	v:  Ça marche, à toute.
+Id: 1897947471672389636	panam:  Prends bien soin de toi.
+Id: 1897947471672389648	v:  Toi aussi, Panam.
+Panam s'en va
+FIN MISSION
+V réapparait devant le Konpeki porte close
+

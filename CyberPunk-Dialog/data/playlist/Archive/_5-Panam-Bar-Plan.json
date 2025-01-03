@@ -1,0 +1,138 @@
+[
+    {
+        "stringId": "1752129291496742912",
+        "femaleVariant": "Arasaka se d\u00e9brouille bien avec cette cha\u00eene d'h\u00f4tels, mais je dois dire que... le Konpeki de Tokyo reste quand m\u00eame un cran au-dessus.",
+        "maleVariant": "Arasaka se d\u00e9brouille bien avec cette cha\u00eene d'h\u00f4tels, mais je dois dire... que le Konpeki de Tokyo reste quand m\u00eame un cran au-dessus.",
+        "female_vo_path": "base/{}/vo/v_q004_f_1850d04eb4386000.wem",
+        "male_vo_path": "base/{}/vo/v_q004_m_1850d04eb4386000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/q004/q004_02_meeting_evelyn"
+    },
+    {
+        "stringId": "1824331668780609536",
+        "femaleVariant": "Je viens de r\u00e9aliser\u00a0: je suis encore en train de voler Arasaka.",
+        "maleVariant": "Je viens de r\u00e9aliser\u00a0: je suis encore en train de voler Arasaka.",
+        "female_vo_path": "base/{}/vo/v_q202_f_195153fcae29f000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_195153fcae29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    },
+    {
+        "stringId": "3125943911140757504",
+        "femaleVariant": "Le Konpeki, c'\u00e9tait par pure ambition. Parfois, la vie peut manquer de sel, alors on veut viser la gloire.",
+        "maleVariant": "Le Konpeki, c'\u00e9tait par pure ambition. Parfois, la vie peut manquer de sel, alors on veut viser la gloire.",
+        "female_vo_path": "ep1/{}/vo/v_q301_f_2b61956cdb571000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q301_m_2b61956cdb571000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q301/q301_01_border"
+    },
+    {
+        "stringId": "1724409002612019200",
+        "femaleVariant": "Ce plan, t'en penses quoi\u00a0?",
+        "maleVariant": "Ce plan, t'en penses quoi\u00a0?",
+        "female_vo_path": "base/{}/vo/v_q005_f_17ee54da002cd000.wem",
+        "male_vo_path": "base/{}/vo/v_q005_m_17ee54da002cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q005/q005_01_plan"
+    },
+    {
+        "stringId": "2302325911451791360",
+        "femaleVariant": "C'est un bon plan, V\u2026 Hum, tu sais ce que Saul m'a dit, un jour\u00a0?",
+        "maleVariant": "C'est un bon plan, V\u2026 Hum, tu sais ce que Saul m'a dit, un jour\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q202_f_1ff38137dd42f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_f_1ff38137dd42f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_01_motel"
+    },
+    {
+        "stringId": "1863176122928852992",
+        "femaleVariant": "Il m'a dit que le seul moment o\u00f9 une personne est vraiment libre, c'est\u2026 quand elle sait\u2026 qu'elle a plus rien \u00e0 perdre.",
+        "maleVariant": "Il m'a dit que le seul moment o\u00f9 une personne est vraiment libre, c'est\u2026 quand elle sait\u2026 qu'elle a plus rien \u00e0 perdre.",
+        "female_vo_path": "base/{}/vo/panam_q202_f_19db54cff129f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_m_19db54cff129f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_01_motel"
+    },
+    {
+        "stringId": "1795337918150733824",
+        "femaleVariant": "Hmpf. Ouais.",
+        "maleVariant": "Hmpf. Ouais.",
+        "female_vo_path": "base/{}/vo/v_q203_f_18ea52530f29f000.wem",
+        "male_vo_path": "base/{}/vo/v_q203_m_18ea52530f29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_05_afterlife"
+    },
+    {
+        "stringId": "1824363324853841920",
+        "femaleVariant": "J'ai dit un truc qu'il fallait pas\u00a0?",
+        "maleVariant": "J'ai dit un truc qu'il fallait pas\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q202_f_195170c72f29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_f_195170c72f29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    },
+    {
+        "stringId": "3368352697945530368",
+        "femaleVariant": "Ha. Pourquoi tu dis \u00e7a\u00a0?",
+        "maleVariant": "Ha. Pourquoi tu dis \u00e7a\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_q302_f_2ebecaeeb745a000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q302_m_2ebecaeeb745a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q302/q302_06a_ride"
+    },
+    {
+        "stringId": "1882333620088885248",
+        "femaleVariant": "Parce que je tiens vraiment \u00e0 toi. Mais j'ai peur de dire ou de faire un truc stupide, et\u2026 et de me retrouver seule dans le d\u00e9sert.",
+        "maleVariant": "Parce que je tiens vraiment \u00e0 toi. Mais j'ai peur de dire ou de faire un truc stupide, et\u2026 et de me retrouver seule dans le d\u00e9sert.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a1f6474562c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_m_1a1f6474562c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "3236363351082635264",
+        "femaleVariant": "Alors, j'en conclus que t'es partante\u00a0?",
+        "maleVariant": "Alors, j'en conclus que t'es partante\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_mq303_f_2ce9df52215f9000.wem",
+        "male_vo_path": "ep1/{}/vo/v_mq303_m_2ce9df52215f9000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq303/mq303_02_linas_mansion"
+    },
+    {
+        "stringId": "4136126501729132544",
+        "femaleVariant": "Ouais. \u00c7a me plairait, je crois.",
+        "maleVariant": "Ouais. \u00c7a me plairait, je crois.",
+        "female_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_39667923a1a4e000.wem",
+        "male_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_39667923a1a4e000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_01_megabuilding"
+    },
+    {
+        "stringId": "1878078192513409024",
+        "femaleVariant": "\u00c7a, c'est le genre de plan qui me pla\u00eet.",
+        "maleVariant": "\u00c7a, c'est le genre de plan qui me pla\u00eet.",
+        "female_vo_path": "base/{}/vo/v_sq026_f_1a10462a652b6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq026_m_1a10462a652b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq026/sq026_07_judys"
+    },
+    {
+        "stringId": "1945975000979337216",
+        "femaleVariant": "V, on y va.",
+        "maleVariant": "V, on y va.",
+        "female_vo_path": "base/{}/vo/panam_q114_f_1b017df40329f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q114_f_1b017df40329f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_10_tunnel_driller"
+    },
+    {
+        "stringId": "1904223843040378880",
+        "femaleVariant": "Ouais, on y va.",
+        "maleVariant": "Ouais, on y va.",
+        "female_vo_path": "base/{}/vo/v_q112_f_1a6d297f09404000.wem",
+        "male_vo_path": "base/{}/vo/v_q112_m_1a6d297f09404000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/q112/q112_00c_wakako"
+    },
+    {
+        "stringId": "1940242179245694980",
+        "femaleVariant": "Je te retrouve l\u00e0-bas.",
+        "maleVariant": "Je te retrouve l\u00e0-bas.",
+        "female_vo_path": "base/{}/vo/v_sq012_f_1aed1ffb702b6004.wem",
+        "male_vo_path": "base/{}/vo/v_sq012_m_1aed1ffb702b6004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq012/sq012_06b_rqr_investigation"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    }
+]

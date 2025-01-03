@@ -1,0 +1,58 @@
+[
+    {
+        "stringId": "1735146101955345",
+        "femaleVariant": "V s'assoit sur le lit et Panam s'assoit en face de V. (comme dans DollHouse)",
+        "maleVariant": "V s'assoit sur le lit et Panam s'assoit en face de V. (comme dans DollHouse)",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "4136691981871419464",
+        "femaleVariant": "H\u00e9\u00e9, g\u00e9nial !",
+        "maleVariant": "H\u00e9\u00e9, g\u00e9nial !",
+        "female_vo_path": "base/{}/vo/panam_mq055_05_downtown_f_39687b70bca71048.wem",
+        "male_vo_path": "base/{}/vo/panam_mq055_05_downtown_f_39687b70bca71048.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_05_downtown"
+    },
+    {
+        "stringId": "1729876797939675136",
+        "femaleVariant": "Putain ouais, carr\u00e9ment.",
+        "maleVariant": "Putain ouais, carr\u00e9ment.",
+        "female_vo_path": "base/{}/vo/v_little_china_f_1801c1c84e627000.wem",
+        "male_vo_path": "base/{}/vo/v_little_china_m_1801c1c84e627000.wem",
+        "quest_path": "base/{}/subtitles/open_world/vendors/wat_lch_gunsmith_01"
+    },
+    {
+        "stringId": "1995306323030814720",
+        "femaleVariant": "Wouaah... je sens d\u00e9j\u00e0 le stress qui retombe.",
+        "maleVariant": "Wouaah... je sens d\u00e9j\u00e0 le stress qui retombe.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_1bb0c0877a57b000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_1bb0c0877a57b000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "1896726949659815960",
+        "femaleVariant": "Quand tu passes tes journ\u00e9es et tes nuits sur la route, ton cul finit par fusionner avec le si\u00e8ge. Et t'en oublies ce que c'est, le confort.",
+        "maleVariant": "Quand tu passes tes journ\u00e9es et tes nuits sur la route, ton cul finit par fusionner avec le si\u00e8ge. Et t'en oublies ce que c'est, le confort.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871c86623018.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871c86623018.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "2262118194987360264",
+        "femaleVariant": "H\u00e9 h\u00e9.",
+        "maleVariant": "H\u00e9 h\u00e9.",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1f64a8835c2b6008.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1f64a8835c2b6008.wem",
+        "quest_path": "base/{}/subtitles/quest/vset/vset_v"
+    },
+    {
+        "stringId": "1380579642278801408",
+        "femaleVariant": "Je crois savoir ce que tu ressens.",
+        "maleVariant": "Je crois savoir ce que tu ressens.",
+        "female_vo_path": "base/{}/vo/v_sq028_f_1328cddeba29f000.wem",
+        "male_vo_path": "base/{}/vo/v_sq028_m_1328cddeba29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq028/sq028_03_chilling_out"
+    }
+]

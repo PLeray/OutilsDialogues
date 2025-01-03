@@ -1,0 +1,42 @@
+[
+    {
+        "stringId": "1734733573905763",
+        "femaleVariant": "Boire + Ca me fai",
+        "maleVariant": "Boire + Ca me fai",
+        "female_vo_path": "",
+        "male_vo_path": "",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1845833987246387200",
+        "femaleVariant": "\u00c7a me fait plaisir de te voir, putain. Je suis contente que t'aies pas chang\u00e9 d'avis.",
+        "maleVariant": "\u00c7a me fait plaisir de te voir, putain. Je suis contente que t'aies pas chang\u00e9 d'avis.",
+        "female_vo_path": "base/{}/vo/v_q202_f_199db83b5429f000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_199db83b5429f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_05_convoy"
+    },
+    {
+        "stringId": "1695241105570394112",
+        "femaleVariant": "Je tiens toujours parole.",
+        "maleVariant": "Je tiens toujours parole.",
+        "female_vo_path": "base/{}/vo/panam_q104_f_1786b4cdc229f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_1786b4cdc229f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_05_av_debris"
+    },
+    {
+        "stringId": "1947299147600752640",
+        "femaleVariant": "Ha, c'est bon \u00e0 savoir.",
+        "maleVariant": "Ha, c'est bon \u00e0 savoir.",
+        "female_vo_path": "base/{}/vo/v_sq027_f_1b063241ec29f000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_1b063241ec29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_08_camp_saved"
+    },
+    {
+        "stringId": "1953192000755462144",
+        "femaleVariant": "Arr\u00eate, V. J'ai juste besoin de temps, c'est tout.",
+        "maleVariant": "Arr\u00eate, V. J'ai juste besoin de temps, c'est tout.",
+        "female_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b21c6b729f000.wem",
+        "male_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b21c6b729f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    }
+]

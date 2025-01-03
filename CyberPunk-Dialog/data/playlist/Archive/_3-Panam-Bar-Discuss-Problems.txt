@@ -1,0 +1,32 @@
+Id: 1773676286296002560	panam:  J'ai un problème.
+Id: 1773703824653225984	v:  Laisse-moi deviner. C'est Saul, c'est ça ?
+Id: 1773704191755489280	panam:  Tu me connais trop bien.
+Id: 1782192144563638272	v:  Je croyais que vous aviez fini par vous entendre, Saul et toi.
+Id: 1882216617480048640	panam:  Il m'a humiliée devant tout le clan ! Il m'a fait passer pour une conne !
+Id: 1897947472192483356	panam:  J'ai peut-être réintégré le clan, mais… j'ai des choses à faire.
+Id: 1835599499677528064	v:  Encore ?
+Id: 1953166016303984640	panam:  Je sais plus ce que je dois faire, V.
+Id: 1244953896827949056	t:  
+Id: 1761834655837450240	v:  Hé, fais pas attention à Saul. Ça lui passera.
+Id: 1804041973262520320	v:  Tu te souviens notre première rencontre ? Rien que de parler de désobéir à Saul, tu chiais déjà dans ton froc.
+Id: 1751574754396082176	v:  Eh ben, ça a bien changé…
+Id: 1665024486785282060	panam:  Je voulais une vie différente, une vie meilleure. Mais Saul est qu'un putain de lâche. Je suis convaincue qu'il va mener le clan à sa perte.
+Id: 1944430651552583680	v:  Ouais, peut-être.
+Id: 1953175673303068672	panam:  Je sais, mais... Bon, tu vas me dire que la famille parfaite existe pas.
+Id: 2008402713098448896	v:  C'est sûr.
+Id: 1665067044190154752	panam:  Pfff. OOOK.
+Id: 1897947471907270676	panam:  Et toi ?
+Id: 1244953896827949056	t:  
+Id: 1896559853671952388	v:  Te vexe pas, mais… Saul a peut-être raison.
+Id: 1817173075543511040	panam:  Han ! Comment te dire ?
+Id: 1774799202323918848	panam:  Va te faire foutre.
+Id: 1933100456223281152	v:  Hé, du calme…
+Id: 1665024486785282060	panam:  Je voulais une vie différente, une vie meilleure. Mais Saul est qu'un putain de lâche. Je suis convaincue qu'il va mener le clan à sa perte.
+Id: 1774749039035281408	panam:  Il peut se toucher s'il pense que je vais le laisser faire.
+Id: 1425944395297480704	v:  Bon… OK, OK. C'est toi la chef.
+Id: 3270787955500969984	v:  Je peux faire un truc pour t'aider ?
+Id: 1896726949995360260	panam:  Nan…
+Id: 1672044600160284672	panam:  Je vais gérer ça. J'ai l'habitude. Je suis sérieuse.
+Id: 1897947471907270676	panam:  Et toi ?
+Id: 1896726950012137476	v:  Comment est votre whisky, madame ?
+Id: 1896726950012137500	panam:  Puissant, mais doux. Je lui mets quatre sur cinq.

@@ -1,0 +1,10 @@
+[
+    {
+        "stringId": "3117325161913827328",
+        "femaleVariant": "How amusing. What else you must think of me, I wonder. What you must believe.",
+        "maleVariant": "How amusing. What else you must think of me, I wonder. What you must believe.",
+        "female_vo_path": "ep1/{}/vo/theo_v_q304_f_2b42f6b7ed42c000.wem",
+        "male_vo_path": "NOTHING",
+        "quest_path": "ep1/{}/subtitles/quest/q304/q304_07_deal"
+    }
+]

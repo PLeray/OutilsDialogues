@@ -1,0 +1,50 @@
+[
+    {
+        "stringId": "1735472601463996",
+        "femaleVariant": "Un peu plus tard, V a une id\u00e9e et contacte Panam :",
+        "maleVariant": "Un peu plus tard, V a une id\u00e9e et contacte Panam :",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "3823267547856580608",
+        "femaleVariant": "Hum, peut-\u00eatre bien...",
+        "maleVariant": "Hum, peut-\u00eatre bien...",
+        "female_vo_path": "ep1/{}/vo/v_mq301_f_350ef99407453000.wem",
+        "male_vo_path": "ep1/{}/vo/v_mq301_m_350ef99407453000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq301/mq301_04_frame"
+    },
+    {
+        "stringId": "1973374915334619140",
+        "femaleVariant": "Hum\u2026",
+        "maleVariant": "Hum\u2026",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1b62d607b52fc004.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1b62d607b52fc004.wem",
+        "quest_path": "base/{}/subtitles/quest/vset/vset_v"
+    },
+    {
+        "stringId": "1735769077098714",
+        "femaleVariant": "[Envoyer un message \u00e0 Panam]",
+        "maleVariant": "[Envoyer un message \u00e0 Panam]",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735058535475344",
+        "femaleVariant": "Panam j'ai peut \u00eatre une solution pour le plan au Konpeki. Tu pourrais essayer d'enregistrer un nom?",
+        "maleVariant": "Panam j'ai peut \u00eatre une solution pour le plan au Konpeki. Tu pourrais essayer d'enregistrer un nom?",
+        "female_vo_path": "MSG-OUT",
+        "male_vo_path": "MSG-OUT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735058563071521",
+        "femaleVariant": "Si tu veux\u2026 Je mets quel nom ?",
+        "maleVariant": "Si tu veux\u2026 Je mets quel nom ?",
+        "female_vo_path": "MSG-IN",
+        "male_vo_path": "MSG-IN",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

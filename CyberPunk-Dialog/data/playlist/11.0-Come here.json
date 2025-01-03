@@ -1,0 +1,90 @@
+[
+    {
+        "stringId": "1735856480847855",
+        "femaleVariant": "[S'allonger] Viens l\u00e0.",
+        "maleVariant": "[S'allonger] Viens l\u00e0.",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1793778635877699588",
+        "femaleVariant": "Viens l\u00e0.",
+        "maleVariant": "Viens l\u00e0.",
+        "female_vo_path": "base/{}/vo/v_q114_f_18e4c82a5d2cd004.wem",
+        "male_vo_path": "base/{}/vo/v_q114_m_18e4c82a5d2cd004.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_05_quiet_place"
+    },
+    {
+        "stringId": "1735146190854713",
+        "femaleVariant": "Panam s'allonge \u00e0 c\u00f4t\u00e9 de lui\u2026 (Comme dans le mod Lizzie's Braindances : DollHouse)",
+        "maleVariant": "Panam s'allonge \u00e0 c\u00f4t\u00e9 de lui\u2026 (Comme dans le mod Lizzie's Braindances : DollHouse)",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1854803273415729152",
+        "femaleVariant": "H\u00e9\u2026",
+        "maleVariant": "H\u00e9\u2026",
+        "female_vo_path": "base/{}/vo/panam_q115_f_19bd95c0002d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_q115_m_19bd95c0002d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/q115/q115_02d_misty"
+    },
+    {
+        "stringId": "1913074409953632256",
+        "femaleVariant": "Huuum, \u00e7a pourrait pas \u00eatre mieux.",
+        "maleVariant": "Huuum, \u00e7a pourrait pas \u00eatre mieux.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a8c9b0a3a2d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a8c9b0a3a2d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1990837708660744192",
+        "femaleVariant": "Euh\u2026",
+        "maleVariant": "Euh\u2026",
+        "female_vo_path": "base/{}/vo/v_q005_f_1ba0e0591e2d2000.wem",
+        "male_vo_path": "base/{}/vo/v_q005_m_1ba0e0591e2d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/q005/q005_05_hotel_fluff"
+    },
+    {
+        "stringId": "1913073066920714240",
+        "femaleVariant": "Vous avez tout ce qu'il vous faut, madame\u00a0?",
+        "maleVariant": "Vous avez tout ce qu'il vous faut, madame\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a8c99d1872d2000.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a8c99d1872d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1753334906515746844",
+        "femaleVariant": "Quoi\u00a0?",
+        "maleVariant": "Quoi\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q104_f_185518ced329f01c.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_185518ced329f01c.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_02_av_shotdown"
+    },
+    {
+        "stringId": "1990837708660744192",
+        "femaleVariant": "Euh\u2026",
+        "maleVariant": "Euh\u2026",
+        "female_vo_path": "base/{}/vo/v_q005_f_1ba0e0591e2d2000.wem",
+        "male_vo_path": "base/{}/vo/v_q005_m_1ba0e0591e2d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/q005/q005_05_hotel_fluff"
+    },
+    {
+        "stringId": "1731570327012298752",
+        "femaleVariant": "Merde. Je suis d\u00e9sol\u00e9e.",
+        "maleVariant": "Merde. Je suis d\u00e9sol\u00e9e.",
+        "female_vo_path": "base/{}/vo/panam_q202_m_1807c609c52cd000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_m_1807c609c52cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_06_border_running"
+    },
+    {
+        "stringId": "1902427987491233792",
+        "femaleVariant": "Je me mets un peu trop \u00e0 l'aise\u00a0?",
+        "maleVariant": "Je me mets un peu trop \u00e0 l'aise\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a66c82cd52d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a66c82cd52d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    }
+]

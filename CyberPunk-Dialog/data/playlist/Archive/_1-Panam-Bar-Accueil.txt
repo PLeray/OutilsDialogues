@@ -1,0 +1,20 @@
+Id: 1756117848059551784	panam:  V ?
+Id: 3389921432679321600	v:  Euh, est-ce qu'on se connaît ?
+Id: 4136385546775486464	panam:  Ha ha, c'est drôle…
+Id: 2262179491535872008	v:  Ha ha ha ha !
+Id: 1244953896827949056	t:  
+Id: 1856113477382119424	v:  Salut, Panam.
+Id: 1854766433048535040	v:  La vache, ça fait plaiz de te voir.
+Id: 1895260328437100560	panam:  Fais gaffe, je vais finir par te croire. Tu pourras plus te débarrasser de moi, après.
+Id: 2036084339811217408	v:  T'en fais pas pour moi. Je vais gérer comme un grand.
+Id: 1665067044190154752	panam:  Pfff. OOOK.
+Id: 1764950158609465344	v:  Alors, tu fais quoi ces temps-ci ?
+Id: 1856113477382119424	v:  Salut, Panam.
+Id: 1845833987246387200	v:  Ça me fait plaisir de te voir, putain. Je suis contente que t'aies pas changé d'avis.
+Id: 1695241105570394112	panam:  Je tiens toujours parole.
+Id: 1947299147600752640	v:  Ha, c'est bon à savoir.
+Id: 1691074714814509080	panam:  Te prends pas la tête. Moi aussi je suis contente.
+Id: 1764950158609465344	v:  Alors, tu fais quoi ces temps-ci ?
+Id: 1244953896827949056	t:  
+Id: 1244953896827949056	t:  
+Id: 1244953896827949056	t:  

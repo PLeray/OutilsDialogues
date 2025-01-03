@@ -1,0 +1,34 @@
+[
+    {
+        "stringId": "1735148683898389",
+        "femaleVariant": "V r\u00e9appara\u00eet devant le Konpeki porte close",
+        "maleVariant": "V r\u00e9appara\u00eet devant le Konpeki porte close",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735149083786826",
+        "femaleVariant": "Si la r\u00e9servation a \u00e9t\u00e9 faite sous le nom Aguilar Nubiola, V recoit un message d'Aguilar,... Mais impossible de r\u00e9pondre!",
+        "maleVariant": "Si la r\u00e9servation a \u00e9t\u00e9 faite sous le nom Aguilar Nubiola, V recoit un message d'Aguilar,... Mais impossible de r\u00e9pondre!",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735149096392131",
+        "femaleVariant": "Je vais finir par penser que ta propension \u00e0 voler mon identit\u00e9 est une forme d'adulation \u00e0 mon \u00e9gard\u2026 Je vais prendre un plaisir certain \u00e0 t'\u00e9couter me supplier lors de mon prochain passage \u00e0 NC. Mais de fa\u00e7on aussi certaine, que la nuit succ\u00e8de \u00e0 chaque jour, \u00e7a ne te sauvera pas.",
+        "maleVariant": "Je vais finir par penser que ta propension \u00e0 voler mon identit\u00e9 est une forme d'adulation \u00e0 mon \u00e9gard\u2026 Je vais prendre un plaisir certain \u00e0 t'\u00e9couter me supplier lors de mon prochain passage \u00e0 NC. Mais de fa\u00e7on aussi certaine, que la nuit succ\u00e8de \u00e0 chaque jour, \u00e7a ne te sauvera pas.",
+        "female_vo_path": "MSG-IN",
+        "male_vo_path": "MSG-IN",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735146262371852",
+        "femaleVariant": "FIN MISSION",
+        "maleVariant": "",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

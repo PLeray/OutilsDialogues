@@ -1,0 +1,58 @@
+[
+    {
+        "stringId": "1735769421066106",
+        "femaleVariant": "[Dire] Saul a peut-\u00eatre raison",
+        "maleVariant": "[Dire] Saul a peut-\u00eatre raison",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1896559853671952388",
+        "femaleVariant": "Te vexe pas, mais\u2026 Saul a peut-\u00eatre raison.",
+        "maleVariant": "Te vexe pas, mais\u2026 Saul a peut-\u00eatre raison.",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a51ef2375623004.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a51ef2375623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1817173075543511040",
+        "femaleVariant": "Han\u00a0! Comment te dire ?",
+        "maleVariant": "Han\u00a0! Comment te dire ?",
+        "female_vo_path": "base/{}/vo/panam_q114_f_1937e548cf2cd000.wem",
+        "male_vo_path": "base/{}/vo/panam_q114_f_1937e548cf2cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_05_quiet_place"
+    },
+    {
+        "stringId": "1774799202323918848",
+        "femaleVariant": "Va te faire foutre.",
+        "maleVariant": "Va te faire foutre.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_18a15a78a229f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_18a15a78a229f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06a_camp_drive"
+    },
+    {
+        "stringId": "3233251041668595712",
+        "femaleVariant": "Du calme, \u00e7a va aller.",
+        "maleVariant": "Du calme, \u00e7a va aller.",
+        "female_vo_path": "ep1/{}/vo/v_q306_f_2cded0b120518000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q306_m_2cded0b120518000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q306/q306_01_ride_to_spaceport"
+    },
+    {
+        "stringId": "1665024486785282060",
+        "femaleVariant": "Je voulais une vie diff\u00e9rente, une vie meilleure. Mais Saul est qu'un putain de l\u00e2che. Je suis convaincue qu'il va mener le clan \u00e0 sa perte.",
+        "maleVariant": "Je voulais une vie diff\u00e9rente, une vie meilleure. Mais Saul est qu'un putain de l\u00e2che. Je suis convaincue qu'il va mener le clan \u00e0 sa perte.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_171b5af2f529f00c.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_171b5af2f529f00c.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_07_ghost_town_drive"
+    },
+    {
+        "stringId": "1953190108704927744",
+        "femaleVariant": "M\u00eame si t'avais raison, \u00e7a changerait quoi\u00a0? Je le vois, le probl\u00e8me. Je sais juste pas comment le r\u00e9soudre. Pour l'instant...",
+        "maleVariant": "M\u00eame si t'avais raison, \u00e7a changerait quoi\u00a0? Je le vois, le probl\u00e8me. Je sais juste pas comment le r\u00e9soudre. Pour l'instant...",
+        "female_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b200e3029f000.wem",
+        "male_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b200e3029f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    }
+]

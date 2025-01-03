@@ -1,0 +1,74 @@
+[
+    {
+        "stringId": "1735060913044546",
+        "femaleVariant": "Malin! J'essaye, attends\u2026",
+        "maleVariant": "Malin! J'essaye, attends\u2026",
+        "female_vo_path": "MSG-IN",
+        "male_vo_path": "MSG-IN",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735060935091683",
+        "femaleVariant": "C'est pass\u00e9 pour l'enregistrement. \u00c7a devrait \u00eatre bon!",
+        "maleVariant": "C'est pass\u00e9 pour l'enregistrement. \u00c7a devrait \u00eatre bon!",
+        "female_vo_path": "MSG-IN",
+        "male_vo_path": "MSG-IN",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735060982596671",
+        "femaleVariant": "Alors on se la fait cette soir\u00e9e au Konpeki ?",
+        "maleVariant": "Alors on se la fait cette soir\u00e9e au Konpeki ?",
+        "female_vo_path": "MSG-OUT",
+        "male_vo_path": "MSG-OUT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735061008088637",
+        "femaleVariant": "Je sais pas trop\u2026 Le Konpeki c'est pas mon style! ",
+        "maleVariant": "Je sais pas trop\u2026 Le Konpeki c'est pas mon style! ",
+        "female_vo_path": "MSG-IN",
+        "male_vo_path": "MSG-IN",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735061024059582",
+        "femaleVariant": "Je vais faire t\u00e2che dans le d\u00e9cor\u2026 J'ai rien \u00e0 me mettre!",
+        "maleVariant": "Je vais faire t\u00e2che dans le d\u00e9cor\u2026 J'ai rien \u00e0 me mettre!",
+        "female_vo_path": "MSG-IN",
+        "male_vo_path": "MSG-IN",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735061039903586",
+        "femaleVariant": "Ca c'est pas un probl\u00e8me. T'as g\u00e9r\u00e9 le Konpeki, alors moi je m'occupe des fringues. Retrouvons nous dans le centre, on ferra du shopping!",
+        "maleVariant": "Ca c'est pas un probl\u00e8me. T'as g\u00e9r\u00e9 le Konpeki, alors moi je m'occupe des fringues. Retrouvons nous dans le centre, on ferra du shopping!",
+        "female_vo_path": "MSG-OUT",
+        "male_vo_path": "MSG-OUT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735061055747094",
+        "femaleVariant": "\u00c7a reste dangereux, tu pourrais \u00eatre reconnu\u2026 C'est Arasaka quand m\u00eame\u2026",
+        "maleVariant": "\u00c7a reste dangereux, tu pourrais \u00eatre reconnu\u2026 C'est Arasaka quand m\u00eame\u2026",
+        "female_vo_path": "MSG-IN",
+        "male_vo_path": "MSG-IN",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735061077597131",
+        "femaleVariant": "\u00c9coute, retrouvons nous dans ce bar dans le centre et on en discute, ok?",
+        "maleVariant": "\u00c9coute, retrouvons nous dans ce bar dans le centre et on en discute, ok?",
+        "female_vo_path": "MSG-OUT",
+        "male_vo_path": "MSG-OUT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735061089758378",
+        "femaleVariant": "Si tu veux\u2026",
+        "maleVariant": "Si tu veux\u2026",
+        "female_vo_path": "MSG-IN",
+        "male_vo_path": "MSG-IN",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

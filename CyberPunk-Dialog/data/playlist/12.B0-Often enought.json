@@ -1,0 +1,122 @@
+[
+    {
+        "stringId": "1735857543721684",
+        "femaleVariant": "[Dire] Assez souvent, ouais.",
+        "maleVariant": "[Dire] Assez souvent, ouais.",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "3121491535523586048",
+        "femaleVariant": "Assez souvent, ouais.",
+        "maleVariant": "Assez souvent, ouais.",
+        "female_vo_path": "ep1/{}/vo/v_q302_f_2b51c4036045a000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q302_m_2b51c4036045a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q302/q302_07_oath"
+    },
+    {
+        "stringId": "2262118194987360264",
+        "femaleVariant": "H\u00e9 h\u00e9.",
+        "maleVariant": "H\u00e9 h\u00e9.",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1f64a8835c2b6008.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1f64a8835c2b6008.wem",
+        "quest_path": "base/{}/subtitles/quest/vset/vset_v"
+    },
+    {
+        "stringId": "1735146208634254",
+        "femaleVariant": "Panam se rassoit sur sa premi\u00e8re phrase",
+        "maleVariant": "Panam se rassoit sur sa premi\u00e8re phrase",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1631462611877781512",
+        "femaleVariant": "Tu d\u00e9connes\u00a0? Allez, dis-moi que tu d\u00e9connes.",
+        "maleVariant": "Tu d\u00e9connes\u00a0? Allez, dis-moi que tu d\u00e9connes.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_16a41e9a054e6008.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_16a41e9a054e6008.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_11_tunnel_drive"
+    },
+    {
+        "stringId": "1845803613288001536",
+        "femaleVariant": "Non, je dis \u00e7a parce que c'est vrai.",
+        "maleVariant": "Non, je dis \u00e7a parce que c'est vrai.",
+        "female_vo_path": "base/{}/vo/v_q202_f_199d9c9b5729f000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_199d9c9b5729f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_05_convoy"
+    },
+    {
+        "stringId": "1756117848176992288",
+        "femaleVariant": "OK. Tu sais quoi\u00a0? Je t'emmerde.",
+        "maleVariant": "OK. Tu sais quoi\u00a0? Je t'emmerde.",
+        "female_vo_path": "base/{}/vo/panam_q115_f_185efbe0ec502020.wem",
+        "male_vo_path": "base/{}/vo/panam_q115_m_185efbe0ec502020.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/q115/q115_02b_ripperdoc_roof"
+    },
+    {
+        "stringId": "1918384511778512896",
+        "femaleVariant": "Oh mince, je vais devoir me faire pardonner alors\u00a0?",
+        "maleVariant": "Oh mince, je vais devoir me faire pardonner alors\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq030_f_1a9f788ca72b6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq030_m_1a9f788ca72b6000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/sq030/sq030_11_morning"
+    },
+    {
+        "stringId": "1896726950347681808",
+        "femaleVariant": "Non, c'est bon, t'inqui\u00e8te. T'en fais pas pour \u00e7a.",
+        "maleVariant": "Non, c'est bon, t'inqui\u00e8te. T'en fais pas pour \u00e7a.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871caf623010.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871caf623010.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1325616690627239936",
+        "femaleVariant": "Et c'est tout\u00a0?",
+        "maleVariant": "Et c'est tout\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq026_f_1265895b512a6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq026_m_1265895b512a6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq026/sq026_08_plan"
+    },
+    {
+        "stringId": "1672374186035245056",
+        "femaleVariant": "Nan, je vais pas tra\u00eener. On se parlera la prochaine fois.",
+        "maleVariant": "Nan, je vais pas tra\u00eener. On se parlera la prochaine fois.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_173577762a29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_173577762a29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06b_nomad_camp"
+    },
+    {
+        "stringId": "1882357240966172672",
+        "femaleVariant": "La prochaine fois, essaie de suivre tes pulsions.",
+        "maleVariant": "La prochaine fois, essaie de suivre tes pulsions.",
+        "female_vo_path": "base/{}/vo/v_sq027_f_1a1f79f0002c5000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_1a1f79f0002c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "1885220225346719744",
+        "femaleVariant": "Tu sais quoi, V\u00a0? Va te faire foutre.",
+        "maleVariant": "Tu sais quoi, V\u00a0? Va te faire foutre.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a29a5ce7f2c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1a29a5ce7f2c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_03a_holocall_panam_betrayed"
+    },
+    {
+        "stringId": "1735146218671463",
+        "femaleVariant": "Panam s'en va (furieuse) en disant sa derni\u00e8re phrase",
+        "maleVariant": "Panam s'en va (furieuse) en disant sa derni\u00e8re phrase",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1699503221299081216",
+        "femaleVariant": "Bon ben voil\u00e0. On se dit \u00e0 plus\u00a0?",
+        "maleVariant": "Bon ben voil\u00e0. On se dit \u00e0 plus\u00a0?",
+        "female_vo_path": "base/{}/vo/v_q104_f_1795d92ce829f000.wem",
+        "male_vo_path": "base/{}/vo/v_q104_m_1795d92ce829f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_07c_nomads_arrive"
+    }
+]

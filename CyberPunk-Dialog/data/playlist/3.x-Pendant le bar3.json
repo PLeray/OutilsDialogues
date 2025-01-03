@@ -1,0 +1,10 @@
+[
+    {
+        "stringId": "1734887593907139",
+        "femaleVariant": "[Boire]",
+        "maleVariant": "[Boire]",
+        "female_vo_path": "ACT",
+        "male_vo_path": "ACT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

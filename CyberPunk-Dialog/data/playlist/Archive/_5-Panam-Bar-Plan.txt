@@ -1,0 +1,17 @@
+Id: 1752129291496742912	v:  Arasaka se débrouille bien avec cette chaîne d'hôtels, mais je dois dire... que le Konpeki de Tokyo reste quand même un cran au-dessus.
+Id: 1824331668780609536	v:  Je viens de réaliser : je suis encore en train de voler Arasaka.
+Id: 3125943911140757504	v:  Le Konpeki, c'était par pure ambition. Parfois, la vie peut manquer de sel, alors on veut viser la gloire.
+Id: 1724409002612019200	v:  Ce plan, t'en penses quoi ?
+Id: 2302325911451791360	panam:  C'est un bon plan, V… Hum, tu sais ce que Saul m'a dit, un jour ?
+Id: 1863176122928852992	panam:  Il m'a dit que le seul moment où une personne est vraiment libre, c'est… quand elle sait… qu'elle a plus rien à perdre.
+Id: 1795337918150733824	v:  Hmpf. Ouais.
+Id: 1824363324853841920	panam:  J'ai dit un truc qu'il fallait pas ?
+Id: 3368352697945530368	v:  Ha. Pourquoi tu dis ça ?
+Id: 1882333620088885248	panam:  Parce que je tiens vraiment à toi. Mais j'ai peur de dire ou de faire un truc stupide, et… et de me retrouver seule dans le désert.
+Id: 3236363351082635264	v:  Alors, j'en conclus que t'es partante ?
+Id: 4136126501729132544	panam:  Ouais. Ça me plairait, je crois.
+Id: 1878078192513409024	v:  Ça, c'est le genre de plan qui me plaît.
+Id: 1945975000979337216	panam:  V, on y va.
+Id: 1904223843040378880	v:  Ouais, on y va.
+Id: 1940242179245694980	v:  Je te retrouve là-bas.
+Id: 1244953896827949056	t:  

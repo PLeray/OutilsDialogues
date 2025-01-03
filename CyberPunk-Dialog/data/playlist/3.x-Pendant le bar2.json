@@ -1,0 +1,10 @@
+[
+    {
+        "stringId": "1734887624815712",
+        "femaleVariant": "[Boire] Alors, tu fais quoi ces temps-ci ?",
+        "maleVariant": "[Boire] Alors, tu fais quoi ces temps-ci ?",
+        "female_vo_path": "ACT",
+        "male_vo_path": "ACT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

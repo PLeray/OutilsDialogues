@@ -1,0 +1,362 @@
+[
+    {
+        "stringId": "4120464210484584448",
+        "femaleVariant": "Salut, V\u00a0!",
+        "maleVariant": "Salut, V\u00a0!",
+        "female_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_392ed45e47a4e000.wem",
+        "male_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_392ed45e47a4e000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_05_downtown"
+    },
+    {
+        "stringId": "1604051509485412352",
+        "femaleVariant": "H\u00e9, je suis contente de te voir.",
+        "maleVariant": "H\u00e9, je suis content de te voir.",
+        "female_vo_path": "base/{}/vo/v_q105_f_1642bc59684ea000.wem",
+        "male_vo_path": "base/{}/vo/v_q105_m_1642bc59684ea000.wem",
+        "quest_path": "base/{}/subtitles/quest/q105/q105_05_fingers_enter"
+    },
+    {
+        "stringId": "3287023433740578816",
+        "femaleVariant": "Alors, c'est quoi ton plan\u00a0?",
+        "maleVariant": "Alors, c'est quoi ton plan\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_q305_f_2d9dda65c87df000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q305_m_2d9dda65c87df000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q305/q305_13_reed_epilogue"
+    },
+    {
+        "stringId": "1883865335886270464",
+        "femaleVariant": "V, tu te souviens de ce que je disais sur les pulsions\u00a0?",
+        "maleVariant": "V, tu te souviens de ce que je disais sur les pulsions\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a24d58ab62c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1a24d58ab62c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_06_panzer"
+    },
+    {
+        "stringId": "1866541918006996992",
+        "femaleVariant": "Bien s\u00fbr que oui.",
+        "maleVariant": "Bien s\u00fbr que oui.",
+        "female_vo_path": "base/{}/vo/v_q000_f_19e749fc2d2ef000.wem",
+        "male_vo_path": "base/{}/vo/v_q000_m_19e749fc2d2ef000.wem",
+        "quest_path": "base/{}/subtitles/quest/q000/q000_nomad_02_fixer"
+    },
+    {
+        "stringId": "1935990807847522304",
+        "femaleVariant": "Et alors\u00a0?",
+        "maleVariant": "Et alors\u00a0?",
+        "female_vo_path": "base/{}/vo/v_scene_robert_tanner_default_f_1ade0561e62c5000.wem",
+        "male_vo_path": "base/{}/vo/v_scene_robert_tanner_default_m_1ade0561e62c5000.wem",
+        "quest_path": "base/{}/subtitles/open_world/scenes/robert_tanner_default"
+    },
+    {
+        "stringId": "1995422532343820288",
+        "femaleVariant": "Hmmm\u2026",
+        "maleVariant": "Hmmm\u2026",
+        "female_vo_path": "base/{}/vo/panam_q103_f_1bb12a389129f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_1bb12a389129f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "3061995012036579340",
+        "femaleVariant": "Alors... On fait quoi maintenant\u00a0?",
+        "maleVariant": "Alors... On fait quoi maintenant\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_q304_f_2a7e643d8475500c.wem",
+        "male_vo_path": "ep1/{}/vo/v_q304_m_2a7e643d8475500c.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q304/q304_09a_reed_escape"
+    },
+    {
+        "stringId": "1947363283357528064",
+        "femaleVariant": "Hummm.",
+        "maleVariant": "Hummm.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1b066c96b129f000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1b066c96b129f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_08_camp_saved"
+    },
+    {
+        "stringId": "1654773626300633088",
+        "femaleVariant": "Alors... c'est quoi ton plan\u00a0?",
+        "maleVariant": "Alors... c'est quoi ton plan\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sts_std_arr_12_f_16f6efd883559000.wem",
+        "male_vo_path": "base/{}/vo/v_sts_std_arr_12_m_16f6efd883559000.wem",
+        "quest_path": "base/{}/subtitles/open_world/street_stories/sts_std_arr_12_pedro"
+    },
+    {
+        "stringId": "1732696322113064960",
+        "femaleVariant": "Je suis trop content de te voir.",
+        "maleVariant": "Je suis trop content de te voir.",
+        "female_vo_path": "base/{}/vo/v_q202_f_180bc61fef2cd000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_180bc61fef2cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_05_convoy"
+    },
+    {
+        "stringId": "2237516351700488192",
+        "femaleVariant": "Allez viens, tu vas pas rester l\u00e0 toute ta vie.",
+        "maleVariant": "Allez viens, tu vas pas rester l\u00e0 toute ta vie.",
+        "female_vo_path": "base/{}/vo/panam_q114_f_1f0d41445a3c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_q114_f_1f0d41445a3c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_04_initiation"
+    },
+    {
+        "stringId": "1821261074673561600",
+        "femaleVariant": "Panam, apr\u00e8s Mikoshi, tout \u00e7a\u2026 Je suis contente qu'on soit arriv\u00e9es jusqu'ici\u2026 ensemble.",
+        "maleVariant": "Panam, apr\u00e8s Mikoshi, tout \u00e7a\u2026 Je suis content qu'on soit arriv\u00e9s jusqu'ici\u2026 ensemble.",
+        "female_vo_path": "base/{}/vo/v_q202_f_19466b4c4729f000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_19466b4c4729f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_01_motel"
+    },
+    {
+        "stringId": "4136131667467493376",
+        "femaleVariant": "Alors\u00a0?",
+        "maleVariant": "Alors\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_39667dd65fa4e000.wem",
+        "male_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_39667dd65fa4e000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_05_downtown"
+    },
+    {
+        "stringId": "4136383063395196928",
+        "femaleVariant": "Alors, quoi de neuf\u00a0?",
+        "maleVariant": "Alors, quoi de neuf\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_mq055_04_heywood_f_3967627b0c9ce000.wem",
+        "male_vo_path": "base/{}/vo/panam_mq055_04_heywood_f_3967627b0c9ce000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_05_downtown"
+    },
+    {
+        "stringId": "1896726950263795724",
+        "femaleVariant": "Et V\u2026 J'suis heureuse que tu sois venue.",
+        "maleVariant": "Et V\u2026 J'suis heureuse que tu sois venu.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871caa62300c.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871caa62300c.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1896726950230241280",
+        "femaleVariant": "V\u2026 Je suis heureuse que tu sois venue. Merci.",
+        "maleVariant": "V\u2026 Je suis heureuse que tu sois venu. Merci.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871ca8623000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871ca8623000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "2024299983530487808",
+        "femaleVariant": "Un jour, faudra quand m\u00eame que tu m'expliques comment tu fais pour toujours \u00eatre aussi s\u00fbre de toi.",
+        "maleVariant": "Un jour, faudra quand m\u00eame que tu m'expliques comment tu fais pour toujours \u00eatre aussi s\u00fbr de toi.",
+        "female_vo_path": "base/{}/vo/panam_q114_f_1c17c21c1d29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q114_f_1c17c21c1d29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_09a_construction"
+    },
+    {
+        "stringId": "1683777491156201472",
+        "femaleVariant": "Sans mon clan, je suis qui\u00a0? Qu'est-ce que je deviendrais si je restais \u00e0 Night\u00a0City\u00a0?",
+        "maleVariant": "Sans mon clan, je suis qui\u00a0? Qu'est-ce que je deviendrais si je restais \u00e0 Night\u00a0City\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q103_f_175dfab50929f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_175dfab50929f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "1775132848218771456",
+        "femaleVariant": "Non, c'est juste que\u2026 Je viens de rentrer, mais j'ai d\u00e9j\u00e0 oubli\u00e9 comment \u00e7a se passe \u00e0 Night City.",
+        "maleVariant": "Non, c'est juste que\u2026 Je viens de rentrer, mais j'ai d\u00e9j\u00e0 oubli\u00e9 comment \u00e7a se passe \u00e0 Night City.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_18a289eb9f351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_18a289eb9f351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "1873425199360765952",
+        "femaleVariant": "Salut. Viens, entre.",
+        "maleVariant": "Salut. Viens, entre.",
+        "female_vo_path": "base/{}/vo/panam_q203_f_19ffbe4b0129f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q203_f_19ffbe4b0129f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_02d_panam"
+    },
+    {
+        "stringId": "1883865335886270464",
+        "femaleVariant": "V, tu te souviens de ce que je disais sur les pulsions\u00a0?",
+        "maleVariant": "V, tu te souviens de ce que je disais sur les pulsions\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a24d58ab62c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1a24d58ab62c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_06_panzer"
+    },
+    {
+        "stringId": "1663801887585689600",
+        "femaleVariant": "Je crois qu'en fait\u2026 j'ai tout b\u00eatement peur. Alors, j'imagine toutes ces choses pour pas\u2026 pff\u2026 pour pas penser au n\u00e9ant.",
+        "maleVariant": "Je crois qu'en fait\u2026 j'ai\u2026 tout b\u00eatement peur. Alors, j'imagine toutes ces choses pour pas\u2026 pour pas\u2026 penser au n\u00e9ant.",
+        "female_vo_path": "base/{}/vo/v_q105_f_17170300662b6000.wem",
+        "male_vo_path": "base/{}/vo/v_q105_m_17170300662b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/q105/q105_03a_dollhouse_doll_01"
+    },
+    {
+        "stringId": "1844312300602920960",
+        "femaleVariant": "Ah, ben tu m'as pas oubli\u00e9e alors\u00a0?",
+        "maleVariant": "Ah, ben tu m'as pas oubli\u00e9 alors\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq029_f_199850440c521000.wem",
+        "male_vo_path": "base/{}/vo/v_sq029_m_199850440c521000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq029/sq029_01a_phonecall"
+    },
+    {
+        "stringId": "3460712387407757312",
+        "femaleVariant": "Alors au final, on boit pas\u00a0?",
+        "maleVariant": "Alors au final, on boit pas\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_q307_f_3006eb94a93bc000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q307_m_3006eb94a93bc000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q307/q307_06_viktor"
+    },
+    {
+        "stringId": "3364834747243384832",
+        "femaleVariant": "Alors je me sens oblig\u00e9e de plaisanter...",
+        "maleVariant": "Alors je me sens oblig\u00e9 de plaisanter...",
+        "female_vo_path": "ep1/{}/vo/v_q306_f_2eb24b5ffd555000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q306_m_2eb24b5ffd555000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q306/q306_02_terminal_recon"
+    },
+    {
+        "stringId": "1905807778458918912",
+        "femaleVariant": "Alors tu veux une faveur sexuelle, c'est \u00e7a\u00a0?",
+        "maleVariant": "Alors tu veux une faveur sexuelle, c'est \u00e7a\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq032_f_1a72ca13bd386000.wem",
+        "male_vo_path": "base/{}/vo/v_sq032_m_1a72ca13bd386000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/sq032/sq032_07_finale"
+    },
+    {
+        "stringId": "1885176987525246976",
+        "femaleVariant": "Alors, c'est quoi la suite\u00a0?",
+        "maleVariant": "Alors, c'est quoi la suite\u00a0?",
+        "female_vo_path": "base/{}/vo/v_q000_f_1a297e7b682ef000.wem",
+        "male_vo_path": "base/{}/vo/v_q000_m_1a297e7b682ef000.wem",
+        "quest_path": "base/{}/subtitles/quest/q000/q000_nomad_07_hideout"
+    },
+    {
+        "stringId": "1752060664715370496",
+        "femaleVariant": "Alors, c'est quoi, le plan\u00a0?",
+        "maleVariant": "Alors, c'est quoi, le plan\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq031_f_185091e4494b6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq031_m_185091e4494b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq031/sq031_03_ebunike"
+    },
+    {
+        "stringId": "1741883052059643904",
+        "femaleVariant": "Alors, et maintenant\u00a0?",
+        "maleVariant": "Alors, et maintenant\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq012_f_182c69682e49d000.wem",
+        "male_vo_path": "base/{}/vo/v_sq012_m_182c69682e49d000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq012/sq012_07a_conclusions"
+    },
+    {
+        "stringId": "1653451826993426432",
+        "femaleVariant": "Alors, o\u00f9 on va maintenant\u00a0?",
+        "maleVariant": "Alors, euh\u2026 on va o\u00f9 maintenant\u00a0?",
+        "female_vo_path": "base/{}/vo/v_q103_f_16f23dad2129f000.wem",
+        "male_vo_path": "base/{}/vo/v_q103_m_16f23dad2129f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06_meet_panam"
+    },
+    {
+        "stringId": "1690803716454215680",
+        "femaleVariant": "Alors, euh\u2026 peut-\u00eatre qu'on pourrait\u2026 on pourrait f\u00eater \u00e7a, nan\u00a0?",
+        "maleVariant": "Alors, euh\u2026 peut-\u00eatre qu'on\u2026 pourrait f\u00eater \u00e7a, nan\u00a0?",
+        "female_vo_path": "base/{}/vo/v_q103_f_1776f1059829f000.wem",
+        "male_vo_path": "base/{}/vo/v_q103_m_1776f1059829f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "1883950996526186500",
+        "femaleVariant": "Alors, il consiste en quoi ce plan\u00a0?",
+        "maleVariant": "Alors, il consiste en quoi ce plan\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq026_f_1a252373222fc004.wem",
+        "male_vo_path": "base/{}/vo/v_sq026_m_1a252373222fc004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq026/sq026_08_plan"
+    },
+    {
+        "stringId": "3236363351082635264",
+        "femaleVariant": "Alors, j'en conclus que t'es partante\u00a0?",
+        "maleVariant": "Alors, j'en conclus que t'es partante\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_mq303_f_2ce9df52215f9000.wem",
+        "male_vo_path": "ep1/{}/vo/v_mq303_m_2ce9df52215f9000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq303/mq303_02_linas_mansion"
+    },
+    {
+        "stringId": "1813988624302940160",
+        "femaleVariant": "Alors, qu'est-ce qui se passe\u00a0?",
+        "maleVariant": "Alors, qu'est-ce qui se passe\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq021_f_192c950afa2d2000.wem",
+        "male_vo_path": "base/{}/vo/v_sq021_m_192c950afa2d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq021/sq021_01_hook"
+    },
+    {
+        "stringId": "1764950158609465344",
+        "femaleVariant": "Alors, tu fais quoi ces temps-ci\u00a0?",
+        "maleVariant": "Alors, tu fais quoi ces temps-ci\u00a0?",
+        "female_vo_path": "base/{}/vo/v_scene_judy_default_f_187e5cd1722fc000.wem",
+        "male_vo_path": "base/{}/vo/v_scene_judy_default_m_187e5cd1722fc000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/judy/judy_default"
+    },
+    {
+        "stringId": "3302769887519141888",
+        "femaleVariant": "Alors, tu fais quoi, ces temps-ci\u00a0?",
+        "maleVariant": "Alors, tu fais quoi, ces temps-ci\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_quest_3rd_chars_defaults_f_2dd5cbb6c06f7000.wem",
+        "male_vo_path": "ep1/{}/vo/v_quest_3rd_chars_defaults_m_2dd5cbb6c06f7000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/sts/sts_04_hasan_default"
+    },
+    {
+        "stringId": "1827289968031846404",
+        "femaleVariant": "Alors\u00a0? Qu'est-ce qu'on fait l\u00e0, au juste\u00a0?",
+        "maleVariant": "Alors\u00a0? Qu'est-ce qu'on fait l\u00e0, au juste\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq011_f_195bd68b662c5004.wem",
+        "male_vo_path": "base/{}/vo/v_sq011_m_195bd68b662c5004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq011/sq011_00_intro"
+    },
+    {
+        "stringId": "1998096077125447680",
+        "femaleVariant": "Bien. Super bien, m\u00eame. Et toi, alors\u00a0?",
+        "maleVariant": "Bien. Super bien, m\u00eame. Et toi, alors\u00a0?",
+        "female_vo_path": "base/{}/vo/v_q114_f_1bbaa9cbb829f000.wem",
+        "male_vo_path": "base/{}/vo/v_q114_m_1bbaa9cbb829f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_03b_training"
+    },
+    {
+        "stringId": "1906895370260037636",
+        "femaleVariant": "Bon, alors\u2026 c'est quoi, le plan\u00a0?",
+        "maleVariant": "Bon, alors\u2026 c'est quoi, le plan\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq026_f_1a76a73c702fc004.wem",
+        "male_vo_path": "base/{}/vo/v_sq026_m_1a76a73c702fc004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq026/sq026_02_holocall_judy"
+    },
+    {
+        "stringId": "1960615632837947428",
+        "femaleVariant": "Eh ben, tu sais clairement pas \u00e0 qui tu parles, alors. Moi\u2026 je suis la reine des relations foireuses.",
+        "maleVariant": "Eh ben, tu sais clairement pas \u00e0 qui tu parles, alors. Moi\u2026 je suis le roi des relations foireuses.",
+        "female_vo_path": "base/{}/vo/v_sq029_f_1b358187c0623024.wem",
+        "male_vo_path": "base/{}/vo/v_sq029_m_1b358187c0623024.wem",
+        "quest_path": "base/{}/subtitles/quest/sq029/sq029_04a_dinner"
+    },
+    {
+        "stringId": "1935931751730909184",
+        "femaleVariant": "Merci. Alors, pourquoi je suis l\u00e0\u00a0?",
+        "maleVariant": "Merci. Alors, pourquoi je suis l\u00e0\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq024_f_1addcfabd3521000.wem",
+        "male_vo_path": "base/{}/vo/v_sq024_m_1addcfabd3521000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq024/sq024_01a_claire_garage"
+    },
+    {
+        "stringId": "1918384511778512896",
+        "femaleVariant": "Oh mince, je vais devoir me faire pardonner alors\u00a0?",
+        "maleVariant": "Oh mince, je vais devoir me faire pardonner alors\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq030_f_1a9f788ca72b6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq030_m_1a9f788ca72b6000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/sq030/sq030_11_morning"
+    },
+    {
+        "stringId": "1341366144543494144",
+        "femaleVariant": "Salut. Alors, c'est quoi le plan\u00a0?",
+        "maleVariant": "Salut. Alors, c'est quoi le plan\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq017_f_129d7d66cf401000.wem",
+        "male_vo_path": "base/{}/vo/v_sq017_m_129d7d66cf401000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq017/sq017_08_club_outside"
+    },
+    {
+        "stringId": "1960480433072386076",
+        "femaleVariant": "Tu me plais aussi. Alors, raison de plus pour\u2026",
+        "maleVariant": "Tu me plais aussi. Alors, raison de plus pour\u2026",
+        "female_vo_path": "base/{}/vo/v_sq029_f_1b3506911a62301c.wem",
+        "male_vo_path": "base/{}/vo/v_sq029_m_1b3506911a62301c.wem",
+        "quest_path": "base/{}/subtitles/quest/sq029/sq029_05_morning_after"
+    }
+]

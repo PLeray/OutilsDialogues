@@ -1,0 +1,66 @@
+[
+    {
+        "stringId": "1735142588439618",
+        "femaleVariant": "[Boire] Je croyais que vous vous \u00e9tiez r\u00e9concili\u00e9 avec Saul\u2026",
+        "maleVariant": "[Boire] Je croyais que vous vous \u00e9tiez r\u00e9concili\u00e9 avec Saul\u2026",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1782192144563638272",
+        "femaleVariant": "Je croyais que vous aviez fini par vous entendre, Saul et toi.",
+        "maleVariant": "Je croyais que vous aviez fini par vous entendre, Saul et toi.",
+        "female_vo_path": "base/{}/vo/v_sq027_f_18bb9e5022351000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_18bb9e5022351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_02_panam_and_santiago"
+    },
+    {
+        "stringId": "1734912057581613",
+        "femaleVariant": "Panam boit. Pendant qu'elle parle, elle s'\u00e9nerve de plus en plus ...",
+        "maleVariant": "Panam boit. Pendant qu'elle parle, elle s'\u00e9nerve de plus en plus ...",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1882216617480048640",
+        "femaleVariant": "Il m'a humili\u00e9e devant tout le clan\u00a0! Il m'a fait passer pour une conne\u00a0!",
+        "maleVariant": "Il m'a humili\u00e9e devant tout le clan\u00a0! Il m'a fait passer pour une conne\u00a0!",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a1efa0a8b3c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1a1efa0a8b3c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_03a_holocall_panam_betrayed"
+    },
+    {
+        "stringId": "1835599499677528064",
+        "femaleVariant": "Encore\u00a0?",
+        "maleVariant": "Encore\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq017_f_19795c050029f000.wem",
+        "male_vo_path": "base/{}/vo/v_sq017_m_19795c050029f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq017/sq017_18_premiere"
+    },
+    {
+        "stringId": "1935971665480118272",
+        "femaleVariant": "C'est ce que je veux dire\u00a0! \u00c7a devrait pas \u00eatre moi, \u00e7a devrait \u00eatre\u2026",
+        "maleVariant": "C'est ce que je veux dire\u00a0! \u00c7a devrait pas \u00eatre moi, \u00e7a devrait \u00eatre\u2026",
+        "female_vo_path": "base/{}/vo/panam_q114_f_1addf3f8f829f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q114_f_1addf3f8f829f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_05_quiet_place"
+    },
+    {
+        "stringId": "1946030493684854784",
+        "femaleVariant": "Putain\u2026 Je le savais\u2026",
+        "maleVariant": "Putain\u2026 Je le savais\u2026",
+        "female_vo_path": "base/{}/vo/panam_q114_f_1b01b06c6a29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q114_f_1b01b06c6a29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_10_tunnel_driller"
+    },
+    {
+        "stringId": "1953166016303984640",
+        "femaleVariant": "Je sais plus ce que je dois faire, V.",
+        "maleVariant": "Je sais plus ce que je dois faire, V.",
+        "female_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b0a24bd29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b0a24bd29f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    }
+]

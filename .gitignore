@@ -2,6 +2,8 @@
 CyberPunk-Dialog/data/
 
 # Ne pas ignorer le fichier spécifique
+!CyberPunk-Dialog/data/
+!CyberPunk-Dialog/data/projet/
 !CyberPunk-Dialog/data/projet/Rendez-vous.json
 # Ne pas ignorer uniquement ce sous-dossier et son contenu
 !CyberPunk-Dialog/data/projet/Rendez-vous_files/

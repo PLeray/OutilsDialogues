@@ -1,0 +1,10 @@
+[
+    {
+        "stringId": "1735058593043166",
+        "femaleVariant": "Essaye avec Aguilar Nubiola",
+        "maleVariant": "Essaye avec Aguilar Nubiola",
+        "female_vo_path": "MSG-OUT",
+        "male_vo_path": "MSG-OUT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

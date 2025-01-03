@@ -1,0 +1,106 @@
+[
+    {
+        "stringId": "1735831536035375",
+        "femaleVariant": "[Dire] Alors, t'es partante ?",
+        "maleVariant": "[Dire] Alors, t'es partante ?",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "3236363351082635264",
+        "femaleVariant": "Alors, j'en conclus que t'es partante\u00a0?",
+        "maleVariant": "Alors, j'en conclus que t'es partante\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_mq303_f_2ce9df52215f9000.wem",
+        "male_vo_path": "ep1/{}/vo/v_mq303_m_2ce9df52215f9000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq303/mq303_02_linas_mansion"
+    },
+    {
+        "stringId": "4136126501729132544",
+        "femaleVariant": "Ouais. \u00c7a me plairait, je crois.",
+        "maleVariant": "Ouais. \u00c7a me plairait, je crois.",
+        "female_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_39667923a1a4e000.wem",
+        "male_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_39667923a1a4e000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_01_megabuilding"
+    },
+    {
+        "stringId": "1973377369874874372",
+        "femaleVariant": "Oh. On va s'amuser.",
+        "maleVariant": "Oh. On va s'amuser.",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1b62d843332fc004.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1b62d843332fc004.wem",
+        "quest_path": "base/{}/subtitles/quest/vset/vset_v"
+    },
+    {
+        "stringId": "1761779916546371584",
+        "femaleVariant": "Et puis\u2026 sans moi, t'as aucune chance de r\u00e9ussir.",
+        "maleVariant": "Et puis\u2026 sans moi, t'as aucune chance de r\u00e9ussir.",
+        "female_vo_path": "base/{}/vo/panam_q104_f_1873197ff229f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_1873197ff229f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_05_av_debris"
+    },
+    {
+        "stringId": "1883902597646737408",
+        "femaleVariant": "Bien s\u00fbr.",
+        "maleVariant": "Bien s\u00fbr.",
+        "female_vo_path": "base/{}/vo/v_sq026_f_1a24f76e642b6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq026_m_1a24f76e642b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq026/sq026_09_holocall_judy"
+    },
+    {
+        "stringId": "1824331668780609536",
+        "femaleVariant": "Je viens de r\u00e9aliser\u00a0: je suis encore en train de voler Arasaka.",
+        "maleVariant": "Je viens de r\u00e9aliser\u00a0: je suis encore en train de voler Arasaka.",
+        "female_vo_path": "base/{}/vo/v_q202_f_195153fcae29f000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_195153fcae29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    },
+    {
+        "stringId": "1772146926270672896",
+        "femaleVariant": "Ha Ha\u2026",
+        "maleVariant": "Ha Ha\u2026",
+        "female_vo_path": "base/{}/vo/panam_q104_f_1897ee3d7e29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_1897ee3d7e29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_06_following_tracks"
+    },
+    {
+        "stringId": "1530043192202760192",
+        "femaleVariant": "C'est la cerise sur le g\u00e2teau, je crois.",
+        "maleVariant": "C'est la cerise sur le g\u00e2teau, je crois.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_153bce2d42401000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_153bce2d42401000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_09_raffen_shiv"
+    },
+    {
+        "stringId": "1812631457889587200",
+        "femaleVariant": "Bon. C'est parti.",
+        "maleVariant": "Bon. C'est parti.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1927c2b50c351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_m_1927c2b50c351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_06_panzer"
+    },
+    {
+        "stringId": "1904223843040378880",
+        "femaleVariant": "Ouais, on y va.",
+        "maleVariant": "Ouais, on y va.",
+        "female_vo_path": "base/{}/vo/v_q112_f_1a6d297f09404000.wem",
+        "male_vo_path": "base/{}/vo/v_q112_m_1a6d297f09404000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/q112/q112_00c_wakako"
+    },
+    {
+        "stringId": "1735583990247748",
+        "femaleVariant": "Si la boutique est \u00e0 c\u00f4t\u00e9 du bar, ils vont ensemble \u00e0 la boutique \u00e0 pied. (Panam suit V de pr\u00e8s.) Sinon, ils peuvent se retrouver \u00e0 la boutique",
+        "maleVariant": "Si la boutique est \u00e0 c\u00f4t\u00e9 du bar, ils vont ensemble \u00e0 la boutique \u00e0 pied. (Panam suit V de pr\u00e8s.) Sinon, ils peuvent se retrouver \u00e0 la boutique",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1940242179245694980",
+        "femaleVariant": "Je te retrouve l\u00e0-bas.",
+        "maleVariant": "Je te retrouve l\u00e0-bas.",
+        "female_vo_path": "base/{}/vo/v_sq012_f_1aed1ffb702b6004.wem",
+        "male_vo_path": "base/{}/vo/v_sq012_m_1aed1ffb702b6004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq012/sq012_06b_rqr_investigation"
+    }
+]

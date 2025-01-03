@@ -1,0 +1,42 @@
+[
+    {
+        "stringId": "1735855145057790",
+        "femaleVariant": "[Dire] Je serai mort dans quelques mois, pas vrai ?",
+        "maleVariant": "[Dire] Je serai mort dans quelques mois, pas vrai ?",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "2004115945133412368",
+        "femaleVariant": "Je serai morte dans quelques mois, pas vrai\u00a0?",
+        "maleVariant": "Je serai mort dans quelques mois, pas vrai\u00a0?",
+        "female_vo_path": "base/{}/vo/v_q201_f_1bd00cd5765f9010.wem",
+        "male_vo_path": "base/{}/vo/v_q201_m_1bd00cd5765f9010.wem",
+        "quest_path": "base/{}/subtitles/quest/q201/q201_08_cabin_day_30_takemura"
+    },
+    {
+        "stringId": "1947378274454335488",
+        "femaleVariant": "C'est des conneries, \u00e7a. T'en sais rien.",
+        "maleVariant": "C'est des conneries, \u00e7a. T'en sais rien.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1b067a391429f000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1b067a391429f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_08_camp_saved"
+    },
+    {
+        "stringId": "3292616320855941120",
+        "femaleVariant": "L'avenir nous le dira, pas vrai\u00a0?",
+        "maleVariant": "L'avenir nous le dira, pas vrai\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_q302_f_2db1b9194a45a000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q302_m_2db1b9194a45a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q302/q302_07_oath"
+    },
+    {
+        "stringId": "1825427900278108160",
+        "femaleVariant": "T'es avec moi, maintenant. On va trouver un moyen de s'occuper de cette saloperie que t'as dans la t\u00eate.",
+        "maleVariant": "T'es avec moi, maintenant. On va trouver un moyen de s'occuper de cette saloperie que t'as dans la t\u00eate.",
+        "female_vo_path": "base/{}/vo/panam_q202_f_19553900f729f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_m_19553900f729f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    }
+]

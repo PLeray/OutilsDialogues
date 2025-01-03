@@ -1,0 +1,66 @@
+[
+    {
+        "stringId": "3724855733646938112",
+        "femaleVariant": "Hang on...",
+        "maleVariant": "Hang on...",
+        "female_vo_path": "ep1/{}/vo/songbird_q301_f_33b1588dfb9a5000.wem",
+        "male_vo_path": "ep1/{}/vo/songbird_q301_f_33b1588dfb9a5000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q301/q301_01_border"
+    },
+    {
+        "stringId": "2262179491753975816",
+        "femaleVariant": "Heh...",
+        "maleVariant": "Heh...",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1f64e043202b6008.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1f64e043202b6008.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q307/q307_09_cutscene"
+    },
+    {
+        "stringId": "3405702549260783624",
+        "femaleVariant": "Slow and steady, small moves.",
+        "maleVariant": "Slow and steady, small moves.",
+        "female_vo_path": "ep1/{}/vo/songbird_quest_1st_chars_vsets_f_2f437c6ca354d008.wem",
+        "male_vo_path": "ep1/{}/vo/songbird_quest_1st_chars_vsets_f_2f437c6ca354d008.wem",
+        "quest_path": "ep1/{}/subtitles/quest/vset/vset_songbird"
+    },
+    {
+        "stringId": "1702262878113800192",
+        "femaleVariant": "Hehh... Sucks to meet like this, huh?",
+        "maleVariant": "Hehh... It, uh, sucks to meet like this, huh?",
+        "female_vo_path": "base/{}/vo/v_sq018_f_179fa711944ea000.wem",
+        "male_vo_path": "base/{}/vo/v_sq018_m_179fa711944ea000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq018/sq018_03b_victor"
+    },
+    {
+        "stringId": "3729053721397927940",
+        "femaleVariant": "Uh-huh\u2026",
+        "maleVariant": "Uh-huh\u2026",
+        "female_vo_path": "ep1/{}/vo/songbird_quest_1st_chars_vsets_f_33c0429a2c45a004.wem",
+        "male_vo_path": "ep1/{}/vo/songbird_quest_1st_chars_vsets_f_33c0429a2c45a004.wem",
+        "quest_path": "ep1/{}/subtitles/quest/vset/vset_songbird"
+    },
+    {
+        "stringId": "1566340055009288192",
+        "femaleVariant": "Let's go back to my place.",
+        "maleVariant": "Let's go back to my place.",
+        "female_vo_path": "base/{}/vo/v_posessed_sq031_f_15bcc1fb304b6000.wem",
+        "male_vo_path": "base/{}/vo/v_posessed_sq031_m_15bcc1fb304b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq031/sq031_01c_smack_striptease"
+    },
+    {
+        "stringId": "1837520944565542912",
+        "femaleVariant": "Comin' with?",
+        "maleVariant": "Ya comin' with?",
+        "female_vo_path": "base/{}/vo/v_sq030_f_19802f90402b6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq030_m_19802f90402b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq030/sq030_09_pier"
+    },
+    {
+        "stringId": "3729054363260657664",
+        "femaleVariant": "OK.",
+        "maleVariant": "OK.",
+        "female_vo_path": "ep1/{}/vo/songbird_quest_1st_chars_vsets_f_33c0432f9e45a000.wem",
+        "male_vo_path": "ep1/{}/vo/songbird_quest_1st_chars_vsets_f_33c0432f9e45a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/vset/vset_songbird"
+    }
+]

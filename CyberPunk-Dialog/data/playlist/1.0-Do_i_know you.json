@@ -1,0 +1,82 @@
+[
+    {
+        "stringId": "1734639643012578",
+        "femaleVariant": "V se rend au point de rendez-vous.",
+        "maleVariant": "V se rend au point de rendez-vous.",
+        "female_vo_path": "",
+        "male_vo_path": "",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1734824689179729",
+        "femaleVariant": "[Attendre Panam]",
+        "maleVariant": "[Attendre Panam]",
+        "female_vo_path": "ACT",
+        "male_vo_path": "ACT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1734885474362720",
+        "femaleVariant": "Panam arrive au point de rendez-vous pr\u00e8s du bar...",
+        "maleVariant": "Panam arrive au point de rendez-vous pr\u00e8s du bar...",
+        "female_vo_path": "COM",
+        "male_vo_path": "COM",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1756117848059551784",
+        "femaleVariant": "V\u00a0?",
+        "maleVariant": "V\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q115_f_185efbe0e5502028.wem",
+        "male_vo_path": "base/{}/vo/panam_q115_m_185efbe0e5502028.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/q115/q115_02b_ripperdoc_roof"
+    },
+    {
+        "stringId": "3389921432679321600",
+        "femaleVariant": "Euh, est-ce qu'on se conna\u00eet\u00a0?",
+        "maleVariant": "Euh, est-ce qu'on se conna\u00eet\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_ow_sa_f_2f0b6b951b559000.wem",
+        "male_vo_path": "ep1/{}/vo/v_ow_sa_m_2f0b6b951b559000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/sandbox_activities/sa_ep1_courier_loop_all_holocalls"
+    },
+    {
+        "stringId": "4136385546775486464",
+        "femaleVariant": "Ha ha, c'est dr\u00f4le\u2026",
+        "maleVariant": "Ha ha, c'est dr\u00f4le\u2026",
+        "female_vo_path": "base/{}/vo/panam_mq055_04_heywood_f_396764bd419ce000.wem",
+        "male_vo_path": "base/{}/vo/panam_mq055_04_heywood_f_396764bd419ce000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_04_heywood"
+    },
+    {
+        "stringId": "2262118194987360264",
+        "femaleVariant": "H\u00e9 h\u00e9.",
+        "maleVariant": "H\u00e9 h\u00e9.",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1f64a8835c2b6008.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1f64a8835c2b6008.wem",
+        "quest_path": "base/{}/subtitles/quest/vset/vset_v"
+    },
+    {
+        "stringId": "1734910406863562",
+        "femaleVariant": "V et Panam s'embrassent",
+        "maleVariant": "V et Panam s'embrassent",
+        "female_vo_path": "COM",
+        "male_vo_path": "COM",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1856113477382119424",
+        "femaleVariant": "Salut, Panam.",
+        "maleVariant": "Salut, Panam.",
+        "female_vo_path": "base/{}/vo/v_q115_f_19c23d5fa22d2000.wem",
+        "male_vo_path": "base/{}/vo/v_q115_m_19c23d5fa22d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/q115/q115_02c_holocalls"
+    },
+    {
+        "stringId": "1734736588881117",
+        "femaleVariant": "Ils vont s'installer au bar et prenent un verre",
+        "maleVariant": "Ils vont s'installer au bar et prenent un verre",
+        "female_vo_path": "",
+        "male_vo_path": "",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

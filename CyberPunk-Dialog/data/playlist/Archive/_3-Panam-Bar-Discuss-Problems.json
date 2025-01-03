@@ -1,0 +1,258 @@
+[
+    {
+        "stringId": "1773676286296002560",
+        "femaleVariant": "J'ai un probl\u00e8me.",
+        "maleVariant": "J'ai un probl\u00e8me.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_189d5d2f5f351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_189d5d2f5f351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_01_phone_call"
+    },
+    {
+        "stringId": "1773703824653225984",
+        "femaleVariant": "Laisse-moi deviner. C'est Saul, c'est \u00e7a\u00a0?",
+        "maleVariant": "Laisse-moi deviner. C'est Saul, c'est \u00e7a\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq027_f_189d763b25351000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_189d763b25351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_01_phone_call"
+    },
+    {
+        "stringId": "1773704191755489280",
+        "femaleVariant": "Tu me connais trop bien.",
+        "maleVariant": "Tu me connais trop bien.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_189d76909e351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_189d76909e351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_01_phone_call"
+    },
+    {
+        "stringId": "1782192144563638272",
+        "femaleVariant": "Je croyais que vous aviez fini par vous entendre, Saul et toi.",
+        "maleVariant": "Je croyais que vous aviez fini par vous entendre, Saul et toi.",
+        "female_vo_path": "base/{}/vo/v_sq027_f_18bb9e5022351000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_18bb9e5022351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_02_panam_and_santiago"
+    },
+    {
+        "stringId": "1882216617480048640",
+        "femaleVariant": "Il m'a humili\u00e9e devant tout le clan\u00a0! Il m'a fait passer pour une conne\u00a0!",
+        "maleVariant": "Il m'a humili\u00e9e devant tout le clan\u00a0! Il m'a fait passer pour une conne\u00a0!",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a1efa0a8b3c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1a1efa0a8b3c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_03a_holocall_panam_betrayed"
+    },
+    {
+        "stringId": "1897947472192483356",
+        "femaleVariant": "J'ai peut-\u00eatre r\u00e9int\u00e9gr\u00e9 le clan, mais\u2026 j'ai des choses \u00e0 faire.",
+        "maleVariant": "J'ai peut-\u00eatre r\u00e9int\u00e9gr\u00e9 le clan, mais\u2026 j'ai des choses \u00e0 faire.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b9262301c.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b9262301c.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1835599499677528064",
+        "femaleVariant": "Encore\u00a0?",
+        "maleVariant": "Encore\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq017_f_19795c050029f000.wem",
+        "male_vo_path": "base/{}/vo/v_sq017_m_19795c050029f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq017/sq017_18_premiere"
+    },
+    {
+        "stringId": "1953166016303984640",
+        "femaleVariant": "Je sais plus ce que je dois faire, V.",
+        "maleVariant": "Je sais plus ce que je dois faire, V.",
+        "female_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b0a24bd29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b0a24bd29f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "1761834655837450240",
+        "femaleVariant": "H\u00e9, fais pas attention \u00e0 Saul. \u00c7a lui passera.",
+        "maleVariant": "H\u00e9, fais pas attention \u00e0 Saul. \u00c7a lui passera.",
+        "female_vo_path": "base/{}/vo/v_q104_f_18734b48ee29f000.wem",
+        "male_vo_path": "base/{}/vo/v_q104_m_18734b48ee29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_07c_nomads_arrive"
+    },
+    {
+        "stringId": "1804041973262520320",
+        "femaleVariant": "Tu te souviens notre premi\u00e8re rencontre\u00a0? Rien que de parler de d\u00e9sob\u00e9ir \u00e0 Saul, tu chiais d\u00e9j\u00e0 dans ton froc.",
+        "maleVariant": "Tu te souviens notre premi\u00e8re rencontre\u00a0? Rien que de parler de d\u00e9sob\u00e9ir \u00e0 Saul, tu chiais d\u00e9j\u00e0 dans ton froc.",
+        "female_vo_path": "base/{}/vo/v_sq027_f_19093e9dd0351000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_19093e9dd0351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_mitch_bob"
+    },
+    {
+        "stringId": "1751574754396082176",
+        "femaleVariant": "Eh ben, \u00e7a a bien chang\u00e9\u2026",
+        "maleVariant": "Eh ben, \u00e7a a bien chang\u00e9\u2026",
+        "female_vo_path": "base/{}/vo/v_sq006_f_184ed7f579521000.wem",
+        "male_vo_path": "base/{}/vo/v_sq006_m_184ed7f579521000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq006/sq006_02a_tour"
+    },
+    {
+        "stringId": "1665024486785282060",
+        "femaleVariant": "Je voulais une vie diff\u00e9rente, une vie meilleure. Mais Saul est qu'un putain de l\u00e2che. Je suis convaincue qu'il va mener le clan \u00e0 sa perte.",
+        "maleVariant": "Je voulais une vie diff\u00e9rente, une vie meilleure. Mais Saul est qu'un putain de l\u00e2che. Je suis convaincue qu'il va mener le clan \u00e0 sa perte.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_171b5af2f529f00c.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_171b5af2f529f00c.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_07_ghost_town_drive"
+    },
+    {
+        "stringId": "1944430651552583680",
+        "femaleVariant": "Ouais, peut-\u00eatre.",
+        "maleVariant": "Ouais, peut-\u00eatre.",
+        "female_vo_path": "base/{}/vo/v_inland_avenue_f_1afc0160242c5000.wem",
+        "male_vo_path": "base/{}/vo/v_inland_avenue_m_1afc0160242c5000.wem",
+        "quest_path": "base/{}/subtitles/open_world/street_stories/sts_bls_ina_09_benedict"
+    },
+    {
+        "stringId": "1953175673303068672",
+        "femaleVariant": "Je sais, mais... Bon, tu vas me dire que la famille parfaite existe pas.",
+        "maleVariant": "Je sais, mais... Bon, tu vas me dire que la famille parfaite existe pas.",
+        "female_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b12ed2f29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_scene_panam_default_f_1b1b12ed2f29f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    },
+    {
+        "stringId": "2008402713098448896",
+        "femaleVariant": "C'est s\u00fbr.",
+        "maleVariant": "C'est s\u00fbr.",
+        "female_vo_path": "base/{}/vo/v_q203_f_1bdf47a06829f000.wem",
+        "male_vo_path": "base/{}/vo/v_q203_m_1bdf47a06829f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_04_delamain"
+    },
+    {
+        "stringId": "1665067044190154752",
+        "femaleVariant": "Pfff. OOOK.",
+        "maleVariant": "Pfff. OOOK.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_171b81a7a029f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_171b81a7a029f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_07_ghost_town_drive"
+    },
+    {
+        "stringId": "1897947471907270676",
+        "femaleVariant": "Et toi\u00a0?",
+        "maleVariant": "Et toi\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b81623014.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b81623014.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "1896559853671952388",
+        "femaleVariant": "Te vexe pas, mais\u2026 Saul a peut-\u00eatre raison.",
+        "maleVariant": "Te vexe pas, mais\u2026 Saul a peut-\u00eatre raison.",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a51ef2375623004.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a51ef2375623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1817173075543511040",
+        "femaleVariant": "Han\u00a0! Comment te dire ?",
+        "maleVariant": "Han\u00a0! Comment te dire ?",
+        "female_vo_path": "base/{}/vo/panam_q114_f_1937e548cf2cd000.wem",
+        "male_vo_path": "base/{}/vo/panam_q114_f_1937e548cf2cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_05_quiet_place"
+    },
+    {
+        "stringId": "1774799202323918848",
+        "femaleVariant": "Va te faire foutre.",
+        "maleVariant": "Va te faire foutre.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_18a15a78a229f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_18a15a78a229f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06a_camp_drive"
+    },
+    {
+        "stringId": "1933100456223281152",
+        "femaleVariant": "H\u00e9, du calme\u2026",
+        "maleVariant": "H\u00e9, du calme\u2026",
+        "female_vo_path": "base/{}/vo/v_japantown_f_1ad3c09f78559000.wem",
+        "male_vo_path": "base/{}/vo/v_japantown_m_1ad3c09f78559000.wem",
+        "quest_path": "base/{}/subtitles/open_world/street_stories/sts_wbr_jpn_02_lauren"
+    },
+    {
+        "stringId": "1665024486785282060",
+        "femaleVariant": "Je voulais une vie diff\u00e9rente, une vie meilleure. Mais Saul est qu'un putain de l\u00e2che. Je suis convaincue qu'il va mener le clan \u00e0 sa perte.",
+        "maleVariant": "Je voulais une vie diff\u00e9rente, une vie meilleure. Mais Saul est qu'un putain de l\u00e2che. Je suis convaincue qu'il va mener le clan \u00e0 sa perte.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_171b5af2f529f00c.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_171b5af2f529f00c.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_07_ghost_town_drive"
+    },
+    {
+        "stringId": "1774749039035281408",
+        "femaleVariant": "Il peut se toucher s'il pense que je vais le laisser faire.",
+        "maleVariant": "Il peut se toucher s'il pense que je vais le laisser faire.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_18a12cd91529f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_18a12cd91529f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06_meet_panam"
+    },
+    {
+        "stringId": "1425944395297480704",
+        "femaleVariant": "Bon\u2026 OK, OK. C'est toi la chef.",
+        "maleVariant": "Bon\u2026 OK, OK. C'est toi la chef.",
+        "female_vo_path": "base/{}/vo/v_sq030_f_13c9f8df5f2a6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq030_m_13c9f8df5f2a6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq030/sq030_09_pier"
+    },
+    {
+        "stringId": "3270787955500969984",
+        "femaleVariant": "Je peux faire un truc pour t'aider\u00a0?",
+        "maleVariant": "Je peux faire un truc pour t'aider\u00a0?",
+        "female_vo_path": "ep1/{}/vo/v_q305_f_2d642c50ef42f000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q305_m_2d642c50ef42f000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q305/q305_11_border_crossing"
+    },
+    {
+        "stringId": "1896726949995360260",
+        "femaleVariant": "Nan\u2026",
+        "maleVariant": "Nan\u2026",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871c9a623004.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871c9a623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1672044600160284672",
+        "femaleVariant": "Je vais g\u00e9rer \u00e7a. J'ai l'habitude. Je suis s\u00e9rieuse.",
+        "maleVariant": "Je vais g\u00e9rer \u00e7a. J'ai l'habitude. Je suis s\u00e9rieuse.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_17344bb47929f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_17344bb47929f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "1897947471907270676",
+        "femaleVariant": "Et toi\u00a0?",
+        "maleVariant": "Et toi\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b81623014.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b81623014.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1896726950012137476",
+        "femaleVariant": "Comment est votre whisky, madame\u00a0?",
+        "maleVariant": "Comment est votre whisky, madame\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a52871c9b623004.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a52871c9b623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1896726950012137500",
+        "femaleVariant": "Puissant, mais doux. Je lui mets quatre sur cinq.",
+        "maleVariant": "Puissant, mais doux. Je lui mets quatre sur cinq.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871c9b62301c.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871c9b62301c.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    }
+]

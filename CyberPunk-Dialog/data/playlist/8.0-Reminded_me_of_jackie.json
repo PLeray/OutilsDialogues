@@ -1,0 +1,50 @@
+[
+    {
+        "stringId": "1735854611598502",
+        "femaleVariant": "[Dire] Panam\u2026 ",
+        "maleVariant": "[Dire] Panam\u2026 ",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1999491326695567360",
+        "femaleVariant": "Panam\u2026 je\u2026",
+        "maleVariant": "Panam\u2026 je\u2026",
+        "female_vo_path": "base/{}/vo/v_sq027_f_1bbf9ec49329f000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_1bbf9ec49329f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_09_new_camp_wakeup"
+    },
+    {
+        "stringId": "1824363443233878016",
+        "femaleVariant": "Non, \u00e7a m'a fait penser \u00e0 Jackie, c'est tout. Et au casse d'Arasaka. J'ai pas besoin de te rappeler comment \u00e7a a fini.",
+        "maleVariant": "Non, \u00e7a m'a fait penser \u00e0 Jackie, c'est tout. Et au casse d'Arasaka. J'ai pas besoin de te rappeler comment \u00e7a a fini.",
+        "female_vo_path": "base/{}/vo/v_q202_f_195170e2bf29f000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_195170e2bf29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    },
+    {
+        "stringId": "1663771767365918720",
+        "femaleVariant": "C'\u00e9tait y a pas si longtemps\u2026",
+        "maleVariant": "C'\u00e9tait y a pas si longtemps\u2026",
+        "female_vo_path": "base/{}/vo/v_q105_f_1716e79b7d2b6000.wem",
+        "male_vo_path": "base/{}/vo/v_q105_m_1716e79b7d2b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/q105/q105_03a_dollhouse_doll_01"
+    },
+    {
+        "stringId": "1680562800159121408",
+        "femaleVariant": "Putain\u2026 Putain de merde\u00a0!",
+        "maleVariant": "Putain\u2026 Putain de merde\u00a0!",
+        "female_vo_path": "base/{}/vo/v_q201_f_17528ef676386000.wem",
+        "male_vo_path": "base/{}/vo/v_q201_m_17528ef676386000.wem",
+        "quest_path": "base/{}/subtitles/quest/q201/q201_07_cabin_day_30"
+    },
+    {
+        "stringId": "1947414952367747072",
+        "femaleVariant": "\u00c7a va, V, calme-toi. Vas-y par \u00e9tapes. Qu'est-ce qui se passe exactement\u00a0?",
+        "maleVariant": "\u00c7a va, V, calme-toi. Vas-y par \u00e9tapes. Qu'est-ce qui se passe exactement\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1b069b94d229f000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1b069b94d229f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_09_new_camp_wakeup"
+    }
+]

@@ -1,0 +1,114 @@
+[
+    {
+        "stringId": "1735827222153488",
+        "femaleVariant": "[Dire] Parlons de notre plan pour le Konpeki...",
+        "maleVariant": "[Dire] Parlons de notre plan pour le Konpeki...",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1725507041219186688",
+        "femaleVariant": "Bon, d'accord. J'\u00e9tais au Konpeki Plaza le soir o\u00f9 c'est arriv\u00e9.",
+        "maleVariant": "Bon, d'accord. J'\u00e9tais au Konpeki Plaza le soir o\u00f9 c'est arriv\u00e9.",
+        "female_vo_path": "base/{}/vo/v_q112_f_17f23b83094e1000.wem",
+        "male_vo_path": "base/{}/vo/v_q112_m_17f23b83094e1000.wem",
+        "quest_path": "base/{}/subtitles/quest/q112/q112_00b_secret_meeting"
+    },
+    {
+        "stringId": "3359190432872767488",
+        "femaleVariant": "T'inqui\u00e8te pas pour \u00e7a.",
+        "maleVariant": "T'inqui\u00e8te pas pour \u00e7a.",
+        "female_vo_path": "ep1/{}/vo/v_q302_f_2e9e3de6a445a000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q302_m_2e9e3de6a445a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q302/q302_07_oath"
+    },
+    {
+        "stringId": "1893700992943071232",
+        "femaleVariant": "Ouais, mais\u2026",
+        "maleVariant": "Ouais, mais\u2026",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a47c705132d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a47c705132d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_04_drive"
+    },
+    {
+        "stringId": "1953091246979936256",
+        "femaleVariant": "Alors, tu t'es d\u00e9cid\u00e9e\u00a0?",
+        "maleVariant": "Alors, tu t'es d\u00e9cid\u00e9e\u00a0?",
+        "female_vo_path": "base/{}/vo/v_scene_panam_default_f_1b1ac6242629f000.wem",
+        "male_vo_path": "base/{}/vo/v_scene_panam_default_m_1b1ac6242629f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    },
+    {
+        "stringId": "1699504372115435520",
+        "femaleVariant": "Ouais. Enfin, je crois.",
+        "maleVariant": "Ouais. Enfin, je crois.",
+        "female_vo_path": "base/{}/vo/panam_q104_f_1795da38da29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_1795da38da29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_07c_nomads_arrive"
+    },
+    {
+        "stringId": "1724409002612019200",
+        "femaleVariant": "Ce plan, t'en penses quoi\u00a0?",
+        "maleVariant": "Ce plan, t'en penses quoi\u00a0?",
+        "female_vo_path": "base/{}/vo/v_q005_f_17ee54da002cd000.wem",
+        "male_vo_path": "base/{}/vo/v_q005_m_17ee54da002cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q005/q005_01_plan"
+    },
+    {
+        "stringId": "2302325911451791360",
+        "femaleVariant": "C'est un bon plan, V\u2026 Hum, tu sais ce que Saul m'a dit, un jour\u00a0?",
+        "maleVariant": "C'est un bon plan, V\u2026 Hum, tu sais ce que Saul m'a dit, un jour\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q202_f_1ff38137dd42f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_f_1ff38137dd42f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_01_motel"
+    },
+    {
+        "stringId": "1863176122928852992",
+        "femaleVariant": "Il m'a dit que le seul moment o\u00f9 une personne est vraiment libre, c'est\u2026 quand elle sait\u2026 qu'elle a plus rien \u00e0 perdre.",
+        "maleVariant": "Il m'a dit que le seul moment o\u00f9 une personne est vraiment libre, c'est\u2026 quand elle sait\u2026 qu'elle a plus rien \u00e0 perdre.",
+        "female_vo_path": "base/{}/vo/panam_q202_f_19db54cff129f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_m_19db54cff129f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_01_motel"
+    },
+    {
+        "stringId": "1795337918150733824",
+        "femaleVariant": "Hmpf. Ouais.",
+        "maleVariant": "Hmpf. Ouais.",
+        "female_vo_path": "base/{}/vo/v_q203_f_18ea52530f29f000.wem",
+        "male_vo_path": "base/{}/vo/v_q203_m_18ea52530f29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_05_afterlife"
+    },
+    {
+        "stringId": "1824363324853841920",
+        "femaleVariant": "J'ai dit un truc qu'il fallait pas\u00a0?",
+        "maleVariant": "J'ai dit un truc qu'il fallait pas\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q202_f_195170c72f29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_f_195170c72f29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    },
+    {
+        "stringId": "3509981927846547456",
+        "femaleVariant": "T'inqui\u00e8te.",
+        "maleVariant": "T'inqui\u00e8te.",
+        "female_vo_path": "ep1/{}/vo/v_ow_sa_f_30b5f5f779559000.wem",
+        "male_vo_path": "ep1/{}/vo/v_ow_sa_m_30b5f5f779559000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/sandbox_activities/sa_ep1_courier_outro_muammar_dam"
+    },
+    {
+        "stringId": "1896726950297350144",
+        "femaleVariant": "Non.",
+        "maleVariant": "Non.",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a52871cac623000.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a52871cac623000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1882333620088885248",
+        "femaleVariant": "Parce que je tiens vraiment \u00e0 toi. Mais j'ai peur de dire ou de faire un truc stupide, et\u2026 et de me retrouver seule dans le d\u00e9sert.",
+        "maleVariant": "Parce que je tiens vraiment \u00e0 toi. Mais j'ai peur de dire ou de faire un truc stupide, et\u2026 et de me retrouver seule dans le d\u00e9sert.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a1f6474562c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_m_1a1f6474562c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    }
+]

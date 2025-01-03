@@ -1,0 +1,66 @@
+[
+    {
+        "stringId": "1735148655590069",
+        "femaleVariant": "Plus tard... ils sont toujours sur le lit, allong\u00e9 nus.",
+        "maleVariant": "Plus tard... ils sont toujours sur le lit, allong\u00e9 nus.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "2008211146618302464",
+        "femaleVariant": "Je voulais pas te r\u00e9veiller.",
+        "maleVariant": "Je voulais pas te r\u00e9veiller.",
+        "female_vo_path": "base/{}/vo/panam_q203_f_1bde9965dc29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q203_m_1bde9965dc29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_02d_panam"
+    },
+    {
+        "stringId": "1735860454689494",
+        "femaleVariant": "[Touch] Salut",
+        "maleVariant": "[Touch] Salut",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1873336511607992320",
+        "femaleVariant": "Salut. Je vais sauter sous la douche.",
+        "maleVariant": "Salut. Je vais sauter sous la douche.",
+        "female_vo_path": "base/{}/vo/v_q203_f_19ff6da1c729f000.wem",
+        "male_vo_path": "base/{}/vo/v_q203_m_19ff6da1c729f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_03_sobchak"
+    },
+    {
+        "stringId": "1539042075245015040",
+        "femaleVariant": "T'as bien dormi\u00a0?",
+        "maleVariant": "T'as bien dormi\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q104_f_155bc69cfd5bf000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_155bc69cfd5bf000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_01a_roadhouse_meeting"
+    },
+    {
+        "stringId": "3302620291439247360",
+        "femaleVariant": "Ouais... Le temps s'est un peu arr\u00eat\u00e9 pour moi.",
+        "maleVariant": "Ouais... Le temps s'est un peu arr\u00eat\u00e9 pour moi.",
+        "female_vo_path": "ep1/{}/vo/v_q307_f_2dd543a8333bc000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q307_m_2dd543a8333bc000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q307/q307_08_misty"
+    },
+    {
+        "stringId": "1665019849495670784",
+        "femaleVariant": "Bon\u2026 J'y vais.",
+        "maleVariant": "Bon\u2026 J'y vais.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_171b56bb4129f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_171b56bb4129f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06b_nomad_camp"
+    },
+    {
+        "stringId": "2262179491753975816",
+        "femaleVariant": "Hmm\u2026",
+        "maleVariant": "Hmm\u2026",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1f64e043202b6008.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1f64e043202b6008.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q307/q307_09_cutscene"
+    }
+]

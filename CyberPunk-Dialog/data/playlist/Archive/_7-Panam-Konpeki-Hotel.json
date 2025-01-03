@@ -1,0 +1,594 @@
+[
+    {
+        "stringId": "1764924610551656448",
+        "femaleVariant": "Nice place, quaintly slick.",
+        "maleVariant": "Nice place, quaintly slick.",
+        "female_vo_path": "base/{}/vo/v_charter_hill_f_187e45951346b000.wem",
+        "male_vo_path": "base/{}/vo/v_charter_hill_m_187e45951346b000.wem",
+        "quest_path": "base/{}/subtitles/open_world/vendors/wbr_hil_foodshop_01"
+    },
+    {
+        "stringId": "3508383082195644416",
+        "femaleVariant": "I certainly hope so.",
+        "maleVariant": "I certainly hope so.",
+        "female_vo_path": "ep1/{}/vo/panam_scene_sobchak_default_f_30b047d33642f000.wem",
+        "male_vo_path": "ep1/{}/vo/panam_scene_sobchak_default_f_30b047d33642f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/panam/panam_default"
+    },
+    {
+        "stringId": "1603775379811201036",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/v_q004_f_1641c135f529f00c.wem",
+        "male_vo_path": "base/{}/vo/v_q004_m_1641c135f529f00c.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "4136691981871419464",
+        "femaleVariant": "Fuck, V. It is awesome!",
+        "maleVariant": "Fuck, V. It is awesome!",
+        "female_vo_path": "base/{}/vo/panam_mq055_05_downtown_f_39687b70bca71048.wem",
+        "male_vo_path": "base/{}/vo/panam_mq055_05_downtown_f_39687b70bca71048.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_05_downtown"
+    },
+    {
+        "stringId": "1729876797939675136",
+        "femaleVariant": "How's abso-fuckin'-lutely sound?",
+        "maleVariant": "How's abso-fuckin'-lutely sound?",
+        "female_vo_path": "base/{}/vo/v_little_china_f_1801c1c84e627000.wem",
+        "male_vo_path": "base/{}/vo/v_little_china_m_1801c1c84e627000.wem",
+        "quest_path": "base/{}/subtitles/open_world/vendors/wat_lch_gunsmith_01"
+    },
+    {
+        "stringId": "1995306323030814720",
+        "femaleVariant": "Ooph, I'm starting to feel that stress go away.",
+        "maleVariant": "Ooph, I'm starting to feel that stress go away.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_1bb0c0877a57b000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_1bb0c0877a57b000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "1896726949659815960",
+        "femaleVariant": "When you're on the road day into night into day, your butt basically fusing with your seat, you forget what it's like.",
+        "maleVariant": "When you're on the road day into night into day, your butt basically fusing with your seat, you forget what it's like.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871c86623018.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871c86623018.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "2262118194987360264",
+        "femaleVariant": "Hehe.",
+        "maleVariant": "Hehe.",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1f64a8835c2b6008.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1f64a8835c2b6008.wem",
+        "quest_path": "base/{}/subtitles/quest/vset/vset_v"
+    },
+    {
+        "stringId": "1380579642278801408",
+        "femaleVariant": "Heh, think I know the feelin'.",
+        "maleVariant": "Huh, think I know the feelin'.",
+        "female_vo_path": "base/{}/vo/v_sq028_f_1328cddeba29f000.wem",
+        "male_vo_path": "base/{}/vo/v_sq028_m_1328cddeba29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq028/sq028_03_chilling_out"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "2243448137760657408",
+        "femaleVariant": "Will you say something?",
+        "maleVariant": "Will you say something?",
+        "female_vo_path": "base/{}/vo/panam_q114_f_1f225431eb3c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_q114_f_1f225431eb3c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_05_quiet_place"
+    },
+    {
+        "stringId": "1756117848076328972",
+        "femaleVariant": "OK, what's going on?",
+        "maleVariant": "OK, what's going on?",
+        "female_vo_path": "base/{}/vo/panam_q115_f_185efbe0e650200c.wem",
+        "male_vo_path": "base/{}/vo/panam_q115_m_185efbe0e650200c.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/q115/q115_02b_ripperdoc_roof"
+    },
+    {
+        "stringId": "1999491326695567360",
+        "femaleVariant": "Panam... I...",
+        "maleVariant": "Panam... I...",
+        "female_vo_path": "base/{}/vo/v_sq027_f_1bbf9ec49329f000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_1bbf9ec49329f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_09_new_camp_wakeup"
+    },
+    {
+        "stringId": "1824363443233878016",
+        "femaleVariant": "Just reminded me of Jackie. And the Arasaka job. Think you know how that ended.",
+        "maleVariant": "Just reminded me of Jackie. And the Arasaka job. Think you know how that ended.",
+        "female_vo_path": "base/{}/vo/v_q202_f_195170e2bf29f000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_195170e2bf29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    },
+    {
+        "stringId": "1663771767365918720",
+        "femaleVariant": "Wasn't even that long ago...",
+        "maleVariant": "Wasn't even that long ago...",
+        "female_vo_path": "base/{}/vo/v_q105_f_1716e79b7d2b6000.wem",
+        "male_vo_path": "base/{}/vo/v_q105_m_1716e79b7d2b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/q105/q105_03a_dollhouse_doll_01"
+    },
+    {
+        "stringId": "1680562800159121408",
+        "femaleVariant": "Fuck. Fuck!",
+        "maleVariant": "Fuck. Fuck!",
+        "female_vo_path": "base/{}/vo/v_q201_f_17528ef676386000.wem",
+        "male_vo_path": "base/{}/vo/v_q201_m_17528ef676386000.wem",
+        "quest_path": "base/{}/subtitles/quest/q201/q201_07_cabin_day_30"
+    },
+    {
+        "stringId": "1947414952367747072",
+        "femaleVariant": "OK, V, relax. Take it bit by bit. What is happening, exactly?",
+        "maleVariant": "OK, V, relax. Take it bit by bit. What is happening, exactly?",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1b069b94d229f000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1b069b94d229f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_09_new_camp_wakeup"
+    },
+    {
+        "stringId": "1664681160034967552",
+        "femaleVariant": "Trusted someone and they fucked me over. The end.",
+        "maleVariant": "Trusted someone and they fucked me over. The end.",
+        "female_vo_path": "base/{}/vo/v_q105_f_171a22b1f82b6000.wem",
+        "male_vo_path": "base/{}/vo/v_q105_m_171a22b1f82b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/q105/q105_03a_dollhouse_doll_01"
+    },
+    {
+        "stringId": "1947486841144471552",
+        "femaleVariant": "V, listen to me.",
+        "maleVariant": "V, listen to me.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1b06dcf6bb29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_m_1b06dcf6bb29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_09_new_camp_wakeup"
+    },
+    {
+        "stringId": "1947490954582290432",
+        "femaleVariant": "There is not a thing you could say to me that would change how...",
+        "maleVariant": "There is not a thing you could say to me that would change how...",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1b06e0b47729f000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_m_1b06e0b47729f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_09_new_camp_wakeup"
+    },
+    {
+        "stringId": "1663801887585689600",
+        "femaleVariant": "Think I might just be... afraid. So I imagine these things to distract myself from the thought of... the void.",
+        "maleVariant": "Think I might just be... afraid. So I imagine these things to distract myself from the thought of... the void.",
+        "female_vo_path": "base/{}/vo/v_q105_f_17170300662b6000.wem",
+        "male_vo_path": "base/{}/vo/v_q105_m_17170300662b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/q105/q105_03a_dollhouse_doll_01"
+    },
+    {
+        "stringId": "1882238917184081920",
+        "femaleVariant": "Listen, V... I...",
+        "maleVariant": "Listen, V... I...",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a1f0e52992c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_m_1a1f0e52992c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "1882203350962556928",
+        "femaleVariant": "I'm sorry. I'm not very good at this, speaking of my feelings and so forth.",
+        "maleVariant": "I'm sorry. I'm not very good at this, speaking of my feelings and so forth.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a1eedf9b12c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_m_1a1eedf9b12c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "2004115945133412368",
+        "femaleVariant": "Dead in a few months \u2013 that's me, huh?",
+        "maleVariant": "Dead in a few months \u2013 that's me, huh?",
+        "female_vo_path": "base/{}/vo/v_q201_f_1bd00cd5765f9010.wem",
+        "male_vo_path": "base/{}/vo/v_q201_m_1bd00cd5765f9010.wem",
+        "quest_path": "base/{}/subtitles/quest/q201/q201_08_cabin_day_30_takemura"
+    },
+    {
+        "stringId": "1947378274454335488",
+        "femaleVariant": "Bullshit. You don't know that.",
+        "maleVariant": "Bullshit. You don't know that.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1b067a391429f000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1b067a391429f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_08_camp_saved"
+    },
+    {
+        "stringId": "3292616320855941120",
+        "femaleVariant": "Gotta wait and see, won't we?",
+        "maleVariant": "Gotta wait and see, won't we?",
+        "female_vo_path": "ep1/{}/vo/v_q302_f_2db1b9194a45a000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q302_m_2db1b9194a45a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q302/q302_07_oath"
+    },
+    {
+        "stringId": "1825427900278108160",
+        "femaleVariant": "You're with me now. We will figure out and take care of that piece of shit in your head.",
+        "maleVariant": "You're with me now. We will figure out and take care of that piece of shit in your head.",
+        "female_vo_path": "base/{}/vo/panam_q202_f_19553900f729f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_m_19553900f729f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_04a_badlands_travel"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "1960480434246791192",
+        "femaleVariant": "I can't make any plans for the future. There's this thing\u2026",
+        "maleVariant": "I can't make any plans for the future. There's this thing\u2026",
+        "female_vo_path": "base/{}/vo/v_sq029_f_1b35069160623018.wem",
+        "male_vo_path": "base/{}/vo/v_sq029_m_1b35069160623018.wem",
+        "quest_path": "base/{}/subtitles/quest/sq029/sq029_05_morning_after"
+    },
+    {
+        "stringId": "1947378274454335488",
+        "femaleVariant": "Bullshit. You don't know that.",
+        "maleVariant": "Bullshit. You don't know that.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1b067a391429f000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1b067a391429f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_08_camp_saved"
+    },
+    {
+        "stringId": "1793776528441077760",
+        "femaleVariant": "Uh, yeah, sure. We'll see. I mean, you know how it is.",
+        "maleVariant": "Uh, sure. We'll see. I mean, you know how it is.",
+        "female_vo_path": "base/{}/vo/v_q203_f_18e4c63fb029f000.wem",
+        "male_vo_path": "base/{}/vo/v_q203_m_18e4c63fb029f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_03_sobchak"
+    },
+    {
+        "stringId": "1695211830603542528",
+        "femaleVariant": "Stubborn bastard.",
+        "maleVariant": "Stubborn bastard.",
+        "female_vo_path": "base/{}/vo/panam_q104_f_17869a2da629f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_17869a2da629f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_05_av_debris"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "1663798481894727680",
+        "femaleVariant": "Still, if I gotta die, I wanna go down in history. Fuck it, even a footnote'd do.",
+        "maleVariant": "Still, if I gotta die, I wanna go down in history. Fuck it, even a footnote'd do.",
+        "female_vo_path": "base/{}/vo/v_q105_f_1716ffe7732b6000.wem",
+        "male_vo_path": "base/{}/vo/v_q105_m_1716ffe7732b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/q105/q105_03a_dollhouse_doll_01"
+    },
+    {
+        "stringId": "1795150223197728768",
+        "femaleVariant": "I will remember, V. Always.",
+        "maleVariant": "I will remember, V. Always.",
+        "female_vo_path": "base/{}/vo/panam_q203_f_18e9a79dec29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q203_m_18e9a79dec29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_02d_panam"
+    },
+    {
+        "stringId": "1775205447997132800",
+        "femaleVariant": "Oh, come on.",
+        "maleVariant": "Oh, come on.",
+        "female_vo_path": "base/{}/vo/v_sq027_f_18a2cbf313351000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_18a2cbf313351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "1877858746209595392",
+        "femaleVariant": "Don't worry. I'm not dead yet.",
+        "maleVariant": "Don't worry. I'm not dead yet.",
+        "female_vo_path": "base/{}/vo/v_q000_f_1a0f7e94922ef000.wem",
+        "male_vo_path": "base/{}/vo/v_q000_m_1a0f7e94922ef000.wem",
+        "quest_path": "base/{}/subtitles/quest/q000/q000_corpo_01_security_gate"
+    },
+    {
+        "stringId": "1873771997317320704",
+        "femaleVariant": "V...",
+        "maleVariant": "V...",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a00f9b4322c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1a00f9b4322c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_05a_transport_delivered"
+    },
+    {
+        "stringId": "1708241921529139200",
+        "femaleVariant": "Fuck. That is not how it was supposed to be, was it?",
+        "maleVariant": "Fuck. That is not how it was supposed to be, was it?",
+        "female_vo_path": "base/{}/vo/panam_q202_f_17b4e4fa1b2cd000.wem",
+        "male_vo_path": "base/{}/vo/panam_q202_f_17b4e4fa1b2cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_06_border_running"
+    },
+    {
+        "stringId": "1793778635877699588",
+        "femaleVariant": "C'mere.",
+        "maleVariant": "C'mere.",
+        "female_vo_path": "base/{}/vo/v_q114_f_18e4c82a5d2cd004.wem",
+        "male_vo_path": "base/{}/vo/v_q114_m_18e4c82a5d2cd004.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_05_quiet_place"
+    },
+    {
+        "stringId": "1854803273415729152",
+        "femaleVariant": "Hey...",
+        "maleVariant": "Hey...",
+        "female_vo_path": "base/{}/vo/panam_q115_f_19bd95c0002d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_q115_m_19bd95c0002d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/q115/q115_02d_misty"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "1913074409953632256",
+        "femaleVariant": "Mmhmm... I couldn't ask for more.",
+        "maleVariant": "Mmhmm... I couldn't ask for more.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a8c9b0a3a2d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a8c9b0a3a2d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1913073066920714240",
+        "femaleVariant": "Have everything you need, ma'am?",
+        "maleVariant": "Have everything you need, ma'am?",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a8c99d1872d2000.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a8c99d1872d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1902427304205557760",
+        "femaleVariant": "Umm...",
+        "maleVariant": "Umm...",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a66c78dbe2d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a66c78dbe2d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1902427987491233792",
+        "femaleVariant": "Forgot myself a bit, huh?",
+        "maleVariant": "Forgot myself a bit, huh?",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a66c82cd52d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a66c82cd52d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "1811499757478633472",
+        "femaleVariant": "Can't say I do.",
+        "maleVariant": "Can't say I do.",
+        "female_vo_path": "base/{}/vo/v_sq023_f_1923bd6e83386000.wem",
+        "male_vo_path": "base/{}/vo/v_sq023_m_1923bd6e83386000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq023/sq023_04_glorias_house"
+    },
+    {
+        "stringId": "1896726950381236224",
+        "femaleVariant": "Your wish is our command...",
+        "maleVariant": "Your wish is our command...",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a52871cb1623000.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a52871cb1623000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1896726949961805840",
+        "femaleVariant": "Oh? And what did you have in mind?",
+        "maleVariant": "Oh? And what did you have in mind?",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871c98623010.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871c98623010.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1913968240093896704",
+        "femaleVariant": "Careful, you can't know what I'd wish for\u2026",
+        "maleVariant": "Careful, you can't know what I'd wish for\u2026",
+        "female_vo_path": "base/{}/vo/panam_sq004_m_1a8fc7f9462d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_m_1a8fc7f9462d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "3343379596644360192",
+        "femaleVariant": "Not all of 'em, clearly.",
+        "maleVariant": "Not all of 'em, clearly.",
+        "female_vo_path": "ep1/{}/vo/v_sts_ep1_01_f_2e6612077746a000.wem",
+        "male_vo_path": "ep1/{}/vo/v_sts_ep1_01_m_2e6612077746a000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_01_anderson_saved"
+    },
+    {
+        "stringId": "1665067044190154752",
+        "femaleVariant": "Pfff. Ooo-K.",
+        "maleVariant": "Pfff. Ooo-K.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_171b81a7a029f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_171b81a7a029f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_07_ghost_town_drive"
+    },
+    {
+        "stringId": "1883866768744402944",
+        "femaleVariant": "Well, watch out, now.",
+        "maleVariant": "Well, watch out, now.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a24d6d8532c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_m_1a24d6d8532c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_06_panzer"
+    },
+    {
+        "stringId": "1653519333661995008",
+        "femaleVariant": "Ooo-K, then.",
+        "maleVariant": "Ooo-K, then.",
+        "female_vo_path": "base/{}/vo/v_q103_f_16f27b12c029f000.wem",
+        "male_vo_path": "base/{}/vo/v_q103_m_16f27b12c029f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06_meet_panam"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "1902428222087045120",
+        "femaleVariant": "Maybe a little.",
+        "maleVariant": "Maybe a little.",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a66c863742d2000.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a66c863742d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1756117848176992288",
+        "femaleVariant": "You know\u2026 fine. Fuck off.",
+        "maleVariant": "You know\u2026 fine. Fuck off.",
+        "female_vo_path": "base/{}/vo/panam_q115_f_185efbe0ec502020.wem",
+        "male_vo_path": "base/{}/vo/panam_q115_m_185efbe0ec502020.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/q115/q115_02b_ripperdoc_roof"
+    },
+    {
+        "stringId": "1918384511778512896",
+        "femaleVariant": "Oh, well, guess I'll have to make it up to you, won't I?",
+        "maleVariant": "Oh, well, uh... I guess I'll have to make it up to ya, won't I?",
+        "female_vo_path": "base/{}/vo/v_sq030_f_1a9f788ca72b6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq030_m_1a9f788ca72b6000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/sq030/sq030_11_morning"
+    },
+    {
+        "stringId": "1896726950347681808",
+        "femaleVariant": "Oh, it's fine, truly. Don't let it worry you.",
+        "maleVariant": "Oh, it's fine, truly. Don't let it worry you.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871caf623010.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871caf623010.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1325616690627239936",
+        "femaleVariant": "And that's it?",
+        "maleVariant": "And that's it?",
+        "female_vo_path": "base/{}/vo/v_sq026_f_1265895b512a6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq026_m_1265895b512a6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq026/sq026_08_plan"
+    },
+    {
+        "stringId": "1672374186035245056",
+        "femaleVariant": "No. I'll be going again soon. We'll talk next time.",
+        "maleVariant": "No. I'll be going again soon. We'll talk next time.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_173577762a29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_173577762a29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06b_nomad_camp"
+    },
+    {
+        "stringId": "1882357240966172672",
+        "femaleVariant": "Try followin' the impulse next time.",
+        "maleVariant": "Try followin' the impulse next time.",
+        "female_vo_path": "base/{}/vo/v_sq027_f_1a1f79f0002c5000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_1a1f79f0002c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "1885220225346719744",
+        "femaleVariant": "Do you know what, V? Fuck you.",
+        "maleVariant": "Do you know what, V? Fuck you.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a29a5ce7f2c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1a29a5ce7f2c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_03a_holocall_panam_betrayed"
+    },
+    {
+        "stringId": "1244953896827949056",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "male_vo_path": "base/{}/vo/t_bug_q001_f_1146f6f91e2b1000.wem",
+        "quest_path": "NOTHING"
+    },
+    {
+        "stringId": "3337716898021597184",
+        "femaleVariant": "Sleep OK? Night all right?",
+        "maleVariant": "Sleep OK? Night all right?",
+        "female_vo_path": "ep1/{}/vo/v_q302_f_2e51f3d5b3656000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q302_m_2e51f3d5b3656000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q302/q302_04_squot"
+    },
+    {
+        "stringId": "1897947472158928900",
+        "femaleVariant": "Well, I slept like a puppy. That's a cozy shoulder you have there.",
+        "maleVariant": "Well, I slept like a puppy. That's a cozy shoulder you have there.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b90623004.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b90623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1489317527395364864",
+        "femaleVariant": "I don't want you to disappear. Not now. I need you.",
+        "maleVariant": "I don't want you to disappear. Not now. I need you.",
+        "female_vo_path": "base/{}/vo/v_q203_f_14ab1e668229f000.wem",
+        "male_vo_path": "base/{}/vo/v_q203_m_14ab1e668229f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_02c_judy"
+    },
+    {
+        "stringId": "1897947472175706132",
+        "femaleVariant": "It's too bad I better get rolling in a minute.",
+        "maleVariant": "It's too bad I better get rolling in a minute.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b91623014.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b91623014.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1425944395297480704",
+        "femaleVariant": "Well... all right, then. You're the boss.",
+        "maleVariant": "Well... all right, then. You're the boss.",
+        "female_vo_path": "base/{}/vo/v_sq030_f_13c9f8df5f2a6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq030_m_13c9f8df5f2a6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq030/sq030_09_pier"
+    },
+    {
+        "stringId": "1897947471672389636",
+        "femaleVariant": "Take care of yourself.",
+        "maleVariant": "Take care of yourself.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b73623004.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b73623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1897947471672389648",
+        "femaleVariant": "You, too, Panam.",
+        "maleVariant": "You, too, Panam.",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a56dd2b73623010.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a56dd2b73623010.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1135665365313150992",
+        "femaleVariant": "",
+        "maleVariant": "",
+        "female_vo_path": "base/{}/vo/jackie_q001_f_0fc2b1a1fb346010.wem",
+        "male_vo_path": "base/{}/vo/jackie_q001_f_0fc2b1a1fb346010.wem",
+        "quest_path": "NOTHING"
+    }
+]

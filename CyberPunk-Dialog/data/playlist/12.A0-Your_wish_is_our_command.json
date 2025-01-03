@@ -1,0 +1,98 @@
+[
+    {
+        "stringId": "1735857606826433",
+        "femaleVariant": "[Toucher] Non, pas du tout.",
+        "maleVariant": "[Toucher] Non, pas du tout.",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1811499757478633472",
+        "femaleVariant": "Non, pas du tout.",
+        "maleVariant": "Non, pas du tout.",
+        "female_vo_path": "base/{}/vo/v_sq023_f_1923bd6e83386000.wem",
+        "male_vo_path": "base/{}/vo/v_sq023_m_1923bd6e83386000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq023/sq023_04_glorias_house"
+    },
+    {
+        "stringId": "1896726950381236224",
+        "femaleVariant": "Vos d\u00e9sirs\u2026 sont des ordres.",
+        "maleVariant": "Vos d\u00e9sirs\u2026 sont des ordres.",
+        "female_vo_path": "base/{}/vo/v_sq004_f_1a52871cb1623000.wem",
+        "male_vo_path": "base/{}/vo/v_sq004_m_1a52871cb1623000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1896726949961805840",
+        "femaleVariant": "Oh\u00a0? Et \u00e0 quoi tu penses exactement\u00a0?",
+        "maleVariant": "Oh\u00a0? Et \u00e0 quoi tu penses exactement\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a52871c98623010.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a52871c98623010.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "1913968240093896704",
+        "femaleVariant": "M\u00e9fie-toi, tu connais pas mes d\u00e9sirs\u2026",
+        "maleVariant": "M\u00e9fie-toi, tu connais pas mes d\u00e9sirs\u2026",
+        "female_vo_path": "base/{}/vo/panam_sq004_m_1a8fc7f9462d2000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_m_1a8fc7f9462d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_08_farm"
+    },
+    {
+        "stringId": "3343379596644360192",
+        "femaleVariant": "Pas tous, on dirait.",
+        "maleVariant": "Pas tous, on dirait.",
+        "female_vo_path": "ep1/{}/vo/v_sts_ep1_01_f_2e6612077746a000.wem",
+        "male_vo_path": "ep1/{}/vo/v_sts_ep1_01_m_2e6612077746a000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_01_anderson_saved"
+    },
+    {
+        "stringId": "1665067044190154752",
+        "femaleVariant": "Pfff. OOOK.",
+        "maleVariant": "Pfff. OOOK.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_171b81a7a029f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_171b81a7a029f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_07_ghost_town_drive"
+    },
+    {
+        "stringId": "1735148577111890",
+        "femaleVariant": "Les v\u00eatements disparaissent pendant qu'on entend Panam dire sa derni\u00e8re phrase",
+        "maleVariant": "Les v\u00eatements disparaissent pendant qu'on entend Panam dire sa derni\u00e8re phrase",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1883866768744402944",
+        "femaleVariant": "Eh ben, pr\u00e9pare-toi.",
+        "maleVariant": "Eh ben, pr\u00e9pare-toi.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a24d6d8532c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_m_1a24d6d8532c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_06_panzer"
+    },
+    {
+        "stringId": "1735148591380400",
+        "femaleVariant": "Ils sont nus sur la derni\u00e8re phrase de  V",
+        "maleVariant": "Ils sont nus sur la derni\u00e8re phrase de  V",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1735148603319961",
+        "femaleVariant": "[Explicit activities] Ouh, OK.",
+        "maleVariant": "[Explicit activities] Ouh, OK.",
+        "female_vo_path": "ACTION",
+        "male_vo_path": "ACTION",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1653519333661995008",
+        "femaleVariant": "Ouh, OK.",
+        "maleVariant": "Ouh, OK.",
+        "female_vo_path": "base/{}/vo/v_q103_f_16f27b12c029f000.wem",
+        "male_vo_path": "base/{}/vo/v_q103_m_16f27b12c029f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06_meet_panam"
+    }
+]

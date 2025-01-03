@@ -1,0 +1,26 @@
+[
+    {
+        "stringId": "3337716898021597184",
+        "femaleVariant": "Sleep OK? Night all right?",
+        "maleVariant": "Sleep OK? Night all right?",
+        "female_vo_path": "ep1/{}/vo/v_q302_f_2e51f3d5b3656000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q302_m_2e51f3d5b3656000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q302/q302_04_squot"
+    },
+    {
+        "stringId": "1897947472158928900",
+        "femaleVariant": "Well, I slept like a puppy. That's a cozy shoulder you have there.",
+        "maleVariant": "Well, I slept like a puppy. That's a cozy shoulder you have there.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b90623004.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b90623004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1489317527395364864",
+        "femaleVariant": "I don't want you to disappear. Not now. I need you.",
+        "maleVariant": "I don't want you to disappear. Not now. I need you.",
+        "female_vo_path": "base/{}/vo/v_q203_f_14ab1e668229f000.wem",
+        "male_vo_path": "base/{}/vo/v_q203_m_14ab1e668229f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q203/q203_02c_judy"
+    }
+]

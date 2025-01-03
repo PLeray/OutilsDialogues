@@ -1,0 +1,74 @@
+Id: 1764924610551656448	v:  C'est sympa ici. Très classe.
+Id: 3508383082195644416	panam:  Y a plutôt intérêt, ouais.
+Id: 1603775379811201036	v:  
+Id: 4136691981871419464	panam:  Héé, génial !
+Id: 1729876797939675136	v:  Putain ouais, carrément.
+Id: 1995306323030814720	panam:  Wouaah... je sens déjà le stress qui retombe.
+Id: 1896726949659815960	panam:  Quand tu passes tes journées et tes nuits sur la route, ton cul finit par fusionner avec le siège. Et t'en oublies ce que c'est, le confort.
+Id: 2262118194987360264	v:  Hé hé.
+Id: 1380579642278801408	v:  Je crois savoir ce que tu ressens.
+Id: 1244953896827949056	t:  
+Id: 2243448137760657408	panam:  Tu veux rien dire ?
+Id: 1756117848076328972	panam:  Bon, qu'est-ce qui se passe ?
+Id: 1999491326695567360	v:  Panam… je…
+Id: 1824363443233878016	v:  Non, ça m'a fait penser à Jackie, c'est tout. Et au casse d'Arasaka. J'ai pas besoin de te rappeler comment ça a fini.
+Id: 1663771767365918720	v:  C'était y a pas si longtemps…
+Id: 1680562800159121408	v:  Putain… Putain de merde !
+Id: 1947414952367747072	panam:  Ça va, V, calme-toi. Vas-y par étapes. Qu'est-ce qui se passe exactement ?
+Id: 1664681160034967552	v:  J'ai fait confiance à quelqu'un et il m'a baisé la gueule. Ça s'arrête là.
+Id: 1947486841144471552	panam:  V, écoute-moi.
+Id: 1947490954582290432	panam:  Tu peux me dire n'importe quoi, ça changera rien à ce que j…
+Id: 1663801887585689600	v:  Je crois qu'en fait… j'ai… tout bêtement peur. Alors, j'imagine toutes ces choses pour pas… pour pas… penser au néant.
+Id: 1882238917184081920	panam:  Écoute, V… Je…
+Id: 1882203350962556928	panam:  Désolée. Je... je suis pas très douée... pour parler de mes sentiments et... du reste.
+Id: 1244953896827949056	t:  
+Id: 2004115945133412368	v:  Je serai mort dans quelques mois, pas vrai ?
+Id: 1947378274454335488	panam:  C'est des conneries, ça. T'en sais rien.
+Id: 3292616320855941120	v:  L'avenir nous le dira, pas vrai ?
+Id: 1825427900278108160	panam:  T'es avec moi, maintenant. On va trouver un moyen de s'occuper de cette saloperie que t'as dans la tête.
+Id: 1244953896827949056	t:  
+Id: 1960480434246791192	v:  Je peux rien prévoir pour l'avenir. Parce que… y a ce truc…
+Id: 1947378274454335488	panam:  C'est des conneries, ça. T'en sais rien.
+Id: 1793776528441077760	v:  Euh… ouais… On verra. Tu sais comment je vais.
+Id: 1695211830603542528	panam:  Putain de tête de mule.
+Id: 1244953896827949056	t:  
+Id: 1663798481894727680	v:  Mais… si je dois crever, je veux qu'on se souvienne de moi. Même une note de bas de page, ça me suffirait.
+Id: 1795150223197728768	panam:  Je t'oublierai jamais, V. Jamais.
+Id: 1775205447997132800	v:  Oh, arrête.
+Id: 1877858746209595392	v:  T'inquiète. Je suis pas encore mort.
+Id: 1873771997317320704	panam:  V…
+Id: 1708241921529139200	panam:  Merde. C'était pas censé se passer comme ça, j'imagine ?
+Id: 1793778635877699588	v:  Viens là.
+Id: 1854803273415729152	panam:  Hé…
+Id: 1244953896827949056	t:  
+Id: 1913074409953632256	panam:  Huuum, ça pourrait pas être mieux.
+Id: 1913073066920714240	v:  Vous avez tout ce qu'il vous faut, madame ?
+Id: 1902427304205557760	panam:  Euuh…
+Id: 1902427987491233792	panam:  Je me mets un peu trop à l'aise ?
+Id: 1244953896827949056	t:  
+Id: 1811499757478633472	v:  Non, pas du tout.
+Id: 1896726950381236224	v:  Vos désirs… sont des ordres.
+Id: 1896726949961805840	panam:  Oh ? Et à quoi tu penses exactement ?
+Id: 1913968240093896704	panam:  Méfie-toi, tu connais pas mes désirs…
+Id: 3343379596644360192	v:  Pas tous, on dirait.
+Id: 1665067044190154752	panam:  Pfff. OOOK.
+Id: 1883866768744402944	panam:  Eh ben, prépare-toi.
+Id: 1653519333661995008	v:  Ouh, OK.
+Id: 1244953896827949056	t:  
+Id: 1902428222087045120	v:  Peut-être un peu.
+Id: 1756117848176992288	panam:  OK. Tu sais quoi ? Je t'emmerde.
+Id: 1918384511778512896	v:  Oh mince, je vais devoir me faire pardonner alors ?
+Id: 1896726950347681808	panam:  Non, c'est bon, t'inquiète. T'en fais pas pour ça.
+Id: 1325616690627239936	v:  Et c'est tout ?
+Id: 1672374186035245056	panam:  Nan, je vais pas traîner. On se parlera la prochaine fois.
+Id: 1882357240966172672	v:  La prochaine fois, essaie de suivre tes pulsions.
+Id: 1885220225346719744	panam:  Tu sais quoi, V ? Va te faire foutre.
+Id: 1244953896827949056	t:  
+Id: 3337716898021597184	v:  Bien dormi, cette nuit ? Ça a été ?
+Id: 1897947472158928900	panam:  Moi, j'ai dormi comme un loir. Ton épaule est super confortable.
+Id: 1489317527395364864	v:  Je veux pas que tu partes. Pas maintenant. J'ai besoin de toi.
+Id: 1897947472175706132	panam:  Roh… C'est trop con que je doive reprendre la route.
+Id: 1425944395297480704	v:  Bon… OK, OK. C'est toi la chef.
+Id: 1897947471672389636	panam:  Prends bien soin de toi.
+Id: 1897947471672389648	v:  Toi aussi, Panam.
+Id: 1135665365313150992	jackie:  

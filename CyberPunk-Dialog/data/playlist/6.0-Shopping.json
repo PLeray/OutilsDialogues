@@ -1,0 +1,394 @@
+[
+    {
+        "stringId": "1735567787641759",
+        "femaleVariant": "Panam et V font du shopping dans une boutique du centre ville.",
+        "maleVariant": "Panam et V font du shopping dans une boutique du centre ville.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1885355494001319940",
+        "femaleVariant": "Je me suis toujours demand\u00e9 ce que \u00e7a faisait de d\u00e9penser des fortunes en v\u00eatements.",
+        "maleVariant": "Je me suis toujours demand\u00e9 ce que \u00e7a faisait de d\u00e9penser des fortunes en v\u00eatements.",
+        "female_vo_path": "base/{}/vo/v_downtown_f_1a2a20d52f47a004.wem",
+        "male_vo_path": "base/{}/vo/v_downtown_m_1a2a20d52f47a004.wem",
+        "quest_path": "base/{}/subtitles/open_world/vendors/cct_dtn_cloth_01"
+    },
+    {
+        "stringId": "3334548829030125576",
+        "femaleVariant": "Qu'est-ce que vous voulez\u00a0?",
+        "maleVariant": "Qu'est-ce que vous voulez\u00a0?",
+        "female_vo_path": "ep1/{}/vo/georgina_zembinsky_ow_vsets_sts_chars_f_2e46b27e28891008.wem",
+        "male_vo_path": "ep1/{}/vo/georgina_zembinsky_ow_vsets_sts_chars_f_2e46b27e28891008.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/voicesets/vset_sts_ep1_06_georgina"
+    },
+    {
+        "stringId": "1751768568301694976",
+        "femaleVariant": "Vous auriez quelque chose d'un peu\u2026 original\u00a0?",
+        "maleVariant": "Vous auriez quelque chose d'un peu\u2026 original\u00a0?",
+        "female_vo_path": "base/{}/vo/v_glen_f_184f883b4a513000.wem",
+        "male_vo_path": "base/{}/vo/v_glen_m_184f883b4a513000.wem",
+        "quest_path": "base/{}/subtitles/open_world/vendors/hey_gle_gunsmith_01"
+    },
+    {
+        "stringId": "3366438933452214272",
+        "femaleVariant": "Allez-y, regardez.",
+        "maleVariant": "Allez-y, regardez.",
+        "female_vo_path": "ep1/{}/vo/georgina_zembinsky_sts_ep1_06_f_2eb7fe5fb276d000.wem",
+        "male_vo_path": "ep1/{}/vo/georgina_zembinsky_sts_ep1_06_f_2eb7fe5fb276d000.wem",
+        "quest_path": "ep1/{}/subtitles/open_world/street_stories/sts_ep1_06_george"
+    },
+    {
+        "stringId": "1892222636108042240",
+        "femaleVariant": "OK. Merci.",
+        "maleVariant": "OK. Merci.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1a4286764d2c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1a4286764d2c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "1775130878825271296",
+        "femaleVariant": "On trouvera s\u00fbrement quelque chose \u00e0 ton go\u00fbt.",
+        "maleVariant": "On trouvera s\u00fbrement quelque chose \u00e0 ton go\u00fbt.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_18a2882116351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_18a2882116351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "3281644813173936128",
+        "femaleVariant": "\u00c7a fait partie du plan. Vas-y, tu vas assurer.",
+        "maleVariant": "\u00c7a fait partie du plan. Vas-y, tu vas assurer.",
+        "female_vo_path": "ep1/{}/vo/v_mq303_f_2d8abe92183c5000.wem",
+        "male_vo_path": "ep1/{}/vo/v_mq303_m_2d8abe92183c5000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/mq303/mq303_03_finale"
+    },
+    {
+        "stringId": "1735576178488210",
+        "femaleVariant": "Panam rentre dans cabine essayage et ressort avec une tenue diff\u00e9rente.",
+        "maleVariant": "Panam rentre dans cabine essayage et ressort avec une tenue diff\u00e9rente.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "4136131667467493376",
+        "femaleVariant": "Alors\u00a0?",
+        "maleVariant": "Alors\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_39667dd65fa4e000.wem",
+        "male_vo_path": "base/{}/vo/panam_mq055_01_megabuilding_f_39667dd65fa4e000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_05_downtown"
+    },
+    {
+        "stringId": "1653452276438265856",
+        "femaleVariant": "T'as pas l'air super emball\u00e9e.",
+        "maleVariant": "T'as pas l'air super emball\u00e9e.",
+        "female_vo_path": "base/{}/vo/v_q103_f_16f23e15c629f000.wem",
+        "male_vo_path": "base/{}/vo/v_q103_m_16f23e15c629f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06_meet_panam"
+    },
+    {
+        "stringId": "1897947472192483344",
+        "femaleVariant": "C'est pas du tout mon style, non.",
+        "maleVariant": "C'est pas du tout mon style, non.",
+        "female_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b92623010.wem",
+        "male_vo_path": "base/{}/vo/panam_sq004_f_1a56dd2b92623010.wem",
+        "quest_path": "base/{}/subtitles/quest/sq004/sq004_09_morning_after"
+    },
+    {
+        "stringId": "1675172672626331648",
+        "femaleVariant": "Non... c'est vrai.",
+        "maleVariant": "Non... c'est vrai.",
+        "female_vo_path": "base/{}/vo/v_kabuki_f_173f68ab99559000.wem",
+        "male_vo_path": "base/{}/vo/v_kabuki_m_173f68ab99559000.wem",
+        "quest_path": "base/{}/subtitles/open_world/street_stories/sts_wat_kab_04_give_the_shard"
+    },
+    {
+        "stringId": "1683802107090169856",
+        "femaleVariant": "Non. Mais merci de me le rappeler.",
+        "maleVariant": "Non. Mais merci de me le rappeler.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_175e11186129f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_175e11186129f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "1812369647419912192",
+        "femaleVariant": "Bon. On va trouver autre chose, alors.",
+        "maleVariant": "Bon. On va trouver autre chose, alors.",
+        "female_vo_path": "base/{}/vo/v_sq017_f_1926d4978c29f000.wem",
+        "male_vo_path": "base/{}/vo/v_sq017_m_1926d4978c29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq017/sq017_08_club_outside"
+    },
+    {
+        "stringId": "1735576178488210",
+        "femaleVariant": "Panam rentre dans cabine essayage et ressort avec une tenue diff\u00e9rente.",
+        "maleVariant": "Panam rentre dans cabine essayage et ressort avec une tenue diff\u00e9rente.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "2227484015307866112",
+        "femaleVariant": "Alors\u00a0? Qu'est-ce que t'en dis\u00a0? Impressionnant, hein\u00a0?",
+        "maleVariant": "Alors\u00a0? Qu'est-ce que t'en dis\u00a0? Impressionnant, hein\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_1ee99ce903494000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_1ee99ce903494000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_06_panzer"
+    },
+    {
+        "stringId": "3541690023801974784",
+        "femaleVariant": "Oh... Je m'attendais pas \u00e0 \u00e7a...",
+        "maleVariant": "Euh... Je m'attendais pas \u00e0 \u00e7a...",
+        "female_vo_path": "ep1/{}/vo/v_q305_f_31269c4fdd42f000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q305_m_31269c4fdd42f000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q305/q305_11_border_crossing"
+    },
+    {
+        "stringId": "1692215973608288256",
+        "femaleVariant": "Mhm. OK\u2026",
+        "maleVariant": "Mhm. OK\u2026",
+        "female_vo_path": "base/{}/vo/panam_q104_f_177bf5765629f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_177bf5765629f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_01b_calibration"
+    },
+    {
+        "stringId": "2005624070852964352",
+        "femaleVariant": "Eh ben, on va changer \u00e7a.",
+        "maleVariant": "Eh ben, on va changer \u00e7a.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_1bd568775829f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_1bd568775829f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_07_ghost_town_drive"
+    },
+    {
+        "stringId": "1811747013125754880",
+        "femaleVariant": "Bien d'accord.",
+        "maleVariant": "Bien d'accord.",
+        "female_vo_path": "base/{}/vo/v_mq001_f_19249e4f343c5000.wem",
+        "male_vo_path": "base/{}/vo/v_mq001_m_19249e4f343c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq001/mq001_03_cliff"
+    },
+    {
+        "stringId": "1735576178488210",
+        "femaleVariant": "Panam rentre dans cabine essayage et ressort avec une tenue diff\u00e9rente.",
+        "maleVariant": "Panam rentre dans cabine essayage et ressort avec une tenue diff\u00e9rente.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1755993001967464448",
+        "femaleVariant": "Regarde \u00e7a.",
+        "maleVariant": "Regarde \u00e7a.",
+        "female_vo_path": "base/{}/vo/panam_q104_f_185e8a54e657b000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_185e8a54e657b000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_01a_roadhouse_meeting"
+    },
+    {
+        "stringId": "1675013408091414528",
+        "femaleVariant": "Wouah\u2026 Eh ben, on dirait que \u00e7a va le faire.",
+        "maleVariant": "Wouah\u2026 Eh ben, on dirait que \u00e7a va le faire.",
+        "female_vo_path": "base/{}/vo/v_q000_f_173ed7d1ef4e2000.wem",
+        "male_vo_path": "base/{}/vo/v_q000_m_173ed7d1ef4e2000.wem",
+        "quest_path": "base/{}/subtitles/quest/q000/q000_kid_02a_confront_jackie"
+    },
+    {
+        "stringId": "1811043757042503680",
+        "femaleVariant": "Non.",
+        "maleVariant": "Non.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_19221eb3a3351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_19221eb3a3351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_06_panzer"
+    },
+    {
+        "stringId": "1866251367616770048",
+        "femaleVariant": "Hmmm\u2026",
+        "maleVariant": "Hmmm\u2026",
+        "female_vo_path": "base/{}/vo/v_q001_f_19e641bb24627000.wem",
+        "male_vo_path": "base/{}/vo/v_q001_m_19e641bb24627000.wem",
+        "quest_path": "base/{}/subtitles/quest/q001/q001_00d_leaving"
+    },
+    {
+        "stringId": "1735576178488210",
+        "femaleVariant": "Panam rentre dans cabine essayage et ressort avec une tenue diff\u00e9rente.",
+        "maleVariant": "Panam rentre dans cabine essayage et ressort avec une tenue diff\u00e9rente.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1522962024273809408",
+        "femaleVariant": "Alors\u00a0? Une vraie beaut\u00e9, tu trouves pas\u00a0?",
+        "maleVariant": "Alors\u00a0? Une vraie beaut\u00e9, tu trouves pas\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q103_f_1522a5e45f401000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_1522a5e45f401000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_10_escape"
+    },
+    {
+        "stringId": "1816936212278161408",
+        "femaleVariant": "Euh, ouais.",
+        "maleVariant": "Euh, ouais.",
+        "female_vo_path": "base/{}/vo/v_mq040_f_19370ddbc8623000.wem",
+        "male_vo_path": "base/{}/vo/v_mq040_m_19370ddbc8623000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq040/mq040_03_ripperdoc"
+    },
+    {
+        "stringId": "1788525976506617860",
+        "femaleVariant": "Tant pis.",
+        "maleVariant": "Tant pis.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_18d21ee64d3c5004.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_18d21ee64d3c5004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_06_panzer"
+    },
+    {
+        "stringId": "1922861132602429440",
+        "femaleVariant": "J'aimerais en essayer une autre.",
+        "maleVariant": "J'aimerais en essayer une autre.",
+        "female_vo_path": "base/{}/vo/v_mq014_f_1aaf6003292c5000.wem",
+        "male_vo_path": "base/{}/vo/v_mq014_m_1aaf6003292c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq014/mq014_05_third"
+    },
+    {
+        "stringId": "1692261696034959360",
+        "femaleVariant": "Attends un peu, tu vas voir.",
+        "maleVariant": "Attends un peu, tu vas voir.",
+        "female_vo_path": "base/{}/vo/panam_q104_f_177c1f0beb29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_177c1f0beb29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_01b_calibration"
+    },
+    {
+        "stringId": "1735576178488210",
+        "femaleVariant": "Panam rentre dans cabine essayage et ressort avec une tenue diff\u00e9rente.",
+        "maleVariant": "Panam rentre dans cabine essayage et ressort avec une tenue diff\u00e9rente.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1824162933980508160",
+        "femaleVariant": "Bah alors, qu'est-ce que t'en penses\u00a0?",
+        "maleVariant": "Bah alors, qu'est-ce que t'en penses\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q104_f_1950ba860c57b000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_1950ba860c57b000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_01a_roadhouse_meeting"
+    },
+    {
+        "stringId": "1990837708660744192",
+        "femaleVariant": "Euh\u2026",
+        "maleVariant": "Euh\u2026",
+        "female_vo_path": "base/{}/vo/v_q005_f_1ba0e0591e2d2000.wem",
+        "male_vo_path": "base/{}/vo/v_q005_m_1ba0e0591e2d2000.wem",
+        "quest_path": "base/{}/subtitles/quest/q005/q005_05_hotel_fluff"
+    },
+    {
+        "stringId": "3369417742426554368",
+        "femaleVariant": "Tu sais tr\u00e8s bien que c'est parfait.",
+        "maleVariant": "Tu sais tr\u00e8s bien que c'est parfait.",
+        "female_vo_path": "ep1/{}/vo/v_q307_f_2ec29395b53bc000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q307_m_2ec29395b53bc000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q307/q307_04_cabride"
+    },
+    {
+        "stringId": "1751740062114639872",
+        "femaleVariant": "Alors\u00a0? Qu'est-ce que \u00e7a te fait\u00a0?",
+        "maleVariant": "Alors\u00a0? Qu'est-ce que \u00e7a te fait\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q104_f_184f6e4e2d29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q104_f_184f6e4e2d29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q104/q104_02_av_shotdown"
+    },
+    {
+        "stringId": "1835559903367393280",
+        "femaleVariant": "Ah ! Des fois, je me demande si je verrai quelque chose de plus beau.",
+        "maleVariant": "Ah ! Des fois, je me demande si je verrai quelque chose de plus beau.",
+        "female_vo_path": "base/{}/vo/v_sq017_f_19793801c429f000.wem",
+        "male_vo_path": "base/{}/vo/v_sq017_m_19793801c429f000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq017/sq017_18_premiere"
+    },
+    {
+        "stringId": "1662052409916649472",
+        "femaleVariant": "La ferme, V.",
+        "maleVariant": "La ferme, V.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_1710cbdc6329f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_1710cbdc6329f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_06b_nomad_camp"
+    },
+    {
+        "stringId": "2262118194987360264",
+        "femaleVariant": "H\u00e9 h\u00e9.",
+        "maleVariant": "H\u00e9 h\u00e9.",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1f64a8835c2b6008.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1f64a8835c2b6008.wem",
+        "quest_path": "base/{}/subtitles/quest/vset/vset_v"
+    },
+    {
+        "stringId": "1837354992280588288",
+        "femaleVariant": "Et la veste\u00a0? Elle est pas trop serr\u00e9e\u00a0?",
+        "maleVariant": "Et la veste\u00a0? Elle est pas trop serr\u00e9e\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q114_f_197f98a1792cd000.wem",
+        "male_vo_path": "base/{}/vo/panam_q114_f_197f98a1792cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_04_initiation"
+    },
+    {
+        "stringId": "1964609328105779200",
+        "femaleVariant": "Non, pas du tout.",
+        "maleVariant": "Non, pas du tout.",
+        "female_vo_path": "base/{}/vo/v_q004_f_1b43b1c66429f000.wem",
+        "male_vo_path": "base/{}/vo/v_q004_m_1b43b1c66429f000.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/q004/q004_02_meeting_evelyn"
+    },
+    {
+        "stringId": "1995398049167962112",
+        "femaleVariant": "Bon, ben c'est r\u00e9gl\u00e9, alors.",
+        "maleVariant": "Bon, ben c'est r\u00e9gl\u00e9, alors.",
+        "female_vo_path": "base/{}/vo/panam_q103_f_1bb113f42229f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_1bb113f42229f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_15_roadhouse_bar"
+    },
+    {
+        "stringId": "1735832194237069",
+        "femaleVariant": "Panam et V sortent de la boutique du centre ville.",
+        "maleVariant": "Panam et V sortent de la boutique du centre ville.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "1782235166898720768",
+        "femaleVariant": "Merci, V.",
+        "maleVariant": "Merci, V.",
+        "female_vo_path": "base/{}/vo/panam_sq027_f_18bbc5710d351000.wem",
+        "male_vo_path": "base/{}/vo/panam_sq027_f_18bbc5710d351000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_02_panam_and_santiago"
+    },
+    {
+        "stringId": "1976682908473905152",
+        "femaleVariant": "Pas de probl\u00e8me. \u00c7a m'a fait plaisir.",
+        "maleVariant": "Pas de probl\u00e8me. \u00c7a m'a fait plaisir.",
+        "female_vo_path": "base/{}/vo/v_sq011_f_1b6e96a1e12c5000.wem",
+        "male_vo_path": "base/{}/vo/v_sq011_m_1b6e96a1e12c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq011/sq011_07b_thugs"
+    },
+    {
+        "stringId": "1760908046978736128",
+        "femaleVariant": "On y va\u00a0?",
+        "maleVariant": "On y va\u00a0?",
+        "female_vo_path": "base/{}/vo/v_sq031_f_18700089fe4b6000.wem",
+        "male_vo_path": "base/{}/vo/v_sq031_m_18700089fe4b6000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq031/sq031_07_cinema"
+    },
+    {
+        "stringId": "1684852624365056000",
+        "femaleVariant": "C'est parti pour le show\u00a0!",
+        "maleVariant": "C'est parti pour le show\u00a0!",
+        "female_vo_path": "base/{}/vo/panam_q103_f_1761cc88fe29f000.wem",
+        "male_vo_path": "base/{}/vo/panam_q103_f_1761cc88fe29f000.wem",
+        "quest_path": "base/{}/subtitles/quest/q103/q103_09_raffen_shiv"
+    },
+    {
+        "stringId": "1735583834222710",
+        "femaleVariant": "Panam et V auront la tenue selectionn\u00e9e en arrivant au Konpeki.",
+        "maleVariant": "Panam et V auront la tenue selectionn\u00e9e en arrivant au Konpeki.",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    }
+]

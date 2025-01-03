@@ -1,0 +1,26 @@
+[
+    {
+        "stringId": "1735146120956956",
+        "femaleVariant": "Apr\u00e8s un temps sans rien dire\u2026",
+        "maleVariant": "Apr\u00e8s un temps sans rien dire\u2026",
+        "female_vo_path": "COMMENT",
+        "male_vo_path": "COMMENT",
+        "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"
+    },
+    {
+        "stringId": "2243448137760657408",
+        "femaleVariant": "Tu veux rien dire\u00a0?",
+        "maleVariant": "Tu veux rien dire\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q114_f_1f225431eb3c5000.wem",
+        "male_vo_path": "base/{}/vo/panam_q114_f_1f225431eb3c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_05_quiet_place"
+    },
+    {
+        "stringId": "1756117848076328972",
+        "femaleVariant": "Bon, qu'est-ce qui se passe\u00a0?",
+        "maleVariant": "Bon, qu'est-ce qui se passe\u00a0?",
+        "female_vo_path": "base/{}/vo/panam_q115_f_185efbe0e650200c.wem",
+        "male_vo_path": "base/{}/vo/panam_q115_m_185efbe0e650200c.wem",
+        "quest_path": "ep1/{}/subtitles/overlays_quest/q115/q115_02b_ripperdoc_roof"
+    }
+]

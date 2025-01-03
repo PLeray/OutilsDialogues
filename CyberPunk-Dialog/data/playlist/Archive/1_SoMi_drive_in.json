@@ -1,0 +1,106 @@
+[
+    {
+        "stringId": "3405702543539752968",
+        "femaleVariant": "Hey, V.",
+        "maleVariant": "Hey, V.",
+        "female_vo_path": "ep1/{}/vo/songbird_quest_1st_chars_vsets_f_2f437c6b4e54d008.wem",
+        "male_vo_path": "ep1/{}/vo/songbird_quest_1st_chars_vsets_f_2f437c6b4e54d008.wem",
+        "quest_path": "ep1/{}/subtitles/quest/vset/vset_songbird"
+    },
+    {
+        "stringId": "3241600467335311360",
+        "femaleVariant": "So Mi? That you?",
+        "maleVariant": "So Mi? That you?",
+        "female_vo_path": "ep1/{}/vo/v_q305_f_2cfc7a734742f000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q305_m_2cfc7a734742f000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q305/q305_07_brain_hack"
+    },
+    {
+        "stringId": "3495653735400607744",
+        "femaleVariant": "Not what you expected, huh? Is it the haircut?",
+        "maleVariant": "Not what you expected, huh? Is it the haircut?",
+        "female_vo_path": "ep1/{}/vo/songbird_q303_f_30830e8d34521000.wem",
+        "male_vo_path": "ep1/{}/vo/songbird_q303_f_30830e8d34521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_06_paradise"
+    },
+    {
+        "stringId": "1882306410833530880",
+        "femaleVariant": "Uh-huh, noticed.",
+        "maleVariant": "Uh-huh, noticed.",
+        "female_vo_path": "base/{}/vo/v_sq027_f_1a1f4bb5302c5000.wem",
+        "male_vo_path": "base/{}/vo/v_sq027_m_1a1f4bb5302c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/sq027/sq027_04_preparations_panam"
+    },
+    {
+        "stringId": "1732696322113064960",
+        "femaleVariant": "Really glad to see you.",
+        "maleVariant": "Really glad to see you.",
+        "female_vo_path": "base/{}/vo/v_q202_f_180bc61fef2cd000.wem",
+        "male_vo_path": "base/{}/vo/v_q202_m_180bc61fef2cd000.wem",
+        "quest_path": "base/{}/subtitles/quest/q202/q202_05_convoy"
+    },
+    {
+        "stringId": "1883944586723704836",
+        "femaleVariant": "How are ya?",
+        "maleVariant": "How are ya?",
+        "female_vo_path": "base/{}/vo/v_sq026_f_1a251d9ebc2fc004.wem",
+        "male_vo_path": "base/{}/vo/v_sq026_m_1a251d9ebc2fc004.wem",
+        "quest_path": "base/{}/subtitles/quest/sq026/sq026_08_plan"
+    },
+    {
+        "stringId": "3534951484843233280",
+        "femaleVariant": "It's so good you're here. Don\u2019t know what I\u2019d do without you, V. Really.",
+        "maleVariant": "It's so good you're here. Don\u2019t know what I\u2019d do without you, V. Really.",
+        "female_vo_path": "ep1/{}/vo/songbird_q303_f_310eaba580521000.wem",
+        "male_vo_path": "ep1/{}/vo/songbird_q303_f_310eaba580521000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_06_paradise"
+    },
+    {
+        "stringId": "1691184013965545472",
+        "femaleVariant": "Don't know what to say.",
+        "maleVariant": "Don't know what to say.",
+        "female_vo_path": "base/{}/vo/v_q114_f_17784ae6823c5000.wem",
+        "male_vo_path": "base/{}/vo/v_q114_m_17784ae6823c5000.wem",
+        "quest_path": "base/{}/subtitles/quest/q114/q114_04_initiation"
+    },
+    {
+        "stringId": "3004148466519547904",
+        "femaleVariant": "Lemme try this. Gimme a minute.",
+        "maleVariant": "Lemme try this. Gimme a minute.",
+        "female_vo_path": "ep1/{}/vo/v_q303_f_29b0e11d176ea000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q303_m_29b0e11d176ea000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q303/q303_02_nighthawks"
+    },
+    {
+        "stringId": "2262179492156629000",
+        "femaleVariant": "Mh.",
+        "maleVariant": "Mh.",
+        "female_vo_path": "base/{}/vo/v_vs_vset_delamain_f_1f64e043382b6008.wem",
+        "male_vo_path": "base/{}/vo/v_vs_vset_delamain_m_1f64e043382b6008.wem",
+        "quest_path": "base/{}/subtitles/quest/vset/vset_v"
+    },
+    {
+        "stringId": "3560824361340805120",
+        "femaleVariant": "A beautiful riddle who had the courage to dream big.",
+        "maleVariant": "A beautiful riddle who had the courage to dream big.",
+        "female_vo_path": "ep1/{}/vo/v_q306_f_316a96e3fd46a000.wem",
+        "male_vo_path": "ep1/{}/vo/v_q306_m_316a96e3fd46a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q306/q306_13_epilogue"
+    },
+    {
+        "stringId": "3092733176834334720",
+        "femaleVariant": "Ya mean that?",
+        "maleVariant": "Ya mean that?",
+        "female_vo_path": "ep1/{}/vo/songbird_q306_f_2aeb98703646a000.wem",
+        "male_vo_path": "ep1/{}/vo/songbird_q306_f_2aeb98703646a000.wem",
+        "quest_path": "ep1/{}/subtitles/quest/q306/q306_07_somi_duty_free"
+    },
+    {
+        "stringId": "4158092495416963072",
+        "femaleVariant": "C'mere.",
+        "maleVariant": "C'mere.",
+        "female_vo_path": "base/{}/vo/v_mq055_02_northside_f_39b48318148bb000.wem",
+        "male_vo_path": "base/{}/vo/v_mq055_02_northside_m_39b48318148bb000.wem",
+        "quest_path": "base/{}/subtitles/quest/mq055/mq055_05_downtown"
+    }
+]
