@@ -12,6 +12,7 @@ CyberPunk-Dialog/data/projet/*
 !CyberPunk-Dialog/data/projet/Rendez-vous.json
 !CyberPunk-Dialog/data/projet/Rendez-vous_files/
 
+
 # Ignorer les autres fichiers et dossiers globaux
 CyberPunk-Dialog/userconf.ini
 CyberPunk-Dialog/__pycache__/*
