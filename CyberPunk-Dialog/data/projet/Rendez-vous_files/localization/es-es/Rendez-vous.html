@@ -1,0 +1,851 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Rendez-vous</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #ffffff;
+                    margin: 0;
+                    padding: 20px;
+                }
+                .step-container {
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    border-top: 1px solid #bbbbbb;
+                    background-color: #f4f4f4;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                }
+                .step-title {
+                    font-size: 9px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    position: absolute;
+                    color:  #bbbbbb;
+                    top: 10px;
+                    left: 10px;
+                }
+                .block-container {
+                    display: flex;
+                    justify-content: center;
+                    gap: 100px; /* Augmente l'espacement entre les blocs */
+                    flex-wrap: wrap;
+                }
+                .block {
+                    padding: 10px;
+                    padding-top: 0px;
+                    padding-right: 25px;
+                    border-top: 2px solid #33acff;
+                    border-bottom: 2px solid #33acff;
+                    border-radius: 8px;
+                    background-color: #ffffff;
+                    width: 400px;
+                    text-align: left;
+                    position: relative; /* Permet au bouton d’être positionné par rapport au bloc */
+                }
+                .block-subtitles {
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+                .block-subtitles div {
+                    font-weight: normal;
+                }
+                .block-subtitles div normal {
+                    color:  #444444;
+                }                
+                .block-subtitles div perso {
+                    font-weight: bold;
+                    color:  #33acff;
+                }
+                .block-subtitles div commentaire {
+                    font-weight: normal;
+                    color:  #4b00a0;
+                    font-style: oblique;
+                    display: block; /* S'assure que `commentaire` est traité comme un bloc (comme un paragraphe) */
+                    margin-top: 15px; /* Espace avant le commentaire */
+                    margin-bottom: 15px; /* Espace après le commentaire */
+                }      
+                .block-subtitles div action {
+                    font-weight: normal;
+                    color:  #00598c;
+                    display: block; /* S'assure que `commentaire` est traité comme un bloc (comme un paragraphe) */
+                    margin-top: 15px; /* Espace avant le commentaire */
+                    margin-bottom: 15px; /* Espace après le commentaire */
+                }   
+                .block-subtitles div message-sent {
+                    display: block;
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: 8px;
+                    max-width: 300px;
+                    text-align: left;
+                    word-wrap: break-word;
+                    width: fit-content;                
+                    background-color: #dcf8c6;
+                    margin-left: auto;
+                }  
+                .block-subtitles div message-received {
+                    display: block;
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: 8px;
+                    max-width: 300px;
+                    text-align: left;
+                    word-wrap: break-word;
+                    width: fit-content;                
+                    background-color: #f1f1f1;
+                    margin-right: auto;
+                }                                                                             
+                svg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 10000px; /* Ajusté pour inclure toutes les étapes */
+                    pointer-events: none;
+                }
+                line {
+                    stroke: #33acff;
+                    stroke-width: 2;
+                }
+                .audio-button {
+                    width: 60px;
+                    height: 60px;
+                    background-color: #33acff;
+                    border: 3px solid white;
+                    border-radius: 50%;
+                    position: absolute; /* Permet de placer le bouton indépendamment */
+                    top: 50%; /* Centre verticalement le bouton */
+                    right: -30px; /* Aligne le bouton à droite du bloc */
+                    transform: translateY(-50%); /* Ajuste pour un centrage parfait */
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+                .audio-button:hover {
+                    background-color: #007bb5;
+                }
+                .audio-button::before {
+                    content: '';
+                    position: absolute;
+                    transition: all 0.3s ease;
+                }
+                .audio-button.play::before {
+                    width: 0;
+                    height: 0;
+                    border-left: 15px solid white;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                }
+                .audio-button.pause::before {
+                    width: 10px;
+                    height: 20px;
+                    background-color: white;
+                    box-shadow: 15px 0 0 white;
+                }                
+                .audio-button::after {
+                    /* Tooltip */
+                    content: "Cliquez sur le bouton ci-dessous pour lire ou arrêter le fichier audio";
+                    position: absolute;
+                    top: -35px; /* Décalage au-dessus du bouton */
+                    right: 50%; /* Centré horizontalement par rapport au bouton */
+                    transform: translateX(50%);
+                    background-color: #000;
+                    color: #fff;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+                    z-index: 10;
+                }
+                .audio-button:hover::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            </style>
+        </head>
+        <body>
+<h1 style='text-align:center;'>Rendez-vous</h1>
+<div class='step-container'>
+<div class='step-title'>Étape 1</div>
+<div class='block-container'>
+<div class='block' id='block-00000028'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 2</div>
+<div class='block-container'>
+<div class='block' id='block-00000029'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Ni idea…</normal></div>
+<div><normal><perso>V : </perso> Umm...</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000029" src="ogg/Sound-00000029.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000029')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 3</div>
+<div class='block-container'>
+<div class='block' id='block-00000030'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+</div>
+</div>
+<div class='block' id='block-00000031'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 4</div>
+<div class='block-container'>
+<div class='block' id='block-00000032'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 5</div>
+<div class='block-container'>
+<div class='block' id='block-00000002'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> ¿V?</normal></div>
+<div><normal><perso>V : </perso> Mm, ¿nos conocemos?</normal></div>
+<div><normal><perso>Panam : </perso> ¡Ja, ja...! Curioso...</normal></div>
+<div><normal><perso>V : </perso> Je, je.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Hola, Panam.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000002" src="ogg/Sound-00000002.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000002')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 6</div>
+<div class='block-container'>
+<div class='block' id='block-00000003'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Me alegro mucho de verte.</normal></div>
+<div><normal><perso>Panam : </perso> Aguas o empezaré a creérmelo. No te podrás deshacer de mí.</normal></div>
+<div><normal><perso>V : </perso> Mm, te tomo la palabra.</normal></div>
+<div><normal><perso>Panam : </perso> Pfff. Claaaro.</normal></div>
+<audio id="audio-00000003" src="ogg/Sound-00000003.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000003')"></button>
+</div>
+</div>
+<div class='block' id='block-00000004'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Joder, me alegro de que estés aquí. Qué bien que no cambiaras de idea.</normal></div>
+<div><normal><perso>Panam : </perso> Siempre cumplo mi palabra.</normal></div>
+<div><normal><perso>V : </perso> Ja, está bien saberlo.</normal></div>
+<div><normal><perso>Panam : </perso> Cállate, V. Necesito tiempo. Nada más.</normal></div>
+<audio id="audio-00000004" src="ogg/Sound-00000004.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000004')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 7</div>
+<div class='block-container'>
+<div class='block' id='block-00000005'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> ¿Y ahora a qué te dedicas?</normal></div>
+<div><normal><perso>Panam : </perso> Bueno, sería mejor si tú...</normal></div>
+<div><normal><perso>V : </perso> Cuéntamelo.</normal></div>
+<div><normal><perso>Panam : </perso> No quiero hablar de eso.</normal></div>
+<div><normal><perso>V : </perso> Panam...</normal></div>
+<div><normal><perso>Panam : </perso> Mmm. Ok. Gracias.</normal></div>
+<div><normal><perso>Panam : </perso> Aah, ejem... V...</normal></div>
+<div><normal><perso>Panam : </perso> Tengo un problema.</normal></div>
+<div><normal><perso>V : </perso> Déjame adivinar. Saúl, ¿verdad?</normal></div>
+<div><normal><perso>Panam : </perso> Qué bien me conoces.</normal></div>
+<audio id="audio-00000005" src="ogg/Sound-00000005.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000005')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 8</div>
+<div class='block-container'>
+<div class='block' id='block-00000007'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Creía que Saúl y tú habíais firmado la paz.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> ¡Me humilló enfrente de todo el clan! ¡Me hizo quedar como una estúpida!</normal></div>
+<div><normal><perso>V : </perso> ¿De otro?</normal></div>
+<div><normal><perso>Panam : </perso> ¡A eso me refiero! No debería ser yo, tendría que ser...</normal></div>
+<div><normal><perso>Panam : </perso> Lo sabía...</normal></div>
+<div><normal><perso>Panam : </perso> Ya no estoy segura de nada, V.</normal></div>
+<audio id="audio-00000007" src="ogg/Sound-00000007.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000007')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 9</div>
+<div class='block-container'>
+<div class='block' id='block-00000008'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Eh, no te preocupes por Saúl. Lo superará.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Panam.</normal></div>
+<div><normal><perso>V : </perso> ¿Te acuerdas cuando nos conocimos? Casi te cagas encima solo con pensar que tendrías problemas con Saúl.</normal></div>
+<div><normal><perso>V : </perso> Ahora es otra cosa.</normal></div>
+<div><normal><perso>Panam : </perso> Quería algo diferente, mejor. Pero Saúl es un pinche cobarde. Va a arruinar al clan. Estoy segura.</normal></div>
+<audio id="audio-00000008" src="ogg/Sound-00000008.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000008')"></button>
+</div>
+</div>
+<div class='block' id='block-00000009'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> No te piques, pero... Saúl podría tener razón.</normal></div>
+<div><normal><perso>Panam : </perso> Mm, veamos.</normal></div>
+<div><normal><perso>Panam : </perso> Vete al carajo.</normal></div>
+<div><normal><perso>V : </perso> Tranqui, todo irá bien.</normal></div>
+<div><normal><perso>Panam : </perso> Quería algo diferente, mejor. Pero Saúl es un pinche cobarde. Va a arruinar al clan. Estoy segura.</normal></div>
+<div><normal><perso>Panam : </perso> Y aunque tuvieras razón, ¿qué? Créeme, sé cuál es el problema. Lo que no tengo es la solución... Todavía.</normal></div>
+<audio id="audio-00000009" src="ogg/Sound-00000009.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000009')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 10</div>
+<div class='block-container'>
+<div class='block' id='block-00000010'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Anda ya, no te flipes.</normal></div>
+<div><normal><perso>Panam : </perso> Lo sé, pero... Ya, está bien, me vas a decir que ninguna familia es perfecta.</normal></div>
+<div><normal><perso>V : </perso> Ya te digo.</normal></div>
+<div><normal><perso>Panam : </perso> Y pues tendrías razón. Pero quiero ser honesta conmigo misma y descubrir qué es lo que quiero. Y qué me da miedo.</normal></div>
+<div><normal><perso>V : </perso> Sé a qué te refieres.</normal></div>
+<div><normal><perso>Panam : </perso> No sabes lo chido que es escuchar eso.</normal></div>
+<div><normal><perso>Panam : </perso> ¿Y tú?</normal></div>
+<audio id="audio-00000010" src="ogg/Sound-00000010.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000010')"></button>
+</div>
+</div>
+<div class='block' id='block-00000011'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> ¿Hay algo que pueda hacer?</normal></div>
+<div><normal><perso>Panam : </perso> No.</normal></div>
+<div><normal><perso>Panam : </perso> Voy a estar bien. Como siempre. De veras.</normal></div>
+<div><normal><perso>Panam : </perso> No me importaría cambiar de tema.</normal></div>
+<div><normal><perso>V : </perso> Vale...</normal></div>
+<div><normal><perso>Panam : </perso> ¿Y tú?</normal></div>
+<audio id="audio-00000011" src="ogg/Sound-00000011.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000011')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 11</div>
+<div class='block-container'>
+<div class='block' id='block-00000012'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Está bien. El Konpeki Plaza... Yo estaba allí aquella noche.</normal></div>
+<div><normal><perso>V : </perso> No te preocupes.</normal></div>
+<div><normal><perso>Panam : </perso> Sí, pero...</normal></div>
+<div><normal><perso>V : </perso> ¿Ya te has decidido?</normal></div>
+<div><normal><perso>Panam : </perso> ¿Sí? Bueno, eso creo.</normal></div>
+<div><normal><perso>V : </perso> ¿Cuánto sacas tú de este plan?</normal></div>
+<div><normal><perso>Panam : </perso> Es un buen plan V... Hmm, ¿sabes qué me dijo Saúl una vez?</normal></div>
+<div><normal><perso>Panam : </perso> Que una persona es realmente libre solo una vez: cuando sabe que no tiene nada que perder.</normal></div>
+<div><normal><perso>V : </perso> Mmm. Sí.</normal></div>
+<div><normal><perso>Panam : </perso> ¿Fue algo que dije?</normal></div>
+<div><normal><perso>V : </perso> No lo haré.</normal></div>
+<div><normal><perso>V : </perso> No...</normal></div>
+<div><normal><perso>Panam : </perso> Porque en verdad me importa. No quiero decir o hacer alguna pendejada, y que me abandonen en el desierto.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Se me ha ocurrido una cosa, pero no sé si... funcionará.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> Dios mío, te ves de la chingada.</normal></div>
+<div><normal><perso>Mq304 : </perso> Pero esa es mi humilde opinión, claro. Si no estás de acuerdo, podría... persuadirte.</normal></div>
+<div><normal><perso>Panam : </perso> ¡Muy impresionante! Bueno, ya, lo dije.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Mm, el plan podría funcionar.</normal></div>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 12</div>
+<div class='block-container'>
+<div class='block' id='block-00000013'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> ¿Hay trato entonces?</normal></div>
+<div><normal><perso>Panam : </perso> Tienes que respirar profundo.</normal></div>
+<div><normal><perso>V : </perso> Jo, jo. Esto va a molar.</normal></div>
+<div><normal><perso>Panam : </perso> Además... sin mí, no tienes oportunidad.</normal></div>
+<div><normal><perso>V : </perso> Pues claro.</normal></div>
+<div><normal><perso>V : </perso> Me acabo de dar cuenta de que estoy mangando otra vez a Arasaka.</normal></div>
+<div><normal><perso>Panam : </perso> Ja.</normal></div>
+<div><normal><perso>Panam : </perso> Creo que era el último.</normal></div>
+<div><normal><perso>Panam : </perso> Ok, aquí vamos.</normal></div>
+<div><normal><perso>V : </perso> Vale, vamos.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Te veo allí.</normal></div>
+<audio id="audio-00000013" src="ogg/Sound-00000013.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000013')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 13</div>
+<div class='block-container'>
+<div class='block' id='block-00000035'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Siempre he querido saber qué se siente al gastar tantos edis en trapos.</normal></div>
+<div><normal><perso>Georgina : </perso> ¿Qué quieres?</normal></div>
+<div><normal><perso>V : </perso> ¿No tendrás algún arma fuera... de lo convencional?</normal></div>
+<div><normal><perso>Georgina : </perso> Venga, echa un vistazo.</normal></div>
+<div><normal><perso>Panam : </perso> Órale. Gracias.</normal></div>
+<div><normal><perso>Panam : </perso> Seguro que encontramos algo de tu estilo.</normal></div>
+<div><normal><perso>V : </perso> Claro, como quieras.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> ¿Y bien?</normal></div>
+<div><normal><perso>V : </perso> Eso te mola, ¿no?</normal></div>
+<div><normal><perso>Panam : </perso> No es mi estilo, no.</normal></div>
+<div><normal><perso>V : </perso> No... supongo que no.</normal></div>
+<div><normal><perso>Panam : </perso> No. Pero gracias por recordármelo.</normal></div>
+<div><normal><perso>V : </perso> Pues ya encontraremos otra forma.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> ¿Y? ¿Qué opinas? Impresionante, ¿no?</normal></div>
+<div><normal><perso>V : </perso> Ah... Esto no me lo esperaba...</normal></div>
+<div><normal><perso>Panam : </perso> Mmm. OK...</normal></div>
+<div><normal><perso>Panam : </perso> Bueno, pues lo haremos funcionar.</normal></div>
+<div><normal><perso>V : </perso> Ya te digo.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> Checa esto.</normal></div>
+<div><normal><perso>V : </perso> Mmm... Al final va a ser un paseo por el parque.</normal></div>
+<div><normal><perso>Panam : </perso> No.</normal></div>
+<div><normal><perso>V : </perso> Mmmm...</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> ¿Y? Es un carro alucinante, ¿no?</normal></div>
+<div><normal><perso>V : </perso> Mmm. Sí.</normal></div>
+<div><normal><perso>Panam : </perso> Ah, vaya.</normal></div>
+<div><normal><perso>V : </perso> Quiero probar otra vez.</normal></div>
+<div><normal><perso>Panam : </perso> Ya verás ahorita.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> Bueno, ¿qué dices?</normal></div>
+<div><normal><perso>V : </perso> Eeh...</normal></div>
+<div><normal><perso>V : </perso> Sabes de sobra que sí.</normal></div>
+<div><normal><perso>Panam : </perso> ¿Cómo te sientes por eso?</normal></div>
+<div><normal><perso>V : </perso> A veces me pregunto si llegaré a ver algo más bonito...</normal></div>
+<div><normal><perso>Panam : </perso> Cállate, V.</normal></div>
+<div><normal><perso>V : </perso> Je, je.</normal></div>
+<div><normal><perso>Panam : </perso> ¿Y la chamarra? ¿No te aprieta?</normal></div>
+<div><normal><perso>V : </perso> No, para nada.</normal></div>
+<div><normal><perso>Panam : </perso> Entonces ya está todo listo.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> Gracias, V.</normal></div>
+<div><normal><perso>V : </perso> De nada. Un placer.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000035" src="ogg/Sound-00000035.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000035')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 14</div>
+<div class='block-container'>
+<div class='block' id='block-00000014'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Bonito sitio, impecable.</normal></div>
+<div><normal><perso>Panam : </perso> Pues eso espero.</normal></div>
+<audio id="audio-00000014" src="ogg/Sound-00000014.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000014')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 15</div>
+<div class='block-container'>
+<div class='block' id='block-00000016'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> Mierda, V. Está bien chido.</normal></div>
+<div><normal><perso>V : </perso> Me parece un plan de puta madre.</normal></div>
+<div><normal><perso>Panam : </perso> Ufff, se me está pasando un poco el estrés.</normal></div>
+<div><normal><perso>Panam : </perso> Cuando viajas día y noche, tu trasero prácticamente se fusiona con el asiento y se te olvida cómo se siente.</normal></div>
+<div><normal><perso>V : </perso> Je, je.</normal></div>
+<div><normal><perso>V : </perso> Creo que sé cómo te sientes.</normal></div>
+<audio id="audio-00000016" src="ogg/Sound-00000016.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000016')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 16</div>
+<div class='block-container'>
+<div class='block' id='block-00000017'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> ¿Vas a decir algo?</normal></div>
+<div><normal><perso>Panam : </perso> Okey, ¿qué pasa, V?</normal></div>
+<audio id="audio-00000017" src="ogg/Sound-00000017.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000017')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 17</div>
+<div class='block-container'>
+<div class='block' id='block-00000033'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Panam... Yo...</normal></div>
+<div><normal><perso>V : </perso> Es que me he acordado de Jackie. Y del golpe a Arasaka. No hará falta que te lo cuente...</normal></div>
+<div><normal><perso>V : </perso> Tampoco fue hace tanto...</normal></div>
+<div><normal><perso>V : </perso> Hostia puta. ¡Joder!</normal></div>
+<div><normal><perso>Panam : </perso> Okey, V. Relájate. Tómatelo muy despacito. ¿Qué está pasando, exactamente?</normal></div>
+<audio id="audio-00000033" src="ogg/Sound-00000033.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000033')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 18</div>
+<div class='block-container'>
+<div class='block' id='block-00000018'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Confié en alguien que me ha jodido bien. Fin.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> V, escucha bien.</normal></div>
+<div><normal><perso>Panam : </perso> Nada de lo que puedas decirme va a cambiar lo que...</normal></div>
+<div><normal><perso>V : </perso> Creo que quizá solo tenga... miedo. Así que imagino estas mierdas para distraerme de la idea... del vacío.</normal></div>
+<div><normal><perso>Panam : </perso> Mira, V, yo...</normal></div>
+<div><normal><perso>Panam : </perso> Perdón... No-no soy muy buena para hablar de mis sentimientos y demás.</normal></div>
+<audio id="audio-00000018" src="ogg/Sound-00000018.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000018')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 19</div>
+<div class='block-container'>
+<div class='block' id='block-00000019'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> No puedo hacer planes de futuro. Hay algo...</normal></div>
+<div><normal><perso>Panam : </perso> No mientas. Eso no lo sabes.</normal></div>
+<div><normal><perso>V : </perso> Ah, vale. Ya veremos. Bueno, ya sabes cómo va esto.</normal></div>
+<div><normal><perso>Panam : </perso> Pinche necio.</normal></div>
+<audio id="audio-00000019" src="ogg/Sound-00000019.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000019')"></button>
+</div>
+</div>
+<div class='block' id='block-00000020'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Así que en unos meses estiro la pata...</normal></div>
+<div><normal><perso>Panam : </perso> No mientas. Eso no lo sabes.</normal></div>
+<div><normal><perso>V : </perso> Ya veremos, ya veremos.</normal></div>
+<div><normal><perso>Panam : </perso> Ahora estás conmigo. Buscaremos el modo de encargarnos de lo que pasa en tu pinche cabeza.</normal></div>
+<audio id="audio-00000020" src="ogg/Sound-00000020.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000020')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 20</div>
+<div class='block-container'>
+<div class='block' id='block-00000021'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Pero si la palmo, quiero hacer historia, coño. Aunque sea solo una nota a pie de página.</normal></div>
+<div><normal><perso>Panam : </perso> Nunca olvidaré, V. Nunca.</normal></div>
+<div><normal><perso>V : </perso> Ah, venga ya.</normal></div>
+<div><normal><perso>V : </perso> Tranqui, sigo vivito y coleando.</normal></div>
+<div><normal><perso>Panam : </perso> V...</normal></div>
+<div><normal><perso>Panam : </perso> Mierda. Así no era como tenía que pasar, ¿no?</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000021" src="ogg/Sound-00000021.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000021')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 21</div>
+<div class='block-container'>
+<div class='block' id='block-00000023'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Ven aquí.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> Oye...</normal></div>
+<div><normal><perso>Panam : </perso> Mmmhm... No podría pedir nada más.</normal></div>
+<div><normal><perso>V : </perso> Eeh...</normal></div>
+<div><normal><perso>V : </perso> ¿Necesita algo más, señora?</normal></div>
+<div><normal><perso>Panam : </perso> ¿En qué?</normal></div>
+<div><normal><perso>V : </perso> Eeh...</normal></div>
+<div><normal><perso>Panam : </perso> Mierda. Lo siento.</normal></div>
+<div><normal><perso>Panam : </perso> Me pasé un poco, ¿no?</normal></div>
+<audio id="audio-00000023" src="ogg/Sound-00000023.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000023')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 22</div>
+<div class='block-container'>
+<div class='block' id='block-00000024'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Va a ser que no.</normal></div>
+<div><normal><perso>V : </perso> Sus deseos son órdenes...</normal></div>
+<div><normal><perso>Panam : </perso> ¿Sí? ¿Y qué tenías en mente?</normal></div>
+<div><normal><perso>Panam : </perso> Cuidado, no puedes adivinar lo que desearía...</normal></div>
+<div><normal><perso>V : </perso> Se ve que a todos no.</normal></div>
+<div><normal><perso>Panam : </perso> Pfff. Claaaro.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> Bueno, entonces mira.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Vaaale, tronca.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000024" src="ogg/Sound-00000024.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000024')"></button>
+</div>
+</div>
+<div class='block' id='block-00000025'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Lo suficiente.</normal></div>
+<div><normal><perso>V : </perso> Je, je.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> ¿Es broma? Dime que no es en serio.</normal></div>
+<div><normal><perso>V : </perso> Lo digo porque tú también lo encontrarás.</normal></div>
+<div><normal><perso>Panam : </perso> Sabes..., bueno, vete a la chingada.</normal></div>
+<div><normal><perso>V : </perso> Vaya, pues tendré que compensártelo de algún modo, ¿no?</normal></div>
+<div><normal><perso>Panam : </perso> Ay, no pasa nada, en serio. No te preocupes.</normal></div>
+<div><normal><perso>V : </perso> ¿Eso es todo?</normal></div>
+<div><normal><perso>Panam : </perso> Nah, me voy pronto. Hablamos la próxima.</normal></div>
+<div><normal><perso>V : </perso> Prueba a seguir ese impulso la próxima vez.</normal></div>
+<div><normal><perso>Panam : </perso> ¿Sabes qué, V? Vete a la mierda.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>V : </perso> Pues hala. ¿Nos vemos?</normal></div>
+<audio id="audio-00000025" src="ogg/Sound-00000025.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000025')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 23</div>
+<div class='block-container'>
+<div class='block' id='block-00000026'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso>Panam : </perso> Ay, no quería despertarte.</normal></div>
+<div><normal><perso>V : </perso> Mm...</normal></div>
+<div><normal><perso>Panam : </perso> ¿Dormiste bien?</normal></div>
+<div><normal><perso>V : </perso> Ya, me quedé congelado en el tiempo.</normal></div>
+<div><normal><perso>Panam : </perso> Bueno… me largo.</normal></div>
+<audio id="audio-00000026" src="ogg/Sound-00000026.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000026')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 24</div>
+<div class='block-container'>
+<div class='block' id='block-00000022'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Ah, mierda...</normal></div>
+<div><normal><perso>V : </perso> No quiero que desaparezcas. Ahora no. Te necesito.</normal></div>
+<div><normal><perso>Panam : </perso> No sabes lo chido que es escuchar eso.</normal></div>
+<div><normal><perso>Panam : </perso> No quisiera cagarla.</normal></div>
+<div><normal><perso>V : </perso> Ajá. ¿Y?</normal></div>
+<div><normal><perso>Panam : </perso> Es una pena que deba irme en un ratito.</normal></div>
+<div><normal><perso>V : </perso> Sí, sin rencores.</normal></div>
+<div><normal><perso>Panam : </perso> Cállate, V. Necesito tiempo. Nada más.</normal></div>
+<div><normal><perso>V : </perso> Vale.</normal></div>
+<div><normal><perso>V : </perso> ¿Nos vemos pronto?</normal></div>
+<div><normal><perso>Panam : </perso> Tienes que respirar profundo.</normal></div>
+<div><normal><perso>Panam : </perso> ¡Hablamos pronto, V!</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000022" src="ogg/Sound-00000022.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000022')"></button>
+</div>
+</div>
+<div class='block' id='block-00000027'>
+<div class='block-subtitles'>
+<div><normal><perso>V : </perso> Esto... espera, sobre lo de anoche...</normal></div>
+<div><normal><perso>Panam : </perso> No es necesario que hablemos de eso.</normal></div>
+<div><normal><perso>V : </perso> Vale, nos vemos allí.</normal></div>
+<div><normal><perso>Panam : </perso> Cuídate mucho.</normal></div>
+<div><normal><perso>V : </perso> Tú también, Panam.</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<audio id="audio-00000027" src="ogg/Sound-00000027.ogg"></audio>
+<button class="audio-button play" onclick="togglePlay('00000027')"></button>
+</div>
+</div>
+</div>
+</div>
+<div class='step-container'>
+<div class='step-title'>Étape 25</div>
+<div class='block-container'>
+<div class='block' id='block-00000034'>
+<div class='block-subtitles'>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+<div><normal><perso></perso> (NO TRADUCTION)</normal></div>
+</div>
+</div>
+</div>
+</div>
+<svg id='connections'>
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000028' data-end='block-00000029' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000029' data-end='block-00000030' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000029' data-end='block-00000031' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000030' data-end='block-00000032' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000031' data-end='block-00000032' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000032' data-end='block-00000002' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000002' data-end='block-00000003' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000002' data-end='block-00000004' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000003' data-end='block-00000005' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000004' data-end='block-00000005' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000005' data-end='block-00000007' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000007' data-end='block-00000008' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000007' data-end='block-00000009' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000008' data-end='block-00000010' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000009' data-end='block-00000011' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000010' data-end='block-00000012' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000011' data-end='block-00000012' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000012' data-end='block-00000013' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000013' data-end='block-00000035' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000035' data-end='block-00000014' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000014' data-end='block-00000016' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000016' data-end='block-00000017' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000017' data-end='block-00000033' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000033' data-end='block-00000018' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000018' data-end='block-00000019' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000018' data-end='block-00000020' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000019' data-end='block-00000021' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000020' data-end='block-00000021' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000021' data-end='block-00000023' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000023' data-end='block-00000024' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000023' data-end='block-00000025' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000024' data-end='block-00000026' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000025' data-end='block-00000034' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000026' data-end='block-00000022' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000026' data-end='block-00000027' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000022' data-end='block-00000034' />
+<line x1='0' y1='0' x2='0' y2='0' data-start='block-00000027' data-end='block-00000034' />
+</svg>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const svg = document.getElementById('connections');
+    const lines = document.querySelectorAll('line');
+    function updateLinePositions() {
+        lines.forEach(line => {
+            const startBlock = document.getElementById(line.dataset.start);
+            const endBlock = document.getElementById(line.dataset.end);
+            if (startBlock && endBlock) {
+                const startRect = startBlock.getBoundingClientRect();
+                const endRect = endBlock.getBoundingClientRect();
+                const svgRect = svg.getBoundingClientRect();
+                line.setAttribute('x1', startRect.left + startRect.width / 2 - svgRect.left);
+                line.setAttribute('y1', startRect.bottom - svgRect.top);
+                line.setAttribute('x2', endRect.left + endRect.width / 2 - svgRect.left);
+                line.setAttribute('y2', endRect.top - svgRect.top);
+            }
+        });
+    }
+    setTimeout(updateLinePositions, 100);
+});
+</script>
+<script>
+function togglePlay(blockId) {
+    const audio = document.getElementById(`audio-${blockId}`);
+    const button = document.querySelector(`#block-${blockId} .audio-button`);
+    if (audio.paused || audio.ended) {
+        audio.play();
+        button.classList.remove('play');
+        button.classList.add('pause');
+    } else {
+        audio.pause();
+        button.classList.remove('pause');
+        button.classList.add('play');
+    }
+    // Réinitialiser l'état du bouton lorsqu'un audio se termine
+    audio.addEventListener('ended', () => {
+        button.classList.remove('pause');
+        button.classList.add('play');
+    });
+}
+</script>
+</body></html>

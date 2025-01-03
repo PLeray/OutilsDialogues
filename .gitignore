@@ -10,7 +10,7 @@ CyberPunk-Dialog/data/
 !CyberPunk-Dialog/data/projet/Rendez-vous_files/**
 
 # Ré-ignorer tout le reste dans /projet/ pour plus de précision
-CyberPunk-Dialog/data/projet/
+#CyberPunk-Dialog/data/projet/
 !CyberPunk-Dialog/data/projet/Rendez-vous.json
 !CyberPunk-Dialog/data/projet/Rendez-vous_files/
 
