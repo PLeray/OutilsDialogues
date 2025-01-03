@@ -1,4 +1,15 @@
-Principal-Playlist/data/playlist/
-Principal-Playlist/data/BDDjson/Base_en-us.json
-Principal-Playlist/data/BDDjson/Base_fr-fr.json
-Principal-Playlist/userconf.ini
+# Ignorer tout le dossier logs
+#logs/*
+# Ignorer tout le dossier /data
+CyberPunk-Dialog/data/*
+#CyberPunk-Dialog/data/BDDjson
+CyberPunk-Dialog/userconf.ini
+CyberPunk-Dialog/__pycache__/*
+__pycache__/*
+venv/*
+.vscode/*
+
+# Ne pas ignorer important.log
+#!logs/important.log
+!CyberPunk-Dialog/data/projet/Rendez-vous.json
+!CyberPunk-Dialog/data/projet/Rendez-vous_files/*
