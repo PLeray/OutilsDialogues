@@ -1,7 +1,7 @@
 femaleVariant,maleVariant,stringId,female_vo_path,male_vo_path,quest_path
 V 前往集合点。,,1734639643012578,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [喝]很高兴见到你。,,1734733486045460,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
-[喝]我很高兴你没有改变主意。,[喝酒]我很高兴你没有改变主意。,1734733573905763,ACTION,ACTION,D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/projet/Rendez-vous_files/{}/Rendez-vousDIC.csv
+[喝]我很高兴你没有改变主意。,[喝酒]我很高兴你没有改变主意。,1734733573905763,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 他们去酒吧坐下来喝一杯（就像模组《Lizzie's Braindances: Places of Night City > Bar in Downtown》中的那样）,,1734736588881117,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 【等待巴拿马】,,1734824689179729,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 帕南到达酒吧附近的集合点......,,1734885474362720,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -18,7 +18,7 @@ V收到来自巴拿马的消息,,1735040401780488,COMMENT,COMMENT,Rendez-vous_fi
 哦，你真可爱！ <3 <3 <3,,1735056244885189,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 索尔希望我们毁掉所有能把我们和这个家伙联系起来的东西……但是，嘿，我一直想着你，以防万一……,,1735056295732630,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 我不知道我能用它做什么，然后... Konpeki 对我来说并不是最好的回忆...,,1735056326435636,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-好吧，那太愚蠢了！我会按照扫罗所说的去做，消灭他！,,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+好吧，那太愚蠢了！我要毁掉通行证，扫罗是对的。,,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 不用等了！这东西是如何工作的？,,1735056393052657,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 好吧，你去他们的网站并输入一个名字，然后预订就完成了……,,1735056411224054,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 好吧……也许我有一个主意！您想利用它吗？,,1735056425988329,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -37,7 +37,7 @@ V收到来自巴拿马的消息,,1735040401780488,COMMENT,COMMENT,Rendez-vous_fi
 我真的不知道...金白不是我的风格！,,1735061008088637,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 我要去装修了……我他妈的连合适的衣服都没有！,,1735061024059582,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 那不是问题。金碧是你管理的，衣服就由我来管理吧。我们在市中心见面，我们去购物吧！,,1735061039903586,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-还是很危险，可能会被认出来……不过这里还是荒坂……,,1735061055747094,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+还是很危险，你可能会被认出来！该死的，我们正在谈论荒坂！,,1735061055747094,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 听着，我们在市中心的这家酒吧见面，谈谈这件事，好吗？,,1735061077597131,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 如果你想…,,1735061089758378,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [说] 那么，你这些天在做什么？,,1735142209504692,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv

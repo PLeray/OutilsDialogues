@@ -65,8 +65,8 @@
     },
     {
         "stringId": "1735056379716323",
-        "femaleVariant": "Ok c'est d\u00e9bile! Je vais faire ce que Saul a dit et le d\u00e9truire !",
-        "maleVariant": "Ok c'est d\u00e9bile! Je vais faire ce que Saul a dit et le d\u00e9truire !",
+        "femaleVariant": "Ok c'est d\u00e9bile! Je vais d\u00e9truire le pass, Saul a raison.",
+        "maleVariant": "Ok c'est d\u00e9bile! Je vais d\u00e9truire le pass, Saul a raison.",
         "female_vo_path": "MSG-IN",
         "male_vo_path": "MSG-IN",
         "quest_path": "Rendez-vous_files/{}/Rendez-vousDIC.csv"

@@ -1,7 +1,7 @@
 femaleVariant,maleVariant,stringId,female_vo_path,male_vo_path,quest_path
 V geht zum Treffpunkt.,,1734639643012578,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "[Trinken] Ich freue mich so, dich zu sehen.",,1734733486045460,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"[Trinken] Ich bin froh, dass du deine Meinung nicht geändert hast.","[Trinken] Ich bin froh, dass du deine Meinung nicht geändert hast.",1734733573905763,ACTION,ACTION,D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/projet/Rendez-vous_files/{}/Rendez-vousDIC.csv
+"[Trinken] Ich bin froh, dass du deine Meinung nicht geändert hast.","[Trinken] Ich bin froh, dass du deine Meinung nicht geändert hast.",1734733573905763,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Sie setzen sich an die Bar und trinken etwas (wie in der Mod „Lizzie's Braindances: Places of Night City > Bar in Downtown“).,,1734736588881117,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Warten Sie auf Panam],,1734824689179729,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Panam kommt am Treffpunkt in der Nähe der Bar an ...,,1734885474362720,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -18,7 +18,7 @@ V erhält eine Nachricht von Panam,,1735040401780488,COMMENT,COMMENT,Rendez-vous
 "Oh, du bist süß! <3 <3 <3",,1735056244885189,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Saul wollte, dass wir alles zerstören, was uns mit diesem Kerl in Verbindung bringen könnte ... Aber hey, ich habe den Pass behalten und an dich gedacht, nur für den Fall ...",,1735056295732630,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Ich weiß nicht, was ich damit machen könnte und dann... Konpeki ist nicht die beste Erinnerung für mich...",,1735056326435636,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"Ok, das ist dumm! Ich werde tun, was Saul gesagt hat, und ihn vernichten!",,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"Ok, das ist dumm! Ich werde den Pass zerstören, Saul hat recht.",,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Keine Wartezeit! Wie funktioniert das Ding?,,1735056393052657,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Nun, Sie gehen auf ihre Website, geben einen Namen ein und schon ist die Reservierung abgeschlossen …",,1735056411224054,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Ok... vielleicht habe ich eine Idee! Möchten Sie davon profitieren?,,1735056425988329,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -37,7 +37,7 @@ Was sagen Sie also? Feiern wir es heute Abend im Konpeki?,,1735060982596671,MSG-
 Ich weiß es nicht wirklich... Konpeki ist nicht mein Stil!,,1735061008088637,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Ich werde meinen Teil zur Dekoration beitragen ... Ich habe nicht einmal ein verdammt passendes Outfit!,,1735061024059582,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Das ist kein Problem. Du hast das Konpeki gemanagt, also lass mich auf unsere Kleidung aufpassen. Treffen wir uns im Zentrum, wir gehen einkaufen!",,1735061039903586,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"Es ist immer noch gefährlich, man könnte dich erkennen... Es ist trotzdem Arasaka...",,1735061055747094,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"Es ist immer noch gefährlich, du könntest erkannt werden! Und verdammt, wir reden hier über Arasaka!",,1735061055747094,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Schauen wir, wir treffen uns in dieser Bar in der Innenstadt und reden darüber, okay?",,1735061077597131,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Falls Sie es wollen…,,1735061089758378,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "[Sag] Also, was machst du heutzutage?",,1735142209504692,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv

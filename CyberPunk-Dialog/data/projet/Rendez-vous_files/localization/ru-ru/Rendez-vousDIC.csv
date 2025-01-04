@@ -1,7 +1,7 @@
 femaleVariant,maleVariant,stringId,female_vo_path,male_vo_path,quest_path
 Ви идет к месту встречи.,,1734639643012578,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Пить] Я так рада тебя видеть.,,1734733486045460,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"[Пить] Я рад, что ты не передумал.","[Пьет] Я рад, что ты не передумал.",1734733573905763,ACTION,ACTION,D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/projet/Rendez-vous_files/{}/Rendez-vousDIC.csv
+"[Пить] Я рад, что ты не передумал.","[Пьет] Я рад, что ты не передумал.",1734733573905763,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Они идут посидеть в баре и выпить (Как в моде Lizzie's Braindances: Places of Night City > Bar in Downtown),,1734736588881117,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Ждать Панама],,1734824689179729,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Панам прибывает на место встречи возле бара...,,1734885474362720,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -18,7 +18,7 @@ femaleVariant,maleVariant,stringId,female_vo_path,male_vo_path,quest_path
 "О, ты милый! <3 <3 <3",,1735056244885189,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Сол хотел, чтобы мы уничтожили все, что могло связать нас с этим парнем... Но эй, я оставил пропуск, думая о тебе, на всякий случай...",,1735056295732630,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Я не знаю, что с этим делать, а потом... Конпеки - не самое лучшее воспоминание для меня...",,1735056326435636,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"Хорошо, это глупо! Я сделаю, как сказал Саул, и уничтожу его!",,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"Хорошо, это глупо! Я собираюсь разрушить перевал, Саул прав.",,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Нет, подожди! Как эта штука работает?",,1735056393052657,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Что ж, вы заходите на их сайт, вводите имя и резервация сделана…",,1735056411224054,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Хорошо… возможно, у меня есть идея! Хотели бы вы этим воспользоваться?",,1735056425988329,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -37,7 +37,7 @@ femaleVariant,maleVariant,stringId,female_vo_path,male_vo_path,quest_path
 Я даже не знаю... Конпеки - не мой стиль!,,1735061008088637,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Я собираюсь внести свою лепту в декор... У меня даже чертовски подходящего наряда нет!,,1735061024059582,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Это не проблема. Ты управлял Конпеки, так что позволь мне позаботиться о нашей одежде. Встретимся в центре, сходим за покупками!",,1735061039903586,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"Это все равно опасно, тебя могут узнать... Это все-таки Арасака...",,1735061055747094,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"Это все еще опасно, вас могут узнать! И блин, мы тут про Арасаку говорим!",,1735061055747094,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Слушай, давай встретимся в баре в центре и поговорим об этом, ладно?",,1735061077597131,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Если ты хочешь…,,1735061089758378,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "[Скажи] Итак, что ты делаешь в эти дни?",,1735142209504692,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv

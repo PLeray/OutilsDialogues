@@ -1,8 +1,8 @@
 femaleVariant,maleVariant,stringId,female_vo_path,male_vo_path,quest_path
 V goes to the meeting point.,,1734639643012578,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-[Drinking] I'm so happy to see you.,,1734733486045460,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
-[Drink] I'm glad you haven't changed your mind.,[Drinking] I'm glad you haven't changed your mind.,1734733573905763,ACTION,ACTION,D:/_CyberPunk-Creation/OutilsDialogues/Principal-Playlist/data/projet/Rendez-vous_files/{}/Rendez-vousDIC.csv
-They go to the bar and have a drink (Like in the mod Lizzie's Braindances: Places of Night City > Bar in Downtown),,1734736588881117,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+[Drink] I'm so happy to see you.,,1734733486045460,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
+[Drink] I'm glad you haven't changed your mind.,[Drinking] I'm glad you haven't changed your mind.,1734733573905763,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
+They go to sit at the bar and have a drink (Like in the mod Lizzie's Braindances: Places of Night City > Bar in Downtown),,1734736588881117,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Wait for Panam],,1734824689179729,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Panam arrives at the meeting point near the bar...,,1734885474362720,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 [Drink],,1734887593907139,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -18,7 +18,7 @@ I only think of you once a day but it lasts 24 hours!,,1735040846812203,MSG-OUT,
 Oh you're cute! <3 <3 <3,,1735056244885189,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Saul wanted us to destroy everything that could connect us to this guy... But hey, I kept the pass thinking of you just in case...",,1735056295732630,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 I don't know what I could do with it and then... Konpeki isn't the best memory for me...,,1735056326435636,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-Ok that’s stupid! I'm going to do what Saul said and destroy him!,,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"Ok that’s stupid! I'm going to destroy the pass, Saul is right.",,1735056379716323,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 No wait! How does this thing work?,,1735056393052657,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Well, you go to their site and enter a name and the reservation is made…",,1735056411224054,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Ok… maybe I have an idea! Would you like to take advantage of it?,,1735056425988329,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -36,8 +36,8 @@ It was passed for recording. It should be good!,,1735060935091683,MSG-IN,MSG-IN,
 So what do you say? Are we having it this evening at Konpeki?,,1735060982596671,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 I don't really know... Konpeki is not my style!,,1735061008088637,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 I'm going to do my part in the decor... I don't even have a fucking suitable outfit!,,1735061024059582,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"That's not a problem. You managed the Konpeki, so let me take care of our clothes. Let's meet in the center, we'll go shopping!",,1735061039903586,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"It's still dangerous, you could be recognized... It's Arasaka all the same...",,1735061055747094,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"That's not a problem. You managed the Konpeki, so let me take care of our clothes. Let's meet in the center, we'll do some shopping!",,1735061039903586,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"It's still dangerous, you could be recognized! And damn, we're talking about Arasaka here!",,1735061055747094,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Look, let's meet at this bar downtown and talk about it, okay?",,1735061077597131,MSG-OUT,MSG-OUT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 If you want…,,1735061089758378,MSG-IN,MSG-IN,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "[Say] So, what are you doing these days?",,1735142209504692,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
@@ -47,10 +47,10 @@ After a while without saying anything...,,1735146120956956,COMMENT,COMMENT,Rende
 "Panam comes to sit on the bed, next to V. (As in the Lizzie's Braindances: DollHouse mod)",,1735146139634145,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Saying her last sentence, Panam bends down and leans on the bed (Like in Lizzie's Braindances: DollHouse mod) ",,1735146177514793,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 Panam lies down next to him… (As in the Lizzie's Braindances: DollHouse mod),,1735146190854713,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-"Panam is offended, she sits down quickly on her first sentence!",,1735146208634254,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+"Panam is offended, she quickly sits down on her first sentence!",,1735146208634254,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Furious, Panam leaves while saying her last sentence!",,1735146218671463,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 END OF QUEST,,1735146262371852,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
-The clothes disappear as we hear Panam say her last sentence,,1735148577111890,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
+The clothes disappear while Panam is heard saying her last sentence,,1735148577111890,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 They are naked on the last sentence of V,,1735148591380400,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "[Explicit Activities] Ooh, OK.",,1735148603319961,ACTION,ACTION,Rendez-vous_files/{}/Rendez-vousDIC.csv
 "Later... they are still on the bed, lying naked.",,1735148655590069,COMMENT,COMMENT,Rendez-vous_files/{}/Rendez-vousDIC.csv
